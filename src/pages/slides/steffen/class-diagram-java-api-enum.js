@@ -174,7 +174,7 @@ export default function KlassdiagramJavaAPIEnum() {
           </ul>
         </section>
         <section>
-          <img height={'400px'} src='/programming/img/class-diagramm.png'/>
+          <img height={'400px'} src='/java-docs/img/class-diagramm.png'/>
         </section>
         <section>
           <h2>Bereiche</h2>
@@ -247,7 +247,7 @@ export default function KlassdiagramJavaAPIEnum() {
           </ul>
         </section>
         <section>
-          <img height={'400px'} src='/programming/img/class-diagramm.png'/>
+          <img height={'400px'} src='/java-docs/img/class-diagramm.png'/>
         </section>
         <section>
           In der Klausur ist nur das Lesen von Aktivitätsdiagrammen relevant.

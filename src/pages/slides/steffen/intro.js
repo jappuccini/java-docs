@@ -100,14 +100,14 @@ export default function Intro() {
           <p className='fragment'>
             <a
               target="_blank"
-              href='https://appenmaier.github.io/programming/'>
+              href='https://jappuccini.github.io/java-docs/'>
               Folien, Dokumentation, Aufgaben (auch Externe), Lösungen und Anleitungen
             </a>
           </p>
           <p className='fragment'>
             <a
               target="_blank"
-              href='https://github.com/appenmaier/programming'>
+              href='https://github.com/jappuccini/java-docs'>
               Quellcode von Folien, Dokumentation, etc.
             </a>
           </p>
@@ -247,7 +247,7 @@ export default function Intro() {
           <p className='fragment'>
             <a 
               target='_blank'
-              href='https://appenmaier.github.io/programming/exercises/class-structure/class-structure01'
+              href='https://jappuccini.github.io/java-docs/exercises/class-structure/class-structure01'
             >
               Hello-World-Aufgabe machen
             </a>

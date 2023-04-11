@@ -98,7 +98,7 @@ export default function MethodsAndOperators() {
             </code>
           </pre>
         </section>
-        <section data-background-image="/programming/img/scanner-error.png">
+        <section data-background-image="/java-docs/img/scanner-error.png">
         </section>
       </section>
       <section>

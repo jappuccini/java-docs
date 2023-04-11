@@ -40,7 +40,7 @@ git switch demos/steffen
 ### 14.03.2023
 
 #### Aufgabe Array
-<img style={{height: '200px'}} src='/programming/img/array_task.png'/>
+<img style={{height: '200px'}} src='/java-docs/img/array_task.png'/>
 <br/>
 
 ** Hinweise zur Methode split ** <br/>
@@ -56,7 +56,7 @@ Erstelle mithilfe der Methode split ein neues Array, dass die ersten drei Elemen
 Gib mithilfe einer For-Schleife alle Elemente des neu erstellten Arrays aus. 
 
 #### Aufgabe Exception
-<img style={{height: '200px'}} src='/programming/img/exception_task.png'/>
+<img style={{height: '200px'}} src='/java-docs/img/exception_task.png'/>
 <br/>
 
 
@@ -80,7 +80,7 @@ wurde.<br/>
 
 ### 21.03.2023
 #### Aufgabe abstrakte Klasse, Enum
-<img style={{height: '200px'}} src='/programming/img/class_task.png'/>
+<img style={{height: '200px'}} src='/java-docs/img/class_task.png'/>
 <br/>
 
 ** Hinweise zur Klasse EnergySource **
@@ -112,7 +112,7 @@ Schleife die Anzahl der betriebsbereiten Telefone. Gib die Anzahl in der
 Konsole aus.
 
 #### Aufgabe Comparator
-<img style={{height: '200px'}} src='/programming/img/comparator_task.png'/>
+<img style={{height: '200px'}} src='/java-docs/img/comparator_task.png'/>
 <br/>
 
 ** Hinweise zur Klasse CarVendor **
