@@ -1,0 +1,22 @@
+name: Pull Request Checks
+
+on:
+  pull_request:
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    name: verify buildable state 
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v2
+
+      - name: setup nodejs
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: install dependencies
+        run: npm ci
+
+      - name: build website
+        run: npm run build
