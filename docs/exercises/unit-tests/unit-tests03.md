@@ -6,7 +6,7 @@ description: ''
 Erstelle die Klasse `TelephoneBookTest` anhand des abgebildeten Klassendiagramms.
 
 ## Klassendiagramm
-![image](https://user-images.githubusercontent.com/47243617/209158772-4fe41693-1aff-49e4-b462-3f95d4c15030.png)
+![image](https://user-images.githubusercontent.com/47243617/235099079-776af4b1-8541-49c2-8d8f-783ab884f472.png)
 
 ## Hinweise zur Klasse `TelephoneBookTest`
 - Die Lebenszyklus-Methode `void setUp()` soll ein Telefonbuch samt dazugehöriger Einträge erzeugen
