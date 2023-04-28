@@ -1,8 +1,8 @@
 ---
-title: Generische Programmierung
+title: Optionals
 description: ''
-sidebar_position: 180
-tags: [generics]
+sidebar_position: 185
+tags: [optionals]
 ---
 
 ## Übungsaufgaben

@@ -1,7 +1,7 @@
 ---
 title: Innere Klassen (Inner Classes)
 description: ''
-sidebar_position: 180
+sidebar_position: 170
 tags: [inner-classes]
 ---
 
