@@ -1,7 +1,7 @@
 ---
 title: Generische Programmierung
 description: ''
-sidebar_position: 170
+sidebar_position: 180
 tags: [generics]
 ---
 
