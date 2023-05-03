@@ -7,7 +7,7 @@ description: ''
 - Erstelle eine ausführbare Klasse, welche eine Büchersammlung mit mehreren Autoren und Büchern erzeugt und den fleißigsten Autoren auf der Konsole ausgibt
 
 ## Klassendiagramm
-![image](https://user-images.githubusercontent.com/47243617/235094296-24721251-d68a-452a-a3f2-caeb0391c6ec.png)
+![image](https://user-images.githubusercontent.com/47243617/235862924-f3721a33-9fcd-49e7-8181-5ffb1a70ea87.png)
 
 ## Hinweise zur Klasse BookCollection
 - Die Methode `void addAuthor(author: Author)` soll den eingehenden Autor der Büchersammlung hinzufügen. Für den Fall, dass der Autor bereits in der Büchersammlung

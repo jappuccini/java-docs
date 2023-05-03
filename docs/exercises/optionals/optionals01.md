@@ -7,4 +7,4 @@ description: ''
 - Passe die ausführbare Klasse aus Übungsaufgabe [Maps02](../maps/maps02) so an, dass sie fehlerfrei ausgeführt werden kann
 
 ## Klassendiagramm
-![image](https://user-images.githubusercontent.com/47243617/235097253-4c32cb22-468e-4e06-a09b-f6ed02293ec5.png)
+![image](https://user-images.githubusercontent.com/47243617/235863354-e51d6269-74c0-423c-b246-399b36f9b14f.png)
