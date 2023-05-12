@@ -46,13 +46,12 @@ public class MainClass {
 ```
 
 ## Generische Klassen mit Java Generics
-Klassen und Methoden können in Java mit Typen parametrisiert werden. Diese werden durch spitze Klammern `<>` gekennzeichnet und stellen Platzhalter für konkrete Datentypen dar. Beim Kompilieren werden alle generischen Informationen vollständig entfernt und 
-durch die konkreten Datentypen ersetzt. Durch die dadurch vorhandene statische Typsicherheit können Laufzeitfehler verhindert und Fehler bereits beim Kompilieren entdeckt werden.
+Klassen und Methoden können in Java mit Typen parametrisiert werden. Diese werden durch spitze Klammern `<>` gekennzeichnet und stellen Platzhalter für konkrete Datentypen dar. Beim Kompilieren werden alle generischen Informationen vollständig entfernt und durch die konkreten Datentypen ersetzt. Durch die dadurch vorhandene statische Typsicherheit können Laufzeitfehler verhindert und Fehler bereits beim Kompilieren entdeckt werden.
 
-Die generische Klasse `GenericBox<T>` ermöglicht das Speichern einer beliebig typisierten Information mit Hilfe des Typparameters `T`.
+Die generische Klasse `Box<T>` ermöglicht das Speichern einer beliebig typisierten Information mit Hilfe des Typparameters `T`.
 
-```java title="GenericBox.java" showLineNumbers
-public class GenericBox<T> {
+```java title="Box.java" showLineNumbers
+public class Box<T> {
 
   private T content;
 
@@ -67,16 +66,15 @@ public class GenericBox<T> {
 }
 ```
 
-In der main-Methode der Startklasse wird zunächst eine ganze Zahl in einer generischen Box gespeichert und anschließend wieder ausgelesen. Die Umwandlung der ganzen Zahl in eine Zeichenkette führt aufgrund der statischen Typsicherheit zu einem 
-Kompilierungsfehler.
+In der main-Methode der Startklasse wird zunächst eine ganze Zahl in einer Box gespeichert und anschließend wieder ausgelesen. Die Umwandlung der ganzen Zahl in eine Zeichenkette führt aufgrund der statischen Typsicherheit zu einem Kompilierungsfehler.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
   public static void main(String[] args) {
-    GenericBox<Integer> genericBox = new GenericBox<>();
-    genericBox.set(5);
-    String i = genericBox.get(); // Kompilierungsfehler
+    Box<Integer> box = new Box<>();
+    box.set(5);
+    String i = box.get(); // Kompilierungsfehler
     System.out.println(i);
   }
 
@@ -85,6 +83,10 @@ public class MainClass {
 
 :::note Hinweis
 Die Typisierung kann entweder explizit oder implizit über den Diamantenoperator `<>` erfolgen.
+:::
+
+:::note Hinweis
+Typparameter können auf die Unterklassen einer bestimmten Klasse eingeschränkt werden. Dadurch kann in der generischen Klasse auf Attribute und Methoden der angegebenen Klasse zugegriffen werden. Die Angabe eines eingeschränkten Typparameters erfolgt über den Zusatz `extends` sowie die Angabe der entsprechenden Klasse.
 :::
 
 ## Generische Methoden mit Java Generics
@@ -110,7 +112,7 @@ public class MainClass {
 ```
 
 ## Namensrichtlinien für Typparameter
-Um den Einsatzbereich von Typparameteren in generischen Klassen und Methoden kenntlich zu machen, sollte man festgelegte Zeichen verwenden.
+Um den Einsatzbereich von Typparametern in generischen Klassen und Methoden kenntlich zu machen, sollte man festgelegte Zeichen verwenden.
 
 | Typparameter  | Einsatzbereich                            |
 | ------------- | ----------------------------------------- |
@@ -120,13 +122,12 @@ Um den Einsatzbereich von Typparameteren in generischen Klassen und Methoden ken
 | V             | Wert eines Assoziativspeichers (Value)    |
 
 ## Varianz
-Typparameter können gar nicht (**Bivarianz**), nach oben (**Kovarianz**), nach unten (**Kontravarianz**), oder sowohl nach oben als auch nach unten (**Invarianz**) eingeschränkt werden. Zusätzlich ermöglicht der Wildcard-Typ `?` bei parametrisierten Typen die 
-Angabe eines unbestimmten Typs. 
+Bei der Deklaration einer generischen Klasse ermöglicht der Wildcard-Typ `?` die Angabe eines unbestimmten Typs. Dieser kann gar nicht (**Bivarianz**), nach oben (**Kovarianz**), nach unten (**Kontravarianz**), oder sowohl nach oben als auch nach unten (**Invarianz**) eingeschränkt werden.
 
-Die generische Klasse `GenericBox<T>` ermöglicht das Speichern einer beliebig typisierten Information.
+Die generische Klasse `Box<T>` ermöglicht das Speichern einer beliebig typisierten Information.
 
-```java title="GenericBox.java" showLineNumbers
-public class GenericBox<T> {
+```java title="Box.java" showLineNumbers
+public class Box<T> {
 
   private T content;
 
@@ -141,43 +142,35 @@ public class GenericBox<T> {
 }
 ```
 
-Die Drei Klassen `Above`, `Center` und `Below` bilden eine Generalisierungshierarchie ab, wobei die Klasse `Below` eine Unterklasse der Klasse `Center` und diese wiederum eine Unterklasse der Klasse `Above` darstellt.
-
-```java title="Above.java" showLineNumbers
-public class Above {}
-```
-```java title="Center.java" showLineNumbers
-public class Center extends Above {}
-```
-```java title="Below.java" showLineNumbers
-public class Below extends Center {}
-```
-
-In der main-methode der Startklasse werden verschiedene generische Boxen unterschiedlich deklariert und anschließend initialisiert.
+In der main-methode der Startklasse werden verschiedene Boxen unterschiedlich deklariert und anschließend initialisiert. Dabei ist die Klasse `String` eine Unterklasse der Klasse `Object`, die Klasse `Integer` eine Unterklasse der Klasse `Number` und diese eine Unterklasse der Klasse `Object`.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
   public static void main(String[] args) {
-    GenericBox<?> bivariant;
-    bivariant = new GenericBox<Above>();
-    bivariant = new GenericBox<Center>();
-    bivariant = new GenericBox<Below>();
+    Box<?> bivariantBox;
+    bivariantBox = new GenericBox<Object>();
+    bivariantBox = new GenericBox<Number>();
+    bivariantBox = new GenericBox<Integer>();
+    bivariantBox = new GenericBox<String>();
 
-    GenericBox<? extends Center> covariant;
-    covariant = new GenericBox<Above>(); // Kompilierungsfehler
-    covariant = new GenericBox<Center>();
-    covariant = new GenericBox<Below>();
+    Box<? extends Number> covariantBox;
+    covariantBox = new GenericBox<Object>(); // Kompilierungsfehler
+    covariantBox = new GenericBox<Number>();
+    covariantBox = new GenericBox<Integer>();
+    covariantBox = new GenericBox<Integer>(); // Kompilierungsfehler
 
-    GenericBox<? super Center> contravariant;
-    contravariant = new GenericBox<Above>();
-    contravariant = new GenericBox<Center>();
-    contravariant = new GenericBox<Below>(); // Kompilierungsfehler
+    Box<? super Number> contravariantBox;
+    contravariantBox = new GenericBox<Object>();
+    contravariantBox = new GenericBox<Number>();
+    contravariantBox = new GenericBox<Integer>(); // Kompilierungsfehler
+    covariantBox = new GenericBox<Integer>(); // Kompilierungsfehler
 
-    GenericBox<Center> invariant;
-    invariant = new GenericBox<Above>(); // Kompilierungsfehler
-    invariant = new GenericBox<Center>();
-    invariant = new GenericBox<Below>(); // Kompilierungsfehler
+    Box<Number> invariantBox;
+    invariantBox = new GenericBox<Object>(); // Kompilierungsfehler
+    invariantBox = new GenericBox<Number>();
+    invariantBox = new GenericBox<Integer>(); // Kompilierungsfehler
+    covariantBox = new GenericBox<String>(); // Kompilierungsfehler
   }
 
 }
