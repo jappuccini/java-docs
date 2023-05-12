@@ -11,8 +11,8 @@ description: ''
     - die Antwort auf die Frage, ob von allen Konsolen mehr als 50 Millionen Einheiten verkauft wurden (_false_)
     - die Anzahl der Konsolen von Nintendo (_8_)
     - die Namen aller Konsolen, die nicht mehr verkauft werden sowie die Anzahl verkaufter Einheiten pro Jahr in Millionen (_PlayStation 2 (13.225)_...)
-    - der Durchschnitt verkaufter Einheiten pro Jahr in Millionen aller Konsolen, die nicht mehr verkauft werden (_OptionalDouble\[9.900365412365412]_)
-    - alle Konsolen gruppiert nach den Herstellern (_{NINTENDO=\[VideoGameConsole\[title=Nintendo DS, maker=NINTENDO, lifespan=10, soldUnits=154.02],_..._}_)
+    - der Durchschnitt verkaufter Einheiten pro Jahr in Millionen aller Konsolen, die nicht mehr verkauft werden (_9.900365412365412_)
+    - alle Konsolen gruppiert nach den Herstellern (_NINTENDO: \[VideoGameConsole\[title=Nintendo DS, maker=NINTENDO, lifespan=10, soldUnits=154.02],_...)
     - die Anzahl verkaufter Einheiten pro Hersteller in Millionen (_NINTENDO: 752.05_)
 
 ## Quellcode
