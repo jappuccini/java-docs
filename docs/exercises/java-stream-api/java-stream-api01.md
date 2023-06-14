@@ -71,9 +71,8 @@ public class VideoGameConsoles {
 
 }
 ```
-
 ## Klassendiagramm
-![image](https://github.com/jappuccini/java-docs/assets/47243617/c8b3a272-4ca6-4dcb-afc8-14ad130484ac)
+![image](https://github.com/jappuccini/java-docs/assets/47243617/2f236452-b029-4021-9d26-52e93cc4fcd0)
 
 ## Hinweise zur Klasse VideoGameConsole
 - Konsolen, die aktuell noch verkauft werden, besitzen bei der Lebensspanne den Wert `-1` (Stand: 14.06.2023)
