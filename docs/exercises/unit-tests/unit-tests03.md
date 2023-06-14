@@ -15,4 +15,4 @@ Erstelle die Klasse `TelephoneBookTest` anhand des abgebildeten Klassendiagramms
 - Die Testmethode `void testGetTelephoneNumberByName2()` soll prüfen, ob beim Ausführen der Methode `Optional<TelephoneNumber> getTelephoneNumberByName(name: String)` mit einem Namen, zu dem es keine entsprechende Person im Telefonbuch gibt, ein leeres Optional zurückgegeben wird 
 
 ## Hinweis
-Verweden die Klasse `TelephoneBook` aus Übungsaufgabe [Maps01](../maps/maps01.md).
+Verweden die Klasse `TelephoneBook` aus Übungsaufgabe [Optionals02](../optionals/optionals02.md).
