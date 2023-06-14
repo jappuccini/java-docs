@@ -3,17 +3,8 @@ title: JavaStreamAPI01
 description: ''
 ---
 
-- Erstelle die Klasse `VideoGameConsoles` anhand des abgebildeten Quellcodes
-- Erstelle eine ausführbare Klasse, welche mit Hilfe der Java Stream API folgende Informationen auf der Konsole ausgibt:
-    - die Namen aller Konsolen, die aktuell noch verkauft werden (_PlayStation 4, Nintendo Switch, XBox One_)
-    - alle Konsolen absteigend sortiert nach der Lebensspanne (_VideoGameConsole\[title=Nintendo Wii, maker=NINTENDO, lifespan=13, soldUnits=101.63]_...)
-    - die Antwort auf die Frage, ob es eine Konsole mit mehr als 150 Millionen verkauften Einheiten gibt (_true_)
-    - die Antwort auf die Frage, ob von allen Konsolen mehr als 50 Millionen Einheiten verkauft wurden (_false_)
-    - die Anzahl der Konsolen von Nintendo (_8_)
-    - die Namen aller Konsolen, die nicht mehr verkauft werden sowie die Anzahl verkaufter Einheiten pro Jahr in Millionen (_PlayStation 2 (13.225)_...)
-    - der Durchschnitt verkaufter Einheiten pro Jahr in Millionen aller Konsolen, die nicht mehr verkauft werden (_9.900365412365412_)
-    - alle Konsolen gruppiert nach den Herstellern (_NINTENDO: \[VideoGameConsole\[title=Nintendo DS, maker=NINTENDO, lifespan=10, soldUnits=154.02],_...)
-    - die Anzahl verkaufter Einheiten pro Hersteller in Millionen (_NINTENDO: 752.05_)
+- Erstelle die Klassen `VideoGameConsoles` und `VideoGameConsoleQueries` anhand des abgebildeten Quellcodes sowie des abgebildeten Klassendiagramms
+- Erstelle eine ausführbare Klasse, welche alle erstellten Abfragen ausführt und die Ergebnisse auf der Konsole ausgibt
 
 ## Quellcode
 ```java title="VideoGameConsoles.java" showLineNumbers
@@ -23,12 +14,12 @@ public class VideoGameConsoles {
       new VideoGameConsole("PlayStation 2", Maker.SONY, 12, 158.70);
   private final static VideoGameConsole DS =
       new VideoGameConsole("Nintendo DS", Maker.NINTENDO, 10, 154.02);
+  private final static VideoGameConsole NS =
+      new VideoGameConsole("Nintendo Switch", Maker.NINTENDO, -1, 125.79);
   private final static VideoGameConsole GB =
       new VideoGameConsole("GameBoy", Maker.NINTENDO, 10, 118.69);
   private final static VideoGameConsole PS4 =
-      new VideoGameConsole("PlayStation 4", Maker.SONY, -1, 116.93);
-  private final static VideoGameConsole NS =
-      new VideoGameConsole("Nintendo Switch", Maker.NINTENDO, -1, 109.25);
+      new VideoGameConsole("PlayStation 4", Maker.SONY, -1, 117.04);
   private final static VideoGameConsole PSX =
       new VideoGameConsole("PlayStation", Maker.SONY, 9, 102.49);
   private final static VideoGameConsole WII =
@@ -46,25 +37,25 @@ public class VideoGameConsoles {
   private final static VideoGameConsole NES =
       new VideoGameConsole("Nintendo Entertainment System", Maker.NINTENDO, 9, 61.91);
   private final static VideoGameConsole XONE =
-      new VideoGameConsole("XBox One", Maker.MICROSOFT, -1, 50.53);
+      new VideoGameConsole("XBox One", Maker.MICROSOFT, -1, 51.26);
   private final static VideoGameConsole SNES =
       new VideoGameConsole("Super Nintendo Entertainment System", Maker.NINTENDO, 7, 49.10);
 
-  public static record VideoGameConsole(String title, Maker maker, int lifespan, double soldUnits) {
+  public static record VideoGameConsole(String title, Maker maker, int lifespan, double soldUnitsInMillions) {
 
   }
 
   public static enum Maker {
-    NINTENDO, SEGA, SONY, MICROSOFT;
+    MICROSOFT, NINTENDO, SONY;
   }
 
   public static ArrayList<VideoGameConsole> getVideoGameConsoles() {
     ArrayList<VideoGameConsole> videoGameConsoles = new ArrayList<>();
     videoGameConsoles.add(PS2);
     videoGameConsoles.add(DS);
+    videoGameConsoles.add(NS);
     videoGameConsoles.add(GB);
     videoGameConsoles.add(PS4);
-    videoGameConsoles.add(NS);
     videoGameConsoles.add(PSX);
     videoGameConsoles.add(WII);
     videoGameConsoles.add(PS3);
@@ -81,5 +72,17 @@ public class VideoGameConsoles {
 }
 ```
 
-## Hinweis zur Klasse VideoGameConsole
-Konsolen, die aktuell noch verkauft werden, besitzen bei der Lebensspanne den Wert `-1`.
+## Klassendiagramm
+![image](https://github.com/jappuccini/java-docs/assets/47243617/c8b3a272-4ca6-4dcb-afc8-14ad130484ac)
+
+## Hinweise zur Klasse VideoGameConsole
+- Konsolen, die aktuell noch verkauft werden, besitzen bei der Lebensspanne den Wert `-1` (Stand: 14.06.2023)
+- Die Methode `List<String> getAllCurrentConsoleNames()` soll die Namen aller Konsolen, die aktuell noch verkauft werden zurückgeben (_PlayStation 4, Nintendo Switch, XBox One_)
+- Die Methode `List<VideoGameConsole> getAllConsolesSortedByLifespan()` soll alle Konsolen absteigend sortiert nach der Lebensspanne zurückgeben (_VideoGameConsole\[title=Nintendo Wii, maker=NINTENDO, lifespan=13, soldUnits=101.63]_,...)
+- Die Methode `boolean isAnyConsoleWithMoreThan150MillionSoldUnits()` soll die Antwort auf die Frage, ob es eine Konsole mit mehr als 150 Millionen verkauften Einheiten gibt, zurückgeben (_true_)
+- Die Methode `boolean isAllConsolesWithMoreThan50MillionSoldUnits()` soll die Antwort auf die Frage, ob von allen Konsolen mehr als 50 Millionen Einheiten verkauft wurden, zurückgeben (_false_)
+- Die Methode `long getNumberOfConsolesFromNintendo()` soll die Anzahl der Konsolen von Nintendo zurückgeben (_8_)
+- Die Methode `List<String> getSoldUnitsInMillionsPerYearFromAllOutdatedConsoles()` soll die Namen aller Konsolen, die nicht mehr verkauft werden sowie die Anzahl verkaufter Einheiten pro Jahr in Millionen zurückgeben (_PlayStation 2 (13.225)_,...)
+- Die Methode `OptionalDouble getAverageSoldUnitsInMillionsPerYearFromAllOutdatedConsoles()` soll den Durchschnitt verkaufter Einheiten pro Jahr in Millionen aller Konsolen, die nicht mehr verkauft werden zurückgeben (_9.900365412365412_)
+- Die Methode `Map<Maker, List<VideogameConsole>> getAllConsolesByMaker()` soll alle Konsolen gruppiert nach den Herstellern zurückgeben (_NINTENDO: \[VideoGameConsole\[title=Nintendo DS, maker=NINTENDO, lifespan=10, soldUnits=154.02]_,...)
+- Die Methode `Map<Maker, Double> getTotalSoldUnitsInMillionsPerMaker()` soll die Anzahl verkaufter Einheiten pro Hersteller in Millionen zurückgeben (_NINTENDO: 752.05_,...)
