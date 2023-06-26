@@ -7,11 +7,15 @@ tags: []
 
 JavaFX stellt ein Framework zur Entwicklung plattformübergreifender grafischer Benutzeroberflächen dar. Eine grafische Benutzeroberfläche oder auch _GUI_ (Graphical User Interface) hat die Aufgabe, Programme mittels grafischer Bildschirmelemente bedienbar zu 
 machen:
-- Controls wie Eingabefelder, Drucktasten und Ausgabefelder ermöglichen die Interaktion mit der Anwendung
-- Container wie Horizontalboxen und Bereichscontainer ermöglichen die strukturierte Darstellung und Verwaltung anderer Bildschirmelemente:
-- Dialoge wie Nachrichtendialoge und Dateiauswahl-Dialoge stellen vordefinierte Oberflächen dar, mit deren Hilfe wiederkehrende Anwendungsfälle abgedeckt werden können
+- _Controls_ wie Eingabefelder, Drucktasten und Ausgabefelder ermöglichen die Interaktion mit der Anwendung
+- _Container_ wie Horizontalboxen und Bereichscontainer ermöglichen die strukturierte Darstellung und Verwaltung anderer Bildschirmelemente:
+- _Dialoge_ wie Nachrichtendialoge und Dateiauswahl-Dialoge stellen vordefinierte Oberflächen dar, mit deren Hilfe wiederkehrende Anwendungsfälle abgedeckt werden können
 
 ![image](https://user-images.githubusercontent.com/47243617/209136694-f18f83af-8390-4503-b18c-71c59c3eb3c1.png)
+
+Um eine hohe Softwarequalität zu erreichen, werden grafische Benutzeroberflächen in der Regel nach dem Gestaltungsprinzip _Separation of Concerns_ entwickelt: die verschiedenen Aufgaben einer Anwendung werden in verschiedene Bereiche aufgeteilt. Grafische Benutzeroberflächen können zum Beispiel in die Bereiche Aufbau, Aussehen und Verhalten aufgeteilt werden.
+
+![image](https://user-images.githubusercontent.com/47243617/209138908-2809dfe5-38c6-4386-b319-e694ae1b9f31.png)
 
 ## Aufbau einer JavaFX-Anwendung
 Eine JavaFX-Anwendung besteht aus einer oder mehreren Bühnen (Stages), die beliebig vielen Szenen (Scenes) enthalten können, wobei jede Szene wiederum beliebig viele Bildschirmelemente (Nodes) enthalten kann:
@@ -117,6 +121,10 @@ Ereignisse sind Nachrichten, die über das System weitergeleitet werden. Auf gra
 
 ![image](https://user-images.githubusercontent.com/47243617/209137051-486a30c8-2887-4276-bd5e-3f8e89b0074c.png)
 
+:::note Hinweis
+Die Ereignisbehandlung in grafischen Benutzeroberflächen ist eine konkrete Umsetzung des Entwurfsmusters _Beobachter_ (Observer). Dieses ermöglicht, dass sich Objekte (_Observer_) bei einem anderen Objekt (_Subject_) registrieren und von diesem informiert werden, wenn es sich ändert.
+:::
+
 ## JavaFX Ereignisse
 JavaFX stellt verschiedene Ereignisse bereit, die auf unterschiedliche Art und Weise ausgelöst werden:
 - Ein `ActionEvent` wird bei verschiedenen Interaktionen mit den Controls ausgelöst, z.B. durch das Betätigen einer Drucktaste
@@ -124,10 +132,19 @@ JavaFX stellt verschiedene Ereignisse bereit, die auf unterschiedliche Art und W
 - Ein `KeyEvent` wird durch Tastatureingaben ausgelöst
 - Ein `WindowEvent` wird ausgelöst, wenn sich der Zustand eines Fensters ändert
 
-## Ereignisbehandlung nach dem MVC-Entwurfsmuster
-Die Ereignisbehandlung in JavaFX kann nach dem [MVC-Entwurfsmuster](design/design-patterns.md) umgesetzt werden. Hierbei übernimmt eine Klasse (Controller) die Ereignisbehandlung für ein konkretes FXML-Dokument (View). Im FXML-Dokument wird über die 
-Eigenschaft `fx:controller` die verantwortliche Klasse für die Ereignisbehandlung festgelegt. Den zu behandelnden Ereignissen kann über die Eigenschaft `onAction` eine Behandlermethode der Ereignisbehandler-Klasse zugewiesen werden. Um in der 
-Ereignisbehandler-Klasse auf die jeweiligen Elemente des FXML-Dokuments zugreifen zu können, müssen diesen über die Eigenschaft `fx:id` entsprechende Ids zugewiesen werden.
+## Ereignisbehandlung nach dem Entwurfsmuster MVC
+Die Ereignisbehandlung in JavaFX kann nach dem Entwurfsmuster MVC (_Model-View-Controller_) umgesetzt werden. Dieses stellt einen gängigen Ansatz zur Entwicklung von grafischen Benutzeroberflächen dar, bei dem die grafische Benutzeroberfläche in drei Bereiche unterteilt wird:
+- Das _Model_ ist für die Datenhaltung und -verwaltung zuständig
+- Die _View_ ist für die Darstellung der Oberfläche zuständig, welche wiederum in Aufbau und Aussehen unterteilt ist
+- Der _Controller_ übernimmt die Ereignisbehandlung und ermöglicht so die Benutzerinteraktion
+
+![image](https://user-images.githubusercontent.com/47243617/209140124-fb51408c-c00a-4b5d-b427-050d8908bba1.png)
+
+:::note Hinweis
+Der Begriff MVC wird oft auch als Synonym für MVC-ähnliche Varianten wie z.B. MVP (_Model-View-Presenter_) oder MVVM (_Model-View-ViewModel_) verwendet.
+:::
+
+In JavaFX-Anwendungen übernimmt eine Klasse (Controller) die Ereignisbehandlung für ein konkretes FXML-Dokument (View). Im FXML-Dokument wird über die Eigenschaft `fx:controller` die verantwortliche Klasse für die Ereignisbehandlung festgelegt. Den zu behandelnden Ereignissen kann über die Eigenschaft `onAction` eine Behandlermethode der Ereignisbehandler-Klasse zugewiesen werden. Um in der Ereignisbehandler-Klasse auf die jeweiligen Elemente des FXML-Dokuments zugreifen zu können, müssen diesen über die Eigenschaft `fx:id` entsprechende Ids zugewiesen werden.
 
 ```xml title="View.fxml" showLineNumbers
 <?xml version="1.0" encoding="UTF-8"?>
@@ -186,7 +203,9 @@ public class Controller {
 
 ## Kommunikation zwischen Szenen
 Da die verschiedenen Ereignisbehandler-Klassen in einer JavaFX-Anwendung nur lose miteiander gekoppelt sind, wird zur Kommunikation zwischen Szenen eine eindeutige Model-Klasse benötigt. Dies kann über das 
-[Einzelstück-Entwurfsmuster (Singleton-Pattern)](design/design-patterns.md) erreicht werden.
+Entwurfsmuster _Einzelstück_ (Singleton) erreicht werden. Dieses stellt sicher, dass zu einer Klasse genau ein Objekt (_Singleton_) zur Laufzeit existiert.
+
+![image](https://user-images.githubusercontent.com/47243617/209167103-8ef435a1-71da-4092-95fd-f51913b64c2f.png)
 
 Die Klasse `Model` umfasst neben der Einzelstück-Implementierung das Attribut `input` sowie die dazugehörige set- und get-Methode.
 
