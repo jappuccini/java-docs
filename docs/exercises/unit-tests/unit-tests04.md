@@ -6,7 +6,7 @@ description: ''
 Erstelle die Klasse `BookCollectionTest` anhand des abgebildeten Klassendiagramms.
 
 ## Klassendiagramm
-![image](https://github.com/jappuccini/java-docs/assets/47243617/506b2dab-7949-4f2d-8391-937e077b289b)
+![image](https://github.com/jappuccini/java-docs/assets/47243617/734ab725-85e9-4e4e-a9aa-f9c3ddae056b)
 
 ## Hinweise zur Klasse `BookCollectionTest`
 - Die Lebenszyklus-Methode `void setUp()` soll den Attributen der Testklasse passende Werte zuweisen
