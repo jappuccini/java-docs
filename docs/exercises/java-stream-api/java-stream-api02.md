@@ -48,7 +48,7 @@ public class Footballers {
 }
 ```
 ## Klassendiagramm
-tbd
+![image](https://github.com/jappuccini/java-docs/assets/47243617/37183812-cac7-470b-8cc9-724a28e7c948)
 
 ## Hinweise zur Klasse FootballerQueries
 - Mannschaften, die nicht der ewigen Tabelle der Bundesliga vertreten sind, besitzen sowohl für die Position als auch die Punktzahl den Wert `-1`
