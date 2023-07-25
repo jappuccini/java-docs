@@ -74,8 +74,10 @@ public class VideoGameConsoles {
 ## Klassendiagramm
 ![image](https://github.com/jappuccini/java-docs/assets/47243617/2f236452-b029-4021-9d26-52e93cc4fcd0)
 
-## Hinweise zur Klasse VideoGameConsole
-- Konsolen, die aktuell noch verkauft werden, besitzen bei der Lebensspanne den Wert `-1` (Stand: 14.06.2023)
+## Hinweis zur Klasse VideoGameConsole
+Konsolen, die aktuell noch verkauft werden, besitzen bei der Lebensspanne den Wert `-1` (Stand: 14.06.2023)
+
+## Hinweise zur Klasse VideoGameConsoleQueries
 - Die Methode `List<String> getAllCurrentConsoleNames()` soll die Namen aller Konsolen, die aktuell noch verkauft werden zurückgeben (_Nintendo Switch, PlayStation 4, XBox One_)
 - Die Methode `List<VideoGameConsole> getAllConsolesSortedByLifespan()` soll alle Konsolen absteigend sortiert nach der Lebensspanne zurückgeben (_VideoGameConsole\[title=Nintendo Wii, maker=NINTENDO, lifespan=13, soldUnits=101.63]_,...)
 - Die Methode `boolean isAnyConsoleWithMoreThan150MillionSoldUnits()` soll die Antwort auf die Frage, ob es eine Konsole mit mehr als 150 Millionen verkauften Einheiten gibt, zurückgeben (_true_)
