@@ -7,7 +7,7 @@ tags: [oo, enumerations, inheritance, polymorphy, io-streams]
 Setze das abgebildete Klassendiagramm vollständig um. Erstelle zum Testen eine ausführbare Klasse.
 
 ## Klassendiagramm
-![image](https://user-images.githubusercontent.com/47243617/209168965-579ef1d6-1497-42ce-9bc1-8739dbb5555f.png)
+![image](https://github.com/jappuccini/java-docs/assets/47243617/cc4faaf3-3301-441b-bd00-4d487265b4a7)
 
 ## Allgemeine Hinweise
 - Aus Gründen der Übersicht werden im Klassendiagramm keine Getter und Object-Methoden dargestellt
@@ -19,13 +19,6 @@ Setze das abgebildete Klassendiagramm vollständig um. Erstelle zum Testen eine 
 
 ## Hinweise zur Klasse FastFoodShop
 - Der Konstruktor soll die Fast-Food-Liste (`fastFood`) mit Hilfe der Klasse `FoodHelper` initialisieren
+- Die Methode `void addFastFood(fastFood: FastFood)` soll das eingehende Fast Food zum Sortiment hinzufügen
 - Die Methode `void rateFastFood(fastFood: FastFood, rating: int)` soll dem eingehenden Fast Food die eingehende Bewertung hinzufügen
 - Die Methode `Burger getBestRatedBurger()` soll den Burger mit der höchsten Bewertung zurückgeben
-
-## Hinweise zur Klasse FoodHelper
-- Die Methode `ArrayList<Food> readFood(file: File)` soll alle Lebensmittel der eingehenden Datei zurückgeben
-- Die Methode `void printFood(food: ArrayList<Food>)` soll die eingehenden Lebensmittel auf der Konsole ausgeben
-- Die Methode `FoodCategory getFoodCategoryByDescription(description: String)` soll die Lebensmittelkategorie zur eingehenden Beschreibung zurückgeben
-
-## Hinweis zur Klasse Burger
-Burger sollen entweder der Lebensmittelkategorie _Gemüse_ oder der Lebensmittelkategorie _Fleisch_ zugeordnet werden.

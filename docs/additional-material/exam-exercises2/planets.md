@@ -13,11 +13,11 @@ tags: [java-stream-api]
     -	alle Planeten gruppiert nach ihrem Typ
 
 ## Klassendiagramm
-![image](https://user-images.githubusercontent.com/47243617/212031271-8b5dff53-b739-474f-adfb-9b2b10b2a962.png)
+![image](https://github.com/jappuccini/java-docs/assets/47243617/310e09cf-df8b-4ead-8111-8a49f3070e7a)
 
 ## Allgemeine Hinweise
 - Aus Gründen der Übersicht werden im Klassendiagramm keine Getter und Object-Methoden dargestellt
 - So nicht anders angegeben, sollen Konstruktoren, Setter, Getter sowie die Object-Methoden wie gewohnt implementiert werden
 
-## Hinweis zur Klasse Planet
+## Hinweis zur Klasse Planets
 Die Methode `ArrayList<Planet> getPlanets()` soll alle Planeten des Sonnensystems zurückgeben.
