@@ -4,10 +4,10 @@ description: ''
 tags: [console-applications, oo, enumerations, inheritance, polymorphy]
 ---
 
-Setze das abgebildete Klassendiagramm vollständig um.
+Setze das abgebildete Klassendiagramm vollständig um. Erstelle für jedes Würfelspiel eine ausführbare Klasse.
 
 ## Klassendiagramm
-![image](https://user-images.githubusercontent.com/47243617/209168872-259dd07c-e76c-45ed-ab84-76c4b4f9d135.png)
+![image](https://github.com/jappuccini/java-docs/assets/47243617/057fec7b-1216-4162-8c02-cf8e4ffd666e)
 
 ## Allgemeine Hinweise
 - Aus Gründen der Übersicht werden im Klassendiagramm keine Getter und Object-Methoden dargestellt
