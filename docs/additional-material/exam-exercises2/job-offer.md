@@ -7,7 +7,7 @@ tags: [inheritance, polymorphy, exceptions, records, io-streams]
 Setze das abgebildete Klassendiagramm vollständig um. Erstelle zum Testen eine ausführbare Klasse und/oder eine Testklasse.
 
 ## Klassendiagramm
-![image](https://github.com/jappuccini/java-docs/assets/47243617/1b74ffd4-cff1-470c-a133-f4aa6013167a)
+![image](https://github.com/jappuccini/java-docs/assets/47243617/ec340eee-89de-4afe-ae4a-b9a1660e912c)
 
 ## Allgemeine Hinweise
 - Aus Gründen der Übersicht werden im Klassendiagramm keine Getter und Object-Methoden dargestellt
