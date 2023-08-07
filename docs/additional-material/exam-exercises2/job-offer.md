@@ -7,7 +7,7 @@ tags: [inheritance, polymorphy, exceptions, records, io-streams]
 Setze das abgebildete Klassendiagramm vollständig um. Erstelle zum Testen eine ausführbare Klasse und/oder eine Testklasse.
 
 ## Klassendiagramm
-![image](https://user-images.githubusercontent.com/47243617/212246312-f6125081-6c97-4f44-8b8c-57a97d39b32d.png)
+![image](https://github.com/jappuccini/java-docs/assets/47243617/1b74ffd4-cff1-470c-a133-f4aa6013167a)
 
 ## Allgemeine Hinweise
 - Aus Gründen der Übersicht werden im Klassendiagramm keine Getter und Object-Methoden dargestellt
@@ -19,7 +19,7 @@ Die Methode `void addApplicationDocument(applicationDocument: ApplicationDocumen
 ## Hinweis zur Klasse JobOffer
 Die Methode `void addApplicant(applicant: Applicant)` soll der Bewerberliste (`applicants`) den eingehenden Bewerber hinzufügen.
 
-## Hinweis zur Klasse JobOffers
+## Hinweis zur Klasse JobOfferReader
 Die statische Methode `ArrayList<JobOffer> getJobOffers(file: File)` soll die Stellenangebote der eingehenden Datei zurückgeben. Die Ausnahme `FileNotFoundException` soll dabei weitergeleitet werden.
 
 ## Beispielhafter Auszug aus einer Stellenangebotsdatei
