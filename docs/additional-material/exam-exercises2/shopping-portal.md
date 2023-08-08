@@ -1,5 +1,5 @@
 ---
-title: Warenkorb
+title: Einkaufsportal
 description: ''
 tags: [interfaces, records, inner-classes, generics]
 ---
