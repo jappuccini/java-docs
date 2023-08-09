@@ -29,3 +29,15 @@ Die Methode `void addIngredient(ingredient: Ingredient)` soll dem Rezept die ein
 
 ## Hinweis zur Klasse IngredientsReader
 Die Methode `ArrayList<Ingredient> readIngredients()` soll alle Zutaten der eingehenden Datei auslesen und zurückgeben.
+
+## Beispielhafter Aufbau der Zutatendatei
+
+```console
+200g Butter
+300g Mehl
+1 Prise Salz
+100g gemahlene Mandeln
+150g Zucker
+1 Pck. Vanillezucker
+2 Eier
+```
