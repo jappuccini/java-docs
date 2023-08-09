@@ -194,10 +194,10 @@ export default function Recap() {
                   "    boolean result;\n" +
                   "    result = 3 == 2; // false \n" +
                   "    result = 3 != 2; // true \n" +
-                  "    result = 3 > 2; // true \n" +
-                  "    result = 2 >= 2; // true \n" +
-                  "    result = 2 < 2; // false \n" +
-                  "    result = 2 <= 2; // true \n" +
+                  "    result = 3 &gt; 2; // true \n" +
+                  "    result = 2 &gt;= 2; // true \n" +
+                  "    result = 2 &lt; 2; // false \n" +
+                  "    result = 2 &lt= 2; // true \n" +
                   "  }\n" +
                   "//...\n",
               }}
@@ -296,7 +296,7 @@ export default function Recap() {
                   "    if(age >= 18) {\n" +
                   "      // Ich krieg alles, was ich will\n" +
                   "    } else if(age >= 16) {\n" +
-                  "      // Ich krieg Bier, Wein, Most <3 und Sekt \n" +
+                  "      // Ich krieg Bier, Wein, Most &lt;3 und Sekt \n" +
                   "    } else  {\n" +
                   "      // Ich krieg Coca Zero\n" +
                   "    } \n" +
@@ -348,7 +348,7 @@ export default function Recap() {
                   "    String[] cars = { 'BMW', 'Audi', 'Benz' }; \n" +
                   "    boolean found = false; \n" +
                   "    int i = 0; \n" +
-                  "    while(!found && i < cars.length) {\n" +
+                  "    while(!found && i &lt; cars.length) {\n" +
                   "      String car = cars[i];\n" +
                   "      if(car.equals(brand)) {\n" +
                   "        found = true;\n" +
@@ -381,7 +381,7 @@ export default function Recap() {
                   "        i++;\n" +
                   "      }\n" +
                   "    }\n" +
-                  "    while(!found && i < cars.length)\n" +
+                  "    while(!found && i &lt; cars.length)\n" +
                   "    return found; \n" +
                   "  }\n",
               }}
@@ -397,7 +397,7 @@ export default function Recap() {
                 __html:
                   "  public static boolean exists(String brand) {\n" +
                   "    String[] cars = { 'BMW', 'Audi', 'Benz' } \n" +
-                  "    for (int i = 0; i < cars.length; i++) {\n" +
+                  "    for (int i = 0; i &lt; cars.length; i++) {\n" +
                   "      car = cars[i];\n" +
                   "      if(car.equals(brand)) {;\n" +
                   "        return true;\n" +
@@ -1436,7 +1436,7 @@ export default function Recap() {
                   "  public int compare(Human h1, Human h2) {\n" +
                   "    if(h1.getAge() > h2.getAge()) {\n" +
                   "     return 1;\n" +
-                  "    } else if (h1.getAge() < h2.getAge()) {;\n" +
+                  "    } else if (h1.getAge() &lt; h2.getAge()) {;\n" +
                   "      return -1;\n" +
                   "    } else {\n" +
                   "      return 0;\n" +
@@ -1512,7 +1512,7 @@ export default function Recap() {
                   "  Human buyer;\n" +
                   "  //...\n" +
                   "  public addItem(Item item) throws TooYoungException {\n" +
-                  "    if(item.isAlcohol() && this.buyer.getAge() < 21) {\n" +
+                  "    if(item.isAlcohol() && this.buyer.getAge() &lt; 21) {\n" +
                   "      throw new TooYoungException(21 - buyer.getAge());\n" +
                   "    }\n" +
                   "  }\n" +
