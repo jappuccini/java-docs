@@ -7,7 +7,7 @@ tags: [oo, enumerations, inheritance, polymorphy]
 Setze das abgebildete Klassendiagramm vollständig um. Erstelle zum Testen eine ausführbare Klasse.
 
 ## Klassendiagramm
-![image](https://github.com/jappuccini/java-docs/assets/47243617/cb2cb06b-f211-4132-a906-1366d102cbf8)
+![image](https://github.com/jappuccini/java-docs/assets/47243617/691fb4dd-6a3e-4fba-91d1-4dcad1057cc4)
 
 ## Allgemeine Hinweise
 - Aus Gründen der Übersicht werden im Klassendiagramm keine Getter und Object-Methoden dargestellt
