@@ -9,6 +9,10 @@ Setze das abgebildete Klassendiagramm vollständig um. Erstelle zum Testen eine 
 ## Klassendiagramm
 ![image](https://github.com/jappuccini/java-docs/assets/47243617/ff46487f-92ea-4e85-ad4f-0cc1eac6f915)
 
+## Allgemeine Hinweise
+- Aus Gründen der Übersicht werden im Klassendiagramm keine Getter und Object-Methoden dargestellt
+- So nicht anders angegeben, sollen Konstruktoren, Setter, Getter sowie die Object-Methoden wie gewohnt implementiert werden
+- 
 ## Hinweis zur Klasse Cookie
 Die Methode `ArrayList<Ingredient> getIngredients()` soll alle Zutaten des Teigs zurückgeben.
 
