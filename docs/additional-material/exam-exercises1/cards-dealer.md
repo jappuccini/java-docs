@@ -7,7 +7,7 @@ tags: [oo, enumerations, io-streams]
 Setze das abgebildete Klassendiagramm vollständig um. Erstelle zum Testen eine ausführbare Klasse.
 
 ## Klassendiagramm
-XXX
+![image](https://github.com/jappuccini/java-docs/assets/47243617/256c7fac-6eed-48cf-ba8f-70603987a697)
 
 ## Allgemeine Hinweise
 - Aus Gründen der Übersicht werden im Klassendiagramm keine Getter und Object-Methoden dargestellt
