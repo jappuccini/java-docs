@@ -9,6 +9,10 @@ Setze das abgebildete Klassendiagramm vollständig um. Erstelle zum Testen eine 
 ## Klassendiagramm
 ![image](https://github.com/jappuccini/java-docs/assets/47243617/cb2cb06b-f211-4132-a906-1366d102cbf8)
 
+## Allgemeine Hinweise
+- Aus Gründen der Übersicht werden im Klassendiagramm keine Getter und Object-Methoden dargestellt
+- So nicht anders angegeben, sollen Konstruktoren, Setter, Getter sowie die Object-Methoden wie gewohnt implementiert werden
+
 ## Hinweis zur Klasse Bird
 Die Methode `void fly()` soll die Zeichenkette _flatter, flatter_ ausgeben.
 
