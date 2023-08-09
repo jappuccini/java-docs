@@ -27,7 +27,7 @@ soll der Wert `null` zurückgegeben werden
 
 ## Beispielhafter Aufbau der Wörterdatei
 
-```console
+```
 DE;Haus;EN;House
 DE;Maus;EN;Mouse
 DE;Baum;EN;Tree
