@@ -34,7 +34,7 @@ Flächeninhalt aufweisen
 
 ## Beispielhafter Aufbau der Formendatei
 
-```console
+```
 Circle;4
 Square;5
 Rectangle;3;4
