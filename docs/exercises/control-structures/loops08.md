@@ -3,7 +3,7 @@ title: Loops08
 description: ''
 ---
 
-Erstelle eine ausführbare Klasse, welche anhand von Startkapital (K~0~), Prozentsatz (p) und Anzahl Jahre (n) das Endkapital (K~n~) berechnet.
+Erstelle eine ausführbare Klasse, welche anhand von Startkapital (K<sub>0</sub>), Prozentsatz (p) und Anzahl Jahre (n) das Endkapital (K<sub>n</sub>) berechnet.
 
 ## Konsolenausgabe
 
