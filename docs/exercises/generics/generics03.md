@@ -7,7 +7,7 @@ description: ''
 - Erstelle eine ausführbare Klasse, welche eine Schulklasse mit mehreren Schülern erzeugt und die Schülerpaare ausgibt
 
 ## Klassendiagramm
-XXX
+![image](https://github.com/jappuccini/java-docs/assets/47243617/8b1f50f8-abc9-4cdc-bd95-2786b1ea7b2e)
 
 ## Hinweise zur Klasse SchoolClass
 - Die Methode `void addPupil(pupil: Pupil)` soll der Schulklasse den eingehenden Schüler hinzufügen
