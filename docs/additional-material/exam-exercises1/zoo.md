@@ -7,7 +7,7 @@ tags: [oo, enumerations, inheritance, polymorphy]
 Setze das abgebildete Klassendiagramm vollständig um. Erstelle zum Testen eine ausführbare Klasse.
 
 ## Klassendiagramm
-
+![image](https://github.com/jappuccini/java-docs/assets/47243617/cb2cb06b-f211-4132-a906-1366d102cbf8)
 
 ## Hinweis zur Klasse Bird
 Die Methode `void fly()` soll die Zeichenkette _flatter, flatter_ ausgeben.
