@@ -7,11 +7,11 @@ description: ''
 - Erstelle eine ausführbare Klasse, welche ein Turnier mit mehreren Vereinen erzeugt und die Paarungen ausgibt
 
 ## Klassendiagramm
-XXX
+![image](https://github.com/jappuccini/java-docs/assets/47243617/3bfe0f45-a69e-4fe8-81bc-c9fa7523c4aa)
 
-## Hinweise zur Klasse Tournnament
+## Hinweise zur Klasse Tournament
 - Die Methode `void addClub(club: Club)` soll dem Turnier den eingehenden Verein hinzufügen
-- Die Methode `List<Pair<Club>> getPairs()` soll aus den Vereinen des Turniers Paarungen für Hin- und Rückspiele bilden und zurückgeben
+- Die Methode `List<Pair<Club>> pairs()` soll aus den Vereinen des Turniers Paarungen für Hin- und Rückspiele bilden und zurückgeben
 
 ## Konsolenausgabe
 
