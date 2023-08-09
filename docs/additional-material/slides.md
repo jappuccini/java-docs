@@ -5,7 +5,7 @@ sidebar_position: 40
 tags: []
 ---
 
-## Steffen
+## Java I
 - [Einleitung](/slides/steffen/intro)
 - [Datentypen und Datenobjekte](/slides/steffen/datatypes-and-dataobjects)
 - [Methoden und Operatoren](/slides/steffen/methods-and-operators)
@@ -20,6 +20,16 @@ tags: []
 - [Interfaces](/slides/steffen/interfaces)
 - [Exceptions](/slides/steffen/exceptions)
 
+## Java II
+- [Wiederholung und Klausurbesprechung 10.08.23](/slides/steffen/recap)
+- [Innere Klassen und Lambda Functionen 17.08.23](/slides/steffen/tbd)
+- [Records 18.08.23](/slides/steffen/tbd)
+- [Generics und Maps 24.08.23](/slides/steffen/tbd)
+- [Stream API 31.08.23](/slides/steffen/tbd)
+- [Unit Testing 01.09.23](/slides/steffen/tbd)
+- [Probeklausur 07.09.23](/slides/steffen/tbd)
+- [Probeklausur 14.09.23](/slides/steffen/tbd)
+
 ## Demos
 Die Endergebnisse der Demos findet ihr in folgendem Branch:
 
@@ -27,7 +37,7 @@ Die Endergebnisse der Demos findet ihr in folgendem Branch:
 git switch demos/steffen
 ```
 
-## Klausurvorbereitung
+## Klausurvorbereitung Java I
 
 ### 08.03.2023
 ** Aufgaben in der Probeklausur 2202_Q4 **
@@ -125,3 +135,5 @@ sortieren.
 * Der ConstructionYearComparator soll das Comparator Interface implementieren 
 und Autos absteigend nach Baujahr sortieren.
 
+## Klausurvorbereitung Java II
+tbd
