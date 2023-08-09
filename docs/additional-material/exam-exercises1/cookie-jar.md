@@ -32,7 +32,7 @@ Die Methode `ArrayList<Ingredient> readIngredients()` soll alle Zutaten der eing
 
 ## Beispielhafter Aufbau der Zutatendatei
 
-```console
+```
 200g Butter
 300g Mehl
 1 Prise Salz
