@@ -11,7 +11,7 @@ XXX
 
 ## Hinweise zur Klasse SchoolClass
 - Die Methode `void addPupil(pupil: Pupil)` soll der Schulklasse den eingehenden Schüler hinzufügen
-- Die Methode `List<Pair<Pupil>> getPairs()` soll aus den Schülern der Klasse zufällige Paare bilden und zurückgeben. Bei einer ungeraden Anzahl an Schülern soll der verbleibende Schüler mit dem Wert `null` gepaart werden
+- Die Methode `List<Pair<Pupil>> getPairs()` soll aus den Schülern der Schulklasse zufällige Paare bilden und zurückgeben. Bei einer ungeraden Anzahl an Schülern soll der verbleibende Schüler mit dem Wert `null` gepaart werden
 
 ## Konsolenausgabe
 
