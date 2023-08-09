@@ -31,3 +31,14 @@ Setze das abgebildete Klassendiagramm vollständig um. Erstelle zum Testen eine 
 - Die Methode `ArrayList<Circle> getCircles()` soll alle Kreise der Formenliste (`shapes`) zurückgeben
 - Die Methode `ArrayList<Shape> getShapesWithMinArea(minArea: double)` soll alle Formen der Formenliste (`shapes`) zurückgeben, die mindestens den eingehenden
 Flächeninhalt aufweisen
+
+## Beispielhafter Aufbau der Formendatei
+
+```console
+Circle;4
+Square;5
+Rectangle;3;4
+Rectangle;1;7
+Circle;2
+Circle;3
+```
