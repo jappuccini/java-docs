@@ -8,10 +8,10 @@ Erstelle eine ausführbare Klasse, welche anhand von Startkapital (K<sub>0</sub>
 ## Konsolenausgabe
 
 ```console
-Gib bitte das Startkapital ein (in €): 10000
+Gib bitte das Startkapital ein (in Euro): 10000
 Gib bitte den Prozentsatz ein: 3,3
 Gib bitte die Anzahl Jahre ein: 5
-Ergebnis: Das Endkapital beträgt 11762€
+Ergebnis: Das Endkapital beträgt 11762 Euro
 Willst Du eine weitere Zinsrechnung durchführen (true, false)?: false
 ```
 
