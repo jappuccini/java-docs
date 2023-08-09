@@ -22,7 +22,7 @@ Die Methode `void addApplicant(applicant: Applicant)` soll der Bewerberliste (`a
 ## Hinweis zur Klasse JobOfferReader
 Die statische Methode `ArrayList<JobOffer> getJobOffers(file: File)` soll die Stellenangebote der eingehenden Datei zurückgeben. Die Ausnahme `FileNotFoundException` soll dabei weitergeleitet werden.
 
-## Beispielhafter Auszug aus einer Stellenangebotsdatei
+## Beispielhafter Aufbau der Stellenangebotsdatei
 
 ```
 285;Senior Developer Java

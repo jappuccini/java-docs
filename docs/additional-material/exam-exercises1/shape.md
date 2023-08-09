@@ -27,7 +27,18 @@ Setze das abgebildete Klassendiagramm vollständig um. Erstelle zum Testen eine 
 - Die Methode `double getCircumference()` soll den Umfang gemäß der Formel _2 * a + 2 * b_ berechnen und zurückgeben
 
 ## Hinweise zur Klasse ShapeReader
-- Der Konstruktor soll der Formenliste (`shapes`) alle Formen der eingehenden Formenliste hinzufügen
+- Der Konstruktor soll der Formenliste (`shapes`) alle Formen der eingehenden Datei hinzufügen
 - Die Methode `ArrayList<Circle> getCircles()` soll alle Kreise der Formenliste (`shapes`) zurückgeben
 - Die Methode `ArrayList<Shape> getShapesWithMinArea(minArea: double)` soll alle Formen der Formenliste (`shapes`) zurückgeben, die mindestens den eingehenden
 Flächeninhalt aufweisen
+
+## Beispielhafter Aufbau der Formendatei
+
+```
+Circle;4
+Square;5
+Rectangle;3;4
+Rectangle;1;7
+Circle;2
+Circle;3
+```

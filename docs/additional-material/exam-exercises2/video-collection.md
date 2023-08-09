@@ -19,7 +19,7 @@ Setze das abgebildete Klassendiagramm vollständig um. Erstelle zum Testen eine 
 - Die Methode `Video getVideoByTitle(title: String)` soll das Video zum eingehenden Titel zurückgeben. Für den Fall, dass kein Video gefunden wird, soll der Wert `null`
 zurückgegeben werden
 
-## Beispielhafter Auszug aus einer Videodatei
+## Beispielhafter Aufbau der Videodatei
 
 ```
 The Matrix;SCIFI;1999;VHS;false
