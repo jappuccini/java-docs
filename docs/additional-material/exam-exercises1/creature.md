@@ -20,4 +20,15 @@ XXX
 - Die Methode `void moveRigth()` soll den X-Wert der Position inkrementieren
 
 ## Hinweis zur Klasse CreaturesReader
-Die Methode `ArrayList<Creature> getCreatures(file: File)` soll alle Kreaturen der eingehenden Datei lesen, die Bewegungen der eingehenden Datei ausführen und die Kreaturen zurückgeben.
+Die Methode `ArrayList<Creature> getCreatures(file: File)` soll alle Kreaturen der eingehenden Datei zurückgeben und die Kreaturen die Bewegungen der eingehenden Datei ausführen lassen.
+
+## Beispielhafter Aufbau der Kreaturendatei
+
+```
+Frankensteins Monster;MONSTER;0;5
+DOWN;DOWN;LEFT;LEFT
+Dracula;VAMPIRE;3;3
+UP;RIGHT;UP
+Kurt;ZOMBIE;-2;-2
+DOWN
+```
