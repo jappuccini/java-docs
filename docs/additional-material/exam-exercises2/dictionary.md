@@ -25,9 +25,10 @@ Zielsprache (`targetLanguage`) entspricht, soll die Ausnahme `InvalidLanguageExc
 - Die Methode `String getTranslation(word: String)` soll die Übersetzung zur eingehenden Zeichenkette zurückgeben. Für den Fall, dass keine Übersetzung vorhanden ist,
 soll der Wert `null` zurückgegeben werden
 
-## Beispielhafter Auszug aus einer Wörterdatei
+## Beispielhafter Aufbau der Wörterdatei
 
-```
-DE;Maus;EN;Mouse
+```console
 DE;Haus;EN;House
+DE;Maus;EN;Mouse
+DE;Baum;EN;Tree
 ```
