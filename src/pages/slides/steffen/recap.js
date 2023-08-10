@@ -47,7 +47,7 @@ export default function Recap() {
           </ul>
         </section>
         <section>
-          <h2>Fragen anonym stellen</h2>
+          <h2>Fragen stellen</h2>
           <ul>
             <li className="fragment">Komplett anonym</li>
             <li className="fragment">Persistent</li>
@@ -398,8 +398,8 @@ export default function Recap() {
                   "  public static boolean exists(String brand) {\n" +
                   "    String[] cars = { 'BMW', 'Audi', 'Benz' } \n" +
                   "    for (int i = 0; i &lt; cars.length; i++) {\n" +
-                  "      car = cars[i];\n" +
-                  "      if(car.equals(brand)) {;\n" +
+                  "      String car = cars[i];\n" +
+                  "      if(car.equals(brand)) {\n" +
                   "        return true;\n" +
                   "      }\n" +
                   "    }\n" +
@@ -419,7 +419,7 @@ export default function Recap() {
                   "  public static boolean exists(String brand) {\n" +
                   "    String[] cars = { 'BMW', 'Audi', 'Benz' } \n" +
                   "    for (String car : cars) {\n" +
-                  "      if(car.equals(brand)) {;\n" +
+                  "      if(car.equals(brand)) {\n" +
                   "        return true;\n" +
                   "      }\n" +
                   "    }\n" +
@@ -459,6 +459,7 @@ export default function Recap() {
                   "    car = cars[0]; // lesen aus dem Array\n" +
                   "    cars[2] = 'Alfa'; // speichern in ein Array\n" +
                   "    String[] twoCars = new String[2]; // Array ohne Inhalt\n" +
+                  "    int amountOfItems = twoCars.length;\n" +
                   "  }\n",
               }}
             ></code>
@@ -479,6 +480,7 @@ export default function Recap() {
                   "    String car;\n" +
                   "    car = cars.get(0); // lesen aus der Liste\n" +
                   "    cars.set(2,'Alfa'); // speichern in der Liste\n" +
+                  "    int amountOfItems = cars.size();\n" +
                   "  }\n",
               }}
             ></code>
