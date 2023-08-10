@@ -481,6 +481,7 @@ export default function Recap() {
                   "    car = cars.get(0); // lesen aus der Liste\n" +
                   "    cars.set(2,'Alfa'); // speichern in der Liste\n" +
                   "    int amountOfItems = cars.size();\n" +
+                  "    cars.remove(1); // löschen aus der Liste\n" +
                   "  }\n",
               }}
             ></code>
@@ -551,9 +552,6 @@ export default function Recap() {
         </section>
         <section>
           <h2>Frag jetzt!</h2>
-        </section>
-        <section>
-          <h2>Konstruktor</h2>
         </section>
         <section>
           <h2>Konstruktor</h2>
@@ -964,7 +962,7 @@ export default function Recap() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "Dog bello = new Dog();\n" +
+                  'Dog bello = new Dog("Marianna");\n' +
                   'bello.name = "Steffen"; // funktioniert nicht\n' +
                   "\n" +
                   "public class MonsterDog extends Dog {\n" +
@@ -1179,7 +1177,7 @@ export default function Recap() {
               dangerouslySetInnerHTML={{
                 __html:
                   "public class Dog {\n" +
-                  "  public static hasHat = ture;\n" +
+                  "  public static hasHat = true;\n" +
                   "  public static isCool = true;\n" +
                   "  public static boolean isCoolAndHasHat() {\n" +
                   "    return Dog.isCool && Dog.hasHat;\n" +
@@ -1225,7 +1223,7 @@ export default function Recap() {
                 __html:
                   "public abstract class Animal {\n" +
                   "  //...\n" +
-                  "  public abstract void makeSound();{\n" +
+                  "  public abstract void makeSound();\n" +
                   "}\n",
               }}
             ></code>
@@ -1283,7 +1281,7 @@ export default function Recap() {
                   " }\n" +
                   " \n" +
                   " public boolean isBinary() {\n" +
-                  "   return this === Gender.MALE || this === Gender.FEMALE;\n" +
+                  "   return this == Gender.MALE || this == Gender.FEMALE;\n" +
                   " }\n" +
                   "}\n",
               }}
@@ -1479,8 +1477,7 @@ export default function Recap() {
             können und dienen zur Kommunikation.
           </p>
           <p className="fragment">
-            Fehler können mitgeteilt (throws) und verarbeitet werden
-            (catch).
+            Fehler können mitgeteilt (throws) und verarbeitet werden (catch).
           </p>
         </section>
         <section>
