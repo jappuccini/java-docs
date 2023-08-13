@@ -1436,7 +1436,7 @@ export default function Recap() {
                   "  public int compare(Human h1, Human h2) {\n" +
                   "    if(h1.getAge() > h2.getAge()) {\n" +
                   "     return 1;\n" +
-                  "    } else if (h1.getAge() &lt; h2.getAge()) {;\n" +
+                  "    } else if (h1.getAge() &lt; h2.getAge()) {\n" +
                   "      return -1;\n" +
                   "    } else {\n" +
                   "      return 0;\n" +
@@ -1455,8 +1455,8 @@ export default function Recap() {
               dangerouslySetInnerHTML={{
                 __html:
                   "ArrayList&lt;Human&gt; developers = new ArrayList&lt;&gt;();\n" +
-                  "developers.add(new Human(28);\n" +
-                  "developers.add(new Human(24);\n" +
+                  "developers.add(new Human(28));\n" +
+                  "developers.add(new Human(24));\n" +
                   "Collections.sort(developers, new AgeAscComparator());\n",
               }}
             ></code>
