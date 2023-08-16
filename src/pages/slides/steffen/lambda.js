@@ -68,7 +68,7 @@ export default function Lambda() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "ArrayList<> humans = new ArrayList<>();\n" +
+                  "ArrayList&lt;Human&gt; humans = new ArrayList&lt;&gt;();\n" +
                   "\n" +
                   "HumanComparator.AgeDescComparator comparator;\n" +
                   "comparator = new HumanComparator.AgeDescComparator();\n" +
@@ -107,7 +107,7 @@ export default function Lambda() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "ArrayList<> humans = new ArrayList<>();\n" +
+                  "ArrayList&lt;Human&gt; humans = new ArrayList&lt;&gt;();\n" +
                   "\n" +
                   "HumanComparator humanComparator = new HumanComparator();\n" +
                   "\n" +
