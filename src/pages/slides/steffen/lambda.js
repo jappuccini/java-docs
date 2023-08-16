@@ -161,24 +161,7 @@ export default function Lambda() {
           </pre>
         </section>
         <section>
-          <h2>Anonyme Klasse</h2>
-          <p className="fragment">
-            Die innere Klasse wird innerhalb des Methodenaufrufs definiert und
-            instanziiert.
-          </p>
-          <pre className="fragment">
-            <code
-              className="java"
-              dangerouslySetInnerHTML={{
-                __html:
-                  "Collections.sort(humans, new Comparator&lt;Human&gt;() {\n" +
-                  "  public int compare(Human h1, Human h2) {\n" +
-                  "    // Implementierung der Comparatorlogik\n" +
-                  "  }\n" +
-                  "});\n",
-              }}
-            ></code>
-          </pre>
+          <h2>Frag jetzt!</h2>
         </section>
         <section>
           <h2>Demo</h2>
@@ -189,6 +172,9 @@ export default function Lambda() {
             <li className="fragment">Anonyme Klassen</li>
             <li className="fragment">Ausblick Lambdafunktion</li>
           </ul>
+        </section>
+        <section>
+          <h2>Frag jetzt!</h2>
         </section>
       </section>
       <section>
@@ -377,6 +363,9 @@ export default function Lambda() {
           </pre>
         </section>
         <section>
+          <h2>Frag jetzt!</h2>
+        </section>
+        <section>
           <h2>Demo</h2>
           <ul>
             <li className="fragment">Intro Shopping List Example</li>
@@ -384,6 +373,9 @@ export default function Lambda() {
             <li className="fragment">After Item Added (ein Parameter)</li>
             <li className="fragment">Items Changed (mehrere Parameter)</li>
           </ul>
+        </section>
+        <section>
+          <h2>Frag jetzt!</h2>
         </section>
       </section>
       <section>
