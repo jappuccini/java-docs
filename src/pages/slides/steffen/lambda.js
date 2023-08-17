@@ -230,7 +230,7 @@ export default function Lambda() {
           <p className="fragment">
             Nicht jedes Interface mit einer einzigen abstrakten Methode ist
             funktional, z.B.{" "}
-            <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.htmlComparable">
+            <a href=" https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html">
               Comparable
             </a>
           </p>
