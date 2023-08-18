@@ -106,8 +106,8 @@ export default function RecordsOptionals() {
           <ul>
             <li className="fragment">Cat Klasse</li>
             <li className="fragment">Dog Record</li>
-            <li className="fragment">isBig - Methode Record</li>
             <li className="fragment">height - Attribut</li>
+            <li className="fragment">isBig - Methode Record</li>
           </ul>
         </section>
         <section>
