@@ -9,7 +9,7 @@ import Exercise from '@site/src/components/Exercise';
   Klassendiagramms
 - Erstelle eine ausführbare Klasse, welche ein Haus mit mehreren Räumen
   erzeugt und auf der Konsole ausgibt
-- Die Klasse Room soll hierbei eine Geschachtelte Klasse sein.
+- Die Klasse Room soll hierbei eine Element Klasse sein.
 
 ## Klassendiagramm
 ![image](https://user-images.githubusercontent.com/47243617/209158347-6abf344a-aa74-45cf-8030-8362c887a3c0.png)
