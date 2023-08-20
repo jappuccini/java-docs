@@ -3,6 +3,8 @@ title: Generics04
 description: ''
 ---
 
+import Exercise from '@site/src/components/Exercise';
+
 - Erstelle die Klassen `Club` und `Tournament` anhand des abgebildeten Klassendiagramms
 - Erstelle eine ausführbare Klasse, welche ein Turnier mit mehreren Vereinen erzeugt und die Paarungen ausgibt
 
@@ -23,3 +25,5 @@ Pair[partA=Club[name=Bayern Muenchen, marketValueInMillions=926], partB=Club[nam
 Pair[partA=Club[name=Borussia Dortmund, marketValueInMillions=462], partB=Club[name=SC Freiburg, marketValueInMillions=165]]
 Pair[partA=Club[name=Borussia Dortmund, marketValueInMillions=462], partB=Club[name=Bayern Muenchen, marketValueInMillions=926]]
 ```
+
+<Exercise pullRequest="65" branchSuffix="generics/04" />

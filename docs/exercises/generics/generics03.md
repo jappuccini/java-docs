@@ -3,6 +3,8 @@ title: Generics03
 description: ''
 ---
 
+import Exercise from '@site/src/components/Exercise';
+
 - Erstelle die Klassen `Pair`, `Pupil` und `SchoolClass` anhand des abgebildeten Klassendiagramms
 - Erstelle eine ausführbare Klasse, welche eine Schulklasse mit mehreren Schülern erzeugt und die Schülerpaare ausgibt
 
@@ -21,3 +23,5 @@ Pair[partA=Pupil[name=Fritz, gender=m], partB=Pupil[name=Lisa, gender=w]]
 Pair[partA=Pupil[name=Max, gender=m], partB=Pupil[name=Hans, gender=m]]
 Pair[partA=Pupil[name=Peter, gender=m], partB=null]
 ```
+
+<Exercise pullRequest="64" branchSuffix="generics/03" />
