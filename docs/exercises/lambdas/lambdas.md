@@ -1,4 +1,3 @@
-
 ---
 title: Lambdafunktionen 
 description: ''
@@ -7,6 +6,7 @@ tags: [lambdas]
 ---
 
 ## Übungsaufgaben
+
 import DocCardList from '@theme/DocCardList';
 
 <DocCardList />
