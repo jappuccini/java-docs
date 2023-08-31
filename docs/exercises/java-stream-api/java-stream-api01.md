@@ -6,6 +6,33 @@ description: ''
 - Erstelle die Klassen `VideoGameConsoles` und `VideoGameConsoleQueries` anhand des abgebildeten Quellcodes sowie des abgebildeten Klassendiagramms
 - Erstelle eine ausführbare Klasse, welche alle erstellten Abfragen ausführt und die Ergebnisse auf der Konsole ausgibt
 
+```mermaid
+classDiagram
+    Maker--VideoGameConsole
+    VideoGameConsole--VideoGameConsoleQueries
+
+    class Maker {
+        <<Enumeration>> 
+        MICROSOFT
+        NINTENDO
+        SONY
+    }
+
+    class VideoGameConsole {
+        <<Record>>
+        -title String
+        -maker Maker
+        -lifeSpan int
+        -soldUnitsInMillions double
+    } 
+
+    class VideoGameConsoleQueries {
+        -consoles ArrayList~VideoGameConsole~
+        +getAllCurrentConsoleNames() List~String~
+        +getAllConsolesSortedByLifespan() List~VideoGameConsole~
+    } 
+```
+
 ## Quellcode
 ```java title="VideoGameConsoles.java" showLineNumbers
 public class VideoGameConsoles {
