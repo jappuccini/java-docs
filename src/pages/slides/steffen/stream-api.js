@@ -761,8 +761,7 @@ export default function StreamApi() {
         <section>
           <h2>Transformationen</h2>
           <p>
-            Mit findAny und findFirst wird das erste Element in einem Stream
-            zurückgegeben.
+            Die Ergebnismenge wird gesammelt.
           </p>
         </section>
         <section>
