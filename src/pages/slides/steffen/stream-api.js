@@ -788,11 +788,11 @@ export default function StreamApi() {
                 __html:
                   "public class Main {\n" +
                   "  public static void main(String[] args) {\n" +
-                  "    Stream.of(1, 2, 3, 4)\n" +
+                  "    List&lt;Integer&gt; nums = Stream.of(1, 2, 3, 4)\n" +
                   "      .filter(number -> number > 1)\n" +
                   "      .toList() // List&lt;Integer&gt;\n" +
                   "    \n" +
-                  "    Stream.of(1, 2, 3, 4)\n" +
+                  "    Object[] nums2 = Stream.of(1, 2, 3, 4)\n" +
                   "      .filter(number -> number > 1)\n" +
                   "      .toArray() // Object[]\n" +
                   "  }\n" +
@@ -827,7 +827,7 @@ export default function StreamApi() {
                 __html:
                   "public class Main {\n" +
                   "  public static void main(String[] args) {\n" +
-                  "    ArrayList&lt;Student&gt; students = getManyStudents().\n" +
+                  "    ArrayList&lt;Student&gt; students = getManyStudents()\n" +
                   "      .stream()\n" +
                   "      .collect(Collectors.toList());\n" +
                   "      // Collectors.toMap ist Klausurrelevant\n" +
@@ -967,7 +967,7 @@ export default function StreamApi() {
                   "public class Main {\n" +
                   "  public static void main(String[] args) {\n" +
                   "    ArrayList&lt;Student&gt; students = getManyStudents();\n" +
-                  "    IntStream studentAges = students\n" +
+                  "    IntStream studentAges = students.stream()\n" +
                   "      .mapToInt(student -> student.age());\n" +
                   "  }\n" +
                   "}\n",
@@ -999,7 +999,7 @@ export default function StreamApi() {
                   "public class Main {\n" +
                   "  public static void main(String[] args) {\n" +
                   "    IntStream manyNumbers = getManyNumbers();\n" +
-                  "    int sum = manyNumbers.sum();\n" +
+                  "    long sum = manyNumbers.sum();\n" +
                   "  }\n" +
                   "}\n",
               }}
