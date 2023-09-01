@@ -760,9 +760,7 @@ export default function StreamApi() {
         </section>
         <section>
           <h2>Transformationen</h2>
-          <p>
-            Die Ergebnismenge wird gesammelt.
-          </p>
+          <p>Die Ergebnismenge wird gesammelt.</p>
         </section>
         <section>
           <h2>Transformationen - Methoden</h2>
@@ -832,7 +830,8 @@ export default function StreamApi() {
                   "    ArrayList&lt;Student&gt; students = getManyStudents().\n" +
                   "      .stream()\n" +
                   "      .collect(Collectors.toList());\n" +
-                  "      // nur Collectors.toMap ist Klausurrelevant\n" +
+                  "      // Collectors.toMap ist Klausurrelevant\n" +
+                  "      // Collectors.groupingBy ist Klausurrelevant\n" +
                   "  }\n" +
                   "}\n",
               }}
@@ -847,7 +846,8 @@ export default function StreamApi() {
                 Collectors Klasse
               </a>
             </li>
-            <li className="fragment">ArrayList to Map</li>
+            <li className="fragment">Collectors.toMap</li>
+            <li className="fragment">Collectors.groupingBy</li>
           </ul>
         </section>
         <section>
@@ -984,7 +984,7 @@ export default function StreamApi() {
                 __html:
                   "long sum()\n" +
                   "                           \n" +
-                  "Optional&lt;T&gt; average()\n",
+                  "OptionalDouble average()\n",
               }}
             ></code>
           </pre>
@@ -1068,8 +1068,8 @@ export default function StreamApi() {
       <section>
         <h2>Rest of the Day</h2>
         <ul>
-          <li className="fragment">Generics</li>
-          <li className="fragment">Maps</li>
+          <li className="fragment">Lambda Aufgaben</li>
+          <li className="fragment">Stream API Aufgaben</li>
         </ul>
       </section>
     </Slides>
