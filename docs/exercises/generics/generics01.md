@@ -11,7 +11,35 @@ import Exercise from '@site/src/components/Exercise';
   Flaschen erzeugt und die Flaschen in die Getränkekiste stellt
 
 ## Klassendiagramm
-![image](https://user-images.githubusercontent.com/47243617/209157752-8708e5ad-c3d4-45c1-af3e-eda8c69b983a.png)
+```mermaid
+classDiagram
+    BeerBottle --|> Bottle
+    WineBottle --|> Bottle
+    Bottle --* Crate
+
+    class Crate {
+        -box1 Bottle
+        -box2 Bottle
+        -box3 Bottle
+        -box4 Bottle
+        -box5 Bottle
+        -box6 Bottle
+        +insertBottle(bottle Bottle, box int) void
+        +takeBottle(box int) Bottle
+    }
+
+    class Bottle {
+        <<abstract>>
+    }
+
+    class BeerBottle {
+        +chugALug() void
+    }
+
+    class WineBottle {
+
+    }
+```
 
 ## Hinweis zur Klasse BeerBottle
 Die Methode `void chugALug()` soll den Text "Ex und Hopp" auf der Konsole ausgeben.
