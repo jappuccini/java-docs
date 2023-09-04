@@ -17,7 +17,7 @@ classDiagram
     Person --o TelephoneBook
     TelephoneNumber --o TelephoneBook
 
-    note "Map-Key: Person, Map-Value: TelephoneNumber"
+    note for TelephoneBook "Map-Key: Person, Map-Value: TelephoneNumber"
 
     class Person {
         <<record>>
