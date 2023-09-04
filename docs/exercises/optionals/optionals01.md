@@ -7,4 +7,29 @@ description: ''
 - Passe die ausführbare Klasse aus Übungsaufgabe [Maps02](../maps/maps02) so an, dass entweder die gefundenen Werte oder alternativ entsprechende Meldungen ausgegeben werden
 
 ## Klassendiagramm
-![image](https://user-images.githubusercontent.com/47243617/235863354-e51d6269-74c0-423c-b246-399b36f9b14f.png)
+```mermaid
+classDiagram
+    Author --o BookCollection
+    Book --o BookCollection
+
+    note for BookCollection "Map-Key: Author, Map-Value: List~Book~"
+
+    class Author {
+        <<record>>
+        -name String
+    }
+
+    class Book {
+        <<record>>
+        -title String
+    }
+
+    class BookCollection {
+        <<record>>
+        -collection Map
+        +addAuthor(author Author) void
+        +addBook(author Author, book Book) void
+        +getMostDiligentAuthor() Optional~Author~
+        +getBookByTitle(title String) Optional~Book~
+    }
+```
