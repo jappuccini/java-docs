@@ -14,7 +14,47 @@ import Exercise from '@site/src/components/Exercise';
   50 Punkte heranzukommen, ohne allerdings die 50 Punkte zu überschreiten
 
 ## Klassendiagramm
-![image](https://user-images.githubusercontent.com/47243617/209156029-69be8cff-4ffb-4bd6-9b7b-e52be476b2d9.png)
+```mermaid
+classDiagram
+    Dice --o DiceGame
+    Player --o DiceGame
+    DiceCup --o DiceGame
+
+    class Player {
+        -name String
+        -score int
+        -isActive boolean
+        +Player(name String)
+        +getName() String
+        +getScore() int
+        +setScore(int score) void
+        +isActive() boolean
+        +setActive(isActiv boolean) void
+    } 
+
+    class Dice {
+        -id int
+        -value int
+        +Dice(id int)
+        +getId() int
+        +getValue() int
+        +rollTheDice() void
+    }
+
+    class DiceCup {
+        +rollTheDices(dices Dice...) void
+    }
+
+    class DiceGame {
+        -diceCup diceCup
+        -dices ArrayList~Dice~
+        -players ArrayList~Player~
+        -scanner Scanner
+        +DiceGame(players ArrayList~Player~)
+        +start() void
+        +move(player Player) void
+    }
+```
 
 ## Hinweis zur Klasse Player
 Passe den Konstruktor so an, dass auch weiterhin alle Attribute initialisiert
