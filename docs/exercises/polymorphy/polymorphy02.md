@@ -16,7 +16,7 @@ import Exercise from '@site/src/components/Exercise';
 classDiagram
     Car --|> Vehicle
     Truck --|> Vehicle
-    Engine --> Vehicle
+    Engine --o Vehicle
     Vehicle --o Rental
 
     class Vehicle {
