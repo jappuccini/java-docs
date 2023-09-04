@@ -14,6 +14,37 @@ import Exercise from '@site/src/components/Exercise';
 - Die Klasse Emplyee soll hierbei eine Element Klasse sein.
 
 ## Klassendiagramm
-![image](https://user-images.githubusercontent.com/47243617/209158417-b2d9fb0c-3552-4cb4-a193-95fc74fb0573.png)
+```mermaid
+classDiagram
+    Employee --* Company
+    Person --o Employee
+
+    class Company {
+        -name String
+        -employees ArrayList~Employee~
+        -numberOfEmployees int
+        +Company(name String)
+        +addEmployee(employee Employee) void
+        +print() void
+    }
+
+    class Person {
+        -name String
+        +Person(name String)
+        +getName() String
+    }
+
+    class Employee {
+        -employeeId int
+        -person Person
+        -salary int
+        +Employee(employeeId int, person Person, salary int)
+        +getEmployeeId() int
+        +getName() String
+        +setSalary(salary int) void
+        +getSalary() int
+        +print() void
+    }
+```
 
 <Exercise pullRequest="55" branchSuffix="inner-classes/02" />
