@@ -13,7 +13,56 @@ import Exercise from '@site/src/components/Exercise';
   Fahrzeuge, sondern Autos und Lastwagen erzeugt und ausgegeben werden
 
 ## Klassendiagramm
-![image](https://user-images.githubusercontent.com/47243617/209156518-166c8cba-5724-4662-8703-ded8e06c60ac.png)
+```mermaid
+classDiagram
+    Car --|> Vehicle
+    Truck --|> Vehicle
+    Engine --> Vehicle
+
+    class Vehicle {
+        -make String
+        -model String
+        -engine Engine
+        #speed double
+        -numberOfVehicles int$
+        +Vehicle(make String, model String, engine Engine)
+        +getMake() String
+        +getModel() String
+        +getEngine() Engine
+        +getSpeed() double
+        +accelerate(value int) void
+        +brake(value int) void
+        +print() void
+        +getNumberOfVehicles()$ int
+    }
+
+    class Engine {
+        <<enumeration>>
+        DIESEL = Diesel
+        PETROL = Benzin
+        GAS = Gas
+        ELECTRO = Elektro
+        -description String
+    }
+
+    class Car {
+        -seats int
+        +Car(make String, model String, engine Engine, seats int)
+        +getSeats() int
+        +doATurboBoost() void
+        +print() void
+    }
+
+    class Truck {
+        -cargo int
+        -isTransformed boolean
+        +Truck(make String, model String, engine Engine, cargo int)
+        +getCargo() int
+        +isTransformed() boolean
+        +transform() void
+        +print() void
+    }
+```
 
 ## Hinweise zur Klasse Car
 - Der Konstruktor soll alle Attribute initialisieren
