@@ -9,7 +9,31 @@ import Exercise from '@site/src/components/Exercise';
 - Erstelle eine ausführbare Klasse, welche ein Turnier mit mehreren Vereinen erzeugt und die Paarungen ausgibt
 
 ## Klassendiagramm
-![image](https://github.com/jappuccini/java-docs/assets/47243617/3bfe0f45-a69e-4fe8-81bc-c9fa7523c4aa)
+```mermaid
+classDiagram
+    Club --o Tournament
+
+    class Pair~T~ {
+        <<record>>
+        -partA T
+        -partB T
+    }
+
+    class Tournament {
+        <<record>>
+        -title String
+        -clubs List~Club~
+        -pairs List~Pair~Club~~
+        +addClub(club Club) void
+        +pairs() List~Pair~Club~~
+    }
+
+    class Club {
+        <<record>>
+        -name String
+        -marketValueInMillions int
+    }
+```
 
 ## Hinweise zur Klasse Tournament
 - Die Methode `void addClub(club: Club)` soll dem Turnier den eingehenden Verein hinzufügen
