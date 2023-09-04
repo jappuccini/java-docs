@@ -14,8 +14,8 @@ Klassendiagramms an.
 classDiagram
     Car --|> Vehicle
     Truck --|> Vehicle
-    Engine --> Vehicle
-    Vehicle --> Rental
+    Engine --o Vehicle
+    Vehicle --o Rental
 
     class Vehicle {
         <<abstract>>
