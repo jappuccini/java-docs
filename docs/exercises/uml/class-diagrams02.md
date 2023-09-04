@@ -29,7 +29,7 @@ classDiagram
         +getScore() int
         +setScore(int score) void
         +isActive() boolean
-        +setActive(isActiv boolean) void
+        +setActive(isActive boolean) void
     } 
 
     class Dice {
