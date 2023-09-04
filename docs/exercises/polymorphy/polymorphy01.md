@@ -17,7 +17,7 @@ import Exercise from '@site/src/components/Exercise';
 classDiagram
     Car --|> Vehicle
     Truck --|> Vehicle
-    Engine --> Vehicle
+    Engine --o Vehicle
 
     class Vehicle {
         -make String
