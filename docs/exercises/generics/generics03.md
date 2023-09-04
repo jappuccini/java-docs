@@ -9,7 +9,30 @@ import Exercise from '@site/src/components/Exercise';
 - Erstelle eine ausführbare Klasse, welche eine Schulklasse mit mehreren Schülern erzeugt und die Schülerpaare ausgibt
 
 ## Klassendiagramm
-![image](https://github.com/jappuccini/java-docs/assets/47243617/8b1f50f8-abc9-4cdc-bd95-2786b1ea7b2e)
+```mermaid
+classDiagram
+    Pupil --o SchoolClass
+
+    class Pair~T~ {
+        <<record>>
+        -partA T
+        -partB T
+    }
+
+    class SchoolClass {
+        <<record>>
+        -name String
+        -pupils List~Pupil~
+        +addPupil(pupil Pupil) void
+        +getPairs() List~Pair~Pupil~~
+    }
+
+    class Pupil {
+        <<record>>
+        -name String
+        -gender String
+    }
+```
 
 ## Hinweise zur Klasse SchoolClass
 - Die Methode `void addPupil(pupil: Pupil)` soll der Schulklasse den eingehenden Schüler hinzufügen
