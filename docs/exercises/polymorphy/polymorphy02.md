@@ -17,7 +17,7 @@ classDiagram
     Car --|> Vehicle
     Truck --|> Vehicle
     Engine --> Vehicle
-    Vehicle --> Rental
+    Vehicle --o Rental
 
     class Vehicle {
         -make String
