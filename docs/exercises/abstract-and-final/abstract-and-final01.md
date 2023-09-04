@@ -10,6 +10,69 @@ Passe die Klassen `Vehicle`, `Car` und `Truck` aus Übungsaufgabe
 Klassendiagramms an.
 
 ## Klassendiagramm
-![image](https://user-images.githubusercontent.com/47243617/209156931-7a56e9d1-e022-45b8-bef9-8ae8ae6500d1.png)
+```mermaid
+classDiagram
+    Car --|> Vehicle
+    Truck --|> Vehicle
+    Engine --> Vehicle
+    Vehicle --> Rental
+
+    class Vehicle {
+        <<abstract>>
+        -make String
+        -model String
+        -engine Engine
+        #speed double
+        -numberOfVehicles int$
+        +Vehicle(make String, model String, engine Engine)
+        +getMake() String
+        +getModel() String
+        +getEngine() Engine
+        +getSpeed() double
+        +accelerate(value int) void
+        +brake(value int) void
+        +print()* void
+        +getNumberOfVehicles() int$
+    }
+
+    class Engine {
+        <<enumeration>>
+        DIESEL = Diesel
+        PETROL = Benzin
+        GAS = Gas
+        ELECTRO = Elektro
+        -description String
+    }
+
+    class Car {
+        <<final>>
+        -seats int
+        +Car(make String, model String, engine Engine, seats int)
+        +getSeats() int
+        +doATurboBoost() void
+        +print() void
+    }
+
+    class Truck {
+        <<final>>
+        -cargo int
+        -isTransformed boolean
+        +Truck(make String, model String, engine Engine, cargo int)
+        +getCargo() int
+        +isTransformed() boolean
+        +transform() void
+        +print() void
+    }
+
+    class Rental {
+        -name String
+        -vehicles ArrayList~Vehicle~
+        +Rental(name String)
+        +addVehicle(vehicle Vehicle) void
+        +addAllVehicles(vehicles Vehicle...) void
+        +transformAllTrucks() void
+        +print() void
+    }
+``` 
 
 <Exercise pullRequest="45" branchSuffix="abstract-and-final/01" />
