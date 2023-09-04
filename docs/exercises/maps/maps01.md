@@ -12,7 +12,30 @@ import Exercise from '@site/src/components/Exercise';
   auf der Konsole ausgibt
 
 ## Klassendiagramm
-![image](https://user-images.githubusercontent.com/47243617/235863191-bc2cad00-4e34-40c9-87fc-b78f24a20ff3.png)
+```mermaid
+classDiagram
+    Person --o TelephoneBook
+    TelephoneNumber --o TelephoneBook
+
+    note "Map-Key: Person, Map-Value: TelephoneNumber"
+
+    class Person {
+        <<record>>
+        -name String
+    }
+
+    class TelephoneNumber {
+        <<record>>
+        -value String
+    }
+
+    class TelephoneBook {
+        <<record>>
+        -entries Map
+        +addEntry(person Person, telephoneNumber TelephoneNumber) void
+        +getTelephoneNumberByName(name String) TelephoneNumber
+    }
+```
 
 ## Hinweise zur Klasse TelephoneBook
 - Die Methode `void addEntry(person: Person, telephoneNumber: TelephoneNumber)` soll einen Eintrag im
