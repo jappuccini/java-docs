@@ -11,7 +11,38 @@ import Exercise from '@site/src/components/Exercise';
   Mitarbeitern erzeugt und auf der Konsole ausgibt
 
 ## Klassendiagramm
-![image](https://user-images.githubusercontent.com/47243617/209156255-10033920-eeda-45ba-a347-3cc6c13b2e45.png)
+```mermaid
+classDiagram
+    Employee --o Company
+    Person --o Employee
+
+    class Company {
+        -name String
+        -employees ArrayList~Employee~
+        -numberOfEmployees int
+        +Company(name String)
+        +addEmployee(employee Employee) void
+        +print() void
+    }
+
+    class Person {
+        -name String
+        +Person(name String)
+        +getName() String
+    }
+
+    class Employee {
+        -employeeId int
+        -person Person
+        -salary int
+        +Employee(employeeId int, person Person, salary int)
+        +getEmployeeId() int
+        +getName() String
+        +setSalary(salary int) void
+        +getSalary() int
+        +print() void
+    }
+```
 
 ## Hinweis zur Klasse Person
 Der Konstruktor soll den Namen initialisieren.
