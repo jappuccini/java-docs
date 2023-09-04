@@ -12,7 +12,22 @@ import Exercise from '@site/src/components/Exercise';
 - Die Klasse Room soll hierbei eine Element Klasse sein.
 
 ## Klassendiagramm
-![image](https://user-images.githubusercontent.com/47243617/209158347-6abf344a-aa74-45cf-8030-8362c887a3c0.png)
+```mermaid
+classDiagram
+    Room --* House
+
+    class House {
+        -rooms ArrayList~Room~
+        +addRoom(room Room) void
+        +printRooms() void
+    }
+
+    class Room {
+        -name String
+        +Room(name String)
+        +printRoom() void
+    }
+```
 
 ## Konsolenausgabe
 
