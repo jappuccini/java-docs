@@ -7,4 +7,27 @@ description: ''
 - Passe die ausführbare Klasse aus Übungsaufgabe [Maps01](../maps/maps01) so an, dass entweder die gefundenen Werte oder alternativ entsprechende Meldungen ausgegeben werden
 
 ## Klassendiagramm
-![image](https://user-images.githubusercontent.com/47243617/235863753-ea1883a0-723a-4772-ad5f-7e7520298881.png)
+```mermaid
+classDiagram
+    Person --o TelephoneBook
+    TelephoneNumber --o TelephoneBook
+
+    note for TelephoneBook "Map-Key: Person, Map-Value: TelephoneNumber"
+
+    class Person {
+        <<record>>
+        -name String
+    }
+
+    class TelephoneNumber {
+        <<record>>
+        -value String
+    }
+
+    class TelephoneBook {
+        <<record>>
+        -entries Map
+        +addEntry(person Person, telephoneNumber TelephoneNumber) void
+        +getTelephoneNumberByName(name String) Optional~TelephoneNumber~
+    }
+```
