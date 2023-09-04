@@ -46,7 +46,7 @@ classDiagram
     }
 
     class DiceGame {
-        -diceCup diceCup
+        -diceCup DiceCup
         -dices ArrayList~Dice~
         -players ArrayList~Player~
         -scanner Scanner
