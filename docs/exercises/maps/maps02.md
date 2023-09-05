@@ -14,8 +14,6 @@ classDiagram
     Author --o BookCollection
     Book --o BookCollection
 
-    note for BookCollection "Map-Key: Author, Map-Value: List~Book~"
-
     class Author {
         <<record>>
         -name String
@@ -28,7 +26,7 @@ classDiagram
 
     class BookCollection {
         <<record>>
-        -collection Map
+        -collection Map~Author&#44&#160List~Book~~
         +addAuthor(author Author) void
         +addBook(author Author, book Book) void
         +getMostDiligentAuthor() Author
