@@ -17,8 +17,6 @@ classDiagram
     Person --o TelephoneBook
     TelephoneNumber --o TelephoneBook
 
-    note for TelephoneBook "Map-Key: Person, Map-Value: TelephoneNumber"
-
     class Person {
         <<record>>
         -name String
@@ -31,7 +29,7 @@ classDiagram
 
     class TelephoneBook {
         <<record>>
-        -entries Map
+        -entries Map~Person&#44&#160TelephoneNumber~
         +addEntry(person Person, telephoneNumber TelephoneNumber) void
         +getTelephoneNumberByName(name String) TelephoneNumber
     }
