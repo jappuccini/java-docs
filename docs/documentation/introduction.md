@@ -16,4 +16,5 @@ Wir versuchen, langfristig alle Inhalte der Vorlesung in Textform bereitzustelle
 
 # Contributors
 
-<Contributor pullRequest="73" userId="116145963" />
+<Contributor pullRequest="73" userId="116145963" description="Fixed wrong for-each loop solution" />
+<Contributor pullRequest="60" userId="122993743" description="Fixed typo" />

@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Contributor({ pullRequest, userId }) {
+export default function Contributor({ pullRequest, userId, description }) {
   return (
     <div
       style={{
@@ -18,7 +18,7 @@ export default function Contributor({ pullRequest, userId }) {
         style={{ margin: "1rem" }}
         href={`https://github.com/jappuccini/java-exercises/pull/${pullRequest}`}
       >
-        #{pullRequest} Fixed wrong for-each loop solution
+        #{pullRequest} {description} 
       </a>
     </div>
   );
