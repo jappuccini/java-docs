@@ -9,8 +9,10 @@ Wenn eine große Menge an Daten verarbeitet werden soll, kann man auf spezielle 
 werden können.
 
 ```mermaid
-flowchart LR
-    a[Index: 0\nWert: Hans] -.- b[Index: 1\nWert: Peter] -.- c[Index: 2\nWert: Lisa]
+flowchart
+    subgraph names
+        a[Index: 0\nWert: Hans] -.- b[Index: 1\nWert: Peter] -.- c[Index: 2\nWert: Lisa]
+    end
 ``` 
 
 ## Erzeugen von Feldern
