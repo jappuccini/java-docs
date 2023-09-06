@@ -129,7 +129,17 @@ public class MainClass {
 ## Entwicklungspakete
 Entwicklungspakete ermöglichen das hierarchische Strukturieren von Klassen. Um die Klassen eines Entwicklungspaketes verwenden zu können, müssen die jeweiligen Klassen explizit mit Hilfe des Schlüsselworts `import` importiert werden.
 
-![image](https://user-images.githubusercontent.com/47243617/209095274-3ac925e8-1636-4d92-afbe-936058a3eac0.png)
+```mermaid
+flowchart
+    pA[packageA] --> pB[packageB]
+    pA --> cA[ClassA]
+    pB --> pC[packageC]
+    pB --> cB[ClassB]
+    pB --> pD[packageD]
+    pC --> cC[ClassC]
+    pC --> cD[ClassD]
+    pD --> cE[ClassE]
+```
 
 :::note Hinweis
 Die Klassen des Entwicklungspaketes `java.lang` müssen nicht importiert werden.
