@@ -26,6 +26,20 @@ Jedes Objekt ist eindeutig identifizierbar.
 Ein wesentlicher Grundsatz der Objektorientierung ist, dass Attribute durch Methoden gekapselt werden. Datenkapselung bedeutet, dass Attribute nicht direkt geändert werden können, sondern nur durch den indirekten Zugriff über Methoden. Typische Methoden zum 
 Lesen und Schreiben von Attributen sind die sogenannten Getter bzw. Setter.
 
+```mermaid
+flowchart LR
+    write[Schreibender Zugriff] --> setter1
+    read[Lesender Zugriff] --> getter2
+    subgraph Klasse
+        attribut1[Attribut 1]
+        attribut2[Attribut 2]
+        setter1[Setter für Attribut 1] -.- attribut1
+        getter1[Getter für Attribut 1] -.- attribut1
+        setter2[Setter für Attribut 2] -.- attribut2
+        getter2[Getter für Attribut 2] -.- attribut2
+    end
+```
+
 ## Sichtbarkeit von Attributen und Methoden
 Um die Sichtbarkeit von Attributen und Methoden zu definieren, existieren verschiedene Zugriffsrechte. Die Sichtbarkeit bestimmt, von welchem Ort aus Attribute und Methoden verwendet bzw. aufgerufen werden dürfen.
 
