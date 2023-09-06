@@ -17,4 +17,20 @@ Datenknoten und Kontrollknoten) und Kanten (Kontrollflüsse und Datenflüsse) ve
 - Datenknoten sind Hilfsknoten, die als ein- oder ausgehende Parameter einer Aktion verwendet werden können
 - Kontroll- und Datenflüsse legen Abläufe zwischen Vorgänger- und Nachfolger-Knoten fest
 
-![image](https://user-images.githubusercontent.com/47243617/209096940-5f248445-9c58-45b4-adf0-3c1ef8811e92.png)
+```mermaid
+stateDiagram-v2
+    state "Eingabe: 1. Zahl" as input1
+    state "Eingabe: 2. Zahl" as input2
+    state "Ausgabe: 1. Zahl eingeben" as output1
+    state "Ausgabe: 2. Zahl eingeben" as output2
+    state "Rückgabe: 1. Zahl : 2. Zahl" as activity1
+    state if <<choice>>
+    [*] --> output1
+    output1 --> input1
+    input1 --> output2
+    output2 --> input2
+    input2 --> if
+    if --> output2 : 2. Zahl ist gleich 0
+    if --> activity1: 2. Zahl ist ungleich 0
+    activity1 --> [*]
+```
