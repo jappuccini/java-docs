@@ -37,6 +37,8 @@ git switch demos/steffen
 ```
 ## Klausurvorbereitung Java II
 
+<a href="/java-docs/pdf/java-cheat-sheet.pdf"  target="_blank" >Cheatsheet</a>
+
 1. Altklausuren 2022 Q3 - Klausur Java 2 Aufgabe 3
 2. Altklausuren 2022 Q3 - Probeklausur Java 2 Klausur Aufgabe 3
 3. Altklausuren 2023 Q1 - Wiederholklausur 2 Java 2 Klausur Aufgabe 3
