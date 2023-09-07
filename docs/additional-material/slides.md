@@ -40,6 +40,50 @@ git switch demos/steffen
 <a href="/java-docs/pdf/java-cheat-sheet.pdf"  target="_blank" >Cheatsheet</a>
 
 1. Altklausuren 2022 Q3 - Klausur Java 2 Aufgabe 3
+
+```java Lösung
+public class PlanetQueries {
+
+    public static ArrayList<Planet> planets = Planet.getPlantes();
+
+    public static void a() {
+        PlanetQueries.planets.stream()
+          .filter(p -> p.moons() > 5)
+          .forEach(p -> {
+              System.out.println(p.name() + ": " + p.moons());
+          });
+    }
+
+    public static OptionalDouble b() {
+        return PlanetQueries.planets.stream()
+          .filter(p -> p.type() == Type.GAS_PLANET)
+          .mapToDouble(p -> p.diameter())
+          .average();
+    }
+
+    public static List<Planet> c() {
+        return PlanetQueries.planets.stream()
+          .sorted((p1, p2) -> Double.compare(p2.mass(), p1.mass()))
+          .toList();
+    }
+
+    public static boolean d() {
+        return PlanetQueries.planets.stream()
+          .allMatch(p -> p.moons() > 0);
+    }
+
+    public static void e() {
+        Map<Type, List<Planet>> planetsMap = PlanetQueries.planets.stream()
+          .collect(Collectors.groupingBy(p -> p.type()));
+        planetsMap.entrySet()
+          .stream()
+          .forEach(entry -> {
+            System.out.println(entry.getKey() + ":" + entry.getValue());
+          });
+    }
+}
+```
+
 2. Altklausuren 2022 Q3 - Probeklausur Java 2 Klausur Aufgabe 3
 3. Altklausuren 2023 Q1 - Wiederholklausur 2 Java 2 Klausur Aufgabe 3
 4. Altklausuren 2023 Q1 - Wiederholklausur Java 2 Klausur Aufgabe 3
@@ -93,7 +137,23 @@ Verwende für die nachfolgende Abfolge die Methoden der Klassen Data und Helper.
 Erzeuge einen Stream von Tieren und filtere jene heraus, die Größer als 50 Zentimeter sind. 
 Gib anschließend den vollen Namen und die Größe der Tiere in der Konsole aus.
 
+## Aufgabe Streams
 
+import Streams from '@site/static/img/exams/java-2/streams.png';
+
+
+### Klassendiagramm
+<img src={Streams} />
+<br/>
+
+## Hinweise zur Klasse PhoneStore
+
+- Der Konstruktor soll alle Attribute initialisieren.
+- Die Methode **q1** soll die drei Leistungsstärksten (CPU Power) Smart Phones der Marke Huawei, absteigend nach dem Preis zurückgeben, welche mehr als 3 Kameras haben.
+- Die Methode **q2** soll die durchschnittliche Kameraanzahl aller Smart Phones zurückgeben, die einen Akku von 2500 oder mehr haben.
+- Die Methode **q3** soll die Smart Phones aufsteigend nach Preis zurückgeben, die den **maxPrice** nicht überschreiten, einen modernen Anschlusstyp haben und weniger als 2400 Leistung (CPU Power) haben.
+- Die Methode **q4** soll eine Map zurückgeben. Der Schlüssel soll aus dem Markennamen und dem Anschlusstyp zusammengesetzt werden. Als Wert soll das Auto zurückgegeben werden.
+- Die Methode **q5** soll eine Map zurückgeben, welche alle Smart Phones nach Anschlusstyp gruppiert.
 
 ## Klausurvorbereitung Java I
 
