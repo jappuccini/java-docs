@@ -35,6 +35,63 @@ Die Endergebnisse der Demos findet ihr in folgendem Branch:
 ```bash
 git switch demos/steffen
 ```
+## Klausurvorbereitung Java II
+
+1. Altklausuren 2022 Q3 - Klausur Java 2 Aufgabe 3
+2. Altklausuren 2022 Q3 - Probeklausur Java 2 Klausur Aufgabe 3
+3. Altklausuren 2023 Q1 - Wiederholklausur 2 Java 2 Klausur Aufgabe 3
+4. Altklausuren 2023 Q1 - Wiederholklausur Java 2 Klausur Aufgabe 3
+
+## Aufgabe Optionals
+
+import Optionals from '@site/static/img/exams/java-2/optionals.png';
+
+
+### Klassendiagramm
+<img src={Optionals} />
+<br/>
+
+** Hinweise zu den Konstruktoren** <br/>
+Die Konstruktoren sollen alle Attribute initialisieren.
+
+** Hinweise zur Methode toString ** <br/>
+Die Methode toString soll die Attribute brand, model und addition zurückgeben.
+Die Attribute sollen durch eine Leertaste getrennt sein. Falls addition keinen 
+Wert besitz, soll dieser ignoriert werden.
+
+Erstelle eine ausführbare Klasse in der ein Auto mit der Marke "Mercedes",
+dem Modell "CLA45" und dem Zusatz "AMG" initialisiert wird.
+Gib das Auto in der Konsole aus. Entferne den Zusatz von dem Auto und gebe
+das Auto erneut in der Konsole aus.
+
+## Aufgabe Lambdafunktionen
+
+import Lambdas from '@site/static/img/exams/java-2/lambdas.png';
+
+
+### Klassendiagramm
+<img src={Lambdas} />
+<br/>
+
+** Hinweise zur Klasse Helper** <br/>
+Im Klassendiagramm sind keine Rückgabetypen für die
+statischen Attribute angegeben. Gib für jedes Attribut
+den geeigneten Typ an.
+
+- Das Attribut **isNewBorn** soll eine Lambdafunktion enthalten die ermittelt, ob ein Tier jünger als 1 Jahr alt ist.
+- Das Attribut **toOutput** soll eine Lambdafunktion enthalten, die ein Tier in folgenden String konvertiert: "firstName lastName ist size Zentimeter groß."
+- Die Methode **isHigherThan** soll eine Lambdafunktion zurückgeben, die abhängig vom Parameter size überprüft, ob ein Tier größer als die angegebene Größe ist.
+
+## Hinweise zur Klasse Data
+
+- Die Methode **getAnimals** soll einen Stream von einem einzelnen Tier mit den Werten deiner Wahl zurückgeben.
+
+## Hinweise zur Klasse Task2
+Verwende für die nachfolgende Abfolge die Methoden der Klassen Data und Helper.
+Erzeuge einen Stream von Tieren und filtere jene heraus, die Größer als 50 Zentimeter sind. 
+Gib anschließend den vollen Namen und die Größe der Tiere in der Konsole aus.
+
+
 
 ## Klausurvorbereitung Java I
 
@@ -134,5 +191,3 @@ sortieren.
 * Der ConstructionYearComparator soll das Comparator Interface implementieren 
 und Autos absteigend nach Baujahr sortieren.
 
-## Klausurvorbereitung Java II
-tbd
