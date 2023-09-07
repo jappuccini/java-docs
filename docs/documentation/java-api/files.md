@@ -39,13 +39,19 @@ einem festgelegten Bezugspunkt bis zum Ziel.
 
 ```mermaid
 flowchart LR
-    c[c:] --> workspace
+    c[C:] --> workspace
     c --> temp[Temp]
     workspace[workspace] --> project
     temp --> documentA[documentA.txt]
     project[Project] --> documents        
     documents[documents] --> documentB[documentB.txt]
 ```
+
+Pfadangaben:
+- Absolute Pfadangabe für documentA.txt: `C:\Temp\documentA.txt`
+- Absolute Pfadangabe für documentB.txt: `C:\workspace\Project\documents\documentB.txt`
+- Relative Pfadangabe für documentA.txt: `documents/documentA.txt`
+- Relative Pfadangabe für documentB.txt: `../../Temp/documentA.txt`
 
 :::note Hinweis
 Alle Klassen im Paket `java.io` verwenden als Bezugspunkt das Arbeitsverzeichnis des Benutzers (Systemeigenschaft `user.dir`).
