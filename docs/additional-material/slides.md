@@ -82,11 +82,11 @@ den geeigneten Typ an.
 - Das Attribut **toOutput** soll eine Lambdafunktion enthalten, die ein Tier in folgenden String konvertiert: "firstName lastName ist size Zentimeter groß."
 - Die Methode **isHigherThan** soll eine Lambdafunktion zurückgeben, die abhängig vom Parameter size überprüft, ob ein Tier größer als die angegebene Größe ist.
 
-## Hinweise zur Klasse Data
+**Hinweise zur Klasse Data** <br/>
 
 - Die Methode **getAnimals** soll einen Stream von einem einzelnen Tier mit den Werten deiner Wahl zurückgeben.
 
-## Hinweise zur Klasse Task2
+**Hinweise zur Klasse Task2** <br/>
 Verwende für die nachfolgende Abfolge die Methoden der Klassen Data und Helper.
 Erzeuge einen Stream von Tieren und filtere jene heraus, die Größer als 50 Zentimeter sind. 
 Gib anschließend den vollen Namen und die Größe der Tiere in der Konsole aus.
