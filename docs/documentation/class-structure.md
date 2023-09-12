@@ -131,11 +131,11 @@ Entwicklungspakete ermöglichen das hierarchische Strukturieren von Klassen. Um 
 
 ```mermaid
 flowchart
-    pA[packageA] --> pB[packageB]
+    pA(packageA) --> pB(packageB)
     pA --> cA[ClassA]
-    pB --> pC[packageC]
+    pB --> pC(packageC)
     pB --> cB[ClassB]
-    pB --> pD[packageD]
+    pB --> pD(packageD)
     pC --> cC[ClassC]
     pC --> cD[ClassD]
     pD --> cE[ClassE]
