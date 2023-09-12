@@ -124,7 +124,15 @@ public class MainClass {
 
 Die Wertigkeit von Datentypen entscheidet darüber, welche Typumwandlungen möglich sind.
 
-![image](https://user-images.githubusercontent.com/47243617/209095514-5f22cd05-584d-4091-b70f-17975eabb7eb.png)
+```mermaid
+flowchart
+    byte(byte) -.-> short(short)
+    short -.-> int(int)
+    char(char) -.-> int
+    int -.-> long(long)
+    long -.-> float(float)
+    float -.-> double(double)
+```
 
 :::note Hinweis
 Für den Datentyp `boolean` ist keine Typumwandlung möglich.
