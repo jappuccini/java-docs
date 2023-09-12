@@ -8,6 +8,17 @@ tags: []
 Ketten von beliebigen Zeichen werden durch die Klasse `String` realisiert. Diese stellt einige hilfreiche Methoden zur Verfügung, die bei der Analyse und der Verarbeitung von Zeichenketten Verwendung finden. Die Angabe einer Zeichenkette erfolgt über die 
 Anführungszeichen.
 
+```mermaid
+flowchart
+    subgraph text
+        a[Index: 0\nWert: W] -.- b[Index: 1\nWert: i]
+        b -.- c[Index: 2\nWert: n]
+        c -.- d[Index: 3\nWert: t]
+        d -.- e[Index: 4\nWert: e]
+        e -.- f[Index: 5\nWert: r]
+    end
+```
+
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
