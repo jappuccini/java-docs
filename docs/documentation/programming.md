@@ -20,7 +20,7 @@ Ein Algorithmus ist eine Handlungsvorschrift zur Lösung eines Problems.
 Unter einem Programmierparadigma versteht man die grundlegende Herangehensweise, Probleme mit Hilfe einer Programmiersprache zu lösen:
 
 :::note Hinweis
-Auch wenn Programmiersprachen oft anhand ihrer grundlegenden Merkmale genau einem Programmierparadigma zugeordnet werden, unterstützen viele Programmiersprachen mehrerer Programmierparadigmen.
+Auch wenn Programmiersprachen oft anhand ihrer grundlegenden Merkmale genau einem Programmierparadigma zugeordnet werden, unterstützen viele Programmiersprachen mehrere Programmierparadigmen.
 :::
 
 ### Imperative Programmierung
