@@ -28,15 +28,17 @@ Lesen und Schreiben von Attributen sind die sogenannten Getter bzw. Setter.
 
 ```mermaid
 flowchart LR
-    write[Schreibender Zugriff] --> setter1
-    read[Lesender Zugriff] --> getter2
+    write[Schreibender Zugriff] -.-> setter1
+    write -.-> setter2
+    getter1 -.-> read[Lesender Zugriff]
+    getter2 -.-> read
     subgraph Klasse
-        attribut1[Attribut 1]
-        attribut2[Attribut 2]
-        setter1[Setter für Attribut 1] -.- attribut1
-        getter1[Getter für Attribut 1] -.- attribut1
-        setter2[Setter für Attribut 2] -.- attribut2
-        getter2[Getter für Attribut 2] -.- attribut2
+        attribut1((Attribut 1))
+        attribut2((Attribut 2))
+        setter1(Setter für Attribut 1) -.-> attribut1
+        attribut1 -.-> getter1(Getter für Attribut 1)
+        setter2(Setter für Attribut 2) -.-> attribut2
+        attribut2 -.-> getter2(Getter für Attribut 2)
     end
 ```
 
