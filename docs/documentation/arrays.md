@@ -11,7 +11,10 @@ werden können.
 ```mermaid
 flowchart
     subgraph names
-        a[Index: 0\nWert: Hans] -.- b[Index: 1\nWert: Peter] -.- c[Index: 2\nWert: Lisa]
+        a[Index: 0\nWert: Hans] -.- b[Index: 1\nWert: Peter]
+        b -.- c[Index: 2\nWert: Lisa]
+        c -.- d[Index: 3\nWert: Max]
+        d -.- e[Index: 4\nWert: Heidi]
     end
 ``` 
 
