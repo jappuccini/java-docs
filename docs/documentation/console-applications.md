@@ -7,6 +7,12 @@ tags: [console-applications]
 
 Konsolenanwendungen sind Programme ohne eine grafische Benutzeroberfläche d.h. die Steuerung sowie die Eingabe und Ausgabe erfolgen ausschließlich über textuelle Anweisungen.
 
+```mermaid
+flowchart
+    konsole[Konsole] -.->|System.in| klasse[Klasse]
+    klasse -.->|System.out| konsole
+```
+
 ## Konsoleneingaben
 Die Klasse `Scanner` im Paket `java.util` stellt Methoden zur Verfügung, um Eingaben von der Konsole einzulesen und in entsprechende Datentypen umzuwandeln.
 
