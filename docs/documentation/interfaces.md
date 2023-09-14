@@ -9,7 +9,29 @@ Wird eine Klasse von mehreren Klassen abgeleitet, spricht man von Mehrfachvererb
 über mehrere mögliche Pfade von einer Basisklasse und werden dabei möglicherweise Methoden der Basisklasse unterschiedlich überschrieben, entstehen dadurch nicht eindeutige Varianten. Aufgrund der Rautenform des Klassendiagramms wird dieses Szenario also 
 _Diamantenproblem_ bezeichnet.
 
-![image](https://user-images.githubusercontent.com/47243617/209167564-63ff5ecb-e41b-4a5c-9ae4-7edf43027afe.png)
+```mermaid
+classDiagram 
+    ClassA <|-- ClassB
+    ClassA <|-- ClassC
+    ClassB <|-- ClassD
+    ClassC <|-- ClassD
+
+    class ClassA {
+        +foo() void
+    }
+
+    class ClassB {
+        +foo() void
+    }
+
+    class ClassC {
+        +foo() void
+    }
+
+    class ClassD {
+
+    }
+```
 
 Zur Lösung des Diamantenproblems werden Schnittstellen (Interfaces) verwendet. Schnittstellen sind im Prinzip abstrakte Klassen, die ausschließlich abstrakte Methoden besitzen. Durch Schnittstellen wird sichergestellt, dass Klassen bestimmte Methoden 
 bereitstellen und dass verschiedene Klassen miteinander kommunizieren können.
