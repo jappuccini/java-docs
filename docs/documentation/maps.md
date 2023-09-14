@@ -8,7 +8,16 @@ tags: [maps]
 Unter einem Assoziativspeicher (Map) versteht man eine Menge zusammengehöriger Paare von Objekten. Das erste Objekt stellt dabei den Schlüssel (Key), das zweite Objekt den Wert (Value) dar. Jeder Schlüssel kann dabei nur einmal in einem Assoziativspeicher 
 vorhanden sein. Aufgrund dieses Aufbaus werden Assoziativspeicher auch als Wörterbücher bezeichnet.
 
-![image](https://user-images.githubusercontent.com/47243617/209135548-62e0e10e-1f7f-4fd7-99cb-1a4d9a15a9de.png)
+```mermaid
+flowchart LR
+    subgraph Noten
+        direction LR
+        hans(Hans) -.-> g1((2.3))
+        peter(Peter) -.-> g2((1.7))
+        lisa(Lisa) -.-> g3((1.8))
+        max(Max) -.-> g4((4.2))
+    end
+```
 
 Um auf die Einträge, Schlüssel und Werte eines Assoziativspeichers zugreifen können, stellt die Schnittstelle `Map` die Methoden `Set<Entry<K, V>> entrySet()`, `Set<K> keySet()` und `Collection<V> values()` zur Verfügung. 
 
@@ -45,15 +54,24 @@ gemäß den entsprechenden Dokumentationskommentaren überschrieben hat. Im Gege
 
 | Index | Schlüssel | Wert |
 | ----- | --------- | ---- |
-| 0     | Butter    | 3    |
-| 2     | Brot      | 9    |
-| 13    | Milch     | 2    |
-| 14    | Eier      | 5    |
-
+| 0     | Hans      | 2.3  |
+| 2     | Peter     | 1.7  |
+| 13    | Lisa      | 1.8  |
+| 14    | Max       | 4.2  |
 
 Die Klasse `TreeMap<K, V>` implementiert den Assoziativspeicher in Form eines Binärbaumes. Als Datenstruktur wird dabei ein balancierter Baum verwendet, d.h. spezielle Einfüge- und Löschoperationen stellen sicher, dass der Baum nicht zu einer linearen Liste 
 entartet. Da die Paare in einem Binärbaum sortiert vorliegen, ist es für den Einsatz zwingend erforderlich, dass die Klasse, die den Schlüssel bildet, die Schnittstelle `Comparable<T>` implementiert hat. Alternativ kann dem Konstruktor der Klasse `TreeMap<K, V>`
 ein Komparator für den Schlüssel mitgegeben werden.
 
-![image](https://user-images.githubusercontent.com/47243617/209135608-ee2b5bb7-6abc-4cc0-8e6f-cf4c1ad723a2.png)
+```mermaid
+flowchart TD
+    max --> lisa
+    lisa --> hans
+    max --> peter
+
+    hans(Hans) -.-> g1((2.3))
+    peter(Peter) -.-> g2((1.7))
+    lisa(Lisa) -.-> g3((1.8))
+    max(Max) -.-> g4((4.2))
+```
 
