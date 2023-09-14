@@ -25,7 +25,15 @@ Ausnahmen können behandelt bzw. weitergeleitet werden.
 Die Klasse `Throwable` stellt die Oberklasse aller Laufzeitfehler dar. Schwerwiegende Fehler (hauptsächlich Probleme in der JVM (Java Virtual Machine)) werden durch Unterklassen der Klasse `Error` abgebildet, geprüfte Ausnahmen durch Unterklassen der Klasse 
 `Exception` und ungeprüfte Ausnahmen durch Unterklassen der Klasse `RuntimeException`.
 
-![image](https://user-images.githubusercontent.com/47243617/209166560-5868fcf0-da45-4f87-8527-bee975da35c1.png)
+```mermaid
+classDiagram 
+    Throwable <|-- Error
+    Throwable <|-- Exception
+    Exception <|-- TimeOutException
+    Exception <|-- RunTimeException
+    RunTimeException <|-- NullPointerException
+    RunTimeException <|-- ArithmeticException
+```
 
 ### Definition von Ausnahmenklassen
 Eigene Ausnahmenklassen werden durch einfaches Ableiten von einer bestehenden Ausnahmenklasse definiert. Ausnahmenklassen sollten dabei immer von der Klasse `Exception` oder einer ihrer Unterklassen abgeleitet werden, nicht von der Klasse `Error`.
