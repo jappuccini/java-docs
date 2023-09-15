@@ -26,10 +26,32 @@ Auch wenn Programmiersprachen oft anhand ihrer grundlegenden Merkmale genau eine
 ### Imperative Programmierung
 Bei der imperativen Programmierung bestehen Programme aus verzweigten und sich wiederholenden Folgen von Anweisungen, die den Programmablauf steuern.
 
-![image](https://user-images.githubusercontent.com/47243617/209141943-9e9c985d-3c48-4ad5-8766-753f21f923ec.png)
+```mermaid
+stateDiagram-v2
+    state "Ausgabe: Zahl größer Null eingeben" as activity1
+    state "Eingabe: Zahl" as activity2
+    state "Ausgabe: Zahl ist nicht größer Null" as activity3
+    state "Ausgabe: Zahl ist größer Null" as activity4
+    state if <<choice>>
+        
+    [*] --> activity1
+    activity1--> activity2
+    activity2 --> if
+    if --> activity3 : Zahl kleiner gleich Null
+    if --> activity4 : Zahl größer Null     
+    activity3 --> activity1
+    activity4 --> [*]
+```
 
 ### Deklarative Programmierung
 Die deklarative Programmierung stellt einen Gegenentwurf zur imperativen Programmierung dar, bei der nicht das "Wie", sondern das "Was" im Vordergrund steht.
+
+```sql
+SELECT Name, Age
+  FROM Person
+  WHERE City = 'Berlin'
+  ORDER BY Name
+```
 
 ### Objektorientierte Programmierung
 Die ojektorientierte Programmierung baut auf der imperativen Programmierung auf, setzt den Fokus aber auf abstrakte Datentypen und die Verbindung von Daten und Routinen.
