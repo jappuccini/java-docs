@@ -41,7 +41,7 @@ git switch demos/steffen
 
 1. Altklausuren 2022 Q3 - Klausur Java 2 Aufgabe 3
 
-```java Lösung
+```java 
 public class PlanetQueries {
 
     public static ArrayList<Planet> planets = Planet.getPlantes();
@@ -110,6 +110,45 @@ dem Modell "CLA45" und dem Zusatz "AMG" initialisiert wird.
 Gib das Auto in der Konsole aus. Entferne den Zusatz von dem Auto und gebe
 das Auto erneut in der Konsole aus.
 
+```java 
+public class Car {
+    public String name;
+    public String brand;
+    public Optional<String> addition;
+
+    public Car(String name, String brand) {
+        this.name = name;
+        this.brand = brand;
+        this.addition = Optional.empty();
+    }
+
+    public Car(String name, String brand, String addition) {
+        this.name = name;
+        this.brand = brand;
+        this.addition = Optional.ofNullable(addition);
+    }
+
+    public String toString() {
+        if (addition.isPresent()) {
+            return brand + " " + name + addition.get();
+        } else {
+            return brand + " " + name;
+        }
+    }
+}
+```
+
+```java 
+public class Main {
+    public static void main(String[] args) {
+        Car benz = new Car("CLA45", "Mercedes", "AMG");
+        System.out.println(benz.toString());
+        benz.addition = Optional.empty();
+        System.out.println(benz.toString());
+    }
+}
+```
+
 ## Aufgabe Lambdafunktionen
 
 import Lambdas from '@site/static/img/exams/java-2/lambdas.png';
@@ -137,6 +176,41 @@ Verwende für die nachfolgende Abfolge die Methoden der Klassen Data und Helper.
 Erzeuge einen Stream von Tieren und filtere jene heraus, die Größer als 50 Zentimeter sind. 
 Gib anschließend den vollen Namen und die Größe der Tiere in der Konsole aus.
 
+```java 
+public record Animal(String firstName, String lastName, int age, int size) {}
+```
+
+```java 
+public class Data {
+    public static Stream<Animal> getAnimals() {
+        return Stream.of(new Animal("Steffen", "Merk", 28, 170));
+    }
+}
+```
+
+```java 
+public class Helper {
+    public static Predicate<Animal> isNewBorn = animal -> animal.age() < 1;
+    public static Function<Animal, String> toOutput = animal -> animal.firstName()
+            + " " + animal.lastName() + " ist " + animal.size() + " Zentimeter groß";
+
+    public static Predicate<Animal> isHigherThan(int size) {
+        return animal -> animal.size() > size;
+    }
+}
+```
+
+```java 
+public class Task2 {
+    public static void main(String[] args) {
+        Data.getAnimals()
+                .filter(Helper.isHigherThan(50))
+                .map(Helper.toOutput)
+                .forEach(System.out::println);
+    }
+}
+```
+
 ## Aufgabe Streams
 
 import Streams from '@site/static/img/exams/java-2/streams.png';
@@ -145,6 +219,55 @@ import Streams from '@site/static/img/exams/java-2/streams.png';
 ### Klassendiagramm
 <img src={Streams} />
 <br/>
+
+```java
+public class PhoneStore {
+  private ArrayList<Phone> phones;
+
+  public PhoneStore(ArrayList<Phone> phones) {
+    this.phones = phones;
+  }
+
+  public List<Phone> q1() {
+    return phones.stream()
+        .filter(p -> p.brand() == Brand.HUAWEI)
+        .filter(p -> p.cameras() > 3)
+        .sorted((p1, p2) -> Integer.compare(p2.cpuPower(), p1.cpuPower()))
+        .limit(3)
+        .sorted((p1, p2) -> Double.compare(p2.price(), p1.price()))
+        .toList();
+  }
+
+  public OptionalDouble q2() {
+    return phones.stream()
+        .filter(p -> p.batterySize() > 2500)
+        .mapToInt(p -> p.cameras())
+        .average();
+  }
+
+  public List<Phone> q3(double maxPrice) {
+    return phones.stream()
+        .filter(p -> p.price() <= maxPrice)
+        .filter(p -> p.connectionType().isModern())
+        .filter(p -> p.cpuPower() < 2400)
+        .sorted((p1, p2) -> Double.compare(p1.price(), p2.price()))
+        .toList();
+  }
+
+  public Map<String, Phone> q4() {
+    return phones.stream()
+        .collect(Collectors.toMap(
+            p -> p.brand().name() + p.connectionType().name(),
+            p -> p));
+  }
+
+  public Map<ConnectionType, List<Phone>> q5() {
+    return phones.stream()
+        .collect(Collectors.groupingBy(p -> p.connectionType()));
+  }
+
+}
+```
 
 ## Hinweise zur Klasse PhoneStore
 
