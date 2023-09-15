@@ -33,8 +33,10 @@ flowchart LR
     getter1 -.-> read[Lesender Zugriff]
     getter2 -.-> read
     subgraph Klasse
-        attribut1((Attribut 1))
-        attribut2((Attribut 2))
+        subgraph privater Bereich
+            attribut1((Attribut 1))
+            attribut2((Attribut 2))
+        end
         setter1(Setter für Attribut 1) -.-> attribut1
         attribut1 -.-> getter1(Getter für Attribut 1)
         setter2(Setter für Attribut 2) -.-> attribut2
