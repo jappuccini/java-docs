@@ -131,14 +131,15 @@ Entwicklungspakete ermöglichen das hierarchische Strukturieren von Klassen. Um 
 
 ```mermaid
 flowchart
-    pA(packageA) --> pB(packageB)
-    pA --> cA[ClassA]
-    pB --> pC(packageC)
-    pB --> cB[ClassB]
-    pB --> pD(packageD)
-    pC --> cC[ClassC]
-    pC --> cD[ClassD]
-    pD --> cE[ClassE]
+    java(java) --> lang(lang)
+    java --> util(util)
+    java --> time(time)
+    lang --> object[Object]
+    lang --> system[System]
+    util --> arraylist[ArrayList]
+    util --> scanner[Scanner]
+    time --> localdate(LocalDate)
+    time --> localtime(LocalTime)
 ```
 
 :::note Hinweis
