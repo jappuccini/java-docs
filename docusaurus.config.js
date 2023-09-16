@@ -11,7 +11,10 @@ const config = {
   favicon: 'img/favicon.ico',
   organizationName: 'jappuccini',
   projectName: 'java-docs',
-
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
   i18n: {
     defaultLocale: 'de',
     locales: ['de'],
@@ -42,6 +45,12 @@ const config = {
 
   themeConfig:
     ({
+      mermaid: {
+        theme: {
+          light: "default",
+          dark: "dark" 
+        },
+      },
       navbar: {
         title: 'Startseite',
         logo: {
