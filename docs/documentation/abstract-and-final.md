@@ -26,7 +26,6 @@ Mit Hilfe der Schlüsselwörter `abstract` und `final` kann die Verwendung von K
   Finale Klassen können nicht abgeleitet werden.
   
   </TabItem>
-  </TabItem>
   <TabItem value="finalmethods" label="finale Methoden">
 
   Finale Methoden können nicht überschrieben werden.
