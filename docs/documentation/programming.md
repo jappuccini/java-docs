@@ -5,6 +5,9 @@ sidebar_position: 10
 tags: [programming]
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 Als ein Teilbereich der Softwareentwicklung umfasst das Programmieren vor allem die Umsetzung eines Softwareentwurfes in Quellcode. Generell versteht man unter Programmieren die Umsetzung von Algorithmen in lauffähige Computer-Programme.
 
 ```mermaid
@@ -46,31 +49,101 @@ stateDiagram-v2
 ### Deklarative Programmierung
 Die deklarative Programmierung stellt einen Gegenentwurf zur imperativen Programmierung dar, bei der nicht das "Wie", sondern das "Was" im Vordergrund steht.
 
-```sql
-SELECT Name, Age
-  FROM Person
-  WHERE City = 'Berlin'
-  ORDER BY Name
+```mermaid
+flowchart TD
+    subgraph Ausgangsmenge
+        direction LR
+        p1 -.- p2 -.- p3 -.- p4
+        p1(Hans, 42, m, Stuttgart)
+        p2(Peter, 17, m, Freiburg)
+        p3(Lisa, 19, w, Berlin)
+        p4(Maria, 33, w, Freiburg)
+    end
+    subgraph Ergebnismenge
+        direction LR
+        p5 -.- p6
+        p5(Maria, 33)
+        p6(Peter, 17)
+    end
+    Ausgangsmenge -->|"SELECT Name, Age FROM Person WHERE City = 'Freiburg' ORDER BY Name"| Ergebnismenge
 ```
 
 ### Objektorientierte Programmierung
 Die ojektorientierte Programmierung baut auf der imperativen Programmierung auf, setzt den Fokus aber auf abstrakte Datentypen und die Verbindung von Daten und Routinen.
 
-![image](https://user-images.githubusercontent.com/47243617/209148346-eb2ea659-5242-4e6e-bf79-56de39fbb88a.png)
+```mermaid
+classDiagram
+    Person --o Team
+    class Person {
+        -name String
+        +Person(name String)
+        +name() String       
+    }
+    class Team {
+        -members List~Person~
+        +addMember(person Person) void
+        +members() List~Person~
+    }
+```
 
 ## Programmausführung
 Programme auf einem Computer können auf unterschiedliche Arten ausgeführt werden:
-- _Compiler_ übersetzen den Quellcode in eine Datei, die vom jeweiligen Betriebssystem ausgeführt werden kann
-- _Interpreter_ übersetzen den Quellcode direkt in den Arbeitsspeicher und führt das Programm sofort aus
-- _Just-In-Time-Compiler_ vereinen die Vorteile von Compiler und Interpreter: Der Compiler übersetzt den Quellcode zunächst in den sogenannten Bytecode, anschließend überführt der Interpreter den Bytecode in Maschinencode
+_Compiler_ übersetzen den Quellcode in eine Datei, die vom jeweiligen Betriebssystem ausgeführt werden kann
 
-Compilersprachen wie z.B. C++ sind deutlich performanter und ermöglichen eine sicherere Entwicklung, Interpretersprachen wie z.B. PHP sind dagegen plattformunabhängig.
+```mermaid
+flowchart LR
+    sourcecode[/Quellcode/]
+    machinecode[/Maschinencode/]
+    compiler(Compiler)
+    cpu(CPU)
+    subgraph Entwicklungszeit
+        sourcecode -.-> compiler -.-> machinecode
+    end
+    subgraph Laufzeit
+        cpu
+    end
+    machinecode -.-> cpu
+```
 
-![image](https://user-images.githubusercontent.com/47243617/209095011-8c4920fb-66c7-435d-9f76-279f4fca0612.png)
+_Interpreter_ übersetzen den Quellcode direkt in den Arbeitsspeicher und führt das Programm sofort aus
+
+```mermaid
+flowchart LR
+    sourcecode[/Quellcode/]
+    interpreter(Interpreter)
+    cpu(CPU)
+    subgraph Entwicklungszeit
+        sourcecode
+    end
+    subgraph Laufzeit
+        interpreter -.-> cpu
+    end
+    sourcecode -.-> interpreter
+```
+
+_Just-In-Time-Compiler_ vereinen die Vorteile von Compiler und Interpreter: Der Compiler übersetzt den Quellcode zunächst in den sogenannten Bytecode, anschließend überführt der Interpreter den Bytecode in Maschinencode
+
+```mermaid
+flowchart LR
+    sourcecode[/Quellcode/]
+    bytecode[/Bytecode/]
+    compiler(Compiler)
+    interpreter(Interpreter)
+    cpu(CPU)
+    subgraph Entwicklungszeit
+        sourcecode -.-> compiler -.-> bytecode
+    end
+    subgraph Laufzeit
+        interpreter -.-> cpu
+    end
+    bytecode -.-> interpreter
+```
 
 :::note Hinweis
 In Java wird der Interpreter als _Java Virtual Machine_ bezeichnet.
 :::
+
+Compilersprachen wie z.B. C++ sind deutlich performanter und ermöglichen eine sicherere Entwicklung, Interpretersprachen wie z.B. PHP sind dagegen plattformunabhängig.
 
 ## Programmiersprachen
 Maschinen sind im Vergleich zu menschlichen Gehirnen sehr primitive Gebilde. Die Diskrepanz zwischen der menschlichen Denkweise und der Arbeitsweise von Maschinen bezeichnet mal als _Semantische Lücke_. Programmiersprachen ermöglichen es, Problemstellungen der 
