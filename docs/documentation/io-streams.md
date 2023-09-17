@@ -13,10 +13,10 @@ Schreiben und Lesen byteorientierter Daten und zum Schreiben und Lesen serialisi
 flowchart LR
     subgraph Datenstrom
         direction LR
-        data1((4.2)) ~~~ data2((2.3)) ~~~ data3((1.6)) ~~~ data4((3.7))
+        data1((4.2)) -.- data2((2.3)) -.- data3((1.6)) -.- data4((3.7))
     end
-    write[Schreiben] -.-> Datenstrom
-    Datenstrom -.-> read[Lesen]
+    write[Schreiben] ---> Datenstrom
+    Datenstrom ---> read[Lesen]
 ```
 
 ## Standard-Datenströme zur Ein- und Ausgabe
