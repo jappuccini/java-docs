@@ -14,15 +14,15 @@ den Attributen, den Methoden und weiteren Klassen-Bestandteilen enthalten.
 ## Darstellung von Klassen
 Klassen werden im Klassendiagramm als Rechteck mit verschiedenen Bereichen (Klassenname, Attribute, Methoden und weitere Klassen-Bestandteile) dargestellt:
 - Der Klassenname wird zentriert, fett gedruckt und mit einem Großbuchstaben beginnend dargestellt
-- Attribute werden nach dem Muster _[Sichtbarkeit]_ _[Attributname]: [Datentyp] = [Anfangswert]_ dargestellt
+- Attribute werden nach dem Muster _[Sichtbarkeit]_ _[Attributname] [Datentyp] = [Anfangswert]_ dargestellt
 - Methoden nach dem Muster _[Sichtbarkeit]_ _[Methoden-Signatur]: [Datentyp des Rückgabewertes]_ dargestellt
-- Statische Attribute und Methoden werden durch Unterstriche kenntlich gemacht
-- Durch geschweifte Klammern können Attribute, Methoden und Klassen um zusätzliche Merkmale ergänzt werden
 - Die Sichtbarkeit von Attributen und Methoden wird durch (farbige) Symbole dargestellt:
     - Die Sichtbarkeit `public` wird durch das Symbol **+** bzw. die Farbe **grün** dargestellt
     - Die Sichtbarkeit `protected` wird durch das Symbol **#** bzw. die Farbe **gelb** dargestellt
     - Die Sichtbarkeit `packaged` wird durch das Symbol **~** bzw. die Farbe **blau** dargestellt
     - Die Sichtbarkeit `private` wird durch das Symbol **-** bzw. die Farbe **rot** dargestellt
+- Statische Attribute und Methoden werden durch Unterstriche kenntlich gemacht
+- Abstrakte Methoden werden kursiv dargestellt
 
 ```mermaid
 classDiagram
@@ -141,7 +141,6 @@ werden daher auch als ist-Teil-von-Relationen, Kompositionen als existenzabhäng
       }
   ```
 
-  </TabItem>
   </TabItem>
   <TabItem value="compositions" label="Kompositionen" default>
 
