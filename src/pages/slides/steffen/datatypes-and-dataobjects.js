@@ -4,7 +4,6 @@ import { NKR } from '../../../components/Slides/nkr';
 import { defaultInitSlides } from '../../../components/Slides/initSlides';
 import Link from '@docusaurus/Link';
 
-
 export default function DataTypesAndDataObjects() {
   return (
     <Slides initSlides={defaultInitSlides}>
@@ -14,20 +13,19 @@ export default function DataTypesAndDataObjects() {
         </section>
         <section>
           <h2>Besprechung Hello World Aufgabe</h2>
-          <p className='fragment'>
-            Die Schlüsselwörter <strong>public</strong>, <strong>class</strong> und <strong>static</strong> werden später behandelt.
+          <p className="fragment">
+            Die Schlüsselwörter <strong>public</strong>, <strong>class</strong>{' '}
+            und <strong>static</strong> werden später behandelt.
           </p>
-          <div className='fragment'>
-            <p>
-              Aber warum braucht man: 
-            </p>
+          <div className="fragment">
+            <p>Aber warum braucht man:</p>
             <pre>
-              <code className='java'>
+              <code className="java">
                 public static void main(String[] args){}
               </code>
             </pre>
           </div>
-          <aside className='notes'>
+          <aside className="notes">
             <ul>
               <li>main2 erstellen</li>
               <li>main löschen</li>
@@ -36,8 +34,8 @@ export default function DataTypesAndDataObjects() {
         </section>
         <section>
           <p>Einordnung von Java als Programmiersprache</p>
-          <img src='https://user-images.githubusercontent.com/47243617/209095011-8c4920fb-66c7-435d-9f76-279f4fca0612.png'/>
-          <NKR/>
+          <img src="https://user-images.githubusercontent.com/47243617/209095011-8c4920fb-66c7-435d-9f76-279f4fca0612.png" />
+          <NKR />
         </section>
       </section>
       <section>
@@ -47,34 +45,40 @@ export default function DataTypesAndDataObjects() {
         <section>
           <h2>git switch</h2>
           <p>Wechseln zwischen Branches</p>
-          <pre className='fragment'>
-            <code className='bash'  dangerouslySetInnerHTML={{ __html: 
-              'Syntax: git switch &lt;branchname&gt;\n' +
-              'git switch exercises/class-structure/01\n' +
-              'git switch solutions/class-structure/01\n'
-              }}>
-            </code>
+          <pre className="fragment">
+            <code
+              className="bash"
+              dangerouslySetInnerHTML={{
+                __html:
+                  'Syntax: git switch &lt;branchname&gt;\n' +
+                  'git switch exercises/class-structure/01\n' +
+                  'git switch solutions/class-structure/01\n',
+              }}
+            ></code>
           </pre>
-          <NKR/>
+          <NKR />
         </section>
         <section>
           <h2>git stash</h2>
           <p>aktuelle Änderungen verstecken und wiederherstellen</p>
-          <pre className='fragment' >
-            <code className='bash' dangerouslySetInnerHTML={{ __html: 
-              'git stash # alles verstecken\n' +
-              'git stash apply # das zuletzt versteckte wiederherstellen\n' +
-              'git stash save "wip" # alles unter dem Namen "wip" verstecken\n' +
-              'git stash list # alle stashes anzeigen\n' +
-              'git stash apply 3 # stash 3 wiederherstellen\n' 
-              }}>
-            </code>
+          <pre className="fragment">
+            <code
+              className="bash"
+              dangerouslySetInnerHTML={{
+                __html:
+                  'git stash # alles verstecken\n' +
+                  'git stash apply # das zuletzt versteckte wiederherstellen\n' +
+                  'git stash save "wip" # alles unter dem Namen "wip" verstecken\n' +
+                  'git stash list # alle stashes anzeigen\n' +
+                  'git stash apply 3 # stash 3 wiederherstellen\n',
+              }}
+            ></code>
           </pre>
-          <NKR/>
+          <NKR />
         </section>
         <section>
           <h2>Demo</h2>
-          <NKR/>
+          <NKR />
         </section>
       </section>
       <section>
@@ -83,7 +87,7 @@ export default function DataTypesAndDataObjects() {
         </section>
         <section>
           <h2>Beispiel Registrierung</h2>
-          <aside className='notes'>
+          <aside className="notes">
             <ul>
               <li>Vorname, Nachname</li>
               <li>Hausnummer, PLZ</li>
@@ -159,12 +163,16 @@ export default function DataTypesAndDataObjects() {
               <tr>
                 <td>float</td>
                 <td>4 Byte</td>
-                <td>-3,4*10<sup>38</sup> bis 3,4*10<sup>38</sup></td>
+                <td>
+                  -3,4*10<sup>38</sup> bis 3,4*10<sup>38</sup>
+                </td>
               </tr>
               <tr>
                 <td>double</td>
                 <td>8 Byte</td>
-                <td>-1,7*10<sup>308</sup> bis 1,7*10<sup>308</sup></td>
+                <td>
+                  -1,7*10<sup>308</sup> bis 1,7*10<sup>308</sup>
+                </td>
               </tr>
             </tbody>
           </table>
@@ -195,10 +203,8 @@ export default function DataTypesAndDataObjects() {
         </section>
         <section>
           <h2>Primitive und komplexe Datentypen</h2>
-          <p className='fragment'>
-            Primitive Datentypen haben keine Methoden.
-          </p>
-          <p className='fragment'>
+          <p className="fragment">Primitive Datentypen haben keine Methoden.</p>
+          <p className="fragment">
             <strong>String</strong> ist kein primitiver Datentyp
           </p>
         </section>
@@ -210,30 +216,40 @@ export default function DataTypesAndDataObjects() {
         <section>
           <h2>Eigenschaften</h2>
           <ul>
-            <li className='fragment'>Platzhalter, um Werte zwischenzuspeichern</li>
-            <li className='fragment'>werden durch einen Bezeichner und Datentyp deklariert</li>
-            <li className='fragment'>werden durch einen Wert initialisiert</li>
+            <li className="fragment">
+              Platzhalter, um Werte zwischenzuspeichern
+            </li>
+            <li className="fragment">
+              werden durch einen Bezeichner und Datentyp deklariert
+            </li>
+            <li className="fragment">werden durch einen Wert initialisiert</li>
           </ul>
         </section>
         <section>
           <h2>Realisierung</h2>
-          <pre className='fragment'>
-            <code className='java'  dangerouslySetInnerHTML={{ __html: 
-              'String myName; // --> Deklaration\n'
-              }}>
-            </code>
+          <pre className="fragment">
+            <code
+              className="java"
+              dangerouslySetInnerHTML={{
+                __html: 'String myName; // --> Deklaration\n',
+              }}
+            ></code>
           </pre>
-          <pre className='fragment'>
-            <code className='java'  dangerouslySetInnerHTML={{ __html: 
-              'myName = "Steffen"; // --> Initialisierung\n' 
-              }}>
-            </code>
+          <pre className="fragment">
+            <code
+              className="java"
+              dangerouslySetInnerHTML={{
+                __html: 'myName = "Steffen"; // --> Initialisierung\n',
+              }}
+            ></code>
           </pre>
-          <pre className='fragment'>
-            <code className='java'  dangerouslySetInnerHTML={{ __html: 
-              'String myName = "Steffen"; // --> Zusammenfassung\n'
-              }}>
-            </code>
+          <pre className="fragment">
+            <code
+              className="java"
+              dangerouslySetInnerHTML={{
+                __html: 'String myName = "Steffen"; // --> Zusammenfassung\n',
+              }}
+            ></code>
           </pre>
         </section>
         <section>
@@ -243,27 +259,21 @@ export default function DataTypesAndDataObjects() {
       <section>
         <h2>Zusammenfassung</h2>
         <ul>
-          <li className='fragment'>
-            <Link 
+          <li className="fragment">
+            <Link
               to={'/java-docs/documentation/class-structure#die-main-methode'}
             >
-             Die main Methode
+              Die main Methode
             </Link>
-         </li>
-          <li className='fragment'>
-            <Link 
-              to={'/java-docs/documentation/data-types'}
-            >
-             Datentypen
+          </li>
+          <li className="fragment">
+            <Link to={'/java-docs/documentation/data-types'}>Datentypen</Link>
+          </li>
+          <li className="fragment">
+            <Link to={'/java-docs/documentation/data-objects'}>
+              Datenobjekte
             </Link>
-         </li>
-          <li className='fragment'>
-            <Link 
-              to={'/java-docs/documentation/data-objects'}
-            >
-             Datenobjekte
-            </Link>
-         </li>
+          </li>
         </ul>
       </section>
     </Slides>

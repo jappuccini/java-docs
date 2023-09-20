@@ -1,6 +1,6 @@
-import React from "react";
-import Slides from "../../../components/Slides";
-import { defaultInitSlides } from "../../../components/Slides/initSlides";
+import React from 'react';
+import Slides from '../../../components/Slides';
+import { defaultInitSlides } from '../../../components/Slides/initSlides';
 
 export default function GenericsAndMaps() {
   return (
@@ -64,7 +64,7 @@ export default function GenericsAndMaps() {
             der <b>spezifische</b> Typ bekannt.
           </p>
           <p className="fragment">
-            Nach dem Klassennamen wird innerhalb von spitzen Klammern, der{" "}
+            Nach dem Klassennamen wird innerhalb von spitzen Klammern, der{' '}
             <b>spezifische</b> Typ angegeben.
           </p>
         </section>
@@ -75,12 +75,12 @@ export default function GenericsAndMaps() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public class Main {\n" +
-                  "  public static void main(String[] args) {\n" +
-                  "    ArrayList&lt;Human&gt; humans = new ArrayList&lt;&gt;();\n" +
-                  "    Optional&ltHuman&gt; human = Optional.empty();\n" +
-                  "  }\n" +
-                  "}\n",
+                  'public class Main {\n' +
+                  '  public static void main(String[] args) {\n' +
+                  '    ArrayList&lt;Human&gt; humans = new ArrayList&lt;&gt;();\n' +
+                  '    Optional&ltHuman&gt; human = Optional.empty();\n' +
+                  '  }\n' +
+                  '}\n',
               }}
             ></code>
           </pre>
@@ -96,9 +96,9 @@ export default function GenericsAndMaps() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public class Team&lt;T&gt; {\n" +
-                  "  // implementierung der Klasse\n" +
-                  "}\n",
+                  'public class Team&lt;T&gt; {\n' +
+                  '  // implementierung der Klasse\n' +
+                  '}\n',
               }}
             ></code>
           </pre>
@@ -110,9 +110,9 @@ export default function GenericsAndMaps() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public class Team&lt;T&gt; {\n" +
-                  "  // implementierung der Klasse\n" +
-                  "}\n",
+                  'public class Team&lt;T&gt; {\n' +
+                  '  // implementierung der Klasse\n' +
+                  '}\n',
               }}
             ></code>
           </pre>
@@ -121,9 +121,9 @@ export default function GenericsAndMaps() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public class Team&lt;A&gt; {\n" +
-                  "  // implementierung der Klasse\n" +
-                  "}\n",
+                  'public class Team&lt;A&gt; {\n' +
+                  '  // implementierung der Klasse\n' +
+                  '}\n',
               }}
             ></code>
           </pre>
@@ -132,9 +132,9 @@ export default function GenericsAndMaps() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public class Team&lt;HANS&gt; {\n" +
-                  "  // implementierung der Klasse\n" +
-                  "}\n",
+                  'public class Team&lt;HANS&gt; {\n' +
+                  '  // implementierung der Klasse\n' +
+                  '}\n',
               }}
             ></code>
           </pre>
@@ -143,9 +143,9 @@ export default function GenericsAndMaps() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public class Team&lt;BLIBLABLUBB&gt; {\n" +
-                  "  // implementierung der Klasse\n" +
-                  "}\n",
+                  'public class Team&lt;BLIBLABLUBB&gt; {\n' +
+                  '  // implementierung der Klasse\n' +
+                  '}\n',
               }}
             ></code>
           </pre>
@@ -160,9 +160,9 @@ export default function GenericsAndMaps() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public class Team&lt;T&gt; {\n" +
-                  "  // implementierung der Klasse\n" +
-                  "}\n",
+                  'public class Team&lt;T&gt; {\n' +
+                  '  // implementierung der Klasse\n' +
+                  '}\n',
               }}
             ></code>
           </pre>
@@ -171,9 +171,9 @@ export default function GenericsAndMaps() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public class Team&lt;T,U&gt; {\n" +
-                  "  // implementierung der Klasse\n" +
-                  "}\n",
+                  'public class Team&lt;T,U&gt; {\n' +
+                  '  // implementierung der Klasse\n' +
+                  '}\n',
               }}
             ></code>
           </pre>
@@ -182,9 +182,9 @@ export default function GenericsAndMaps() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public class Team&lt;T, U, V&gt; {\n" +
-                  "  // implementierung der Klasse\n" +
-                  "}\n",
+                  'public class Team&lt;T, U, V&gt; {\n' +
+                  '  // implementierung der Klasse\n' +
+                  '}\n',
               }}
             ></code>
           </pre>
@@ -199,18 +199,18 @@ export default function GenericsAndMaps() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public class Team&lt;T&gt; {\n" +
-                  "  private String teamName;\n" +
-                  "  private ArrayList&lt;T&gt; teamMembers = new ArrayList&lt;&gt;();\n" +
-                  "  \n" +
-                  "  public String teamName() {\n" +
-                  "    return this.teamName;\n" +
-                  "  }\n" +
-                  "  \n" +
-                  "  public void addMember(T member) {\n" +
-                  "    this.teamMembers.add(member);\n" +
-                  "  }\n" +
-                  "}\n",
+                  'public class Team&lt;T&gt; {\n' +
+                  '  private String teamName;\n' +
+                  '  private ArrayList&lt;T&gt; teamMembers = new ArrayList&lt;&gt;();\n' +
+                  '  \n' +
+                  '  public String teamName() {\n' +
+                  '    return this.teamName;\n' +
+                  '  }\n' +
+                  '  \n' +
+                  '  public void addMember(T member) {\n' +
+                  '    this.teamMembers.add(member);\n' +
+                  '  }\n' +
+                  '}\n',
               }}
             ></code>
           </pre>
@@ -222,16 +222,16 @@ export default function GenericsAndMaps() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public class Main {\n" +
-                  "  public static void main(String[] args) {\n" +
-                  "    Team&lt;FootballPlayer&gt; scfreiburg = new Team&lt;&gt;();\n" +
-                  "    Team&lt;HockeyPlayer&gt; wildwings  = new Team&lt;&gt;();\n" +
-                  "    \n" +
+                  'public class Main {\n' +
+                  '  public static void main(String[] args) {\n' +
+                  '    Team&lt;FootballPlayer&gt; scfreiburg = new Team&lt;&gt;();\n' +
+                  '    Team&lt;HockeyPlayer&gt; wildwings  = new Team&lt;&gt;();\n' +
+                  '    \n' +
                   '    scfreiburg.addMember(new FootballPlayer("Steffen");\n' +
                   '    scfreiburg.addMember(new HockeyPlayer("Mirco"); // fails\n' +
                   '    wildwings.addMember(new HockeyPlayer("Mirco");\n' +
-                  " }\n" +
-                  "}\n",
+                  ' }\n' +
+                  '}\n',
               }}
             ></code>
           </pre>
@@ -265,9 +265,9 @@ export default function GenericsAndMaps() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public class Team&lt;T extends Player&gt; {\n" +
-                  "  // Player und Subtypen von Player erlaubt\n" +
-                  "}\n",
+                  'public class Team&lt;T extends Player&gt; {\n' +
+                  '  // Player und Subtypen von Player erlaubt\n' +
+                  '}\n',
               }}
             ></code>
           </pre>
@@ -276,9 +276,9 @@ export default function GenericsAndMaps() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public class Team&lt;T super Player&gt; {\n" +
-                  "  // Player und Supertypen von Player erlaubt \n" +
-                  "}\n",
+                  'public class Team&lt;T super Player&gt; {\n' +
+                  '  // Player und Supertypen von Player erlaubt \n' +
+                  '}\n',
               }}
             ></code>
           </pre>
@@ -290,10 +290,10 @@ export default function GenericsAndMaps() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public class Player {}\n" +
-                  "public class BaseballPlayer extends Player {}\n" +
-                  "public class FootballPlayer extends Player {}\n" +
-                  "public class ExtremeFootballPlayer extends FootballPlayer {}\n",
+                  'public class Player {}\n' +
+                  'public class BaseballPlayer extends Player {}\n' +
+                  'public class FootballPlayer extends Player {}\n' +
+                  'public class ExtremeFootballPlayer extends FootballPlayer {}\n',
               }}
             ></code>
           </pre>
@@ -302,10 +302,10 @@ export default function GenericsAndMaps() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public class Team&lt;T extends Player&gt; {} //PBFE erlaubt\n" +
-                  "public class Team&lt;T extends FootballPlayer&gt; {} //FE erlaubt\n" +
-                  "public class Team&lt;T super Player&gt; {} // P erlaubt\n" +
-                  "public class Team&lt;T super FootballPlayer&gt; {} //PF erlaubt",
+                  'public class Team&lt;T extends Player&gt; {} //PBFE erlaubt\n' +
+                  'public class Team&lt;T extends FootballPlayer&gt; {} //FE erlaubt\n' +
+                  'public class Team&lt;T super Player&gt; {} // P erlaubt\n' +
+                  'public class Team&lt;T super FootballPlayer&gt; {} //PF erlaubt',
               }}
             ></code>
           </pre>
@@ -352,22 +352,22 @@ export default function GenericsAndMaps() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public class Main {\n" +
-                  "  public static void main(String[] args) {\n" +
+                  'public class Main {\n' +
+                  '  public static void main(String[] args) {\n' +
                   '    Student steffen = new Student("Steffen");\n' +
-                  "    HashMap&lt;Integer, Student&gt; students = new HashMap&lt;&gt;();\n" +
-                  "    students.put(4545, steffen); // add value to map\n" +
-                  "    students.get(4545); // get value from map\n" +
-                  "    students.remove(4545); // remove value from map\n" +
-                  "    students.clear(); // clear map\n" +
-                  "    students.size(); // number of items in map\n" +
-                  "    students.containsKey(4545); // check if key exists\n" +
-                  "    students.containsValue(steffen); // check if value exists\n" +
-                  "    students.keySet(); // get all keys as Set\n" +
-                  "    students.entrySet(); // get all entries as Set-Entry\n" +
-                  "    students.values(); // get all entries as Collection\n" +
-                  "  }\n" +
-                  "}\n",
+                  '    HashMap&lt;Integer, Student&gt; students = new HashMap&lt;&gt;();\n' +
+                  '    students.put(4545, steffen); // add value to map\n' +
+                  '    students.get(4545); // get value from map\n' +
+                  '    students.remove(4545); // remove value from map\n' +
+                  '    students.clear(); // clear map\n' +
+                  '    students.size(); // number of items in map\n' +
+                  '    students.containsKey(4545); // check if key exists\n' +
+                  '    students.containsValue(steffen); // check if value exists\n' +
+                  '    students.keySet(); // get all keys as Set\n' +
+                  '    students.entrySet(); // get all entries as Set-Entry\n' +
+                  '    students.values(); // get all entries as Collection\n' +
+                  '  }\n' +
+                  '}\n',
               }}
             ></code>
           </pre>

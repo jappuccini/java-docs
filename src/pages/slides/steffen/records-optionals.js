@@ -1,6 +1,6 @@
-import React from "react";
-import Slides from "../../../components/Slides";
-import { defaultInitSlides } from "../../../components/Slides/initSlides";
+import React from 'react';
+import Slides from '../../../components/Slides';
+import { defaultInitSlides } from '../../../components/Slides/initSlides';
 
 export default function RecordsOptionals() {
   return (
@@ -35,19 +35,19 @@ export default function RecordsOptionals() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public class Dog {\n" +
-                  " final String name;\n" +
-                  " final int age;\n" +
-                  "\n" +
-                  " public Dog(String name, int age) {\n" +
-                  "  this.name = name;\n" +
-                  "  this.age = age;\n" +
-                  " }\n" +
-                  "\n" +
-                  " public String getName() {\n" +
-                  "  return name;\n" +
-                  " }\n" +
-                  "// ...\n",
+                  'public class Dog {\n' +
+                  ' final String name;\n' +
+                  ' final int age;\n' +
+                  '\n' +
+                  ' public Dog(String name, int age) {\n' +
+                  '  this.name = name;\n' +
+                  '  this.age = age;\n' +
+                  ' }\n' +
+                  '\n' +
+                  ' public String getName() {\n' +
+                  '  return name;\n' +
+                  ' }\n' +
+                  '// ...\n',
               }}
             ></code>
           </pre>
@@ -59,12 +59,12 @@ export default function RecordsOptionals() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "// ...\n" +
-                  " public int getAge() {\n" +
-                  "  return age;\n" +
-                  " }\n" +
-                  "// weitere Methoden siehe Doku\n" +
-                  "}\n",
+                  '// ...\n' +
+                  ' public int getAge() {\n' +
+                  '  return age;\n' +
+                  ' }\n' +
+                  '// weitere Methoden siehe Doku\n' +
+                  '}\n',
               }}
             ></code>
           </pre>
@@ -75,7 +75,7 @@ export default function RecordsOptionals() {
             <code
               className="java"
               dangerouslySetInnerHTML={{
-                __html: "public record Dog(String name, int age) {}\n",
+                __html: 'public record Dog(String name, int age) {}\n',
               }}
             ></code>
           </pre>
@@ -133,12 +133,12 @@ export default function RecordsOptionals() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public class Dog {\n" +
-                  " public String name;\n" +
-                  " public Dog(String name) {\n" +
-                  "  this.name = name;\n" +
-                  " }\n" +
-                  "}\n",
+                  'public class Dog {\n' +
+                  ' public String name;\n' +
+                  ' public Dog(String name) {\n' +
+                  '  this.name = name;\n' +
+                  ' }\n' +
+                  '}\n',
               }}
             ></code>
           </pre>
@@ -150,12 +150,12 @@ export default function RecordsOptionals() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public class Main {\n" +
-                  "  public static void main(String[] args) {\n" +
-                  "    Dog doggo = new Dog(null);\n" +
+                  'public class Main {\n' +
+                  '  public static void main(String[] args) {\n' +
+                  '    Dog doggo = new Dog(null);\n' +
                   '    doggo.name.equals("Bello"); // funktioniert nicht\n' +
-                  " }\n" +
-                  "}\n",
+                  ' }\n' +
+                  '}\n',
               }}
             ></code>
           </pre>
@@ -167,12 +167,12 @@ export default function RecordsOptionals() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public class Dog {\n" +
-                  " public Optional&lt;String&gt; name;\n" +
-                  " public Dog(String name) {\n" +
-                  "  this.name = Optional.ofNullable(name);\n" +
-                  " }\n" +
-                  "}\n",
+                  'public class Dog {\n' +
+                  ' public Optional&lt;String&gt; name;\n' +
+                  ' public Dog(String name) {\n' +
+                  '  this.name = Optional.ofNullable(name);\n' +
+                  ' }\n' +
+                  '}\n',
               }}
             ></code>
           </pre>
@@ -198,17 +198,17 @@ export default function RecordsOptionals() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public class Main {\n" +
-                  "  public static void main(String[] args) {\n" +
-                  "    Optional&lt;String&gt; name = Name.createName();\n" +
-                  "    if(name.isPresent()) {\n" +
-                  "      System.out.println(name.get());\n" +
-                  "    }\n" +
-                  "    if(name.isEmpty()) {\n" +
+                  'public class Main {\n' +
+                  '  public static void main(String[] args) {\n' +
+                  '    Optional&lt;String&gt; name = Name.createName();\n' +
+                  '    if(name.isPresent()) {\n' +
+                  '      System.out.println(name.get());\n' +
+                  '    }\n' +
+                  '    if(name.isEmpty()) {\n' +
                   '      System.out.println("No Name");\n' +
-                  "    }\n" +
-                  " }\n" +
-                  "}\n",
+                  '    }\n' +
+                  ' }\n' +
+                  '}\n',
               }}
             ></code>
           </pre>
@@ -220,16 +220,16 @@ export default function RecordsOptionals() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public class Main {\n" +
-                  "  public static void main(String[] args) {\n" +
-                  "    Optional&lt;String&gt; name = Name.createName();\n" +
-                  "    name.ifPresent((value) -> System.out.println(value));\n" +
-                  "    name.ifPresentOrElse(\n" +
-                  "      (value) -> System.out.println(value),\n" +
+                  'public class Main {\n' +
+                  '  public static void main(String[] args) {\n' +
+                  '    Optional&lt;String&gt; name = Name.createName();\n' +
+                  '    name.ifPresent((value) -> System.out.println(value));\n' +
+                  '    name.ifPresentOrElse(\n' +
+                  '      (value) -> System.out.println(value),\n' +
                   '      () -> System.out.println("No Name")\n' +
-                  "    );\n" +
-                  "  }\n" +
-                  "}\n",
+                  '    );\n' +
+                  '  }\n' +
+                  '}\n',
               }}
             ></code>
           </pre>
