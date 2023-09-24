@@ -59,7 +59,7 @@ Die Java API stellt unter Anderem die Schnittstelle `List<E>` sowie die Klassen 
   ```
 
   </TabItem>
-  <TabItem value="arrayListAndLinkedList" label="Veränderbare Listen" default>
+  <TabItem value="arrayListAndLinkedList" label="Veränderbare Listen dynamischer Größe" default>
 
   Die Klasse `ArrayList<E>` stellt eine veränderbare Liste dynamischer Größe auf Basis eine Feldes dar, die Klasse `LinkedList<E>` eine veränderbare Liste dynamischer Größe auf Basis einfach verketteter Elemente.
 
