@@ -60,7 +60,7 @@ public class MainClass {
 Der Index beginnt bei Java bei 0.
 :::
 
-## Der Parameter `String[] args`
+## Der Parameter _String[] args_
 Der Parameter `String[] args` der main-Methode ermöglicht es dem Anwender, der ausführbaren Klasse beim Aufruf Informationen mitzugeben.
 
 ```java title="MainClass.java" showLineNumbers
