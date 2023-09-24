@@ -5,6 +5,9 @@ sidebar_position: 10
 tags: [programming]
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 Als ein Teilbereich der Softwareentwicklung umfasst das Programmieren vor allem die Umsetzung eines Softwareentwurfes in Quellcode. Generell versteht man unter Programmieren die Umsetzung von Algorithmen in lauffähige Computer-Programme.
 
 ```mermaid
@@ -84,63 +87,68 @@ classDiagram
 ```
 
 ## Programmausführung
-Programme auf einem Computer können auf unterschiedliche Arten ausgeführt werden:
-_Compiler_ übersetzen den Quellcode in eine Datei, die vom jeweiligen Betriebssystem ausgeführt werden kann
-
-```mermaid
-flowchart LR
-    sourcecode[/Quellcode/]
-    machinecode[/Maschinencode/]
-    compiler(Compiler)
-    cpu(CPU)
-    subgraph Entwicklungszeit
-        sourcecode -.-> compiler -.-> machinecode
-    end
-    subgraph Laufzeit
-        cpu
-    end
-    machinecode -.-> cpu
-```
-
-_Interpreter_ übersetzen den Quellcode direkt in den Arbeitsspeicher und führt das Programm sofort aus
-
-```mermaid
-flowchart LR
-    sourcecode[/Quellcode/]
-    interpreter(Interpreter)
-    cpu(CPU)
-    subgraph Entwicklungszeit
-        sourcecode
-    end
-    subgraph Laufzeit
-        interpreter -.-> cpu
-    end
-    sourcecode -.-> interpreter
-```
-
-_Just-In-Time-Compiler_ vereinen die Vorteile von Compiler und Interpreter: Der Compiler übersetzt den Quellcode zunächst in den sogenannten Bytecode, anschließend überführt der Interpreter den Bytecode in Maschinencode
-
-```mermaid
-flowchart LR
-    sourcecode[/Quellcode/]
-    bytecode[/Bytecode/]
-    compiler(Compiler)
-    interpreter(Interpreter)
-    cpu(CPU)
-    subgraph Entwicklungszeit
-        sourcecode -.-> compiler -.-> bytecode
-    end
-    subgraph Laufzeit
-        interpreter -.-> cpu
-    end
-    bytecode -.-> interpreter
-```
+Programme auf einem Computer können auf unterschiedliche Arten ausgeführt werden: Compilersprachen übersetzen den Quellcode in eine Datei, die vom jeweiligen Betriebssystem ausgeführt werden kann, Interpretersprachen übersetzen den Quellcode direkt in den Arbeitsspeicher und führen das Programm sofort aus und Just-In-Time Compilersprachen (JIT)  übersetzen den Quellcode mit Hilfe eines Compilers zunächst in den sogenannten Bytecode und übersetzen diesen bei der Ausführung in den Arbeitsspeicher. Compilersprachen wie z.B. C++ sind dabei deutlich performanter und ermöglichen eine sicherere Entwicklung, Interpretersprachen wie z.B. PHP sind dagegen plattformunabhängig und Just-In-Time Compliersprachen vereinen die Vorteile von beiden.
 
 :::note Hinweis
 In Java wird der Interpreter als _Java Virtual Machine_ bezeichnet.
 :::
 
-Compilersprachen wie z.B. C++ sind deutlich performanter und ermöglichen eine sicherere Entwicklung, Interpretersprachen wie z.B. PHP sind dagegen plattformunabhängig.
+<Tabs>
+  <TabItem value="compiler" label="Compilersprachen" default>
+
+  ```mermaid
+  flowchart LR
+      sourcecode[/Quellcode/]
+      machinecode[/Maschinencode/]
+      compiler(Compiler)
+      cpu(CPU)
+      subgraph Entwicklungszeit
+          sourcecode -.-> compiler -.-> machinecode
+      end
+      subgraph Laufzeit
+          cpu
+      end
+      machinecode -.-> cpu
+  ```
+
+  </TabItem>
+  <TabItem value="interpreter" label="Interpretersprachen" default>
+
+  ```mermaid
+  flowchart LR
+      sourcecode[/Quellcode/]
+      interpreter(Interpreter)
+      cpu(CPU)
+      subgraph Entwicklungszeit
+          sourcecode
+      end
+      subgraph Laufzeit
+          interpreter -.-> cpu
+      end
+      sourcecode -.-> interpreter
+  ```
+
+  </TabItem>
+  <TabItem value="jit" label="Just-In-Time Compilersprachen" default>
+
+  ```mermaid
+  flowchart LR
+      sourcecode[/Quellcode/]
+      bytecode[/Bytecode/]
+      compiler(Compiler)
+      interpreter(Interpreter)
+      cpu(CPU)
+      subgraph Entwicklungszeit
+          sourcecode -.-> compiler -.-> bytecode
+      end
+      subgraph Laufzeit
+          interpreter -.-> cpu
+      end
+      bytecode -.-> interpreter
+  ```
+
+  </TabItem>
+</Tabs>
 
 ## Programmiersprachen
 Maschinen sind im Vergleich zu menschlichen Gehirnen sehr primitive Gebilde. Die Diskrepanz zwischen der menschlichen Denkweise und der Arbeitsweise von Maschinen bezeichnet mal als _Semantische Lücke_. Programmiersprachen ermöglichen es, Problemstellungen der 
