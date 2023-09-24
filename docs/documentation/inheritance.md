@@ -18,39 +18,39 @@ Oberklasse zugreifen.
 
 <Tabs>
   <TabItem value="superClass" label="Oberklasse" default>
-    
+
   ```java title="SuperClass.java" showLineNumbers
   public class SuperClass {
-
+  
     public String foo;
     protected String bar;
     private String baz;
-
+  
     public SuperClass(String foo, String bar, String baz) {
       this.foo = foo;
       this.bar = bar;
       this.baz = baz;
     }
-
+  
   }
   ```
 
   </TabItem>
   <TabItem value="subClass" label="Unterklasse" default>
-    
+
   ```java title="SubClass.java" showLineNumbers
   public class SubClass extends SuperClass {
-
+  
     public SubClass(String foo, String bar, String baz) {
       super(foo, bar, baz);
     }
-
+  
     public void foobar() {
       System.out.println(foo);
       System.out.println(bar);
       System.out.println(baz); // Kompilierungsfehler
     }
-
+  
   }
   ```
 
@@ -67,29 +67,29 @@ der Oberklasse mit Hilfe der Objektreferenz `super` aufgerufen werden.
 
 <Tabs>
   <TabItem value="superClass" label="Oberklasse" default>
-    
+
   ```java title="SuperClass.java" showLineNumbers
   public class SuperClass {
-  
+    
     public void foo() {
       System.out.print("foo");
     }
-  
+    
   }
   ```
 
   </TabItem>
   <TabItem value="subClass" label="Unterklasse" default>
-  
+
   ```java title="SubClass.java" showLineNumbers
   public class SubClass extends SuperClass {
-  
+    
     @Override
     public void foo() {
       super.foo();
       System.out.println("bar");
     }
-  
+    
   }
   ```
 
