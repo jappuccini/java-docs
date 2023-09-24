@@ -8,7 +8,7 @@ tags: [java-api, files]
 Die Klasse `File` ermöglicht die Arbeit mit Dateien und Verzeichnissen. Mit Hilfe der Methode `boolean exists()` kann beispielsweise geprüft werden, ob ein entsprechendes Verzeichnis bzw. eine entsprechende Datei existiert oder nicht. Die Klasse bietet zudem M
 ethoden zum Erstellen und Löschen von Verzeichnissen bzw. Dateien. Zum Erzeugen eines File-Objekts wird entweder ein Pfad zu einem Verzeichnis bzw. zu einer Datei oder ein _URI_ (Unified Resource Identifier) benötigt.
 
-## Lesen von Dateien mit Hilfe der Klasse `Scanner`
+## Lesen von Dateien mit Hilfe der Klasse _Scanner_
 Zum Lesen einer Datei können entweder [Datenstromklassen](../io-streams.md) oder die Klasse `Scanner` verwendet werden.
 
 ```java title="MainClass.java" showLineNumbers
