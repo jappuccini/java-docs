@@ -5,11 +5,11 @@ sidebar_position: 265
 tags: [lambdas]
 ---
 
-Lambda-Ausdrücke sind anonyme Funktionen, die nur über ihre Referenz angesprochen werden können. Die Methodenparameter und der Methodenkörper werden getrennt vom Pfeiloperator `->` notiert. Voraussetzung für den Einsatz eines Lambda-Ausdrucks ist eine funktionale Schnittstelle, also eine Schnittstelle, die über genau eine Methode verfügt.
+Lambda-Ausdrücke sind anonyme Funktionen, die nur über ihre Referenz angesprochen werden können.
 
 ## Implementierung von Lambda-Ausdrücken
 
-In der main-Methode der Startklasse soll die statisch Methode `void sort(list: List<T>, c: Comparator<T>)` der Klasse `Collections` aufgerufen werden, wofür eine konkrete Implementierung der Schnittstelle `Comparator<T>` benötigt wird. Die Implementierung erfolgt in Form eines Lambda-Ausdrucks.
+Die Methodenparameter sowie der Methodenkörper werden bei einem Lambda-Ausdruck getrennt vom Pfeiloperator `->` notiert.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
@@ -26,6 +26,10 @@ public class MainClass {
 
 }
 ```
+
+:::note Hinweis
+Voraussetzung für den Einsatz eines Lambda-Ausdrucks ist eine funktionale Schnittstelle, also eine Schnittstelle, die über genau eine Methode verfügt.
+:::
 
 ## Syntaxvarianten
 - Bei keinem oder mehreren Methodenparametern müssen diese in runden Klammern angegeben werden, bei genau einem Methodenparameter können die runden Klammern weggelassen werden
