@@ -12,7 +12,7 @@ import Exercise from '@site/src/components/Exercise';
 ## Klassendiagramm
 ```mermaid
 classDiagram
-    Coordinate ..|> Comparable~T~
+    Comparable~T~ <|.. Coordinate
 
     class Coordinate {
         -x int
