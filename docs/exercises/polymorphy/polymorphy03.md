@@ -14,10 +14,10 @@ import Exercise from '@site/src/components/Exercise';
 ## Klassendiagramm
 ```mermaid
 classDiagram
-    Car --|> Vehicle
-    Truck --|> Vehicle
-    Engine --o Vehicle
-    Vehicle --o Rental
+    Vehicle <|-- Car
+    Vehicle <|-- Truck
+    Vehicle o-- Engine
+    Rental o-- Vehicle
 
     class Vehicle {
         -make String
