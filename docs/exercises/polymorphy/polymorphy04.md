@@ -20,11 +20,11 @@ import Exercise from '@site/src/components/Exercise';
 ## Klassendiagramm
 ```mermaid
 classDiagram
-    Dice --o DiceGame
-    Player --o DiceGame
-    DiceCup --o DiceGame
-    LowValueDice --|> Dice
-    HighValueDice --|> Dice
+    DiceGame o-- Dice
+    DiceGame o-- Player
+    DiceGame o-- DiceCup
+    Dice <|-- LowValueDice
+    Dice <|-- HighValueDice
 
     class Player {
         -name String
