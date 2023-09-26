@@ -9,10 +9,8 @@ description: ''
 ## Klassendiagramm
 ```mermaid
 classDiagram
-    Author --o BookCollection
-    Book --o BookCollection
-
-    note for BookCollection "Map-Key: Author, Map-Value: List~Book~"
+    BookCollection o-- Author
+    BookCollection o-- Book 
 
     class Author {
         <<record>>
@@ -26,7 +24,7 @@ classDiagram
 
     class BookCollection {
         <<record>>
-        -collection Map
+        -collection Map~Author&#44&#160List~Book~~
         +addAuthor(author Author) void
         +addBook(author Author, book Book) void
         +getMostDiligentAuthor() Optional~Author~
