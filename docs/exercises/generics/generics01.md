@@ -13,9 +13,9 @@ import Exercise from '@site/src/components/Exercise';
 ## Klassendiagramm
 ```mermaid
 classDiagram
-    BeerBottle --|> Bottle
-    WineBottle --|> Bottle
-    Bottle --* Crate
+    Bottle <|-- BeerBottle
+    Bottle <|-- WineBottle
+    Crate *-- Bottle
 
     class Crate {
         -box1 Bottle
