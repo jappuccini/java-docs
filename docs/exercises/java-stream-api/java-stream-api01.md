@@ -10,7 +10,44 @@ import ClassDiagramm from '@site/static/img/exercises/java-stream-api/java-strea
 - Erstelle eine ausführbare Klasse, welche alle erstellten Abfragen ausführt und die Ergebnisse auf der Konsole ausgibt
 
 ## Klassendiagramm
-<img src={ClassDiagramm} />
+```mermaid
+classDiagram
+    Console o-- Maker
+    Queries o-- Console
+
+    class Maker {
+        <<enumeration>>
+        MICROSOFT
+        NINTENDO
+        SONY
+    }
+
+    class Console {
+        <<record>>
+        -title String
+        -maker Maker
+        -lifespan int
+        -soldUnitsInMillions double
+    }
+
+    class DataProvider {
+        +getConsoles() List~Console~
+    }
+
+    class Queries {
+        -consoles List~Console~
+        +Queries(consoles List~Console~)
+        +getAllCurrentConsoleNames() List~String~
+        +getAllConsolesSortedByLifespan() List~Console~
+        +isAnyConsoleWithMoreThan150MillionSoldUnits() boolean
+        +isAllConsolesWithMoreThan50MillionSoldUnits() boolean
+        +getNumberOfConsolesFromNintendo() long
+        +getSoldUnitsInMillionsPerYearFromAllOutdatedConsoles() List~String~
+        +getAverageSoldUnitsInMillionsPerYearFromAllOutdatedConsoles() OptionalDouble
+        +getAllConsolesByMaker() Map~Maker&#44&#160List~Console~~
+        +getTotalSoldUnitsInMillionsPerMaker() Map~Maker&#44&#160Double~
+    }
+```
 
 ## Hinweis zur Klasse Console
 Konsolen, die aktuell noch verkauft werden, besitzen bei der Lebensspanne den Wert `-1` (Stand: 14.06.2023)
