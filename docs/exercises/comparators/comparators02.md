@@ -14,7 +14,7 @@ import Exercise from '@site/src/components/Exercise';
 ## Klassendiagramm
 ```mermaid
 classDiagram
-    CoordinateByDistanceToOriginPointComparator ..|> Comparator~T~
+    Comparator~T~ <|.. CoordinateByDistanceToOriginPointComparator
 
     class CoordinateByDistanceToOriginPointComparator {
         +compareTo(coordinate1 Coordinate, coordinate2 Coordinate) int
