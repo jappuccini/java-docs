@@ -87,7 +87,7 @@ classDiagram
     }
 
     class RentalTest {
-        -rental Rental$
+        -rental Rental
         +setUp() void
         +testTransformAllTrucks() void
         +testAccelerateAllVehicles() void
