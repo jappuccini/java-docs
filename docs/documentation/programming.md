@@ -5,9 +5,15 @@ sidebar_position: 10
 tags: [programming]
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 Als ein Teilbereich der Softwareentwicklung umfasst das Programmieren vor allem die Umsetzung eines Softwareentwurfes in Quellcode. Generell versteht man unter Programmieren die Umsetzung von Algorithmen in lauffähige Computer-Programme.
 
-![image](https://user-images.githubusercontent.com/47243617/209094888-fa91bfac-1968-4213-916f-7ebc1c36ee02.png)
+```mermaid
+flowchart LR
+    Analyse --> Entwurf --> Umsetzung --> Auslieferung --> Wartung --> Analyse
+```
 
 :::note Hinweis
 Ein Algorithmus ist eine Handlungsvorschrift zur Lösung eines Problems.
@@ -17,35 +23,132 @@ Ein Algorithmus ist eine Handlungsvorschrift zur Lösung eines Problems.
 Unter einem Programmierparadigma versteht man die grundlegende Herangehensweise, Probleme mit Hilfe einer Programmiersprache zu lösen:
 
 :::note Hinweis
-Auch wenn Programmiersprachen oft anhand ihrer grundlegenden Merkmale genau einem Programmierparadigma zugeordnet werden, unterstützen viele Programmiersprachen mehrerer Programmierparadigmen.
+Auch wenn Programmiersprachen oft anhand ihrer grundlegenden Merkmale genau einem Programmierparadigma zugeordnet werden, unterstützen viele Programmiersprachen mehrere Programmierparadigmen.
 :::
 
 ### Imperative Programmierung
 Bei der imperativen Programmierung bestehen Programme aus verzweigten und sich wiederholenden Folgen von Anweisungen, die den Programmablauf steuern.
 
-![image](https://user-images.githubusercontent.com/47243617/209141943-9e9c985d-3c48-4ad5-8766-753f21f923ec.png)
+```mermaid
+stateDiagram-v2
+    state "Ausgabe: Zahl größer Null eingeben" as activity1
+    state "Eingabe: Zahl" as activity2
+    state "Ausgabe: Zahl ist nicht größer Null" as activity3
+    state "Ausgabe: Zahl ist größer Null" as activity4
+    state if <<choice>>
+        
+    [*] --> activity1
+    activity1--> activity2
+    activity2 --> if
+    if --> activity3 : Zahl kleiner gleich Null
+    if --> activity4 : Zahl größer Null     
+    activity3 --> activity1
+    activity4 --> [*]
+```
 
 ### Deklarative Programmierung
 Die deklarative Programmierung stellt einen Gegenentwurf zur imperativen Programmierung dar, bei der nicht das "Wie", sondern das "Was" im Vordergrund steht.
 
+```mermaid
+flowchart TD
+    subgraph Ausgangsmenge
+        direction LR
+        p1 -.- p2 -.- p3 -.- p4
+        p1(Hans, 42, m, Stuttgart)
+        p2(Peter, 17, m, Freiburg)
+        p3(Lisa, 19, w, Berlin)
+        p4(Maria, 33, w, Freiburg)
+    end
+    subgraph Ergebnismenge
+        direction LR
+        p5 -.- p6
+        p5(Maria, 33)
+        p6(Peter, 17)
+    end
+    Ausgangsmenge -->|"SELECT Name, Age FROM Person WHERE City = 'Freiburg' ORDER BY Name"| Ergebnismenge
+```
+
 ### Objektorientierte Programmierung
 Die ojektorientierte Programmierung baut auf der imperativen Programmierung auf, setzt den Fokus aber auf abstrakte Datentypen und die Verbindung von Daten und Routinen.
 
-![image](https://user-images.githubusercontent.com/47243617/209148346-eb2ea659-5242-4e6e-bf79-56de39fbb88a.png)
+```mermaid
+classDiagram
+    Person --o Team
+    class Person {
+        -name String
+        +Person(name String)
+        +name() String       
+    }
+    class Team {
+        -members List~Person~
+        +addMember(person Person) void
+        +members() List~Person~
+    }
+```
 
 ## Programmausführung
-Programme auf einem Computer können auf unterschiedliche Arten ausgeführt werden:
-- _Compiler_ übersetzen den Quellcode in eine Datei, die vom jeweiligen Betriebssystem ausgeführt werden kann
-- _Interpreter_ übersetzen den Quellcode direkt in den Arbeitsspeicher und führt das Programm sofort aus
-- _Just-In-Time-Compiler_ vereinen die Vorteile von Compiler und Interpreter: Der Compiler übersetzt den Quellcode zunächst in den sogenannten Bytecode, anschließend überführt der Interpreter den Bytecode in Maschinencode
-
-Compilersprachen wie z.B. C++ sind deutlich performanter und ermöglichen eine sicherere Entwicklung, Interpretersprachen wie z.B. PHP sind dagegen plattformunabhängig.
-
-![image](https://user-images.githubusercontent.com/47243617/209095011-8c4920fb-66c7-435d-9f76-279f4fca0612.png)
+Programme auf einem Computer können auf unterschiedliche Arten ausgeführt werden: Compilersprachen übersetzen den Quellcode in eine Datei, die vom jeweiligen Betriebssystem ausgeführt werden kann, Interpretersprachen übersetzen den Quellcode direkt in den Arbeitsspeicher und führen das Programm sofort aus und Just-In-Time Compilersprachen (JIT)  übersetzen den Quellcode mit Hilfe eines Compilers zunächst in den sogenannten Bytecode und übersetzen diesen bei der Ausführung in den Arbeitsspeicher. Compilersprachen wie z.B. C++ sind dabei deutlich performanter und ermöglichen eine sicherere Entwicklung, Interpretersprachen wie z.B. PHP sind dagegen plattformunabhängig und Just-In-Time Compliersprachen vereinen die Vorteile von beiden.
 
 :::note Hinweis
 In Java wird der Interpreter als _Java Virtual Machine_ bezeichnet.
 :::
+
+<Tabs>
+  <TabItem value="compiler" label="Compilersprachen" default>
+
+  ```mermaid
+  flowchart LR
+      sourcecode[/Quellcode/]
+      machinecode[/Maschinencode/]
+      compiler(Compiler)
+      cpu(CPU)
+      subgraph Entwicklungszeit
+          sourcecode -.-> compiler -.-> machinecode
+      end
+      subgraph Laufzeit
+          cpu
+      end
+      machinecode -.-> cpu
+  ```
+
+  </TabItem>
+  <TabItem value="interpreter" label="Interpretersprachen" default>
+
+  ```mermaid
+  flowchart LR
+      sourcecode[/Quellcode/]
+      interpreter(Interpreter)
+      cpu(CPU)
+      subgraph Entwicklungszeit
+          sourcecode
+      end
+      subgraph Laufzeit
+          interpreter -.-> cpu
+      end
+      sourcecode -.-> interpreter
+  ```
+
+  </TabItem>
+  <TabItem value="jit" label="Just-In-Time Compilersprachen" default>
+
+  ```mermaid
+  flowchart LR
+      sourcecode[/Quellcode/]
+      bytecode[/Bytecode/]
+      compiler(Compiler)
+      interpreter(Interpreter)
+      cpu(CPU)
+      subgraph Entwicklungszeit
+          sourcecode -.-> compiler -.-> bytecode
+      end
+      subgraph Laufzeit
+          interpreter -.-> cpu
+      end
+      bytecode -.-> interpreter
+  ```
+
+  </TabItem>
+</Tabs>
 
 ## Programmiersprachen
 Maschinen sind im Vergleich zu menschlichen Gehirnen sehr primitive Gebilde. Die Diskrepanz zwischen der menschlichen Denkweise und der Arbeitsweise von Maschinen bezeichnet mal als _Semantische Lücke_. Programmiersprachen ermöglichen es, Problemstellungen der 

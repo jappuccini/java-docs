@@ -1,73 +1,90 @@
 ---
 title: Listen
 description: ''
-sidebar_position: 120
+sidebar_position: 215
 tags: []
 ---
 
-Die Java API stellt eine Reihe von Klassen und Schnittstellen zur Verfügung, mit deren Hilfe Listen realisiert werden. Unter einer Liste versteht man eine geordnete Folge von Elementen, die auch doppelt enthalten sein können. Der Zugriff auf die Elemente erfolgt
-über den Index oder sequentiell.
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
-## Die Klasse `ArrayList<E>`
-Die Klasse `ArrayList<E>` stellt eine veränderbare Liste dynamischer Größe auf Basis eine Feldes dar.
+Die Java API stellt unter Anderem die Schnittstelle `List<E>` sowie die Klassen `ArrayList<E>` und `Arrays` zur Verfügung, mit deren Hilfe Listen realisiert werden. Unter einer Liste versteht man eine geordnete Folge von Elementen, die auch doppelt enthalten sein können. Der Zugriff auf die Elemente erfolgt über den Index oder sequentiell.
 
-```java title="MainClass.java" showLineNumbers
-public class MainClass {
+<Tabs>
+  <TabItem value="list" label="Unveränderbare Listen" default>
 
-  public static void main(String[] args) {
-    List<String> list = new ArrayList<>();
-    list.add("Hans");
-    list.add("Peter");
-    list.add("Lisa");
+  Die Schnittstelle `List<E>` bietet verschiedene Fabrikmethoden zum Erzeugen unveränderbarer Listen. Unveränderbar bedeutet, dass weder die Liste selbst noch ihre Elemente 
+  geändert werden können.
 
-    System.out.println(list.size());
-    System.out.println(list.get(0));
-    list.set(0, "Max");
-    list.add("Heidi");
-    list.remove(0);
+
+  ```java title="MainClass.java" showLineNumbers
+  public class MainClass {
+
+    public static void main(String[] args) {
+      List<String> list = List.of("Hans", "Peter", "Lisa");
+
+      System.out.println(list.size());
+      System.out.println(list.get(0));
+      list.set(0, "Max"); // Laufzeitfehler
+      list.add("Heidi"); // Laufzeitfehler
+      list.remove(0); // Laufzeitfehler
+    }
+
   }
+  ```
 
-}
-```
+  :::note Hinweis
+  Fabrikmethoden sind Methoden, die Objekte erzeugen.
+  :::
 
-## Die Klasse `Arrays`
-Die Klasse `Arrays` stellt neben Methoden zum Sortieren und Durchsuchen von Feldern auch eine Methode zum Erzeugen veränderbarer Listen fixer Größe zur Verfügung.
+  </TabItem>
+  <TabItem value="arrays" label="Veränderbare Listen fixer Größe" default>
 
-```java title="MainClass.java" showLineNumbers
-public class MainClass {
+  Die Klasse `Arrays` stellt neben Methoden zum Sortieren und Durchsuchen von Feldern auch eine Methode zum Erzeugen veränderbarer Listen fixer Größe zur Verfügung.
 
-  public static void main(String[] args) {
-    List<String> list = Arrays.asList("Hans", "Peter", "Lisa");
+  ```java title="MainClass.java" showLineNumbers
+  public class MainClass {
 
-    System.out.println(list.size());
-    System.out.println(list.get(0));
-    list.set(0, "Max");
-    list.add("Heidi"); // Laufzeitfehler
-    list.remove(0); // Laufzeitfehler
+    public static void main(String[] args) {
+      List<String> list = Arrays.asList("Hans", "Peter", "Lisa");
+
+      System.out.println(list.size());
+      System.out.println(list.get(0));
+      list.set(0, "Max");
+      list.add("Heidi"); // Laufzeitfehler
+      list.remove(0); // Laufzeitfehler
+    }
+
   }
+  ```
 
-}
-```
+  </TabItem>
+  <TabItem value="arrayListAndLinkedList" label="Veränderbare Listen dynamischer Größe" default>
 
-## Die Schnittstelle `List<E>`
-Die Schnittstelle `List<E>` stellt verschiedene Fabrikmethoden zum Erzeugen unveränderlicher Listen zur Verfügung.
+  Die Klasse `ArrayList<E>` stellt eine veränderbare Liste dynamischer Größe auf Basis eine Feldes dar, die Klasse `LinkedList<E>` eine veränderbare Liste dynamischer Größe auf Basis einfach verketteter Elemente.
 
-:::note Hinweis
-Fabrikmethoden sind Methoden, die Objekte erzeugen.
-:::
+  ```java title="MainClass.java" showLineNumbers
+  public class MainClass {
 
-```java title="MainClass.java" showLineNumbers
-public class MainClass {
+    public static void main(String[] args) {
+      List<String> list = new ArrayList<>(); // = new LinkedList<>();
+      list.add("Hans");
+      list.add("Peter");
+      list.add("Lisa");
 
-  public static void main(String[] args) {
-    List<String> list = List.of("Hans", "Peter", "Lisa");
+      System.out.println(list.size());
+      System.out.println(list.get(0));
+      list.set(0, "Max");
+      list.add("Heidi");
+      list.remove(0);
+    }
 
-    System.out.println(list.size());
-    System.out.println(list.get(0));
-    list.set(0, "Max"); // Laufzeitfehler
-    list.add("Heidi"); // Laufzeitfehler
-    list.remove(0); // Laufzeitfehler
   }
+  ```
 
-}
-```
+  :::note Hinweis
+  Eine ArrayList ist bei wahlfreiem Zugriff schneller als eine LinkedList; eine LinkedList ist bei Anfüge- und Löschoperationen (insbesondere bei großen Elementzahlen) schneller als eine ArrayList.
+  :::
+
+  </TabItem>
+</Tabs>

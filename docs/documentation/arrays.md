@@ -8,7 +8,15 @@ tags: [arrays]
 Wenn eine große Menge an Daten verarbeitet werden soll, kann man auf spezielle Datenstruktur-Variablen, sogenannte _Felder_ (Arrays), zurückgreifen. Die einzelnen Speicherplätze in einem Feld werden als Elemente bezeichnet, die über einen Index angesprochen 
 werden können.
 
-![image](https://user-images.githubusercontent.com/47243617/209096157-f67edf3e-3e24-46f8-a241-a1fb37c9a6d1.png)
+```mermaid
+flowchart
+    subgraph names
+        a[Index: 0\nWert: Hans] -.- b[Index: 1\nWert: Peter]
+        b -.- c[Index: 2\nWert: Lisa]
+        c -.- d[Index: 3\nWert: Max]
+        d -.- e[Index: 4\nWert: Heidi]
+    end
+``` 
 
 ## Erzeugen von Feldern
 Da es sich bei Feldern um Objekte handelt, müssen diese vor Verwendung erzeugt werden. Bei der Erzeugung muss immer die Länge des Feldes (d.h. die Anzahl der Elemente) angegeben werden. Jedes Feld verfügt über das Attribut `length`, welches die Länge des Feldes 
@@ -52,7 +60,7 @@ public class MainClass {
 Der Index beginnt bei Java bei 0.
 :::
 
-## Der Parameter `String[] args`
+## Der Parameter _String[] args_
 Der Parameter `String[] args` der main-Methode ermöglicht es dem Anwender, der ausführbaren Klasse beim Aufruf Informationen mitzugeben.
 
 ```java title="MainClass.java" showLineNumbers
@@ -91,11 +99,3 @@ public class MainClass {
 :::note Hinweis
 Technisch gesehen handelt es sich bei einer variablen Argumentliste um ein Feld.
 :::
-
-## Herausforderungen beim Arbeiten mit Feldern
-Das Arbeiten mit Feldern stellt einige Herausforderungen bereit:
-- Die Länge eines Feldes muss bereits bei der Initialisierung des Feldes angegeben werden und kann nicht mehr verändert werden
-- Beim Hinzufügen eines Elements in ein volles Feld müssen alle Elemente des Feldes in ein neues, größeres Feld kopiert werden
-- Beim Einfügen oder Löschen eines Elements müssen alle nachfolgenden Elemente verschoben werden
-
-![image](https://user-images.githubusercontent.com/47243617/209095940-fc615434-5ba6-4001-a356-6cd690e191f1.png)

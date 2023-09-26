@@ -5,24 +5,117 @@ sidebar_position: 200
 tags: [abstract-and-final]
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 Mit Hilfe der Schlüsselwörter `abstract` und `final` kann die Verwendung von Klassen vorgegeben bzw. eingeschänkt werden.
 
 ## Abstrakte Klassen
 Abstrakte Klassen können nicht instanziiert werden.
 
-![image](https://user-images.githubusercontent.com/47243617/209166284-ad66e8a2-6a85-4cc4-afd6-a5424a0a6ad5.png)
+<Tabs>
+  <TabItem value="abstractClass" label="Abstrakte Klasse" default>
+
+  ```java title="Person.java" showLineNumbers
+  public abstract class Person { }
+  ```
+
+  </TabItem>
+  <TabItem value="mainClass" label="Startklasse" default>
+
+  ```java title="MainClass.java" showLineNumbers
+  public class MainClass {
+
+    public static void main(String[] args) {
+      Person person = new Person(); // Kompilierungsfehler
+    }
+
+  }
+  ```
+
+  </TabItem>
+</Tabs>
 
 ## Abstrakte Methoden
-Abstrakte Methoden werden in abstrakten Klassen definiert, besitzen dort keinen Methodenrumpf und müssen in den abgeleiteten Klassen der abstrakten Klasse überschrieben werden.
+Abstrakte Methoden werden in abstrakten Klassen definiert, besitzen dort keinen Methodenrumpf und müssen in den abgeleiteten Klassen der abstrakten Klasse
+überschrieben werden.
 
-![image](https://user-images.githubusercontent.com/47243617/209166331-be93409b-0501-4c0e-b1f1-0399e93c4d15.png)
+<Tabs>
+  <TabItem value="abstractClassWithAbstractMethod" label="Abstrakte Klasse mit abstrakter Methode">
+
+  ```java title="Person.java" showLineNumbers
+  public abstract class Person {
+
+    public abstract print();
+
+  }
+  ```
+
+  </TabItem>
+  <TabItem value="mainClass" label="Startklasse">
+
+  ```java title="Student.java" showLineNumbers
+  public class Student extends Person {
+
+    public print() { }
+
+  }
+  ```
+
+  </TabItem>
+</Tabs>
 
 ## Finale Klassen
 Finale Klassen können nicht abgeleitet werden.
 
-![image](https://user-images.githubusercontent.com/47243617/209166368-f9f79258-d0e8-49c7-8de3-55697583da6a.png)
+<Tabs>
+  <TabItem value="finalClass" label="Finale Klasse">
+
+  ```java title="Person.java" showLineNumbers
+  public final class Person { }
+  ```
+  
+  </TabItem>
+  <TabItem value="subClass" label="Unterklasse">
+
+  ```java title="Student.java" showLineNumbers
+  public class Student extends Person { } // Kompilierungsfehler
+  ```
+  
+  </TabItem>
+</Tabs>
 
 ## Finale Methoden
 Finale Methoden können nicht überschrieben werden.
 
-![image](https://user-images.githubusercontent.com/47243617/209166415-492e73ef-c103-4859-a879-863dea21953b.png)
+<Tabs>
+  <TabItem value="classWithFinalMethod" label="Oberklasse mit finaler Methode">
+
+  ```java title="Person.java" showLineNumbers
+  public class Person {
+
+    private String name;
+  
+    public Person(String name) {
+      this.name = name;
+    }
+    public final name() {
+      return name;
+    }
+
+  }
+  ```
+  
+  </TabItem>
+  <TabItem value="subClass" label="Unterklasse">
+
+  ```java title="Student.java" showLineNumbers
+  public class Student extends Person {
+
+    public name() { } // Kompilierungsfehler
+
+  }
+  ```
+  
+  </TabItem>
+</Tabs>

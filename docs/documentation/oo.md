@@ -11,7 +11,12 @@ aus der realen Welt zum Konzept der Objektorientierung zusammengefasst:
 - Konkrete Ausprägungen bzw. Instanzen einer Klasse werden wiederum als _Objekte_ bezeichnet
 - Die Eigenschaften von Objekten werden als _Attribute_ das Verhalten als _Methoden_ bezeichnet
 
-![image](https://user-images.githubusercontent.com/47243617/209096416-7128eebe-e05b-42a5-a8ae-3ab898aae81b.png)
+```mermaid
+flowchart LR
+    rectangle1(Bezeichner: rectangle1\nDatentyp: Shape\nWert: 13fee20c) --> o1[hashCode: 13fee20c\nareaInCM2: 12]
+    rectangle2(Bezeichner: rectangle2\nDatentyp: Shape\nWert: 88d45a01) --> o2[hashCode: 88d45a01\nareaInCM2: 12]
+    trapezoid(Bezeichner: trapezoid\nDatentyp: Shape\nWert: 915a002f) --> o3[/hashCode: 915a002f\nareaInCM2: 12\]
+```
 
 :::note Hinweis
 Jedes Objekt ist eindeutig identifizierbar.
@@ -21,7 +26,23 @@ Jedes Objekt ist eindeutig identifizierbar.
 Ein wesentlicher Grundsatz der Objektorientierung ist, dass Attribute durch Methoden gekapselt werden. Datenkapselung bedeutet, dass Attribute nicht direkt geändert werden können, sondern nur durch den indirekten Zugriff über Methoden. Typische Methoden zum 
 Lesen und Schreiben von Attributen sind die sogenannten Getter bzw. Setter.
 
-![image](https://user-images.githubusercontent.com/47243617/209096468-16f7888c-0635-4551-8532-b29050dc22e0.png)
+```mermaid
+flowchart LR
+    write[Schreibender Zugriff] -.-> setter1
+    write -.-> setter2
+    getter1 -.-> read[Lesender Zugriff]
+    getter2 -.-> read
+    subgraph Klasse
+        subgraph privater Bereich
+            attribut1((Attribut 1))
+            attribut2((Attribut 2))
+        end
+        setter1(Setter für Attribut 1) -.-> attribut1
+        attribut1 -.-> getter1(Getter für Attribut 1)
+        setter2(Setter für Attribut 2) -.-> attribut2
+        attribut2 -.-> getter2(Getter für Attribut 2)
+    end
+```
 
 ## Sichtbarkeit von Attributen und Methoden
 Um die Sichtbarkeit von Attributen und Methoden zu definieren, existieren verschiedene Zugriffsrechte. Die Sichtbarkeit bestimmt, von welchem Ort aus Attribute und Methoden verwendet bzw. aufgerufen werden dürfen.
@@ -86,7 +107,12 @@ Technisch gesehen handelt es sich bei einer Klasse um einen komplexen Datentyp. 
 
 Im Gegensatz zu "normalen" Variablen werden bei Referenzvariablen nicht die eigentlichen Werte in den Variablen gespeichert, sondern die Speicheradressen der erzeugten Objekte. Die Selbstreferenz `this` verweist innerhalb einer Klasse auf das eigene Objekt.
 
-![image](https://user-images.githubusercontent.com/47243617/209096553-525afb86-d2c8-4323-874f-766f62c12a1b.png)
+```mermaid
+flowchart LR
+    rectangle1(Bezeichner: rectangle1\nDatentyp: Shape\nWert: 13fee20c) --> o1[hashCode: 13fee20c\nareaInCM2: 12]
+    rectangle2(Bezeichner: rectangle2\nDatentyp: Shape\nWert: 13fee20c) --> o1[hashCode: 13fee20c\nareaInCM2: 12]
+    trapezoid(Bezeichner: trapezoid\nDatentyp: Shape\nWert: 915a002f) --> o3[/hashCode: 915a002f\nareaInCM2: 10\]
+```
 
 :::note Hinweis
 Der Standarwert von Referenzvariablen ist `null`.
