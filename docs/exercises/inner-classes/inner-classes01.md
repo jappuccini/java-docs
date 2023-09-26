@@ -14,7 +14,7 @@ import Exercise from '@site/src/components/Exercise';
 ## Klassendiagramm
 ```mermaid
 classDiagram
-    Room --* House
+    House *-- Room
 
     class House {
         -rooms ArrayList~Room~
