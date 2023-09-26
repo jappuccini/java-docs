@@ -17,12 +17,12 @@ import Exercise from '@site/src/components/Exercise';
 ## Klassendiagramm
 ```mermaid
 classDiagram
-    Car --|> Vehicle
-    Truck --|> Vehicle
-    Engine --o Vehicle
-    Vehicle --o Rental
-    Rental ..|> Partner
-    Partner --o TravelAgency
+     Vehicle <|-- Car
+     Vehicle <|-- Truck
+     Vehicle o-- Engine
+     Rental o-- Vehicle
+     Partner <|.. Rental
+     TravelAgency o-- Partner
 
     class Vehicle {
         <<abstract>>
@@ -39,7 +39,7 @@ classDiagram
         +accelerate(value int) void
         +brake(value int) void
         +print()* void
-        +getNumberOfVehicles() int$
+        +getNumberOfVehicles()$ int
     }
 
     class Engine {
@@ -52,7 +52,6 @@ classDiagram
     }
 
     class Car {
-        <<final>>
         -seats int
         +Car(make String, model String, engine Engine, seats int)
         +getSeats() int
@@ -61,7 +60,6 @@ classDiagram
     }
 
     class Truck {
-        <<final>>
         -cargo int
         -isTransformed boolean
         +Truck(make String, model String, engine Engine, cargo int)
@@ -88,7 +86,7 @@ classDiagram
 
     class TravelAgency {
         -name String
-        -partners ArrayList<Partner>
+        -partners ArrayList~Partner~
         +TravelAgency(name String)
         +addPartner(partner Partner) void
         +print() void
