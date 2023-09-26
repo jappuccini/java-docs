@@ -33,7 +33,7 @@ classDiagram
         +accelerate(value int) void
         +brake(value int) void
         +print() void
-        +getNumberOfVehicles() int$
+        +getNumberOfVehicles()$ int
     }
 
     class Engine {
