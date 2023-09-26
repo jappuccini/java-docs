@@ -16,8 +16,8 @@ import Exercise from '@site/src/components/Exercise';
 ## Klassendiagramm
 ```mermaid
 classDiagram
-    Employee --* Company
-    Person --o Employee
+    Company *-- Employee
+    Employee o-- Person
 
     class Company {
         -name String
