@@ -13,8 +13,8 @@ import Exercise from '@site/src/components/Exercise';
 ## Klassendiagramm
 ```mermaid
 classDiagram
-    Employee --o Company
-    Person --o Employee
+    Company o-- Employee
+    Employee o-- Person
 
     class Company {
         -name String
