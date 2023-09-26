@@ -13,7 +13,7 @@ import Exercise from '@site/src/components/Exercise';
 ## Klassendiagramm
 ```mermaid
 classDiagram
-    Creature --o CreatureGame
+    CreatureGame o-- Creature
 
     class CreatureGame {
         -creature1 Creature
