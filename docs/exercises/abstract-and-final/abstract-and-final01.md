@@ -12,10 +12,10 @@ Klassendiagramms an.
 ## Klassendiagramm
 ```mermaid
 classDiagram
-    Car --|> Vehicle
-    Truck --|> Vehicle
-    Engine --o Vehicle
-    Vehicle --o Rental
+    Vehicle <|-- Car
+    Vehicle <|-- Truck
+    Vehicle o-- Engine
+    Rental o-- Vehicle
 
     class Vehicle {
         <<abstract>>
@@ -32,7 +32,7 @@ classDiagram
         +accelerate(value int) void
         +brake(value int) void
         +print()* void
-        +getNumberOfVehicles() int$
+        +getNumberOfVehicles()$ int
     }
 
     class Engine {
