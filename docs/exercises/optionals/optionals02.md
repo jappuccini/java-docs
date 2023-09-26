@@ -9,10 +9,8 @@ description: ''
 ## Klassendiagramm
 ```mermaid
 classDiagram
-    Person --o TelephoneBook
-    TelephoneNumber --o TelephoneBook
-
-    note for TelephoneBook "Map-Key: Person, Map-Value: TelephoneNumber"
+    TelephoneBook o-- Person
+    TelephoneBook o-- TelephoneNumber
 
     class Person {
         <<record>>
@@ -26,7 +24,7 @@ classDiagram
 
     class TelephoneBook {
         <<record>>
-        -entries Map
+        -entries Map~Person&#44&#160TelephoneNumber~
         +addEntry(person Person, telephoneNumber TelephoneNumber) void
         +getTelephoneNumberByName(name String) Optional~TelephoneNumber~
     }
