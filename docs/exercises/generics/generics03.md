@@ -11,7 +11,7 @@ import Exercise from '@site/src/components/Exercise';
 ## Klassendiagramm
 ```mermaid
 classDiagram
-    Pupil --o SchoolClass
+    SchoolClass o-- Pupil
 
     class Pair~T~ {
         <<record>>
