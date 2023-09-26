@@ -14,8 +14,8 @@ import Exercise from '@site/src/components/Exercise';
 ## Klassendiagramm
 ```mermaid
 classDiagram
-    Person --o TelephoneBook
-    TelephoneNumber --o TelephoneBook
+    TelephoneBook o-- Person
+    TelephoneBook o-- TelephoneNumber
 
     class Person {
         <<record>>
