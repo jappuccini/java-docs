@@ -13,8 +13,8 @@ import Exercise from '@site/src/components/Exercise';
 ## Klassendiagramm
 ```mermaid
 classDiagram
-    BeerBottle --|> Bottle
-    WineBottle --|> Bottle
+    Bottle <|-- BeerBottle
+    Bottle <|-- WineBottle
 
     class Crate~T extends Bottle~ {
         -box1 T
