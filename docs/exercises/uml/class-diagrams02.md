@@ -16,9 +16,9 @@ import Exercise from '@site/src/components/Exercise';
 ## Klassendiagramm
 ```mermaid
 classDiagram
-    Dice --o DiceGame
-    Player --o DiceGame
-    DiceCup --o DiceGame
+    DiceGame o-- Dice
+    DiceGame o-- Player
+    DiceGame o-- DiceCup
 
     class Player {
         -name String
