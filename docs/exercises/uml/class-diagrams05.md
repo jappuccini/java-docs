@@ -13,9 +13,9 @@ import Exercise from '@site/src/components/Exercise';
 ## Klassendiagramm
 ```mermaid
 classDiagram
-    SkatCardColor --o SkatCard
-    SkatCardValue --o SkatCard
-    SkatCard --o SkatCardDeck
+     SkatCard o-- SkatCardColor
+     SkatCard o-- SkatCardValue
+     SkatCardDeck o-- SkatCard
 
     class SkatCardValue {
         <<enumeration>>
