@@ -15,7 +15,7 @@ import Exercise from '@site/src/components/Exercise';
 classDiagram
     Bottle <|-- BeerBottle
     Bottle <|-- WineBottle
-    Crate *-- Bottle
+    Crate o-- Bottle
 
     class Crate {
         -box1 Bottle
