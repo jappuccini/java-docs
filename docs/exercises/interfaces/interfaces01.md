@@ -17,12 +17,12 @@ import Exercise from '@site/src/components/Exercise';
 ## Klassendiagramm
 ```mermaid
 classDiagram
-     Vehicle <|-- Car
-     Vehicle <|-- Truck
-     Vehicle o-- Engine
-     Rental o-- Vehicle
-     Partner <|.. Rental
-     TravelAgency o-- Partner
+    Vehicle <|-- Car
+    Vehicle <|-- Truck
+    Vehicle o-- Engine
+    Rental o-- Vehicle
+    Partner <|.. Rental
+    TravelAgency o-- Partner
 
     class Vehicle {
         <<abstract>>
