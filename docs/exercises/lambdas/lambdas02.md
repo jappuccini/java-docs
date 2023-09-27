@@ -5,28 +5,29 @@ description: ""
 
 import Exercise from '@site/src/components/Exercise';
 
-Es gibt 2 Klassen, die verhindern, dass bestimmte Objekte in der Liste
-gespeichert werden. In der Klasse FilteredAdultStudents werden nur Studenten
-der internen ArrayList hinzugefügt, sofern der Student mindestens 18 Jahre alt 
-ist. In der Klasse FilteredTeenStudents werden nur Studenten der internen
-ArrayList hinzugefügt, sofern der Student unter 18 Jahre alt ist.
-In der Example.java wird ein Erwachsener Student und ein jugendlicher Student
-erzeugt. Beide Studenten werden beiden FilteredStudents Klassen hinzugefügt und
-anschließend ausgegeben. Die gefilterten Listen funktionieren, jedoch nicht
-flexibel. Schreibe eine Klasse, mit folgenden Anforderungen:
+Gegeben sind die beiden Klassen `FilteredAdultStudents` und `FilteredTeenStudents`. Beide sollen sicherstellen, dass nur bestimmte Objekte hinzugefügt werden können. Die Klasse `FilteredAdultStudents` ermöglicht nur das Hinzufügen von Studenten, die mindesten 18 Jahre alt sind; die Klasse `FilteredTeenStudents` das Hinzufügen von Studenten unter 18 Jahren. In der Klasse `Exercise` wird ein erwachsener Student sowie ein jugendlicher Student erzeugt. Die Studenten werden den beiden FilteredStudents-Klassen hinzugefügt und anschließend ausgegeben. Dieser Ansatz funktioniert zwar, ist allerdings nicht flexibel.
 
-Die Klasse soll FilteredStudents heißen. Sie soll ein privates Attribut students
-vom Typ ArrayList&lt;Student&gt; haben. Weiterhin soll in einem privaten Attribut mandatoryFilter
-eine Lambdafunktion vom Typ Predicate&lt;Student&gt; definiert werden.
-Erstelle einen Konstruktor der einen Parameter filter vom Typ Predicate&lt;Student&gt;
-enthält. Der Konstruktor soll alle Attribute initialisieren. Die Methode add
-soll vor dem Hinzufügen des Elements mit Hilfe des mandatoryFilters überprüfen, 
-ob das eingehende Element hinzugefügt werden kann. Falls es hinzugefügt werden
-kann soll es der internen ArrayList hinzugefügt werden. Kopiere die
-printStudents Methode von einem der beiden bestehenden Klassen.
-Lösche die Klassen FilteredTeenStudents und FilteredAdultStudents. Verwende in
-der Klasse Exercise.java nur noch die FilteredStudents Klasse und übergebe dem
-Konstruktor jeweils die richtigen Lambdafunktionen, damit es gleich funktioniert
-wie davor.
+- Erstelle die Klasse `FilteredStudents` anhand des abgebildeten Klassendiagramms
+- Lösche die Klassen `FilteredTeenStudents` und `FilteredAdultStudents`
+- Passe die Klasse `Exercise` so an, dass nur noch die Klasse `FilteredStudents` verwendet wird und übergib dem Konstruktor das Prädikat jeweils in Form eines Lambda-Ausdrucks
+
+## Klassendiagramm
+
+```mermaid
+classDiagram
+    class FilteredStudents {
+        -students ArrayList~Student~
+        -mandatoryFilter Predicate~Student~
+        +FilteredStudents(mandatoryFilter Predicate~Student~)
+        +add(student Student) void
+        +printStudents() void
+    }
+```
+
+## Hinweise zur Klasse FilteredStudents
+
+- Der Konstruktor soll alle Attribute initialisieren
+- Die Methode `void add(student Student)` soll der Studentenliste den eingehenden Studenten hinzufügen. Vor dem Hinzufügen soll mit Hilfe des Filters überprüft werden, ob der eingehende Student hinzugefügt werden soll
+- Methode `void printStudent()` soll alle Studenten auf der Konsole ausgeben
 
 <Exercise pullRequest="68" branchSuffix="lambdas/02" />
