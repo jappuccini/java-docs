@@ -8,18 +8,54 @@ import Exercise from '@site/src/components/Exercise';
 Erstelle die Klasse `MainClass` anhand des abgebildeten Klassendiagramms sowie den abgebildeten Aktivitätsdiagrammen.
 
 ## Klassendiagramm
-![image](https://user-images.githubusercontent.com/47243617/235862155-d542ea65-c2c9-4c97-a8c0-765fe05a8767.png)
+```mermaid
+classDiagram
+    class MainClass {
+        -sc Scanner$
+        -randomNumber int$
+        +main(args String[])$ void
+        +play()$ void
+        +move(name String)$ boolean
+    }
+```
 
 ## Aktivitätsdiagramm zur Aktivität main
 ```mermaid
 stateDiagram-v2
     state "Zufallszahl erzeugen" as state1
-    state "Spielen (play)" as state2
+    state "Spielen (Aktivität play)" as state2
 
     state main {
         [*] --> state1
         state1 --> state2
         state2 --> [*]
+    }
+```
+
+## Aktivitätsdiagramm zur Aktivität play
+```mermaid
+stateDiagram-v2
+    state "Ausgabe: Spieler 1, Name eingeben" as state1
+    state "Eingabe: [name1]" as state2
+    state "Ausgabe: Spieler 2, Name eingeben" as state3
+    state "Eingabe: [name2]" as state4
+    state "Spielzug machen für Spieler 1 (Aktivität move)" as state5
+    state "Spielzug machen für Spieler 2 (Aktivität move)" as state6
+    state if <<choice>>
+    state if2 <<choice>>
+
+    state play {
+        [*] --> state1
+        state1 --> state2
+        state2 --> state3
+        state3 --> state4
+        state4 --> state5
+        state5 --> if
+        if --> [*] : Rückgabe = false
+        if --> state6 : Rückgabe = true
+        state6 --> if2
+        if2 --> state5 : Rückgabe = true
+        if2 --> [*] : Rückgabe = false
     }
 ```
 
@@ -49,8 +85,5 @@ stateDiagram-v2
         state7 --> [*]
     }
 ```
-
-## Aktivitätsdiagramm zur Aktivität play
-![image](https://user-images.githubusercontent.com/47243617/209174541-bab788f7-7fb2-42f2-8b0f-269db393a8c0.png)
 
 <Exercise pullRequest="35" branchSuffix="activity-diagrams/01" />
