@@ -5,13 +5,8 @@ description: ""
 
 import Exercise from '@site/src/components/Exercise';
 
-It is a Bug! Steffen der Schlingel hat gelogen und ist 17 Jahre alt.
-Das Alter wurde aber erst geändert, nachdem er schon der Liste hinzugefügt
-wurde. Passe die bestehende Klasse entsprechend folgenden Anforderungen an, um
-den Bug zu fixen:
+It´s a Bug! Steffen der Schlingel hat gelogen und ist 17 Jahre alt. Das Alter wurde aber erst geändert, nachdem er schon der Liste mit den erwachsenden Studenten hinzugefügt wurde.
 
-Prüfe in der Methode forEach vor dem Aufrufen des Consumers ab, ob der Student
-noch in der Liste sein darf. Verifiziere in Exercise.java, dass Steffen nicht
-mehr in der Liste mit erwachsenen Studenten ausgegeben wird.
+Passe die Methode `void forEach(consumer Consumer<Student>)` der gegebenen Klasse `FilteredStudents` so an, dass vor dem Aufruf der Methode `void accept(t T)` überprüft wird, ob der Student wirklich verarbeitet werden darf.
 
 <Exercise pullRequest="70" branchSuffix="lambdas/04" />
