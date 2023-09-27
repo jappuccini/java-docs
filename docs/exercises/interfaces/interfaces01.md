@@ -15,7 +15,83 @@ import Exercise from '@site/src/components/Exercise';
   Attribute des Reisebüros ausgegeben werden
 
 ## Klassendiagramm
-![image](https://user-images.githubusercontent.com/47243617/209157029-141cc0aa-a425-4e36-a79b-34f6188fa223.png)
+```mermaid
+classDiagram
+    Vehicle <|-- Car
+    Vehicle <|-- Truck
+    Vehicle o-- Engine
+    Rental o-- Vehicle
+    Partner <|.. Rental
+    TravelAgency o-- Partner
+
+    class Vehicle {
+        <<abstract>>
+        -make String
+        -model String
+        -engine Engine
+        #speed double
+        -numberOfVehicles int$
+        +Vehicle(make String, model String, engine Engine)
+        +getMake() String
+        +getModel() String
+        +getEngine() Engine
+        +getSpeed() double
+        +accelerate(value int) void
+        +brake(value int) void
+        +print()* void
+        +getNumberOfVehicles()$ int
+    }
+
+    class Engine {
+        <<enumeration>>
+        DIESEL = Diesel
+        PETROL = Benzin
+        GAS = Gas
+        ELECTRO = Elektro
+        -description String
+    }
+
+    class Car {
+        -seats int
+        +Car(make String, model String, engine Engine, seats int)
+        +getSeats() int
+        +doATurboBoost() void
+        +print() void
+    }
+
+    class Truck {
+        -cargo int
+        -isTransformed boolean
+        +Truck(make String, model String, engine Engine, cargo int)
+        +getCargo() int
+        +isTransformed() boolean
+        +transform() void
+        +print() void
+    }
+
+    class Rental {
+        -name String
+        -vehicles ArrayList~Vehicle~
+        +Rental(name String)
+        +addVehicle(vehicle Vehicle) void
+        +addAllVehicles(vehicles Vehicle...) void
+        +transformAllTrucks() void
+        +print() void
+    }
+
+    class Partner {
+        <<interface>>
+        +print() void
+    }
+
+    class TravelAgency {
+        -name String
+        -partners ArrayList~Partner~
+        +TravelAgency(name String)
+        +addPartner(partner Partner) void
+        +print() void
+    }
+```
 
 ## Hinweise zur Klasse TravelAgency
 - Der Konstruktor soll alle Attribute initialisieren

@@ -6,7 +6,37 @@ description: ''
 Erstelle die Klasse `TelephoneBookTest` anhand des abgebildeten Klassendiagramms.
 
 ## Klassendiagramm
-![image](https://github.com/jappuccini/java-docs/assets/47243617/d5feadde-b795-4cc9-a27a-eba10726a9eb)
+```mermaid
+classDiagram
+    TelephoneBook o-- Person
+    TelephoneBook o-- TelephoneNumber
+    TelephoneBookTest o-- TelephoneBook
+
+    class Person {
+        <<record>>
+        -name String
+    }
+
+    class TelephoneNumber {
+        <<record>>
+        -value String
+    }
+
+    class TelephoneBook {
+        <<record>>
+        -entries Map~Person&#44&#160TelephoneNumber~
+        +addEntry(person Person, telephoneNumber TelephoneNumber) void
+        +getTelephoneNumberByName(name String) Optional~TelephoneNumber~
+    }
+
+    class TelephoneBookTest {
+        -telephoneBook TelephoneBook
+        +setUp() void
+        +testAddEntry() void
+        +testGetTelephoneNumberByName1() void
+        +testGetTelephoneNumberByName2() void
+    }
+```
 
 ## Hinweise zur Klasse `TelephoneBookTest`
 - Die Lebenszyklus-Methode `void setUp()` soll ein Telefonbuch samt dazugehöriger Einträge erzeugen

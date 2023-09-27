@@ -11,7 +11,51 @@ import Exercise from '@site/src/components/Exercise';
   auf der Konsole ausgibt
 
 ## Klassendiagramm
-![image](https://user-images.githubusercontent.com/47243617/209156321-f1b6ce12-08ab-42e2-812b-8959cc898e99.png)
+```mermaid
+classDiagram
+     SkatCard o-- SkatCardColor
+     SkatCard o-- SkatCardValue
+     SkatCardDeck o-- SkatCard
+
+    class SkatCardValue {
+        <<enumeration>>
+        SEVEN = Seven, 7
+        EIGHT = Eight, 8
+        NINE = Nine, 9
+        TEN = Ten, 10
+        JACK, Jack, 2
+        CHECKERS = Checkers, 3
+        KING = King, 4
+        ACE = Ace, 11
+        -description String
+        -value int
+    }
+
+    class SkatCardColor {
+        <<enumeration>>
+        DIAMONDS = Diamonds
+        HEARTS = Hearts
+        SPADE = Spade
+        CLUBS = Clubs
+        -description String
+    }
+
+    class SkatCard {
+        -color SkatCardColor
+        -value SkatCardValue
+        +SkatCard(color SkatCardColor, value SkatCardValue)
+        +getColor() SkatCardColor
+        +getValue() SkatCardValue
+        +getCardDescription() String
+    }
+
+    class SkatCardDeck {
+        -skatCards ArrayList~SkatCard~
+        +SkatCardDeck()
+        +shuffleSkatCards() void
+        +getSkatCards() ArrayList~SkatCard~
+    }
+```
 
 ## Hinweise zur Klasse SkatCardDeck
 - Der Konstruktor soll ein Skatblatt, bestehend aus 32 Karten, erzeugen

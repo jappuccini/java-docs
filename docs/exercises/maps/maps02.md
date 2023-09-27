@@ -9,7 +9,30 @@ import Exercise from '@site/src/components/Exercise';
 - Erstelle eine ausführbare Klasse, welche eine Büchersammlung mit mehreren Autoren und Büchern erzeugt und den fleißigsten Autoren auf der Konsole ausgibt
 
 ## Klassendiagramm
-![image](https://user-images.githubusercontent.com/47243617/235862924-f3721a33-9fcd-49e7-8181-5ffb1a70ea87.png)
+```mermaid
+classDiagram
+    BookCollection o-- Author
+    BookCollection o-- Book
+
+    class Author {
+        <<record>>
+        -name String
+    }
+
+    class Book {
+        <<record>>
+        -title String
+    }
+
+    class BookCollection {
+        <<record>>
+        -collection Map~Author&#44&#160List~Book~~
+        +addAuthor(author Author) void
+        +addBook(author Author, book Book) void
+        +getMostDiligentAuthor() Author
+        +getBookByTitle(title String) Book
+    }
+```
 
 ## Hinweise zur Klasse BookCollection
 - Die Methode `void addAuthor(author: Author)` soll den eingehenden Autor der Büchersammlung hinzufügen. Für den Fall, dass der Autor bereits in der Büchersammlung

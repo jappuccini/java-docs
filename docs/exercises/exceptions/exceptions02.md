@@ -11,7 +11,17 @@ import Exercise from '@site/src/components/Exercise';
   zu erzeugen und zu befüllen
 
 ## Klassendiagramm
-![image](https://user-images.githubusercontent.com/47243617/209157468-97a19821-63f9-4f34-afa7-d5d5392bf3ec.png)
+```mermaid
+classDiagram
+
+    class Barrel {
+        -capacity int
+        -fluidLevel int
+        +Barrel(capacity int)
+        +addFluid(value int) void
+        +printFluidLevel() void
+    }
+```
 
 ## Hinweise zur Klasse Barrel
 - Der Konstruktor soll das Attribut `capacity` initialisieren

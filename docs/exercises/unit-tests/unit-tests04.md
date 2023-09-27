@@ -6,7 +6,46 @@ description: ''
 Erstelle die Klasse `BookCollectionTest` anhand des abgebildeten Klassendiagramms.
 
 ## Klassendiagramm
-![image](https://github.com/jappuccini/java-docs/assets/47243617/734ab725-85e9-4e4e-a9aa-f9c3ddae056b)
+```mermaid
+classDiagram
+    BookCollection o-- Author
+    BookCollection o-- Book
+    BookCollectionTest o-- BookCollection
+
+    class Author {
+        <<record>>
+        -name String
+    }
+
+    class Book {
+        <<record>>
+        -title String
+    }
+
+    class BookCollection {
+        <<record>>
+        -collection Map~Author&#44&#160List~Book~~
+        +addAuthor(author Author) void
+        +addBook(author Author, book Book) void
+        +getMostDiligentAuthor() Optional~Author~
+        +getBookByTitle(title String) Optional~Book~
+    }
+
+    class BookCollectionTest {
+        -bookCollection BookCollection
+        -stephenKing Author
+        -georgeRRMartin Author
+        -it Book
+        -aGameOfThrones Book
+        -aClashOfKings Book
+        +setUp void
+        +testAddAuthor() void
+        +testAddBook() void
+        +testGetMostDiligentAuthor1() void
+        +testGetMostDiligentAuthor2() void
+        +testGetBookByTitle() void
+    }     
+```
 
 ## Hinweise zur Klasse `BookCollectionTest`
 - Die Lebenszyklus-Methode `void setUp()` soll den Attributen der Testklasse passende Werte zuweisen

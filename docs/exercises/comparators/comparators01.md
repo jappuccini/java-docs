@@ -10,12 +10,29 @@ import Exercise from '@site/src/components/Exercise';
   Koordinaten erzeugt, diese sortiert und anschließend auf der Konsole ausgibt
 
 ## Klassendiagramm
-![image](https://user-images.githubusercontent.com/47243617/209157105-3a830ebe-6e97-46cf-b668-95ffe9ba0339.png)
+```mermaid
+classDiagram
+    Comparable~T~ <|.. Coordinate
+
+    class Coordinate {
+        -x int
+        -y int
+        +Coordinate(x int, y int)
+        +getX() int
+        +getY() int
+        +getDistanceToOriginPoint() double
+        +compareTo(other Coordinate) int
+    }
+
+    class Comparable~T~ {
+        +compareTo(t T) int
+    }
+```
 
 ## Hinweise zur Klasse Coordinate
 - Die Methode `double getDistanceToOriginPoint()` soll die Distanz der
   Koordinate zum Nullpunkt zurückgeben
-- Die Methode `int compareTo(o: Coordinate)` soll die Koordinate mit der
+- Die Methode `int compareTo(other: Coordinate)` soll die Koordinate mit der
   eingehenden Koordinate anhand ihrer jeweiligen Distanz zum Nullpunkt
   vergleichen. Ist die Distanz der Koordinate zum Nullpunkt kleiner als bzw.
   größer als bzw. gleich die der eingehenden

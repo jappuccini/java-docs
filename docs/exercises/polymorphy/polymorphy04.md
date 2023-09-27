@@ -18,7 +18,62 @@ import Exercise from '@site/src/components/Exercise';
   mit 4-5-6-Würfeln oder 1-2-3-Würfeln zu würfeln
 
 ## Klassendiagramm
-![image](https://user-images.githubusercontent.com/47243617/235861766-9cd6eed9-d48e-420c-a8fb-5e995adfd811.png)
+```mermaid
+classDiagram
+    DiceGame o-- Dice
+    DiceGame o-- Player
+    DiceGame o-- DiceCup
+    Dice <|-- LowValueDice
+    Dice <|-- HighValueDice
+
+    class Player {
+        -name String
+        -score int
+        -isActive boolean
+        -specialAvailable boolean
+        +Player(name String)
+        +getName() String
+        +getScore() int
+        +setScore(int score) void
+        +isActive() boolean
+        +setActive(isActive boolean) void
+        +getSpecialAvailable() boolean
+        +setSpecialAvailable(specialAvailable boolean) void
+    } 
+
+    class Dice {
+        -id int
+        #value int
+        +Dice(id int)
+        +getId() int
+        +getValue() int
+        +rollTheDice() void
+    }
+
+    class LowValueDice {
+        +LowValueDice(id int)
+        +rollTheDice() void
+    }
+
+    class HighValueDice {
+        +HighValueDice(id int)
+        +rollTheDice() void
+    }
+
+    class DiceCup {
+        +rollTheDices(dices Dice...) void
+    }
+
+    class DiceGame {
+        -diceCup DiceCup
+        -dices ArrayList~Dice~
+        -players ArrayList~Player~
+        -scanner Scanner
+        +DiceGame(players ArrayList~Player~)
+        +start() void
+        +move(player Player) void
+    }
+```
 
 ## Hinweis zur Klasse HighValueDice
 Die Methode `void rollTheDice()` soll nur 4er, 5er und 6er "würfeln".
