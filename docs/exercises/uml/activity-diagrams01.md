@@ -22,13 +22,15 @@ classDiagram
 ## Aktivitätsdiagramm zur Aktivität main
 ```mermaid
 stateDiagram-v2
-    state "Zufallszahl erzeugen" as state1
-    state "Spielen (Aktivität play)" as state2
+    state "Scanner initialisieren" as state1
+    state "Zufallszahl erzeugen" as state2
+    state "Ausführen: play()" as state3
 
     state main {
         [*] --> state1
         state1 --> state2
-        state2 --> [*]
+        state2 --> state3
+        state3 --> [*]
     }
 ```
 
@@ -36,11 +38,11 @@ stateDiagram-v2
 ```mermaid
 stateDiagram-v2
     state "Ausgabe: Spieler 1, Name eingeben" as state1
-    state "Eingabe: [name1]" as state2
+    state "Eingabe: [Name Spieler 1]" as state2
     state "Ausgabe: Spieler 2, Name eingeben" as state3
-    state "Eingabe: [name2]" as state4
-    state "Spielzug machen für Spieler 1 (Aktivität move)" as state5
-    state "Spielzug machen für Spieler 2 (Aktivität move)" as state6
+    state "Eingabe: [Name Spieler 2]" as state4
+    state "Ausführen: move([Name Spieler1])" as state5
+    state "Ausführen: move([Name Spieler 2])" as state6
     state if <<choice>>
     state if2 <<choice>>
 
@@ -62,8 +64,8 @@ stateDiagram-v2
 ## Aktivitätsdiagramm zur Aktivität move
 ```mermaid
 stateDiagram-v2
-    state "Ausgabe: [name], Tipp eingeben" as state1
-    state "Eingabe: [tipp]" as state2
+    state "Ausgabe: [Name], Tipp eingeben" as state1
+    state "Eingabe: [Tipp]" as state2
     state "Ausgabe: Richtig, das war die gesuchte Zahl" as state3
     state "Rückgabe: true" as state4
     state "Ausgabe: Die gesuchte Zahl ist kleiner" as state5
@@ -75,9 +77,9 @@ stateDiagram-v2
         [*] --> state1
         state1 --> state2
         state2 --> if
-        if --> state3 : [tipp] = [zufallszahl]
-        if --> state5 : [tipp] > [zufallszahl]
-        if --> state6 : [tipp] < [zufallszahl]
+        if --> state3 : [Tipp] = [Zufallszahl]
+        if --> state5 : [Tipp] > [Zufallszahl]
+        if --> state6 : [Tipp] < [Zufallszahl]
         state3 --> state4
         state4 --> [*]
         state5 --> state7
