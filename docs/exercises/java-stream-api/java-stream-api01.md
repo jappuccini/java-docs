@@ -4,7 +4,6 @@ description: ''
 ---
 
 import Exercise from '@site/src/components/Exercise';
-import ClassDiagramm from '@site/static/img/exercises/java-stream-api/java-stream-api01.png';
 
 - Erstelle die Klasse `Queries` anhand des abgebildeten Klassendiagramms
 - Erstelle eine ausführbare Klasse, welche alle erstellten Abfragen ausführt und die Ergebnisse auf der Konsole ausgibt
