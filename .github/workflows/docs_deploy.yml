@@ -18,6 +18,10 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+
+      - name: check formatting
+        run: npm prettier:check
+
       - name: Build website
         run: npm run build
 
