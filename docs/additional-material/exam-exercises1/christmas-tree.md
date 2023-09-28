@@ -8,7 +8,37 @@ Setze das abgebildete Klassendiagramm vollständig um. Erstelle zum Testen eine 
 
 ## Klassendiagramm
 
-![image](https://user-images.githubusercontent.com/47243617/209168771-b4782665-b98f-4ed6-8e8d-59c5826a8c64.png)
+```mermaid
+classDiagram
+    Candle <|-- ElectricCandle
+    ChristmasTree o-- Candle
+
+    class ChristmasTree {
+        -type String
+        -size double
+        -candles ArrayList~Candle~
+        +ChristmasTree(type String, size double)
+        +addCandle(candle Candle) void
+        +lightChristmasTree() void
+        +getNumberOfElectricCandles() int
+
+    }
+
+    class Candle {
+        #isBurning boolean
+        -colour String
+        +Candle(colour String)
+        +lightACandle() void
+        +turnOffACandle() void
+    }
+
+    class ElectricCandle {
+        -power int
+        +ElectricCandle(colour String)
+        +lightACandle() void
+        +recharge() void
+    }
+```
 
 ## Allgemeine Hinweise
 
