@@ -5,8 +5,8 @@ sidebar_position: 300
 tags: [java-stream-api]
 ---
 
-Die Java Stream API stellt Klassen zum Erzeugen von und Arbeiten mit Strömen (Streams) bereit. Ein Strom stellt eine Folge von Elementen dar, die das Ausführen verketteter, intermediärer und terminaler Operationen auf diesen Elementen nacheinander oder parallel 
-ermöglicht. Die Daten, die durch die Elemente des Stromes repräsentiert werden, werden dabei durch den Strom selbst nicht verändert. Die Verarbeitung der Elemente erfolgt nach dem Prinzip der Bedarfsauswertung (Lazy Evaluation). Neben endlichen Strömen stellt 
+Die Java Stream API stellt Klassen zum Erzeugen von und Arbeiten mit Strömen (Streams) bereit. Ein Strom stellt eine Folge von Elementen dar, die das Ausführen verketteter, intermediärer und terminaler Operationen auf diesen Elementen nacheinander oder parallel
+ermöglicht. Die Daten, die durch die Elemente des Stromes repräsentiert werden, werden dabei durch den Strom selbst nicht verändert. Die Verarbeitung der Elemente erfolgt nach dem Prinzip der Bedarfsauswertung (Lazy Evaluation). Neben endlichen Strömen stellt
 die Java Stream API auch Methoden zum Erzeugen unendlicher Ströme bereit.
 
 ```mermaid
@@ -46,7 +46,8 @@ Ströme (Paket `java.util.stream`) haben nichts mit [Datenströmen (IO-Streams)]
 :::
 
 ## Erzeugen von Strömen
-Ströme können unter anderem aus Feldern, Datensammlungen wie z.B. Listen und Mengen sowie Einzelobjekten erzeugt werden. 
+
+Ströme können unter anderem aus Feldern, Datensammlungen wie z.B. Listen und Mengen sowie Einzelobjekten erzeugt werden.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
@@ -83,9 +84,10 @@ public class MainClass {
 ```
 
 ## Intermediäre Operationen
+
 Intermediäre Operationen ermöglichen unter anderem das Filtern, Abbilden sowie das Sortieren von Strömen und liefern als Ergebnis wiederum einen Strom.
 
-| Operation     | Methode                                                   | Schnittstellen-Methode            |
+| Operation     | Methode                                                    | Schnittstellen-Methode           |
 | ------------- | ---------------------------------------------------------- | -------------------------------- |
 | Filtern       | `Stream<T> filter(predicate: Predicate<T>)`                | `boolean test(t: T)`             |
 | Abbilden      | `Stream<T> map(mapper: Function<T, R>)`                    | `R apply(t: T)`                  |
@@ -99,25 +101,27 @@ Intermediäre Operationen ermöglichen unter anderem das Filtern, Abbilden sowie
 | Überspringen  | `Stream<T> skip(n: long)`                                  | -                                |
 
 ## Terminale Operationen
+
 Terminale Operationen werden z.B. zum Prüfen, zum Aggregieren oder zum Sammeln verwendet. Da terminale Operationen den Strom schließen, können auf ihnen keine weiteren Operationen mehr ausgeführt werden.
 
-| Operation   | Methode                                      | Schnittstellen-Methode        |
-| ----------- | -------------------------------------------- | ----------------------------- |
-| Finden      | `Optional<T> findAny()`                      | -                             |
-| Finden      | `Optional<T> findFirst()`                    | -                             |
-| Prüfen      | `boolean allMatch(predicate: Predicate<T>)`  | `boolean test(t: T)`          |
-| Prüfen      | `boolean anyMatch(predicate: Predicate<T>)`  | `boolean test(t: T)`          |
-| Prüfen      | `boolean noneMatch(predicate: Predicate<T>)` | `boolean test(t: T)`          |
-| Aggregieren | `Optional<T> min(comparator: Comparator<T>)` | `int compare(o1: T, o2: T)`   |
-| Aggregieren | `Optional<T> max(comparator: Comparator<T>)` | `int compare(o1: T, o2: T)`   |
-| Aggregieren | `long count()`                               | -                             |
-| Sammeln     | `R collect(collector: Collector<T, A, R>)`   | -                             |
-| Ausführen   | `void forEach(action: Consumer<T>)`          | `void accept(t: T)`           |
+| Operation   | Methode                                      | Schnittstellen-Methode      |
+| ----------- | -------------------------------------------- | --------------------------- |
+| Finden      | `Optional<T> findAny()`                      | -                           |
+| Finden      | `Optional<T> findFirst()`                    | -                           |
+| Prüfen      | `boolean allMatch(predicate: Predicate<T>)`  | `boolean test(t: T)`        |
+| Prüfen      | `boolean anyMatch(predicate: Predicate<T>)`  | `boolean test(t: T)`        |
+| Prüfen      | `boolean noneMatch(predicate: Predicate<T>)` | `boolean test(t: T)`        |
+| Aggregieren | `Optional<T> min(comparator: Comparator<T>)` | `int compare(o1: T, o2: T)` |
+| Aggregieren | `Optional<T> max(comparator: Comparator<T>)` | `int compare(o1: T, o2: T)` |
+| Aggregieren | `long count()`                               | -                           |
+| Sammeln     | `R collect(collector: Collector<T, A, R>)`   | -                           |
+| Ausführen   | `void forEach(action: Consumer<T>)`          | `void accept(t: T)`         |
 
 Zahlenströme (`IntStream`, `DoubleStream`, `LongStream`) besitzen die zusätzlichen terminale Operationen `int|double|long sum()` und `OptionalDouble average()`.
 
 ## Bedarfsauswertung (Lazy Evaluation)
-Die Elemente in Strömen werden nur bei Bedarf ausgewertet. Intermediäre Operationen werden also nur dann ausgeführt, wenn eine terminale Operation vorhanden ist und bei verketteten Operationen werden für jedes Element die einzelnen Operationen nacheinander 
+
+Die Elemente in Strömen werden nur bei Bedarf ausgewertet. Intermediäre Operationen werden also nur dann ausgeführt, wenn eine terminale Operation vorhanden ist und bei verketteten Operationen werden für jedes Element die einzelnen Operationen nacheinander
 ausgeführt.
 
 In der main-Methode der Startklasse wird auf den Zahlenstrom 4-8-15-16-23-42 zunächst der Filter _Zahl > 15_ angewendet, anschließend der Filter _Zahl = ganze Zahl_ und abschließend werden die verbliebenen Zahlen auf der Konsole ausgegeben. Zum Nachvollziehen
@@ -154,8 +158,8 @@ Ohne Bedarfsauswertung würden die verschiedenen Operationen für die jeweils ve
  42: filter 2
  16: forEach
  42: forEach
- ```
- 
+```
+
 Aufgrund der Bedarfsauswertung werden die verschiedenen Operationen aber für jedes Element einzeln nacheinander ausgeführt. Dadurch ergibt sich folgende Ausgabe:
 
 ```
@@ -174,7 +178,9 @@ Aufgrund der Bedarfsauswertung werden die verschiedenen Operationen aber für je
 ```
 
 ## Unendliche Ströme
+
 Die Java Stream API stellt drei Methoden zur Verfügung, mit deren Hilfe (un)endliche Ströme erzeugt werden können:
+
 - Die Methode `Stream<T> iterate(seed: T, f: UnaryOperator<T>)` generiert einen unendlichen Strom aus einem Startwert und einer Funktion, welche das nächste Element erstellt
 - Die Methode `Stream<T> iterate(seed: T, hasNext: Predicat <T>, next: UnaryOperator<T>)` erweitert die "normale" iterate-Methode um eine Prädikatsfunktion zum Beenden des Stroms
 - Die Methode `Stream<T> generate(s: Supplier<T>)` kann zum Beispiel zum Erzeugen unendlich vieler zufälliger Elemente genutzt werden
@@ -193,5 +199,5 @@ public class MainClass {
 }
 ```
 
-Die ersten beiden Zahlenströme geben die Zahlen von 0 bis 99 aus, der dritte Zahlenstrom 100 Pseudozufallszahlen von 0 bis 99. Der erste und dritte Zahlenstrom würden eigentlich unendliche viele (Pseudozufalls-)Zahlen erzeugen, werden aber durch die Methode 
+Die ersten beiden Zahlenströme geben die Zahlen von 0 bis 99 aus, der dritte Zahlenstrom 100 Pseudozufallszahlen von 0 bis 99. Der erste und dritte Zahlenstrom würden eigentlich unendliche viele (Pseudozufalls-)Zahlen erzeugen, werden aber durch die Methode
 `Stream<T> limit(maxSize: long)` auf 100 (Pseudozufalls-)Zahlen begrenzt.

@@ -14,6 +14,7 @@ import Exercise from '@site/src/components/Exercise';
 - Die Klasse Emplyee soll hierbei eine Element Klasse sein.
 
 ## Klassendiagramm
+
 ```mermaid
 classDiagram
     Company *-- Employee

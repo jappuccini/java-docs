@@ -18,6 +18,7 @@ Zufallszahl: 39, Spieler 1 gewinnt
 ```
 
 ## Hinweise
+
 - Die Methode `int nextInt(bound: int)` der Klasse `Random` gibt eine Zufallszahl zwischen 0 (inklusive) und der eingehenden Zahl (exklusive) zurück
 - Die statische Methode `int abs(a: int)` der Klasse `Math` gibt den Betrag der eingehenden Zahl zurück
 

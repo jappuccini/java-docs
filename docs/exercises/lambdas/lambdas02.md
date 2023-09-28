@@ -1,6 +1,6 @@
 ---
 title: Lambdas02
-description: ""
+description: ''
 ---
 
 import Exercise from '@site/src/components/Exercise';

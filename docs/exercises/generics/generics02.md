@@ -11,6 +11,7 @@ import Exercise from '@site/src/components/Exercise';
   an, dass sie fehlerfrei ausgeführt werden kann
 
 ## Klassendiagramm
+
 ```mermaid
 classDiagram
     Bottle <|-- BeerBottle

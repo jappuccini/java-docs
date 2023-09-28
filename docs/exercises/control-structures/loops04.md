@@ -17,6 +17,7 @@ Ergebnis: Die eingegebenen Zeichenketten sind identisch
 ```
 
 ## Hinweis
+
 Die statische Methode `char toUpperCase(ch: char)` der Klasse `Character` gibt den
 Großbuchstaben des eingehenden Zeichens zurück.
 

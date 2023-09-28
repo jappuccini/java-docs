@@ -6,6 +6,7 @@ tags: [generics]
 ---
 
 ## Übungsaufgaben
+
 import DocCardList from '@theme/DocCardList';
 
 <DocCardList />

@@ -9,13 +9,14 @@ Operatoren sind Zeichen, mit denen Daten manipuliert werden können. Mit Hilfe v
 und _ternäre Operatoren_ bezeichnet. Man unterscheidet zudem zwischen arithmetischen, bitweisen und logischen Operatoren sowie Vergleichsoperatoren.
 
 ## Arithmetische Operatoren
+
 Für die arithmetischen Grundrechenarten stehen verschiedene arithmetische Operatoren zur Verfügung.
 
 | Ausdruck mit Operator | Bedeutung                                                     |
 | --------------------- | ------------------------------------------------------------- |
 | x + y                 | Addiere y zu x                                                |
 | x - y                 | Subtrahiere y von x                                           |
-| x * y                 | Multipliziere x mit y                                         |
+| x \* y                | Multipliziere x mit y                                         |
 | x / y                 | Dividiere x durch y                                           |
 | x % y                 | Divisionsrest von x / y                                       |
 | x++                   | Inkrementiere x und gib den alten Wert an den Ausdruck zurück |
@@ -24,6 +25,7 @@ Für die arithmetischen Grundrechenarten stehen verschiedene arithmetische Opera
 | --x                   | Dekrementiere x und gib den neuen Wert an den Ausdruck zurück |
 
 ## Bitweise Operatoren
+
 Bitweise Operatoren können dazu verwendet werden, Binäroperationen auf Operanden durchzuführen.
 
 | Ausdruck mit Operator | Bedeutung                |
@@ -33,7 +35,8 @@ Bitweise Operatoren können dazu verwendet werden, Binäroperationen auf Operand
 | a ^ b                 | Bitweise XOR-Verknüpfung |
 | ~a                    | Bitweises NOT            |
 
-##  Logische Operatoren
+## Logische Operatoren
+
 Logische Operatoren können dazu verwendet werden, logische Aussagen miteinander zu verknüpfen.
 
 | Ausdruck mit Operator | Bedeutung                |
@@ -43,6 +46,7 @@ Logische Operatoren können dazu verwendet werden, logische Aussagen miteinander
 | !a                    | Logisches NOT            |
 
 ## Vergleichsoperatoren
+
 Logische Bedingungen für zwei Werte eines elementaren Datentyps können durch Vergleichsoperatoren realisiert werden.
 
 | Ausdruck mit Operator | Bedeutung              |
@@ -59,6 +63,7 @@ Da der Vergleichsoperator `==` auf referenzielle Gleichheit prüft, sollte zum V
 :::
 
 ## Priorität von Operatoren
+
 Operatoren werden gemäß ihrer Priorität verarbeitet.
 
 | Priorität | Operator                                                     |

@@ -5,12 +5,13 @@ sidebar_position: 270
 tags: [generics]
 ---
 
-Quellcode sollte generell so allgemein bzw. generisch geschrieben werden, dass er für unterschiedliche Datenstrukturen und Datentypen verwendet werden kann. Das Ziel der generischen Programmierung ist die Entwicklung von wiederverwendbarem Code. In Java 
+Quellcode sollte generell so allgemein bzw. generisch geschrieben werden, dass er für unterschiedliche Datenstrukturen und Datentypen verwendet werden kann. Das Ziel der generischen Programmierung ist die Entwicklung von wiederverwendbarem Code. In Java
 verwendet man das Konzept der generischen Datentypen, also Klassen, die mit verschiedene Datentypen verwendet werden können.
 
 ## Generische Klassen ohne Java Generics
-Auch ohne Java Generics kann in Java mit Hilfe der Klasse `Object` generisch programmiert werden. Der Nachteil besteht darin, dass durch den Upcast einer beliebigen Klasse auf die Klasse `Object` die spezifischen Methoden der Klasse nicht mehr verwendet werden 
-können und der dadurch notwendige Downcast zu Laufzeitfehlern führen kann. 
+
+Auch ohne Java Generics kann in Java mit Hilfe der Klasse `Object` generisch programmiert werden. Der Nachteil besteht darin, dass durch den Upcast einer beliebigen Klasse auf die Klasse `Object` die spezifischen Methoden der Klasse nicht mehr verwendet werden
+können und der dadurch notwendige Downcast zu Laufzeitfehlern führen kann.
 
 Die Klasse `Box` ermöglicht das Speichern einer beliebig typisierten Information.
 
@@ -46,6 +47,7 @@ public class MainClass {
 ```
 
 ## Generische Klassen mit Java Generics
+
 Klassen und Methoden können in Java mit Typen parametrisiert werden. Diese werden durch spitze Klammern `<>` gekennzeichnet und stellen Platzhalter für konkrete Datentypen dar. Beim Kompilieren werden alle generischen Informationen vollständig entfernt und durch die konkreten Datentypen ersetzt. Durch die dadurch vorhandene statische Typsicherheit können Laufzeitfehler verhindert und Fehler bereits beim Kompilieren entdeckt werden.
 
 Die generische Klasse `Box<T>` ermöglicht das Speichern einer beliebig typisierten Information mit Hilfe des Typparameters `T`.
@@ -90,6 +92,7 @@ Typparameter können auf die Unterklassen einer bestimmten Klasse eingeschränkt
 :::
 
 ## Generische Methoden mit Java Generics
+
 Die generische Methode `<T> int getIndex(value: T, values: T[])` gibt den Index eines beliebig typisierten gesuchten Wertes innerhalb eines gleichtypisierten Feldes zurück.
 
 ```java title="MainClass.java" showLineNumbers
@@ -112,6 +115,7 @@ public class MainClass {
 ```
 
 ## Namensrichtlinien für Typparameter
+
 Um den Einsatzbereich von Typparametern in generischen Klassen und Methoden kenntlich zu machen, sollte man festgelegte Zeichen verwenden.
 
 | Typparameter  | Einsatzbereich                            |
@@ -122,6 +126,7 @@ Um den Einsatzbereich von Typparametern in generischen Klassen und Methoden kenn
 | V             | Wert eines Assoziativspeichers (Value)    |
 
 ## Varianz
+
 Bei der Deklaration einer generischen Klasse ermöglicht der Wildcard-Typ `?` die Angabe eines unbestimmten Typs. Dieser kann gar nicht (**Bivarianz**), nach oben (**Kovarianz**), nach unten (**Kontravarianz**), oder sowohl nach oben als auch nach unten (**Invarianz**) eingeschränkt werden.
 
 Die generische Klasse `Box<T>` ermöglicht das Speichern einer beliebig typisierten Information.

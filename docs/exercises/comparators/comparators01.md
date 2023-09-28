@@ -10,6 +10,7 @@ import Exercise from '@site/src/components/Exercise';
   Koordinaten erzeugt, diese sortiert und anschließend auf der Konsole ausgibt
 
 ## Klassendiagramm
+
 ```mermaid
 classDiagram
     Comparable~T~ <|.. Coordinate
@@ -30,6 +31,7 @@ classDiagram
 ```
 
 ## Hinweise zur Klasse Coordinate
+
 - Die Methode `double getDistanceToOriginPoint()` soll die Distanz der
   Koordinate zum Nullpunkt zurückgeben
 - Die Methode `int compareTo(other: Coordinate)` soll die Koordinate mit der
@@ -39,6 +41,7 @@ classDiagram
   Koordinate, soll der Wert 1 bzw. -1 bzw. 0 zurückgegeben werden
 
 ## Hinweis
+
 Die statische Methode `double hypot(x: double, y: double)` der Klasse `Math`
 berechnet die Hypotenuse zum eingehenden X- und Y-Wert.
 

@@ -9,6 +9,7 @@ import Exercise from '@site/src/components/Exercise';
 - Erstelle eine ausführbare Klasse, welche alle erstellten Abfragen ausführt und die Ergebnisse auf der Konsole ausgibt
 
 ## Klassendiagramm
+
 ```mermaid
 classDiagram
     Footballer o-- Position
@@ -58,6 +59,7 @@ classDiagram
 ```
 
 ## Hinweise zur Klasse FootballerQueries
+
 - Mannschaften, die nicht der ewigen Tabelle der Bundesliga vertreten sind, besitzen sowohl für die Position als auch die Punktzahl den Wert `-1`
 - Die Methode `int getTotalOfAllGoalsByMidfielders()` soll die Summe aller geschossener Tore von Mittelfeldspielerinnen zurückgeben
 - Die Methode `Optional<Footballer> getNameOfVfLWolfsburgFootballerWithMostPlayedGames()` soll den Namen der Spielerin vom VfL Wolfsburg mit den meisten Spielen zurückgeben

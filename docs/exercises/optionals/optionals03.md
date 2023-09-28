@@ -7,6 +7,7 @@ description: ''
 - Passe die ausführbare Klasse aus Übungsaufgabe [Generics02](../generics/generics02) so an, dass entweder die gefundenen Werte oder alternativ entsprechende Meldungen ausgegeben werden
 
 ## Klassendiagramm
+
 ```mermaid
 classDiagram
     Bottle <|-- BeerBottle

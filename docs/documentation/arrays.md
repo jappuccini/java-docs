@@ -5,7 +5,7 @@ sidebar_position: 110
 tags: [arrays]
 ---
 
-Wenn eine große Menge an Daten verarbeitet werden soll, kann man auf spezielle Datenstruktur-Variablen, sogenannte _Felder_ (Arrays), zurückgreifen. Die einzelnen Speicherplätze in einem Feld werden als Elemente bezeichnet, die über einen Index angesprochen 
+Wenn eine große Menge an Daten verarbeitet werden soll, kann man auf spezielle Datenstruktur-Variablen, sogenannte _Felder_ (Arrays), zurückgreifen. Die einzelnen Speicherplätze in einem Feld werden als Elemente bezeichnet, die über einen Index angesprochen
 werden können.
 
 ```mermaid
@@ -16,10 +16,11 @@ flowchart
         c -.- d[Index: 3\nWert: Max]
         d -.- e[Index: 4\nWert: Heidi]
     end
-``` 
+```
 
 ## Erzeugen von Feldern
-Da es sich bei Feldern um Objekte handelt, müssen diese vor Verwendung erzeugt werden. Bei der Erzeugung muss immer die Länge des Feldes (d.h. die Anzahl der Elemente) angegeben werden. Jedes Feld verfügt über das Attribut `length`, welches die Länge des Feldes 
+
+Da es sich bei Feldern um Objekte handelt, müssen diese vor Verwendung erzeugt werden. Bei der Erzeugung muss immer die Länge des Feldes (d.h. die Anzahl der Elemente) angegeben werden. Jedes Feld verfügt über das Attribut `length`, welches die Länge des Feldes
 enthält.
 
 ```java title="MainClass.java" showLineNumbers
@@ -40,6 +41,7 @@ Felder werden zwar mit Hilfe des new-Operators erzeugt, besitzen aber keinen Kon
 :::
 
 ## Zugriff auf Feldelemente
+
 Der Zugriff auf die Elemente eines Feldes erfolgt über die Angabe des entsprechenden Index.
 
 ```java title="MainClass.java" showLineNumbers
@@ -61,6 +63,7 @@ Der Index beginnt bei Java bei 0.
 :::
 
 ## Der Parameter _String[] args_
+
 Der Parameter `String[] args` der main-Methode ermöglicht es dem Anwender, der ausführbaren Klasse beim Aufruf Informationen mitzugeben.
 
 ```java title="MainClass.java" showLineNumbers
@@ -76,7 +79,8 @@ public class MainClass {
 ```
 
 ## Variable Arugmentlisten (VarArgs)
-Variable Argumentlisten (VarArgs) ermöglichen die Definition von Methoden, denen beliebig viele Werte eines Datentyps mitgegeben werden können. Die Parameterliste einer Methode kann allerdings nur eine variable Argumentliste beinhalten und diese muss immer am 
+
+Variable Argumentlisten (VarArgs) ermöglichen die Definition von Methoden, denen beliebig viele Werte eines Datentyps mitgegeben werden können. Die Parameterliste einer Methode kann allerdings nur eine variable Argumentliste beinhalten und diese muss immer am
 Ende der Parameterliste stehen.
 
 ```java title="MainClass.java" showLineNumbers

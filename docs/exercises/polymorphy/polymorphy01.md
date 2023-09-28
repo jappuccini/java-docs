@@ -13,6 +13,7 @@ import Exercise from '@site/src/components/Exercise';
   Fahrzeuge, sondern Autos und Lastwagen erzeugt und ausgegeben werden
 
 ## Klassendiagramm
+
 ```mermaid
 classDiagram
     Vehicle <|-- Car
@@ -65,11 +66,13 @@ classDiagram
 ```
 
 ## Hinweise zur Klasse Car
+
 - Der Konstruktor soll alle Attribute initialisieren
 - Die Methode `void doATurboBoost()` soll die Geschwindigkeit verdoppeln
 - Die Methode `void print()` soll alle Attribute auf der Konsole ausgeben
 
 ## Hinweise zur Klasse Truck
+
 - Der Konstruktor soll alle Attribute initialisieren
 - Die Methode `void transform()` soll das Attribut isTransformed invertieren
 - Die Methode `void print()` soll alle Attribute auf der Konsole ausgeben

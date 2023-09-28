@@ -32,11 +32,13 @@ Voraussetzung für den Einsatz eines Lambda-Ausdrucks ist eine funktionale Schni
 :::
 
 ## Syntaxvarianten
+
 - Bei keinem oder mehreren Methodenparametern müssen diese in runden Klammern angegeben werden, bei genau einem Methodenparameter können die runden Klammern weggelassen werden
 - Besteht der Methodenkörper aus mehreren Anweisungen, müssen diese in geschweiften Klammern angegeben werden, bei genau einer Anweisung können die geschweiften Klammern weggelassen werden
 - Besteht der Methodenkörper aus genau einer Anweisung, kann das Semikolon am Anweisungsende weggelassen werden, ist die Anweisung eine return-Anweisung, kann auch das `return` weggelassen werden
 
 ## Methodenreferenzen
+
 Lambda-Ausdrücke, die nur aus dem Aufruf einer Methode bestehen, können als Methodenreferenz dargestellt werden. Bei einer Methodenreferenz wird die Klasse bzw. die Referenz auf der linken Seite mit Hilfe zweier Doppelpunkte vom Methodennamen auf der recht Seite getrennt.
 
 ```java title="MainClass.java" showLineNumbers

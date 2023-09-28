@@ -5,8 +5,9 @@ sidebar_position: 220
 tags: [comparators]
 ---
 
-Mit Hilfe der Methode `int compareTo(o: T)` der Schnittstelle `Comparable<T>` bzw. der Methode `int compare(o1: T, o2: T)` der Schnittstelle `Comparator<T>` können Objekte einer Klasse miteinander verglichen werden. Der Rückgabewert beider Methoden gibt die Ordnung der zu 
+Mit Hilfe der Methode `int compareTo(o: T)` der Schnittstelle `Comparable<T>` bzw. der Methode `int compare(o1: T, o2: T)` der Schnittstelle `Comparator<T>` können Objekte einer Klasse miteinander verglichen werden. Der Rückgabewert beider Methoden gibt die Ordnung der zu
 vergleichenden Objekte an:
+
 - Rückgabewert kleiner Null: das Vergleichsobjekt ist größer
 - Rückgabewert gleich Null: beide Objekte sind gleich groß
 - Rückgabewert größer Null: das Vergleichsobjekt ist kleiner
@@ -38,7 +39,7 @@ public class Container implements Comparable<Container> {
 }
 ```
 
-In der main-Methode der Startklasse wird mit Hilfe der statischen Methode `void sort(list: List<T>)` der Klasse `Collections` eine Liste mit Objekten der Klasse `Foo` sortiert. Aufgrund der Implementierung der compareTo-Methode wird die Liste aufsteigend nach dem 
+In der main-Methode der Startklasse wird mit Hilfe der statischen Methode `void sort(list: List<T>)` der Klasse `Collections` eine Liste mit Objekten der Klasse `Foo` sortiert. Aufgrund der Implementierung der compareTo-Methode wird die Liste aufsteigend nach dem
 Attribut `bar` sortiert.
 
 ```java title="MainClass.java" showLineNumbers

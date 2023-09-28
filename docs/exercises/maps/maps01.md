@@ -12,6 +12,7 @@ import Exercise from '@site/src/components/Exercise';
   auf der Konsole ausgibt
 
 ## Klassendiagramm
+
 ```mermaid
 classDiagram
     TelephoneBook o-- Person
@@ -36,6 +37,7 @@ classDiagram
 ```
 
 ## Hinweise zur Klasse TelephoneBook
+
 - Die Methode `void addEntry(person: Person, telephoneNumber: TelephoneNumber)` soll einen Eintrag im
   Telefonbuch anlegen
 - Die Methode `TelephoneNumber getTelephoneNumberByName(name: String)` soll die

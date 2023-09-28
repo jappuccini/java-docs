@@ -12,6 +12,7 @@ import Exercise from '@site/src/components/Exercise';
   Fahrzeugvermietung in Autobots verwandeln
 
 ## Klassendiagramm
+
 ```mermaid
 classDiagram
     Vehicle <|-- Car
@@ -75,6 +76,7 @@ classDiagram
 ```
 
 ## Hinweis zur Klasse Rental
+
 Die Methode `void transformAllTrucks()` soll alle Lastwagen in Autobots
 verwandeln.
 

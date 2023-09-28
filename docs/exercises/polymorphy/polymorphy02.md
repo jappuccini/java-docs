@@ -12,6 +12,7 @@ import Exercise from '@site/src/components/Exercise';
   Fahrzeugvermietung ausgegeben werden
 
 ## Klassendiagramm
+
 ```mermaid
 classDiagram
     Vehicle <|-- Car
@@ -74,6 +75,7 @@ classDiagram
 ```
 
 ## Hinweise zur Klasse Rental
+
 - Der Konstruktor soll alle Attribute initialisieren
 - Die Methode `void addVehicle(vehicle: Vehicle)` soll der Fahrzeugvermietung ein
   Fahrzeug hinzufügen

@@ -14,6 +14,7 @@ flowchart
 ```
 
 ## Konsoleneingaben
+
 Die Klasse `Scanner` im Paket `java.util` stellt Methoden zur Verfügung, um Eingaben von der Konsole einzulesen und in entsprechende Datentypen umzuwandeln.
 
 ```java title="MainClass.java" showLineNumbers
@@ -33,10 +34,12 @@ Dem Konstruktor muss der Standard-Eingabestrom `System.in` als Wert mitgegeben w
 :::
 
 ## Konsolenausgaben
+
 Der Standard-Ausgabestrom `System.out` bietet verschiedene Methoden, um Informationen auf der Konsole auszugeben:
+
 - Bei den print-Methoden wird die Information unverändert und linksbündig ausgegeben
 - Bei den println-Methoden wird die Information unverändert und linksbündig ausgegeben. Zusätzlich wird ein Zeilenumbruch ausgeführt
-- Bei den printf-Methoden wird die Information formatiert ausgegeben. Die Formatierungsregeln sind nach dem Muster _[flags]\[width][.precision]conversion-character_  aufgebaut
+- Bei den printf-Methoden wird die Information formatiert ausgegeben. Die Formatierungsregeln sind nach dem Muster _[flags]\[width][.precision]conversion-character_ aufgebaut
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {

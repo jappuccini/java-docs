@@ -9,6 +9,7 @@ import Exercise from '@site/src/components/Exercise';
 - Erstelle eine ausführbare Klasse, welche ein Turnier mit mehreren Vereinen erzeugt und die Paarungen ausgibt
 
 ## Klassendiagramm
+
 ```mermaid
 classDiagram
     Tournament o-- Club
@@ -37,6 +38,7 @@ classDiagram
 ```
 
 ## Hinweise zur Klasse Tournament
+
 - Die Methode `void addClub(club: Club)` soll dem Turnier den eingehenden Verein hinzufügen
 - Die Methode `List<Pair<Club>> pairs()` soll aus den Vereinen des Turniers Paarungen für Hin- und Rückspiele bilden und zurückgeben
 

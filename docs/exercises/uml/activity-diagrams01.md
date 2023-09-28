@@ -8,6 +8,7 @@ import Exercise from '@site/src/components/Exercise';
 Erstelle die Klasse `MainClass` anhand des abgebildeten Klassendiagramms sowie den abgebildeten Aktivitätsdiagrammen.
 
 ## Klassendiagramm
+
 ```mermaid
 classDiagram
     class MainClass {
@@ -20,6 +21,7 @@ classDiagram
 ```
 
 ## Aktivitätsdiagramm zur Aktivität main
+
 ```mermaid
 stateDiagram-v2
     state "Scanner initialisieren" as state1
@@ -35,6 +37,7 @@ stateDiagram-v2
 ```
 
 ## Aktivitätsdiagramm zur Aktivität play
+
 ```mermaid
 stateDiagram-v2
     state "Ausgabe: Spieler 1, Name eingeben" as state1
@@ -62,6 +65,7 @@ stateDiagram-v2
 ```
 
 ## Aktivitätsdiagramm zur Aktivität move
+
 ```mermaid
 stateDiagram-v2
     state "Ausgabe: [Name], Tipp eingeben" as state1
@@ -72,7 +76,7 @@ stateDiagram-v2
     state "Ausgabe: Die gesuchte Zahl ist größer" as state6
     state "Rückgabe: false" as state7
     state if <<choice>>
-    
+
     state move {
         [*] --> state1
         state1 --> state2

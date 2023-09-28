@@ -14,7 +14,9 @@ Die Umkehr der Steuerung kann auch als Anwendung des Hollywood-Prinzips (_Don´t
 :::
 
 ## Implementieren einer Testklasse
+
 JUnit-Testklassen werden mit Hilfe entsprechender Annotationen implementiert:
+
 - Die Annotationen `@Test` und `@ParameterizedTest` definieren einfache bzw. parametrisierte Testmethoden
 - Die Annotationen `@BeforeAll` und `@AfterAll` definieren statische Methoden, die aufgerufen werden, wenn die Klasse für den Test initialisiert wird bzw. wenn alle Tests abgeschlossen sind
 - Die Annotationen `@BeforeEach` und `@AfterEach` definieren Methoden, die vor bzw. nach jeder Testmethode aufgerufen werden
@@ -22,6 +24,7 @@ JUnit-Testklassen werden mit Hilfe entsprechender Annotationen implementiert:
 - Mit Hilfe der Annotation `@DisplayName` kann einer Testklasse bzw. einer Testmethode ein Anzeigename zugewiesen werden
 
 ## Zusicherungen (Assertions)
+
 Die Klasse `Assertions` stellt verschiedene Methoden bereit, die immer dann eine Ausnahme vom Typ `AssertionError` auslösen, wenn das Ergebnis eines Methodenaufrufs nicht wie erwartet ausgefallen ist. Eine Ausnahme vom Typ `AssertionError` führt dazu, dass der Test als nicht erfolgreich gewertet wird.
 
 | Assert-Methode                                                   | Bedeutung                                   |
@@ -37,6 +40,7 @@ Die Klasse `Assertions` stellt verschiedene Methoden bereit, die immer dann eine
 | `T assertThrows(expectedType: Class<T>, executable: Executable)` | Prüft, ob eine Ausnahme ausgelöst wird      |
 
 ## Beispiel
+
 Die Klasse `Calculator` stellt mehrere Methoden bereit, die getestet werden sollen.
 
 ```java title="Calculator.java" showLineNumbers
@@ -92,4 +96,4 @@ public class CalculatorTest {
   }
 
 }
-``` 
+```

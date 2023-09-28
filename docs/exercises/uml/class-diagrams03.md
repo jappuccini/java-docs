@@ -11,6 +11,7 @@ import Exercise from '@site/src/components/Exercise';
   simuliert
 
 ## Klassendiagramm
+
 ```mermaid
 classDiagram
     CreatureGame o-- Creature
@@ -40,12 +41,14 @@ classDiagram
 ```
 
 ## Hinweise zur Klasse Creature
+
 - Passe die Methode `boolean attack(creature: Creature)` so an, dass der Rückgabewert
   `true` ist, wenn die Lebenspunkte der angegriffenen Kreatur kleiner gleich
   Null sind, bzw. `false`, wenn nicht
 - Die Methode `void print()` soll alle Attribute auf der Konsole ausgeben
 
 ## Hinweise zur Klasse CreatureGame
+
 - Der Konstruktor soll alle Attribute initialisieren
 - Die Methode `void simulateFight()` soll die beiden Kreaturen sich so lange
   gegenseitig angreifen lassen, bis eine der Kreaturen "stirbt"

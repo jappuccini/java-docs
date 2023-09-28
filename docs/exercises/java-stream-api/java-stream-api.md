@@ -6,11 +6,13 @@ tags: [java-stream-api]
 ---
 
 ## Übungsaufgaben
+
 import DocCardList from '@theme/DocCardList';
 
 <DocCardList />
 
 ## Übungsaufgaben von tutego.de
+
 - Übungsaufgabe [II-5-1.1.1](https://tutego.de/javabuch/aufgaben/java.util.stream-api.html#_heldenepos_stream_api_kennenlernen)
 - Übungsaufgabe [II-5-1.1.2](https://tutego.de/javabuch/aufgaben/java.util.stream-api.html#_den_geliebten_captain_aus_einer_liste_ermitteln)
 - Übungsaufgabe [II-5-1.1.3](https://tutego.de/javabuch/aufgaben/java.util.stream-api.html#_bilder_einrahmen)

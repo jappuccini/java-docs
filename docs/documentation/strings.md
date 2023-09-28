@@ -5,7 +5,7 @@ sidebar_position: 50
 tags: []
 ---
 
-Ketten von beliebigen Zeichen werden durch die Klasse `String` realisiert. Diese stellt einige hilfreiche Methoden zur Verfügung, die bei der Analyse und der Verarbeitung von Zeichenketten Verwendung finden. Die Angabe einer Zeichenkette erfolgt über die 
+Ketten von beliebigen Zeichen werden durch die Klasse `String` realisiert. Diese stellt einige hilfreiche Methoden zur Verfügung, die bei der Analyse und der Verarbeitung von Zeichenketten Verwendung finden. Die Angabe einer Zeichenkette erfolgt über die
 Anführungszeichen.
 
 ```mermaid
@@ -37,6 +37,7 @@ public class MainClass {
 ```
 
 ## Escape-Sequenzen
+
 Steuer- und Sonderzeichen in Zeichenketten können mit Hilfe einer Escape-Sequenz realisiert werden.
 
 | Escape-Squenz       | Beschreibung      |
@@ -49,6 +50,7 @@ Steuer- und Sonderzeichen in Zeichenketten können mit Hilfe einer Escape-Sequen
 | \\u0000 bis \\uFFFF | Unicode-Zeichen   |
 
 ## Textblöcke
+
 Seit Java 15 ermöglichen Textblöcke mehrzeilige Zeichenketten ohne umständliche Umwege.
 
 ```java title="MainClass.java" showLineNumbers

@@ -11,6 +11,7 @@ import Exercise from '@site/src/components/Exercise';
   zu erzeugen und zu befüllen
 
 ## Klassendiagramm
+
 ```mermaid
 classDiagram
 
@@ -24,6 +25,7 @@ classDiagram
 ```
 
 ## Hinweise zur Klasse Barrel
+
 - Der Konstruktor soll das Attribut `capacity` initialisieren
 - Die Methode `void addFluid(value: int)` soll den Füllstand um den eingehenden Betrag
   erhöhen. Bei Überschreiten der Kapazität soll die Ausnahme

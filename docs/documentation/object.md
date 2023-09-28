@@ -6,6 +6,7 @@ tags: []
 ---
 
 Alle Klassen in Java sind letztlich Unterklassen der Klasse `Object`. Daher wird diese auch als die Mutter aller Klassen bezeichnet. Die Klasse vererbt ihren Unterklassen wichtige Methoden, die jede Unterklasse überschreiben sollte:
+
 - Die Methode `boolean equals(object: Object)` prüft zwei Objekte auf Gleichheit
 - Die Methode `int hashCode()` liefert den Hashcode des aktuellen Objektes zurück
 - Die Methode `String toString()` liefert eine eindeutige Kennung des Objektes in der Form _[Vollständiger Klassenname]_@_[Adresse des Objektes im Hauptspeicher in hexadezimaler Notation]_ zurück

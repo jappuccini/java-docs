@@ -6,11 +6,13 @@ tags: [arrays]
 ---
 
 ## Übungsaufgaben
+
 import DocCardList from '@theme/DocCardList';
 
 <DocCardList />
 
 ## Übungsaufgaben von tutego.de
+
 - Übungsaufgabe [I-4-1.1.1](https://tutego.de/javabuch/aufgaben/array.html#_arrays_ablaufen_und_windgeschwindigkeit_windrichtung_ausgeben)
 - Übungsaufgabe [I-4-1.1.2](https://tutego.de/javabuch/aufgaben/array.html#_konstante_umsatzsteigerung_feststellen)
 - Übungsaufgabe [I-4-1.1.3](https://tutego.de/javabuch/aufgaben/array.html#_aufeinanderfolgende_strings_suchen_und_feststellen_ob_salty_snook_kommt)
@@ -22,6 +24,7 @@ import DocCardList from '@theme/DocCardList';
 - Übungsaufgabe [I-4-1.4.3](https://tutego.de/javabuch/aufgaben/array.html#_hilfe_tetraphobie_alle_vieren_nach_hinten_setzen)
 
 ## Übungsaufgaben der Uni Koblenz-Landau
+
 - Übungsaufgabe [E1](https://www.uni-koblenz-landau.de/de/koblenz/fb4/ist/rgebert/teaching/SS08/java-programming/programmieraufgaben.pdf/view)
 - Übungsaufgabe [E2](https://www.uni-koblenz-landau.de/de/koblenz/fb4/ist/rgebert/teaching/SS08/java-programming/programmieraufgaben.pdf/view)
 - Übungsaufgabe [E3](https://www.uni-koblenz-landau.de/de/koblenz/fb4/ist/rgebert/teaching/SS08/java-programming/programmieraufgaben.pdf/view)
@@ -33,6 +36,7 @@ import DocCardList from '@theme/DocCardList';
 - Übungsaufgabe [E9](https://www.uni-koblenz-landau.de/de/koblenz/fb4/ist/rgebert/teaching/SS08/java-programming/programmieraufgaben.pdf/view)
 
 ## Übungsaufgaben der Technischen Hochschule Ulm
+
 - Übungsaufgabe [Felder01](https://studium.hs-ulm.de/de/org/I/vorkurse/Documents/java_aufgaben.pdf)
 - Übungsaufgabe [Felder02](https://studium.hs-ulm.de/de/org/I/vorkurse/Documents/java_aufgaben.pdf)
 - Übungsaufgabe [Felder03](https://studium.hs-ulm.de/de/org/I/vorkurse/Documents/java_aufgaben.pdf)

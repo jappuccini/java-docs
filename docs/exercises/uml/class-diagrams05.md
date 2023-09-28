@@ -11,6 +11,7 @@ import Exercise from '@site/src/components/Exercise';
   auf der Konsole ausgibt
 
 ## Klassendiagramm
+
 ```mermaid
 classDiagram
      SkatCard o-- SkatCardColor
@@ -58,6 +59,7 @@ classDiagram
 ```
 
 ## Hinweise zur Klasse SkatCardDeck
+
 - Der Konstruktor soll ein Skatblatt, bestehend aus 32 Karten, erzeugen
 - Die Methode `void shuffleSkatCards()` soll das Skatblatt mischen
 

@@ -22,7 +22,7 @@ public class MainClass {
 }
 ```
 
-Die Klasse `Optional` ermöglicht in Java eine komfortable Möglichkeit, mit null-Werten umzugehen. Das eigentliche Objekt wird dabei in einem Objekt der Klasse `Optional` verpackt; der Zugriff auf das verpackte Objekt erfolgt über entsprechende Methoden. Dies 
+Die Klasse `Optional` ermöglicht in Java eine komfortable Möglichkeit, mit null-Werten umzugehen. Das eigentliche Objekt wird dabei in einem Objekt der Klasse `Optional` verpackt; der Zugriff auf das verpackte Objekt erfolgt über entsprechende Methoden. Dies
 stellt sicher, dass sich der Entwickler mit null-Werten auseinander setzen muss.
 
 Für den Umgang mit null-Werten stellt die Klasse `Optional` Methoden wie `T get()`, `boolean isPresent()` und `void ifPresent(consumer: Consumer<T>)` zur Verfügung. Zudem existieren Methoden wie `void orElse(other: T)`, mit denen Standardwerte festgelegt werden können.

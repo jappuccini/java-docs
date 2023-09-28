@@ -15,4 +15,5 @@ Willst Du einen weiteren Jahreszins berechnen (true, false)?:false
 ```
 
 ## Hinweis
+
 Die Formel für die Zins-Berechnung findest Du unter anderem [hier](https://de.wikipedia.org/wiki/Zinsrechnung).

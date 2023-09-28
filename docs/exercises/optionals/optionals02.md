@@ -7,6 +7,7 @@ description: ''
 - Passe die ausführbare Klasse aus Übungsaufgabe [Maps01](../maps/maps01) so an, dass entweder die gefundenen Werte oder alternativ entsprechende Meldungen ausgegeben werden
 
 ## Klassendiagramm
+
 ```mermaid
 classDiagram
     TelephoneBook o-- Person

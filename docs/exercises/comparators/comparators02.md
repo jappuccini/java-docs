@@ -12,6 +12,7 @@ import Exercise from '@site/src/components/Exercise';
   Hilfe der Klasse `CoordinateComparator` sortiert wird
 
 ## Klassendiagramm
+
 ```mermaid
 classDiagram
     Comparator~T~ <|.. CoordinateByDistanceToOriginPointComparator
@@ -26,6 +27,7 @@ classDiagram
 ```
 
 ## Hinweis zur Klasse CoordinateByDistanceToOriginComparator
+
 Die Methode `int compare(coordinate1: Coordinate, coordinate2: Coordinate)` soll zwei eingehende
 Koordinaten anhand ihrer jeweiligen Distanz zum Nullpunkt vergleichen. Ist die
 Distanz der ersten Koordinate zum Nullpunkt kleiner als bzw. größer als bzw.

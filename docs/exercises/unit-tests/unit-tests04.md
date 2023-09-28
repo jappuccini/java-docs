@@ -6,6 +6,7 @@ description: ''
 Erstelle die Klasse `BookCollectionTest` anhand des abgebildeten Klassendiagramms.
 
 ## Klassendiagramm
+
 ```mermaid
 classDiagram
     BookCollection o-- Author
@@ -44,10 +45,11 @@ classDiagram
         +testGetMostDiligentAuthor1() void
         +testGetMostDiligentAuthor2() void
         +testGetBookByTitle() void
-    }     
+    }
 ```
 
 ## Hinweise zur Klasse `BookCollectionTest`
+
 - Die Lebenszyklus-Methode `void setUp()` soll den Attributen der Testklasse passende Werte zuweisen
 - Die Testmethode `void testAddAuthor()` soll prüfen, ob beim Ausführen der Methode `void addAuthor(author: Author)` mit einem Autoren, der bereits in der Büchersammlung vorhanden ist, die Ausnahme `DuplicateKeyException` ausgelöst wird
 - Die Testmethode `void testAddBook()` soll prüfen, ob nach dem Ausführen der Methode `void addBook(author: Author, book: Book)` der entsprechende Eintrag aktualisiert wurde
@@ -56,4 +58,5 @@ classDiagram
 - Die Testmethode `void testGetBookByTitle()` soll prüfen, ob beim Ausführen der Methode `Optional<Book> getBookByTitle(title: String)` mit einem Buchtitel zu einem vorhandenen Buch das entsprechende Buch als Optional zurückgegeben wird und ob beim Ausführen der Methode `Optional<Book> getBookByTitle(title: String)` mit einem Buchtitel zu einem nicht vorhandenen Buch ein leeres Optional zurückgegeben wird
 
 ## Hinweis
+
 Verweden die Klasse `BookCollection` aus Übungsaufgabe [Optionals01](../optionals/optionals01.md).

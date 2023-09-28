@@ -5,7 +5,7 @@ description: ''
 
 import Exercise from '@site/src/components/Exercise';
 
-Erstelle eine ausführbare Klasse, welche eine eingegebene Zeichenkette auf 
+Erstelle eine ausführbare Klasse, welche eine eingegebene Zeichenkette auf
 Häufigkeit eines bestimmten Zeichens analysiert. Das Programm soll die absolute
 und relative Häufigkeit in Bezug auf die Gesamtlänge der Zeichenkette ausgeben.
 
@@ -19,7 +19,8 @@ Prozentualer Anteil: 30,00%
 ```
 
 ## Hinweis
-Die Methode `char charAt(index: int)` der Klasse `String` gibt das Zeichen mit dem 
+
+Die Methode `char charAt(index: int)` der Klasse `String` gibt das Zeichen mit dem
 Index der eingehenden Zahl zurück.
 
 <Exercise pullRequest="16" branchSuffix="loops/03" />

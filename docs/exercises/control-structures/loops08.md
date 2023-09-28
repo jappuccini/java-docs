@@ -16,4 +16,5 @@ Willst Du eine weitere Zinsrechnung durchführen (true, false)?: false
 ```
 
 ## Hinweis
+
 Die Formel für die Zinseszins-Berechnung findest Du unter anderem [hier](https://de.wikipedia.org/wiki/Zinseszins).

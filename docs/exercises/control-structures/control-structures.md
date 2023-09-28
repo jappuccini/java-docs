@@ -6,11 +6,13 @@ tags: [control-structures, cases, loops]
 ---
 
 ## Übungsaufgaben
+
 import DocCardList from '@theme/DocCardList';
 
 <DocCardList />
 
 ## Übungsaufgaben von tutego.de
+
 - Übungsaufgabe [I-2-1.3.1](https://tutego.de/javabuch/aufgaben/intro.html#_java_programme_portieren)
 - Übungsaufgabe [I-2-1.3.2](https://tutego.de/javabuch/aufgaben/imperativ.html#_pr%C3%BCfen_ob_beute_fair_aufgeteilt_werden_kann)
 - Übungsaufgabe [I-2-1.3.3](https://tutego.de/javabuch/aufgaben/imperativ.html#_besitzen_zwei_zahlen_gleiche_ziffern)
@@ -39,6 +41,7 @@ import DocCardList from '@theme/DocCardList';
 - Übungsaufgabe [I-2-1.6.6](https://tutego.de/javabuch/aufgaben/imperativ.html#_multiplikationstabelle_erstellen)
 
 ## Übungsaufgaben der Uni Koblenz-Landau
+
 - Übungsaufgabe [B1](https://www.uni-koblenz-landau.de/de/koblenz/fb4/ist/rgebert/teaching/SS08/java-programming/programmieraufgaben.pdf/view)
 - Übungsaufgabe [B2](https://www.uni-koblenz-landau.de/de/koblenz/fb4/ist/rgebert/teaching/SS08/java-programming/programmieraufgaben.pdf/view)
 - Übungsaufgabe [B3](https://www.uni-koblenz-landau.de/de/koblenz/fb4/ist/rgebert/teaching/SS08/java-programming/programmieraufgaben.pdf/view)
@@ -51,6 +54,7 @@ import DocCardList from '@theme/DocCardList';
 - Übungsaufgabe [C5](https://www.uni-koblenz-landau.de/de/koblenz/fb4/ist/rgebert/teaching/SS08/java-programming/programmieraufgaben.pdf/view)
 
 ## Übungsaufgaben der Technischen Hochschule Ulm
+
 - Übungsaufgabe [Verzweigungen01](https://studium.hs-ulm.de/de/org/I/vorkurse/Documents/java_aufgaben.pdf)
 - Übungsaufgabe [Verzweigungen02](https://studium.hs-ulm.de/de/org/I/vorkurse/Documents/java_aufgaben.pdf)
 - Übungsaufgabe [Verzweigungen03](https://studium.hs-ulm.de/de/org/I/vorkurse/Documents/java_aufgaben.pdf)

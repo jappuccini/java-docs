@@ -13,6 +13,7 @@ import Exercise from '@site/src/components/Exercise';
   - Würfelwert von Spieler 1 = Würfelwert von Spieler 2: Unentschieden
 
 ## Klassendiagramm
+
 ```mermaid
 classDiagram
 
@@ -23,10 +24,11 @@ classDiagram
         +getName() String
         +getScore() int
         +setScore(score int) void
-    } 
+    }
 ```
 
 ## Hinweis zur Klasse Player
+
 Der Konstruktor soll den Namen initialisieren.
 
 ## Konsolenausgabe

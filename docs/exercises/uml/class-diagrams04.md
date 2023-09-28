@@ -11,6 +11,7 @@ import Exercise from '@site/src/components/Exercise';
   Mitarbeitern erzeugt und auf der Konsole ausgibt
 
 ## Klassendiagramm
+
 ```mermaid
 classDiagram
     Company o-- Employee
@@ -45,14 +46,17 @@ classDiagram
 ```
 
 ## Hinweis zur Klasse Person
+
 Der Konstruktor soll den Namen initialisieren.
 
 ## Hinweise zur Klasse Employee
+
 - Der Konstruktor soll alle Attribute initialisieren
 - Die Methode `String getName()` soll den Namen des Mitarbeiters zurückgeben
 - Die Methode `void print()` soll alle Attribute auf der Konsole ausgeben
 
 ## Hinweise zur Klasse Company
+
 - Der Konstruktor soll den Namen sowie die Mitarbeiterliste initialisieren
 - Die Methode `void addEmployee(employee: Employee)` soll der Mitarbeiterliste einen Mitarbeiter
   hinzufügen

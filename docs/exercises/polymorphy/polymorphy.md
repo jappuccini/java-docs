@@ -6,11 +6,13 @@ tags: [polymorphy]
 ---
 
 ## Übungsaufgaben
+
 import DocCardList from '@theme/DocCardList';
 
 <DocCardList />
 
 ## Übungsaufgaben von tutego.de
+
 - Übungsaufgabe [I-6-1.6.1](https://tutego.de/javabuch/aufgaben/oop_classes.html#_abstraktion_in_elektroger%C3%A4te_%C3%BCber_vererbung_einf%C3%BChren)
 - Übungsaufgabe [I-6-1.6.2](https://tutego.de/javabuch/aufgaben/oop_classes.html#_anzahl_eingeschalteter_elektroger%C3%A4te_ermitteln)
 - Übungsaufgabe [I-6-1.6.3](https://tutego.de/javabuch/aufgaben/oop_classes.html#_schiff_soll_jedes_elektroger%C3%A4t_aufnehmen)

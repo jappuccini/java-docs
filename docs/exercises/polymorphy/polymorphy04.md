@@ -18,6 +18,7 @@ import Exercise from '@site/src/components/Exercise';
   mit 4-5-6-Würfeln oder 1-2-3-Würfeln zu würfeln
 
 ## Klassendiagramm
+
 ```mermaid
 classDiagram
     DiceGame o-- Dice
@@ -39,7 +40,7 @@ classDiagram
         +setActive(isActive boolean) void
         +getSpecialAvailable() boolean
         +setSpecialAvailable(specialAvailable boolean) void
-    } 
+    }
 
     class Dice {
         -id int
@@ -76,9 +77,11 @@ classDiagram
 ```
 
 ## Hinweis zur Klasse HighValueDice
+
 Die Methode `void rollTheDice()` soll nur 4er, 5er und 6er "würfeln".
 
 ## Hinweis zur Klasse LowValueDice
+
 Die Methode `void rollTheDice()` soll nur 1er, 2er und 3er "würfeln".
 
 ## Konsolenausgabe

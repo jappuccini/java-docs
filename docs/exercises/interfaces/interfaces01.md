@@ -15,6 +15,7 @@ import Exercise from '@site/src/components/Exercise';
   Attribute des Reisebüros ausgegeben werden
 
 ## Klassendiagramm
+
 ```mermaid
 classDiagram
     Vehicle <|-- Car
@@ -94,6 +95,7 @@ classDiagram
 ```
 
 ## Hinweise zur Klasse TravelAgency
+
 - Der Konstruktor soll alle Attribute initialisieren
 - Die Methode `void addPartner(partner: Partner)` soll dem Reisebüro einen Partner
   hinzufügen

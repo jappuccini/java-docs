@@ -7,10 +7,11 @@ description: ''
 - Passe die ausführbare Klasse aus Übungsaufgabe [Maps02](../maps/maps02) so an, dass entweder die gefundenen Werte oder alternativ entsprechende Meldungen ausgegeben werden
 
 ## Klassendiagramm
+
 ```mermaid
 classDiagram
     BookCollection o-- Author
-    BookCollection o-- Book 
+    BookCollection o-- Book
 
     class Author {
         <<record>>

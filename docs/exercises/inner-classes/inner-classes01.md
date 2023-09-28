@@ -12,6 +12,7 @@ import Exercise from '@site/src/components/Exercise';
 - Die Klasse Room soll hierbei eine Element Klasse sein.
 
 ## Klassendiagramm
+
 ```mermaid
 classDiagram
     House *-- Room

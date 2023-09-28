@@ -9,6 +9,7 @@ Die Klasse `File` ermöglicht die Arbeit mit Dateien und Verzeichnissen. Mit Hil
 ethoden zum Erstellen und Löschen von Verzeichnissen bzw. Dateien. Zum Erzeugen eines File-Objekts wird entweder ein Pfad zu einem Verzeichnis bzw. zu einer Datei oder ein _URI_ (Unified Resource Identifier) benötigt.
 
 ## Lesen von Dateien mit Hilfe der Klasse _Scanner_
+
 Zum Lesen einer Datei können entweder [Datenstromklassen](../io-streams.md) oder die Klasse `Scanner` verwendet werden.
 
 ```java title="MainClass.java" showLineNumbers
@@ -34,7 +35,8 @@ Nach der letzten Verwendung sollte die Methode `void close()` der Klasse `Scanne
 :::
 
 ## Absolute und relative Pfadangaben
-Beim Zugriff auf Verzeichnisse bzw. Dateien unterscheidet man zwischen absoluten und relativen Pfadangaben. Bei absoluten Pfadangaben wird der vollständige Pfad von der Wurzel des jeweiligen Verzeichnissystems bis zum Ziel angegeben, bei relativen der Weg von 
+
+Beim Zugriff auf Verzeichnisse bzw. Dateien unterscheidet man zwischen absoluten und relativen Pfadangaben. Bei absoluten Pfadangaben wird der vollständige Pfad von der Wurzel des jeweiligen Verzeichnissystems bis zum Ziel angegeben, bei relativen der Weg von
 einem festgelegten Bezugspunkt bis zum Ziel.
 
 :::note Hinweis
@@ -47,7 +49,7 @@ flowchart LR
     c --> temp[Temp]
     workspace[workspace] --> project
     temp --> documentA[/DocumentA.txt/]
-    project[Project] --> documents        
+    project[Project] --> documents
     documents[documents] --> documentB[/DocumentB.txt/]
 ```
 

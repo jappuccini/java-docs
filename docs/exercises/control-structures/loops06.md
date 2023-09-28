@@ -5,8 +5,8 @@ description: ''
 
 import Exercise from '@site/src/components/Exercise';
 
-Erstelle eine ausführbare Klasse, welche anhand von Startkapital (K) und 
-Prozentsatz (p) den Jahreszins (Z) berechnet. Die Berechnung des Jahreszinses 
+Erstelle eine ausführbare Klasse, welche anhand von Startkapital (K) und
+Prozentsatz (p) den Jahreszins (Z) berechnet. Die Berechnung des Jahreszinses
 soll dabei in eine statische Methode ausgelagert werden.
 
 ## Konsolenausgabe

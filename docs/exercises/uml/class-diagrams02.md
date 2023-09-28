@@ -14,6 +14,7 @@ import Exercise from '@site/src/components/Exercise';
   50 Punkte heranzukommen, ohne allerdings die 50 Punkte zu überschreiten
 
 ## Klassendiagramm
+
 ```mermaid
 classDiagram
     DiceGame o-- Dice
@@ -30,7 +31,7 @@ classDiagram
         +setScore(int score) void
         +isActive() boolean
         +setActive(isActive boolean) void
-    } 
+    }
 
     class Dice {
         -id int
@@ -57,10 +58,12 @@ classDiagram
 ```
 
 ## Hinweis zur Klasse Player
+
 Passe den Konstruktor so an, dass auch weiterhin alle Attribute initialisiert
 werden.
 
 ## Hinweise zur Klasse DiceGame
+
 - Der Konstruktor soll alle Attribute initialisieren
 - Die Methode `void start()` soll die Spieler abwechselnd einen Spielzug
   machen lassen und am Ende den Sieger des Spiels auf der Konsole ausgeben

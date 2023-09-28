@@ -8,7 +8,8 @@ tags: [control-structures, cases]
 Mit Hilfe von Verzweigungen können unterschiedliche Anweisungsblöcke ausgeführt werden.
 
 ## Einfache Verzweigungen
-Die if-Verzweigung ist eine Anweisung, die abhängig von einer Bedingung zwischen unterschiedlichen Anweisungsblöcken auswählt: Ist die Bedingung wahr, wird der Anweisungsblock direkt nach der Bedingung ausgeführt, ansonsten wird der Anweisungsblock nach `else` 
+
+Die if-Verzweigung ist eine Anweisung, die abhängig von einer Bedingung zwischen unterschiedlichen Anweisungsblöcken auswählt: Ist die Bedingung wahr, wird der Anweisungsblock direkt nach der Bedingung ausgeführt, ansonsten wird der Anweisungsblock nach `else`
 ausgeführt.
 
 ```java title="MainClass.java" showLineNumbers
@@ -34,6 +35,7 @@ Der else-Zweig ist optional, kann also weggelassen werden.
 :::
 
 ## Kaskadierte Verzweigungen
+
 Mehrfachverzweigungen können mit Hilfe einer if-else-if-Leiter abgebildet werden. Die if-else-if-Leiter verschachtelt mehrere if-Anweisungen zu einer sogenannten kaskadierten Verzweigung.
 
 ```java title="MainClass.java" showLineNumbers
@@ -59,7 +61,8 @@ public class MainClass {
 ```
 
 ## Bedingte Zuweisungen
-Wird eine if-Verzweigung für eine Wertzuweisung verwendet, spricht man von einer bedingten Zuweisung. Zusätzlich zur ausführlichen Schreibweise existiert für bedingte Zuweisungen auch eine Kurzschreibweise. 
+
+Wird eine if-Verzweigung für eine Wertzuweisung verwendet, spricht man von einer bedingten Zuweisung. Zusätzlich zur ausführlichen Schreibweise existiert für bedingte Zuweisungen auch eine Kurzschreibweise.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
@@ -90,7 +93,8 @@ Die Kurzschreibweise sollte verantwortungsvoll verwendet werden, da die Lesbarke
 :::
 
 ## Mehrfachverzweigungen
-Mehrfachverzweigungen können entweder mit Hilfe von if-else-if-Leitern oder mit Hilfe der switch-case-Anweisung realisiert werden. Tritt ein Fall ein, werden alle Anweisungen bis zum nächsten `break` ausgeführt. Durch Weglassen von `break` können 
+
+Mehrfachverzweigungen können entweder mit Hilfe von if-else-if-Leitern oder mit Hilfe der switch-case-Anweisung realisiert werden. Tritt ein Fall ein, werden alle Anweisungen bis zum nächsten `break` ausgeführt. Durch Weglassen von `break` können
 unterschiedliche Fälle gleich behandelt werden. Der default-Block wird immer dann ausgeführt, wenn keiner der aufgeführten Fälle eintritt.
 
 ```java title="MainClass.java" showLineNumbers

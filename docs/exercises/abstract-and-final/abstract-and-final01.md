@@ -10,6 +10,7 @@ Passe die Klassen `Vehicle`, `Car` und `Truck` aus Übungsaufgabe
 Klassendiagramms an.
 
 ## Klassendiagramm
+
 ```mermaid
 classDiagram
     Vehicle <|-- Car
@@ -73,6 +74,6 @@ classDiagram
         +transformAllTrucks() void
         +print() void
     }
-``` 
+```
 
 <Exercise pullRequest="45" branchSuffix="abstract-and-final/01" />

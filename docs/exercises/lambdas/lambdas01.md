@@ -1,11 +1,12 @@
 ---
 title: Lambdas01
-description: ""
+description: ''
 ---
 
 import Exercise from '@site/src/components/Exercise';
 
 Erweitere die gegebene Klasse `Exercise` wie folgt:
+
 - Verwende die forEach-Methode der Klasse `ArrayList<E>`, um eine anonyme Klasse zu übergeben. Die anonyme Klasse soll alle Studenten die älter sind als 26 auf der Konsole ausgeben
 - Verwende die forEach-Methode der der Klasse `ArrayList<E>`, um einen Lambda-Ausdruck zu übergeben. Die Methode soll sich exakt so verhalten wie die zuvor implementierte anonyme Klasse
 

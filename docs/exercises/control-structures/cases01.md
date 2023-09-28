@@ -14,4 +14,5 @@ und auf der Konsole ausgibt, ob es sich um eine gerade oder ungerade Zahl handel
 Gib bitte eine ganze Zahl ein: 5
 Ergebnis: Die eingegebene Zahl ist ungerade
 ```
+
 <Exercise pullRequest="7" branchSuffix="cases/01" />
