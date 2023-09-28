@@ -8,7 +8,45 @@ Setze das abgebildete Klassendiagramm vollständig um. Erstelle zum Testen eine 
 
 ## Klassendiagramm
 
-![image](https://github.com/jappuccini/java-docs/assets/47243617/0ff1ca1c-3529-4c36-a180-5e76b9020929)
+```mermaid
+classDiagram
+    ParkingGarage o-- ParkingSpot
+    ParkingSpot o-- Vehicle
+    Vehicle <|-- Car
+    Vehicle <|-- Bus
+
+    class ParkingSpot {
+        -vehicle Vehicle
+        -length double
+        -height double
+        -isForBusesOnly boolean
+        +ParkingSpot(length double, height double, isForBusesOnly boolean)
+    }
+
+    class Vehicle {
+        -make String
+        -model String
+        -length double
+        -height double
+        +Vehicle(make String, model String, length double, height double)
+    }
+
+    class Car {
+        +Car(make String, model String, length double, height double)
+    }
+
+    class Bus {
+        +Bus(make String, model String, length double, height double)
+    }
+
+    class ParkingGarage {
+        -parkingSpots ParkingSpot[]
+        +ParkingGarage(numberOfParkingSpots int)
+        +parkIn(car Car, parkingSpotNumber int) String
+        +parkOut(car Car) String
+        +getNextFreeParkingSpotNumber() int
+    }
+```
 
 ## Allgemeine Hinweise
 
