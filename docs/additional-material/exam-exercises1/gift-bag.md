@@ -8,7 +8,33 @@ Setze das abgebildete Klassendiagramm vollständig um. Erstelle zum Testen eine 
 
 ## Klassendiagramm
 
-![image](https://user-images.githubusercontent.com/47243617/209169050-403a7f98-a785-4f3d-9bd6-f5cfee1b1848.png)
+```mermaid
+classDiagram
+    GiftBag o-- Present
+    Present o-- Person
+
+    class GiftBag {
+        -presents ArrayList~Present~
+        +GiftBag()
+        +addPresent(present Present) void
+        +getMostExpensivePresent() Present
+    }
+
+    class Present {
+        -description String
+        -price double
+        -sender Person
+        -recipient Person
+        +Present(description String, price double, sender Person, recipient Person)
+    }
+
+    class Person {
+        -name String
+        -age int
+        -gender char
+        +Player(name String, age int, gender char )
+    }
+```
 
 ## Allgemeine Hinweise
 
