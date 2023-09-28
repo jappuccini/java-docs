@@ -8,7 +8,83 @@ Setze das abgebildete Klassendiagramm vollständig um. Erstelle zum Testen eine 
 
 ## Klassendiagramm
 
-![image](https://user-images.githubusercontent.com/47243617/209168669-32e3b92c-94bd-4b33-9973-0806ea0c63dd.png)
+```mermaid
+classDiagram
+    Product o-- Currency
+    Product <|-- Goods
+    Item o-- Goods
+    ShoppingCart o-- Item
+    Goods o-- ClassOfGoods
+    CashierSystem o-- Goods
+    CashierSystem o-- Cashier
+    CashierSystem o-- ShoppingCart
+
+    class Product {
+        -id int
+        -description String
+        -unit String
+        -price double
+        -currency Currency
+        +Product(id int, description String, unit String, price double, currency Currency)
+        +setPrice(price double) void
+        +setCurrency(currency Currency) void
+    }
+
+    class Currency {
+        <<enumeration>>
+        EURO
+        DOLLAR
+    }
+
+    class Goods {
+        -classOfGoods ClassOfGoods
+        +Goods(id int, description String, unit String, price double, currency Currency, classOfGoods ClassOfGoods)
+    }
+
+    class Item {
+        -goods Goods
+        -amount int
+        +Item(goods Goods, amount int)
+        +setAmount(amount int) void
+        +getSubTotal() double
+    }
+
+    class ShoppingCart {
+        -items ArrayList~Item~
+        +ShoppingCart()
+        +createItem(goods Goods, amount int) void
+        +getTotal() double
+    }
+
+    class ClassOfGoods {
+        BAKERY_PRODUCTS = Backwaren
+        DAIRY_PRODUCTS = Milchprodukte
+        FRUITS = Obst
+        VEGETABLES = Gemüse
+        -description String
+    }
+
+    class CashierSystem {
+        -name String
+        -goods ArrayList~Goods~
+        -cashiers ArrayList~Cashier~
+        -shoppingCart ShoppingCart
+        -cashier Cashier
+        +CashierSystem(name String)
+        +addGoods(goods Goods) void
+        +addCashier(cahier Cashier) void
+        +login(id int) void
+        +createShoppingCart() void
+        +addItem(id int, amount int) void
+        +printBon() void
+    }
+
+    class Cashier {
+        -id int
+        -name String
+        +Cashier(name String, id int)
+    }
+```
 
 ## Allgemeine Hinweise
 
