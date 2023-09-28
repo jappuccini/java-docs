@@ -1,6 +1,6 @@
-import React from "react";
-import Slides from "../../../components/Slides";
-import { defaultInitSlides } from "../../../components/Slides/initSlides";
+import React from 'react';
+import Slides from '../../../components/Slides';
+import { defaultInitSlides } from '../../../components/Slides/initSlides';
 
 export default function Lambda() {
   return (
@@ -49,14 +49,14 @@ export default function Lambda() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public class HumanComparator {\n" +
-                  " //...\n" +
-                  " public static class AgeDescComparator \n" +
-                  "   implements Comparator&lt;Human&gt; {\n" +
-                  "   //...\n" +
-                  " }\n" +
-                  " //...\n" +
-                  "}\n",
+                  'public class HumanComparator {\n' +
+                  ' //...\n' +
+                  ' public static class AgeDescComparator \n' +
+                  '   implements Comparator&lt;Human&gt; {\n' +
+                  '   //...\n' +
+                  ' }\n' +
+                  ' //...\n' +
+                  '}\n',
               }}
             ></code>
           </pre>
@@ -68,12 +68,12 @@ export default function Lambda() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "ArrayList&lt;Human&gt; humans = new ArrayList&lt;&gt;();\n" +
-                  "\n" +
-                  "HumanComparator.AgeDescComparator comparator;\n" +
-                  "comparator = new HumanComparator.AgeDescComparator();\n" +
-                  "\n" +
-                  "Collections.sort(humans, comparator);\n",
+                  'ArrayList&lt;Human&gt; humans = new ArrayList&lt;&gt;();\n' +
+                  '\n' +
+                  'HumanComparator.AgeDescComparator comparator;\n' +
+                  'comparator = new HumanComparator.AgeDescComparator();\n' +
+                  '\n' +
+                  'Collections.sort(humans, comparator);\n',
               }}
             ></code>
           </pre>
@@ -88,14 +88,14 @@ export default function Lambda() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public class HumanComparator {\n" +
-                  " //...\n" +
-                  " public class AgeDescComparator \n" +
-                  "   implements Comparator&lt;Human&gt; {\n" +
-                  "   //...\n" +
-                  " }\n" +
-                  " //...\n" +
-                  "}\n",
+                  'public class HumanComparator {\n' +
+                  ' //...\n' +
+                  ' public class AgeDescComparator \n' +
+                  '   implements Comparator&lt;Human&gt; {\n' +
+                  '   //...\n' +
+                  ' }\n' +
+                  ' //...\n' +
+                  '}\n',
               }}
             ></code>
           </pre>
@@ -107,11 +107,11 @@ export default function Lambda() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "ArrayList&lt;Human&gt; humans = new ArrayList&lt;&gt;();\n" +
-                  "\n" +
-                  "HumanComparator humanComparator = new HumanComparator();\n" +
-                  "\n" +
-                  "Collections.sort(humans, humanComparator.new AgeDescComparator());\n",
+                  'ArrayList&lt;Human&gt; humans = new ArrayList&lt;&gt;();\n' +
+                  '\n' +
+                  'HumanComparator humanComparator = new HumanComparator();\n' +
+                  '\n' +
+                  'Collections.sort(humans, humanComparator.new AgeDescComparator());\n',
               }}
             ></code>
           </pre>
@@ -128,14 +128,14 @@ export default function Lambda() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  " //...\n" +
-                  " public static void main(String[] args) {\n" +
-                  "   class AgeDescComparator implements Comparator&lt;Human&gt; {\n" +
-                  "     //...\n" +
-                  "   }\n" +
-                  "   AgeDescComparator comparator = new AgeDescComparator();\n" +
-                  " }\n" +
-                  " //...\n",
+                  ' //...\n' +
+                  ' public static void main(String[] args) {\n' +
+                  '   class AgeDescComparator implements Comparator&lt;Human&gt; {\n' +
+                  '     //...\n' +
+                  '   }\n' +
+                  '   AgeDescComparator comparator = new AgeDescComparator();\n' +
+                  ' }\n' +
+                  ' //...\n',
               }}
             ></code>
           </pre>
@@ -151,11 +151,11 @@ export default function Lambda() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "Collections.sort(humans, new Comparator&lt;Human&gt;() {\n" +
-                  "  public int compare(Human h1, Human h2) {\n" +
-                  "    // Implementierung der Comparatorlogik\n" +
-                  "  }\n" +
-                  "});\n",
+                  'Collections.sort(humans, new Comparator&lt;Human&gt;() {\n' +
+                  '  public int compare(Human h1, Human h2) {\n' +
+                  '    // Implementierung der Comparatorlogik\n' +
+                  '  }\n' +
+                  '});\n',
               }}
             ></code>
           </pre>
@@ -192,11 +192,11 @@ export default function Lambda() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public class Main {\n" +
-                  "  public static void main(String[] args) {\n" +
-                  "    BinaryOperator&lt;Integer&gt; add = (x, y) -> x + y;\n" +
-                  "  }\n" +
-                  "}\n",
+                  'public class Main {\n' +
+                  '  public static void main(String[] args) {\n' +
+                  '    BinaryOperator&lt;Integer&gt; add = (x, y) -> x + y;\n' +
+                  '  }\n' +
+                  '}\n',
               }}
             ></code>
           </pre>
@@ -216,11 +216,11 @@ export default function Lambda() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public class Main {\n" +
-                  "  public static void main(String[] args) {\n" +
-                  "    BinaryOperator&lt;Integer&gt; add = (x, y) -> x + y;\n" +
-                  "  }\n" +
-                  "}\n",
+                  'public class Main {\n' +
+                  '  public static void main(String[] args) {\n' +
+                  '    BinaryOperator&lt;Integer&gt; add = (x, y) -> x + y;\n' +
+                  '  }\n' +
+                  '}\n',
               }}
             ></code>
           </pre>
@@ -229,14 +229,14 @@ export default function Lambda() {
           <h2>Nicht Funktionales Interface</h2>
           <p className="fragment">
             Nicht jedes Interface mit einer einzigen abstrakten Methode ist
-            funktional, z.B.{" "}
+            funktional, z.B.{' '}
             <a href=" https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html">
               Comparable
             </a>
           </p>
           <p className="fragment">
             Funktionale Interfaces werden mit @FunctionalInterface markiert,
-            z.B.{" "}
+            z.B.{' '}
             <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html">
               Comparator
             </a>
@@ -246,10 +246,10 @@ export default function Lambda() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "@FunctionalInterface\n" +
-                  "public interface NameChangesConsumer {\n" +
-                  "  public void nameChanges(String changedName);\n" +
-                  "}\n",
+                  '@FunctionalInterface\n' +
+                  'public interface NameChangesConsumer {\n' +
+                  '  public void nameChanges(String changedName);\n' +
+                  '}\n',
               }}
             ></code>
           </pre>
@@ -265,9 +265,9 @@ export default function Lambda() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "shoppingList.cleared(() -&gt; {\n" +
+                  'shoppingList.cleared(() -&gt; {\n' +
                   '  System.out.println("Liste wurde geleert.");\n' +
-                  "});\n",
+                  '});\n',
               }}
             ></code>
           </pre>
@@ -283,9 +283,9 @@ export default function Lambda() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "shoppingList.itemAdded(item -&gt; {\n" +
+                  'shoppingList.itemAdded(item -&gt; {\n' +
                   '  System.out.println(item.getName() + " wurde hinzugefügt.");\n' +
-                  "});\n",
+                  '});\n',
               }}
             ></code>
           </pre>
@@ -301,10 +301,10 @@ export default function Lambda() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "shoppingList.getData((int sum, int count) -&gt; {\n" +
+                  'shoppingList.getData((int sum, int count) -&gt; {\n' +
                   '  System.out.println("Warenwert: " + sum);\n' +
                   '  System.out.println("Artikelanzahl: " + count);\n' +
-                  "});\n",
+                  '});\n',
               }}
             ></code>
           </pre>
@@ -320,10 +320,10 @@ export default function Lambda() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "shoppingList.getData((int sum, int count) -&gt; {\n" +
+                  'shoppingList.getData((int sum, int count) -&gt; {\n' +
                   '  System.out.println("Warenwert: " + sum);\n' +
                   '  System.out.println("Artikelanzahl: " + count);\n' +
-                  "});\n",
+                  '});\n',
               }}
             ></code>
           </pre>
@@ -339,9 +339,9 @@ export default function Lambda() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "shoppingList.getData((int sum, int count) -&gt; \n" +
+                  'shoppingList.getData((int sum, int count) -&gt; \n' +
                   '  System.out.println("Wert: " + sum + " Anzahl: " + count);\n' +
-                  ");\n",
+                  ');\n',
               }}
             ></code>
           </pre>
@@ -357,7 +357,7 @@ export default function Lambda() {
             <code
               className="java"
               dangerouslySetInnerHTML={{
-                __html: "shoppingList.calculate((int a, int b) -&gt; a + b);\n",
+                __html: 'shoppingList.calculate((int a, int b) -&gt; a + b);\n',
               }}
             ></code>
           </pre>

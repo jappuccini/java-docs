@@ -5,7 +5,7 @@ on:
 jobs:
   ci:
     runs-on: ubuntu-latest
-    name: verify buildable state 
+    name: verify buildable state
     steps:
       - name: checkout repository
         uses: actions/checkout@v2

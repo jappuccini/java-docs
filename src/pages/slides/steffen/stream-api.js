@@ -1,7 +1,7 @@
-import React from "react";
-import Slides from "../../../components/Slides";
-import { NKR } from "../../../components/Slides/nkr";
-import { defaultInitSlides } from "../../../components/Slides/initSlides";
+import React from 'react';
+import Slides from '../../../components/Slides';
+import { NKR } from '../../../components/Slides/nkr';
+import { defaultInitSlides } from '../../../components/Slides/initSlides';
 
 export default function StreamApi() {
   return (
@@ -94,9 +94,9 @@ export default function StreamApi() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public interface Consumer&lt;T&gt; {\n" +
-                  "  public void accept(T t);\n" +
-                  "}\n",
+                  'public interface Consumer&lt;T&gt; {\n' +
+                  '  public void accept(T t);\n' +
+                  '}\n',
               }}
             ></code>
           </pre>
@@ -105,9 +105,9 @@ export default function StreamApi() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public interface BiConsumer&lt;T, U&gt; {\n" +
-                  "  public void accept(T t, U u);\n" +
-                  "}\n",
+                  'public interface BiConsumer&lt;T, U&gt; {\n' +
+                  '  public void accept(T t, U u);\n' +
+                  '}\n',
               }}
             ></code>
           </pre>
@@ -120,9 +120,9 @@ export default function StreamApi() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public interface Function&lt;T, R&gt; {\n" +
-                  "  public R apply(T t);\n" +
-                  "}\n",
+                  'public interface Function&lt;T, R&gt; {\n' +
+                  '  public R apply(T t);\n' +
+                  '}\n',
               }}
             ></code>
           </pre>
@@ -131,9 +131,9 @@ export default function StreamApi() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public interface BiFunction&lt;T, U, R&gt; {\n" +
-                  "  public R apply(T t, U u);\n" +
-                  "}\n",
+                  'public interface BiFunction&lt;T, U, R&gt; {\n' +
+                  '  public R apply(T t, U u);\n' +
+                  '}\n',
               }}
             ></code>
           </pre>
@@ -142,9 +142,9 @@ export default function StreamApi() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public interface UnaryOperator&lt;T&gt; {\n" +
-                  "  public T apply(T t);\n" +
-                  "}\n",
+                  'public interface UnaryOperator&lt;T&gt; {\n' +
+                  '  public T apply(T t);\n' +
+                  '}\n',
               }}
             ></code>
           </pre>
@@ -153,9 +153,9 @@ export default function StreamApi() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public interface BinaryOperator&lt;T&gt; {\n" +
-                  "  public T apply(T t1, T t2);\n" +
-                  "}\n",
+                  'public interface BinaryOperator&lt;T&gt; {\n' +
+                  '  public T apply(T t1, T t2);\n' +
+                  '}\n',
               }}
             ></code>
           </pre>
@@ -168,9 +168,9 @@ export default function StreamApi() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public interface Predicate&lt;T&gt; {\n" +
-                  "  public boolean test(T t);\n" +
-                  "}\n",
+                  'public interface Predicate&lt;T&gt; {\n' +
+                  '  public boolean test(T t);\n' +
+                  '}\n',
               }}
             ></code>
           </pre>
@@ -185,9 +185,9 @@ export default function StreamApi() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public interface Supplier&lt;T&gt; {\n" +
-                  "  public T get();\n" +
-                  "}\n",
+                  'public interface Supplier&lt;T&gt; {\n' +
+                  '  public T get();\n' +
+                  '}\n',
               }}
             ></code>
           </pre>
@@ -234,17 +234,17 @@ export default function StreamApi() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public class Main {\n" +
-                  "  public static void main(String[] args) {\n" +
-                  "    ArrayList&lt;String&gt; names = new ArrayList&lt;&gt;()\n" +
-                  "    \n" +
-                  "    // lambda funktion\n" +
-                  "    names.forEach((name) -&gt System.out.println(name));\n" +
-                  "    \n" +
-                  "    // methodenreferenz\n" +
-                  "    names.forEach(System.out::println);\n" +
-                  " }\n" +
-                  "}\n",
+                  'public class Main {\n' +
+                  '  public static void main(String[] args) {\n' +
+                  '    ArrayList&lt;String&gt; names = new ArrayList&lt;&gt;()\n' +
+                  '    \n' +
+                  '    // lambda funktion\n' +
+                  '    names.forEach((name) -&gt System.out.println(name));\n' +
+                  '    \n' +
+                  '    // methodenreferenz\n' +
+                  '    names.forEach(System.out::println);\n' +
+                  ' }\n' +
+                  '}\n',
               }}
             ></code>
           </pre>
@@ -288,17 +288,17 @@ export default function StreamApi() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public class Main {\n" +
-                  "  public static void main(String[] args) {\n" +
-                  "    ArrayList&lt;String&gt; names = new ArrayList&lt;&gt;()\n" +
-                  "    \n" +
-                  "    names.stream() // source\n" +
-                  "      .filter(name -&gt; name.length > 4) //inter-\n" +
-                  "      .map(name -&gt; name.toUpperCase()) //mediate\n" +
-                  "      .limit(12)                      //operations\n" +
-                  "      .forEach(System.out::println) // terminal operation\n" +
-                  "  }\n" +
-                  "}\n",
+                  'public class Main {\n' +
+                  '  public static void main(String[] args) {\n' +
+                  '    ArrayList&lt;String&gt; names = new ArrayList&lt;&gt;()\n' +
+                  '    \n' +
+                  '    names.stream() // source\n' +
+                  '      .filter(name -&gt; name.length > 4) //inter-\n' +
+                  '      .map(name -&gt; name.toUpperCase()) //mediate\n' +
+                  '      .limit(12)                      //operations\n' +
+                  '      .forEach(System.out::println) // terminal operation\n' +
+                  '  }\n' +
+                  '}\n',
               }}
             ></code>
           </pre>
@@ -350,19 +350,19 @@ export default function StreamApi() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public class Main {\n" +
-                  "  public static void main(String[] args) {\n" +
-                  "    // Collection.stream(); // interface\n" +
-                  "    // --> Klassen die Collection implementieren:\n" +
-                  "    ArrayList&lt;Student&gt; students = new ArrayList&lt;&gt;();\n" +
-                  "    students.stream();\n" +
-                  "    \n" +
-                  "    HashMap&lt;String, Student&gt; map = new HashMap&lt;&gt;();\n" +
-                  "    map.keySet().stream();\n" +
-                  "    map.entrySet().stream();\n" +
-                  "    map.values().stream();\n" +
-                  "  }\n" +
-                  "}\n",
+                  'public class Main {\n' +
+                  '  public static void main(String[] args) {\n' +
+                  '    // Collection.stream(); // interface\n' +
+                  '    // --> Klassen die Collection implementieren:\n' +
+                  '    ArrayList&lt;Student&gt; students = new ArrayList&lt;&gt;();\n' +
+                  '    students.stream();\n' +
+                  '    \n' +
+                  '    HashMap&lt;String, Student&gt; map = new HashMap&lt;&gt;();\n' +
+                  '    map.keySet().stream();\n' +
+                  '    map.entrySet().stream();\n' +
+                  '    map.values().stream();\n' +
+                  '  }\n' +
+                  '}\n',
               }}
             ></code>
           </pre>
@@ -374,16 +374,16 @@ export default function StreamApi() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public class Main {\n" +
-                  "  public static void main(String[] args) {\n" +
-                  "    // Array in ein Stream konvertieren:\n" +
-                  "    // Arrays.stream(T[])\n" +
-                  "    Stream&lt;Integer&gt; num1 = Arrays.stream({ 1, 2, 3, 4 });\n" +
-                  "    \n" +
-                  "    int[] numArray = { 1, 2, 3, 4 };\n" +
-                  "    Stream&lt;Integer&gt; num2 = Arrays.stream(numArray);\n" +
-                  "  }\n" +
-                  "}\n",
+                  'public class Main {\n' +
+                  '  public static void main(String[] args) {\n' +
+                  '    // Array in ein Stream konvertieren:\n' +
+                  '    // Arrays.stream(T[])\n' +
+                  '    Stream&lt;Integer&gt; num1 = Arrays.stream({ 1, 2, 3, 4 });\n' +
+                  '    \n' +
+                  '    int[] numArray = { 1, 2, 3, 4 };\n' +
+                  '    Stream&lt;Integer&gt; num2 = Arrays.stream(numArray);\n' +
+                  '  }\n' +
+                  '}\n',
               }}
             ></code>
           </pre>
@@ -395,13 +395,13 @@ export default function StreamApi() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public class Main {\n" +
-                  "  public static void main(String[] args) {\n" +
-                  "    // Gleichartige Werte in ein Stream kovertieren:\n" +
-                  "    // Stream.of(T...);\n" +
-                  "    Stream&lt;Integer&gt; num1 = Stream.of(1, 2, 3, 4);\n" +
-                  "  }\n" +
-                  "}\n",
+                  'public class Main {\n' +
+                  '  public static void main(String[] args) {\n' +
+                  '    // Gleichartige Werte in ein Stream kovertieren:\n' +
+                  '    // Stream.of(T...);\n' +
+                  '    Stream&lt;Integer&gt; num1 = Stream.of(1, 2, 3, 4);\n' +
+                  '  }\n' +
+                  '}\n',
               }}
             ></code>
           </pre>
@@ -431,15 +431,15 @@ export default function StreamApi() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "Stream&lt;T&gt; filter(Predicate&lt;? super T&gt; predicate)",
+                  'Stream&lt;T&gt; filter(Predicate&lt;? super T&gt; predicate)',
               }}
             ></code>
           </pre>
           <p className="fragment">
-            Der Parameter predicate muss das{" "}
+            Der Parameter predicate muss das{' '}
             <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html">
               Predicate Interface
-            </a>{" "}
+            </a>{' '}
             implementieren.
           </p>
         </section>
@@ -450,13 +450,13 @@ export default function StreamApi() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public class Main {\n" +
-                  "  public static void main(String[] args) {\n" +
-                  "    Stream.of(1, 2, 3, 4)\n" +
-                  "      .filter(number -> number > 3);\n" +
-                  "      // nur 4 bleibt übrig\n" +
-                  "  }\n" +
-                  "}\n",
+                  'public class Main {\n' +
+                  '  public static void main(String[] args) {\n' +
+                  '    Stream.of(1, 2, 3, 4)\n' +
+                  '      .filter(number -> number > 3);\n' +
+                  '      // nur 4 bleibt übrig\n' +
+                  '  }\n' +
+                  '}\n',
               }}
             ></code>
           </pre>
@@ -468,15 +468,15 @@ export default function StreamApi() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "&lt;R&gt; Stream&lt;R&gt; map(Function&lt;? super T,? extends R&gt; mapper)",
+                  '&lt;R&gt; Stream&lt;R&gt; map(Function&lt;? super T,? extends R&gt; mapper)',
               }}
             ></code>
           </pre>
           <p className="fragment">
-            Der Parameter mapper muss das{" "}
+            Der Parameter mapper muss das{' '}
             <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html">
               Function Interface
-            </a>{" "}
+            </a>{' '}
             implementieren.
           </p>
           <p className="fragment">
@@ -492,16 +492,16 @@ export default function StreamApi() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public class Main {\n" +
-                  "  public static void main(String[] args) {\n" +
-                  "    Stream.of(1, 2, 3, 4)\n" +
-                  "      .map(number -> number * 2);\n" +
-                  "    // Rückgabetyp: Stream&lt;Integer&gt;\n" +
-                  "    Stream.of(1, 2, 3, 4)\n" +
-                  "      .map(number -> String.valueOf(number));\n" +
-                  "    // Rückgabetyp: Stream&lt;String&gt;\n" +
-                  "  }\n" +
-                  "}\n",
+                  'public class Main {\n' +
+                  '  public static void main(String[] args) {\n' +
+                  '    Stream.of(1, 2, 3, 4)\n' +
+                  '      .map(number -> number * 2);\n' +
+                  '    // Rückgabetyp: Stream&lt;Integer&gt;\n' +
+                  '    Stream.of(1, 2, 3, 4)\n' +
+                  '      .map(number -> String.valueOf(number));\n' +
+                  '    // Rückgabetyp: Stream&lt;String&gt;\n' +
+                  '  }\n' +
+                  '}\n',
               }}
             ></code>
           </pre>
@@ -512,7 +512,7 @@ export default function StreamApi() {
             <code
               className="java"
               dangerouslySetInnerHTML={{
-                __html: "Stream&lt;T&gt; limit(long maxSize)",
+                __html: 'Stream&lt;T&gt; limit(long maxSize)',
               }}
             ></code>
           </pre>
@@ -528,13 +528,13 @@ export default function StreamApi() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public class Main {\n" +
-                  "  public static void main(String[] args) {\n" +
-                  "    Stream.of(1, 2, 3, 4)\n" +
-                  "      .limit(2);\n" +
-                  "      // nur 1 & 2 werden weitergegeben\n" +
-                  "  }\n" +
-                  "}\n",
+                  'public class Main {\n' +
+                  '  public static void main(String[] args) {\n' +
+                  '    Stream.of(1, 2, 3, 4)\n' +
+                  '      .limit(2);\n' +
+                  '      // nur 1 & 2 werden weitergegeben\n' +
+                  '  }\n' +
+                  '}\n',
               }}
             ></code>
           </pre>
@@ -545,7 +545,7 @@ export default function StreamApi() {
             <code
               className="java"
               dangerouslySetInnerHTML={{
-                __html: "Stream&lt;T&gt; skip(long n)",
+                __html: 'Stream&lt;T&gt; skip(long n)',
               }}
             ></code>
           </pre>
@@ -558,13 +558,13 @@ export default function StreamApi() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public class Main {\n" +
-                  "  public static void main(String[] args) {\n" +
-                  "    Stream.of(1, 2, 3, 4)\n" +
-                  "      .skip(2);\n" +
-                  "      // nur 3 & 4 werden weitergegeben\n" +
-                  "  }\n" +
-                  "}\n",
+                  'public class Main {\n' +
+                  '  public static void main(String[] args) {\n' +
+                  '    Stream.of(1, 2, 3, 4)\n' +
+                  '      .skip(2);\n' +
+                  '      // nur 3 & 4 werden weitergegeben\n' +
+                  '  }\n' +
+                  '}\n',
               }}
             ></code>
           </pre>
@@ -576,15 +576,15 @@ export default function StreamApi() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "Stream&lt;T&gt; sorted(Comparator&lt;? super T&gt; comparator)",
+                  'Stream&lt;T&gt; sorted(Comparator&lt;? super T&gt; comparator)',
               }}
             ></code>
           </pre>
           <p className="fragment">
-            Der Parameter comparator muss das{" "}
+            Der Parameter comparator muss das{' '}
             <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html">
               Comparator Interface
-            </a>{" "}
+            </a>{' '}
             implementieren.
           </p>
         </section>
@@ -595,14 +595,14 @@ export default function StreamApi() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public class Main {\n" +
-                  "  public static void main(String[] args) {\n" +
-                  "    Stream.of(4, 3, 2, 1)\n" +
-                  "      .sorted((n1, n2) -> Integer.compare(n1, n2));\n" +
-                  "      // 1, 2, 3, 4\n" +
-                  "      // Sagt Bye Bye zu Collections.sort()\n" +
-                  "  }\n" +
-                  "}\n",
+                  'public class Main {\n' +
+                  '  public static void main(String[] args) {\n' +
+                  '    Stream.of(4, 3, 2, 1)\n' +
+                  '      .sorted((n1, n2) -> Integer.compare(n1, n2));\n' +
+                  '      // 1, 2, 3, 4\n' +
+                  '      // Sagt Bye Bye zu Collections.sort()\n' +
+                  '  }\n' +
+                  '}\n',
               }}
             ></code>
           </pre>
@@ -613,7 +613,7 @@ export default function StreamApi() {
             <code
               className="java"
               dangerouslySetInnerHTML={{
-                __html: "Stream&lt;T&gt; distinct()",
+                __html: 'Stream&lt;T&gt; distinct()',
               }}
             ></code>
           </pre>
@@ -629,13 +629,13 @@ export default function StreamApi() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public class Main {\n" +
-                  "  public static void main(String[] args) {\n" +
-                  "    Stream.of(1, 2, 1, 4)\n" +
-                  "      .distinct();\n" +
-                  "      // nur 1, 2 & 4 werden weitergegeben\n" +
-                  "  }\n" +
-                  "}\n",
+                  'public class Main {\n' +
+                  '  public static void main(String[] args) {\n' +
+                  '    Stream.of(1, 2, 1, 4)\n' +
+                  '      .distinct();\n' +
+                  '      // nur 1, 2 & 4 werden weitergegeben\n' +
+                  '  }\n' +
+                  '}\n',
               }}
             ></code>
           </pre>
@@ -685,9 +685,9 @@ export default function StreamApi() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "boolean  allMatch(Predicate&lt;T&gt; predicate) // alle\n" +
-                  "boolean noneMatch(Predicate&lt;T&gt; predicate) // keiner\n" +
-                  "boolean  anyMatch(Predicate&lt;T&gt; predicate) // mindestens einer\n",
+                  'boolean  allMatch(Predicate&lt;T&gt; predicate) // alle\n' +
+                  'boolean noneMatch(Predicate&lt;T&gt; predicate) // keiner\n' +
+                  'boolean  anyMatch(Predicate&lt;T&gt; predicate) // mindestens einer\n',
               }}
             ></code>
           </pre>
@@ -699,18 +699,18 @@ export default function StreamApi() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public class Main {\n" +
-                  "  public static void main(String[] args) {\n" +
-                  "    Stream.of(1, 2, 3, 4)\n" +
-                  "      .allMatch(number -> number > 3); // false\n" +
-                  "    \n" +
-                  "    Stream.of(1, 2, 3, 4)\n" +
-                  "      .noneMatch(number -> number > 4); // true\n" +
-                  "    \n" +
-                  "    Stream.of(1, 2, 3, 4)\n" +
-                  "      .anyMatch(number -> number > 2); // true\n" +
-                  "  }\n" +
-                  "}\n",
+                  'public class Main {\n' +
+                  '  public static void main(String[] args) {\n' +
+                  '    Stream.of(1, 2, 3, 4)\n' +
+                  '      .allMatch(number -> number > 3); // false\n' +
+                  '    \n' +
+                  '    Stream.of(1, 2, 3, 4)\n' +
+                  '      .noneMatch(number -> number > 4); // true\n' +
+                  '    \n' +
+                  '    Stream.of(1, 2, 3, 4)\n' +
+                  '      .anyMatch(number -> number > 2); // true\n' +
+                  '  }\n' +
+                  '}\n',
               }}
             ></code>
           </pre>
@@ -729,8 +729,8 @@ export default function StreamApi() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "Optional&lt;T&gt; findAny() // nicht deterministisch\n" +
-                  "Optional&lt;T&gt; findFirst() // deterministisch\n",
+                  'Optional&lt;T&gt; findAny() // nicht deterministisch\n' +
+                  'Optional&lt;T&gt; findFirst() // deterministisch\n',
               }}
             ></code>
           </pre>
@@ -743,17 +743,17 @@ export default function StreamApi() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public class Main {\n" +
-                  "  public static void main(String[] args) {\n" +
-                  "    Stream.of(1, 2, 3, 4)\n" +
-                  "      .filter(number -> number > 1)\n" +
-                  "      .findAny() // 2, 3 oder 4\n" +
-                  "    \n" +
-                  "    Stream.of(1, 2, 3, 4)\n" +
-                  "      .filter(number -> number > 1)\n" +
-                  "      .findFirst() // immer 2\n" +
-                  "  }\n" +
-                  "}\n",
+                  'public class Main {\n' +
+                  '  public static void main(String[] args) {\n' +
+                  '    Stream.of(1, 2, 3, 4)\n' +
+                  '      .filter(number -> number > 1)\n' +
+                  '      .findAny() // 2, 3 oder 4\n' +
+                  '    \n' +
+                  '    Stream.of(1, 2, 3, 4)\n' +
+                  '      .filter(number -> number > 1)\n' +
+                  '      .findFirst() // immer 2\n' +
+                  '  }\n' +
+                  '}\n',
               }}
             ></code>
           </pre>
@@ -769,12 +769,12 @@ export default function StreamApi() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "List&lt;T&gt; toList()\n" +
-                  "T[] toArray()\n" +
-                  "\n" +
-                  "T reduce(T identity, BinaryOperator&lt;T&gt; accumulator)\n" +
-                  "\n" +
-                  "R collect(Collector&lt;T,A,R&gt; collector)\n",
+                  'List&lt;T&gt; toList()\n' +
+                  'T[] toArray()\n' +
+                  '\n' +
+                  'T reduce(T identity, BinaryOperator&lt;T&gt; accumulator)\n' +
+                  '\n' +
+                  'R collect(Collector&lt;T,A,R&gt; collector)\n',
               }}
             ></code>
           </pre>
@@ -786,17 +786,17 @@ export default function StreamApi() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public class Main {\n" +
-                  "  public static void main(String[] args) {\n" +
-                  "    List&lt;Integer&gt; nums = Stream.of(1, 2, 3, 4)\n" +
-                  "      .filter(number -> number > 1)\n" +
-                  "      .toList() // List&lt;Integer&gt;\n" +
-                  "    \n" +
-                  "    Object[] nums2 = Stream.of(1, 2, 3, 4)\n" +
-                  "      .filter(number -> number > 1)\n" +
-                  "      .toArray() // Object[]\n" +
-                  "  }\n" +
-                  "}\n",
+                  'public class Main {\n' +
+                  '  public static void main(String[] args) {\n' +
+                  '    List&lt;Integer&gt; nums = Stream.of(1, 2, 3, 4)\n' +
+                  '      .filter(number -> number > 1)\n' +
+                  '      .toList() // List&lt;Integer&gt;\n' +
+                  '    \n' +
+                  '    Object[] nums2 = Stream.of(1, 2, 3, 4)\n' +
+                  '      .filter(number -> number > 1)\n' +
+                  '      .toArray() // Object[]\n' +
+                  '  }\n' +
+                  '}\n',
               }}
             ></code>
           </pre>
@@ -808,12 +808,12 @@ export default function StreamApi() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public class Main {\n" +
-                  "  public static void main(String[] args) {\n" +
-                  "    Stream.of(1, 2, 3, 4)\n" +
-                  "      .reduce(0, (a, b) -> a + b);  // int *NKR\n" +
-                  "  }\n" +
-                  "}\n",
+                  'public class Main {\n' +
+                  '  public static void main(String[] args) {\n' +
+                  '    Stream.of(1, 2, 3, 4)\n' +
+                  '      .reduce(0, (a, b) -> a + b);  // int *NKR\n' +
+                  '  }\n' +
+                  '}\n',
               }}
             ></code>
           </pre>
@@ -825,15 +825,15 @@ export default function StreamApi() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public class Main {\n" +
-                  "  public static void main(String[] args) {\n" +
-                  "    ArrayList&lt;Student&gt; students = getManyStudents()\n" +
-                  "      .stream()\n" +
-                  "      .collect(Collectors.toList());\n" +
-                  "      // Collectors.toMap ist Klausurrelevant\n" +
-                  "      // Collectors.groupingBy ist Klausurrelevant\n" +
-                  "  }\n" +
-                  "}\n",
+                  'public class Main {\n' +
+                  '  public static void main(String[] args) {\n' +
+                  '    ArrayList&lt;Student&gt; students = getManyStudents()\n' +
+                  '      .stream()\n' +
+                  '      .collect(Collectors.toList());\n' +
+                  '      // Collectors.toMap ist Klausurrelevant\n' +
+                  '      // Collectors.groupingBy ist Klausurrelevant\n' +
+                  '  }\n' +
+                  '}\n',
               }}
             ></code>
           </pre>
@@ -864,10 +864,10 @@ export default function StreamApi() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "long count()\n" +
-                  "\n" +
-                  "Optional&lt;T&gt; min(Comparator&lt;T&gt;)\n" +
-                  "Optional&lt;T&gt; max(Comparator&lt;T&gt;)\n",
+                  'long count()\n' +
+                  '\n' +
+                  'Optional&lt;T&gt; min(Comparator&lt;T&gt;)\n' +
+                  'Optional&lt;T&gt; max(Comparator&lt;T&gt;)\n',
               }}
             ></code>
           </pre>
@@ -879,12 +879,12 @@ export default function StreamApi() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public class Main {\n" +
-                  "  public static void main(String[] args) {\n" +
-                  "    Stream.of(1, 2, 3, 4)\n" +
-                  "      .count(); // 4\n" +
-                  "  }\n" +
-                  "}\n",
+                  'public class Main {\n' +
+                  '  public static void main(String[] args) {\n' +
+                  '    Stream.of(1, 2, 3, 4)\n' +
+                  '      .count(); // 4\n' +
+                  '  }\n' +
+                  '}\n',
               }}
             ></code>
           </pre>
@@ -896,14 +896,14 @@ export default function StreamApi() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public class Main {\n" +
-                  "  public static void main(String[] args) {\n" +
-                  "    Optional&lt;Integer&gt; min = Stream.of(1, 2, 3, 4)\n" +
-                  "      .min((n1, n2) -> Integer.compare(n1, n2));\n" +
-                  "    \n" +
-                  "    min.ifPresent(System.out::println); // 1\n" +
-                  "  }\n" +
-                  "}\n",
+                  'public class Main {\n' +
+                  '  public static void main(String[] args) {\n' +
+                  '    Optional&lt;Integer&gt; min = Stream.of(1, 2, 3, 4)\n' +
+                  '      .min((n1, n2) -> Integer.compare(n1, n2));\n' +
+                  '    \n' +
+                  '    min.ifPresent(System.out::println); // 1\n' +
+                  '  }\n' +
+                  '}\n',
               }}
             ></code>
           </pre>
@@ -915,14 +915,14 @@ export default function StreamApi() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public class Main {\n" +
-                  "  public static void main(String[] args) {\n" +
-                  "    Optional&lt;Integer&gt; max = Stream.of(1, 2, 3, 4)\n" +
-                  "      .max((n1, n2) -> Integer.compare(n1, n2));\n" +
-                  "    \n" +
-                  "    max.ifPresent(System.out::println); // 4\n" +
-                  "  }\n" +
-                  "}\n",
+                  'public class Main {\n' +
+                  '  public static void main(String[] args) {\n' +
+                  '    Optional&lt;Integer&gt; max = Stream.of(1, 2, 3, 4)\n' +
+                  '      .max((n1, n2) -> Integer.compare(n1, n2));\n' +
+                  '    \n' +
+                  '    max.ifPresent(System.out::println); // 4\n' +
+                  '  }\n' +
+                  '}\n',
               }}
             ></code>
           </pre>
@@ -950,9 +950,9 @@ export default function StreamApi() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "DoubleStream mapToDouble(ToDoubleFunction&lt;T&gt; mapper)\n" +
-                  "IntStream    mapToInt(ToIntFunction&lt;T&gt; mapper)\n" +
-                  "LongStream   mapToLong(ToLongFunction&lt;T&gt; mapper)\n",
+                  'DoubleStream mapToDouble(ToDoubleFunction&lt;T&gt; mapper)\n' +
+                  'IntStream    mapToInt(ToIntFunction&lt;T&gt; mapper)\n' +
+                  'LongStream   mapToLong(ToLongFunction&lt;T&gt; mapper)\n',
               }}
             ></code>
           </pre>
@@ -964,13 +964,13 @@ export default function StreamApi() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public class Main {\n" +
-                  "  public static void main(String[] args) {\n" +
-                  "    ArrayList&lt;Student&gt; students = getManyStudents();\n" +
-                  "    IntStream studentAges = students.stream()\n" +
-                  "      .mapToInt(student -> student.age());\n" +
-                  "  }\n" +
-                  "}\n",
+                  'public class Main {\n' +
+                  '  public static void main(String[] args) {\n' +
+                  '    ArrayList&lt;Student&gt; students = getManyStudents();\n' +
+                  '    IntStream studentAges = students.stream()\n' +
+                  '      .mapToInt(student -> student.age());\n' +
+                  '  }\n' +
+                  '}\n',
               }}
             ></code>
           </pre>
@@ -982,9 +982,9 @@ export default function StreamApi() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "long sum()\n" +
-                  "                           \n" +
-                  "OptionalDouble average()\n",
+                  'long sum()\n' +
+                  '                           \n' +
+                  'OptionalDouble average()\n',
               }}
             ></code>
           </pre>
@@ -996,12 +996,12 @@ export default function StreamApi() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public class Main {\n" +
-                  "  public static void main(String[] args) {\n" +
-                  "    IntStream manyNumbers = getManyNumbers();\n" +
-                  "    long sum = manyNumbers.sum();\n" +
-                  "  }\n" +
-                  "}\n",
+                  'public class Main {\n' +
+                  '  public static void main(String[] args) {\n' +
+                  '    IntStream manyNumbers = getManyNumbers();\n' +
+                  '    long sum = manyNumbers.sum();\n' +
+                  '  }\n' +
+                  '}\n',
               }}
             ></code>
           </pre>
@@ -1013,13 +1013,13 @@ export default function StreamApi() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public class Main {\n" +
-                  "  public static void main(String[] args) {\n" +
-                  "    IntStream manyNumbers = getManyNumbers();\n" +
-                  "    manyNumbers.average()\n" +
-                  "      .ifPresent(System.out::println);\n" +
-                  "  }\n" +
-                  "}\n",
+                  'public class Main {\n' +
+                  '  public static void main(String[] args) {\n' +
+                  '    IntStream manyNumbers = getManyNumbers();\n' +
+                  '    manyNumbers.average()\n' +
+                  '      .ifPresent(System.out::println);\n' +
+                  '  }\n' +
+                  '}\n',
               }}
             ></code>
           </pre>
@@ -1037,7 +1037,7 @@ export default function StreamApi() {
             <code
               className="java"
               dangerouslySetInnerHTML={{
-                __html: "void forEach(Consumer&lt;T&gt; consumer)\n",
+                __html: 'void forEach(Consumer&lt;T&gt; consumer)\n',
               }}
             ></code>
           </pre>
@@ -1049,17 +1049,17 @@ export default function StreamApi() {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  "public class Main {\n" +
-                  "  public static void main(String[] args) {\n" +
-                  "    Stream.of(1, 2, 3, 4)\n" +
-                  "      .filter(number -> number > 1)\n" +
-                  "      .forEach(System.out::println)\n" +
-                  " \n" +
-                  "    Stream.of(1, 2, 3, 4)\n" +
-                  "      .filter(number -> number > 1)\n" +
-                  "      .forEach(n -> System.out.println(n));\n" +
-                  "  }\n" +
-                  "}\n",
+                  'public class Main {\n' +
+                  '  public static void main(String[] args) {\n' +
+                  '    Stream.of(1, 2, 3, 4)\n' +
+                  '      .filter(number -> number > 1)\n' +
+                  '      .forEach(System.out::println)\n' +
+                  ' \n' +
+                  '    Stream.of(1, 2, 3, 4)\n' +
+                  '      .filter(number -> number > 1)\n' +
+                  '      .forEach(n -> System.out.println(n));\n' +
+                  '  }\n' +
+                  '}\n',
               }}
             ></code>
           </pre>

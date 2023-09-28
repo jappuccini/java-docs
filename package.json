@@ -28,7 +28,8 @@
     "yarn": "^1.22.19"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "^2.4.1"
+    "@docusaurus/module-type-aliases": "^2.4.1",
+    "prettier": "3.0.3"
   },
   "browserslist": {
     "production": [
