@@ -23,7 +23,7 @@ classDiagram
         +addPoints(points int) void
         +deductPoints(points int) void
     }
-    
+
     class Dice {
         +rollTheDice() void
     }
