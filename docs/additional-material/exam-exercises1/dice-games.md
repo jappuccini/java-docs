@@ -8,7 +8,59 @@ Setze das abgebildete Klassendiagramm vollständig um. Erstelle für jedes Würf
 
 ## Klassendiagramm
 
-![image](https://github.com/jappuccini/java-docs/assets/47243617/a06e3130-6378-4a39-b955-7e9947eb6e57)
+```mermaid
+classDiagram
+    Dice <|-- CardColorDice
+    Dice <|-- ValueDice
+    Dice <|-- ShapeSymbolDice
+    CardColorDice o-- CardColor
+    ShapeSymbolDice o-- ShapeSymbol
+
+    class Player {
+        -name String
+        -points int
+        +Player(name String, points int)
+        +addPoints(points int) void
+        +deductPoints(points int) void
+    }
+    
+    class Dice {
+        +rollTheDice() void
+    }
+
+    class CardColorDice {
+        -cardColor CardColor
+        +rollTheDice() void
+    }
+
+    class ValueDice {
+        -value int
+        +rollTheDice() void
+    }
+
+    class ShapeSymbolDice {
+        -shapeSymbol ShapeSymbol
+        +rollTheDice() void
+    }
+
+    class CardColor {
+        <<enumeration>>
+        CLUBS = Kreuz, 1
+        SPADE = Pik, 2
+        HEARTS = Herz, 3
+        DIAMONDS = Karo, 4
+        -description String
+        -priority int
+    }
+
+    class ShapeSymbol {
+        <<enumeration>>
+        CIRCLE = 0
+        SQUARE = 4
+        TRIANGLE = 3
+        -corners int
+    }
+```
 
 ## Allgemeine Hinweise
 
