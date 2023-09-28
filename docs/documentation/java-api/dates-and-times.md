@@ -35,5 +35,7 @@ public class MainClass {
 ```
 
 :::note Hinweis
+
 Der festgelegte Nullpunkt ist der 1. Januar 1970, 0 Uhr.
+
 :::

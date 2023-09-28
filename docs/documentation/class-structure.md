@@ -85,7 +85,9 @@ public class MainClass {
 ```
 
 :::note Hinweis
+
 Die statischen Methoden einer Startklasse werden auch als _Unterprogramme_ bezeichnet.
+
 :::
 
 ## Die main-Methode
@@ -148,5 +150,7 @@ flowchart
 ```
 
 :::note Hinweis
+
 Die Klassen des Entwicklungspaketes `java.lang` müssen nicht importiert werden.
+
 :::

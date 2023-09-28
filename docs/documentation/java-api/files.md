@@ -31,7 +31,9 @@ public class MainClass {
 ```
 
 :::note Hinweis
+
 Nach der letzten Verwendung sollte die Methode `void close()` der Klasse `Scanner` aufgerufen werden.
+
 :::
 
 ## Absolute und relative Pfadangaben
@@ -40,7 +42,9 @@ Beim Zugriff auf Verzeichnisse bzw. Dateien unterscheidet man zwischen absoluten
 einem festgelegten Bezugspunkt bis zum Ziel.
 
 :::note Hinweis
+
 Alle Klassen im Paket `java.io` verwenden als Bezugspunkt das Arbeitsverzeichnis des Benutzers (Systemeigenschaft `user.dir`).
+
 :::
 
 ```mermaid

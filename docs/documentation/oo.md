@@ -20,7 +20,9 @@ flowchart LR
 ```
 
 :::note Hinweis
+
 Jedes Objekt ist eindeutig identifizierbar.
+
 :::
 
 ## Datenkapselung
@@ -104,7 +106,9 @@ public class Foo {
 ```
 
 :::note Hinweis
+
 Die Signatur einer Methode setzt sich aus Methodenname und den Datentypen der Parameterliste zusammen.
+
 :::
 
 ## Deklaration von Referenzvariablen
@@ -121,7 +125,9 @@ flowchart LR
 ```
 
 :::note Hinweis
+
 Der Standarwert von Referenzvariablen ist `null`.
+
 :::
 
 ## Erzeugen von Objekten
@@ -156,7 +162,9 @@ public class MainClass {
 ```
 
 :::danger Hinweis
+
 Nach dem new-Operator muss immer ein Konstruktor der Klasse stehen.
+
 :::
 
 ## Zugriff auf Attribute und Aufruf von Methoden
@@ -193,7 +201,9 @@ public class MainClass {
 ```
 
 :::danger Hinweis
+
 Beim Aufruf einer Methode müssen alle Parameter in der richtigen Reihenfolge versorgt werden. Parameter, die diesem Prinzip folgen, bezeichnet man als _Positionsparameter_
+
 :::
 
 ## Überladene Methoden
@@ -234,7 +244,9 @@ public class MainClass {
 ```
 
 :::danger Hinweis
+
 Überladene Methoden können keine unterschiedlichen Rückgabewerte besitzen.
+
 :::
 
 ## Konstruktoren
@@ -278,7 +290,9 @@ public class MainClass {
 ```
 
 :::note Hinweis
+
 Auch Konstruktoren können überladen werden.
+
 :::
 
 ## Statische Attribute und Methoden
@@ -330,5 +344,7 @@ public class MainClass {
 ```
 
 :::note Hinweis
+
 "Normale" Attribute und Methoden werden auch als Instanzattribute bzw. Instanzmethoden bezeichnet, statische Attribute und Methoden auch Klassenattribute bzw. Klassenmethoden.
+
 :::

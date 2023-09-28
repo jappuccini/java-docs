@@ -42,7 +42,9 @@ flowchart TD
 ```
 
 :::note Hinweis
+
 Ströme (Paket `java.util.stream`) haben nichts mit [Datenströmen (IO-Streams)](io-streams.md) (Paket `java.io`) zu tun.
+
 :::
 
 ## Erzeugen von Strömen
@@ -66,7 +68,9 @@ public class MainClass {
 ```
 
 :::note Hinweis
+
 Die Zahlenfolge 4-8-15-16-23-42 spielt eine große Rolle in der Fernsehserie _Lost_.
+
 :::
 
 Im Gegensatz zu "normalen" Strömen besitzen Objekte der Klassen `IntStreams`, `DoubleStreams` und `LongStreams` Methoden zur Weiterverarbeitung ihrer primitiver Werte.

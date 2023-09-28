@@ -161,7 +161,9 @@ classDiagram
 </Tabs>
 
 :::note Hinweis
+
 Assoziationen können gerichtet und ungerichtet dargestellt werden.
+
 :::
 
 ## Darstellung von Vererbungs-und Realisierungs-Beziehungen

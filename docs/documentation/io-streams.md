@@ -47,7 +47,9 @@ public class MainClass {
 ```
 
 :::note Hinweis
+
 Die Klasse `Scanner`, die ebenfalls auf dem Datenstrom-Konzept basiert, ermöglicht eine einfache Möglichkeit der Eingabe.
+
 :::
 
 ## Schreiben und Lesen byteorientierter Daten
@@ -256,7 +258,9 @@ public class Foo implements Serializable {
 ```
 
 :::danger Hinweis
+
 Obwohl jede serialisierbare Klasse automatisch eine ID erhält, wird die manuelle Zuweisung dringend empfohlen.
+
 :::
 
 ## Die try-with-resources-Anweisung
@@ -292,7 +296,9 @@ public class MainClass {
 ```
 
 :::note Hinweis
+
 Der finally-Block einer try-Anweisung wird in jedem Fall durchlaufen.
+
 :::
 
 Die try-with-resources-Anweisung ermöglicht die Deklaration von Ressourcen, die am Ende des try-Blockes automatisch geschlossen werden.
@@ -315,5 +321,7 @@ public class MainClass {
 ```
 
 :::note Hinweis
+
 Voraussetzung für den Einsatz der try-with-resources-Anweisung ist, dass die Ressourcen-Klassen die Schnittstelle `AutoCloseable` implementiert haben.
+
 :::

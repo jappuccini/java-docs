@@ -31,7 +31,9 @@ public class MainClass {
 ```
 
 :::note Hinweis
+
 Der else-Zweig ist optional, kann also weggelassen werden.
+
 :::
 
 ## Kaskadierte Verzweigungen
@@ -89,7 +91,9 @@ public class MainClass {
 ```
 
 :::danger Hinweis
+
 Die Kurzschreibweise sollte verantwortungsvoll verwendet werden, da die Lesbarkeit dadurch eventuell erschwert wird.
+
 :::
 
 ## Mehrfachverzweigungen

@@ -33,7 +33,9 @@ public class MainClass {
 ```
 
 :::note Hinweis
+
 Fabrikmethoden sind Methoden, die Objekte erzeugen.
+
 :::
 
   </TabItem>
@@ -82,7 +84,9 @@ public class MainClass {
 ```
 
 :::note Hinweis
+
 Eine ArrayList ist bei wahlfreiem Zugriff schneller als eine LinkedList; eine LinkedList ist bei Anfüge- und Löschoperationen (insbesondere bei großen Elementzahlen) schneller als eine ArrayList.
+
 :::
 
   </TabItem>

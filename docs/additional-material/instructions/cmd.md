@@ -32,8 +32,10 @@ C:\Users\Maier\Projects\Java\src>
 ```
 
 :::note Hinweis
+
 Mit dem Befehl `cd <Pfad\Verzeichnis>` kann zum angegebenen Verzeichnis gewechselt werden, mit dem Befehl `cd..` zum übergeordneten Verzeichnis und mit dem Befehl
 `<Laufwerksbuchstabe>:` zum angegebenen Laufwerk.
+
 :::
 
 ## Schritt 3: Quellcode-Datei in Bytecode-Datei überführen (kompilieren)
@@ -46,7 +48,9 @@ C:\Users\Maier\Projects\Java\src>javac demos/MainClass.java -d ../bin
 ```
 
 :::note Hinweis
+
 Der optionale Zusatz `-d` ermöglicht die Angabe des Verzeichnisses für die erstellten Bytecode-Dateien.
+
 :::
 
 ## Schritt 4: Bytecode-Datei ausführen
@@ -61,5 +65,7 @@ C:\Users\Maier\Projects\Java\bin>java demos.MainClass
 ```
 
 :::danger Hinweis
+
 Um eine Bytecode-Datei ausführen zu können, benötigt die dazugehörige Java-Klasse die Methode `void main(String[])`.
+
 :::

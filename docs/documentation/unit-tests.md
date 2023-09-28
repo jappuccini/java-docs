@@ -10,7 +10,9 @@ Komponententests (Unit Tests) werden zum Testen einzelner, abgeschlossener Softw
 Unter einem Framework versteht man ein Programmiergerüst, welches die Architektur für die Anwendung vorgibt und den Kontrollfluss der Anwendung steuert. Die Arbeitsweise von Frameworks wird als _Inversion of Control_ bezeichnet: Die Funktionen einer Anwendung werden beim Framework registriert, welches die Funktionen zu einem späteren Zeitpunkt aufruft, d.h. die Steuerung des Kontrollfluss obliegt nicht der Anwendung, sondern dem Framework.
 
 :::note Hinweis
+
 Die Umkehr der Steuerung kann auch als Anwendung des Hollywood-Prinzips (_Don´t call us, we´ll call you_) verstanden werden.
+
 :::
 
 ## Implementieren einer Testklasse

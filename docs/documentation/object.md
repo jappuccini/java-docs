@@ -12,9 +12,13 @@ Alle Klassen in Java sind letztlich Unterklassen der Klasse `Object`. Daher wird
 - Die Methode `String toString()` liefert eine eindeutige Kennung des Objektes in der Form _[Vollständiger Klassenname]_@_[Adresse des Objektes im Hauptspeicher in hexadezimaler Notation]_ zurück
 
 :::note Hinweis
+
 Zwei Objekte sind gleich, wenn all ihre Attribute gleich sind.
+
 :::
 
 :::note Hinweis
+
 Wird den print-Methoden des Ausgabestroms `System.out` eine Objektreferenz übergeben, wird implizit die Methode `String toString()` des jeweiligen Objektes aufgerufen.
+
 :::

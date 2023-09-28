@@ -30,7 +30,9 @@ public class MainClass {
 ```
 
 :::note Hinweis
+
 Dem Konstruktor muss der Standard-Eingabestrom `System.in` als Wert mitgegeben werden.
+
 :::
 
 ## Konsolenausgaben

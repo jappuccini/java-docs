@@ -31,7 +31,9 @@ flowchart LR
 ```
 
 :::note Hinweis
+
 Da durch die vorangestellten Tests eine kontinuierliche Designverbesserung stattfindet, wird die Testgetriebene Entwicklung zu den Designstrategien gezählt.
+
 :::
 
 ## Test Doubles

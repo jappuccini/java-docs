@@ -59,7 +59,9 @@ public class SubClass extends SuperClass {
 </Tabs>
 
 :::danger Hinweis
+
 In den Konstruktoren der Unterklasse muss ein Konstruktor der Oberklasse mit Hilfe von `super` aufgerufen werden.
+
 :::
 
 ## Überschreiben von Methoden
@@ -99,5 +101,7 @@ public class SubClass extends SuperClass {
 </Tabs>
 
 :::note Hinweis
+
 Die Annotation `@Override` sorgt bei fehlerhaftem Überschreiben der Methode für entsprechende Kompilierungsfehler.
+
 :::

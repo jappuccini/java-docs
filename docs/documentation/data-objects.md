@@ -34,7 +34,9 @@ public class MainClass {
 ```
 
 :::danger Hinweis
+
 Java ist case-sensitiv, unterscheidet also zwischen Groß- und Kleinschreibung. Um die Lesbarkeit zu erhöhen, sollten Variablen mit einem Kleinbuchstaben beginnen, wohingegen Konstanten immer in Großbuchstaben geschrieben werden sollten.
+
 :::
 
 ## Initialisierung von Datenobjekten
@@ -77,7 +79,9 @@ public class MainClass {
 ```
 
 :::danger Hinweis
+
 Mit `var` deklarierte Datenobjekte sind weiterhin statisch typisiert.
+
 :::
 
 ## Gültigkeitsbereiche von Datenobjekten
@@ -140,5 +144,7 @@ flowchart
 ```
 
 :::note Hinweis
+
 Für den Datentyp `boolean` ist keine Typumwandlung möglich.
+
 :::

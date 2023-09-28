@@ -28,7 +28,9 @@ public class MainClass {
 ```
 
 :::note Hinweis
+
 Voraussetzung für den Einsatz eines Lambda-Ausdrucks ist eine funktionale Schnittstelle, also eine Schnittstelle, die über genau eine Methode verfügt.
+
 :::
 
 ## Syntaxvarianten

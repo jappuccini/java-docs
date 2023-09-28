@@ -59,7 +59,9 @@ Logische Bedingungen für zwei Werte eines elementaren Datentyps können durch V
 | x <= y                | x ist kleiner gleich y |
 
 :::danger Hinweis
+
 Da der Vergleichsoperator `==` auf referenzielle Gleichheit prüft, sollte zum Vergleich von zwei Objekten die Methode `boolean equals(object: Object)` verwendet werden.
+
 :::
 
 ## Priorität von Operatoren

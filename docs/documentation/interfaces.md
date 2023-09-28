@@ -51,7 +51,9 @@ public interface Foo {
 ```
 
 :::note Hinweis
+
 Die Angabe von `abstract` und `public` bei Methoden ist nicht erforderlich.
+
 :::
 
 ## Implementieren von Schnittstellen

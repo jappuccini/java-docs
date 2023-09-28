@@ -84,11 +84,15 @@ public class MainClass {
 ```
 
 :::note Hinweis
+
 Die Typisierung kann entweder explizit oder implizit über den Diamantenoperator `<>` erfolgen.
+
 :::
 
 :::note Hinweis
+
 Typparameter können auf die Unterklassen einer bestimmten Klasse eingeschränkt werden. Dadurch kann in der generischen Klasse auf Attribute und Methoden der angegebenen Klasse zugegriffen werden. Die Angabe eines eingeschränkten Typparameters erfolgt über den Zusatz `extends` sowie die Angabe der entsprechenden Klasse.
+
 :::
 
 ## Generische Methoden mit Java Generics

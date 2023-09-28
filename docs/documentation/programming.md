@@ -16,7 +16,9 @@ flowchart LR
 ```
 
 :::note Hinweis
+
 Ein Algorithmus ist eine Handlungsvorschrift zur Lösung eines Problems.
+
 :::
 
 ## Programmierparadigmen
@@ -24,7 +26,9 @@ Ein Algorithmus ist eine Handlungsvorschrift zur Lösung eines Problems.
 Unter einem Programmierparadigma versteht man die grundlegende Herangehensweise, Probleme mit Hilfe einer Programmiersprache zu lösen:
 
 :::note Hinweis
+
 Auch wenn Programmiersprachen oft anhand ihrer grundlegenden Merkmale genau einem Programmierparadigma zugeordnet werden, unterstützen viele Programmiersprachen mehrere Programmierparadigmen.
+
 :::
 
 ### Imperative Programmierung
@@ -95,7 +99,9 @@ classDiagram
 Programme auf einem Computer können auf unterschiedliche Arten ausgeführt werden: Compilersprachen übersetzen den Quellcode in eine Datei, die vom jeweiligen Betriebssystem ausgeführt werden kann, Interpretersprachen übersetzen den Quellcode direkt in den Arbeitsspeicher und führen das Programm sofort aus und Just-In-Time Compilersprachen (JIT) übersetzen den Quellcode mit Hilfe eines Compilers zunächst in den sogenannten Bytecode und übersetzen diesen bei der Ausführung in den Arbeitsspeicher. Compilersprachen wie z.B. C++ sind dabei deutlich performanter und ermöglichen eine sicherere Entwicklung, Interpretersprachen wie z.B. PHP sind dagegen plattformunabhängig und Just-In-Time Compliersprachen vereinen die Vorteile von beiden.
 
 :::note Hinweis
+
 In Java wird der Interpreter als _Java Virtual Machine_ bezeichnet.
+
 :::
 
 <Tabs>
@@ -172,7 +178,9 @@ Die Programmiersprachen Java, Python und JavaScript gehören zu den am weitesten
 | C#     | C++        | C/C++      |
 
 :::note Quellen
+
 Tiobe Programming Community Index November 2021, RedMonk Programming Language Rankings Juni 2021, PopularitY of Programming Language November 2021
+
 :::
 
 ## Die Programmiersprache Java
@@ -189,7 +197,9 @@ veröffentlicht. Der große Durchbruch von Java kam 1996 durch eine Kooperation 
 Geschichte von Java waren die Veröffentlichungen der Google-Entwicklungsumgebung Android 2008 sowie des Computerspiels Minecraft 2009.
 
 :::note Hinweis
+
 Java war der Name der beliebtesten Kaffeesorte der Entwickler.
+
 :::
 
 ### JDK und JRE
