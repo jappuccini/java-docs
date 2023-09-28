@@ -8,7 +8,44 @@ Setze das abgebildete Klassendiagramm vollständig um. Erstelle zum Testen eine 
 
 ## Klassendiagramm
 
-![image](https://user-images.githubusercontent.com/47243617/209169202-d76dfb78-8b31-45c7-b7e4-f99cb50aca70.png)
+```mermaid
+classDiagram
+    ShapeReader o-- Shape
+    Shape <|-- Circle
+    Shape <|-- Rectangle
+    Rectangle <|-- Square
+    
+    class ShapeReader {
+        -shapes Arraylist~Shape~
+        +ShapeReader(file File)
+        +getCircles() ArrayList~Circle~
+        +getShapesWithMinArea(minArea double) ArrayList~Shape~
+    }
+
+    class Shape {
+        +getArea() double
+        +getCircumference() double
+    }
+
+    class Circle {
+        -r double
+        +Circle(r double)
+        +getArea() double
+        +getCircumference() double
+    }
+
+    class Rectangle {
+        -a double
+        -b double
+        +Rectangle(a double, b double)
+        +getArea() double
+        +getCircumference() double
+    }
+
+    class Square {
+        +Square(a double)
+    }
+```
 
 ## Allgemeine Hinweise
 
