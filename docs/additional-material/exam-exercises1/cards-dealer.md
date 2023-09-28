@@ -8,7 +8,38 @@ Setze das abgebildete Klassendiagramm vollständig um. Erstelle zum Testen eine 
 
 ## Klassendiagramm
 
-![image](https://github.com/jappuccini/java-docs/assets/47243617/256c7fac-6eed-48cf-ba8f-70603987a697)
+```mermaid
+classDiagram
+    CardDealer o-- Player
+    CardDealer o-- Card
+    Player o-- Card
+
+    class Player {
+        -cards ArrayList~Card~
+        +Player(cards ArrayList~Card~)
+        +addCard(card Card) void
+        +getCardWithHighestValue() Card
+        +getCardsByColour(colour String) ArrayList~Card~
+    }
+
+    class CardDealer {
+        -deck ArrayList~Card~
+        -player1 Player
+        -player2 Player
+        +CardsDealer(deck ArrayList~Card~, player1 Player, player2 Player )
+        +dealCards(amount int) void
+    }
+
+    class Card {
+        -colour String
+        -value int
+        +Card(colour String, value int)
+    }
+
+    class CardsReader {
+        +getCards(file File) ArrayList~Card~
+    }
+```
 
 ## Allgemeine Hinweise
 

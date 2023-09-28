@@ -8,7 +8,44 @@ Setze das abgebildete Klassendiagramm vollständig um. Erstelle zum Testen eine 
 
 ## Klassendiagramm
 
-![image](https://github.com/jappuccini/java-docs/assets/47243617/f36ac7d7-8a8c-4512-801a-a100a31fba5b)
+```mermaid
+classDiagram
+    Creature o-- Position
+    Creature o-- Type
+
+    class Creature {
+        -name String
+        -position Position
+        -type Type
+        +Creature(name String, position Position, type Type)
+        +moveUp() void
+        +moveDown() void
+        +moveLeft() void
+        +moveRight() void
+    }
+
+    class Type {
+        <<enumeration>>
+        MONSTER
+        SKELETON
+        VAMPIRE
+        ZOMBIE
+    }
+
+    class Position {
+        -x int
+        -y int
+        +Position(x int, y int)
+        +increaseY() void
+        +decreaseY() void
+        +increaseX() void
+        +decreaseX() void
+    }
+
+    class CreaturesReader {
+        +getCreatures(file File) ArrayList~Creature~
+    }
+```
 
 ## Allgemeine Hinweise
 

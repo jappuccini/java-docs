@@ -8,7 +8,44 @@ Setze das abgebildete Klassendiagramm vollständig um. Erstelle zum Testen eine 
 
 ## Klassendiagramm
 
-![image](https://github.com/jappuccini/java-docs/assets/47243617/691fb4dd-6a3e-4fba-91d1-4dcad1057cc4)
+```mermaid
+classDiagram
+    Zoo o-- Animal
+    Animal <|-- Mammal
+    Animal <|-- Bird
+    Animal <|-- Fish
+
+    class Zoo {
+        -name String
+        -animals ArrayList~Animal~
+        +Zoo(name String, animals ArrayList~Animal~)
+        +addAnimal(animal Animal) void
+        +getBiggestAnimal() Animal
+        +getFishesByColor(color String) ArrayList~Fish~
+    }
+
+    class Animal {
+        -description String
+        -sizeInM double
+        -weigthInKG double
+        +Animal(description String, sizeInM double, weigthInKG double)
+    }
+
+    class Mammal {
+        +Mammal(description String, sizeInM double, weigthInKG double)
+        +suckle() void
+    }
+
+    class Bird {
+        +Bird(description String, sizeInM double, weigthInKG double)
+        +fly() void
+    }
+
+    class Fish {
+        +Fish(description String, sizeInM double, weigthInKG double)
+        +swim() void
+    }
+```
 
 ## Allgemeine Hinweise
 

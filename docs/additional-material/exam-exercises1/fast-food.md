@@ -8,7 +8,58 @@ Setze das abgebildete Klassendiagramm vollständig um. Erstelle zum Testen eine 
 
 ## Klassendiagramm
 
-![image](https://github.com/jappuccini/java-docs/assets/47243617/cc4faaf3-3301-441b-bd00-4d487265b4a7)
+```mermaid
+classDiagram
+    Food o-- FoodCategory
+    Food <|-- FastFood
+    FastFood <|-- Burger
+    FastFoodShop o-- FastFood
+
+    class FoodCategory {
+        <<enumeration>>
+        BEVERAGES = Getränke, 1
+        VEGETABLES = Gemüse, 2
+        FRUITS = Obst, 2
+        GRAIN_PRODUCTS = Getreideprodukte, 3
+        POTATOES = Kartoffeln, 3
+        DAIRY_PRODUCTS = Milchprodukte, 4
+        MEAT = Fleisch, 4
+        FISH = Fisch, 4
+        EGGS = Eier, 4
+        FATS_AND_OILS = Fette und Öle, 5
+        SWEETS = Süßigkeiten, 6
+        -description String
+        -points int
+    }
+
+    class Food {
+        -name String
+        -foodCategory FoodCategory
+        -calories double
+        +Food(name String, foodCategory FoodCategory, calories double)
+    }
+
+    class FastFood {
+        -isVegetarian boolean
+        -ratings ArrayList~Integer~
+        +FastFood(name String, foodCategory FoodCategory, calories double, isVegetarian boolean)
+        +addRating(rating int) void
+        +getAverageRating() double
+    }
+
+    class Burger {
+        +Burger(name String, calories double, isVegetarian boolean)
+    }
+
+    class FastFoodShop {
+        -name String
+        -fastFood ArrayList~FastFood~
+        +FastFoodShop(name String)
+        +addFastFood(fastFood FastFood) void
+        +rateFastFood(fastFood FastFood, rating int) void
+        +getBestRatedBurger() Burger
+    }
+```
 
 ## Allgemeine Hinweise
 
