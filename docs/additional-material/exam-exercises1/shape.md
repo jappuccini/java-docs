@@ -14,7 +14,7 @@ classDiagram
     Shape <|-- Circle
     Shape <|-- Rectangle
     Rectangle <|-- Square
-    
+
     class ShapeReader {
         -shapes Arraylist~Shape~
         +ShapeReader(file File)
