@@ -8,7 +8,51 @@ Setze das abgebildete Klassendiagramm vollständig um. Erstelle zum Testen eine 
 
 ## Klassendiagramm
 
-![image](https://github.com/jappuccini/java-docs/assets/47243617/ff46487f-92ea-4e85-ad4f-0cc1eac6f915)
+```mermaid
+classDiagram
+    CookieJar o-- Cookie
+    Cookie <|-- StuffedCookie
+    Cookie o-- Recipe
+    StuffedCookie o-- Recipe
+    Recipe o-- Ingredient
+
+    class CookieJar {
+        -cookies ArrayList~Cookie~
+        +CookieJar()
+        +addCookie(cookie Cookie) void
+        +getStuffedCookie() StuffedCookie
+        +getCookieByName(name String) Cookie
+    }
+
+    class Cookie {
+        -name String
+        -dough Recipe
+        +Cookie(name String, dough Recipe)
+        +getIngredients() ArrayList~Ingredient~
+    }
+
+    class StuffedCookie {
+        -jam Recipe
+        +StuffedCookie(name String, dough Recipe, jam Recipe)
+        +getIngredients() ArrayList~Ingredient~
+    }
+
+    class Recipe {
+        -name String
+        -ingredients ArrayList~Ingredient~
+        +Recipe(name String)
+        +addIngredient(ingredient Ingredient) void
+    }
+
+    class Ingredient {
+        -name String
+        +Ingredient(name String)
+    }
+
+    class IngredientsReader {
+        +readIngredients(file File) ArrayList~Ingredient~
+    }
+```
 
 ## Allgemeine Hinweise
 
