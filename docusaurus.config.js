@@ -72,6 +72,12 @@ const config = {
         },
         {
           type: 'doc',
+          docId: 'exam-exercises/exam-exercises-java1/exam-exercises-java1',
+          position: 'left',
+          label: 'Klausuraufgaben',
+        },
+        {
+          type: 'doc',
           docId: 'additional-material/instructions/cmd',
           position: 'left',
           label: 'Zusatzmaterial',
