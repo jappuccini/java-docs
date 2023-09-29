@@ -1,9 +1,11 @@
 ---
-title: Downloads (Daniel)
+title: Daniel
 description: ''
-sidebar_position: 20
+sidebar_position: 10
 tags: []
 ---
+
+## Downloads
 
 - [Programmierung - Abbildungen.pptx](https://github.com/jappuccini/java-docs/files/11428579/Programmierung.-.Abbildungen.pptx)
 - [Programmierung - Cheatsheet.pdf](https://github.com/jappuccini/java-docs/files/11428580/Programmierung.-.Cheatsheet.pdf)
