@@ -1,5 +1,5 @@
 ---
-title: Klausuraufgaben Programmierung 2
+title: Programmierung 2
 description: ''
 sidebar_position: 40
 ---
