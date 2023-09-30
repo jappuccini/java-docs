@@ -1,7 +1,7 @@
 ---
 title: Git in Eclipse verwenden
 description: ''
-sidebar_position: 50
+sidebar_position: 20
 ---
 
 ## GitHub-Repository klonen und in Eclipse importieren
