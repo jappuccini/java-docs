@@ -20,7 +20,7 @@ public class MainClass {
 }
 ```
 
-Damit die erstellte Java-Quellcode-Datei kompiliert werden kann, muss zunächst in der Kommandozeile in das entsprechende Projekt-Verzeichnis gewechselt werden. 
+Damit die erstellte Java-Quellcode-Datei kompiliert werden kann, muss zunächst in der Kommandozeile in das entsprechende Projekt-Verzeichnis gewechselt werden.
 
 ```console
 C:\Users>cd..
