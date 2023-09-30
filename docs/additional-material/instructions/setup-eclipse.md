@@ -23,7 +23,7 @@ sidebar_position: 20
 - Drucktaste _**LAUNCH**_ betätigen
 - Option _**Use this as the default and do not ask again**_ auswählen und Drucktaste _**Continue**_ betätigen
 
-## Eclipse-Plugin PlantUML herunterladen und installieren
+## \[Optional\] Eclipse-Plugin PlantUML herunterladen und installieren
 
 - Eclipse starten
 - Zu _**Help – Install new Software…**_ navigieren

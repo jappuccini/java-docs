@@ -1,7 +1,7 @@
 ---
-title: Slides (Steffen)
+title: Steffen
 description: ''
-sidebar_position: 40
+sidebar_position: 30
 tags: []
 ---
 
