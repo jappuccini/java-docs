@@ -1,7 +1,7 @@
 ---
 title: Eclipse einrichten
 description: ''
-sidebar_position: 10
+sidebar_position: 20
 ---
 
 ## JDK herunterladen und installieren
