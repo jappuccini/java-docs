@@ -78,7 +78,7 @@ const config = {
         },
         {
           type: 'doc',
-          docId: 'additional-material/instructions/cmd',
+          docId: 'additional-material/instructions/use-cli',
           position: 'left',
           label: 'Zusatzmaterial',
         },
