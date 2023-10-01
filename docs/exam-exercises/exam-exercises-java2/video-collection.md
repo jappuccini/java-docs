@@ -1,7 +1,7 @@
 ---
 title: Videosammlung
 description: ''
-tags: [inheritance, polymorphy, exceptions, records, io-streams]
+tags: [inheritance, polymorphy, exceptions, records, optionals, io-streams]
 ---
 
 Setze das abgebildete Klassendiagramm vollständig um. Erstelle zum Testen eine ausführbare Klasse und/oder eine Testklasse.
