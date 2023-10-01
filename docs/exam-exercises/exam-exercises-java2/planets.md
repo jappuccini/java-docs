@@ -1,7 +1,7 @@
 ---
 title: Planeten
 description: ''
-tags: [java-stream-api]
+tags: [records, maps, optionals, java-stream-api]
 ---
 
 - Setze das abgebildete Klassendiagramm vollständig um
