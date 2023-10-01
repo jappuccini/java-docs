@@ -1,7 +1,7 @@
 ---
 title: Raumstation
 description: ''
-tags: [exceptions, records, maps]
+tags: [exceptions, records, maps, optionals]
 ---
 
 Setze das abgebildete Klassendiagramm vollständig um. Erstelle zum Testen eine ausführbare Klasse und/oder eine Testklasse.
