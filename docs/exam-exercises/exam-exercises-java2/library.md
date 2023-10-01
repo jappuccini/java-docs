@@ -1,7 +1,7 @@
 ---
 title: Bibliothek
 description: ''
-tags: [inheritance, polymorphy, exceptions, records, maps]
+tags: [inheritance, polymorphy, exceptions, records, maps, optionals]
 ---
 
 Setze das abgebildete Klassendiagramm vollständig um. Erstelle zum Testen eine ausführbare Klasse und/oder eine Testklasse.
