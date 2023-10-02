@@ -52,4 +52,4 @@ classDiagram
 
 ## Hinweis zur Klasse LegoBrickVolumeComparator
 
-Die Methode `int compare(legoBrick1: LegoBrick, legoBrick2: LegoBrick)` soll so implementiert werden, dass damit Lego-Bausteine aufsteigend nach ihrem Volumen sortiert werden können.
+Die Methode `int compare(legoBrick1 LegoBrick, legoBrick2 LegoBrick)` soll so implementiert werden, dass damit Lego-Bausteine aufsteigend nach ihrem Volumen sortiert werden können.
