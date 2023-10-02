@@ -8,7 +8,42 @@ Setze das abgebildete Klassendiagramm vollständig um. Erstelle zum Testen eine 
 
 ## Klassendiagramm
 
-![image](https://user-images.githubusercontent.com/47243617/212249317-7fdb4952-658d-4c10-b171-2466f102def1.png)
+```mermaid
+classDiagram
+    Comparable~T~ <|.. Word
+    Word o-- Language
+    Dictionary o-- Word
+    Dictionary o-- Language
+
+    class Word {
+        <<record>>
+        -value String
+        -language Language
+        +compareTo(other Word) int
+    }
+
+    class Comparable~T~ {
+        +compareTo(t T) int
+    }
+
+    class Language {
+        <<enumeration>>
+        DE = DE, Deutsch
+        EN = EN, Englisch
+        -code String
+        -description String
+    }
+
+    class Dictionary {
+        <<record>>
+        -sourceLanguage Language
+        -targetLanguage Language
+        -entries TreeMap~Word&#44&#160Word~
+        +addEntry(sourceWord Word, targetWord Word) void
+        +importEntries(file File) void
+        +getTranslation(word String) String
+    }
+```
 
 ## Allgemeine Hinweise
 
