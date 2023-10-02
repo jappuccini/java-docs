@@ -23,6 +23,7 @@ classDiagram
     }
 
     class Comparable~T~ {
+        <<interface>>
         +compareTo(t T) int
     }
 
