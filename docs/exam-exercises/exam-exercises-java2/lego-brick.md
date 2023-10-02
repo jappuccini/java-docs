@@ -37,6 +37,7 @@ classDiagram
     }
 
     class Comparator~T~ {
+        <<interface>>
         +compare(o1 T, o2 T) int
     }
 
