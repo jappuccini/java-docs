@@ -39,7 +39,7 @@ classDiagram
         <<record>>
         -name String
         -store Map~Goods&#44&#160Integer~
-        +getEntryByDescription(description String) Optional~Entry~Goods&#44&#160Integer~~
+        +getAmountByDescription(description String) Optional~Integer~
         +buyGoods(goods Goods, amount int) void
         +sellGoods(goods Goods, amount int) void
     }
@@ -65,7 +65,7 @@ Die Methode `int compareTo(other Goods)` soll so implementiert werden, dass dami
 
 ## Hinweise zur Klasse CornerShop
 
-- Die Methode `Optional<Entry<Goods, Integer>> getEntryByDescription(description String)` soll die Anzahl Waren zur eingehenden Warenbeschreibung zurückgeben
+- Die Methode `Optional<Integer> getAmountByDescription(description String)` soll die Anzahl Waren zur eingehenden Warenbeschreibung als Optional zurückgeben
 - Die Methode `void buyGoods(goods Goods, amount int)` soll die eingehende Ware im Lager (`store`) um die eingehende Anzahl erhöhen
 - Die Methode `void sellGoods(goods Goods, amount int)` soll die eingehende Ware im Lager (`store`) um die eingehende Anzahl reduzieren. Für den Fall, dass keine
   ausreichende Anzahl an Waren vorhanden ist, soll die Ausnahme `OutOfStockException` ausgelöst werden
