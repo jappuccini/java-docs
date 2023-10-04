@@ -1,7 +1,7 @@
 ---
 title: Planeten
 description: ''
-tags: [java-stream-api]
+tags: [records, maps, optionals, java-stream-api]
 ---
 
 - Setze das abgebildete Klassendiagramm vollständig um
@@ -14,7 +14,30 @@ tags: [java-stream-api]
 
 ## Klassendiagramm
 
-![image](https://github.com/jappuccini/java-docs/assets/47243617/310e09cf-df8b-4ead-8111-8a49f3070e7a)
+```mermaid
+classDiagram
+    Planet o-- Type
+
+    class Planet {
+        <<record>>
+        -name String
+        -diameter double
+        -mass double
+        -moons int
+        -type Type
+    }
+
+    class Type {
+        <<enumeration>>
+        GAS_PLANET
+        TERRESTRIAL_PLANET
+        DWARF_PLANET
+    }
+
+    class Planets {
+        +getPlanets()$ List~Planet~
+    }
+```
 
 ## Allgemeine Hinweise
 
@@ -23,4 +46,4 @@ tags: [java-stream-api]
 
 ## Hinweis zur Klasse Planets
 
-Die Methode `ArrayList<Planet> getPlanets()` soll alle Planeten des Sonnensystems zurückgeben.
+Die Methode `List<Planet> getPlanets()` soll alle Planeten des Sonnensystems zurückgeben.

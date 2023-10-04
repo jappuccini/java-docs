@@ -1,14 +1,61 @@
 ---
 title: Videosammlung
 description: ''
-tags: [inheritance, polymorphy, exceptions, records, io-streams]
+tags: [inheritance, polymorphy, exceptions, records, optionals, io-streams]
 ---
 
 Setze das abgebildete Klassendiagramm vollständig um. Erstelle zum Testen eine ausführbare Klasse und/oder eine Testklasse.
 
 ## Klassendiagramm
 
-![image](https://user-images.githubusercontent.com/47243617/212251022-87846032-031a-462f-abf7-8ac35d97352e.png)
+```mermaid
+classDiagram
+    VideoCollection o-- Video
+    Video <|-- BluRay
+    Video <|-- VHS
+    Video o-- Movie
+    Movie o-- Genre
+
+    class VideoCollection {
+        <<record>>
+        -videos List~Video~
+        +addVideo(video Video) void
+        +importVideos(file File) void
+        +getVideoByMovieTitle(title String) Optional~Video~
+    }
+
+    class Video {
+        <<abstract>>
+        -movie Movie
+        +Video(movie Movie)
+    }
+
+    class VHS {
+        -isRewritable boolean
+        +VHS(movie Movie, isRewritable boolean)
+    }
+
+    class BluRay {
+        -capactity double
+        +BluRay(movie Movie, capacity double)
+    }
+
+    class Movie {
+        <<record>>
+        -title String
+        -genre Genre
+        -publishingYear short
+    }
+
+    class Genre {
+        <<enumeration>>
+        SCIFI = Science Fiction
+        HORROR = Horror
+        ACTION = Action
+        COMEDY = Komödie
+        -description String
+    }
+```
 
 ## Allgemeine Hinweise
 
@@ -17,10 +64,9 @@ Setze das abgebildete Klassendiagramm vollständig um. Erstelle zum Testen eine 
 
 ## Hinweise zur Klasse VideoCollection
 
-- Die Methode `void addVideo(video: Video)` soll der Videoliste (`videos`) das eingehende Video hinzufügen
-- Die Methode `void importVideos(file: File)` soll der Videoliste (`videos`) die Videos der eingehenden Datei hinzufügen. Die Ausnahme `FileNotFoundException` soll dabei weitergeleitet werden
-- Die Methode `Video getVideoByTitle(title: String)` soll das Video zum eingehenden Titel zurückgeben. Für den Fall, dass kein Video gefunden wird, soll der Wert `null`
-  zurückgegeben werden
+- Die Methode `void addVideo(video Video)` soll der Videoliste (`videos`) das eingehende Video hinzufügen
+- Die Methode `void importVideos(file File)` soll der Videoliste (`videos`) die Videos der eingehenden Datei hinzufügen. Die Ausnahme `FileNotFoundException` soll dabei weitergeleitet werden
+- Die Methode `Optional<Video> getVideoByTitle(title String)` soll das Video zum eingehenden Titel als Optional zurückgeben
 
 ## Beispielhafter Aufbau der Videodatei
 

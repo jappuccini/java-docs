@@ -8,7 +8,43 @@ Setze das abgebildete Klassendiagramm vollständig um. Erstelle zum Testen eine 
 
 ## Klassendiagramm
 
-![image](https://user-images.githubusercontent.com/47243617/212029643-3c811cad-8f71-482b-88b1-547e3983a944.png)
+```mermaid
+classDiagram
+    Lego <|-- LegoBrick
+    LegoBrick <|-- LegoBrick2x2x2
+    LegoBrick <|-- LegoBrick4x2x1
+    Comparator~T~ <|.. LegoBrickVolumeComparator
+
+    class Lego {
+        <<abstract>>
+        -id int
+        +Lego(id int)
+    }
+
+    class LegoBrick {
+        <<abstract>>
+        -dimensions int[3]
+        -color String
+        +LegoBrick(id int, dimensions int[3] color String)
+    }
+
+    class LegoBrick2x2x2 {
+        +LegoBrick2x2x2(id int, color String)
+    }
+
+    class LegoBrick4x2x1 {
+        +LegoBrick4x2x1(id int, color String)
+    }
+
+    class Comparator~T~ {
+        <<interface>>
+        +compare(o1 T, o2 T) int
+    }
+
+    class LegoBrickVolumeComparator {
+        +compare(legoBrick1 LegoBrick, legoBrick2 LegoBrick) int
+    }
+```
 
 ## Allgemeine Hinweise
 
@@ -17,4 +53,4 @@ Setze das abgebildete Klassendiagramm vollständig um. Erstelle zum Testen eine 
 
 ## Hinweis zur Klasse LegoBrickVolumeComparator
 
-Die Methode `int compare(legoBrick1: LegoBrick, legoBrick2: LegoBrick)` soll so implementiert werden, dass damit Lego-Bausteine aufsteigend nach ihrem Volumen sortiert werden können.
+Die Methode `int compare(legoBrick1 LegoBrick, legoBrick2 LegoBrick)` soll so implementiert werden, dass damit Lego-Bausteine aufsteigend nach ihrem Volumen sortiert werden können.

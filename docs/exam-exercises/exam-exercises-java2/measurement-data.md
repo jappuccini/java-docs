@@ -1,7 +1,7 @@
 ---
 title: Messdaten
 description: ''
-tags: [java-stream-api]
+tags: [records, maps, optionals, java-stream-api]
 ---
 
 - Erstelle die Klasse `MeasurementData` anhand des abgebildeten Quellcodes
