@@ -61,7 +61,7 @@ Die Methode `double getSubTotalInEuro()` soll die Zwischensumme des Warenkorbein
 
 ## Hinweise zur Klasse ShoppingCart
 
-- Die Methode `void addItem(sellable T, amount int)` soll den Einträgen des Warenkorbs (`items`) das eingehende verkäufliche Objekt und die eingehende Anzahl als 
+- Die Methode `void addItem(sellable T, amount int)` soll den Einträgen des Warenkorbs (`items`) das eingehende verkäufliche Objekt und die eingehende Anzahl als
   Eintrag hinzufügen
 - Die Methode `void removeItem(sellable T)` soll das eingehende verkäufliche Objekt aus den Einträgen des Warenkorbs (`items`) entfernen
 - Die Methode `double getTotalInEuro()` soll die Gesamtsumme des Warenkorbs zurückgeben
