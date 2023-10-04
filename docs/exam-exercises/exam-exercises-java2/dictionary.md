@@ -1,7 +1,8 @@
 ---
 title: Wörterbuch
 description: ''
-tags: [interfaces, comparators, exceptions, records, maps, optionals, io-streams]
+tags:
+  [interfaces, comparators, exceptions, records, maps, optionals, io-streams]
 ---
 
 Setze das abgebildete Klassendiagramm vollständig um. Erstelle zum Testen eine ausführbare Klasse und/oder eine Testklasse.
@@ -57,8 +58,8 @@ Die Methode `int compareTo(other Word)` soll so implementiert werden, dass damit
 
 ## Hinweise zur Klasse Dictionary
 
-- Die Methode `void addEntry(sourceWord Word, targetWord Word)` soll den Einträgen des Wörterbuches (`entries`) die eingehenden Wörter als Eintrag hinzufügen. Für 
-  den Fall, dass die Sprache des ersten eingehenden Wortes nicht der Quellsprache (`sourceLanguage`) entspricht, oder die Sprache des zweiten eingehenden Wortes 
+- Die Methode `void addEntry(sourceWord Word, targetWord Word)` soll den Einträgen des Wörterbuches (`entries`) die eingehenden Wörter als Eintrag hinzufügen. Für
+  den Fall, dass die Sprache des ersten eingehenden Wortes nicht der Quellsprache (`sourceLanguage`) entspricht, oder die Sprache des zweiten eingehenden Wortes
   nicht der Zielsprache (`targetLanguage`) entspricht, soll die Ausnahme `InvalidLanguageException` ausgelöst werden
 - Die Methode `void importEntries(file File)` soll den Einträgen des Wörterbuches (`entries`) die Wörter der eingehenden Datei als Einträge hinzufügen. Die Ausnahme
   `FileNotFoundException` soll dabei weitergeleitet werden
