@@ -2,6 +2,7 @@
 title: Downloads
 description: ''
 sidebar_position: 10
+tags: []
 ---
 
 - [Programmierung - Abbildungen.pptx](https://github.com/jappuccini/java-docs/files/11428579/Programmierung.-.Abbildungen.pptx)
