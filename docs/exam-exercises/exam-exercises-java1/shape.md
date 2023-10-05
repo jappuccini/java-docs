@@ -16,34 +16,34 @@ classDiagram
     Rectangle <|-- Square
 
     class ShapeReader {
-        -shapes Arraylist~Shape~
+        -shapes List~Shape~
         +ShapeReader(file File)
-        +getCircles() ArrayList~Circle~
-        +getShapesWithMinArea(minArea double) ArrayList~Shape~
+        +getCircles() List~Circle~
+        +getShapesWithMinArea(minAreaInCM2 double) List~Shape~
     }
 
     class Shape {
-        +getArea() double
-        +getCircumference() double
+        +getAreaInCM2() double
+        +getCircumferenceInCM() double
     }
 
     class Circle {
-        -r double
-        +Circle(r double)
-        +getArea() double
-        +getCircumference() double
+        -rInCM double
+        +Circle(rInCM double)
+        +getAreaInCM2() double
+        +getCircumferenceInCM() double
     }
 
     class Rectangle {
-        -a double
-        -b double
-        +Rectangle(a double, b double)
-        +getArea() double
-        +getCircumference() double
+        -aInCM double
+        -bInCM double
+        +Rectangle(aInCM double, bInCM double)
+        +getAreaInCM2() double
+        +getCircumferenceInCM() double
     }
 
     class Square {
-        +Square(a double)
+        +Square(aInCM double)
     }
 ```
 
@@ -55,24 +55,24 @@ classDiagram
 
 ## Hinweise zur Klasse Shape
 
-- Die Methode `double getArea()` soll den Wert _0_ zurückgeben
-- Die Methode `double getCircumference()` soll den Wert _0_ zurückgeben
+- Die Methode `double getAreaInCM2()` soll den Wert _0_ zurückgeben
+- Die Methode `double getCircumferenceInCM()` soll den Wert _0_ zurückgeben
 
 ## Hinweise zur Klasse Circle
 
-- Die Methode `double getArea()` soll den Flächeninhalt gemäß der Formel _Pi * r * r_ berechnen und zurückgeben
-- Die Methode `double getCircumference()` soll den Umfang gemäß der Formel _2 * Pi * r_ berechnen und zurückgeben
+- Die Methode `double getAreaInCM2()` soll den Flächeninhalt gemäß der Formel _Pi * r * r_ berechnen und zurückgeben
+- Die Methode `double getCircumferenceInCM()` soll den Umfang gemäß der Formel _2 * Pi * r_ berechnen und zurückgeben
 
 ## Hinweise zur Klasse Rectangle
 
-- Die Methode `double getArea()` soll den Flächeninhalt gemäß der Formel _a \* b_ berechnen und zurückgeben
-- Die Methode `double getCircumference()` soll den Umfang gemäß der Formel _2 * a + 2 * b_ berechnen und zurückgeben
+- Die Methode `double getAreaInCM2()` soll den Flächeninhalt gemäß der Formel _a \* b_ berechnen und zurückgeben
+- Die Methode `double getCircumferenceInCM()` soll den Umfang gemäß der Formel _2 * a + 2 * b_ berechnen und zurückgeben
 
 ## Hinweise zur Klasse ShapeReader
 
 - Der Konstruktor soll der Formenliste (`shapes`) alle Formen der eingehenden Datei hinzufügen
-- Die Methode `ArrayList<Circle> getCircles()` soll alle Kreise der Formenliste (`shapes`) zurückgeben
-- Die Methode `ArrayList<Shape> getShapesWithMinArea(minArea: double)` soll alle Formen der Formenliste (`shapes`) zurückgeben, die mindestens den eingehenden
+- Die Methode `List<Circle> getCircles()` soll alle Kreise der Formenliste (`shapes`) zurückgeben
+- Die Methode `List<Shape> getShapesWithMinArea(minAreaInCM2: double)` soll alle Formen der Formenliste (`shapes`) zurückgeben, die mindestens den eingehenden
   Flächeninhalt aufweisen
 
 ## Beispielhafter Aufbau der Formendatei
