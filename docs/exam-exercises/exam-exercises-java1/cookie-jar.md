@@ -17,7 +17,7 @@ classDiagram
     Recipe o-- Ingredient
 
     class CookieJar {
-        -cookies ArrayList~Cookie~
+        -cookies List~Cookie~
         +CookieJar()
         +addCookie(cookie Cookie) void
         +getStuffedCookie() StuffedCookie
@@ -28,18 +28,18 @@ classDiagram
         -name String
         -dough Recipe
         +Cookie(name String, dough Recipe)
-        +getIngredients() ArrayList~Ingredient~
+        +getIngredients() List~Ingredient~
     }
 
     class StuffedCookie {
         -jam Recipe
         +StuffedCookie(name String, dough Recipe, jam Recipe)
-        +getIngredients() ArrayList~Ingredient~
+        +getIngredients() List~Ingredient~
     }
 
     class Recipe {
         -name String
-        -ingredients ArrayList~Ingredient~
+        -ingredients List~Ingredient~
         +Recipe(name String)
         +addIngredient(ingredient Ingredient) void
     }
@@ -50,7 +50,7 @@ classDiagram
     }
 
     class IngredientsReader {
-        +readIngredients(file File) ArrayList~Ingredient~
+        +readIngredients(file File) List~Ingredient~
     }
 ```
 
@@ -62,11 +62,11 @@ classDiagram
 
 ## Hinweis zur Klasse Cookie
 
-Die Methode `ArrayList<Ingredient> getIngredients()` soll alle Zutaten des Teigs zurückgeben.
+Die Methode `List<Ingredient> getIngredients()` soll alle Zutaten des Teigs zurückgeben.
 
 ## Hinweis zur Klasse StuffedCookie
 
-Die Methode `ArrayList<Ingredient> getIngredients()` soll alle Zutaten des Teigs sowie der Füllung zurückgeben.
+Die Methode `List<Ingredient> getIngredients()` soll alle Zutaten des Teigs sowie der Füllung zurückgeben.
 
 ## Hinweis zur Klasse Recipe
 
@@ -80,7 +80,7 @@ Die Methode `void addIngredient(ingredient: Ingredient)` soll dem Rezept die ein
 
 ## Hinweis zur Klasse IngredientsReader
 
-Die Methode `ArrayList<Ingredient> readIngredients()` soll alle Zutaten der eingehenden Datei auslesen und zurückgeben.
+Die Methode `List<Ingredient> readIngredients()` soll alle Zutaten der eingehenden Datei auslesen und zurückgeben.
 
 ## Beispielhafter Aufbau der Zutatendatei
 
