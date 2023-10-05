@@ -36,7 +36,7 @@ classDiagram
     }
 
     class BluRay {
-        -capactityInGB double
+        -capacityInGB double
         +BluRay(movie Movie, capacityInGB double)
     }
 
