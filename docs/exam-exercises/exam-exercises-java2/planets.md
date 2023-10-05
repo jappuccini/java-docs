@@ -21,8 +21,8 @@ classDiagram
     class Planet {
         <<record>>
         -name String
-        -diameter double
-        -mass double
+        -diameterInKm double
+        -massInE24Kg double
         -moons int
         -type Type
     }
