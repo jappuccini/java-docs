@@ -10,7 +10,6 @@ Setze das abgebildete Klassendiagramm vollständig um. Erstelle zum Testen eine 
 
 ```mermaid
 classDiagram
-    Product o-- Currency
     Product <|-- Goods
     Item o-- Goods
     ShoppingCart o-- Item
@@ -23,22 +22,14 @@ classDiagram
         -id int
         -description String
         -unit String
-        -price double
-        -currency Currency
-        +Product(id int, description String, unit String, price double, currency Currency)
-        +setPrice(price double) void
-        +setCurrency(currency Currency) void
-    }
-
-    class Currency {
-        <<enumeration>>
-        EURO
-        DOLLAR
+        -priceInEuro double
+        +Product(id int, description String, unit String, priceInEuro double)
+        +setPriceInEuro(priceInEuro double) void
     }
 
     class Goods {
         -classOfGoods ClassOfGoods
-        +Goods(id int, description String, unit String, price double, currency Currency, classOfGoods ClassOfGoods)
+        +Goods(id int, description String, unit String, priceInEuro double, classOfGoods ClassOfGoods)
     }
 
     class Item {
@@ -46,14 +37,14 @@ classDiagram
         -amount int
         +Item(goods Goods, amount int)
         +setAmount(amount int) void
-        +getSubTotal() double
+        +getSubTotalInEuro() double
     }
 
     class ShoppingCart {
-        -items ArrayList~Item~
+        -items List~Item~
         +ShoppingCart()
         +createItem(goods Goods, amount int) void
-        +getTotal() double
+        +getTotalInEuro() double
     }
 
     class ClassOfGoods {
@@ -66,8 +57,8 @@ classDiagram
 
     class CashierSystem {
         -name String
-        -goods ArrayList~Goods~
-        -cashiers ArrayList~Cashier~
+        -goods List~Goods~
+        -cashiers List~Cashier~
         -shoppingCart ShoppingCart
         -cashier Cashier
         +CashierSystem(name String)
@@ -93,12 +84,12 @@ classDiagram
 
 ## Hinweis zur Klasse Item
 
-Die Methode `double getSubTotal()` soll die Zwischensumme gemäß der Formel _Anzahl \* Preis_ zurückgeben
+Die Methode `double getSubTotalInEuro()` soll die Zwischensumme gemäß der Formel _Anzahl \* Preis_ zurückgeben
 
 ## Hinweise zur Klasse ShoppingCart
 
 - Die Methode `void createItem(goods: Goods, amount: int)` soll den Einträgen des Warenkorbs (`items`) die eingehende Ware und die eingehende Anzahl als Eintrag hinzufügen
-- Die Methode `double getTotal()` soll die Gesamtsumme zurückgeben
+- Die Methode `double getTotalInEuro()` soll die Gesamtsumme zurückgeben
 
 ## Hinweise zur Klasse CashierSystem
 

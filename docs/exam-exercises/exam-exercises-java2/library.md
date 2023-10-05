@@ -43,8 +43,8 @@ classDiagram
 
     class EBook {
         -fileFormat FileFormat
-        -fileSize int
-        +EBook(author Author, title String, fileFormat FileFormat, fileSize int)
+        -fileSizeInKB int
+        +EBook(author Author, title String, fileFormat FileFormat, fileSizeInKB int)
     }
 
     class PaperBook {
@@ -79,6 +79,6 @@ Der Konstruktor soll alle Attribute initialisieren. Für den Fall, dass die eing
 
 ## Hinweise zur Klasse Library
 
-- Die Methode `void addBook(book Book)` soll der Bücherliste (`books`) das eingehende Buch mit dem Status `verfügbar` hinzufügen
-- Die Methode `Optional<Book> getBookByTitle(title String)` soll das Buch zum eingehenden Titel als Optional zurückgeben
-- Die Methode `List<PaperBook> getPaperBooksByStatus(status Status)` soll alle gedruckten Bücher zum eingehenden Status zurückgeben
+- Die Methode `void addBook(book: Book)` soll der Bücherliste (`books`) das eingehende Buch mit dem Status `verfügbar` hinzufügen
+- Die Methode `Optional<Book> getBookByTitle(title: String)` soll das Buch zum eingehenden Titel als Optional zurückgeben
+- Die Methode `List<PaperBook> getPaperBooksByStatus(status: Status)` soll alle gedruckten Bücher zum eingehenden Status zurückgeben

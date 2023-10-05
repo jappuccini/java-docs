@@ -36,8 +36,8 @@ classDiagram
     class StudyCourse {
         -description String
         -courseOfStudies CourseOfStudies
-        -lectures ArrayList~Lecture~
-        -students ArrayList~Student~
+        -lectures List~Lecture~
+        -students List~Student~
         +StudyCourse(description String, courseOfStudies CourseOfStudies)
         +addStudent(student Student) void
         +addLecture(lecture Lecture) void

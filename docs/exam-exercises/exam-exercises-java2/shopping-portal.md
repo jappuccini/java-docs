@@ -19,14 +19,14 @@ classDiagram
         +ShoppingCart()
         +addItem(sellable T, amount int) void
         +removeItem(sellable T) void
-        +getTotalinEuro() double
+        +getTotalInEuro() double
     }
 
     class Item {
         -sellable T
         -amount int
         -Item(sellable T, amount int)
-        +getSubTotalinEuro() double
+        +getSubTotalInEuro() double
     }
 
     class Sellable {
@@ -61,14 +61,14 @@ Die Methode `double getSubTotalInEuro()` soll die Zwischensumme des Warenkorbein
 
 ## Hinweise zur Klasse ShoppingCart
 
-- Die Methode `void addItem(sellable T, amount int)` soll den Einträgen des Warenkorbs (`items`) das eingehende verkäufliche Objekt und die eingehende Anzahl als
+- Die Methode `void addItem(sellable: T, amount: int)` soll den Einträgen des Warenkorbs (`items`) das eingehende verkäufliche Objekt und die eingehende Anzahl als
   Eintrag hinzufügen
-- Die Methode `void removeItem(sellable T)` soll das eingehende verkäufliche Objekt aus den Einträgen des Warenkorbs (`items`) entfernen
+- Die Methode `void removeItem(sellable: T)` soll das eingehende verkäufliche Objekt aus den Einträgen des Warenkorbs (`items`) entfernen
 - Die Methode `double getTotalInEuro()` soll die Gesamtsumme des Warenkorbs zurückgeben
 
 ## Hinweise zur Klasse ShoppingPortal
 
-- Die Methode `void addProductToShoppingCart(product Product, amount int)` soll dem Warenkorb (`shoppingCart`) das eingehende Produkt und die eingehende Anzahl als
+- Die Methode `void addProductToShoppingCart(product: Product, amount: int)` soll dem Warenkorb (`shoppingCart`) das eingehende Produkt und die eingehende Anzahl als
   Eintrag hinzufügen
-- Die Methode `void removeProductFromShoppingCart(product Product)` soll das eingehende Produkt aus dem Warenkorb (`shoppingCart`) entfernen
+- Die Methode `void removeProductFromShoppingCart(product: Product)` soll das eingehende Produkt aus dem Warenkorb (`shoppingCart`) entfernen
 - Die Methode `void clearShoppingCart()` soll alle Einträge des Warenkorbs (`shoppingCart`) entfernen

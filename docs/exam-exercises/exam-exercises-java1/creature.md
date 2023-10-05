@@ -43,7 +43,7 @@ classDiagram
     }
 
     class CreaturesReader {
-        +getCreatures(file File) ArrayList~Creature~
+        +getCreatures(file File) List~Creature~
     }
 ```
 
@@ -61,7 +61,7 @@ classDiagram
 
 ## Hinweis zur Klasse CreaturesReader
 
-Die Methode `ArrayList<Creature> getCreatures(file: File)` soll alle Kreaturen der eingehenden Datei zurückgeben und die Kreaturen die Bewegungen der eingehenden Datei ausführen lassen.
+Die Methode `List<Creature> getCreatures(file: File)` soll alle Kreaturen der eingehenden Datei zurückgeben und die Kreaturen die Bewegungen der eingehenden Datei ausführen lassen.
 
 ## Beispielhafter Aufbau der Kreaturendatei
 

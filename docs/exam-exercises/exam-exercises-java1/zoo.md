@@ -17,11 +17,11 @@ classDiagram
 
     class Zoo {
         -name String
-        -animals ArrayList~Animal~
-        +Zoo(name String, animals ArrayList~Animal~)
+        -animals List~Animal~
+        +Zoo(name String, animals List~Animal~)
         +addAnimal(animal Animal) void
         +getBiggestAnimal() Animal
-        +getFishesByColor(color String) ArrayList~Fish~
+        +getFishesByColor(color String) List~Fish~
     }
 
     class Animal {
@@ -68,4 +68,4 @@ Die Methode `void swim()` soll die Zeichenkette _schwimm, schwimm_ ausgeben.
 
 - Die Methode `void addAnimal(animal: Animal)` soll dem Zoo das eingehende Tier hinzufügen
 - Die Methode `Animal getBiggestAnimal()` soll das größte Tier des Zoos zurückgeben
-- Die Methode `ArrayList<Fish> getFishesByColor(color: String)` soll alle Fische des Zoos zur eingehenden Farbe zurückgeben
+- Die Methode `List<Fish> getFishesByColor(color: String)` soll alle Fische des Zoos zur eingehenden Farbe zurückgeben

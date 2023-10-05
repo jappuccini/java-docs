@@ -46,7 +46,7 @@ Attribut `bar` sortiert.
 public class MainClass {
 
   public static void main(String[] args) {
-    ArrayList<Container> containers = new ArrayList<>();
+    List<Container> containers = new ArrayList<>();
     containers.add(new Container("Winter"));
     containers.add(new Container("is"));
     containers.add(new Container("Coming"));

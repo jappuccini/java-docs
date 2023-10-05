@@ -17,26 +17,26 @@ classDiagram
 
     class ParkingSpot {
         -vehicle Vehicle
-        -length double
-        -height double
+        -lengthInM double
+        -heightInM double
         -isForBusesOnly boolean
-        +ParkingSpot(length double, height double, isForBusesOnly boolean)
+        +ParkingSpot(lengthInM double, heightInM double, isForBusesOnly boolean)
     }
 
     class Vehicle {
         -make String
         -model String
-        -length double
-        -height double
-        +Vehicle(make String, model String, length double, height double)
+        -lengthInM double
+        -heightInM double
+        +Vehicle(make String, model String, lengthInM double, heightInM double)
     }
 
     class Car {
-        +Car(make String, model String, length double, height double)
+        +Car(make String, model String, lengthInM double, heightInM double)
     }
 
     class Bus {
-        +Bus(make String, model String, length double, height double)
+        +Bus(make String, model String, lengthInM double, heightInM double)
     }
 
     class ParkingGarage {

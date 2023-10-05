@@ -41,8 +41,8 @@ classDiagram
 
 ## Hinweise zur Klasse HumanResources
 
-- Die Methode `void addTelephoneNumber(telephoneNumber TelephoneNumber, person Person)` soll dem Telefonbuch (`telephoneBook`) die eingehende Telefonnummer als
+- Die Methode `void addTelephoneNumber(telephoneNumber: TelephoneNumber, person: Person)` soll dem Telefonbuch (`telephoneBook`) die eingehende Telefonnummer als
   Schlüssel sowie die eingehende Person als Wert hinzufügen
-- Die Methode `void addStaff(person Person)` soll der Personalliste (`staff`) die eingehende Person hinzufügen. Für den Fall, dass diese Person bereits in der
+- Die Methode `void addStaff(person: Person)` soll der Personalliste (`staff`) die eingehende Person hinzufügen. Für den Fall, dass diese Person bereits in der
   Personalliste vorhanden ist, soll die Ausnahme `DuplicateException` ausgelöst werden
-- Die Methode `List<TelephoneNumber> getTelephoneNumbersByPersonId(id int)` soll alle Telefonnummern zur eingehenden Personennummer zurückgeben
+- Die Methode `List<TelephoneNumber> getTelephoneNumbersByPersonId(id: int)` soll alle Telefonnummern zur eingehenden Personennummer zurückgeben

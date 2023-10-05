@@ -15,18 +15,18 @@ classDiagram
     Player o-- Card
 
     class Player {
-        -cards ArrayList~Card~
-        +Player(cards ArrayList~Card~)
+        -cards List~Card~
+        +Player(cards List~Card~)
         +addCard(card Card) void
         +getCardWithHighestValue() Card
-        +getCardsByColour(colour String) ArrayList~Card~
+        +getCardsByColour(colour String) List~Card~
     }
 
     class CardDealer {
-        -deck ArrayList~Card~
+        -deck List~Card~
         -player1 Player
         -player2 Player
-        +CardsDealer(deck ArrayList~Card~, player1 Player, player2 Player )
+        +CardsDealer(deck List~Card~, player1 Player, player2 Player )
         +dealCards(amount int) void
     }
 
@@ -37,7 +37,7 @@ classDiagram
     }
 
     class CardsReader {
-        +getCards(file File) ArrayList~Card~
+        +getCards(file File) List~Card~
     }
 ```
 
@@ -49,7 +49,7 @@ classDiagram
 ## Hinweise zur Klasse Player
 
 - Die Methode `void addCard(card: Card)` soll dem Spieler die eingehende Karte hinzufügen
-- Die Methode `ArrayList<Card> getCardsByColour(colour: String)` soll alle Karten des Spielers zur eingehenden Farbe zurückgeben
+- Die Methode `List<Card> getCardsByColour(colour: String)` soll alle Karten des Spielers zur eingehenden Farbe zurückgeben
 - Die Methode `Card getCardWithHighestValue()` soll die Karte des Spielers mit dem höchsten Wert zurückgeben
 
 ## Hinweis zur Klasse CardsDealer
@@ -58,7 +58,7 @@ Die Methode `void dealCards(amount: int)` soll den beiden Spielern die eingehend
 
 ## Hinweis zur Klasse CardsReader
 
-Die Methode `ArrayList<Card> getCards(file: File)` soll alle Karten der eingehenden Datei zurückgeben.
+Die Methode `List<Card> getCards(file: File)` soll alle Karten der eingehenden Datei zurückgeben.
 
 ## Beispielhafter Aufbau der Kartendatei
 
