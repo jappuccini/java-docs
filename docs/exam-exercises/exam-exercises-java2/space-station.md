@@ -45,7 +45,7 @@ classDiagram
 
 ## Hinweise zur Klasse SpaceStation
 
-- Die Methode `void land(bayNumber Integer, spaceFighter SpaceFighter)` soll den eingehenden Sternenjäger in der Bucht mit der eingehenden Buchtnummer landen
+- Die Methode `void land(bayNumber: Integer, spaceFighter: SpaceFighter)` soll den eingehenden Sternenjäger in der Bucht mit der eingehenden Buchtnummer landen
   lassen. Für den Fall, dass der eingehende Sternenjäger bereits gelandet ist (also bereits eine Bucht belegt), soll die Ausnahme
   `SpaceFighterAlreadyLandedException` ausgelöst werden und für den Fall, dass die Bucht bereits belegt ist, die Ausnahme `BayAlreadyLoadedException`
 - Die Methode `Optional<SpaceFighter> getFastestSpaceFighter()` soll den schnellsten Sternenjäger der Raumstation als Optional zurückgeben
