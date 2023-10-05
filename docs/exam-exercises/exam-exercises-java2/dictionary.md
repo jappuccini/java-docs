@@ -40,7 +40,7 @@ classDiagram
         <<record>>
         -sourceLanguage Language
         -targetLanguage Language
-        -entries TreeMap~Word&#44&#160Word~
+        -entries Map~Word&#44&#160Word~
         +addEntry(sourceWord Word, targetWord Word) void
         +importEntries(file File) void
         +getTranslation(word String) Optional~String~
