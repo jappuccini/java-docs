@@ -36,8 +36,8 @@ classDiagram
     }
 
     class BluRay {
-        -capactity double
-        +BluRay(movie Movie, capacity double)
+        -capactityInGB double
+        +BluRay(movie Movie, capacityInGB double)
     }
 
     class Movie {
@@ -64,9 +64,9 @@ classDiagram
 
 ## Hinweise zur Klasse VideoCollection
 
-- Die Methode `void addVideo(video Video)` soll der Videoliste (`videos`) das eingehende Video hinzufügen
-- Die Methode `void importVideos(file File)` soll der Videoliste (`videos`) die Videos der eingehenden Datei hinzufügen. Die Ausnahme `FileNotFoundException` soll dabei weitergeleitet werden
-- Die Methode `Optional<Video> getVideoByTitle(title String)` soll das Video zum eingehenden Titel als Optional zurückgeben
+- Die Methode `void addVideo(video: Video)` soll der Videoliste (`videos`) das eingehende Video hinzufügen
+- Die Methode `void importVideos(file: File)` soll der Videoliste (`videos`) die Videos der eingehenden Datei hinzufügen. Die Ausnahme `FileNotFoundException` soll dabei weitergeleitet werden
+- Die Methode `Optional<Video> getVideoByTitle(title: String)` soll das Video zum eingehenden Titel als Optional zurückgeben
 
 ## Beispielhafter Aufbau der Videodatei
 
