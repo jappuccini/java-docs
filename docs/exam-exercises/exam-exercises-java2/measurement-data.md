@@ -16,30 +16,30 @@ tags: [records, maps, optionals, java-stream-api]
 ## Quellcode
 
 ```java
-public record MeasurementData(String country, LocalDate date, double temperature, int percentage,
+public record MeasurementData(String country, LocalDate date, double temperatureInC, int percentage,
     char category) {
 
   private final static int NUMBER_OF_ENTRIES = 100;
   private final static int MAX_DAYS = 2000;
-  private final static int MAX_TEMPERATURE = 40;
+  private final static int MAX_TEMPERATURE_IN_CELCIUS = 40;
   private final static int MAX_PERCENTAGE = 101;
   private final static List<String> COUNTRIES =
       List.of("USA", "Brasilien", "Deutschland", "Japan", "Indien");
   private final static List<Character> CATEGORIES = List.of('D', 'X', 'F');
 
   public static ArrayList<MeasurementData> getMeasurementData() {
-    ArrayList<MeasurementData> measurementData = new ArrayList<>();
+    List<MeasurementData> measurementData = new ArrayList<>();
 
     Random rnd = new Random();
     LocalDate now = LocalDate.now();
 
     for (int i = 0; i < NUMBER_OF_ENTRIES; i++) {
       LocalDate date = now.minusDays(rnd.nextInt(MAX_DAYS));
-      double temperature = rnd.nextDouble(MAX_TEMPERATURE);
+      double temperatureInC = rnd.nextDouble(MAX_TEMPERATURE_IN_CELCIUS);
       int percentage = rnd.nextInt(MAX_PERCENTAGE);
       String country = COUNTRIES.get(rnd.nextInt(COUNTRIES.size()));
       char category = CATEGORIES.get(rnd.nextInt(CATEGORIES.size()));
-      measurementData.add(new MeasurementData(country, date, temperature, percentage, category));
+      measurementData.add(new MeasurementData(country, date, temperatureInC, percentage, category));
     }
 
     return measurementData;
