@@ -19,7 +19,58 @@ Erstelle die JUnit-5-Testklasse `SuperLeagueTest` anhand des abgebildeten Klasse
 
 ```mermaid
 classDiagram
-    class Test {
+    SuperHuman <|-- Villain
+    SuperHuman <|-- Hero
+    SuperHuman o-- Universe
+    SuperLeague~T extends SuperHuman~ o-- Universe
+    SuperLeagueTest o-- Hero
+    SuperLeagueTest o-- SuperLeague
+
+    class SuperHuman {
+        <<abstract>>
+        -name String
+        -universe Universe
+        -power int
+        +SuperHuman(name String, universe Universe, power int)
+        +name() String
+        +universe() Universe
+        +power() int
+    }
+
+    class Villain {
+        +Villain(name String, universe Universe, power int)
+    }
+
+    class Hero {
+        +Hero(name String, universe Universe, power int)
+    }
+
+    class Universe {
+        <<enumeration>>
+        MARVEL
+        DC
+    }
+
+    class SuperLeague~T extends SuperHuman~ {
+        <<record>>
+        -name String
+        -universe Universe
+        -members Map~T&#44&#160Boolean~
+        +addSuperHuman(t T) void
+        +getMostPowerfulSuperHuman() Optional~T~
+        +getAllAvailableSuperHumans() List~T~
+        +sendSuperHumanOnMission(t T) void
+    }
+
+    class SuperLeagueTest {
+        -avengers SuperLeague~Hero~
+        -superman Hero
+        -ironman Hero
+        -spiderman Hero
+        +setUp() void
+        +testAddSuperHuman() void
+        +testGetAllAvailableSuperHumans() void
+        +testGetMostPowerfulSuperHuman() void
     }
 ```
 
@@ -38,17 +89,55 @@ classDiagram
 
 ## Aufgabe 2 (16 Punkte)
 
-Erstelle die Klasse `SuperLeague` anhand des abgebildeten Klassendiagrams.
+Erstelle die Klasse `SuperLeague<T extends SuperHuman>` anhand des abgebildeten Klassendiagrams.
 
 ### Klassendiagramm
 
 ```mermaid
 classDiagram
-    class Test {
+    SuperHuman <|-- Villain
+    SuperHuman <|-- Hero
+    SuperHuman o-- Universe
+    SuperLeague~T extends SuperHuman~ o-- Universe
+
+    class SuperHuman {
+        <<abstract>>
+        -name String
+        -universe Universe
+        -power int
+        +SuperHuman(name String, universe Universe, power int)
+        +name() String
+        +universe() Universe
+        +power() int
+    }
+
+    class Villain {
+        +Villain(name String, universe Universe, power int)
+    }
+
+    class Hero {
+        +Hero(name String, universe Universe, power int)
+    }
+
+    class Universe {
+        <<enumeration>>
+        MARVEL
+        DC
+    }
+
+    class SuperLeague~T extends SuperHuman~ {
+        <<record>>
+        -name String
+        -universe Universe
+        -members Map~T&#44&#160Boolean~
+        +addSuperHuman(t T) void
+        +getMostPowerfulSuperHuman() Optional~T~
+        +getAllAvailableSuperHumans() List~T~
+        +sendSuperHumanOnMission(t T) void
     }
 ```
 
-### Hinweise zur Klasse SuperLeague
+### Hinweise zur Klasse SuperLeague<T extends SuperHuman\>
 
 - Der Assoziativspeicher `members` beinhaltet als Schlüssel alle Übermenschen der Liga sowie als Wert deren Verfügbarkeit (verfügbar: `true`, nicht verfügbar: `false`)
 -	Die Methode `Optional<T> getMostPowerfulSuperHuman()` soll den stärksten Übermenschen der Liga als Optional zurückgeben
@@ -64,7 +153,45 @@ Erstelle die Klasse `SingleQueries` anhand des abgebildeten Klassendiagramms.
 
 ```mermaid
 classDiagram
-    class Test {
+    Single o-- Artist
+    Artist o-- Country
+    SingleQueries o-- Single
+
+    class Single {
+        <<record>>
+        -name String
+        -artist Artist
+        -salesInMillions int
+        -publishingYear String
+    }
+
+    class Artist {
+        <<record>>
+        -name String
+        -country Country
+        -birthdate LocalDate
+        -isAlive boolean
+    }
+
+    class Country {
+        <<enumeration>>
+        BRB
+        CHN
+        FRA
+        GBR
+        ITA
+        PRI
+        USA
+    }
+
+    class SingleQueries {
+        <<record>>
+        -singles List~Single~
+        +printAllSinglesWithMoreThan25MillionSalesPerCountry() void
+        +printAverageBirthYearOfAllDeceasedArtists() void
+        +isAnySingleFromChinaWithMoreThan10MillionSales() boolean
+        +getTop3SinglesOfThisCenturyBySalesInMillions() List~String~
+        +getAllSinglesFromEdSheeran() List~Single~
     }
 ```
 
