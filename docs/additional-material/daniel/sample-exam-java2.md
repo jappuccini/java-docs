@@ -1,6 +1,8 @@
 ---
 title: Musterklausur Programmierung 2
 description: ''
+sidebar_position: 30
+tags: []
 ---
 
 ## Hinweise zur Klausur
