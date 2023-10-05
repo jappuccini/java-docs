@@ -35,25 +35,25 @@ classDiagram
     class Food {
         -name String
         -foodCategory FoodCategory
-        -calories double
-        +Food(name String, foodCategory FoodCategory, calories double)
+        -calorificValueInKcal double
+        +Food(name String, foodCategory FoodCategory, calorificValueInKcal double)
     }
 
     class FastFood {
         -isVegetarian boolean
-        -ratings ArrayList~Integer~
-        +FastFood(name String, foodCategory FoodCategory, calories double, isVegetarian boolean)
+        -ratings List~Integer~
+        +FastFood(name String, foodCategory FoodCategory, calorificValueInKcal double, isVegetarian boolean)
         +addRating(rating int) void
         +getAverageRating() double
     }
 
     class Burger {
-        +Burger(name String, calories double, isVegetarian boolean)
+        +Burger(name String, calorificValueInKcal double, isVegetarian boolean)
     }
 
     class FastFoodShop {
         -name String
-        -fastFood ArrayList~FastFood~
+        -fastFood List~FastFood~
         +FastFoodShop(name String)
         +addFastFood(fastFood FastFood) void
         +rateFastFood(fastFood FastFood, rating int) void
