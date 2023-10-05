@@ -1,6 +1,8 @@
 ---
 title: Cheatsheet Programmierung 2
 description: ''
+sidebar_position: 50
+tags: []
 ---
 
 ## Java API
