@@ -14,7 +14,7 @@ classDiagram
     Present o-- Person
 
     class GiftBag {
-        -presents ArrayList~Present~
+        -presents List~Present~
         +GiftBag()
         +addPresent(present Present) void
         +getMostExpensivePresent() Present
@@ -22,10 +22,10 @@ classDiagram
 
     class Present {
         -description String
-        -price double
+        -priceInEuro double
         -sender Person
         -recipient Person
-        +Present(description String, price double, sender Person, recipient Person)
+        +Present(description String, priceInEuro double, sender Person, recipient Person)
     }
 
     class Person {
