@@ -26,7 +26,7 @@ public class MainClass {
 
   public static void main(String[] args) {
 
-    HashMap<Integer, String> foos = new HashMap<>();
+    Map<Integer, String> foos = new HashMap<>();
     foos.put(834, "Hans");
     foos.put(269, "Peter");
     foos.put(771, "Lisa");
