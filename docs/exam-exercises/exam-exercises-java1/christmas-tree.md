@@ -15,9 +15,9 @@ classDiagram
 
     class ChristmasTree {
         -type String
-        -size double
-        -candles ArrayList~Candle~
-        +ChristmasTree(type String, size double)
+        -sizeInM double
+        -candles List~Candle~
+        +ChristmasTree(type String, sizeInM double)
         +addCandle(candle Candle) void
         +lightChristmasTree() void
         +getNumberOfElectricCandles() int
@@ -33,7 +33,7 @@ classDiagram
     }
 
     class ElectricCandle {
-        -power int
+        -powerInPercent int
         +ElectricCandle(colour String)
         +lightACandle() void
         +recharge() void
@@ -58,6 +58,6 @@ classDiagram
 
 ## Hinweise zur Klasse ElectricCandle
 
-- Der Konstruktor soll die Energie (`power`) auf den Wert _100_ setzen
+- Der Konstruktor soll die Energie (`powerInPercent`) auf den Wert _100_ setzen
 - Die Methode `void lightACandle()` soll die elektrische Kerze "entzünden", wenn diese noch über Energie verfügt und die Energie um den Wert _10_ reduzieren
 - Die Methode `void recharge()` soll die Energie der elektrische Kerze wieder auf den Wert _100_ setzen
