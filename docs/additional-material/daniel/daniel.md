@@ -5,15 +5,6 @@ sidebar_position: 20
 tags: []
 ---
 
-## Abbildungen
+import DocCardList from '@theme/DocCardList';
 
-[Programmierung - Abbildungen.pptx](https://github.com/jappuccini/java-docs/files/11428579/Programmierung.-.Abbildungen.pptx)
-
-## Cheatsheet
-
-[Programmierung - Cheatsheet.pdf](https://github.com/jappuccini/java-docs/files/11428580/Programmierung.-.Cheatsheet.pdf)
-
-## Alt- und Probeklausuren
-
-- [Programmierung 1 - Alt- und Probeklausuren.zip](https://github.com/appenmaier/programming/files/10235160/Programmierung.1.-.Alt-.und.Probeklausuren.zip)
-- [Programmierung 2 - Alt- und Probeklausuren.zip](https://github.com/jappuccini/java-docs/files/11428599/Programmierung.2.-.Alt-.und.Probeklausuren.zip)
+<DocCardList />
