@@ -196,7 +196,7 @@ public class Foo implements Serializable {
 public class MainClass {
 
   public static void main(String[] args) {
-    ArrayList<Foo> foos = new ArrayList<>();
+    List<Foo> foos = new ArrayList<>();
     foos.add(new Foo());
     foos.add(new Foo());
 
