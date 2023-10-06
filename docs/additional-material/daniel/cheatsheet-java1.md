@@ -26,6 +26,7 @@ tags: []
 | `Object`         | `equals(object: Object)`                                                          | `boolean`        |
 | `Object`         | `hashCode()`                                                                      | `int`            |
 | `Object`         | `toString()`                                                                      | `String`         |
+| `PrintStream`    | print-Methoden, println-Methoden                                                  | `void`           |
 | `Random`         | `nextInt(bound: int)`                                                             | `int`            |
 | `Scanner`        | `hasNextLine()`                                                                   | `boolean`        |
 | `Scanner`        | `next()`                                                                          | `String`         |
@@ -37,6 +38,7 @@ tags: []
 | `String`         | `length()`                                                                        | `int`            |
 | `String`         | `split(regex: String)`                                                            | `String[]`       |
 | `String`         | `toLowerCase()`, `toUpperCase()`                                                  | `String`         |
+| `System`         | `currentTimeMillis()`                                                             | `long`           |
 
 ## Java Collections Framework
 
@@ -51,3 +53,10 @@ tags: []
 | `ArrayList<E>`  | `size()`                                                   | `int`              |
 | `Collections`   | `sort(list: List<T>, c: Comparator<T>)`                    | `void`             |
 | `List<E>`       | `of(elements: E...)`                                       | `List<E>`          |
+
+## Funktionale Schnittstellen
+
+| Klasse          | Methode                 | Rückgabetyp |
+| --------------- | ----------------------- | ----------- |
+| `Comparable<T>` | `compareTo(o: T)`       | `int`       |
+| `Comparator<T>` | `compare(o1: T, o2: T)` | `int`       |
