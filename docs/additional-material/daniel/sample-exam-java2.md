@@ -312,37 +312,35 @@ getAllSinglesFromEdSheeran:
 ### Musterlösung
 
 ```java title="SingleQueries" showLineNumbers
-public class SingleQueries { // 0,5
+public record SingleQueries(List<Single> singles) { // 1
 
-  private static ArrayList<Single> singles = Singles.getSingles(); // 0,5
-
-  private static void a() { // 0,5
+  private void a() { // 0,5
     Map<Country, List<Single>> x = singles.stream() // 1
-        .filter(a -> a.salesInMillions() > 25) // 0,5
-        .collect(Collectors.groupingBy(a -> a.artist().country())); // 1
+      .filter(a -> a.salesInMillions() > 25) // 0,5
+      .collect(Collectors.groupingBy(a -> a.artist().country())); // 1
 
     x.forEach((c, sl) -> System.out.println(c + ": " + sl); // 1
     }
   }
 
-  private static void b() { // 0,5
+  private void b() { // 0,5
     OptionalDouble x = singles.stream() // 1
-     .map(a -> a.artist()) // 0,5
-     .distinct() // 0,5
-     .filter(a -> !a.isAlive()) // 0,5
-     .mapToInt(a -> a.birthdate().getYear()) // 1
-     .average(); // 0,5
+      .map(a -> a.artist()) // 0,5
+      .distinct() // 0,5
+      .filter(a -> !a.isAlive()) // 0,5
+      .mapToInt(a -> a.birthdate().getYear()) // 1
+      .average(); // 0,5
 
     x.ifPresentOrElse(System.out::println, () -> System.out.println(-1)); // 1
   }
 
-  private static boolean c() { // 0,5
+  private boolean c() { // 0,5
     return singles.stream() // 1
-        .anyMatch(a -> a.salesInMillions() > 10 // 0,5
-          && a.artist().country().equals(Country.CHN)); // 1
+      .anyMatch(a -> a.salesInMillions() > 10 // 0,5
+        && a.artist().country().equals(Country.CHN)); // 1
   }
 
-  private static List<String> d() { // 0,5
+  private List<String> d() { // 0,5
     return singles.stream() // 1
       .filter(a -> a.publishingYear().compareTo("2000") > 0) // 1
       .sorted((a1, a2) -> Integer.valueOf(a2.salesInMillions()).compareTo(a1.salesInMillions())) // 1
@@ -351,11 +349,10 @@ public class SingleQueries { // 0,5
       .collect(Collectors.toList()); // 0,5
   }
 
-  private static List<Single> e() { // 0,5
+  private List<Single> e() { // 0,5
     return singles.stream() // 1
-        .filter(a -> a.artist().equals(new Artist("Ed Sheeran", Country.GBR, LocalDate.of(1991, 2, 17),
-          true))) // 1
-        .collect(Collectors.toList()); // 0,5
+      .filter(a -> a.artist().equals(new Artist("Ed Sheeran", Country.GBR, LocalDate.of(1991, 2, 17), true))) // 1
+      .collect(Collectors.toList()); // 0,5
   }
 
 }
