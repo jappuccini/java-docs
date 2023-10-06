@@ -80,44 +80,44 @@ tags: []
 
 ## Funktionale Schnittstellen
 
-| Klasse                    | Methode                   | Rückgabetyp |
-| ------------------------- | ------------------------- | ----------- |
-| `BiConsumer`              | `accept(t: T, u: U)`      | `void`      |
-| `Comparable<T>`           | `compareTo(o: T)`         | `int`       |
-| `Comparator<T>`           | `compare(o1: T, o2: T)`   | `int`       |
-| `Consumer<T>`             | `accept(t: T)`            | `void`      |
-| `DoubleConsumer`          | `accept(value: double)`   | `void`      |
-| `Executable`              | `execute()`               | `void`      |
-| `Function<T, R>`          | `apply(t: T)`             | `R`         |
-| `Predicate<T>`            | `test(t: T)`              | `boolean`   |
-| `ToDoubleFunction<T, R>`  | `applyAsDouble(value: T)` | `double`    |
-| `ToIntFunction<T, R>`     | `applyAsInt(value: T)`    | `int`       |
+| Klasse                   | Methode                   | Rückgabetyp |
+| ------------------------ | ------------------------- | ----------- |
+| `BiConsumer`             | `accept(t: T, u: U)`      | `void`      |
+| `Comparable<T>`          | `compareTo(o: T)`         | `int`       |
+| `Comparator<T>`          | `compare(o1: T, o2: T)`   | `int`       |
+| `Consumer<T>`            | `accept(t: T)`            | `void`      |
+| `DoubleConsumer`         | `accept(value: double)`   | `void`      |
+| `Executable`             | `execute()`               | `void`      |
+| `Function<T, R>`         | `apply(t: T)`             | `R`         |
+| `Predicate<T>`           | `test(t: T)`              | `boolean`   |
+| `ToDoubleFunction<T, R>` | `applyAsDouble(value: T)` | `double`    |
+| `ToIntFunction<T, R>`    | `applyAsInt(value: T)`    | `int`       |
 
 ## Java Stream API
 
-| Klasse           | Methode                                                                                                        | Rückgabetyp                        |
-| ---------------- | -------------------------------------------------------------------------------------------------------------- | ---------------------------------- |
-| `Collectors`     | `toList()`                                                                                                     | `Collector<T, ?, List<T>>`         |
-| `Collectors`     | `toMap(keyMapper: Function<T, K>, valueMapper: Function<T, U>)`                                                | `Collector<T, ?, Map<K, U>`        |
-| `Collectors`     | `groupingBy(classifier: Function<T, K>)`                                                                       | `Collector<T, ?, Map<K, List<T>>>` |
-| `DoubleStream`   | `average()`                                                                                                    | `OptionalDouble`                   |
-| `DoubleStream`   | `sum()`                                                                                                        | `double`                           |
-| `IntStream`      | `average()`                                                                                                    | `OptionalDouble`                   |
-| `IntStream`      | `sum()`                                                                                                        | `int`                              |
-| `Stream<T>`      | `allMatch(predicate: Predicate<T>)`, `anyMatch(predicate: Predicate<T>)`, `noneMatch(predicate: Predicate<T>)` | `boolean`                          |
-| `Stream<T>`      | `collect(collector: Collector<T, A, R>)`                                                                       | `R`                                |
-| `Stream<T>`      | `count()`                                                                                                      | `long`                             |
-| `Stream<T>`      | `distinct()`                                                                                                   | `Stream<T>`                        |
-| `Stream<T>`      | `filter(predicate: Predicate<T>)`                                                                              | `Stream<T>`                        |
-| `Stream<T>`      | `findAny(), findFirst()`                                                                                       | `Optional<T>`                      |
-| `Stream<T>`      | `forEach(action: Consumer<T>)`                                                                                 | `void`                             |
-| `Stream<T>`      | `limit(maxSize: long)`                                                                                         | `Stream<T>`                        |
-| `Stream<T>`      | `map(mapper: Function<T, R>)`                                                                                  | `Stream<R>`                        |
-| `Stream<T>`      | `mapToDouble(mapper: ToDoubleFunction<T, R>)`                                                                  | `DoubleStream`                     |
-| `Stream<T>`      | `mapToInt(mapper: ToIntFunction<T, R>)`                                                                        | `IntStream`                        |
-| `Stream<T>`      | `max(comparator: Comparator<T>), min(comparator: Comparator<T>)`                                               | `Optional<T>`                      |
-| `Stream<T>`      | `skip(n: long)`                                                                                                | `Stream<T>`                        |
-| `Stream<T>`      | `sorted()`, `sorted(comparator: Comparator<T>)`                                                                | `Stream<T>`                        |
+| Klasse         | Methode                                                                                                        | Rückgabetyp                        |
+| -------------- | -------------------------------------------------------------------------------------------------------------- | ---------------------------------- |
+| `Collectors`   | `toList()`                                                                                                     | `Collector<T, ?, List<T>>`         |
+| `Collectors`   | `toMap(keyMapper: Function<T, K>, valueMapper: Function<T, U>)`                                                | `Collector<T, ?, Map<K, U>`        |
+| `Collectors`   | `groupingBy(classifier: Function<T, K>)`                                                                       | `Collector<T, ?, Map<K, List<T>>>` |
+| `DoubleStream` | `average()`                                                                                                    | `OptionalDouble`                   |
+| `DoubleStream` | `sum()`                                                                                                        | `double`                           |
+| `IntStream`    | `average()`                                                                                                    | `OptionalDouble`                   |
+| `IntStream`    | `sum()`                                                                                                        | `int`                              |
+| `Stream<T>`    | `allMatch(predicate: Predicate<T>)`, `anyMatch(predicate: Predicate<T>)`, `noneMatch(predicate: Predicate<T>)` | `boolean`                          |
+| `Stream<T>`    | `collect(collector: Collector<T, A, R>)`                                                                       | `R`                                |
+| `Stream<T>`    | `count()`                                                                                                      | `long`                             |
+| `Stream<T>`    | `distinct()`                                                                                                   | `Stream<T>`                        |
+| `Stream<T>`    | `filter(predicate: Predicate<T>)`                                                                              | `Stream<T>`                        |
+| `Stream<T>`    | `findAny(), findFirst()`                                                                                       | `Optional<T>`                      |
+| `Stream<T>`    | `forEach(action: Consumer<T>)`                                                                                 | `void`                             |
+| `Stream<T>`    | `limit(maxSize: long)`                                                                                         | `Stream<T>`                        |
+| `Stream<T>`    | `map(mapper: Function<T, R>)`                                                                                  | `Stream<R>`                        |
+| `Stream<T>`    | `mapToDouble(mapper: ToDoubleFunction<T, R>)`                                                                  | `DoubleStream`                     |
+| `Stream<T>`    | `mapToInt(mapper: ToIntFunction<T, R>)`                                                                        | `IntStream`                        |
+| `Stream<T>`    | `max(comparator: Comparator<T>), min(comparator: Comparator<T>)`                                               | `Optional<T>`                      |
+| `Stream<T>`    | `skip(n: long)`                                                                                                | `Stream<T>`                        |
+| `Stream<T>`    | `sorted()`, `sorted(comparator: Comparator<T>)`                                                                | `Stream<T>`                        |
 
 ## JUnit 5
 
