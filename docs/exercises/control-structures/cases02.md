@@ -5,7 +5,8 @@ description: ''
 
 import Exercise from '@site/src/components/Exercise';
 
-Erstelle eine ausführbare Klasse, welche die 4 Grundrechenoperationen beherrscht.
+Erstelle eine ausführbare Klasse, welche die 4 Grundrechenoperationen
+beherrscht.
 
 ## Konsolenausgabe
 

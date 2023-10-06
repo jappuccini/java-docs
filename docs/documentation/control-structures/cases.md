@@ -5,12 +5,15 @@ sidebar_position: 10
 tags: [control-structures, cases]
 ---
 
-Mit Hilfe von Verzweigungen können unterschiedliche Anweisungsblöcke ausgeführt werden.
+Mit Hilfe von Verzweigungen können unterschiedliche Anweisungsblöcke ausgeführt
+werden.
 
 ## Einfache Verzweigungen
 
-Die if-Verzweigung ist eine Anweisung, die abhängig von einer Bedingung zwischen unterschiedlichen Anweisungsblöcken auswählt: Ist die Bedingung wahr, wird der Anweisungsblock direkt nach der Bedingung ausgeführt, ansonsten wird der Anweisungsblock nach `else`
-ausgeführt.
+Die if-Verzweigung ist eine Anweisung, die abhängig von einer Bedingung zwischen
+unterschiedlichen Anweisungsblöcken auswählt: Ist die Bedingung wahr, wird der
+Anweisungsblock direkt nach der Bedingung ausgeführt, ansonsten wird der
+Anweisungsblock nach `else` ausgeführt.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
@@ -38,7 +41,9 @@ Der else-Zweig ist optional, kann also weggelassen werden.
 
 ## Kaskadierte Verzweigungen
 
-Mehrfachverzweigungen können mit Hilfe einer if-else-if-Leiter abgebildet werden. Die if-else-if-Leiter verschachtelt mehrere if-Anweisungen zu einer sogenannten kaskadierten Verzweigung.
+Mehrfachverzweigungen können mit Hilfe einer if-else-if-Leiter abgebildet
+werden. Die if-else-if-Leiter verschachtelt mehrere if-Anweisungen zu einer
+sogenannten kaskadierten Verzweigung.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
@@ -64,7 +69,9 @@ public class MainClass {
 
 ## Bedingte Zuweisungen
 
-Wird eine if-Verzweigung für eine Wertzuweisung verwendet, spricht man von einer bedingten Zuweisung. Zusätzlich zur ausführlichen Schreibweise existiert für bedingte Zuweisungen auch eine Kurzschreibweise.
+Wird eine if-Verzweigung für eine Wertzuweisung verwendet, spricht man von einer
+bedingten Zuweisung. Zusätzlich zur ausführlichen Schreibweise existiert für
+bedingte Zuweisungen auch eine Kurzschreibweise.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
@@ -92,14 +99,18 @@ public class MainClass {
 
 :::danger Hinweis
 
-Die Kurzschreibweise sollte verantwortungsvoll verwendet werden, da die Lesbarkeit dadurch eventuell erschwert wird.
+Die Kurzschreibweise sollte verantwortungsvoll verwendet werden, da die
+Lesbarkeit dadurch eventuell erschwert wird.
 
 :::
 
 ## Mehrfachverzweigungen
 
-Mehrfachverzweigungen können entweder mit Hilfe von if-else-if-Leitern oder mit Hilfe der switch-case-Anweisung realisiert werden. Tritt ein Fall ein, werden alle Anweisungen bis zum nächsten `break` ausgeführt. Durch Weglassen von `break` können
-unterschiedliche Fälle gleich behandelt werden. Der default-Block wird immer dann ausgeführt, wenn keiner der aufgeführten Fälle eintritt.
+Mehrfachverzweigungen können entweder mit Hilfe von if-else-if-Leitern oder mit
+Hilfe der switch-case-Anweisung realisiert werden. Tritt ein Fall ein, werden
+alle Anweisungen bis zum nächsten `break` ausgeführt. Durch Weglassen von
+`break` können unterschiedliche Fälle gleich behandelt werden. Der default-Block
+wird immer dann ausgeführt, wenn keiner der aufgeführten Fälle eintritt.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
@@ -127,7 +138,8 @@ public class MainClass {
 }
 ```
 
-Seit Java 14 beheben Switch-Ausdrücke einige Ungereimtheiten der klassischen switch-case-Anweisung und ermöglichen eine elegantere Syntax.
+Seit Java 14 beheben Switch-Ausdrücke einige Ungereimtheiten der klassischen
+switch-case-Anweisung und ermöglichen eine elegantere Syntax.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {

@@ -5,10 +5,10 @@ sidebar_position: 200
 tags: [abstract-and-final]
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+import Tabs from '@theme/Tabs'; import TabItem from '@theme/TabItem';
 
-Mit Hilfe der Schlüsselwörter `abstract` und `final` kann die Verwendung von Klassen vorgegeben bzw. eingeschänkt werden.
+Mit Hilfe der Schlüsselwörter `abstract` und `final` kann die Verwendung von
+Klassen vorgegeben bzw. eingeschänkt werden.
 
 ## Abstrakte Klassen
 
@@ -39,7 +39,8 @@ public class MainClass {
 
 ## Abstrakte Methoden
 
-Abstrakte Methoden werden in abstrakten Klassen definiert, besitzen dort keinen Methodenrumpf und müssen in den abgeleiteten Klassen der abstrakten Klasse
+Abstrakte Methoden werden in abstrakten Klassen definiert, besitzen dort keinen
+Methodenrumpf und müssen in den abgeleiteten Klassen der abstrakten Klasse
 überschrieben werden.
 
 <Tabs>

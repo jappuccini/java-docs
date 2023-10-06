@@ -5,8 +5,8 @@ description: ''
 
 import Exercise from '@site/src/components/Exercise';
 
-- Passe die Klasse `Creature` aus Übungsaufgabe [OO06](../oo/oo06.md) anhand
-  des abgebildeten Klassendiagramms an und Erstelle die Klasse `CreatureGame`
+- Passe die Klasse `Creature` aus Übungsaufgabe [OO06](../oo/oo06.md) anhand des
+  abgebildeten Klassendiagramms an und Erstelle die Klasse `CreatureGame`
 - Erstelle eine ausführbare Klasse, welche einen Kampf zwischen zwei Kreaturen
   simuliert
 
@@ -42,9 +42,9 @@ classDiagram
 
 ## Hinweise zur Klasse Creature
 
-- Passe die Methode `boolean attack(creature: Creature)` so an, dass der Rückgabewert
-  `true` ist, wenn die Lebenspunkte der angegriffenen Kreatur kleiner gleich
-  Null sind, bzw. `false`, wenn nicht
+- Passe die Methode `boolean attack(creature: Creature)` so an, dass der
+  Rückgabewert `true` ist, wenn die Lebenspunkte der angegriffenen Kreatur
+  kleiner gleich Null sind, bzw. `false`, wenn nicht
 - Die Methode `void print()` soll alle Attribute auf der Konsole ausgeben
 
 ## Hinweise zur Klasse CreatureGame
@@ -52,9 +52,9 @@ classDiagram
 - Der Konstruktor soll alle Attribute initialisieren
 - Die Methode `void simulateFight()` soll die beiden Kreaturen sich so lange
   gegenseitig angreifen lassen, bis eine der Kreaturen "stirbt"
-- Die Methode `boolean move(creature1: Creature, creature2: Creature)` soll eine Kreatur die andere
-  angreifen lassen und den Rückgabewert `true` liefern, wenn die angegriffene
-  Kreatur "stirbt", bzw. `false`, wenn nicht
+- Die Methode `boolean move(creature1: Creature, creature2: Creature)` soll eine
+  Kreatur die andere angreifen lassen und den Rückgabewert `true` liefern, wenn
+  die angegriffene Kreatur "stirbt", bzw. `false`, wenn nicht
 - Die Methode `void print()` soll alle Attribute auf der Konsole ausgeben
 
 ## Konsolenausgabe

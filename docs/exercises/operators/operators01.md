@@ -5,7 +5,8 @@ description: ''
 
 import Exercise from '@site/src/components/Exercise';
 
-Erstelle eine ausführbare Klasse, welche den ganzzahligen Quotienten sowie den Divisionsrest einer Division auf der Konsole ausgibt.
+Erstelle eine ausführbare Klasse, welche den ganzzahligen Quotienten sowie den
+Divisionsrest einer Division auf der Konsole ausgibt.
 
 ## Konsolenausgabe
 

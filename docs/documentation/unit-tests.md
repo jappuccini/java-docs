@@ -5,13 +5,24 @@ sidebar_position: 320
 tags: [unit-tests]
 ---
 
-Komponententests (Unit Tests) werden zum Testen einzelner, abgeschlossener Softwarebausteine verwendete. JUnit ist ein weit verbreitetes Framework zur Erstellung von Komponententests bzw. zum automatisierten Testen von Klassen und Methoden in Java. Die aktuelle Version _JUnit 5_ stellt eine Kombination verschiedener Module der Projekte _JUnit Platform_, _JUnit Jupiter_ sowie _JUnit Vintage_ dar.
+Komponententests (Unit Tests) werden zum Testen einzelner, abgeschlossener
+Softwarebausteine verwendete. JUnit ist ein weit verbreitetes Framework zur
+Erstellung von Komponententests bzw. zum automatisierten Testen von Klassen und
+Methoden in Java. Die aktuelle Version _JUnit 5_ stellt eine Kombination
+verschiedener Module der Projekte _JUnit Platform_, _JUnit Jupiter_ sowie _JUnit
+Vintage_ dar.
 
-Unter einem Framework versteht man ein Programmiergerüst, welches die Architektur für die Anwendung vorgibt und den Kontrollfluss der Anwendung steuert. Die Arbeitsweise von Frameworks wird als _Inversion of Control_ bezeichnet: Die Funktionen einer Anwendung werden beim Framework registriert, welches die Funktionen zu einem späteren Zeitpunkt aufruft, d.h. die Steuerung des Kontrollfluss obliegt nicht der Anwendung, sondern dem Framework.
+Unter einem Framework versteht man ein Programmiergerüst, welches die
+Architektur für die Anwendung vorgibt und den Kontrollfluss der Anwendung
+steuert. Die Arbeitsweise von Frameworks wird als _Inversion of Control_
+bezeichnet: Die Funktionen einer Anwendung werden beim Framework registriert,
+welches die Funktionen zu einem späteren Zeitpunkt aufruft, d.h. die Steuerung
+des Kontrollfluss obliegt nicht der Anwendung, sondern dem Framework.
 
 :::note Hinweis
 
-Die Umkehr der Steuerung kann auch als Anwendung des Hollywood-Prinzips (_Don´t call us, we´ll call you_) verstanden werden.
+Die Umkehr der Steuerung kann auch als Anwendung des Hollywood-Prinzips (_Don´t
+call us, we´ll call you_) verstanden werden.
 
 :::
 
@@ -19,15 +30,24 @@ Die Umkehr der Steuerung kann auch als Anwendung des Hollywood-Prinzips (_Don´t
 
 JUnit-Testklassen werden mit Hilfe entsprechender Annotationen implementiert:
 
-- Die Annotationen `@Test` und `@ParameterizedTest` definieren einfache bzw. parametrisierte Testmethoden
-- Die Annotationen `@BeforeAll` und `@AfterAll` definieren statische Methoden, die aufgerufen werden, wenn die Klasse für den Test initialisiert wird bzw. wenn alle Tests abgeschlossen sind
-- Die Annotationen `@BeforeEach` und `@AfterEach` definieren Methoden, die vor bzw. nach jeder Testmethode aufgerufen werden
-- Die Annotation `@Disabled` bewirkt, dass eine Testmethode beim Testen nicht ausgeführt wird
-- Mit Hilfe der Annotation `@DisplayName` kann einer Testklasse bzw. einer Testmethode ein Anzeigename zugewiesen werden
+- Die Annotationen `@Test` und `@ParameterizedTest` definieren einfache bzw.
+  parametrisierte Testmethoden
+- Die Annotationen `@BeforeAll` und `@AfterAll` definieren statische Methoden,
+  die aufgerufen werden, wenn die Klasse für den Test initialisiert wird bzw.
+  wenn alle Tests abgeschlossen sind
+- Die Annotationen `@BeforeEach` und `@AfterEach` definieren Methoden, die vor
+  bzw. nach jeder Testmethode aufgerufen werden
+- Die Annotation `@Disabled` bewirkt, dass eine Testmethode beim Testen nicht
+  ausgeführt wird
+- Mit Hilfe der Annotation `@DisplayName` kann einer Testklasse bzw. einer
+  Testmethode ein Anzeigename zugewiesen werden
 
 ## Zusicherungen (Assertions)
 
-Die Klasse `Assertions` stellt verschiedene Methoden bereit, die immer dann eine Ausnahme vom Typ `AssertionError` auslösen, wenn das Ergebnis eines Methodenaufrufs nicht wie erwartet ausgefallen ist. Eine Ausnahme vom Typ `AssertionError` führt dazu, dass der Test als nicht erfolgreich gewertet wird.
+Die Klasse `Assertions` stellt verschiedene Methoden bereit, die immer dann eine
+Ausnahme vom Typ `AssertionError` auslösen, wenn das Ergebnis eines
+Methodenaufrufs nicht wie erwartet ausgefallen ist. Eine Ausnahme vom Typ
+`AssertionError` führt dazu, dass der Test als nicht erfolgreich gewertet wird.
 
 | Assert-Methode                                                   | Bedeutung                                   |
 | ---------------------------------------------------------------- | ------------------------------------------- |
@@ -43,7 +63,8 @@ Die Klasse `Assertions` stellt verschiedene Methoden bereit, die immer dann eine
 
 ## Beispiel
 
-Die Klasse `Calculator` stellt mehrere Methoden bereit, die getestet werden sollen.
+Die Klasse `Calculator` stellt mehrere Methoden bereit, die getestet werden
+sollen.
 
 ```java title="Calculator.java" showLineNumbers
 public class Calculator {
@@ -65,7 +86,10 @@ public class Calculator {
 }
 ```
 
-Die statische Methode `setUp()` der Testklasse `CalculatorTest` stellt sicher, dass vor der Ausführung der Testmethoden ein Taschenrechner-Objekt erzeugt wird. In den Testmethoden werden verschiedene Testfälle wie z.B. die Division durch Null getestet.
+Die statische Methode `setUp()` der Testklasse `CalculatorTest` stellt sicher,
+dass vor der Ausführung der Testmethoden ein Taschenrechner-Objekt erzeugt wird.
+In den Testmethoden werden verschiedene Testfälle wie z.B. die Division durch
+Null getestet.
 
 ```java title="MainClass.java" showLineNumbers
 public class CalculatorTest {

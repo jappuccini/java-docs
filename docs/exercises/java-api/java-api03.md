@@ -5,8 +5,8 @@ description: ''
 
 import Exercise from '@site/src/components/Exercise';
 
-Erstelle eine ausführbare Klasse, welche den Wochentag sowie die Anzahl Tage
-bis Weihnachten eines eingegebenen Datums ermittelt und ausgibt.
+Erstelle eine ausführbare Klasse, welche den Wochentag sowie die Anzahl Tage bis
+Weihnachten eines eingegebenen Datums ermittelt und ausgibt.
 
 ## Konsolenausgabe
 

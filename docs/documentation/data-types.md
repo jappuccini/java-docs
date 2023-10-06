@@ -5,11 +5,15 @@ sidebar_position: 30
 tags: []
 ---
 
-Datentypen legen neben der Größe des Arbeitsspeichers, die ein Datenobjekt benötigt, auch die Art der Information fest, die im Datenobjekt gespeichert werden kann.
+Datentypen legen neben der Größe des Arbeitsspeichers, die ein Datenobjekt
+benötigt, auch die Art der Information fest, die im Datenobjekt gespeichert
+werden kann.
 
 ## Primitive Datentypen
 
-Primitve Datentypen sind fest in der Programmiersprache verankert und können durch entsprechende Schlüsselwörter angesprochen werden. Java kennt 8 solcher primitver Datentypen.
+Primitve Datentypen sind fest in der Programmiersprache verankert und können
+durch entsprechende Schlüsselwörter angesprochen werden. Java kennt 8 solcher
+primitver Datentypen.
 
 | Datentyp | Größe  | Wertbereich                                               |
 | -------- | ------ | --------------------------------------------------------- |
@@ -24,15 +28,26 @@ Primitve Datentypen sind fest in der Programmiersprache verankert und können du
 
 ## Komplexe Datentypen
 
-Klassen, die über mehrere Attribute verfügen, können im Gegensatz zu den primitiven Datentypen nicht nur eine Information speichern und werden daher als komplexe Datentypen bezeichnet.
+Klassen, die über mehrere Attribute verfügen, können im Gegensatz zu den
+primitiven Datentypen nicht nur eine Information speichern und werden daher als
+komplexe Datentypen bezeichnet.
 
 ## Generische Datentypen
 
-Klassen, die über einen oder mehrere formale Typparameter verfügen, werden als generische Klassen bezeichnet. Generische Klassen können mit verschiedenen Datentypen verwendet werden und ermöglichen dadurch die Wiederverwendung von Code unter Beibehaltung
-statischer Typsicherheit. Unter Typsicherheit versteht man, dass Datentypen gemäß ihrer Definition verwendet werden und dabei keine Typverletzungen auftreten. Bei statisch typisierten Sprachen findet die Typprüfung bei der Kompilierung statt. Beispiele für
-generische Klassen sind die Klasse `ArrayList<E>` sowie die Klasse `HashMap<K, V>`.
+Klassen, die über einen oder mehrere formale Typparameter verfügen, werden als
+generische Klassen bezeichnet. Generische Klassen können mit verschiedenen
+Datentypen verwendet werden und ermöglichen dadurch die Wiederverwendung von
+Code unter Beibehaltung statischer Typsicherheit. Unter Typsicherheit versteht
+man, dass Datentypen gemäß ihrer Definition verwendet werden und dabei keine
+Typverletzungen auftreten. Bei statisch typisierten Sprachen findet die
+Typprüfung bei der Kompilierung statt. Beispiele für generische Klassen sind die
+Klasse `ArrayList<E>` sowie die Klasse `HashMap<K, V>`.
 
 ## Abstrakte Datentypen
 
-Abstrakte Datentypen sind Sammlungen von Daten samt den dazugehörigen Operationen wie Einfügen, Löschen etc. Beispiele für abstrakte Datentypen sind Listen (z.B. die Klassen `ArrayList<E>` und `LinkedList<E>`), Mengen (z.B. die Klassen `HashSet<E>` und
-`TreeSet<E>`), Warteschlangen (z.B. die Klassen `LinkedList<E>` und `PriorityQueue<E>`) sowie Assoziativspeicher (z.B. die Klassen `HashMap<K, V>` und `TreeMap<K, V>`).
+Abstrakte Datentypen sind Sammlungen von Daten samt den dazugehörigen
+Operationen wie Einfügen, Löschen etc. Beispiele für abstrakte Datentypen sind
+Listen (z.B. die Klassen `ArrayList<E>` und `LinkedList<E>`), Mengen (z.B. die
+Klassen `HashSet<E>` und `TreeSet<E>`), Warteschlangen (z.B. die Klassen
+`LinkedList<E>` und `PriorityQueue<E>`) sowie Assoziativspeicher (z.B. die
+Klassen `HashMap<K, V>` und `TreeMap<K, V>`).

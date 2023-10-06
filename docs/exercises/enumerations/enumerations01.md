@@ -6,8 +6,8 @@ description: ''
 import Exercise from '@site/src/components/Exercise';
 
 - Erstelle die Aufzählung `Engine` mit Hilfe der abgebildeten Informationen
-- Passe die Klasse `Vehicle` aus Übungsaufgabe [OO07](../oo/oo07.md) mit
-  Hilfe der abgebildeten Informationen an
+- Passe die Klasse `Vehicle` aus Übungsaufgabe [OO07](../oo/oo07.md) mit Hilfe
+  der abgebildeten Informationen an
 - Passe die ausführbare Klasse aus Übungsaufgabe [OO07](../oo/oo07.md) so an,
   dass sie fehlerfrei ausgeführt werden kann
 

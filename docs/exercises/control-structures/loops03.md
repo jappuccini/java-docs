@@ -20,7 +20,7 @@ Prozentualer Anteil: 30,00%
 
 ## Hinweis
 
-Die Methode `char charAt(index: int)` der Klasse `String` gibt das Zeichen mit dem
-Index der eingehenden Zahl zurück.
+Die Methode `char charAt(index: int)` der Klasse `String` gibt das Zeichen mit
+dem Index der eingehenden Zahl zurück.
 
 <Exercise pullRequest="16" branchSuffix="loops/03" />

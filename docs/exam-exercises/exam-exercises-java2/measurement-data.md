@@ -5,13 +5,19 @@ tags: [records, maps, optionals, java-stream-api]
 ---
 
 - Erstelle die Klasse `MeasurementData` anhand des abgebildeten Quellcodes
-- Erstelle eine ausführbare Klasse, welche mit Hilfe der Java Stream API folgende Informationen auf der Konsole ausgibt:
-  - alle Messdaten aus einem bestimmtem Jahr der Kategorie F absteigend sortiert nach dem Prozentsatz
+- Erstelle eine ausführbare Klasse, welche mit Hilfe der Java Stream API
+  folgende Informationen auf der Konsole ausgibt:
+  - alle Messdaten aus einem bestimmtem Jahr der Kategorie F absteigend sortiert
+    nach dem Prozentsatz
   - der Durchschnitts-Prozentsatz aller Messdaten der Kategorie X
-  - alle Messdaten, bei denen die Temperatur im Sommer (Juni - August) bei mindestens 30° lag
-  - die Antwort auf die Frage, ob es einen Messdatensatz aus Deutschland, datiert nach dem 1. Januar eines bestimmten Jahres, mit einem Prozentsatz von mindestens 50% gibt
+  - alle Messdaten, bei denen die Temperatur im Sommer (Juni - August) bei
+    mindestens 30° lag
+  - die Antwort auf die Frage, ob es einen Messdatensatz aus Deutschland,
+    datiert nach dem 1. Januar eines bestimmten Jahres, mit einem Prozentsatz
+    von mindestens 50% gibt
   - die durchschnittliche Temperatur gruppiert nach Ländern
-  - die Anzahl aller Messdaten gruppiert nach den Prozentsatzbereichen (0-10, 10-20,…)
+  - die Anzahl aller Messdaten gruppiert nach den Prozentsatzbereichen (0-10,
+    10-20,…)
 
 ## Quellcode
 

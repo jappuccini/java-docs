@@ -6,8 +6,8 @@ description: ''
 import Exercise from '@site/src/components/Exercise';
 
 Erstelle eine ausführbare Klasse zum Umdrehen von Feldern (d.h. das erste
-Element soll nach dem Umdrehen an letzter Position stehen, das letzte an
-erster Position usw.).
+Element soll nach dem Umdrehen an letzter Position stehen, das letzte an erster
+Position usw.).
 
 ## Konsolenausgabe
 

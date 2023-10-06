@@ -13,9 +13,9 @@ import Exercise from '@site/src/components/Exercise';
   [ClassDiagrams02](../uml/class-diagrams02.md) anhand des abgebildeten
   Klassendiagramms an
 - Passe die Methode `boolean move(player: Player)` der Klasse `DiceGame` aus
-  Übungsaufgabe [ClassDiagrams02](../uml/class-diagrams02.md) so an, dass
-  jeder Spieler während des Spiels einmal die Möglichkeit hat, entweder nur
-  mit 4-5-6-Würfeln oder 1-2-3-Würfeln zu würfeln
+  Übungsaufgabe [ClassDiagrams02](../uml/class-diagrams02.md) so an, dass jeder
+  Spieler während des Spiels einmal die Möglichkeit hat, entweder nur mit
+  4-5-6-Würfeln oder 1-2-3-Würfeln zu würfeln
 
 ## Klassendiagramm
 

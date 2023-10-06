@@ -5,7 +5,14 @@ description: ''
 
 import Exercise from '@site/src/components/Exercise';
 
-- Passe die gegebene Klasse `FilteredStudents` so an, dass Verwender der Klasse selber entscheiden können, wie die Liste der Studenten verarbeitet wird. Ersetze hierzu die Methode `void printStudents()` durch die Methode `void forEach(consumer Consumer<Student>)`. Implementiere in der Methode eine for-each-Schleife, in der für jeden Studenten die Methode `void accept(t T)` des eingehenden Verwenders aufgerufen wird
-- Passe die gegebene Klasse `Exercise` so an, dass erwachsende Studenten in Großbuchstaben und jugendliche Studenten in Kleinbuchstaben auf der Konsole ausgegeben werden
+- Passe die gegebene Klasse `FilteredStudents` so an, dass Verwender der Klasse
+  selber entscheiden können, wie die Liste der Studenten verarbeitet wird.
+  Ersetze hierzu die Methode `void printStudents()` durch die Methode
+  `void forEach(consumer Consumer<Student>)`. Implementiere in der Methode eine
+  for-each-Schleife, in der für jeden Studenten die Methode `void accept(t T)`
+  des eingehenden Verwenders aufgerufen wird
+- Passe die gegebene Klasse `Exercise` so an, dass erwachsende Studenten in
+  Großbuchstaben und jugendliche Studenten in Kleinbuchstaben auf der Konsole
+  ausgegeben werden
 
 <Exercise pullRequest="69" branchSuffix="lambdas/03" />

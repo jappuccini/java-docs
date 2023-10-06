@@ -37,8 +37,8 @@ classDiagram
 - Die Methode `int compareTo(other: Coordinate)` soll die Koordinate mit der
   eingehenden Koordinate anhand ihrer jeweiligen Distanz zum Nullpunkt
   vergleichen. Ist die Distanz der Koordinate zum Nullpunkt kleiner als bzw.
-  größer als bzw. gleich die der eingehenden
-  Koordinate, soll der Wert 1 bzw. -1 bzw. 0 zurückgegeben werden
+  größer als bzw. gleich die der eingehenden Koordinate, soll der Wert 1 bzw. -1
+  bzw. 0 zurückgegeben werden
 
 ## Hinweis
 

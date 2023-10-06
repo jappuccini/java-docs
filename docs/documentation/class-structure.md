@@ -5,12 +5,16 @@ sidebar_position: 20
 tags: [class-structure]
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+import Tabs from '@theme/Tabs'; import TabItem from '@theme/TabItem';
 
-Klassen stellen den grundlegenden Rahmen für Programme dar. Jede Klasse kann Daten (_Attribute_) und Routinen (_Methoden_) besitzen. Routinen bestehen dabei aus Folgen von verzweigten und sich wiederholenden Anweisungen, wobei Anweisungen wohldefinierte
-Befehle darstellen, die der Interpreter zur Laufzeit ausführt. Anweisungen müssen in Java mit dem Semikolon abgeschlossen werden und können zu Anweisungsblöcken zusammengefasst werden, die durch geschweifte Klammern umschlossen werden. Innerhalb eines
-Anweisungsblocks können sich weitere Anweisungsblöcke befinden.
+Klassen stellen den grundlegenden Rahmen für Programme dar. Jede Klasse kann
+Daten (_Attribute_) und Routinen (_Methoden_) besitzen. Routinen bestehen dabei
+aus Folgen von verzweigten und sich wiederholenden Anweisungen, wobei
+Anweisungen wohldefinierte Befehle darstellen, die der Interpreter zur Laufzeit
+ausführt. Anweisungen müssen in Java mit dem Semikolon abgeschlossen werden und
+können zu Anweisungsblöcken zusammengefasst werden, die durch geschweifte
+Klammern umschlossen werden. Innerhalb eines Anweisungsblocks können sich
+weitere Anweisungsblöcke befinden.
 
 <Tabs>
   <TabItem value="class" label="Klasse" default>
@@ -62,8 +66,12 @@ public class MainClass {
 
 ## Statische Methoden
 
-Statische Methoden sind abgeschlossene Programmteile, die Parameter enthalten und einen Wert zurückgeben können. Sie müssen mit dem Schlüsselwort `static` gekennzeichnet werden. Bei statischen Methoden, die einen Wert zurückgeben, muss der Datentyp des
-Rückgabewertes angegeben werden; bei statische Methoden, die keinen Wert zurückgeben, das Schlüsselwort `void`. Der Aufruf einer statischen Methode erfolgt über den Klassennamen gefolgt von einem Punkt.
+Statische Methoden sind abgeschlossene Programmteile, die Parameter enthalten
+und einen Wert zurückgeben können. Sie müssen mit dem Schlüsselwort `static`
+gekennzeichnet werden. Bei statischen Methoden, die einen Wert zurückgeben, muss
+der Datentyp des Rückgabewertes angegeben werden; bei statische Methoden, die
+keinen Wert zurückgeben, das Schlüsselwort `void`. Der Aufruf einer statischen
+Methode erfolgt über den Klassennamen gefolgt von einem Punkt.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
@@ -86,14 +94,18 @@ public class MainClass {
 
 :::note Hinweis
 
-Die statischen Methoden einer Startklasse werden auch als _Unterprogramme_ bezeichnet.
+Die statischen Methoden einer Startklasse werden auch als _Unterprogramme_
+bezeichnet.
 
 :::
 
 ## Die main-Methode
 
-Die Methode `void main(args: String[])` ist eine spezielle Methode in Java und stellt Startpunkt sowie Endpunkt einer Anwendung bzw. eines Programms dar. Nur Klassen mit einer main-Methode können von der Laufzeitumgebung ausgeführt werden. Aus diesem Grund werden
-Klassen mit einer main-Methode auch als _ausführbare Klassen_ oder als _Startklassen_ bezeichnet.
+Die Methode `void main(args: String[])` ist eine spezielle Methode in Java und
+stellt Startpunkt sowie Endpunkt einer Anwendung bzw. eines Programms dar. Nur
+Klassen mit einer main-Methode können von der Laufzeitumgebung ausgeführt
+werden. Aus diesem Grund werden Klassen mit einer main-Methode auch als
+_ausführbare Klassen_ oder als _Startklassen_ bezeichnet.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
@@ -107,7 +119,10 @@ public class MainClass {
 
 ## Kommentare
 
-Kommentare sollen die Lesbarkeit des Programms verbessern. Sie bewirken bei der Ausführung keine Aktion und werden vom Java-Compiler ignoriert. Java kennt einzeilige Kommentare mit `//`, Kommentarblöcke mit `/* */` und Dokumentationskommentare mit `/** */`.
+Kommentare sollen die Lesbarkeit des Programms verbessern. Sie bewirken bei der
+Ausführung keine Aktion und werden vom Java-Compiler ignoriert. Java kennt
+einzeilige Kommentare mit `//`, Kommentarblöcke mit `/* */` und
+Dokumentationskommentare mit `/** */`.
 
 ```java title="MainClass.java" showLineNumbers
 /**
@@ -134,7 +149,9 @@ public class MainClass {
 
 ## Entwicklungspakete
 
-Entwicklungspakete ermöglichen das hierarchische Strukturieren von Klassen. Um die Klassen eines Entwicklungspaketes verwenden zu können, müssen die jeweiligen Klassen explizit mit Hilfe des Schlüsselworts `import` importiert werden.
+Entwicklungspakete ermöglichen das hierarchische Strukturieren von Klassen. Um
+die Klassen eines Entwicklungspaketes verwenden zu können, müssen die jeweiligen
+Klassen explizit mit Hilfe des Schlüsselworts `import` importiert werden.
 
 ```mermaid
 flowchart

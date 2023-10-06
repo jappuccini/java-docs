@@ -6,8 +6,8 @@ description: ''
 import Exercise from '@site/src/components/Exercise';
 
 - Erstelle die Klasse `Player` anhand des abgebildeten Klassendiagramms
-- Erstelle eine ausführbare Klasse, welche ein einfaches Würfelduell zwischen
-  2 Spielern simuliert:
+- Erstelle eine ausführbare Klasse, welche ein einfaches Würfelduell zwischen 2
+  Spielern simuliert:
   - Würfelwert von Spieler 1 > Würfelwert von Spieler 2: Spieler 1 gewinnt
   - Würfelwert von Spieler 1 < Würfelwert von Spieler 2: Spieler 2 gewinnt
   - Würfelwert von Spieler 1 = Würfelwert von Spieler 2: Unentschieden

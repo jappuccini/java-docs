@@ -4,7 +4,8 @@ description: ''
 tags: [oo, enumerations, io-streams]
 ---
 
-Setze das abgebildete Klassendiagramm vollständig um. Erstelle zum Testen eine ausführbare Klasse.
+Setze das abgebildete Klassendiagramm vollständig um. Erstelle zum Testen eine
+ausführbare Klasse.
 
 ## Klassendiagramm
 
@@ -43,22 +44,29 @@ classDiagram
 
 ## Allgemeine Hinweise
 
-- Aus Gründen der Übersicht werden im Klassendiagramm keine Getter und Object-Methoden dargestellt
-- So nicht anders angegeben, sollen Konstruktoren, Setter, Getter sowie die Object-Methoden wie gewohnt implementiert werden
+- Aus Gründen der Übersicht werden im Klassendiagramm keine Getter und
+  Object-Methoden dargestellt
+- So nicht anders angegeben, sollen Konstruktoren, Setter, Getter sowie die
+  Object-Methoden wie gewohnt implementiert werden
 
 ## Hinweise zur Klasse Player
 
-- Die Methode `void addCard(card: Card)` soll dem Spieler die eingehende Karte hinzufügen
-- Die Methode `List<Card> getCardsByColour(colour: String)` soll alle Karten des Spielers zur eingehenden Farbe zurückgeben
-- Die Methode `Card getCardWithHighestValue()` soll die Karte des Spielers mit dem höchsten Wert zurückgeben
+- Die Methode `void addCard(card: Card)` soll dem Spieler die eingehende Karte
+  hinzufügen
+- Die Methode `List<Card> getCardsByColour(colour: String)` soll alle Karten des
+  Spielers zur eingehenden Farbe zurückgeben
+- Die Methode `Card getCardWithHighestValue()` soll die Karte des Spielers mit
+  dem höchsten Wert zurückgeben
 
 ## Hinweis zur Klasse CardsDealer
 
-Die Methode `void dealCards(amount: int)` soll den beiden Spielern die eingehende Anzahl an zufälligen Karten des Decks austeilen
+Die Methode `void dealCards(amount: int)` soll den beiden Spielern die
+eingehende Anzahl an zufälligen Karten des Decks austeilen
 
 ## Hinweis zur Klasse CardsReader
 
-Die Methode `List<Card> getCards(file: File)` soll alle Karten der eingehenden Datei zurückgeben.
+Die Methode `List<Card> getCards(file: File)` soll alle Karten der eingehenden
+Datei zurückgeben.
 
 ## Beispielhafter Aufbau der Kartendatei
 
