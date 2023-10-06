@@ -3,7 +3,8 @@ title: Loops07
 description: ''
 ---
 
-Erstelle eine ausführbare Klasse, welche anhand von Startkapital (K) und Prozentsatz (p) den Jahreszins berechnet.
+Erstelle eine ausführbare Klasse, welche anhand von Startkapital (K) und
+Prozentsatz (p) den Jahreszins berechnet.
 
 ## Konsolenausgabe
 
@@ -16,4 +17,5 @@ Willst Du einen weiteren Jahreszins berechnen (true, false)?:false
 
 ## Hinweis
 
-Die Formel für die Zins-Berechnung findest Du unter anderem [hier](https://de.wikipedia.org/wiki/Zinsrechnung).
+Die Formel für die Zins-Berechnung findest Du unter anderem
+[hier](https://de.wikipedia.org/wiki/Zinsrechnung).

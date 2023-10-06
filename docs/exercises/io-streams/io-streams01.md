@@ -4,7 +4,9 @@ description: ''
 ---
 
 - Erstelle die Klasse `Student` anhand des abgebildeten Klassendiagramms
-- Erstelle eine ausführbare Klasse, welche entweder mehrere Objekte der Klasse `Student` erzeugt und diese zeichenbasiert in eine Datei schreibt oder diese aus der Datei ausliest und ausgibt
+- Erstelle eine ausführbare Klasse, welche entweder mehrere Objekte der Klasse
+  `Student` erzeugt und diese zeichenbasiert in eine Datei schreibt oder diese
+  aus der Datei ausliest und ausgibt
 
 ## Klassendiagramm
 

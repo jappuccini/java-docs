@@ -5,16 +5,20 @@ sidebar_position: 215
 tags: []
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+import Tabs from '@theme/Tabs'; import TabItem from '@theme/TabItem';
 
-Die Java API stellt unter Anderem die Schnittstelle `List<E>` sowie die Klassen `ArrayList<E>` und `Arrays` zur Verfügung, mit deren Hilfe Listen realisiert werden. Unter einer Liste versteht man eine geordnete Folge von Elementen, die auch doppelt enthalten sein können. Der Zugriff auf die Elemente erfolgt über den Index oder sequentiell.
+Die Java API stellt unter Anderem die Schnittstelle `List<E>` sowie die Klassen
+`ArrayList<E>` und `Arrays` zur Verfügung, mit deren Hilfe Listen realisiert
+werden. Unter einer Liste versteht man eine geordnete Folge von Elementen, die
+auch doppelt enthalten sein können. Der Zugriff auf die Elemente erfolgt über
+den Index oder sequentiell.
 
 <Tabs>
   <TabItem value="list" label="Unveränderbare Listen" default>
 
-Die Schnittstelle `List<E>` bietet verschiedene Fabrikmethoden zum Erzeugen unveränderbarer Listen. Unveränderbar bedeutet, dass weder die Liste selbst noch ihre Elemente
-geändert werden können.
+Die Schnittstelle `List<E>` bietet verschiedene Fabrikmethoden zum Erzeugen
+unveränderbarer Listen. Unveränderbar bedeutet, dass weder die Liste selbst noch
+ihre Elemente geändert werden können.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
@@ -41,7 +45,9 @@ Fabrikmethoden sind Methoden, die Objekte erzeugen.
   </TabItem>
   <TabItem value="arrays" label="Veränderbare Listen fixer Größe" default>
 
-Die Klasse `Arrays` stellt neben Methoden zum Sortieren und Durchsuchen von Feldern auch eine Methode zum Erzeugen veränderbarer Listen fixer Größe zur Verfügung.
+Die Klasse `Arrays` stellt neben Methoden zum Sortieren und Durchsuchen von
+Feldern auch eine Methode zum Erzeugen veränderbarer Listen fixer Größe zur
+Verfügung.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
@@ -62,7 +68,9 @@ public class MainClass {
   </TabItem>
   <TabItem value="arrayListAndLinkedList" label="Veränderbare Listen dynamischer Größe" default>
 
-Die Klasse `ArrayList<E>` stellt eine veränderbare Liste dynamischer Größe auf Basis eine Feldes dar, die Klasse `LinkedList<E>` eine veränderbare Liste dynamischer Größe auf Basis einfach verketteter Elemente.
+Die Klasse `ArrayList<E>` stellt eine veränderbare Liste dynamischer Größe auf
+Basis eine Feldes dar, die Klasse `LinkedList<E>` eine veränderbare Liste
+dynamischer Größe auf Basis einfach verketteter Elemente.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
@@ -85,7 +93,9 @@ public class MainClass {
 
 :::note Hinweis
 
-Eine ArrayList ist bei wahlfreiem Zugriff schneller als eine LinkedList; eine LinkedList ist bei Anfüge- und Löschoperationen (insbesondere bei großen Elementzahlen) schneller als eine ArrayList.
+Eine ArrayList ist bei wahlfreiem Zugriff schneller als eine LinkedList; eine
+LinkedList ist bei Anfüge- und Löschoperationen (insbesondere bei großen
+Elementzahlen) schneller als eine ArrayList.
 
 :::
 

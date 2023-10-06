@@ -6,8 +6,8 @@ description: ''
 import Exercise from '@site/src/components/Exercise';
 
 - Passe die Klasse `Player` aus Übungsaufgabe
-  [ClassDiagrams01](class-diagrams01.md) anhand des abgebildeten Klassendiagramms
-  an und erstelle die Klasse `DiceGame`
+  [ClassDiagrams01](class-diagrams01.md) anhand des abgebildeten
+  Klassendiagramms an und erstelle die Klasse `DiceGame`
 - Erstelle eine ausführbare Klasse, welche beliebig vielen Spielern ermöglicht,
   abwechselnd mit 3 Würfeln zu würfeln. Für jedes gewürfelte Auge bekommt der
   jeweilige Spieler einen Punkt. Ziel des Spieles ist es, so nah wie möglich an
@@ -65,10 +65,10 @@ werden.
 ## Hinweise zur Klasse DiceGame
 
 - Der Konstruktor soll alle Attribute initialisieren
-- Die Methode `void start()` soll die Spieler abwechselnd einen Spielzug
-  machen lassen und am Ende den Sieger des Spiels auf der Konsole ausgeben
-- Die Methode `void move(player: Player)` soll es dem Spieler ermöglichen zu würfeln,
-  bzw. seinen Spielzug zu beenden
+- Die Methode `void start()` soll die Spieler abwechselnd einen Spielzug machen
+  lassen und am Ende den Sieger des Spiels auf der Konsole ausgeben
+- Die Methode `void move(player: Player)` soll es dem Spieler ermöglichen zu
+  würfeln, bzw. seinen Spielzug zu beenden
 
 ## Konsolenausgabe
 

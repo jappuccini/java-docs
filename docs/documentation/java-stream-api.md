@@ -5,9 +5,14 @@ sidebar_position: 300
 tags: [java-stream-api]
 ---
 
-Die Java Stream API stellt Klassen zum Erzeugen von und Arbeiten mit Strömen (Streams) bereit. Ein Strom stellt eine Folge von Elementen dar, die das Ausführen verketteter, intermediärer und terminaler Operationen auf diesen Elementen nacheinander oder parallel
-ermöglicht. Die Daten, die durch die Elemente des Stromes repräsentiert werden, werden dabei durch den Strom selbst nicht verändert. Die Verarbeitung der Elemente erfolgt nach dem Prinzip der Bedarfsauswertung (Lazy Evaluation). Neben endlichen Strömen stellt
-die Java Stream API auch Methoden zum Erzeugen unendlicher Ströme bereit.
+Die Java Stream API stellt Klassen zum Erzeugen von und Arbeiten mit Strömen
+(Streams) bereit. Ein Strom stellt eine Folge von Elementen dar, die das
+Ausführen verketteter, intermediärer und terminaler Operationen auf diesen
+Elementen nacheinander oder parallel ermöglicht. Die Daten, die durch die
+Elemente des Stromes repräsentiert werden, werden dabei durch den Strom selbst
+nicht verändert. Die Verarbeitung der Elemente erfolgt nach dem Prinzip der
+Bedarfsauswertung (Lazy Evaluation). Neben endlichen Strömen stellt die Java
+Stream API auch Methoden zum Erzeugen unendlicher Ströme bereit.
 
 ```mermaid
 flowchart TD
@@ -43,13 +48,15 @@ flowchart TD
 
 :::note Hinweis
 
-Ströme (Paket `java.util.stream`) haben nichts mit [Datenströmen (IO-Streams)](io-streams.md) (Paket `java.io`) zu tun.
+Ströme (Paket `java.util.stream`) haben nichts mit
+[Datenströmen (IO-Streams)](io-streams.md) (Paket `java.io`) zu tun.
 
 :::
 
 ## Erzeugen von Strömen
 
-Ströme können unter anderem aus Feldern, Datensammlungen wie z.B. Listen und Mengen sowie Einzelobjekten erzeugt werden.
+Ströme können unter anderem aus Feldern, Datensammlungen wie z.B. Listen und
+Mengen sowie Einzelobjekten erzeugt werden.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
@@ -69,11 +76,14 @@ public class MainClass {
 
 :::note Hinweis
 
-Die Zahlenfolge 4-8-15-16-23-42 spielt eine große Rolle in der Fernsehserie _Lost_.
+Die Zahlenfolge 4-8-15-16-23-42 spielt eine große Rolle in der Fernsehserie
+_Lost_.
 
 :::
 
-Im Gegensatz zu "normalen" Strömen besitzen Objekte der Klassen `IntStreams`, `DoubleStreams` und `LongStreams` Methoden zur Weiterverarbeitung ihrer primitiver Werte.
+Im Gegensatz zu "normalen" Strömen besitzen Objekte der Klassen `IntStreams`,
+`DoubleStreams` und `LongStreams` Methoden zur Weiterverarbeitung ihrer
+primitiver Werte.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
@@ -89,7 +99,8 @@ public class MainClass {
 
 ## Intermediäre Operationen
 
-Intermediäre Operationen ermöglichen unter anderem das Filtern, Abbilden sowie das Sortieren von Strömen und liefern als Ergebnis wiederum einen Strom.
+Intermediäre Operationen ermöglichen unter anderem das Filtern, Abbilden sowie
+das Sortieren von Strömen und liefern als Ergebnis wiederum einen Strom.
 
 | Operation     | Methode                                                    | Schnittstellen-Methode           |
 | ------------- | ---------------------------------------------------------- | -------------------------------- |
@@ -106,7 +117,9 @@ Intermediäre Operationen ermöglichen unter anderem das Filtern, Abbilden sowie
 
 ## Terminale Operationen
 
-Terminale Operationen werden z.B. zum Prüfen, zum Aggregieren oder zum Sammeln verwendet. Da terminale Operationen den Strom schließen, können auf ihnen keine weiteren Operationen mehr ausgeführt werden.
+Terminale Operationen werden z.B. zum Prüfen, zum Aggregieren oder zum Sammeln
+verwendet. Da terminale Operationen den Strom schließen, können auf ihnen keine
+weiteren Operationen mehr ausgeführt werden.
 
 | Operation   | Methode                                      | Schnittstellen-Methode      |
 | ----------- | -------------------------------------------- | --------------------------- |
@@ -121,15 +134,22 @@ Terminale Operationen werden z.B. zum Prüfen, zum Aggregieren oder zum Sammeln 
 | Sammeln     | `R collect(collector: Collector<T, A, R>)`   | -                           |
 | Ausführen   | `void forEach(action: Consumer<T>)`          | `void accept(t: T)`         |
 
-Zahlenströme (`IntStream`, `DoubleStream`, `LongStream`) besitzen die zusätzlichen terminale Operationen `int|double|long sum()` und `OptionalDouble average()`.
+Zahlenströme (`IntStream`, `DoubleStream`, `LongStream`) besitzen die
+zusätzlichen terminale Operationen `int|double|long sum()` und
+`OptionalDouble average()`.
 
 ## Bedarfsauswertung (Lazy Evaluation)
 
-Die Elemente in Strömen werden nur bei Bedarf ausgewertet. Intermediäre Operationen werden also nur dann ausgeführt, wenn eine terminale Operation vorhanden ist und bei verketteten Operationen werden für jedes Element die einzelnen Operationen nacheinander
-ausgeführt.
+Die Elemente in Strömen werden nur bei Bedarf ausgewertet. Intermediäre
+Operationen werden also nur dann ausgeführt, wenn eine terminale Operation
+vorhanden ist und bei verketteten Operationen werden für jedes Element die
+einzelnen Operationen nacheinander ausgeführt.
 
-In der main-Methode der Startklasse wird auf den Zahlenstrom 4-8-15-16-23-42 zunächst der Filter _Zahl > 15_ angewendet, anschließend der Filter _Zahl = ganze Zahl_ und abschließend werden die verbliebenen Zahlen auf der Konsole ausgegeben. Zum Nachvollziehen
-werden die Zahlen auch bei den beiden Filtern auf der Konsole ausgegeben.
+In der main-Methode der Startklasse wird auf den Zahlenstrom 4-8-15-16-23-42
+zunächst der Filter _Zahl > 15_ angewendet, anschließend der Filter _Zahl =
+ganze Zahl_ und abschließend werden die verbliebenen Zahlen auf der Konsole
+ausgegeben. Zum Nachvollziehen werden die Zahlen auch bei den beiden Filtern auf
+der Konsole ausgegeben.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
@@ -147,7 +167,9 @@ public class MainClass {
 }
 ```
 
-Ohne Bedarfsauswertung würden die verschiedenen Operationen für die jeweils verbliebenen Elemente ausgeführt nacheinander werden. Die Ausgabe sähe wie folgt aus:
+Ohne Bedarfsauswertung würden die verschiedenen Operationen für die jeweils
+verbliebenen Elemente ausgeführt nacheinander werden. Die Ausgabe sähe wie folgt
+aus:
 
 ```
  4: filter 1
@@ -164,7 +186,9 @@ Ohne Bedarfsauswertung würden die verschiedenen Operationen für die jeweils ve
  42: forEach
 ```
 
-Aufgrund der Bedarfsauswertung werden die verschiedenen Operationen aber für jedes Element einzeln nacheinander ausgeführt. Dadurch ergibt sich folgende Ausgabe:
+Aufgrund der Bedarfsauswertung werden die verschiedenen Operationen aber für
+jedes Element einzeln nacheinander ausgeführt. Dadurch ergibt sich folgende
+Ausgabe:
 
 ```
 4: filter 1
@@ -183,13 +207,21 @@ Aufgrund der Bedarfsauswertung werden die verschiedenen Operationen aber für je
 
 ## Unendliche Ströme
 
-Die Java Stream API stellt drei Methoden zur Verfügung, mit deren Hilfe (un)endliche Ströme erzeugt werden können:
+Die Java Stream API stellt drei Methoden zur Verfügung, mit deren Hilfe
+(un)endliche Ströme erzeugt werden können:
 
-- Die Methode `Stream<T> iterate(seed: T, f: UnaryOperator<T>)` generiert einen unendlichen Strom aus einem Startwert und einer Funktion, welche das nächste Element erstellt
-- Die Methode `Stream<T> iterate(seed: T, hasNext: Predicat <T>, next: UnaryOperator<T>)` erweitert die "normale" iterate-Methode um eine Prädikatsfunktion zum Beenden des Stroms
-- Die Methode `Stream<T> generate(s: Supplier<T>)` kann zum Beispiel zum Erzeugen unendlich vieler zufälliger Elemente genutzt werden
+- Die Methode `Stream<T> iterate(seed: T, f: UnaryOperator<T>)` generiert einen
+  unendlichen Strom aus einem Startwert und einer Funktion, welche das nächste
+  Element erstellt
+- Die Methode
+  `Stream<T> iterate(seed: T, hasNext: Predicat <T>, next: UnaryOperator<T>)`
+  erweitert die "normale" iterate-Methode um eine Prädikatsfunktion zum Beenden
+  des Stroms
+- Die Methode `Stream<T> generate(s: Supplier<T>)` kann zum Beispiel zum
+  Erzeugen unendlich vieler zufälliger Elemente genutzt werden
 
-In der main-Methode der Startklasse werden drei (un)endliche Zahlenströme erzeugt.
+In der main-Methode der Startklasse werden drei (un)endliche Zahlenströme
+erzeugt.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
@@ -203,5 +235,8 @@ public class MainClass {
 }
 ```
 
-Die ersten beiden Zahlenströme geben die Zahlen von 0 bis 99 aus, der dritte Zahlenstrom 100 Pseudozufallszahlen von 0 bis 99. Der erste und dritte Zahlenstrom würden eigentlich unendliche viele (Pseudozufalls-)Zahlen erzeugen, werden aber durch die Methode
-`Stream<T> limit(maxSize: long)` auf 100 (Pseudozufalls-)Zahlen begrenzt.
+Die ersten beiden Zahlenströme geben die Zahlen von 0 bis 99 aus, der dritte
+Zahlenstrom 100 Pseudozufallszahlen von 0 bis 99. Der erste und dritte
+Zahlenstrom würden eigentlich unendliche viele (Pseudozufalls-)Zahlen erzeugen,
+werden aber durch die Methode `Stream<T> limit(maxSize: long)` auf 100
+(Pseudozufalls-)Zahlen begrenzt.

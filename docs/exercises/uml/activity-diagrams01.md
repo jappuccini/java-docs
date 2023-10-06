@@ -5,7 +5,8 @@ description: ''
 
 import Exercise from '@site/src/components/Exercise';
 
-Erstelle die Klasse `MainClass` anhand des abgebildeten Klassendiagramms sowie den abgebildeten Aktivitätsdiagrammen.
+Erstelle die Klasse `MainClass` anhand des abgebildeten Klassendiagramms sowie
+den abgebildeten Aktivitätsdiagrammen.
 
 ## Klassendiagramm
 

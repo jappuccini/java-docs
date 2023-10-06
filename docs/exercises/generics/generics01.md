@@ -44,12 +44,13 @@ classDiagram
 
 ## Hinweis zur Klasse BeerBottle
 
-Die Methode `void chugALug()` soll den Text "Ex und Hopp" auf der Konsole ausgeben.
+Die Methode `void chugALug()` soll den Text "Ex und Hopp" auf der Konsole
+ausgeben.
 
 ## Hinweise zur Klasse Crate
 
-- Die Methode `void insertBottle(bottle: Bottle, box: int)` soll eine Flasche in eine der 6
-  Getränkefächer einfügen
+- Die Methode `void insertBottle(bottle: Bottle, box: int)` soll eine Flasche in
+  eine der 6 Getränkefächer einfügen
 - Die Methode `Bottle takeBottle(box: int)` soll die Flasche des entsprechenden
   Getränkefachs zurückgeben
 

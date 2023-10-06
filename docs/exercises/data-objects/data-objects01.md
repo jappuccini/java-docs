@@ -5,7 +5,9 @@ description: ''
 
 import Exercise from '@site/src/components/Exercise';
 
-Erstelle eine ausführbare Klasse, welche die drei Variablen `name` (Datentyp `String`), `age` (Datentyp `int`) und `gender` (Datentyp `char`) deklariert, initialisiert und über die Konsole ausgibt.
+Erstelle eine ausführbare Klasse, welche die drei Variablen `name` (Datentyp
+`String`), `age` (Datentyp `int`) und `gender` (Datentyp `char`) deklariert,
+initialisiert und über die Konsole ausgibt.
 
 ## Konsolenausgabe
 

@@ -5,16 +5,24 @@ sidebar_position: 180
 tags: [polymorphy]
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+import Tabs from '@theme/Tabs'; import TabItem from '@theme/TabItem';
 
-Unter (dynamischer) Polymorphie (griechisch für Vielgestaltigkeit) versteht man, dass eine Referenzvariable zur Laufzeit durch Typumwandlung Referenzen auf Objekte unterschiedlicher Klassen besitzen kann und dass dadurch unterschiedliche Methodenimplementierungen aufgerufen
-werden können. Man spricht in diesem Zusammenhang auch vom _statischen Datentyp einer Referenzvariablen_ (der zur Designzeit festgelegt wird) und vom _dynamischen Datentyp einer Referenzvariablen_ (der zur Laufzeit zugewiesen wird). Der statische Typ legt
-fest, welche Methoden aufgerufen werden können, der dynamische, welche Methodenimplementierung aufgerufen wird. Die Typumwandlung von der abgeleiteten Unterklasse zur Oberklasse bezeichnet man als _Upcast_, die Rückumwandlung als _Downcast_.
+Unter (dynamischer) Polymorphie (griechisch für Vielgestaltigkeit) versteht man,
+dass eine Referenzvariable zur Laufzeit durch Typumwandlung Referenzen auf
+Objekte unterschiedlicher Klassen besitzen kann und dass dadurch
+unterschiedliche Methodenimplementierungen aufgerufen werden können. Man spricht
+in diesem Zusammenhang auch vom _statischen Datentyp einer Referenzvariablen_
+(der zur Designzeit festgelegt wird) und vom _dynamischen Datentyp einer
+Referenzvariablen_ (der zur Laufzeit zugewiesen wird). Der statische Typ legt
+fest, welche Methoden aufgerufen werden können, der dynamische, welche
+Methodenimplementierung aufgerufen wird. Die Typumwandlung von der abgeleiteten
+Unterklasse zur Oberklasse bezeichnet man als _Upcast_, die Rückumwandlung als
+_Downcast_.
 
 ## Upcast
 
-Beim Upcast wird die Objektreferenz der Unterklasse in eine Objektreferenz der Oberklasse umgewandelt.
+Beim Upcast wird die Objektreferenz der Unterklasse in eine Objektreferenz der
+Oberklasse umgewandelt.
 
 <Tabs>
   <TabItem value="superClass" label="Oberklasse" default>
@@ -52,8 +60,10 @@ public class MainClass {
 
 ## Downcast
 
-Beim Downcast wird die Objektreferenz der Oberklasse in eine Objektreferenz der Unterklasse umgewandelt. Im Gegensatz zum Upcast muss bei einem Downcast der Typ explizit angegeben werden. Der Downcast einer nicht zuweisungskompatiblen Referenz führt zu einer
-`ClassCastException`.
+Beim Downcast wird die Objektreferenz der Oberklasse in eine Objektreferenz der
+Unterklasse umgewandelt. Im Gegensatz zum Upcast muss bei einem Downcast der Typ
+explizit angegeben werden. Der Downcast einer nicht zuweisungskompatiblen
+Referenz führt zu einer `ClassCastException`.
 
 <Tabs>
   <TabItem value="superClass" label="Oberklasse" default>
@@ -92,8 +102,10 @@ public class MainClass {
 
 ## Der instanceof-Operator
 
-Mit dem Operator `instanceof` kann zur Laufzeit geprüft werden, ob eine Objektreferenz zuweisungskompatibel zu einer Klasse ist. Eine Objektreferenz ist dann zuweisungskompatibel zu einer Klasse, wenn die Klasse des referenzierten Objektes in einer
-Vererbungsbeziehung zur Klasse steht.
+Mit dem Operator `instanceof` kann zur Laufzeit geprüft werden, ob eine
+Objektreferenz zuweisungskompatibel zu einer Klasse ist. Eine Objektreferenz ist
+dann zuweisungskompatibel zu einer Klasse, wenn die Klasse des referenzierten
+Objektes in einer Vererbungsbeziehung zur Klasse steht.
 
 <Tabs>
   <TabItem value="superClass" label="Oberklasse" default>
@@ -132,7 +144,9 @@ public class MainClass {
   </TabItem>
 </Tabs>
 
-Seit Java 16 ermöglicht der Mustervergleich bei `instanceof` das Vermeiden notwendiger Typumwandlungen und sorgt gleichzeitig für eine sicherere Programmierung.
+Seit Java 16 ermöglicht der Mustervergleich bei `instanceof` das Vermeiden
+notwendiger Typumwandlungen und sorgt gleichzeitig für eine sicherere
+Programmierung.
 
 <Tabs>
   <TabItem value="superClass" label="Oberklasse" default>

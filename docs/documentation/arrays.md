@@ -5,8 +5,10 @@ sidebar_position: 110
 tags: [arrays]
 ---
 
-Wenn eine große Menge an Daten verarbeitet werden soll, kann man auf spezielle Datenstruktur-Variablen, sogenannte _Felder_ (Arrays), zurückgreifen. Die einzelnen Speicherplätze in einem Feld werden als Elemente bezeichnet, die über einen Index angesprochen
-werden können.
+Wenn eine große Menge an Daten verarbeitet werden soll, kann man auf spezielle
+Datenstruktur-Variablen, sogenannte _Felder_ (Arrays), zurückgreifen. Die
+einzelnen Speicherplätze in einem Feld werden als Elemente bezeichnet, die über
+einen Index angesprochen werden können.
 
 ```mermaid
 flowchart
@@ -20,8 +22,10 @@ flowchart
 
 ## Erzeugen von Feldern
 
-Da es sich bei Feldern um Objekte handelt, müssen diese vor Verwendung erzeugt werden. Bei der Erzeugung muss immer die Länge des Feldes (d.h. die Anzahl der Elemente) angegeben werden. Jedes Feld verfügt über das Attribut `length`, welches die Länge des Feldes
-enthält.
+Da es sich bei Feldern um Objekte handelt, müssen diese vor Verwendung erzeugt
+werden. Bei der Erzeugung muss immer die Länge des Feldes (d.h. die Anzahl der
+Elemente) angegeben werden. Jedes Feld verfügt über das Attribut `length`,
+welches die Länge des Feldes enthält.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
@@ -38,13 +42,15 @@ public class MainClass {
 
 :::note Hinweis
 
-Felder werden zwar mit Hilfe des new-Operators erzeugt, besitzen aber keinen Konstruktor.
+Felder werden zwar mit Hilfe des new-Operators erzeugt, besitzen aber keinen
+Konstruktor.
 
 :::
 
 ## Zugriff auf Feldelemente
 
-Der Zugriff auf die Elemente eines Feldes erfolgt über die Angabe des entsprechenden Index.
+Der Zugriff auf die Elemente eines Feldes erfolgt über die Angabe des
+entsprechenden Index.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
@@ -68,7 +74,8 @@ Der Index beginnt bei Java bei 0.
 
 ## Der Parameter _String[] args_
 
-Der Parameter `String[] args` der main-Methode ermöglicht es dem Anwender, der ausführbaren Klasse beim Aufruf Informationen mitzugeben.
+Der Parameter `String[] args` der main-Methode ermöglicht es dem Anwender, der
+ausführbaren Klasse beim Aufruf Informationen mitzugeben.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
@@ -84,8 +91,10 @@ public class MainClass {
 
 ## Variable Arugmentlisten (VarArgs)
 
-Variable Argumentlisten (VarArgs) ermöglichen die Definition von Methoden, denen beliebig viele Werte eines Datentyps mitgegeben werden können. Die Parameterliste einer Methode kann allerdings nur eine variable Argumentliste beinhalten und diese muss immer am
-Ende der Parameterliste stehen.
+Variable Argumentlisten (VarArgs) ermöglichen die Definition von Methoden, denen
+beliebig viele Werte eines Datentyps mitgegeben werden können. Die
+Parameterliste einer Methode kann allerdings nur eine variable Argumentliste
+beinhalten und diese muss immer am Ende der Parameterliste stehen.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {

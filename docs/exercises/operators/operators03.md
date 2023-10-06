@@ -3,8 +3,7 @@ title: Operators03
 description: ''
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+import Tabs from '@theme/Tabs'; import TabItem from '@theme/TabItem';
 
 Welche Ausgabe erwartest Du nach Ablauf des abgebildeten Codings?
 

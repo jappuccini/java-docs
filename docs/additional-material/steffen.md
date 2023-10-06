@@ -101,18 +101,18 @@ import Optionals from '@site/static/img/exams/java-2/optionals.png';
 <img src={Optionals} />
 <br/>
 
-** Hinweise zu den Konstruktoren** <br/>
-Die Konstruktoren sollen alle Attribute initialisieren.
+** Hinweise zu den Konstruktoren** <br/> Die Konstruktoren sollen alle Attribute
+initialisieren.
 
-** Hinweise zur Methode toString ** <br/>
-Die Methode toString soll die Attribute brand, model und addition zurückgeben.
-Die Attribute sollen durch eine Leertaste getrennt sein. Falls addition keinen
-Wert besitz, soll dieser ignoriert werden.
+** Hinweise zur Methode toString ** <br/> Die Methode toString soll die
+Attribute brand, model und addition zurückgeben. Die Attribute sollen durch eine
+Leertaste getrennt sein. Falls addition keinen Wert besitz, soll dieser
+ignoriert werden.
 
-Erstelle eine ausführbare Klasse in der ein Auto mit der Marke "Mercedes",
-dem Modell "CLA45" und dem Zusatz "AMG" initialisiert wird.
-Gib das Auto in der Konsole aus. Entferne den Zusatz von dem Auto und gebe
-das Auto erneut in der Konsole aus.
+Erstelle eine ausführbare Klasse in der ein Auto mit der Marke "Mercedes", dem
+Modell "CLA45" und dem Zusatz "AMG" initialisiert wird. Gib das Auto in der
+Konsole aus. Entferne den Zusatz von dem Auto und gebe das Auto erneut in der
+Konsole aus.
 
 ```java
 public class Car {
@@ -162,23 +162,27 @@ import Lambdas from '@site/static/img/exams/java-2/lambdas.png';
 <img src={Lambdas} />
 <br/>
 
-** Hinweise zur Klasse Helper** <br/>
-Im Klassendiagramm sind keine Rückgabetypen für die
-statischen Attribute angegeben. Gib für jedes Attribut
-den geeigneten Typ an.
+** Hinweise zur Klasse Helper** <br/> Im Klassendiagramm sind keine
+Rückgabetypen für die statischen Attribute angegeben. Gib für jedes Attribut den
+geeigneten Typ an.
 
-- Das Attribut **isNewBorn** soll eine Lambdafunktion enthalten die ermittelt, ob ein Tier jünger als 1 Jahr alt ist.
-- Das Attribut **toOutput** soll eine Lambdafunktion enthalten, die ein Tier in folgenden String konvertiert: "firstName lastName ist size Zentimeter groß."
-- Die Methode **isHigherThan** soll eine Lambdafunktion zurückgeben, die abhängig vom Parameter size überprüft, ob ein Tier größer als die angegebene Größe ist.
+- Das Attribut **isNewBorn** soll eine Lambdafunktion enthalten die ermittelt,
+  ob ein Tier jünger als 1 Jahr alt ist.
+- Das Attribut **toOutput** soll eine Lambdafunktion enthalten, die ein Tier in
+  folgenden String konvertiert: "firstName lastName ist size Zentimeter groß."
+- Die Methode **isHigherThan** soll eine Lambdafunktion zurückgeben, die
+  abhängig vom Parameter size überprüft, ob ein Tier größer als die angegebene
+  Größe ist.
 
 **Hinweise zur Klasse Data** <br/>
 
-- Die Methode **getAnimals** soll einen Stream von einem einzelnen Tier mit den Werten deiner Wahl zurückgeben.
+- Die Methode **getAnimals** soll einen Stream von einem einzelnen Tier mit den
+  Werten deiner Wahl zurückgeben.
 
-**Hinweise zur Klasse Task2** <br/>
-Verwende für die nachfolgende Abfolge die Methoden der Klassen Data und Helper.
-Erzeuge einen Stream von Tieren und filtere jene heraus, die Größer als 50 Zentimeter sind.
-Gib anschließend den vollen Namen und die Größe der Tiere in der Konsole aus.
+**Hinweise zur Klasse Task2** <br/> Verwende für die nachfolgende Abfolge die
+Methoden der Klassen Data und Helper. Erzeuge einen Stream von Tieren und
+filtere jene heraus, die Größer als 50 Zentimeter sind. Gib anschließend den
+vollen Namen und die Größe der Tiere in der Konsole aus.
 
 ```java
 public record Animal(String firstName, String lastName, int age, int size) {}
@@ -276,11 +280,19 @@ public class PhoneStore {
 ## Hinweise zur Klasse PhoneStore
 
 - Der Konstruktor soll alle Attribute initialisieren.
-- Die Methode **q1** soll die drei Leistungsstärksten (CPU Power) Smart Phones der Marke Huawei, absteigend nach dem Preis zurückgeben, welche mehr als 3 Kameras haben.
-- Die Methode **q2** soll die durchschnittliche Kameraanzahl aller Smart Phones zurückgeben, die einen Akku von 2500 oder mehr haben.
-- Die Methode **q3** soll die Smart Phones aufsteigend nach Preis zurückgeben, die den **maxPrice** nicht überschreiten, einen modernen Anschlusstyp haben und weniger als 2400 Leistung (CPU Power) haben.
-- Die Methode **q4** soll eine Map zurückgeben. Der Schlüssel soll aus dem Markennamen und dem Anschlusstyp zusammengesetzt werden. Als Wert soll das Auto zurückgegeben werden.
-- Die Methode **q5** soll eine Map zurückgeben, welche alle Smart Phones nach Anschlusstyp gruppiert.
+- Die Methode **q1** soll die drei Leistungsstärksten (CPU Power) Smart Phones
+  der Marke Huawei, absteigend nach dem Preis zurückgeben, welche mehr als 3
+  Kameras haben.
+- Die Methode **q2** soll die durchschnittliche Kameraanzahl aller Smart Phones
+  zurückgeben, die einen Akku von 2500 oder mehr haben.
+- Die Methode **q3** soll die Smart Phones aufsteigend nach Preis zurückgeben,
+  die den **maxPrice** nicht überschreiten, einen modernen Anschlusstyp haben
+  und weniger als 2400 Leistung (CPU Power) haben.
+- Die Methode **q4** soll eine Map zurückgeben. Der Schlüssel soll aus dem
+  Markennamen und dem Anschlusstyp zusammengesetzt werden. Als Wert soll das
+  Auto zurückgegeben werden.
+- Die Methode **q5** soll eine Map zurückgeben, welche alle Smart Phones nach
+  Anschlusstyp gruppiert.
 
 ## Klausurvorbereitung Java I
 
@@ -297,52 +309,54 @@ public class PhoneStore {
 
 #### Aufgabe Array
 
-<img style={{height: '200px'}} src='/java-docs/img/array_task.png'/>
-<br/>
+<img style={{height: '200px'}} src='/java-docs/img/array_task.png'/> <br/>
 
-** Hinweise zur Methode split ** <br/>
-Die Methode split soll ein Array vom Typ int so verarbeiten, dass ein neues Array erstellt wird, was alle Elemente des
-eingehenden Arrays bis zum angegebenen Index enthält. Das neu erstellte Array soll anschließend zurückgegeben werden.
-Verwende keine ArrayList!
-Bsp.: Der Parameter numbers enthält die Elemente 10, 8, 3, 22 & 1 der Parameter index ist gleich 2. Zurückgegeben
-werden soll ein neues Array, das die Elemente 10, 8 & 3 enthält.
+** Hinweise zur Methode split ** <br/> Die Methode split soll ein Array vom Typ
+int so verarbeiten, dass ein neues Array erstellt wird, was alle Elemente des
+eingehenden Arrays bis zum angegebenen Index enthält. Das neu erstellte Array
+soll anschließend zurückgegeben werden. Verwende keine ArrayList! Bsp.: Der
+Parameter numbers enthält die Elemente 10, 8, 3, 22 & 1 der Parameter index ist
+gleich 2. Zurückgegeben werden soll ein neues Array, das die Elemente 10, 8 & 3
+enthält.
 
-** Hinweise zur Methode main ** <br/>
-In der Methode main soll ein Arrays erstellt werden, dass die Ganzzahlen 10, 8, 3, 22 & 1 enthält.
-Erstelle mithilfe der Methode split ein neues Array, dass die ersten drei Elemente des ersten Arrays enthalten soll.
-Gib mithilfe einer For-Schleife alle Elemente des neu erstellten Arrays aus.
+** Hinweise zur Methode main ** <br/> In der Methode main soll ein Arrays
+erstellt werden, dass die Ganzzahlen 10, 8, 3, 22 & 1 enthält. Erstelle mithilfe
+der Methode split ein neues Array, dass die ersten drei Elemente des ersten
+Arrays enthalten soll. Gib mithilfe einer For-Schleife alle Elemente des neu
+erstellten Arrays aus.
 
 #### Aufgabe Exception
 
-<img style={{height: '200px'}} src='/java-docs/img/exception_task.png'/>
-<br/>
+<img style={{height: '200px'}} src='/java-docs/img/exception_task.png'/> <br/>
 
 ** Hinweise zur Klasse OverflowException **
 
 - Der Konstruktor soll alle Attribute initialisieren.
-- Die Methode **getHigherThanCapacity** soll die zu viel hinzugefügte Flüssigkeit zurückgeben.
+- Die Methode **getHigherThanCapacity** soll die zu viel hinzugefügte
+  Flüssigkeit zurückgeben.
 
 ** Hinweise zur Klasse Barrel**
 
-- Der Konstruktor soll alle Attribute initialisieren. Das Fass ist Anfangs immer leer.
-- Die Methode **addFluid** soll die OverflowException auslösen, wenn die Summe der eingehenden
-  Flüssigkeit und der im Fass befindenden Flüssigkeit die Kapazität überschreitet. Übergebe der Ausnahme
-  den Wert, um wieviel die maximale Kapazität überschritten wurde. Wenn die maximale Kapazität nicht
-  überschritten wird, soll die eingehende Flüssigkeit dem Fass hinzugefügt werden
+- Der Konstruktor soll alle Attribute initialisieren. Das Fass ist Anfangs immer
+  leer.
+- Die Methode **addFluid** soll die OverflowException auslösen, wenn die Summe
+  der eingehenden Flüssigkeit und der im Fass befindenden Flüssigkeit die
+  Kapazität überschreitet. Übergebe der Ausnahme den Wert, um wieviel die
+  maximale Kapazität überschritten wurde. Wenn die maximale Kapazität nicht
+  überschritten wird, soll die eingehende Flüssigkeit dem Fass hinzugefügt
+  werden
 
-** Zusatz in ausführbarer Klasse ** <br/>
-Erstelle ein neues Fass, das die maximale Kapazität von 100 hat. Versuche anschließend das Fass auf 101 zu
-füllen und fange die Ausnahme ab. Gib in der Konsole aus, um wieviel die maximale Kapazität überschritten
-wurde.<br/>
-** Beispiel Konsolenausgabe: ** <br/>
-"Es wäre um 1 zu viel befüllt worden."
+** Zusatz in ausführbarer Klasse ** <br/> Erstelle ein neues Fass, das die
+maximale Kapazität von 100 hat. Versuche anschließend das Fass auf 101 zu füllen
+und fange die Ausnahme ab. Gib in der Konsole aus, um wieviel die maximale
+Kapazität überschritten wurde.<br/> ** Beispiel Konsolenausgabe: ** <br/> "Es
+wäre um 1 zu viel befüllt worden."
 
 ### 21.03.2023
 
 #### Aufgabe abstrakte Klasse, Enum
 
-<img style={{height: '200px'}} src='/java-docs/img/class_task.png'/>
-<br/>
+<img style={{height: '200px'}} src='/java-docs/img/class_task.png'/> <br/>
 
 ** Hinweise zur Klasse EnergySource **
 
@@ -369,17 +383,15 @@ wurde.<br/>
 - Die Methode readyForUse soll true zurückgeben, wenn die Energie des
   Smartphones die minimal erforderliche Energie überschreitet.
 
-** Hinweise zur Klasse ExamTask04 ** <br/>
-Erzeuge ein Kabeltelefon mit Akku und eines, dass an die Steckdose
-angeschlossen ist. Erzeuge ein leeres Smartphone und eines das halb voll ist.
-Speichere alle erzeugten Fahrzeuge in einer ArrayList. Ermittle mithilfe einer
-Schleife die Anzahl der betriebsbereiten Telefone. Gib die Anzahl in der
-Konsole aus.
+** Hinweise zur Klasse ExamTask04 ** <br/> Erzeuge ein Kabeltelefon mit Akku und
+eines, dass an die Steckdose angeschlossen ist. Erzeuge ein leeres Smartphone
+und eines das halb voll ist. Speichere alle erzeugten Fahrzeuge in einer
+ArrayList. Ermittle mithilfe einer Schleife die Anzahl der betriebsbereiten
+Telefone. Gib die Anzahl in der Konsole aus.
 
 #### Aufgabe Comparator
 
-<img style={{height: '200px'}} src='/java-docs/img/comparator_task.png'/>
-<br/>
+<img style={{height: '200px'}} src='/java-docs/img/comparator_task.png'/> <br/>
 
 ** Hinweise zur Klasse CarVendor **
 

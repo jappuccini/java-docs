@@ -6,7 +6,8 @@ description: ''
 import Exercise from '@site/src/components/Exercise';
 
 Erstelle eine ausführbare Klasse, welche eine Ganzzahl von der Konsole einliest
-und auf der Konsole ausgibt, ob es sich um eine gerade oder ungerade Zahl handelt.
+und auf der Konsole ausgibt, ob es sich um eine gerade oder ungerade Zahl
+handelt.
 
 ## Konsolenausgabe
 

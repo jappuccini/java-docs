@@ -58,8 +58,8 @@ Der Konstruktor soll den Namen initialisieren.
 ## Hinweise zur Klasse Company
 
 - Der Konstruktor soll den Namen sowie die Mitarbeiterliste initialisieren
-- Die Methode `void addEmployee(employee: Employee)` soll der Mitarbeiterliste einen Mitarbeiter
-  hinzufügen
+- Die Methode `void addEmployee(employee: Employee)` soll der Mitarbeiterliste
+  einen Mitarbeiter hinzufügen
 - Die Methode `void print()` soll alle Attribute auf der Konsole ausgeben
 
 ## Konsolenausgabe

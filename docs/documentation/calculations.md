@@ -5,7 +5,9 @@ sidebar_position: 70
 tags: []
 ---
 
-Die Klasse `Math` stellt neben einigen Konstanten wie der Kreiszahl _Pi_ und der Eulerschen Zahl _E_ zahlreiche Methoden für mathematische Berechnungen zur Verfügung.
+Die Klasse `Math` stellt neben einigen Konstanten wie der Kreiszahl _Pi_ und der
+Eulerschen Zahl _E_ zahlreiche Methoden für mathematische Berechnungen zur
+Verfügung.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {

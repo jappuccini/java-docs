@@ -5,8 +5,8 @@ description: ''
 
 import Exercise from '@site/src/components/Exercise';
 
-Erstelle eine ausführbare Klasse, welche zwei "Binärzahlen" aufsummiert und
-das Ergebnis auf dem Bildschirm ausgibt.
+Erstelle eine ausführbare Klasse, welche zwei "Binärzahlen" aufsummiert und das
+Ergebnis auf dem Bildschirm ausgibt.
 
 ## Konsolenausgabe
 

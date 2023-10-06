@@ -5,7 +5,13 @@ description: ''
 
 import Exercise from '@site/src/components/Exercise';
 
-- Erstelle die Ausnahmenklassen `SalaryIncreaseTooHighException` und `SalaryDecreaseException` und passe die Methode `void setSalary(salary: int)` so an, dass bei einer Gehaltserhöhung größer 10% die Ausnahme `SalaryIncreaseTooHighException` und bei einer Gehaltsverringerung die Ausnahme `SalaryDecreaseException` ausgelöst wird
-- Passe die ausführbare Klasse aus Übungsaufgabe [ClassDiagrams04](../uml/class-diagrams04) so an, dass ein oder mehrere Mitarbeiter eine Gehaltserhöhung bekommen
+- Erstelle die Ausnahmenklassen `SalaryIncreaseTooHighException` und
+  `SalaryDecreaseException` und passe die Methode `void setSalary(salary: int)`
+  so an, dass bei einer Gehaltserhöhung größer 10% die Ausnahme
+  `SalaryIncreaseTooHighException` und bei einer Gehaltsverringerung die
+  Ausnahme `SalaryDecreaseException` ausgelöst wird
+- Passe die ausführbare Klasse aus Übungsaufgabe
+  [ClassDiagrams04](../uml/class-diagrams04) so an, dass ein oder mehrere
+  Mitarbeiter eine Gehaltserhöhung bekommen
 
 <Exercise pullRequest="51" branchSuffix="exceptions/03" />

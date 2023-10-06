@@ -7,7 +7,8 @@ sidebar_position: 30
 ## GitHub-Repository klonen und in Eclipse importieren
 
 - In der Git-Perspektive Drucktaste _**Clone a Git repository**_ betätigen
-- URI eingeben (z.B. https://github.com/appenmaier/dhbw-java) und Drucktaste _**Next >**_ betätigen
+- URI eingeben (z.B. https://github.com/appenmaier/dhbw-java) und Drucktaste
+  _**Next >**_ betätigen
 - Drucktaste _**Next >**_ betätigen
 - Drucktaste _**Finish**_ betätigen
 - Importiertes Git-Repository aufklappen
@@ -30,7 +31,8 @@ sidebar_position: 30
 
 ## Änderungen eines lokalen Git-Repositories hochladen (Pushen)
 
-- In der View _**Git Staging**_ alle geänderten Objekte markieren und Drucktaste _**Add selected files to the index**_ betätigen
+- In der View _**Git Staging**_ alle geänderten Objekte markieren und Drucktaste
+  _**Add selected files to the index**_ betätigen
 - _**Commit Message**_ eingeben und Drucktaste _**Commit and push**_ betätigen
 
 ## Lokales Git-Repository aktualisieren (Pullen)

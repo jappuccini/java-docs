@@ -38,8 +38,8 @@ classDiagram
 
 ## Hinweise zur Klasse TelephoneBook
 
-- Die Methode `void addEntry(person: Person, telephoneNumber: TelephoneNumber)` soll einen Eintrag im
-  Telefonbuch anlegen
+- Die Methode `void addEntry(person: Person, telephoneNumber: TelephoneNumber)`
+  soll einen Eintrag im Telefonbuch anlegen
 - Die Methode `TelephoneNumber getTelephoneNumberByName(name: String)` soll die
   Telefonnummer zum eingehenden Namen zurückgeben
 

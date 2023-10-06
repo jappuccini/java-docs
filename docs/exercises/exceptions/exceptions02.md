@@ -27,8 +27,8 @@ classDiagram
 ## Hinweise zur Klasse Barrel
 
 - Der Konstruktor soll das Attribut `capacity` initialisieren
-- Die Methode `void addFluid(value: int)` soll den Füllstand um den eingehenden Betrag
-  erhöhen. Bei Überschreiten der Kapazität soll die Ausnahme
+- Die Methode `void addFluid(value: int)` soll den Füllstand um den eingehenden
+  Betrag erhöhen. Bei Überschreiten der Kapazität soll die Ausnahme
   `BarrelOverflowException` ausgelöst werden
 - Die Methode `void printFluidLevel()` soll den Füllstand auf der Konsole
   ausgeben

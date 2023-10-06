@@ -7,8 +7,8 @@ import Exercise from '@site/src/components/Exercise';
 
 - Erstelle die Aufzählungen `SkatCardColor` und `SkatCardValue` sowie die
   Klassen `SkatCard` und `SkatCardDeck` anhand des abgebildeten Klassendiagramms
-- Erstelle eine ausführbare Klasse, welche ein Skatblatt erzeugt, mischt und
-  auf der Konsole ausgibt
+- Erstelle eine ausführbare Klasse, welche ein Skatblatt erzeugt, mischt und auf
+  der Konsole ausgibt
 
 ## Klassendiagramm
 

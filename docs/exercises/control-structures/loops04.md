@@ -18,7 +18,7 @@ Ergebnis: Die eingegebenen Zeichenketten sind identisch
 
 ## Hinweis
 
-Die statische Methode `char toUpperCase(ch: char)` der Klasse `Character` gibt den
-Großbuchstaben des eingehenden Zeichens zurück.
+Die statische Methode `char toUpperCase(ch: char)` der Klasse `Character` gibt
+den Großbuchstaben des eingehenden Zeichens zurück.
 
 <Exercise pullRequest="17" branchSuffix="loops/04" />

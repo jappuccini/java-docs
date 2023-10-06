@@ -5,11 +5,10 @@ description: ''
 
 import Exercise from '@site/src/components/Exercise';
 
-- Passe die Klasse `Rental` aus Übungsaufgabe
-  [Polymorphy02](polymorphy02.md) anhand des abgebildeten Klassendiagramms an
-- Passe die ausführbare Klasse aus Übungsaufgabe
-  [Polymorphy02](polymorphy02.md) so an, dass sich alle Lastwagen der
-  Fahrzeugvermietung in Autobots verwandeln
+- Passe die Klasse `Rental` aus Übungsaufgabe [Polymorphy02](polymorphy02.md)
+  anhand des abgebildeten Klassendiagramms an
+- Passe die ausführbare Klasse aus Übungsaufgabe [Polymorphy02](polymorphy02.md)
+  so an, dass sich alle Lastwagen der Fahrzeugvermietung in Autobots verwandeln
 
 ## Klassendiagramm
 
