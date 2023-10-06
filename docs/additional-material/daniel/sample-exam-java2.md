@@ -7,11 +7,11 @@ tags: []
 
 ## Hinweise zur Klausur
 
-- Der Stereotyp `record` impliziert, dass die Datenklasse einen entsprechenden Konstruktor, Getter zu allen Attributen sowie entsprechende Implementierungen für die Object-Methoden besitzt
-- Der Stereotyp `enumeration` impliziert, dass die Aufzählung einen passenden, privaten Konstruktor sowie ggbfs. passende Setter und Getter besitzt
+- Der Stereotyp `<<record>>` impliziert, dass die Datenklasse einen entsprechenden Konstruktor, Getter zu allen Attributen sowie entsprechende Implementierungen für die Object-Methoden besitzt
+- Der Stereotyp `<<enumeration>>` impliziert, dass die Aufzählung einen passenden, privaten Konstruktor sowie ggbfs. passende Setter und Getter besitzt
 - Pakete und Klassenimporte müssen nicht angegeben werden
-- Für die Konsolenausgabe kann das Kürzel `sysout` verwendet werden
-- Methoden- und Attributsbezeichner dürfen gekürzt geschrieben werden (Beispiel `testGMPSH()` statt `testGetMostPowerfulSuperHuman()`)
+- Für die Konsolenausgabe kann das Kürzel _sysout_ verwendet werden
+- Methoden- und Attributsbezeichner dürfen sinnvoll gekürzt geschrieben werden (Beispiel _testGMPSH()_ statt _testGetMostPowerfulSuperHuman()_)
 
 ## Aufgabe 1 (14 Punkte)
 
