@@ -1,7 +1,7 @@
 ---
 title: Cheatsheet Programmierung 2
 description: ''
-sidebar_position: 50
+sidebar_position: 40
 tags: []
 ---
 
