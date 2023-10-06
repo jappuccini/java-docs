@@ -40,6 +40,7 @@ tags: []
 | `OptionalDouble` | `isPresent()`                                                                     | `boolean`        |
 | `OptionalDouble` | `of(value: double)`                                                               | `OptionalDouble` |
 | `OptionalDouble` | `orElse(other: double)`                                                           | `double`         |
+| `PrintStream`    | print-Methoden, println-Methoden                                                  | `void`           |
 | `Random`         | `nextInt(bound: int)`                                                             | `int`            |
 | `Scanner`        | `hasNextLine()`                                                                   | `boolean`        |
 | `Scanner`        | `next()`                                                                          | `String`         |
@@ -51,6 +52,7 @@ tags: []
 | `String`         | `length()`                                                                        | `int`            |
 | `String`         | `split(regex: String)`                                                            | `String[]`       |
 | `String`         | `toLowerCase()`, `toUpperCase()`                                                  | `String`         |
+| `System`         | `currentTimeMillis()`                                                             | `long`           |
 
 ## Java Collections Framework
 
