@@ -3,6 +3,8 @@ title: Loops08
 description: ''
 ---
 
+import Exercise from '@site/src/components/Exercise';
+
 Erstelle eine ausführbare Klasse, welche anhand von Startkapital
 (K<sub>0</sub>), Prozentsatz (p) und Anzahl Jahre (n) das Endkapital
 (K<sub>n</sub>) berechnet.
@@ -21,3 +23,5 @@ Willst Du eine weitere Zinsrechnung durchführen (true, false)?: false
 
 Die Formel für die Zinseszins-Berechnung findest Du unter anderem
 [hier](https://de.wikipedia.org/wiki/Zinseszins).
+
+<Exercise pullRequest="77" branchSuffix="loops/08" />

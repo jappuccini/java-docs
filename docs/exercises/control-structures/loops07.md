@@ -3,6 +3,8 @@ title: Loops07
 description: ''
 ---
 
+import Exercise from '@site/src/components/Exercise';
+
 Erstelle eine ausführbare Klasse, welche anhand von Startkapital (K) und
 Prozentsatz (p) den Jahreszins berechnet.
 
@@ -19,3 +21,5 @@ Willst Du einen weiteren Jahreszins berechnen (true, false)?:false
 
 Die Formel für die Zins-Berechnung findest Du unter anderem
 [hier](https://de.wikipedia.org/wiki/Zinsrechnung).
+
+<Exercise pullRequest="76" branchSuffix="loops/07" />
