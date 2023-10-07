@@ -33,7 +33,9 @@ export default function DataTypesAndDataObjects() {
           </aside>
         </section>
         <section>
-          <Link to="/documentation/programming#programmausführung">Programmausführung</Link>
+          <Link to="/documentation/programming#programmausführung">
+            Programmausführung
+          </Link>
           <NKR />
         </section>
       </section>
