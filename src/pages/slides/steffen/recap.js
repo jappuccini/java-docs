@@ -1,6 +1,7 @@
 import React from 'react';
 import Slides from '../../../components/Slides';
 import { defaultInitSlides } from '../../../components/Slides/initSlides';
+import Link from '@docusaurus/Link';
 
 export default function Recap() {
   return (
@@ -25,24 +26,21 @@ export default function Recap() {
           <ul>
             <li className="fragment">
               <span> Dokumentation unter </span> <br></br>
-              <a target="_blank" href="https://jappuccini.github.io/java-docs/">
+              <Link to="https://jappuccini.github.io/java-docs/">
                 jappuccini.github.io/java-docs
-              </a>
+              </Link>
             </li>
             <li className="fragment">
               <span> Quellcode der Dokumentation unter </span> <br></br>
-              <a target="_blank" href="https://github.com/jappuccini/java-docs">
+              <Link to="https://github.com/jappuccini/java-docs">
                 github.com/jappuccini/java-docs
-              </a>
+              </Link>
             </li>
             <li className="fragment">
               <span> Quellcode der Aufgaben</span> <br></br>
-              <a
-                target="_blank"
-                href="https://github.com/jappuccini/java-exercises"
-              >
+              <Link to="https://github.com/jappuccini/java-exercises">
                 github.com/jappuccini/java-exercises
-              </a>
+              </Link>
             </li>
           </ul>
         </section>

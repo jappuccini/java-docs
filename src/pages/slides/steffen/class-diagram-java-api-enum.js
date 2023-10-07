@@ -2,6 +2,8 @@ import React from 'react';
 import Slides from '../../../components/Slides';
 import { NKR } from '../../../components/Slides/nkr';
 import { defaultInitSlides } from '../../../components/Slides/initSlides';
+import ClassDiagramExample from '@site/static/img/class-diagram-example.png';
+import ActivityDiagramExample from '@site/static/img/activity-diagram-example.png';
 
 export default function KlassdiagramJavaAPIEnum() {
   return (
@@ -185,7 +187,7 @@ export default function KlassdiagramJavaAPIEnum() {
           </ul>
         </section>
         <section>
-          <img height={'400px'} src="/java-docs/img/class-diagramm.png" />
+          <img height={'400px'} src={ClassDiagramExample} />
         </section>
         <section>
           <h2>Bereiche</h2>
@@ -274,7 +276,7 @@ export default function KlassdiagramJavaAPIEnum() {
           </ul>
         </section>
         <section>
-          <img height={'400px'} src="/java-docs/img/class-diagramm.png" />
+          <img height={'400px'} src={ActivityDiagramExample} />
         </section>
         <section>
           In der Klausur ist nur das Lesen von Aktivitätsdiagrammen relevant.

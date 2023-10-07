@@ -1,3 +1,4 @@
+import Link from '@docusaurus/Link';
 import React from 'react';
 
 export default function Contributor({ pullRequest, userId, description }) {
@@ -14,12 +15,12 @@ export default function Contributor({ pullRequest, userId, description }) {
         style={{ height: '50px' }}
         src={`https://avatars.githubusercontent.com/u/${userId}?s=50&v=4`}
       />
-      <a
+      <Link
         style={{ margin: '1rem' }}
-        href={`https://github.com/jappuccini/java-exercises/pull/${pullRequest}`}
+        to={`https://github.com/jappuccini/java-exercises/pull/${pullRequest}`}
       >
         #{pullRequest} {description}
-      </a>
+      </Link>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import Slides from '../../../components/Slides';
 import { defaultInitSlides } from '../../../components/Slides/initSlides';
+import Link from '@docusaurus/Link';
 
 export default function Lambda() {
   return (
@@ -230,16 +231,16 @@ export default function Lambda() {
           <p className="fragment">
             Nicht jedes Interface mit einer einzigen abstrakten Methode ist
             funktional, z.B.{' '}
-            <a href=" https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html">
+            <Link to="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html">
               Comparable
-            </a>
+            </Link>
           </p>
           <p className="fragment">
             Funktionale Interfaces werden mit @FunctionalInterface markiert,
             z.B.{' '}
-            <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html">
+            <Link to="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Comparator.html">
               Comparator
-            </a>
+            </Link>
           </p>
           <pre className="fragment">
             <code
