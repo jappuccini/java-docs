@@ -1,7 +1,8 @@
+import Link from '@docusaurus/Link';
 import React from 'react';
 import Slides from '../../../components/Slides';
-import { NKR } from '../../../components/Slides/nkr';
 import { defaultInitSlides } from '../../../components/Slides/initSlides';
+import { NKR } from '../../../components/Slides/nkr';
 
 export default function StreamApi() {
   return (
@@ -420,9 +421,9 @@ export default function StreamApi() {
             sind Methoden eines Streams, die als Rückgabewert einen Stream
             zurückgeben.
           </p>
-          <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html">
+          <Link to="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/Stream.html">
             Stream Klasse
-          </a>
+          </Link>
         </section>
         <section>
           <h2>filter - Methode</h2>
@@ -437,9 +438,9 @@ export default function StreamApi() {
           </pre>
           <p className="fragment">
             Der Parameter predicate muss das{' '}
-            <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html">
+            <Link to="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Predicate.html">
               Predicate Interface
-            </a>{' '}
+            </Link>{' '}
             implementieren.
           </p>
         </section>
@@ -474,9 +475,9 @@ export default function StreamApi() {
           </pre>
           <p className="fragment">
             Der Parameter mapper muss das{' '}
-            <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html">
+            <Link to="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html">
               Function Interface
-            </a>{' '}
+            </Link>{' '}
             implementieren.
           </p>
           <p className="fragment">
@@ -582,9 +583,9 @@ export default function StreamApi() {
           </pre>
           <p className="fragment">
             Der Parameter comparator muss das{' '}
-            <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html">
+            <Link to="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Comparator.html">
               Comparator Interface
-            </a>{' '}
+            </Link>{' '}
             implementieren.
           </p>
         </section>
@@ -842,9 +843,9 @@ export default function StreamApi() {
           <h2>Demo</h2>
           <ul>
             <li className="fragment">
-              <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/Collectors.html">
+              <Link to="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/Collectors.html">
                 Collectors Klasse
-              </a>
+              </Link>
             </li>
             <li className="fragment">Collectors.toMap</li>
             <li className="fragment">Collectors.groupingBy</li>

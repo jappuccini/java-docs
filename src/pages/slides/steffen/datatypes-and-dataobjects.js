@@ -33,8 +33,7 @@ export default function DataTypesAndDataObjects() {
           </aside>
         </section>
         <section>
-          <p>Einordnung von Java als Programmiersprache</p>
-          <img src="https://user-images.githubusercontent.com/47243617/209095011-8c4920fb-66c7-435d-9f76-279f4fca0612.png" />
+          <Link to="/documentation/programming#programmausführung">Programmausführung</Link>
           <NKR />
         </section>
       </section>
@@ -260,19 +259,15 @@ export default function DataTypesAndDataObjects() {
         <h2>Zusammenfassung</h2>
         <ul>
           <li className="fragment">
-            <Link
-              to={'/java-docs/documentation/class-structure#die-main-methode'}
-            >
+            <Link to={'/documentation/class-structure#die-main-methode'}>
               Die main Methode
             </Link>
           </li>
           <li className="fragment">
-            <Link to={'/java-docs/documentation/data-types'}>Datentypen</Link>
+            <Link to={'/documentation/data-types'}>Datentypen</Link>
           </li>
           <li className="fragment">
-            <Link to={'/java-docs/documentation/data-objects'}>
-              Datenobjekte
-            </Link>
+            <Link to={'/documentation/data-objects'}>Datenobjekte</Link>
           </li>
         </ul>
       </section>

@@ -1,3 +1,4 @@
+import Link from '@docusaurus/Link';
 import React from 'react';
 import Slides from '../../../components/Slides';
 import { defaultInitSlides } from '../../../components/Slides/initSlides';
@@ -76,23 +77,20 @@ export default function Intro() {
         <section>
           <h2>Wo findet ihr was?</h2>
           <p className="fragment">
-            <a target="_blank" href="https://jappuccini.github.io/java-docs/">
+            <Link to="https://jappuccini.github.io/java-docs/">
               Folien, Dokumentation, Aufgaben (auch Externe), Lösungen und
               Anleitungen
-            </a>
+            </Link>
           </p>
           <p className="fragment">
-            <a target="_blank" href="https://github.com/jappuccini/java-docs">
+            <Link to="https://github.com/jappuccini/java-docs">
               Quellcode von Folien, Dokumentation, etc.
-            </a>
+            </Link>
           </p>
           <p className="fragment">
-            <a
-              target="_blank"
-              href="https://github.com/jappuccini/java-exercises"
-            >
+            <Link to="https://github.com/jappuccini/java-exercises">
               Quellcode von Aufgaben und Lösungen
-            </a>
+            </Link>
           </p>
         </section>
         <section>
@@ -109,22 +107,14 @@ export default function Intro() {
           <ul>
             <li className="fragment">
               Macht alles mit
-              <a
-                style={{ marginLeft: '0.5rem' }}
-                href="https://gitpod.io"
-                target="_blank"
-              >
+              <Link style={{ marginLeft: '0.5rem' }} to="https://gitpod.io">
                 GitPod
-              </a>
+              </Link>
             </li>
             <li className="fragment">
-              <a
-                style={{ marginRight: '0.5rem' }}
-                href="https://github.com"
-                target="_blank"
-              >
+              <Link style={{ marginRight: '0.5rem' }} to="https://github.com">
                 GitHub
-              </a>
+              </Link>
               Account erstellen
             </li>
             <li className="fragment">
@@ -209,12 +199,9 @@ export default function Intro() {
             Development Environment einrichten (GitPod oder lokal)
           </p>
           <p className="fragment">
-            <a
-              target="_blank"
-              href="https://jappuccini.github.io/java-docs/exercises/class-structure/class-structure01"
-            >
+            <Link to="/exercises/class-structure/class-structure01">
               Hello-World-Aufgabe machen
-            </a>
+            </Link>
           </p>
         </section>
       </section>

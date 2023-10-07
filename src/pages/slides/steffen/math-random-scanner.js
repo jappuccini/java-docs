@@ -1,3 +1,4 @@
+import ScannerError from '@site/static/img/scanner-error.png';
 import React from 'react';
 import Slides from '../../../components/Slides';
 import { defaultInitSlides } from '../../../components/Slides/initSlides';
@@ -106,7 +107,7 @@ export default function MethodsAndOperators() {
             ></code>
           </pre>
         </section>
-        <section data-background-image="/java-docs/img/scanner-error.png"></section>
+        <section data-background-image={ScannerError}></section>
       </section>
       <section>
         <section data-background-iframe="https://giphy.com/embed/VZXTThO4dxllIEQKTr"></section>

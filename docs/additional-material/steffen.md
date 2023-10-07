@@ -41,7 +41,7 @@ git switch demos/steffen
 
 ## Klausurvorbereitung Java II
 
-<a href="/java-docs/pdf/java-cheat-sheet.pdf"  target="_blank" >Cheatsheet</a>
+[Cheatsheet Java II](/pdf/java-cheat-sheet.pdf)
 
 1. Altklausuren 2022 Q3 - Klausur Java 2 Aufgabe 3
 
@@ -94,12 +94,19 @@ public class PlanetQueries {
 
 ## Aufgabe Optionals
 
-import Optionals from '@site/static/img/exams/java-2/optionals.png';
-
 ### Klassendiagramm
 
-<img src={Optionals} />
-<br/>
+```mermaid
+classDiagram
+  class Car {
+    +name String
+    +brand String
+    +addition Optional~String~
+    +Car(name String, brand String)
+    +Car(name String, brand String, addition String)
+    +toString() String
+  }
+```
 
 ** Hinweise zu den Konstruktoren** <br/> Die Konstruktoren sollen alle Attribute
 initialisieren.
@@ -155,12 +162,37 @@ public class Main {
 
 ## Aufgabe Lambdafunktionen
 
-import Lambdas from '@site/static/img/exams/java-2/lambdas.png';
-
 ### Klassendiagramm
 
-<img src={Lambdas} />
-<br/>
+```mermaid
+classDiagram
+  Helper -- Animal
+  Data -- Animal
+  Task2 -- Animal
+  Task2 -- Data
+  Task2 -- Helper
+
+  class Helper {
+      +isNewBorn UNKNOWN$
+      +toOutput UNKNOWN$
+      +isHigherThan(size: int)$ Predicate~Student~
+  }
+
+  class Animal {
+      <<record>>
+      +firstName String
+      +lastName String
+      +size int
+  }
+
+  class Data {
+      +getAnimals()$ Stream~Animal~
+  }
+
+  class Task2 {
+      +main(args: String[])$ void
+  }
+```
 
 ** Hinweise zur Klasse Helper** <br/> Im Klassendiagramm sind keine
 Rückgabetypen für die statischen Attribute angegeben. Gib für jedes Attribut den
@@ -221,12 +253,56 @@ public class Task2 {
 
 ## Aufgabe Streams
 
-import Streams from '@site/static/img/exams/java-2/streams.png';
-
 ### Klassendiagramm
 
-<img src={Streams} />
-<br/>
+```mermaid
+classDiagram
+  direction LR
+
+  ConnectionType -- Phone
+  Phone -- Data
+  Phone -- Brand
+  Phone -- PhoneStore
+
+  class ConnectionType {
+    <<enummeration>>
+    TYPC
+    THUNDERBOLT
+    MICRO
+    +isModern() boolean
+  }
+
+  class Phone {
+    <<record>>
+    +brand Brand
+    +connectionType ConnectionType
+    +cameras int
+    +batterySize int
+    +cpuPower int
+    +price double
+  }
+
+  class Data {
+    +gePhones()$ ArrayList~Phone~
+  }
+
+  class Brand {
+    <<enummeration>>
+    APPLE
+    SAMSUNG
+    HUAWEI
+  }
+
+  class PhoneStore {
+    -phones ArrayList~Phone~
+    +PhoneStore(phones: ArrayList~Phone~)
+    +q1() Phone~Car~
+    +q2() OptionalDouble
+    +q3(maxPrice: double) List~Phone~
+    +q4() Map~String&#44&#160Phone~
+    +q5() Map~String&#44&#160List~Phone~~
+  }
+```
 
 ```java
 public class PhoneStore {
@@ -309,7 +385,13 @@ public class PhoneStore {
 
 #### Aufgabe Array
 
-<img style={{height: '200px'}} src='/java-docs/img/array_task.png'/> <br/>
+```mermaid
+classDiagram
+  class ExamTask {
+    +main(args: String[])$ void
+    +split(numbers: int[], index: int)$ void
+  }
+```
 
 ** Hinweise zur Methode split ** <br/> Die Methode split soll ein Array vom Typ
 int so verarbeiten, dass ein neues Array erstellt wird, was alle Elemente des
@@ -327,7 +409,26 @@ erstellten Arrays aus.
 
 #### Aufgabe Exception
 
-<img style={{height: '200px'}} src='/java-docs/img/exception_task.png'/> <br/>
+```mermaid
+classDiagram
+  direction LR
+
+  Barrel -- OverflowException
+
+  class Barrel {
+    -capacity int
+    -fluidLevel int
+    +Barrel(capacity: int)
+    +addFluid(value: int) void
+  }
+
+  class OverflowException {
+    <<Exception>>
+    -higherThanCapacity int &lcub; final &rcub;
+    +OverflowException(higherThanCapacity: int)
+    +getHigherThanCapacity() int
+  }
+```
 
 ** Hinweise zur Klasse OverflowException **
 
@@ -356,7 +457,48 @@ wäre um 1 zu viel befüllt worden."
 
 #### Aufgabe abstrakte Klasse, Enum
 
-<img style={{height: '200px'}} src='/java-docs/img/class_task.png'/> <br/>
+```mermaid
+classDiagram
+
+  EnergySource --o Phone
+  CablePhone --> Phone
+  SmartPhone --> Phone
+
+  class EnergySource {
+    <<enumeration>>
+    BATTERY('B')
+    POWER_PLUG('P')
+    -type char
+    EnergySource(type: char)
+    +getType() char
+    +canBeUsedEverywhere() boolean
+  }
+
+  class Phone {
+    <<abstract>>
+    #energySource EnergySource &lcub; final &rcub;
+    +Phone(energySource: EnergySource)
+    +readyForUse()* boolean
+  }
+
+  class CablePhone {
+    -pluggedIn boolean
+    -poweredOn boolean
+    +CablePhone(energySource: EnergySource, pluggedIn: boolean, poweredOn: boolean)
+    +readyForUse(): boolean
+  }
+
+  class SmartPhone {
+    -MINIMUM_POWER int$
+    -power int
+    +SmartPhone(energySource: EnergySource, power: int)
+    +readyForUse(): boolean
+  }
+
+  class ExamTask04 {
+    +main(args: String[])$ void
+  }
+```
 
 ** Hinweise zur Klasse EnergySource **
 
@@ -379,6 +521,7 @@ wäre um 1 zu viel befüllt worden."
 
 ** Hinweise zur Klasse SmartPhone **
 
+- Die minimale Energie soll 200 betragen.
 - Der Konstruktor soll alle Attribute initialisieren.
 - Die Methode readyForUse soll true zurückgeben, wenn die Energie des
   Smartphones die minimal erforderliche Energie überschreitet.
@@ -391,7 +534,35 @@ Telefone. Gib die Anzahl in der Konsole aus.
 
 #### Aufgabe Comparator
 
-<img style={{height: '200px'}} src='/java-docs/img/comparator_task.png'/> <br/>
+```mermaid
+classDiagram
+  direction LR
+
+  Comparator~Car~ <.. ConstructionYearComparator
+  CarVendor --  ConstructionYearComparator
+  CarVendor o--  Car
+
+  class Comparator~Car~ {
+    <<interface>>
+    +compare(c1: Car, c2: Car) int
+  }
+
+  class ConstructionYearComparator {
+    +compare(c1: Car, c2: Car) int
+  }
+
+  class CarVendor {
+    -cars ArrayList~Car~
+    +CarVendor()
+    +sortByConstructionYear() void
+    +print() void
+  }
+
+  class Car {
+    <<interface>>
+    +getConstructionYear() int
+  }
+```
 
 ** Hinweise zur Klasse CarVendor **
 
