@@ -7,13 +7,17 @@ tags: []
 
 ## Hinweise zur Klausur
 
-- Die in dieser Klausur verwendeten Personenbezeichnungen beziehen sich – sofern nicht anders kenntlich gemacht – auf alle Geschlechter
-- Es kann davon ausgegangen werden, dass sämtliche Klassen entsprechende Implementierungen
-  der Object-Methoden besitzen
-- Der Stereotyp `<<enumeration>>` impliziert, dass die Aufzählung einen passenden, privaten Konstruktor sowie gegebenenfalls passende Getter für alle Attribute besitzt
+- Die in dieser Klausur verwendeten Personenbezeichnungen beziehen sich – sofern
+  nicht anders kenntlich gemacht – auf alle Geschlechter
+- Es kann davon ausgegangen werden, dass sämtliche Klassen entsprechende
+  Implementierungen der Object-Methoden besitzen
+- Der Stereotyp `<<enumeration>>` impliziert, dass die Aufzählung einen
+  passenden, privaten Konstruktor sowie gegebenenfalls passende Getter für alle
+  Attribute besitzt
 - Pakete und Klassenimporte müssen nicht angegeben werden
 - Für die Konsolenausgabe kann das Kürzel _sysout_ verwendet werden
-- Methoden- und Attributsbezeichner dürfen sinnvoll gekürzt geschrieben werden (Beispiel _getLWMCP()_ statt _getLectureWithMostCreditPoints()_)
+- Methoden- und Attributsbezeichner dürfen sinnvoll gekürzt geschrieben werden
+  (Beispiel _getLWMCP()_ statt _getLectureWithMostCreditPoints()_)
 
 ## Aufgabe 1 (20 Punkte)
 
