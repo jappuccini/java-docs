@@ -69,6 +69,7 @@ classDiagram
   aufsteigend nach Preis zurückgeben, die den eingehenden Höchstpreis nicht
   überschreiten, einen modernen Anschlusstyp haben und weniger als 2,4 GHz
   Leistung besitzen
-- Die Methode `Map<Phone, String> query4()` soll jedes Smartphone mit der zusammengesetzten Zeichenkette aus Marke und Anschlusstyp zurückgeben
+- Die Methode `Map<Phone, String> query4()` soll jedes Smartphone mit der
+  zusammengesetzten Zeichenkette aus Marke und Anschlusstyp zurückgeben
 - Die Methode `Map<ConnectionType, Phone> query4()` soll alle Smartphones
   gruppiert nach dem Anschlusstyp zurückgeben
