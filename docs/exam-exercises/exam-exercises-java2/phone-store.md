@@ -59,7 +59,7 @@ classDiagram
 ## Hinweise zur Klasse PhoneStore
 
 - Die Methode `List<Phone> query1()` soll die drei leistungsstärksten
-  Smartphones mit 3 Kameras der Marke Huawei, absteigend nach dem Preis,
+  Smartphones mit 3 Kameras der Marke Huawei absteigend nach dem Preis
   zurückgeben
 - Die Methode `OptionalDouble query2()` soll die durchschnittliche Anzahl
   Kameras aller Smartphones zurückgeben, die eine Akkukapazität von 2500 mAh
