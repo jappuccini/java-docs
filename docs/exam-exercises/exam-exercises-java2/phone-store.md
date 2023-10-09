@@ -42,7 +42,7 @@ classDiagram
     }
 
     class DataProvider {
-        +getPhones() List~Phone~
+        +getPhones()$ List~Phone~
     }
 
     class PhoneStore {
