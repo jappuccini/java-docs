@@ -340,7 +340,7 @@ classDiagram
 ```java title="SingleQueries" showLineNumbers
 public record SingleQueries(List<Single> singles) { // 1
 
-  private void a() { // 0,5
+  public void a() { // 0,5
     Map<Country, List<Single>> tmp = singles.stream() // 1
       .filter(a -> a.salesInMillions() > 25) // 0,5
       .collect(Collectors.groupingBy(a -> a.artist().country())); // 1
@@ -349,7 +349,7 @@ public record SingleQueries(List<Single> singles) { // 1
     }
   }
 
-  private void b() { // 0,5
+  public void b() { // 0,5
     OptionalDouble tmp = singles.stream() // 1
       .map(a -> a.artist()) // 0,5
       .distinct() // 0,5
@@ -360,13 +360,13 @@ public record SingleQueries(List<Single> singles) { // 1
     tmp.ifPresentOrElse(System.out::println, () -> System.out.println(-1)); // 1
   }
 
-  private boolean c() { // 0,5
+  public boolean c() { // 0,5
     return singles.stream() // 1
       .anyMatch(a -> a.salesInMillions() > 10 // 0,5
         && a.artist().country().equals(Country.CHN)); // 1
   }
 
-  private List<String> d() { // 0,5
+  public List<String> d() { // 0,5
     return singles.stream() // 1
       .filter(a -> a.publishingYear().compareTo("2000") > 0) // 1
       .sorted((a1, a2) -> Integer.valueOf(a2.salesInMillions()).compareTo(a1.salesInMillions())) // 1
@@ -375,7 +375,7 @@ public record SingleQueries(List<Single> singles) { // 1
       .toList(); // 0,5
   }
 
-  private List<Single> e() { // 0,5
+  public List<Single> e() { // 0,5
     return singles.stream() // 1
       .filter(a -> a.artist().equals(
         new Artist("Ed Sheeran", Country.GBR, LocalDate.of(1991, 2, 17), true))) // 1
