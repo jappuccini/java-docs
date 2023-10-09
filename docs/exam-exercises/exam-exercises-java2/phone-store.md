@@ -33,6 +33,7 @@ classDiagram
 
     class Phone {
         <<record>>
+        -description String
         -brand Brand
         -conncetionType ConnectionType
         -numberOfCameras int
@@ -42,7 +43,7 @@ classDiagram
     }
 
     class DataProvider {
-        +getPhones() List~Phone~
+        +getPhones()$ List~Phone~
     }
 
     class PhoneStore {
@@ -51,7 +52,7 @@ classDiagram
         +query1() List~Phone~
         +query2() OptionalDouble
         +query3(maxPriceInEuro double) List~Phone~
-        +query4() Map~String&#44&#160Phone~
+        +query4() Map~Phone&#44&#160String~
         +query5() Map~ConnectionTyp&#44&#160List~Phone~~
     }
 ```
@@ -59,7 +60,7 @@ classDiagram
 ## Hinweise zur Klasse PhoneStore
 
 - Die Methode `List<Phone> query1()` soll die drei leistungsstärksten
-  Smartphones mit 3 Kameras der Marke Huawei, absteigend nach dem Preis,
+  Smartphones mit 3 Kameras der Marke Huawei absteigend nach dem Preis
   zurückgeben
 - Die Methode `OptionalDouble query2()` soll die durchschnittliche Anzahl
   Kameras aller Smartphones zurückgeben, die eine Akkukapazität von 2500 mAh
@@ -68,7 +69,7 @@ classDiagram
   aufsteigend nach Preis zurückgeben, die den eingehenden Höchstpreis nicht
   überschreiten, einen modernen Anschlusstyp haben und weniger als 2,4 GHz
   Leistung besitzen
-- Die Methode `Map<String, Phone> query4()` soll alle Smartphones gruppiert nach
-  der zusammengesetzten Zeichenkette aus Marke und Anschlusstyp zurückgeben
+- Die Methode `Map<Phone, String> query4()` soll jedes Smartphone mit der
+  zusammengesetzten Zeichenkette aus Marke und Anschlusstyp zurückgeben
 - Die Methode `Map<ConnectionType, Phone> query4()` soll alle Smartphones
   gruppiert nach dem Anschlusstyp zurückgeben

@@ -32,7 +32,7 @@ classDiagram
     }
 
     class DataProvider {
-        +getConsoles() List~Console~
+        +getConsoles()$ List~Console~
     }
 
     class Queries {

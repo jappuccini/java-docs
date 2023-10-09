@@ -45,7 +45,7 @@ classDiagram
     }
 
     class DataProvider {
-        +getFootballers() List~Footballer~
+        +getFootballers()$ List~Footballer~
     }
 
     class Queries {
