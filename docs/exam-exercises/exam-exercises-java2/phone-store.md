@@ -33,6 +33,7 @@ classDiagram
 
     class Phone {
         <<record>>
+        -description String
         -brand Brand
         -conncetionType ConnectionType
         -numberOfCameras int
