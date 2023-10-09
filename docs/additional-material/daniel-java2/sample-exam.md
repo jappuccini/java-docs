@@ -223,7 +223,7 @@ classDiagram
 ### Musterlösung
 
 ```java title="SuperLeage.java" showLineNumbers
-public record SuperLeague<T extends SuperHuman
+public record SuperLeague<T extends SuperHuman>
   (String name, Universe universe, Map<T, Boolean> members) { // 1
 
   public Optional<T> getMostPowerfulSuperHuman() { // 0,5
@@ -372,14 +372,14 @@ public record SingleQueries(List<Single> singles) { // 1
       .sorted((a1, a2) -> Integer.valueOf(a2.salesInMillions()).compareTo(a1.salesInMillions())) // 1
       .map(a -> a.name() + ": " + a.artist().name() + ", " + a.salesInMillions() + " Millionen") // 1
       .limit(3) // 0,5
-      .collect(Collectors.toList()); // 0,5
+      .toList(); // 0,5
   }
 
   private List<Single> e() { // 0,5
     return singles.stream() // 1
       .filter(a -> a.artist().equals(
         new Artist("Ed Sheeran", Country.GBR, LocalDate.of(1991, 2, 17), true))) // 1
-      .collect(Collectors.toList()); // 0,5
+      .toList(); // 0,5
   }
 
 }
