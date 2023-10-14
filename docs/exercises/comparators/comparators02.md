@@ -15,14 +15,15 @@ import Exercise from '@site/src/components/Exercise';
 
 ```mermaid
 classDiagram
-    Comparator~T~ <|.. CoordinateByDistanceToOriginPointComparator
+    Comparator~Coordinate~ <|.. CoordinateByDistanceToOriginPointComparator
 
     class CoordinateByDistanceToOriginPointComparator {
         +compareTo(coordinate1 Coordinate, coordinate2 Coordinate) int
     }
 
-    class Comparator~T~ {
-        +compare(t1 T, t2 T) int
+    class Comparator~Coordinate~ {
+        <<interface>>
+        +compare(o1 Coordinate, o2 Coordinate) int
     }
 ```
 

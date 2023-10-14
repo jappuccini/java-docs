@@ -3,8 +3,8 @@ title: UnitTests02
 description: ''
 ---
 
-Erstelle die Klasse `RentalTest` und erweitere die Klasse `Rental` aus
-Übungsaufgabe [Exceptions01](../exceptions/exceptions01.md) anhand des
+Erstelle die JUnit5-Testklasse `RentalTest` und erweitere die Klasse `Rental`
+aus Übungsaufgabe [Exceptions01](../exceptions/exceptions01.md) anhand des
 abgebildeten Klassendiagramms.
 
 ## Klassendiagramm

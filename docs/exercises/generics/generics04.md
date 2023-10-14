@@ -15,9 +15,9 @@ import Exercise from '@site/src/components/Exercise';
 ```mermaid
 classDiagram
     Tournament o-- Club
-    Tournament o-- Pair~T~
+    Tournament o-- Pair~Club~
 
-    class Pair~T~ {
+    class Pair~Club~ {
         <<record>>
         -partA T
         -partB T
@@ -35,7 +35,7 @@ classDiagram
     class Club {
         <<record>>
         -name String
-        -marketValueInMillions int
+        -marketValueInMillionEuros int
     }
 ```
 
@@ -49,12 +49,12 @@ classDiagram
 ## Konsolenausgabe
 
 ```console
-Pair[partA=Club[name=SC Freiburg, marketValueInMillions=165], partB=Club[name=Bayern Muenchen, marketValueInMillions=926]]
-Pair[partA=Club[name=SC Freiburg, marketValueInMillions=165], partB=Club[name=Borussia Dortmund, marketValueInMillions=462]]
-Pair[partA=Club[name=Bayern Muenchen, marketValueInMillions=926], partB=Club[name=SC Freiburg, marketValueInMillions=165]]
-Pair[partA=Club[name=Bayern Muenchen, marketValueInMillions=926], partB=Club[name=Borussia Dortmund, marketValueInMillions=462]]
-Pair[partA=Club[name=Borussia Dortmund, marketValueInMillions=462], partB=Club[name=SC Freiburg, marketValueInMillions=165]]
-Pair[partA=Club[name=Borussia Dortmund, marketValueInMillions=462], partB=Club[name=Bayern Muenchen, marketValueInMillions=926]]
+SC Freiburg - Bayern Muenchen
+SC Freiburg - Borussia Dortmund
+Bayern Muenchen - SC Freiburg
+Bayern Muenchen - Borussia Dortmund
+Borussia Dortmund - SC Freiburg
+Borussia Dortmund - Bayern Muenchen
 ```
 
 <Exercise pullRequest="65" branchSuffix="generics/04" />

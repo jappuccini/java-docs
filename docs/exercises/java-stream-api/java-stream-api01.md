@@ -36,8 +36,8 @@ classDiagram
     }
 
     class Queries {
+        <<record>>
         -consoles List~Console~
-        +Queries(consoles List~Console~)
         +getAllCurrentConsoleNames() List~String~
         +getAllConsolesSortedByLifespan() List~Console~
         +isAnyConsoleWithMoreThan150MillionSoldUnits() boolean

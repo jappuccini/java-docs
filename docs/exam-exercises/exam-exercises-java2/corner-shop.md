@@ -14,7 +14,7 @@ ausführbare Klasse und/oder eine Testklasse.
 classDiagram
     Product <|-- Goods
     CornerShop o-- Goods
-    Comparable~T~ <|.. Goods
+    Comparable~Goods~ <|.. Goods
     Goods o-- ClassOfGoods
 
     class Product {
@@ -32,9 +32,9 @@ classDiagram
         +compareTo(other Goods) int
     }
 
-    class Comparable~T~ {
+    class Comparable~Goods~ {
         <<interface>>
-        +compareTo(t T) int
+        +compareTo(o Goods) int
     }
 
     class CornerShop {

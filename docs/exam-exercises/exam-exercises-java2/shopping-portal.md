@@ -16,7 +16,7 @@ classDiagram
     ShoppingCart *-- Item
 
     class ShoppingCart~T extends Sellable~ {
-        -items ArrayList~Item~
+        -items List~Item~
         +ShoppingCart()
         +addItem(sellable T, amount int) void
         +removeItem(sellable T) void

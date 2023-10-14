@@ -23,7 +23,7 @@ tags: []
 | `Object`      | `equals(object: Object)`                                            |          | `boolean`    |
 | `Object`      | `hashCode()`                                                        |          | `int`        |
 | `Object`      | `toString()`                                                        |          | `String`     |
-| `PrintStream` | print-Methoden, println-Methoden                                    |          | `void`       |
+| `PrintStream` | `print(obj: Object)`, `println()`, `println(x: Object)`             |          | `void`       |
 | `Random`      | `nextInt(bound: int)`                                               |          | `int`        |
 | `Scanner`     | `hasNextLine()`                                                     |          | `boolean`    |
 | `Scanner`     | `next()`                                                            |          | `String`     |
@@ -39,17 +39,17 @@ tags: []
 
 ## Java Collections Framework
 
-| Klasse         | Methode                                 | Statisch | Rückgabetyp |
-| -------------- | --------------------------------------- | -------- | ----------- |
-| `ArrayList<E>` | `add(e: E)`                             |          | `boolean`   |
-| `ArrayList<E>` | `add(index: int, element: E)`           |          | `void`      |
-| `ArrayList<E>` | `contains(o: Object)`                   |          | `boolean`   |
-| `ArrayList<E>` | `get(index: int)`                       |          | `E`         |
-| `ArrayList<E>` | `remove(index: int)`                    |          | `E`         |
-| `ArrayList<E>` | `remove(o: Object)`                     |          | `boolean`   |
-| `ArrayList<E>` | `size()`                                |          | `int`       |
-| `Collections`  | `sort(list: List<T>, c: Comparator<T>)` | X        | `void`      |
-| `List<E>`      | `of(elements: E...)`                    | X        | `List<E>`   |
+| Klasse         | Methode                                                       | Statisch | Rückgabetyp |
+| -------------- | ------------------------------------------------------------- | -------- | ----------- |
+| `ArrayList<E>` | `add(e: E)`                                                   |          | `boolean`   |
+| `ArrayList<E>` | `add(index: int, element: E)`                                 |          | `void`      |
+| `ArrayList<E>` | `contains(o: Object)`                                         |          | `boolean`   |
+| `ArrayList<E>` | `get(index: int)`                                             |          | `E`         |
+| `ArrayList<E>` | `remove(index: int)`                                          |          | `E`         |
+| `ArrayList<E>` | `remove(o: Object)`                                           |          | `boolean`   |
+| `ArrayList<E>` | `size()`                                                      |          | `int`       |
+| `Collections`  | `sort(list: List<T>`, `sort(list: List<T>, c: Comparator<T>)` | X        | `void`      |
+| `List<E>`      | `of(elements: E...)`                                          | X        | `List<E>`   |
 
 ## Funktionale Schnittstellen
 

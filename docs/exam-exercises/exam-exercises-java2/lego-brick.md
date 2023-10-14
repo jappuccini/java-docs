@@ -14,7 +14,7 @@ classDiagram
     Lego <|-- LegoBrick
     LegoBrick <|-- LegoBrick2x2x2
     LegoBrick <|-- LegoBrick4x2x1
-    Comparator~T~ <|.. LegoBrickVolumeComparator
+    Comparator~LegoBrick~ <|.. LegoBrickVolumeComparator
 
     class Lego {
         <<abstract>>
@@ -37,9 +37,9 @@ classDiagram
         +LegoBrick4x2x1(id int, color String)
     }
 
-    class Comparator~T~ {
+    class Comparator~LegoBrick~ {
         <<interface>>
-        +compare(o1 T, o2 T) int
+        +compare(o1 LegoBrick, o2 LegoBrick) int
     }
 
     class LegoBrickVolumeComparator {

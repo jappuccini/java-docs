@@ -37,7 +37,7 @@ tags: []
 | `OptionalDouble` | `isPresent()`                                                       |          | `boolean`        |
 | `OptionalDouble` | `of(value: double)`                                                 | X        | `OptionalDouble` |
 | `OptionalDouble` | `orElse(other: double)`                                             |          | `double`         |
-| `PrintStream`    | print-Methoden, println-Methoden                                    |          | `void`           |
+| `PrintStream`    | `print(obj: Object)`, `println()`, `println(x: Object)`             |          | `void`           |
 | `Random`         | `nextInt(bound: int)`                                               |          | `int`            |
 | `Scanner`        | `hasNextLine()`                                                     |          | `boolean`        |
 | `Scanner`        | `next()`                                                            |          | `String`         |
@@ -53,27 +53,27 @@ tags: []
 
 ## Java Collections Framework
 
-| Klasse          | Methode                                                    | Statisch | Rückgabetyp        |
-| --------------- | ---------------------------------------------------------- | -------- | ------------------ |
-| `ArrayList<E>`  | `add(e: E)`                                                |          | `boolean`          |
-| `ArrayList<E>`  | `add(index: int, element: E)`                              |          | `void`             |
-| `ArrayList<E>`  | `contains(o: Object)`                                      |          | `boolean`          |
-| `ArrayList<E>`  | `forEach(action: Consumer<T>)`                             |          | `void`             |
-| `ArrayList<E>`  | `get(index: int)`                                          |          | `E`                |
-| `ArrayList<E>`  | `remove(index: int)`                                       |          | `E`                |
-| `ArrayList<E>`  | `remove(o: Object)`                                        |          | `boolean`          |
-| `ArrayList<E>`  | `size()`                                                   |          | `int`              |
-| `Collections`   | `sort(list: List<T>, c: Comparator<T>)`                    | X        | `void`             |
-| `Entry<K, V>`   | `getKey()`                                                 |          | `K`                |
-| `Entry<K, V>`   | `getValue()`                                               |          | `V`                |
-| `HashMap<K, V>` | `containsKey(key: Object)`, `containsValue(value: Object)` |          | `boolean`          |
-| `HashMap<K, V>` | `entrySet()`                                               |          | `Set<Entry<K, V>>` |
-| `HashMap<K, V>` | `forEach(action: BiConsumer<K, V>)`                        |          | `void`             |
-| `HashMap<K, V>` | `get(key: Object)`                                         |          | `V`                |
-| `HashMap<K, V>` | `keySet()`                                                 |          | `Set<K>`           |
-| `HashMap<K, V>` | `put(key: K, value: V)`                                    |          | `V`                |
-| `HashMap<K, V>` | `values()`                                                 |          | `Collection<V>`    |
-| `List<E>`       | `of(elements: E...)`                                       | X        | `List<E>`          |
+| Klasse          | Methode                                                        | Statisch | Rückgabetyp        |
+| --------------- | -------------------------------------------------------------- | -------- | ------------------ |
+| `ArrayList<E>`  | `add(e: E)`                                                    |          | `boolean`          |
+| `ArrayList<E>`  | `add(index: int, element: E)`                                  |          | `void`             |
+| `ArrayList<E>`  | `contains(o: Object)`                                          |          | `boolean`          |
+| `ArrayList<E>`  | `forEach(action: Consumer<T>)`                                 |          | `void`             |
+| `ArrayList<E>`  | `get(index: int)`                                              |          | `E`                |
+| `ArrayList<E>`  | `remove(index: int)`                                           |          | `E`                |
+| `ArrayList<E>`  | `remove(o: Object)`                                            |          | `boolean`          |
+| `ArrayList<E>`  | `size()`                                                       |          | `int`              |
+| `Collections`   | `sort(list: List<T>)`, `sort(list: List<T>, c: Comparator<T>)` | X        | `void`             |
+| `Entry<K, V>`   | `getKey()`                                                     |          | `K`                |
+| `Entry<K, V>`   | `getValue()`                                                   |          | `V`                |
+| `HashMap<K, V>` | `containsKey(key: Object)`, `containsValue(value: Object)`     |          | `boolean`          |
+| `HashMap<K, V>` | `entrySet()`                                                   |          | `Set<Entry<K, V>>` |
+| `HashMap<K, V>` | `forEach(action: BiConsumer<K, V>)`                            |          | `void`             |
+| `HashMap<K, V>` | `get(key: Object)`                                             |          | `V`                |
+| `HashMap<K, V>` | `keySet()`                                                     |          | `Set<K>`           |
+| `HashMap<K, V>` | `put(key: K, value: V)`                                        |          | `V`                |
+| `HashMap<K, V>` | `values()`                                                     |          | `Collection<V>`    |
+| `List<E>`       | `of(elements: E...)`                                           | X        | `List<E>`          |
 
 ## Funktionale Schnittstellen
 
@@ -94,9 +94,8 @@ tags: []
 
 | Klasse         | Methode                                                                                                        | Statisch | Rückgabetyp                        |
 | -------------- | -------------------------------------------------------------------------------------------------------------- | -------- | ---------------------------------- |
-| `Collectors`   | `toList()`                                                                                                     | X        | `Collector<T, ?, List<T>>`         |
-| `Collectors`   | `toMap(keyMapper: Function<T, K>, valueMapper: Function<T, U>)`                                                | X        | `Collector<T, ?, Map<K, U>`        |
 | `Collectors`   | `groupingBy(classifier: Function<T, K>)`                                                                       | X        | `Collector<T, ?, Map<K, List<T>>>` |
+| `Collectors`   | `toMap(keyMapper: Function<T, K>, valueMapper: Function<T, U>)`                                                | X        | `Collector<T, ?, Map<K, U>`        |
 | `DoubleStream` | `average()`                                                                                                    |          | `OptionalDouble`                   |
 | `DoubleStream` | `sum()`                                                                                                        |          | `double`                           |
 | `IntStream`    | `average()`                                                                                                    |          | `OptionalDouble`                   |
@@ -106,13 +105,13 @@ tags: []
 | `Stream<T>`    | `count()`                                                                                                      |          | `long`                             |
 | `Stream<T>`    | `distinct()`                                                                                                   |          | `Stream<T>`                        |
 | `Stream<T>`    | `filter(predicate: Predicate<T>)`                                                                              |          | `Stream<T>`                        |
-| `Stream<T>`    | `findAny(), findFirst()`                                                                                       |          | `Optional<T>`                      |
+| `Stream<T>`    | `findAny()`, `findFirst()`                                                                                     |          | `Optional<T>`                      |
 | `Stream<T>`    | `forEach(action: Consumer<T>)`                                                                                 |          | `void`                             |
 | `Stream<T>`    | `limit(maxSize: long)`                                                                                         |          | `Stream<T>`                        |
 | `Stream<T>`    | `map(mapper: Function<T, R>)`                                                                                  |          | `Stream<R>`                        |
 | `Stream<T>`    | `mapToDouble(mapper: ToDoubleFunction<T, R>)`                                                                  |          | `DoubleStream`                     |
 | `Stream<T>`    | `mapToInt(mapper: ToIntFunction<T, R>)`                                                                        |          | `IntStream`                        |
-| `Stream<T>`    | `max(comparator: Comparator<T>), min(comparator: Comparator<T>)`                                               |          | `Optional<T>`                      |
+| `Stream<T>`    | `max(comparator: Comparator<T>)`, `min(comparator: Comparator<T>)`                                             |          | `Optional<T>`                      |
 | `Stream<T>`    | `skip(n: long)`                                                                                                |          | `Stream<T>`                        |
 | `Stream<T>`    | `sorted()`, `sorted(comparator: Comparator<T>)`                                                                |          | `Stream<T>`                        |
 | `Stream<T>`    | `toList()`                                                                                                     |          | `List<T>`                          |

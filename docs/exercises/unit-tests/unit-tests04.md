@@ -3,7 +3,7 @@ title: UnitTests04
 description: ''
 ---
 
-Erstelle die Klasse `BookCollectionTest` anhand des abgebildeten
+Erstelle die JUnit5-Testklasse `BookCollectionTest` anhand des abgebildeten
 Klassendiagramms.
 
 ## Klassendiagramm

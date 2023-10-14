@@ -12,7 +12,7 @@ ausführbare Klasse und/oder eine Testklasse.
 
 ```mermaid
 classDiagram
-    Comparable~T~ <|.. Word
+    Comparable~Word~ <|.. Word
     Word o-- Language
     Dictionary o-- Word
     Dictionary o-- Language
@@ -24,9 +24,9 @@ classDiagram
         +compareTo(other Word) int
     }
 
-    class Comparable~T~ {
+    class Comparable~Word~ {
         <<interface>>
-        +compareTo(t T) int
+        +compareTo(o Word) int
     }
 
     class Language {

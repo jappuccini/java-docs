@@ -13,7 +13,7 @@ import Exercise from '@site/src/components/Exercise';
 
 ```mermaid
 classDiagram
-    Comparable~T~ <|.. Coordinate
+    Comparable~Coordinate~ <|.. Coordinate
 
     class Coordinate {
         -x int
@@ -25,8 +25,9 @@ classDiagram
         +compareTo(other Coordinate) int
     }
 
-    class Comparable~T~ {
-        +compareTo(t T) int
+    class Comparable~Coordinate~ {
+        <<interface>>
+        +compareTo(o Coordinate) int
     }
 ```
 

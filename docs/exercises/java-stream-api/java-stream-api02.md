@@ -49,8 +49,8 @@ classDiagram
     }
 
     class Queries {
+        <<record>>
         -footballers List~Footballer~
-        +Queries(footballers List~Footballer~)
         +getTotalOfAllGoalsByMidfielders() int
         +getNameOfVfLWolfsburgFootballerWithMostPlayedGames() Optional~Footballer~
         +getNamesOfAllFootballClubs() List~FootballClub~

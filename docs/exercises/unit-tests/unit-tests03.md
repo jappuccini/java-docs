@@ -3,7 +3,7 @@ title: UnitTests03
 description: ''
 ---
 
-Erstelle die Klasse `TelephoneBookTest` anhand des abgebildeten
+Erstelle die JUnit5-Testklasse `TelephoneBookTest` anhand des abgebildeten
 Klassendiagramms.
 
 ## Klassendiagramm

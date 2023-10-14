@@ -48,10 +48,20 @@ classDiagram
 ## Konsolenausgabe
 
 ```console
-Pair[partA=Pupil[name=Jennifer, gender=w], partB=Pupil[name=Franziska, gender=w]]
-Pair[partA=Pupil[name=Fritz, gender=m], partB=Pupil[name=Lisa, gender=w]]
-Pair[partA=Pupil[name=Max, gender=m], partB=Pupil[name=Hans, gender=m]]
-Pair[partA=Pupil[name=Peter, gender=m], partB=null]
+Schüler:
+Franziska
+Fritz
+Hans
+Jennifer
+Lisa
+Max
+Peter
+
+Paare:
+Jennifer - Franziska
+Fritz - Lisa
+Max - Hans
+Peter - null
 ```
 
 <Exercise pullRequest="64" branchSuffix="generics/03" />
