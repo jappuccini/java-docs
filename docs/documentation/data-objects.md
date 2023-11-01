@@ -7,14 +7,14 @@ tags: [data-objects]
 
 Ein Datenobjekt ist ein Platzhalter, der zur Laufzeit eine bestimmte Stelle des
 Arbeitsspeichers belegt. Die Größe des reservierten Speichers ist abhängig vom
-gewählten [Datentyp](data-types)). Datenobjekte können mit Werten belegt
-werden, Bezeichner ermöglichen das Ansprechen im Programmablauf. Man
-unterscheidet zwischen variablen Datenobjekten (_Variablen_) und fixen
-Datenobjekten (_Konstanten_ und _Literale_). Konstanten sind fixe Datenobjekte,
-die über einen Bezeichner angesprochen werden können. Sie werden mit dem
-Schlüsselwort `final` deklariert. Literale sind sogenannte wörtliche Konstanten,
-d.h. fixe Datenobjekte ohne Bezeichner. Da Literale über keinen Bezeichner
-verfügen, können Sie im Programm nicht angesprochen werden.
+gewählten [Datentyp](data-types)). Datenobjekte können mit Werten belegt werden,
+Bezeichner ermöglichen das Ansprechen im Programmablauf. Man unterscheidet
+zwischen variablen Datenobjekten (_Variablen_) und fixen Datenobjekten
+(_Konstanten_ und _Literale_). Konstanten sind fixe Datenobjekte, die über einen
+Bezeichner angesprochen werden können. Sie werden mit dem Schlüsselwort `final`
+deklariert. Literale sind sogenannte wörtliche Konstanten, d.h. fixe
+Datenobjekte ohne Bezeichner. Da Literale über keinen Bezeichner verfügen,
+können Sie im Programm nicht angesprochen werden.
 
 ```mermaid
 flowchart
