@@ -84,7 +84,7 @@ Operatoren werden gemäß ihrer Priorität verarbeitet.
 | 2         | ++, --, Vorzeichenplus, Vorzeichenminus, \~, !, (_Datentyp_) |
 | 3         | \*, /, %                                                     |
 | 4         | +, -                                                         |
-| 5         | &lt;, &lt;=, &gt;, &gt;=                                               |
+| 5         | &lt;, &lt;=, &gt;, &gt;=                                     |
 | 6         | ==, !=                                                       |
 | 7         | &                                                            |
 | 8         | ^                                                            |
