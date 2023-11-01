@@ -72,7 +72,7 @@ public class MainClass {
 ## for-each-Schleifen
 
 Mit Hilfe der for-each-Schleife können Datensammlungen wie z.B.
-[Felder](../arrays.md) und [Listen](../lists.md) elementweise durchlaufen
+[Felder](../arrays) und [Listen](../lists) elementweise durchlaufen
 werden. Allerdings können die Elemente einer Datensammlung nur geändert werden,
 nicht jedoch die Datensammlung selbst.
 

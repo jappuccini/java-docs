@@ -1,14 +1,16 @@
 ---
-title: Polymorphy02
+title: Polymorphy01
 description: ''
 ---
 
 import Exercise from '@site/src/components/Exercise';
 
-- Erstelle die Klasse `Rental` anhand des abgebildeten Klassendiagramms
-- Passe die ausführbare Klasse aus Übungsaufgabe [Polymorphy01](polymorphy01.md)
-  so an, dass alle erzeugten Autos und Lastwagen in einer Fahrzeugvermietung
-  abgelegt und alle Attribute der Fahrzeugvermietung ausgegeben werden
+- Passe die Klasse `Vehicle` aus Übungsaufgabe
+  [Enumerations01](../enumerations/enumerations01) anhand des abgebildeten
+  Klassendiagramms an und erstelle die Klassen `Car` und `Truck`
+- Passe die ausführbare Klasse aus Übungsaufgabe
+  [Enumerations01](../enumerations/enumerations01) so an, dass keine
+  Fahrzeuge, sondern Autos und Lastwagen erzeugt und ausgegeben werden
 
 ## Klassendiagramm
 
@@ -17,7 +19,6 @@ classDiagram
     Vehicle <|-- Car
     Vehicle <|-- Truck
     Vehicle o-- Engine
-    Rental o-- Vehicle
 
     class Vehicle {
         -make String
@@ -62,34 +63,32 @@ classDiagram
         +transform() void
         +print() void
     }
-
-    class Rental {
-        -name String
-        -vehicles ArrayList~Vehicle~
-        +Rental(name String)
-        +addVehicle(vehicle Vehicle) void
-        +addAllVehicles(vehicles Vehicle...) void
-        +print() void
-    }
 ```
 
-## Hinweise zur Klasse Rental
+## Hinweise zur Klasse Car
 
 - Der Konstruktor soll alle Attribute initialisieren
-- Die Methode `void addVehicle(vehicle: Vehicle)` soll der Fahrzeugvermietung
-  ein Fahrzeug hinzufügen
-- Die Methode `void addAllVehicles(vehicles: Vehicle...)` soll der
-  Fahrzeugvermietung mehrere Fahrzeug hinzufügen
+- Die Methode `void doATurboBoost()` soll die Geschwindigkeit verdoppeln
+- Die Methode `void print()` soll alle Attribute auf der Konsole ausgeben
+
+## Hinweise zur Klasse Truck
+
+- Der Konstruktor soll alle Attribute initialisieren
+- Die Methode `void transform()` soll das Attribut isTransformed invertieren
 - Die Methode `void print()` soll alle Attribute auf der Konsole ausgeben
 
 ## Konsolenausgabe
 
 ```console
-Fahrzeugvermietung Müller
-Unsere Fahrzeuge:
+Anzahl Fahrzeuge: 0
+Anzahl Fahrzeuge: 3
 Porsche 911 (Elektro, 2 Sitzplätze)
 MAN TGX (Diesel, 20t)
 Opel Zafira Life (Diesel, 7 Sitzplätze)
+Porsche 911 beschleunigt auf 50 km/h
+MAN TGX verwandelt sich in einen Autobot
+Porsche 911 macht einen TurboBoost und beschleunigt auf 100 km/h
+MAN TGX verwandelt sich in einen Lastwagen zurück
 ```
 
-<Exercise pullRequest="42" branchSuffix="polymorphy/02" />
+<Exercise pullRequest="41" branchSuffix="polymorphy/01" />

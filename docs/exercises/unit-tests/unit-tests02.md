@@ -4,7 +4,7 @@ description: ''
 ---
 
 Erstelle die JUnit5-Testklasse `RentalTest` und erweitere die Klasse `Rental`
-aus Übungsaufgabe [Exceptions01](../exceptions/exceptions01.md) anhand des
+aus Übungsaufgabe [Exceptions01](../exceptions/exceptions01) anhand des
 abgebildeten Klassendiagramms.
 
 ## Klassendiagramm

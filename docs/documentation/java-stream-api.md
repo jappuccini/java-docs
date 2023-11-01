@@ -49,7 +49,7 @@ flowchart TD
 :::note Hinweis
 
 Ströme (Paket `java.util.stream`) haben nichts mit
-[Datenströmen (IO-Streams)](io-streams.md) (Paket `java.io`) zu tun.
+[Datenströmen (IO-Streams)](io-streams) (Paket `java.io`) zu tun.
 
 :::
 

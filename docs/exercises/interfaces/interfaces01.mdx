@@ -1,14 +1,18 @@
 ---
-title: Polymorphy03
+title: Interfaces01
 description: ''
 ---
 
 import Exercise from '@site/src/components/Exercise';
 
-- Passe die Klasse `Rental` aus Übungsaufgabe [Polymorphy02](polymorphy02.md)
-  anhand des abgebildeten Klassendiagramms an
-- Passe die ausführbare Klasse aus Übungsaufgabe [Polymorphy02](polymorphy02.md)
-  so an, dass sich alle Lastwagen der Fahrzeugvermietung in Autobots verwandeln
+- Passe die Klasse `Rental` aus Übungsaufgabe
+  [Abstract and Final 01](../abstract-and-final/abstract-and-final01) anhand
+  des abgebildeten Klassendiagramms an und erstelle die Klasse `TravelAgency`
+  sowie die Schnittstelle `Partner`
+- Passe die ausführbare Klasse aus Übungsaufgabe
+  [Abstract and Final 01](../abstract-and-final/abstract-and-final01)) so an,
+  dass ein Reisebüro erzeugt wird, dass diesem die Autovermietung hinzugefügt
+  wird und dass alle Attribute des Reisebüros ausgegeben werden
 
 ## Klassendiagramm
 
@@ -18,8 +22,11 @@ classDiagram
     Vehicle <|-- Truck
     Vehicle o-- Engine
     Rental o-- Vehicle
+    Partner <|.. Rental
+    TravelAgency o-- Partner
 
     class Vehicle {
+        <<abstract>>
         -make String
         -model String
         -engine Engine
@@ -32,7 +39,7 @@ classDiagram
         +getSpeed() double
         +accelerate(value int) void
         +brake(value int) void
-        +print() void
+        +print()* void
         +getNumberOfVehicles()$ int
     }
 
@@ -72,11 +79,38 @@ classDiagram
         +transformAllTrucks() void
         +print() void
     }
+
+    class Partner {
+        <<interface>>
+        +print() void
+    }
+
+    class TravelAgency {
+        -name String
+        -partners ArrayList~Partner~
+        +TravelAgency(name String)
+        +addPartner(partner Partner) void
+        +print() void
+    }
 ```
 
-## Hinweis zur Klasse Rental
+## Hinweise zur Klasse TravelAgency
 
-Die Methode `void transformAllTrucks()` soll alle Lastwagen in Autobots
-verwandeln.
+- Der Konstruktor soll alle Attribute initialisieren
+- Die Methode `void addPartner(partner: Partner)` soll dem Reisebüro einen
+  Partner hinzufügen
+- Die Methode `void print()` soll alle Attribute auf der Konsole ausgeben
 
-<Exercise pullRequest="43" branchSuffix="polymorphy/03" />
+## Konsolenausgabe
+
+```console
+Reisebüro Schmidt
+Unsere Partner:
+Fahrzeugvermietung Müller
+Unsere Fahrzeuge:
+Porsche 911 (Elektro, 2 Sitzplätze)
+MAN TGX (Diesel, 20t)
+Opel Zafira Life (Diesel, 7 Sitzplätze)
+```
+
+<Exercise pullRequest="46" branchSuffix="interfaces/01" />
