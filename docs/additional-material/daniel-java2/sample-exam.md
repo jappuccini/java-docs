@@ -204,7 +204,7 @@ classDiagram
     }
 ```
 
-### Hinweise zur Klasse SuperLeague<T extends SuperHuman\>
+### Hinweise zur Klasse SuperLeague&lt;T extends SuperHuman&gt;
 
 - Der Assoziativspeicher `members` beinhaltet als Schlüssel alle Übermenschen
   der Liga sowie als Wert deren Verfügbarkeit (verfügbar: `true`, nicht
