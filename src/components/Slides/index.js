@@ -7,7 +7,7 @@ export default function Slides({ children, initSlides, width, height }) {
 
   return (
     <div
-      className="reveal"
+      className="reveal reveal-viewport"
       style={{ width: width ?? '100vw', height: height ?? '100vh' }}
     >
       <div className="slides">{children}</div>
