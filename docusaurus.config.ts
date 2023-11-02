@@ -1,16 +1,17 @@
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
+import type * as Preset from '@docusaurus/preset-classic';
 
-const config = {
+const config: Config = {
   title: 'Programmieren mit Java',
   tagline: '',
+  favicon: 'img/favicon.ico',
   url: 'https://jappuccini.github.io',
   baseUrl: '/java-docs/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'throw',
-  favicon: 'img/favicon.ico',
   organizationName: 'jappuccini',
   projectName: 'java-docs',
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'throw',
   markdown: {
     mermaid: true,
   },
@@ -19,14 +20,13 @@ const config = {
     defaultLocale: 'de',
     locales: ['de'],
   },
-
   presets: [
     [
       '@docusaurus/preset-classic',
       {
         docs: {
           routeBasePath: '/',
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: './sidebars.ts',
           editUrl: 'https://github.com/jappuccini/java-docs/tree/main/',
         },
         blog: false,
@@ -40,7 +40,7 @@ const config = {
             require.resolve('./src/css/custom.css'),
           ],
         },
-      },
+      } satisfies Preset.Options,
     ],
   ],
 
@@ -94,11 +94,11 @@ const config = {
       copyright: `Copyright © ${new Date().getFullYear()} Daniel Appenmaier & Steffen Merk Built with Docusaurus.`,
     },
     prism: {
-      theme: lightCodeTheme,
-      darkTheme: darkCodeTheme,
+      theme: prismThemes.github,
+      darkTheme: prismThemes.dracula,
       additionalLanguages: ['java'],
     },
-  },
+  } satisfies Preset.ThemeConfig,
 };
 
-module.exports = config;
+export default config;

@@ -1,9 +1,8 @@
-import React from 'react';
 import Slides from '../../../components/Slides';
-import { NKR } from '../../../components/Slides/nkr';
 import { defaultInitSlides } from '../../../components/Slides/initSlides';
+import { NKR } from '../../../components/Slides/nkr';
 
-export default function MethodsAndOperators() {
+export default function MethodsAndOperators(): JSX.Element {
   return (
     <Slides initSlides={defaultInitSlides}>
       <section>
