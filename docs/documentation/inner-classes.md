@@ -50,7 +50,7 @@ public class MainClass {
 
 Objekte von Elementklassen sind immer mit einem Objekt der umgebenden Klasse
 verbunden. Dies ermöglicht die Umsetzung von Kompositionen (siehe
-[Klassendiagramme](uml/class-diagrams.md) - Darstellung von Assoziationen). Sie
+[Klassendiagramme](uml/class-diagrams) - Darstellung von Assoziationen). Sie
 haben Zugriff auf alle Variablen und Methoden der sie umgebenden Klasse und
 dürfen keine statischen Elemente enthalten.
 

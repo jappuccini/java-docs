@@ -62,4 +62,4 @@ classDiagram
 ## Hinweis
 
 Verweden die Klasse `TelephoneBook` aus Übungsaufgabe
-[Optionals02](../optionals/optionals02.md).
+[Optionals02](../optionals/optionals02).

@@ -10,5 +10,5 @@ Darstellung von Software-Systemen. UML wurde in den 1990er-Jahren entwickelt und
 ist im ISO/IEC 19505 festgelegt. Die Sprache UML definiert mehrere Diagramme,
 die sich in zwei Hauptgruppen aufteilen lassen: Struktur- und
 Verhaltensdiagramme. Für die Software-Entwicklung sind vor allem das
-[Klassendiagramm](class-diagrams.md) sowie das
-[Aktivitätsdiagramm](activity-diagrams.md) relevant.
+[Klassendiagramm](class-diagrams) sowie das
+[Aktivitätsdiagramm](activity-diagrams) relevant.

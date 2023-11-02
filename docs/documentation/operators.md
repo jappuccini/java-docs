@@ -61,10 +61,10 @@ Vergleichsoperatoren realisiert werden.
 | --------------------- | ---------------------- |
 | x == y                | x ist gleich y         |
 | x != y                | x ist ungleich y       |
-| x \> y                | x ist größer y         |
-| x < y                 | x ist kleiner y        |
-| x \>= y               | x ist größer gleich y  |
-| x <= y                | x ist kleiner gleich y |
+| x &gt; y              | x ist größer y         |
+| x &lt; y              | x ist kleiner y        |
+| x &gt;= y             | x ist größer gleich y  |
+| x &lt;= y             | x ist kleiner gleich y |
 
 :::danger Hinweis
 
@@ -84,7 +84,7 @@ Operatoren werden gemäß ihrer Priorität verarbeitet.
 | 2         | ++, --, Vorzeichenplus, Vorzeichenminus, \~, !, (_Datentyp_) |
 | 3         | \*, /, %                                                     |
 | 4         | +, -                                                         |
-| 5         | <, <=, \>, \>=                                               |
+| 5         | &lt;, &lt;=, &gt;, &gt;=                                     |
 | 6         | ==, !=                                                       |
 | 7         | &                                                            |
 | 8         | ^                                                            |

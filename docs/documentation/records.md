@@ -72,6 +72,6 @@ public record Student(int id, String name) {
 
 Da Records von der Klasse `Record` abgeleitet sind, können sie nicht von einer
 weiteren Klasse abgeleitet werden. Allerdings können Records, wie andere Klassen
-auch, beliebig viele [Schnittstellen](interfaces.md) implementieren.
+auch, beliebig viele [Schnittstellen](interfaces) implementieren.
 
 :::

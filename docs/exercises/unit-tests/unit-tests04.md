@@ -77,4 +77,4 @@ classDiagram
 ## Hinweis
 
 Verweden die Klasse `BookCollection` aus Übungsaufgabe
-[Optionals01](../optionals/optionals01.md).
+[Optionals01](../optionals/optionals01).

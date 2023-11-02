@@ -1,18 +1,16 @@
 ---
-title: Interfaces01
+title: Polymorphy01
 description: ''
 ---
 
 import Exercise from '@site/src/components/Exercise';
 
-- Passe die Klasse `Rental` aus Übungsaufgabe
-  [Abstract and Final 01](../abstract-and-final/abstract-and-final01.md) anhand
-  des abgebildeten Klassendiagramms an und erstelle die Klasse `TravelAgency`
-  sowie die Schnittstelle `Partner`
+- Passe die Klasse `Vehicle` aus Übungsaufgabe
+  [Enumerations01](../enumerations/enumerations01) anhand des abgebildeten
+  Klassendiagramms an und erstelle die Klassen `Car` und `Truck`
 - Passe die ausführbare Klasse aus Übungsaufgabe
-  [Abstract and Final 01](../abstract-and-final/abstract-and-final01.md)) so an,
-  dass ein Reisebüro erzeugt wird, dass diesem die Autovermietung hinzugefügt
-  wird und dass alle Attribute des Reisebüros ausgegeben werden
+  [Enumerations01](../enumerations/enumerations01) so an, dass keine Fahrzeuge,
+  sondern Autos und Lastwagen erzeugt und ausgegeben werden
 
 ## Klassendiagramm
 
@@ -21,12 +19,8 @@ classDiagram
     Vehicle <|-- Car
     Vehicle <|-- Truck
     Vehicle o-- Engine
-    Rental o-- Vehicle
-    Partner <|.. Rental
-    TravelAgency o-- Partner
 
     class Vehicle {
-        <<abstract>>
         -make String
         -model String
         -engine Engine
@@ -39,7 +33,7 @@ classDiagram
         +getSpeed() double
         +accelerate(value int) void
         +brake(value int) void
-        +print()* void
+        +print() void
         +getNumberOfVehicles()$ int
     }
 
@@ -69,48 +63,32 @@ classDiagram
         +transform() void
         +print() void
     }
-
-    class Rental {
-        -name String
-        -vehicles ArrayList~Vehicle~
-        +Rental(name String)
-        +addVehicle(vehicle Vehicle) void
-        +addAllVehicles(vehicles Vehicle...) void
-        +transformAllTrucks() void
-        +print() void
-    }
-
-    class Partner {
-        <<interface>>
-        +print() void
-    }
-
-    class TravelAgency {
-        -name String
-        -partners ArrayList~Partner~
-        +TravelAgency(name String)
-        +addPartner(partner Partner) void
-        +print() void
-    }
 ```
 
-## Hinweise zur Klasse TravelAgency
+## Hinweise zur Klasse Car
 
 - Der Konstruktor soll alle Attribute initialisieren
-- Die Methode `void addPartner(partner: Partner)` soll dem Reisebüro einen
-  Partner hinzufügen
+- Die Methode `void doATurboBoost()` soll die Geschwindigkeit verdoppeln
+- Die Methode `void print()` soll alle Attribute auf der Konsole ausgeben
+
+## Hinweise zur Klasse Truck
+
+- Der Konstruktor soll alle Attribute initialisieren
+- Die Methode `void transform()` soll das Attribut isTransformed invertieren
 - Die Methode `void print()` soll alle Attribute auf der Konsole ausgeben
 
 ## Konsolenausgabe
 
 ```console
-Reisebüro Schmidt
-Unsere Partner:
-Fahrzeugvermietung Müller
-Unsere Fahrzeuge:
+Anzahl Fahrzeuge: 0
+Anzahl Fahrzeuge: 3
 Porsche 911 (Elektro, 2 Sitzplätze)
 MAN TGX (Diesel, 20t)
 Opel Zafira Life (Diesel, 7 Sitzplätze)
+Porsche 911 beschleunigt auf 50 km/h
+MAN TGX verwandelt sich in einen Autobot
+Porsche 911 macht einen TurboBoost und beschleunigt auf 100 km/h
+MAN TGX verwandelt sich in einen Lastwagen zurück
 ```
 
-<Exercise pullRequest="46" branchSuffix="interfaces/01" />
+<Exercise pullRequest="41" branchSuffix="polymorphy/01" />
