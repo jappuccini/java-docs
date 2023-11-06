@@ -16,6 +16,23 @@ jobs:
   deploy-preview:
     runs-on: ubuntu-20.04
     steps:
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"
+      - name: Dump job context
+        env:
+          JOB_CONTEXT: ${{ toJson(job) }}
+        run: echo "$JOB_CONTEXT"
+      - name: Dump steps context
+        env:
+          STEPS_CONTEXT: ${{ toJson(steps) }}
+        run: echo "$STEPS_CONTEXT"
+      - name: Dump runner context
+        env:
+          RUNNER_CONTEXT: ${{ toJson(runner) }}
+        run: echo "$RUNNER_CONTEXT"
+
       - name: checkout repository
         uses: actions/checkout@v2
 
@@ -33,7 +50,16 @@ jobs:
           BASE_URL: /java-docs/pr-preview/pr-${{ github.event.number }}
           URL: https://steffenlm.github.io
 
-      - name: Deploy preview
+      - name: deploy preview
         uses: rossjrw/pr-preview-action@v1
         with:
           source-dir: ./build/
+
+  undeploy-preview:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v2
+
+      - name: Deploy preview
+        uses: rossjrw/pr-preview-action@v1
