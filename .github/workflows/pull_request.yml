@@ -23,3 +23,6 @@ jobs:
 
       - name: check mdx format for docusaurus v3 compatibility
         run: npx docusaurus-mdx-checker
+
+      - name: build website
+        run: npm run build
