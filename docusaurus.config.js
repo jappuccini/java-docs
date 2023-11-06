@@ -4,8 +4,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Programmieren mit Java',
   tagline: '',
-  url: 'https://jappuccini.github.io',
-  baseUrl: '/java-docs/',
+  url: process.env.URL || 'https://jappuccini.github.io',
+  baseUrl: process.env.BASE_URL || '/java-docs/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'throw',
   favicon: 'img/favicon.ico',

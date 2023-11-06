@@ -26,3 +26,6 @@ jobs:
 
       - name: build website
         run: npm run build
+
+      - name: deploy preview
+        run: npm run build
