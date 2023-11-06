@@ -14,6 +14,7 @@ concurrency:
 
 jobs:
   deploy-preview:
+    if: github.event.action != 'closed'
     runs-on: ubuntu-20.04
     steps:
       - name: Dump GitHub context
@@ -56,6 +57,7 @@ jobs:
           source-dir: ./build/
 
   undeploy-preview:
+    if: github.event.action == 'closed'
     runs-on: ubuntu-20.04
     steps:
       - name: checkout repository
