@@ -30,7 +30,7 @@ jobs:
       - name: build website
         run: echo $BASE_URL && npm run build
         env:
-          BASE_URL: /java-docs/preview-${{ github.ref }}
+          BASE_URL: /java-docs/preview-${{ github.event.number }}
 
       - name: Deploy preview
         uses: rossjrw/pr-preview-action@v1
