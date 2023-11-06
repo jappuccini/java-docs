@@ -31,6 +31,7 @@ jobs:
         run: echo $BASE_URL && npm run build
         env:
           BASE_URL: /java-docs/pr-preview/pr-${{ github.event.number }}
+          URL: https://steffenlm.github.io
 
       - name: Deploy preview
         uses: rossjrw/pr-preview-action@v1
