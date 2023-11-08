@@ -1,9 +1,7 @@
-import ScannerError from '@site/static/img/scanner-error.png';
-import React from 'react';
 import Slides from '../../../components/Slides';
 import { defaultInitSlides } from '../../../components/Slides/initSlides';
 
-export default function MethodsAndOperators() {
+export default function MethodsAndOperators(): JSX.Element {
   return (
     <Slides initSlides={defaultInitSlides}>
       <section>
@@ -107,7 +105,9 @@ export default function MethodsAndOperators() {
             ></code>
           </pre>
         </section>
-        <section data-background-image={ScannerError}></section>
+        <section
+          data-background-image={require('@site/static/img/scanner-error.png')}
+        ></section>
       </section>
       <section>
         <section data-background-iframe="https://giphy.com/embed/VZXTThO4dxllIEQKTr"></section>

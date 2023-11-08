@@ -16,7 +16,7 @@ classDiagram
 
     class HumanResources {
         <<record>>
-        +telephoneBook Map~TelephoneNumber&#44&#160Person~
+        +telephoneBook Map~TelephoneNumber&sbquo; Person~
         +staff List~Person~
         +addTelephoneNumber(telephoneNumber TelephoneNumber, person Person) void
         +addStaff(person Person) void

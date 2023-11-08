@@ -21,7 +21,7 @@ classDiagram
     class Library {
         <<record>>
         -name String
-        -books Map~Book&#44&#160Status~
+        -books Map~Book&sbquo; Status~
         +addBook(book Book) void
         +getBookByTitle(title String) Optional~Book~
         +getPaperBooksByStatus(status Status) List~PaperBook~

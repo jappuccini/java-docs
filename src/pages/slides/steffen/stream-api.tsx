@@ -1,10 +1,9 @@
 import Link from '@docusaurus/Link';
-import React from 'react';
 import Slides from '../../../components/Slides';
 import { defaultInitSlides } from '../../../components/Slides/initSlides';
 import { NKR } from '../../../components/Slides/nkr';
 
-export default function StreamApi() {
+export default function StreamApi(): JSX.Element {
   return (
     <Slides initSlides={defaultInitSlides}>
       <section>

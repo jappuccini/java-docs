@@ -4,7 +4,7 @@ import TabItem from '@theme/TabItem';
 import Link from '@docusaurus/Link';
 import CodeBlock from '@theme/CodeBlock';
 
-export default function Exercise({ pullRequest, branchSuffix }) {
+export default function Exercise({ pullRequest, branchSuffix }): JSX.Element {
   return (
     <Tabs>
       <TabItem value="exercise" label="Exercise" default>

@@ -40,7 +40,7 @@ classDiagram
     class CornerShop {
         <<record>>
         -name String
-        -store Map~Goods&#44&#160Integer~
+        -store Map~Goods&sbquo; Integer~
         +getAmountByDescription(description String) Optional~Integer~
         +buyGoods(goods Goods, amount int) void
         +sellGoods(goods Goods, amount int) void
