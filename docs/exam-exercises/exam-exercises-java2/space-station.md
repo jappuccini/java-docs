@@ -17,7 +17,7 @@ classDiagram
     class SpaceStation {
         <<record>>
         -name String
-        -bays Map~Integer&#44&#160SpaceFighter~
+        -bays Map~Integer&sbquo; SpaceFighter~
         +land(bayNumber Integer, spaceFighter SpaceFighter) void
         +getFastestSpaceFighter() Optional~SpaceFighter~
     }

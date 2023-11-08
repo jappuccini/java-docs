@@ -26,7 +26,7 @@ classDiagram
 
     class BookCollection {
         <<record>>
-        -collection Map~Author&#44&#160List~Book~~
+        -collection Map~Author&sbquo; List~Book~~
         +addAuthor(author Author) void
         +addBook(author Author, book Book) void
         +getMostDiligentAuthor() Optional~Author~

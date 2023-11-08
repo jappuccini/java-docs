@@ -67,7 +67,7 @@ classDiagram
         <<record>>
         -name String
         -universe Universe
-        -members Map~T&#44&#160Boolean~
+        -members Map~T&sbquo; Boolean~
         +addSuperHuman(t T) void
         +getMostPowerfulSuperHuman() Optional~T~
         +getAllAvailableSuperHumans() List~T~
@@ -196,7 +196,7 @@ classDiagram
         <<record>>
         -name String
         -universe Universe
-        -members Map~T&#44&#160Boolean~
+        -members Map~T&sbquo; Boolean~
         +addSuperHuman(t T) void
         +getMostPowerfulSuperHuman() Optional~T~
         +getAllAvailableSuperHumans() List~T~

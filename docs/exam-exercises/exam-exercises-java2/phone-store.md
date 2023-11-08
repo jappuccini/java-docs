@@ -52,8 +52,8 @@ classDiagram
         +query1() List~Phone~
         +query2() OptionalDouble
         +query3(maxPriceInEuro double) List~Phone~
-        +query4() Map~Phone&#44&#160String~
-        +query5() Map~ConnectionTyp&#44&#160List~Phone~~
+        +query4() Map~Phone&sbquo; String~
+        +query5() Map~ConnectionTyp&sbquo; List~Phone~~
     }
 ```
 
