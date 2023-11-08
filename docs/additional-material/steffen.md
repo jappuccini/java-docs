@@ -299,8 +299,8 @@ classDiagram
     +q1() Phone~Car~
     +q2() OptionalDouble
     +q3(maxPrice: double) List~Phone~
-    +q4() Map~String&#44&#160Phone~
-    +q5() Map~String&#44&#160List~Phone~~
+    +q4() Map~String&sbquo; Phone~
+    +q5() Map~String&sbquo; List~Phone~~
   }
 ```
 

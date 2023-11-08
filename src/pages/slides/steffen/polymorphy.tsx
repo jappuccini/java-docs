@@ -1,8 +1,7 @@
-import React from 'react';
 import Slides from '../../../components/Slides';
 import { defaultInitSlides } from '../../../components/Slides/initSlides';
 
-export default function Polymorphy() {
+export default function Polymorphy(): JSX.Element {
   return (
     <Slides initSlides={defaultInitSlides}>
       <section>

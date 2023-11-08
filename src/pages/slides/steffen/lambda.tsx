@@ -1,9 +1,8 @@
-import React from 'react';
+import Link from '@docusaurus/Link';
 import Slides from '../../../components/Slides';
 import { defaultInitSlides } from '../../../components/Slides/initSlides';
-import Link from '@docusaurus/Link';
 
-export default function Lambda() {
+export default function Lambda(): JSX.Element {
   return (
     <Slides initSlides={defaultInitSlides}>
       <section>

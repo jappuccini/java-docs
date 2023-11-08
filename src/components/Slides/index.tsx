@@ -1,6 +1,11 @@
 import React, { useEffect } from 'react';
 
-export default function Slides({ children, initSlides, width, height }) {
+export default function Slides({
+  children,
+  initSlides,
+  width = null,
+  height = null,
+}): JSX.Element {
   useEffect(() => {
     initSlides();
   });

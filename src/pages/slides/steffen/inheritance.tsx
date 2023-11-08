@@ -1,9 +1,8 @@
-import React from 'react';
 import Slides from '../../../components/Slides';
 import { NKR } from '../../../components/Slides/nkr';
 import { defaultInitSlides } from '../../../components/Slides/initSlides';
 
-export default function Inheritance() {
+export default function Inheritance(): JSX.Element {
   return (
     <Slides initSlides={defaultInitSlides}>
       <section>

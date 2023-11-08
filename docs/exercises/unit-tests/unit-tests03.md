@@ -26,7 +26,7 @@ classDiagram
 
     class TelephoneBook {
         <<record>>
-        -entries Map~Person&#44&#160TelephoneNumber~
+        -entries Map~Person&sbquo; TelephoneNumber~
         +addEntry(person Person, telephoneNumber TelephoneNumber) void
         +getTelephoneNumberByName(name String) Optional~TelephoneNumber~
     }
