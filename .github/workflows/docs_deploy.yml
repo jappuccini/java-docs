@@ -5,27 +5,31 @@ on:
   push:
     branches:
       - main
+
 jobs:
   deploy:
-    name: Deploy to GitHub Pages
+    name: deploy current jappuccini documentation to GitHub Pages
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v3
+      - name: checkout repository
+        uses: actions/checkout@v4
+
+      - name: setup nodejs
+        uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: npm
 
-      - name: Install dependencies
+      - name: install dependencies
         run: npm ci
 
       - name: check formatting
         run: npm run prettier:check
 
-      - name: Build website
+      - name: build website
         run: npm run build
 
-      - name: Deploy to GitHub Pages
+      - name: deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

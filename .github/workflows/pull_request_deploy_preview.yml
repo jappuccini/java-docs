@@ -14,16 +14,18 @@ concurrency:
 
 jobs:
   deploy-preview:
-    if: github.event.action != 'closed'
+    name: deploy current branch to GitHub Pages
     runs-on: ubuntu-latest
+    if: github.event.action != 'closed'
     steps:
       - name: checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: setup nodejs
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 18
+          cache: npm
 
       - name: install dependencies
         run: npm ci
@@ -39,11 +41,12 @@ jobs:
           source-dir: ./build/
 
   undeploy-preview:
-    if: github.event.action == 'closed'
+    name: undeploy current branch from GitHub Pages
     runs-on: ubuntu-latest
+    if: github.event.action == 'closed'
     steps:
       - name: checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Deploy preview
         uses: rossjrw/pr-preview-action@v1
