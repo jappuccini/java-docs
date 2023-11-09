@@ -6,13 +6,13 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #4775e7;
+  /* --ifm-color-primary: ?; */
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #4775e7;
+  /* --ifm-color-primary: ?; */
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 

@@ -15,10 +15,10 @@ classDiagram
     Creature o-- Type
 
     class Creature {
-        -name String
-        -position Position
-        -type Type
-        +Creature(name String, position Position, type Type)
+        -name: String
+        -position: Position
+        -type: Type
+        +Creature(name: String, position: Position, type: Type)
         +moveUp() void
         +moveDown() void
         +moveLeft() void
@@ -34,9 +34,9 @@ classDiagram
     }
 
     class Position {
-        -x int
-        -y int
-        +Position(x int, y int)
+        -x: int
+        -y: int
+        +Position(x: int, y: int)
         +increaseY() void
         +decreaseY() void
         +increaseX() void
@@ -44,7 +44,7 @@ classDiagram
     }
 
     class CreaturesReader {
-        +getCreatures(file File) List~Creature~
+        +getCreatures(file: File) List~Creature~
     }
 ```
 
@@ -55,14 +55,14 @@ classDiagram
 - So nicht anders angegeben, sollen Konstruktoren, Setter, Getter sowie die
   Object-Methoden wie gewohnt implementiert werden
 
-## Hinweise zur Klasse Creature
+## Hinweise zur Klasse _Creature_
 
 - Die Methode `void moveUp()` soll den Y-Wert der Position inkrementieren
 - Die Methode `void moveDown()` soll den Y-Wert der Position dekrementieren
 - Die Methode `void moveLeft()` soll den X-Wert der Position dekrementieren
 - Die Methode `void moveRigth()` soll den X-Wert der Position inkrementieren
 
-## Hinweis zur Klasse CreaturesReader
+## Hinweis zur Klasse _CreaturesReader_
 
 Die Methode `List<Creature> getCreatures(file: File)` soll alle Kreaturen der
 eingehenden Datei zurückgeben und die Kreaturen die Bewegungen der eingehenden

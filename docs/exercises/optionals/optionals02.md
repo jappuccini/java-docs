@@ -18,18 +18,18 @@ classDiagram
 
     class Person {
         <<record>>
-        -name String
+        -name: String
     }
 
     class TelephoneNumber {
         <<record>>
-        -value String
+        -value: String
     }
 
     class TelephoneBook {
         <<record>>
-        -entries Map~Person&sbquo; TelephoneNumber~
-        +addEntry(person Person, telephoneNumber TelephoneNumber) void
-        +getTelephoneNumberByName(name String) Optional~TelephoneNumber~
+        -entries: Map~Person, TelephoneNumber~
+        +addEntry(person: Person, telephoneNumber: TelephoneNumber) void
+        +getTelephoneNumberByName(name: String) Optional~TelephoneNumber~
     }
 ```

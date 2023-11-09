@@ -19,33 +19,33 @@ classDiagram
 
     class VideoCollection {
         <<record>>
-        -videos List~Video~
-        +addVideo(video Video) void
-        +importVideos(file File) void
-        +getVideoByMovieTitle(title String) Optional~Video~
+        -videos: List~Video~
+        +addVideo(video: Video) void
+        +importVideos(file: File) void
+        +getVideoByMovieTitle(title: String) Optional~Video~
     }
 
     class Video {
         <<abstract>>
-        -movie Movie
-        +Video(movie Movie)
+        -movie: Movie
+        +Video(movie: Movie)
     }
 
     class VHS {
-        -isRewritable boolean
-        +VHS(movie Movie, isRewritable boolean)
+        -isRewritable: boolean
+        +VHS(movie: Movie, isRewritable: boolean)
     }
 
     class BluRay {
-        -capacityInGB double
-        +BluRay(movie Movie, capacityInGB double)
+        -capacityInGb: double
+        +BluRay(movie: Movie, capacityInGb: double)
     }
 
     class Movie {
         <<record>>
-        -title String
-        -genre Genre
-        -publishingYear short
+        -title: String
+        -genre: Genre
+        -publishingYear: short
     }
 
     class Genre {
@@ -54,7 +54,7 @@ classDiagram
         HORROR = Horror
         ACTION = Action
         COMEDY = Komödie
-        -description String
+        -description: String
     }
 ```
 
@@ -65,7 +65,7 @@ classDiagram
 - So nicht anders angegeben, sollen Konstruktoren, Setter, Getter sowie die
   Object-Methoden wie gewohnt implementiert werden
 
-## Hinweise zur Klasse VideoCollection
+## Hinweise zur Klasse _VideoCollection_
 
 - Die Methode `void addVideo(video: Video)` soll der Videoliste (`videos`) das
   eingehende Video hinzufügen

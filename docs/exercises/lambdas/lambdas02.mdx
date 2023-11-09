@@ -27,18 +27,18 @@ nicht flexibel.
 ```mermaid
 classDiagram
     class FilteredStudents {
-        -students ArrayList~Student~
-        -mandatoryFilter Predicate~Student~
-        +FilteredStudents(mandatoryFilter Predicate~Student~)
-        +add(student Student) void
+        -students: List~Student~
+        -mandatoryFilter: Predicate~Student~
+        +FilteredStudents(mandatoryFilter: Predicate~Student~)
+        +add(student: Student) void
         +printStudents() void
     }
 ```
 
-## Hinweise zur Klasse FilteredStudents
+## Hinweise zur Klasse _FilteredStudents_
 
 - Der Konstruktor soll alle Attribute initialisieren
-- Die Methode `void add(student Student)` soll der Studentenliste den
+- Die Methode `void add(student: Student)` soll der Studentenliste den
   eingehenden Studenten hinzufügen. Vor dem Hinzufügen soll mit Hilfe des
   Filters überprüft werden, ob der eingehende Student hinzugefügt werden soll
 - Methode `void printStudent()` soll alle Studenten auf der Konsole ausgeben

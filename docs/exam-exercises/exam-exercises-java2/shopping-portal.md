@@ -16,17 +16,17 @@ classDiagram
     ShoppingCart *-- Item
 
     class ShoppingCart~T extends Sellable~ {
-        -items List~Item~
+        -items: List~Item~
         +ShoppingCart()
-        +addItem(sellable T, amount int) void
-        +removeItem(sellable T) void
+        +addItem(sellable: T, amount: int) void
+        +removeItem(sellable: T) void
         +getTotalInEuro() double
     }
 
     class Item {
-        -sellable T
-        -amount int
-        -Item(sellable T, amount int)
+        -sellable: T
+        -amount: int
+        -Item(sellable: T, amount: int)
         +getSubTotalInEuro() double
     }
 
@@ -37,16 +37,16 @@ classDiagram
 
     class Product {
         <<record>>
-        -description String
-        -priceInEuro double
+        -description: String
+        -priceInEuro: double
     }
 
     class ShoppingPortal {
         <<record>>
-        -user String
-        -shoppingCart ShoppingCart~Product~
-        +addProductToShoppingCart(product Product, amount int) void
-        +removeProductFromShoppingCart(product Product) void
+        -user: String
+        -shoppingCart: ShoppingCart~Product~
+        +addProductToShoppingCart(product: Product, amount: int) void
+        +removeProductFromShoppingCart(product: Product) void
         +clearShoppingCart() void
     }
 ```
@@ -58,12 +58,12 @@ classDiagram
 - So nicht anders angegeben, sollen Konstruktoren, Setter, Getter sowie die
   Object-Methoden wie gewohnt implementiert werden
 
-## Hinweis zur Klasse Item
+## Hinweis zur Klasse _Item_
 
 Die Methode `double getSubTotalInEuro()` soll die Zwischensumme des
 Warenkorbeintrags gemäß der Formel _Produktpreis \* Anzahl_ zurückgeben.
 
-## Hinweise zur Klasse ShoppingCart
+## Hinweise zur Klasse _ShoppingCart_
 
 - Die Methode `void addItem(sellable: T, amount: int)` soll den Einträgen des
   Warenkorbs (`items`) das eingehende verkäufliche Objekt und die eingehende
@@ -73,7 +73,7 @@ Warenkorbeintrags gemäß der Formel _Produktpreis \* Anzahl_ zurückgeben.
 - Die Methode `double getTotalInEuro()` soll die Gesamtsumme des Warenkorbs
   zurückgeben
 
-## Hinweise zur Klasse ShoppingPortal
+## Hinweise zur Klasse _ShoppingPortal_
 
 - Die Methode `void addProductToShoppingCart(product: Product, amount: int)`
   soll dem Warenkorb (`shoppingCart`) das eingehende Produkt und die eingehende

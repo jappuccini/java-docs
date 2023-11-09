@@ -12,38 +12,32 @@ ausführbare Klasse.
 ```mermaid
 classDiagram
     Zoo o-- Animal
-    Animal <|-- Mammal
     Animal <|-- Bird
     Animal <|-- Fish
 
     class Zoo {
-        -name String
-        -animals List~Animal~
-        +Zoo(name String, animals List~Animal~)
-        +addAnimal(animal Animal) void
+        -name: String
+        -animals: List~Animal~
+        +Zoo(name: String, animals: List~Animal~)
+        +addAnimal(animal: Animal) void
         +getBiggestAnimal() Animal
-        +getFishesByColor(color String) List~Fish~
+        +getFishesByColor(color: String) List~Fish~
     }
 
     class Animal {
-        -description String
-        -sizeInM double
-        -weigthInKG double
-        +Animal(description String, sizeInM double, weigthInKG double)
-    }
-
-    class Mammal {
-        +Mammal(description String, sizeInM double, weigthInKG double)
-        +suckle() void
+        -description: String
+        -sizeInM: double
+        -weigthInKg: double
+        +Animal(description: String, sizeInM: double, weigthInKg: double)
     }
 
     class Bird {
-        +Bird(description String, sizeInM double, weigthInKG double)
+        +Bird(description: String, sizeInM: double, weigthInKg: double)
         +fly() void
     }
 
     class Fish {
-        +Fish(description String, sizeInM double, weigthInKG double)
+        +Fish(description: String, sizeInM: double, weigthInKg: double)
         +swim() void
     }
 ```
@@ -55,19 +49,15 @@ classDiagram
 - So nicht anders angegeben, sollen Konstruktoren, Setter, Getter sowie die
   Object-Methoden wie gewohnt implementiert werden
 
-## Hinweis zur Klasse Bird
+## Hinweis zur Klasse _Bird_
 
 Die Methode `void fly()` soll die Zeichenkette _flatter, flatter_ ausgeben.
 
-## Hinweis zur Klasse Mammal
-
-Die Methode `void suckle()` soll die Zeichenkette _saug, saug_ ausgeben.
-
-## Hinweis zur Klasse Fish
+## Hinweis zur Klasse _Fish_
 
 Die Methode `void swim()` soll die Zeichenkette _schwimm, schwimm_ ausgeben.
 
-## Hinweise zur Klasse Zoo
+## Hinweise zur Klasse _Zoo_
 
 - Die Methode `void addAnimal(animal: Animal)` soll dem Zoo das eingehende Tier
   hinzufügen

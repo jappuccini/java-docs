@@ -21,28 +21,28 @@ classDiagram
     Employee o-- Person
 
     class Company {
-        -name String
-        -employees ArrayList~Employee~
-        -numberOfEmployees int
-        +Company(name String)
-        +addEmployee(employee Employee) void
+        -name: String
+        -employees: List~Employee~
+        -numberOfEmployees: int
+        +Company(name: String)
+        +addEmployee(employee: Employee) void
         +print() void
     }
 
     class Person {
-        -name String
-        +Person(name String)
+        -name: String
+        +Person(name: String)
         +getName() String
     }
 
     class Employee {
-        -employeeId int
-        -person Person
-        -salary int
-        +Employee(employeeId int, person Person, salary int)
+        -employeeId: int
+        -person: Person
+        -salary: int
+        +Employee(employeeId: int, person: Person, salary: int)
         +getEmployeeId() int
         +getName() String
-        +setSalary(salary int) void
+        +setSalary(salary: int) void
         +getSalary() int
         +print() void
     }

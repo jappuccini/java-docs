@@ -20,25 +20,25 @@ classDiagram
 
     class Author {
         <<record>>
-        -name String
+        -name: String
     }
 
     class Book {
         <<record>>
-        -title String
+        -title: String
     }
 
     class BookCollection {
         <<record>>
-        -collection Map~Author&sbquo; List~Book~~
-        +addAuthor(author Author) void
-        +addBook(author Author, book Book) void
+        -collection: Map~Author&sbquo; List~Book~~
+        +addAuthor(author: Author) void
+        +addBook(author: Author, book: Book) void
         +getMostDiligentAuthor() Author
-        +getBookByTitle(title String) Book
+        +getBookByTitle(title: String) Book
     }
 ```
 
-## Hinweise zur Klasse BookCollection
+## Hinweise zur Klasse _BookCollection_
 
 - Die Methode `void addAuthor(author: Author)` soll den eingehenden Autor der
   Büchersammlung hinzufügen. Für den Fall, dass der Autor bereits in der

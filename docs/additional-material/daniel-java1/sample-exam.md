@@ -120,34 +120,34 @@ classDiagram
     Class o-- CourseOfStudies
 
     class Class {
-        -description String
-        -courseOfStudies CourseOfStudies
-        -lectures List~Lecture~
-        -students List~Student~
-        +Class(description String, courseOfStudies CourseOfStudies)
+        -description: String
+        -courseOfStudies: CourseOfStudies
+        -lectures: List~Lecture~
+        -students: List~Student~
+        +Class(description: String, courseOfStudies: CourseOfStudies)
         +description() String
         +courseOfStudies() CourseOfStudies
         +lectures() List~Lecture~
         +students() List~Student~
-        +addLecture(lecture Lecture) void
-        +addStudent(student Student) void
+        +addLecture(lecture: Lecture) void
+        +addStudent(student: Student) void
         +getLectureWithMostCreditPoints() Lecture
         +toString() String
     }
 
     class Student {
-        -matriculationNumber String
-        -name String
-        +Student(matriculationNumber String, name String)
+        -matriculationNumber: String
+        -name: String
+        +Student(matriculationNumber: String, name: String)
         +matriculationNumber() String
         +name() String
         +toString() String
     }
 
     class Lecture {
-        -description String
-        -creditPoints int
-        +Lecture(description String, creditPoints int)
+        -description: String
+        -creditPoints: int
+        +Lecture(description: String, creditPoints: int)
         +description() String
         +creditPoints() int
         +toString() String
@@ -158,15 +158,15 @@ classDiagram
         WI = Wirtschaftsinformatik
         INF = Informatik
         BWL = Betriebswirtschaftslehre
-        -description String
+        -description: String
     }
 
     class ExamTask02 {
-        +main(args String[])$ void
+        +main(args: String[])$ void
     }
 ```
 
-### Hinweise zur Klasse Class
+### Hinweise zur Klasse _Class_
 
 - Der Konstruktor soll alle Attribute initialisieren
 - Die Methode `void addStudent(student Student)` soll der Studierendenliste
@@ -374,17 +374,17 @@ classDiagram
     Player o-- Dice
 
     class ExamTask04 {
-        -player1 Player$
-        -player2 Player$
-        -scanner Scanner$
-        +main(args String[])$ void
+        -player1: Player &#123static&#125
+        -player2: Player &#123static&#125
+        -scanner: Scanner &#123static&#125
+        +main(args: String[])$ void
     }
 
     class Player {
-        -name String
-        -healthPoints int
-        -dice Dice
-        +Player(name String)
+        -name: String
+        -healthPoints: int
+        -dice: Dice
+        +Player(name: String)
         +name() String
         +getHealthPoints() int
         +reduceHealthPoints() int
@@ -392,13 +392,13 @@ classDiagram
     }
 
     class Dice {
-        -value int
+        -value: int
         +getValue() int
         +rollTheDice() void
     }
 ```
 
-### Hinweis zur Klasse Player
+### Hinweis zur Klasse _Player_
 
 - Der Konstruktor soll den Namen (`name`) mit dem eingehenden Namen belegen, die
   Lebenspunkte des Spielers (`healthPoints`) auf den Wert 10 setzen sowie den
@@ -528,49 +528,49 @@ classDiagram
     Recipe o-- Ingredient
 
     class CookieJar {
-        -cookies List~Cookie~
+        -cookies: List~Cookie~
         +CookieJar()
-        +addCookie(cookie Cookie) void
+        +addCookie(cookie: Cookie) void
         +getStuffedCookie() StuffedCookie
     }
 
     class Cookie {
-        -name String
-        -dough Recipe
-        +Cookie(name String, dough Recipe)
+        -name: String
+        -dough: Recipe
+        +Cookie(name: String, dough: Recipe)
         +getIngredients() List~Ingredient~
     }
 
     class StuffedCookie {
-        -jam Recipe
-        +StuffedCookie(name String, dough Recipe, jam Recipe)
+        -jam: Recipe
+        +StuffedCookie(name: String, dough: Recipe, jam: Recipe)
         +getIngredients() List~Ingredient~
     }
 
     class Recipe {
-        -name String
-        -ingredients List~Ingredient~
-        +Recipe(name String)
-        +addIngredient(ingredient Ingredient) void
+        -name: String
+        -ingredients: List~Ingredient~
+        +Recipe(name: String)
+        +addIngredient(ingredient: Ingredient) void
     }
 
     class Ingredient {
-        -name String
-        +Ingredient(name String)
+        -name: String
+        +Ingredient(name: String)
     }
 
     class IngredientsReader {
-        +readIngredients(file File)$ List~Ingredient~
+        +readIngredients(file: File)$ List~Ingredient~
     }
 ```
 
-### Hinweise zur Klasse StuffedCookie
+### Hinweise zur Klasse _StuffedCookie_
 
 - Der Konstruktor soll alle Attribute initialisieren
 - Die Methode `List<Ingredient> getIngredients()` soll alle Zutaten zurückgeben.
   Doppelte Zutaten sollen dabei nur einmal zurückgegeben werden
 
-### Hinweise zur Klasse CookieJar
+### Hinweise zur Klasse _CookieJar_
 
 - Der Konstruktor soll alle Attribute initialisieren
 - Die Methode `void addCookie(cookie Cookie)` soll der Plätzchenbox ein
@@ -579,7 +579,7 @@ classDiagram
   zurückgeben und aus der Plätzchenbox entfernen. Für den Fall, dass kein
   gefülltes Plätzchen vorhanden ist, soll der Wert `null` zurückgegeben werden
 
-### Hinweis zur Klasse IngredientsReader
+### Hinweis zur Klasse _IngredientsReader_
 
 Die statische Methode `List<Ingredient> readIngredients()` soll alle Zutaten der
 eingehenden Zutatendatei lesen und zurückgeben.

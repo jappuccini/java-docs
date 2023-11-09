@@ -21,19 +21,19 @@ classDiagram
 
     class Vehicle {
         <<abstract>>
-        -make String
-        -model String
-        -engine Engine
-        #speed double
-        -numberOfVehicles int$
-        +Vehicle(make String, model String, engine Engine)
+        -make: String
+        -model: String
+        -engine: Engine
+        #speed: double
+        -numberOfVehicles: int$
+        +Vehicle(make: String, model: String, engine: Engine)
         +getMake() String
         +getModel() String
         +getEngine() Engine
         +getSpeed() double
-        +accelerate(value int) void
-        +brake(value int) void
-        +print()* void
+        +accelerate(value: int) void &#123final&#125
+        +brake(value: int) void &#123final&#125
+        +print() void &#123abstract&#125
         +getNumberOfVehicles()$ int
     }
 
@@ -43,21 +43,23 @@ classDiagram
         PETROL = Benzin
         GAS = Gas
         ELECTRO = Elektro
-        -description String
+        -description: String
     }
 
     class Car {
-        -seats int
-        +Car(make String, model String, engine Engine, seats int)
+        <<final>>
+        -seats: int
+        +Car(make: String, model: String, engine: Engine, seats: int)
         +getSeats() int
         +doATurboBoost() void
         +print() void
     }
 
     class Truck {
-        -cargo int
-        -isTransformed boolean
-        +Truck(make String, model String, engine Engine, cargo int)
+        <<final>>
+        -cargo: int
+        -isTransformed: boolean
+        +Truck(make: String, model: String, engine: Engine, cargo: int)
         +getCargo() int
         +isTransformed() boolean
         +transform() void
@@ -65,14 +67,14 @@ classDiagram
     }
 
     class Rental {
-        -name String
-        -vehicles ArrayList~Vehicle~
-        +Rental(name String)
-        +addVehicle(vehicle Vehicle) void
-        +addAllVehicles(vehicles Vehicle...) void
+        -name: String
+        -vehicles: List~Vehicle~
+        +Rental(name: String)
+        +addVehicle(vehicle: Vehicle) void
+        +addAllVehicles(vehicles: Vehicle...) void
         +transformAllTrucks() void
-        +accelerateAllVehicles(value int) void
-        +getVehicles() ArrayList~Vehicle~
+        +accelerateAllVehicles(value: int) void
+        +getVehicles() List~Vehicle~
         +print() void
     }
 
@@ -82,27 +84,27 @@ classDiagram
     }
 
     class TravelAgency {
-        -name String
-        -partners ArrayList~Partner~
-        +TravelAgency(name String)
-        +addPartner(partner Partner) void
+        -name: String
+        -partners: List~Partner~
+        +TravelAgency(name: String)
+        +addPartner(partner: Partner) void
         +print() void
     }
 
     class RentalTest {
-        -rental Rental
+        -rental: Rental
         +setUp() void
         +testTransformAllTrucks() void
         +testAccelerateAllVehicles() void
     }
 ```
 
-## Hinweis zur Klasse Rental
+## Hinweis zur Klasse _Rental_
 
 Die Methode `void accelerateAllVehicles(value: int)` soll alle Fahrzeuge der
 Fahrzeugvermietung um den eingehenden Wert beschleunigen.
 
-## Hinweise zur Klasse RentalTest
+## Hinweise zur Klasse _RentalTest_
 
 - Die Lebenszyklus-Methode `void setUp()` soll eine Fahrzeugvermietung samt
   dazugehöriger Fahrzeuge erzeugen

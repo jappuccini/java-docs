@@ -18,26 +18,26 @@ classDiagram
 
     class Pair~T~ {
         <<record>>
-        -partA T
-        -partB T
+        -partA: T
+        -partB: T
     }
 
     class SchoolClass {
         <<record>>
-        -name String
-        -pupils List~Pupil~
-        +addPupil(pupil Pupil) void
+        -name: String
+        -pupils: List~Pupil~
+        +addPupil(pupil: Pupil) void
         +getPairs() List~Pair~Pupil~~
     }
 
     class Pupil {
         <<record>>
-        -name String
-        -gender String
+        -name: String
+        -gender: String
     }
 ```
 
-## Hinweise zur Klasse SchoolClass
+## Hinweise zur Klasse _SchoolClass_
 
 - Die Methode `void addPupil(pupil: Pupil)` soll der Schulklasse den eingehenden
   Schüler hinzufügen

@@ -28,20 +28,20 @@ classDiagram
 
     class Footballer {
         <<record>>
-        -name String
-        -position Position
-        -birthdate LocalDate
-        -sizeInCm int
-        -footballClub FootballClub
-        -numberOfGames int
-        -numberOfGoals int
+        -name: String
+        -position: Position
+        -birthdate: LocalDate
+        -sizeInCm: int
+        -footballClub: FootballClub
+        -numberOfGames: int
+        -numberOfGoals: int
     }
 
     class FootballClub {
         <<record>>
-        -name String
-        -positionInAllTimeTable int
-        -pointsInAllTimeTable int
+        -name: String
+        -positionInAllTimeTable: int
+        -pointsInAllTimeTable: int
     }
 
     class DataProvider {
@@ -50,7 +50,7 @@ classDiagram
 
     class Queries {
         <<record>>
-        -footballers List~Footballer~
+        -footballers: List~Footballer~
         +getTotalOfAllGoalsByMidfielders() int
         +getNameOfVfLWolfsburgFootballerWithMostPlayedGames() Optional~Footballer~
         +getNamesOfAllFootballClubs() List~FootballClub~
@@ -60,7 +60,7 @@ classDiagram
     }
 ```
 
-## Hinweise zur Klasse FootballerQueries
+## Hinweise zur Klasse _FootballerQueries_
 
 - Mannschaften, die nicht der ewigen Tabelle der Bundesliga vertreten sind,
   besitzen sowohl für die Position als auch die Punktzahl den Wert `-1`
