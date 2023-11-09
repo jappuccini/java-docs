@@ -18,40 +18,40 @@ classDiagram
     Recipe o-- Ingredient
 
     class CookieJar {
-        -cookies List~Cookie~
+        -cookies: List~Cookie~
         +CookieJar()
-        +addCookie(cookie Cookie) void
+        +addCookie(cookie: Cookie) void
         +getStuffedCookie() StuffedCookie
-        +getCookieByName(name String) Cookie
+        +getCookieByName(name: String) Cookie
     }
 
     class Cookie {
-        -name String
-        -dough Recipe
-        +Cookie(name String, dough Recipe)
+        -name: String
+        -dough: Recipe
+        +Cookie(name: String, dough: Recipe)
         +getIngredients() List~Ingredient~
     }
 
     class StuffedCookie {
-        -jam Recipe
-        +StuffedCookie(name String, dough Recipe, jam Recipe)
+        -jam: Recipe
+        +StuffedCookie(name: String, dough: Recipe, jam: Recipe)
         +getIngredients() List~Ingredient~
     }
 
     class Recipe {
-        -name String
-        -ingredients List~Ingredient~
-        +Recipe(name String)
-        +addIngredient(ingredient Ingredient) void
+        -name: String
+        -ingredients: List~Ingredient~
+        +Recipe(name: String)
+        +addIngredient(ingredient: Ingredient) void
     }
 
     class Ingredient {
-        -name String
-        +Ingredient(name String)
+        -name: String
+        +Ingredient(name: String)
     }
 
     class IngredientsReader {
-        +readIngredients(file File) List~Ingredient~
+        +readIngredients(file: File) List~Ingredient~
     }
 ```
 
@@ -63,22 +63,22 @@ classDiagram
   Object-Methoden wie gewohnt implementiert werden
 -
 
-## Hinweis zur Klasse Cookie
+## Hinweis zur Klasse _Cookie_
 
 Die Methode `List<Ingredient> getIngredients()` soll alle Zutaten des Teigs
 zurückgeben.
 
-## Hinweis zur Klasse StuffedCookie
+## Hinweis zur Klasse _StuffedCookie_
 
 Die Methode `List<Ingredient> getIngredients()` soll alle Zutaten des Teigs
 sowie der Füllung zurückgeben.
 
-## Hinweis zur Klasse Recipe
+## Hinweis zur Klasse _Recipe_
 
 Die Methode `void addIngredient(ingredient: Ingredient)` soll dem Rezept die
 eingehende Zutat hinzufügen.
 
-## Hinweise zur Klasse CookieJar
+## Hinweise zur Klasse _CookieJar_
 
 - Die Methode `void addCookie(cookie: Cookie)` soll der Plätzchendose das
   eingehende Plätzchen hinzufügen
@@ -87,7 +87,7 @@ eingehende Zutat hinzufügen.
 - Die Methode `Cookie getCookieByName(name: String)` soll ein Plätzchen der
   Plätzchendose zum eingehenden Namen zurückgeben
 
-## Hinweis zur Klasse IngredientsReader
+## Hinweis zur Klasse _IngredientsReader_
 
 Die Methode `List<Ingredient> readIngredients()` soll alle Zutaten der
 eingehenden Datei auslesen und zurückgeben.

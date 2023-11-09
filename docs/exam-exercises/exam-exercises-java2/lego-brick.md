@@ -18,32 +18,32 @@ classDiagram
 
     class Lego {
         <<abstract>>
-        -id int
-        +Lego(id int)
+        -id: int
+        +Lego(id: int)
     }
 
     class LegoBrick {
         <<abstract>>
-        -dimensions int[3]
-        -color String
-        +LegoBrick(id int, dimensions int[3] color String)
+        -dimensions: int[3]
+        -color: String
+        +LegoBrick(id: int, dimensions: int[3], color: String)
     }
 
     class LegoBrick2x2x2 {
-        +LegoBrick2x2x2(id int, color String)
+        +LegoBrick2x2x2(id: int, color: String)
     }
 
     class LegoBrick4x2x1 {
-        +LegoBrick4x2x1(id int, color String)
+        +LegoBrick4x2x1(id: int, color: String)
     }
 
     class Comparator~LegoBrick~ {
         <<interface>>
-        +compare(o1 LegoBrick, o2 LegoBrick) int
+        +compare(o1: LegoBrick, o2: LegoBrick) int
     }
 
     class LegoBrickVolumeComparator {
-        +compare(legoBrick1 LegoBrick, legoBrick2 LegoBrick) int
+        +compare(legoBrick1: LegoBrick, legoBrick2: LegoBrick) int
     }
 ```
 
@@ -54,7 +54,7 @@ classDiagram
 - So nicht anders angegeben, sollen Konstruktoren, Setter, Getter sowie die
   Object-Methoden wie gewohnt implementiert werden
 
-## Hinweis zur Klasse LegoBrickVolumeComparator
+## Hinweis zur Klasse _LegoBrickVolumeComparator_
 
 Die Methode `int compare(legoBrick1: LegoBrick, legoBrick2: LegoBrick)` soll so
 implementiert werden, dass damit Lego-Bausteine aufsteigend nach ihrem Volumen

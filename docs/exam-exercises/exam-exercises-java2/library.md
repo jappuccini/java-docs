@@ -20,43 +20,43 @@ classDiagram
 
     class Library {
         <<record>>
-        -name String
-        -books Map~Book&sbquo; Status~
-        +addBook(book Book) void
-        +getBookByTitle(title String) Optional~Book~
-        +getPaperBooksByStatus(status Status) List~PaperBook~
+        -name: String
+        -books: Map~Book, Status~
+        +addBook(book: Book) void
+        +getBookByTitle(title: String) Optional~Book~
+        +getPaperBooksByStatus(status: Status) List~PaperBook~
     }
 
     class Status {
         <<enumeration>>
         AVAILABLE = verfügbar
         LENT = verliehen
-        -description String
+        -description: String
     }
 
     class Book {
         <<abstract>>
-        -id UUID
-        -author Author
-        -title String
-        +Book(author Author, title String)
+        -id: UUID
+        -author: Author
+        -title: String
+        +Book(author: Author, title: String)
     }
 
     class EBook {
-        -fileFormat FileFormat
-        -fileSizeInKB int
-        +EBook(author Author, title String, fileFormat FileFormat, fileSizeInKB int)
+        -fileFormat: FileFormat
+        -fileSizeInKb: int
+        +EBook(author: Author, title: String, fileFormat: FileFormat, fileSizeInKb: int)
     }
 
     class PaperBook {
-        -pages int
-        +PaperBook(author Author, title String, pages int)
+        -pages: int
+        +PaperBook(author: Author, title: String, pages: int)
     }
 
     class Author {
         <<record>>
-        -name String
-        -nationality String
+        -name: String
+        -nationality: String
     }
 
     class FileFormat {
@@ -64,7 +64,7 @@ classDiagram
         AZW = Amazon Kindle
         EPUB = Electronic Publication
         LRF = Portable Reader File
-        -description String
+        -description: String
     }
 ```
 
@@ -77,13 +77,13 @@ classDiagram
 - Die statische Methode `UUID randomUUID()` der Klasse `UUID` gibt eine zufällig
   erstellte UUID zurück
 
-## Hinweis zur Klasse EBook
+## Hinweis zur Klasse _EBook_
 
 Der Konstruktor soll alle Attribute initialisieren. Für den Fall, dass die
 eingehende Dateigröße kleiner gleich Null ist, soll die Ausnahme
 `WrongFileSizeException` ausgelöst werden.
 
-## Hinweise zur Klasse Library
+## Hinweise zur Klasse _Library_
 
 - Die Methode `void addBook(book: Book)` soll der Bücherliste (`books`) das
   eingehende Buch mit dem Status `verfügbar` hinzufügen

@@ -20,8 +20,8 @@ classDiagram
         USB_C = USB C, true
         USB_MICRO = USB Micro, false
         THUNDERBOLT = Thunderbolt, true
-        -description String
-        -isModern boolean
+        -description: String
+        -isModern: boolean
     }
 
     class Brand {
@@ -33,13 +33,13 @@ classDiagram
 
     class Phone {
         <<record>>
-        -description String
-        -brand Brand
-        -conncetionType ConnectionType
-        -numberOfCameras int
-        -batteryCapacityInMAh int
-        -cpuPowerInGHz double
-        -priceInEuro double
+        -description: String
+        -brand: Brand
+        -conncetionType: ConnectionType
+        -numberOfCameras: int
+        -batteryCapacityInMAh: int
+        -cpuPowerInGHz: double
+        -priceInEuro: double
     }
 
     class DataProvider {
@@ -48,16 +48,16 @@ classDiagram
 
     class PhoneStore {
         <<record>>
-        -phones List~Phone~
+        -phones: List~Phone~
         +query1() List~Phone~
         +query2() OptionalDouble
-        +query3(maxPriceInEuro double) List~Phone~
-        +query4() Map~Phone&sbquo; String~
+        +query3(maxPriceInEuro: double) List~Phone~
+        +query4() Map~Phone, String~
         +query5() Map~ConnectionTyp&sbquo; List~Phone~~
     }
 ```
 
-## Hinweise zur Klasse PhoneStore
+## Hinweise zur Klasse _PhoneStore_
 
 - Die Methode `List<Phone> query1()` soll die drei leistungsstärksten
   Smartphones mit 3 Kameras der Marke Huawei absteigend nach dem Preis

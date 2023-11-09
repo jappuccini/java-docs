@@ -16,23 +16,23 @@ classDiagram
 
     class Person {
         <<record>>
-        -name String
+        -name: String
     }
 
     class TelephoneNumber {
         <<record>>
-        -value String
+        -value: String
     }
 
     class TelephoneBook {
         <<record>>
-        -entries Map~Person&sbquo; TelephoneNumber~
-        +addEntry(person Person, telephoneNumber TelephoneNumber) void
-        +getTelephoneNumberByName(name String) Optional~TelephoneNumber~
+        -entries: Map~Person, TelephoneNumber~
+        +addEntry(person: Person, telephoneNumber: TelephoneNumber) void
+        +getTelephoneNumberByName(name: String) Optional~TelephoneNumber~
     }
 
     class TelephoneBookTest {
-        -telephoneBook TelephoneBook
+        -telephoneBook: TelephoneBook
         +setUp() void
         +testAddEntry() void
         +testGetTelephoneNumberByName1() void
@@ -40,7 +40,7 @@ classDiagram
     }
 ```
 
-## Hinweise zur Klasse `TelephoneBookTest`
+## Hinweise zur Klasse _TelephoneBookTest_
 
 - Die Lebenszyklus-Methode `void setUp()` soll ein Telefonbuch samt
   dazugehöriger Einträge erzeugen

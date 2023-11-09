@@ -19,31 +19,31 @@ classDiagram
 
     class Product {
         <<abstract>>
-        -description String
-        -price double
-        -currency String
-        +Product(description String, price double, currency String)
+        -description: String
+        -price: double
+        -currency: String
+        +Product(description: String, price: double, currency: String)
     }
 
     class Goods {
-        -classOfGoods ClassOfGoods
-        -unit String
-        +Goods(description String, price double, currency String, classOfGoods ClassOfGoods, unit String)
-        +compareTo(other Goods) int
+        -classOfGoods: ClassOfGoods
+        -unit: String
+        +Goods(description: String, price: double, currency: String, classOfGoods: ClassOfGoods, unit: String)
+        +compareTo(other: Goods) int
     }
 
     class Comparable~Goods~ {
         <<interface>>
-        +compareTo(o Goods) int
+        +compareTo(o: Goods) int
     }
 
     class CornerShop {
         <<record>>
-        -name String
-        -store Map~Goods&sbquo; Integer~
-        +getAmountByDescription(description String) Optional~Integer~
-        +buyGoods(goods Goods, amount int) void
-        +sellGoods(goods Goods, amount int) void
+        -name: String
+        -store: Map~Goods, Integer~
+        +getAmountByDescription(description: String) Optional~Integer~
+        +buyGoods(goods: Goods, amount: int) void
+        +sellGoods(goods: Goods, amount: int) void
     }
 
     class ClassOfGoods {
@@ -52,7 +52,7 @@ classDiagram
         DAIRY_PRODUCTS = Milchprodukte
         FRUITS = Obst
         VEGETABLES = Gemüse
-        -description String
+        -description: String
     }
 ```
 
@@ -63,12 +63,12 @@ classDiagram
 - So nicht anders angegeben, sollen Konstruktoren, Setter, Getter sowie die
   Object-Methoden wie gewohnt implementiert werden
 
-## Hinweis zur Klasse Goods
+## Hinweis zur Klasse _Goods_
 
 Die Methode `int compareTo(other: Goods)` soll so implementiert werden, dass
 damit Waren aufsteigend nach ihrer Beschreibung sortiert werden können.
 
-## Hinweise zur Klasse CornerShop
+## Hinweise zur Klasse _CornerShop_
 
 - Die Methode `Optional<Integer> getAmountByDescription(description: String)`
   soll die Anzahl Waren zur eingehenden Warenbeschreibung als Optional

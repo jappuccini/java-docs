@@ -51,7 +51,7 @@ gezählt.
 
 Oftmals werden zum Testen einer Methode andere Objekte bzw. Komponenten
 benötigt, die vom Test bereitgestellt werden müssen. Zum Testen können entweder
-die realen Komponenten, oder aber sogenannte **Test Doubles** verwendet werden:
+die realen Komponenten, oder aber sogenannte _Test Doubles_ verwendet werden:
 
 - Eine _Fälschung_ (Fake) imitiert eine reale Komponente
 - Eine _Attrappe_ (Dummy) ist ein Platzhalter für ein Objekt, welches im Test

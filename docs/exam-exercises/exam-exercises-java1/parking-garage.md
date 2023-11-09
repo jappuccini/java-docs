@@ -17,34 +17,34 @@ classDiagram
     Vehicle <|-- Bus
 
     class ParkingSpot {
-        -vehicle Vehicle
-        -lengthInM double
-        -heightInM double
-        -isForBusesOnly boolean
-        +ParkingSpot(lengthInM double, heightInM double, isForBusesOnly boolean)
+        -vehicle: Vehicle
+        -lengthInM: double
+        -heightInM: double
+        -isForBusesOnly: boolean
+        +ParkingSpot(lengthInM: double, heightInM: double, isForBusesOnly: boolean)
     }
 
     class Vehicle {
-        -make String
-        -model String
-        -lengthInM double
-        -heightInM double
-        +Vehicle(make String, model String, lengthInM double, heightInM double)
+        -make: String
+        -model: String
+        -lengthInM: double
+        -heightInM: double
+        +Vehicle(make: String, model: String, lengthInM: double, heightInM: double)
     }
 
     class Car {
-        +Car(make String, model String, lengthInM double, heightInM double)
+        +Car(make: String, model: String, lengthInM: double, heightInM: double)
     }
 
     class Bus {
-        +Bus(make String, model String, lengthInM double, heightInM double)
+        +Bus(make: String, model: String, lengthInM: double, heightInM: double)
     }
 
     class ParkingGarage {
-        -parkingSpots ParkingSpot[]
-        +ParkingGarage(numberOfParkingSpots int)
-        +parkIn(car Car, parkingSpotNumber int) String
-        +parkOut(car Car) String
+        -parkingSpots: ParkingSpot[]
+        +ParkingGarage(numberOfParkingSpots: int)
+        +parkIn(car: Car, parkingSpotNumber: int) String
+        +parkOut(car: Car) String
         +getNextFreeParkingSpotNumber() int
     }
 ```
@@ -56,7 +56,7 @@ classDiagram
 - So nicht anders angegeben, sollen Konstruktoren, Setter, Getter sowie die
   Object-Methoden wie gewohnt implementiert werden
 
-## Hinweise zur Klasse ParkingGarage
+## Hinweise zur Klasse _ParkingGarage_
 
 - Die Methode `String parkIn(car: Car, parkingSpotNumber: int)` soll das
   eingehende Fahrzeug dem Parkplatz mit der eingehenden Parkplatznummer zuweisen

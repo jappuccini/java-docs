@@ -19,14 +19,14 @@ classDiagram
     Crate o-- Bottle
 
     class Crate {
-        -box1 Bottle
-        -box2 Bottle
-        -box3 Bottle
-        -box4 Bottle
-        -box5 Bottle
-        -box6 Bottle
-        +insertBottle(bottle Bottle, box int) void
-        +takeBottle(box int) Bottle
+        -box1: Bottle
+        -box2: Bottle
+        -box3: Bottle
+        -box4: Bottle
+        -box5: Bottle
+        -box6: Bottle
+        +insertBottle(bottle: Bottle, box: int) void
+        +takeBottle(box: int) Bottle
     }
 
     class Bottle {
@@ -42,12 +42,12 @@ classDiagram
     }
 ```
 
-## Hinweis zur Klasse BeerBottle
+## Hinweis zur Klasse _BeerBottle_
 
 Die Methode `void chugALug()` soll den Text "Ex und Hopp" auf der Konsole
 ausgeben.
 
-## Hinweise zur Klasse Crate
+## Hinweise zur Klasse _Crate_
 
 - Die Methode `void insertBottle(bottle: Bottle, box: int)` soll eine Flasche in
   eine der 6 Getränkefächer einfügen

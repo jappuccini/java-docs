@@ -17,37 +17,37 @@ classDiagram
     CreatureGame o-- Creature
 
     class CreatureGame {
-        -creature1 Creature
-        -creature2 Creature
-        -numberOfRounds int
-        +Game(creature1 Creature, creature2 Creature)
+        -creature1: Creature
+        -creature2: Creature
+        -numberOfRounds: int
+        +Game(creature1: Creature, creature2: Creature)
         +simulateFight() void
-        -move(creature1 Creature, creature2 Creature) boolean
+        -move(creature1: Creature, creature2: Creature) boolean
         -print() void
     }
 
     class Creature {
-        -name String
-        -attackValue int
-        -hitpoints int
-        +Creature(name String, attackValue int, hitpoints int)
-        +attackCreature(creature Creature) boolean
+        -name: String
+        -attackValue: int
+        -hitpoints: int
+        +Creature(name: String, attackValue: int, hitpoints: int)
+        +attackCreature(creature: Creature) boolean
         +getName() String
         +getAttackValue() int
         +getHitpoints() int
-        +setHitpoints(hitpoints int) void
+        +setHitpoints(hitpoints: int) void
         +print() void
     }
 ```
 
-## Hinweise zur Klasse Creature
+## Hinweise zur Klasse _Creature_
 
 - Passe die Methode `boolean attack(creature: Creature)` so an, dass der
   Rückgabewert `true` ist, wenn die Lebenspunkte der angegriffenen Kreatur
   kleiner gleich Null sind, bzw. `false`, wenn nicht
 - Die Methode `void print()` soll alle Attribute auf der Konsole ausgeben
 
-## Hinweise zur Klasse CreatureGame
+## Hinweise zur Klasse _CreatureGame_
 
 - Der Konstruktor soll alle Attribute initialisieren
 - Die Methode `void simulateFight()` soll die beiden Kreaturen sich so lange

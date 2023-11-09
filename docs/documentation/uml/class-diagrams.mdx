@@ -21,37 +21,48 @@ Klassen werden im Klassendiagramm als Rechteck mit verschiedenen Bereichen
 
 - Der Klassenname wird zentriert, fett gedruckt und mit einem Großbuchstaben
   beginnend dargestellt
-- Attribute werden nach dem Muster _[Sichtbarkeit]_ _[Attributname] [Datentyp] =
-  [Anfangswert]_ dargestellt
-- Methoden nach dem Muster _[Sichtbarkeit]_ _[Methoden-Signatur]: [Datentyp des
-  Rückgabewertes]_ dargestellt
+- Attribute werden nach dem Muster _[Sichtbarkeit]_ _Attributname: Datentyp [=
+  Standardwert] [\{Eigenschaft}]_ dargestellt
+- Methoden nach dem Muster _[Sichtbarkeit]_ _Methoden-Signatur: Datentyp des
+  Rückgabewertes [\{Eigenschaft}]_ dargestellt
 - Die Sichtbarkeit von Attributen und Methoden wird durch (farbige) Symbole
   dargestellt:
-  - Die Sichtbarkeit `public` wird durch das Symbol **+** bzw. die Farbe
-    **grün** dargestellt
-  - Die Sichtbarkeit `protected` wird durch das Symbol **#** bzw. die Farbe
-    **gelb** dargestellt
-  - Die Sichtbarkeit `packaged` wird durch das Symbol **~** bzw. die Farbe
-    **blau** dargestellt
-  - Die Sichtbarkeit `private` wird durch das Symbol **-** bzw. die Farbe
-    **rot** dargestellt
+  - Die Sichtbarkeit `public` wird durch das Symbol _+_ bzw. die Farbe _grün_
+    dargestellt
+  - Die Sichtbarkeit `protected` wird durch das Symbol _#_ bzw. die Farbe _gelb_
+    dargestellt
+  - Die Sichtbarkeit `packaged` wird durch das Symbol _~_ bzw. die Farbe _blau_
+    dargestellt
+  - Die Sichtbarkeit `private` wird durch das Symbol _-_ bzw. die Farbe _rot_
+    dargestellt
 - Statische Attribute und Methoden werden durch Unterstriche kenntlich gemacht
-- Abstrakte Methoden werden kursiv dargestellt
+- Finale Attribute und Methoden werden durch die Eigenschaft _final_ kenntlich
+  gemacht
+- Abstrakte Methoden werden entweder kursiv dargestellt oder durch die
+  Eigenschaft _abstract_ kenntlich gemacht
 
 ```mermaid
 classDiagram
     class Person {
-        -name String
-        -age int
-        -gender char
-        -numberOfPersons int$
-        +Person(name String, age int, gender char)
+        -name: String
+        -age: int
+        -gender: char
+        -numberOfPersons: int$
+        +Person(name: String, age: int, gender: char)
         +name() String
         +age() int
         +gender() char
         +numberOfPersons()$ int
     }
 ```
+
+:::danger Hinweis
+
+Da es in der aktuellen Version von Mermaid einen Fehler bei der Darstellung
+statischer Attribute gibt, werden diese aktuell durch das Symbol `$`
+dargestellt.
+
+:::
 
 ## Darstellung spezieller Klassen
 
@@ -74,7 +85,24 @@ classDiagram
         FRIDAY = Friday
         SATURDAY = Saturday
        SUNDAY = Sunday
-        -description String
+        -description: String
+    }
+```
+
+  </TabItem>
+  <TabItem value="abstractAndFinalClasses" label="Abstrakte und finale Klassen">
+
+Abstrakte und finale Klassen werden durch die Stereotypen `abstract` bzw.
+`final` kenntlich gemacht.
+
+```mermaid
+classDiagram
+    Foo <|-- Bar
+    class Foo {
+        <<abstract>>
+    }
+    class Bar {
+        <<final>>
     }
 ```
 
@@ -89,7 +117,7 @@ abstrakt sind.
 classDiagram
     class Comparable~T~ {
         <<interface>>
-        +compareTo(o T) int
+        +compareTo(o: T) int
     }
 ```
 
@@ -105,9 +133,9 @@ für die Object-Methoden besitzt.
 classDiagram
     class Person {
         <<record>>
-        -name String
-        -age int
-        -gender char
+        -name: String
+        -age: int
+        -gender: char
     }
 ```
 
@@ -120,8 +148,8 @@ Rechteck dargestellt.
 ```mermaid
 classDiagram
     class Box~T~ {
-        -content T
-        +setContent(content T) void
+        -content: T
+        +setContent(content: T) void
         +getContent() T
     }
 ```

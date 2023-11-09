@@ -16,16 +16,16 @@ classDiagram
 
     class SpaceStation {
         <<record>>
-        -name String
-        -bays Map~Integer&sbquo; SpaceFighter~
-        +land(bayNumber Integer, spaceFighter SpaceFighter) void
+        -name: String
+        -bays: Map~Integer, SpaceFighter~
+        +land(bayNumber: Integer, spaceFighter: SpaceFighter) void
         +getFastestSpaceFighter() Optional~SpaceFighter~
     }
 
     class SpaceFighter {
         <<record>>
-        -id String
-        -type Type
+        -id: String
+        -type: Type
     }
 
     class Type {
@@ -35,7 +35,7 @@ classDiagram
         X_WING = 1050
         Y_WING = 1000
         TIE_FIGHTER = 1200
-        -maxSpeedInKmh int
+        -maxSpeedInKmh: int
     }
 ```
 
@@ -46,7 +46,7 @@ classDiagram
 - So nicht anders angegeben, sollen Konstruktoren, Setter, Getter sowie die
   Object-Methoden wie gewohnt implementiert werden
 
-## Hinweise zur Klasse SpaceStation
+## Hinweise zur Klasse _SpaceStation_
 
 - Die Methode `void land(bayNumber: Integer, spaceFighter: SpaceFighter)` soll
   den eingehenden Sternenjäger in der Bucht mit der eingehenden Buchtnummer

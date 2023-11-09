@@ -22,47 +22,47 @@ classDiagram
     DiceGame o-- DiceCup
 
     class Player {
-        -name String
-        -score int
-        -isActive boolean
-        +Player(name String)
+        -name: String
+        -score: int
+        -isActive: boolean
+        +Player(name: String)
         +getName() String
         +getScore() int
-        +setScore(int score) void
+        +setScore(int: score) void
         +isActive() boolean
-        +setActive(isActive boolean) void
+        +setActive(isActive: boolean) void
     }
 
     class Dice {
-        -id int
-        -value int
-        +Dice(id int)
+        -id: int
+        -value: int
+        +Dice(id: int)
         +getId() int
         +getValue() int
         +rollTheDice() void
     }
 
     class DiceCup {
-        +rollTheDices(dices Dice...) void
+        +rollTheDices(dices: Dice...) void
     }
 
     class DiceGame {
-        -diceCup DiceCup
-        -dices ArrayList~Dice~
-        -players ArrayList~Player~
-        -scanner Scanner
-        +DiceGame(players ArrayList~Player~)
+        -diceCup: DiceCup
+        -dices: ArrayList~Dice~
+        -players: ArrayList~Player~
+        -scanner: Scanner
+        +DiceGame(players: ArrayList~Player~)
         +start() void
-        +move(player Player) void
+        +move(player: Player) void
     }
 ```
 
-## Hinweis zur Klasse Player
+## Hinweis zur Klasse _Player_
 
 Passe den Konstruktor so an, dass auch weiterhin alle Attribute initialisiert
 werden.
 
-## Hinweise zur Klasse DiceGame
+## Hinweise zur Klasse _DiceGame_
 
 - Der Konstruktor soll alle Attribute initialisieren
 - Die Methode `void start()` soll die Spieler abwechselnd einen Spielzug machen
