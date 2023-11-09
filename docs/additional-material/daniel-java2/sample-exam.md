@@ -40,21 +40,21 @@ classDiagram
 
     class SuperHuman {
         <<abstract>>
-        -name String
-        -universe Universe
-        -power int
-        +SuperHuman(name String, universe Universe, power int)
+        -name: String
+        -universe: Universe
+        -power: int
+        +SuperHuman(name: String, universe: Universe, power: int)
         +name() String
         +universe() Universe
         +power() int
     }
 
     class Villain {
-        +Villain(name String, universe Universe, power int)
+        +Villain(name: String, universe: Universe, power: int)
     }
 
     class Hero {
-        +Hero(name String, universe Universe, power int)
+        +Hero(name: String, universe: Universe, power: int)
     }
 
     class Universe {
@@ -65,20 +65,20 @@ classDiagram
 
     class SuperLeague~T extends SuperHuman~ {
         <<record>>
-        -name String
-        -universe Universe
-        -members Map~T&sbquo; Boolean~
-        +addSuperHuman(t T) void
+        -name: String
+        -universe: Universe
+        -members: Map~T, Boolean~
+        +addSuperHuman(t: T) void
         +getMostPowerfulSuperHuman() Optional~T~
         +getAllAvailableSuperHumans() List~T~
-        +sendSuperHumanOnMission(t T) void
+        +sendSuperHumanOnMission(t: T) void
     }
 
     class SuperLeagueTest {
-        -avengers SuperLeague~Hero~
-        -superman Hero
-        -ironman Hero
-        -spiderman Hero
+        -avengers: SuperLeague~Hero~
+        -superman: Hero
+        -ironman: Hero
+        -spiderman: Hero
         +setUp() void
         +testAddSuperHuman() void
         +testGetAllAvailableSuperHumans() void
@@ -86,7 +86,7 @@ classDiagram
     }
 ```
 
-### Hinweise zur Klasse SuperLeagueTest
+### Hinweise zur Klasse _SuperLeagueTest_
 
 - Die Lebenszyklus-Methode `void setUp()` soll das nachfolgende Testszenario
   aufbauen:
@@ -109,7 +109,7 @@ classDiagram
   Aufruf der Methode `Optional<T> getMostPowerfulSuperHuman()` auf das Attribut
   `avengers` der Superheld Spider-Man als Optional zurückgegeben wird
 
-### Hinweis zur Klasse SuperLeague
+### Hinweis zur Klasse _SuperLeague_
 
 Die Methode `void addSuperHuman(t: T)` kann die Ausnahme
 `WrongUniverseException` auslösen.
@@ -169,21 +169,21 @@ classDiagram
 
     class SuperHuman {
         <<abstract>>
-        -name String
-        -universe Universe
-        -power int
-        +SuperHuman(name String, universe Universe, power int)
+        -name: String
+        -universe: Universe
+        -power: int
+        +SuperHuman(name: String, universe: Universe, power: int)
         +name() String
         +universe() Universe
         +power() int
     }
 
     class Villain {
-        +Villain(name String, universe Universe, power int)
+        +Villain(name: String, universe: Universe, power: int)
     }
 
     class Hero {
-        +Hero(name String, universe Universe, power int)
+        +Hero(name: String, universe: Universe, power: int)
     }
 
     class Universe {
@@ -194,17 +194,17 @@ classDiagram
 
     class SuperLeague~T extends SuperHuman~ {
         <<record>>
-        -name String
-        -universe Universe
-        -members Map~T&sbquo; Boolean~
-        +addSuperHuman(t T) void
+        -name: String
+        -universe: Universe
+        -members: Map~T, Boolean~
+        +addSuperHuman(t: T) void
         +getMostPowerfulSuperHuman() Optional~T~
         +getAllAvailableSuperHumans() List~T~
-        +sendSuperHumanOnMission(t T) void
+        +sendSuperHumanOnMission(t: T) void
     }
 ```
 
-### Hinweise zur Klasse SuperLeague&lt;T extends SuperHuman&gt;
+### Hinweise zur Klasse _SuperLeague_
 
 - Der Assoziativspeicher `members` beinhaltet als Schlüssel alle Übermenschen
   der Liga sowie als Wert deren Verfügbarkeit (verfügbar: `true`, nicht
@@ -277,18 +277,18 @@ classDiagram
 
     class Single {
         <<record>>
-        -name String
-        -artist Artist
-        -salesInMillions int
-        -publishingYear String
+        -name: String
+        -artist: Artist
+        -salesInMillions: int
+        -publishingYear: String
     }
 
     class Artist {
         <<record>>
-        -name String
-        -country Country
-        -birthdate LocalDate
-        -isAlive boolean
+        -name: String
+        -country: Country
+        -birthdate: LocalDate
+        -isAlive: boolean
     }
 
     class Country {
@@ -304,7 +304,7 @@ classDiagram
 
     class SingleQueries {
         <<record>>
-        -singles List~Single~
+        -singles: List~Single~
         +printAllSinglesWithMoreThan25MillionSalesPerCountry() void
         +printAverageBirthYearOfAllDeceasedArtists() void
         +isAnySingleFromChinaWithMoreThan10MillionSales() boolean
@@ -313,11 +313,11 @@ classDiagram
     }
 ```
 
-### Hinweise zur Klasse SingleQueries
+### Hinweise zur Klasse _SingleQueries_
 
 - Die Methode `void printAllSinglesWithMoreThan25MillionSalesPerCountry()` soll
   alle Singles, die sich mehr als 25 Millionen mal verkauft haben, gruppiert
-  nach dem Land in der Form _[Land\]: [[Single\], [Single\],...\]_ ausgeben
+  nach dem Land in der Form _Artist.country: [Single, Single,...]_ ausgeben
 - Die Methode `void printAverageBirthYearOfAllDeceasedArtists()` soll das
   durchschnittliche Geburtsjahr aller verstorbenen Künstler bzw. aller
   verstorbenen Künstlerinnen ausgeben. Für den Fall, dass es keinen verstorbenen
@@ -328,9 +328,8 @@ classDiagram
   gibt, welches sich mehr als 10 Millionen Mal verkauft hat
 - Die Methode `List<String> getTop3SinglesOfThisCenturyBySalesInMillions()` soll
   die 3 am häufigsten verkauften Singles des jetzigen Jahrtausends sortiert nach
-  der Anzahl Verkäufe in Millionen in der Form _[Name der Single\]: [Name des
-  Künstlers bzw. Name der Künstlerin\], [Verkäufe in Millionen\] Millionen_
-  zurückgeben
+  der Anzahl Verkäufe in Millionen in der Form _Single.name: Artist.name,
+  Single.salesInMillions Millionen_ zurückgeben
 - Die Methode `List<Single> getAllSinglesFromEdSheeran()` soll alle Singles des
   Künstlers Ed Sheeran (Land: Großbritannien, Geburtstag: 17.02.1991, Status:
   lebendig) zurückgeben

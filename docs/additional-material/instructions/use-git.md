@@ -29,7 +29,7 @@ sidebar_position: 30
 - Option _**Git Staging**_ auswählen
 - Drucktaste _**OK**_ betätigen
 
-## Änderungen eines lokalen Git-Repositories hochladen (Pushen)
+## Änderungen eines lokalen Git-Repositorys hochladen (Pushen)
 
 - In der View _**Git Staging**_ alle geänderten Objekte markieren und Drucktaste
   _**Add selected files to the index**_ betätigen

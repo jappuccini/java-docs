@@ -16,22 +16,22 @@ classDiagram
 
     class HumanResources {
         <<record>>
-        +telephoneBook Map~TelephoneNumber&sbquo; Person~
-        +staff List~Person~
-        +addTelephoneNumber(telephoneNumber TelephoneNumber, person Person) void
-        +addStaff(person Person) void
-        +getTelephoneNumbersByPersonId(id int) List~TelephoneNumber~
+        -telephoneBook: Map~TelephoneNumber, Person~
+        -staff: List~Person~
+        +addTelephoneNumber(telephoneNumber: TelephoneNumber, person: Person) void
+        +addStaff(person: Person) void
+        +getTelephoneNumbersByPersonId(id: int) List~TelephoneNumber~
     }
 
     class Person {
         <<record>>
-        -id int
-        -name String
+        -id: int
+        -name: String
     }
 
     class TelephoneNumber {
         <<record>>
-        -digits int[*]
+        -digits: int[*]
     }
 ```
 
@@ -42,7 +42,7 @@ classDiagram
 - So nicht anders angegeben, sollen Konstruktoren, Setter, Getter sowie die
   Object-Methoden wie gewohnt implementiert werden
 
-## Hinweise zur Klasse HumanResources
+## Hinweise zur Klasse _HumanResources_
 
 - Die Methode
   `void addTelephoneNumber(telephoneNumber: TelephoneNumber, person: Person)`

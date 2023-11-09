@@ -18,14 +18,14 @@ classDiagram
     Bottle <|-- WineBottle
 
     class Crate~T extends Bottle~ {
-        -box1 T
-        -box2 T
-        -box3 T
-        -box4 T
-        -box5 T
-        -box6 T
-        +insertBottle(bottle T, box int) void
-        +takeBottle(box int) Optional~T~
+        -box1: T
+        -box2: T
+        -box3: T
+        -box4: T
+        -box5: T
+        -box6: T
+        +insertBottle(bottle: T, box: int) void
+        +takeBottle(box: int) Optional~T~
     }
 
     class Bottle {

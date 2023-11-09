@@ -7,8 +7,8 @@ tags: [java-api, wrappers]
 
 Wrapper-Klassen (auch Hüllenklassen genannt) verpacken primitive Datentypen in
 vollwertigen Klassen und erweitern so die primitiven Datentypen um hilfreiche
-Methoden. Das Verpacken eines primitiven Datentyps bezeichnet man als
-**Boxing**, das Entpacken als **Unboxing**.
+Methoden. Das Verpacken eines primitiven Datentyps bezeichnet man als _Boxing_,
+das Entpacken als _Unboxing_.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {

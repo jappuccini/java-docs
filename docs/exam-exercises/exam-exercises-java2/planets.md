@@ -21,11 +21,11 @@ classDiagram
 
     class Planet {
         <<record>>
-        -name String
-        -diameterInKm double
-        -massInE24Kg double
-        -moons int
-        -type Type
+        -name: String
+        -diameterInKm: double
+        -massInE24Kg: double
+        -moons: int
+        -type: Type
     }
 
     class Type {
@@ -47,7 +47,7 @@ classDiagram
 - So nicht anders angegeben, sollen Konstruktoren, Setter, Getter sowie die
   Object-Methoden wie gewohnt implementiert werden
 
-## Hinweis zur Klasse Planets
+## Hinweis zur Klasse _Planets_
 
 Die Methode `List<Planet> getPlanets()` soll alle Planeten des Sonnensystems
 zurückgeben.

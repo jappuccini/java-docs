@@ -19,32 +19,32 @@ classDiagram
 
     class Word {
         <<record>>
-        -value String
-        -language Language
-        +compareTo(other Word) int
+        -value: String
+        -language: Language
+        +compareTo(other: Word) int
     }
 
     class Comparable~Word~ {
         <<interface>>
-        +compareTo(o Word) int
+        +compareTo(o: Word) int
     }
 
     class Language {
         <<enumeration>>
         DE = DE, Deutsch
         EN = EN, Englisch
-        -code String
-        -description String
+        -code: String
+        -description: String
     }
 
     class Dictionary {
         <<record>>
-        -sourceLanguage Language
-        -targetLanguage Language
-        -entries Map~Word&sbquo; Word~
-        +addEntry(sourceWord Word, targetWord Word) void
-        +importEntries(file File) void
-        +getTranslation(word String) Optional~String~
+        -sourceLanguage: Language
+        -targetLanguage: Language
+        -entries: Map~Word, Word~
+        +addEntry(sourceWord: Word, targetWord: Word) void
+        +importEntries(file: File) void
+        +getTranslation(word: String) Optional~String~
     }
 ```
 
@@ -55,12 +55,12 @@ classDiagram
 - So nicht anders angegeben, sollen Konstruktoren, Setter, Getter sowie die
   Object-Methoden wie gewohnt implementiert werden
 
-## Hinweis zur Klasse Word
+## Hinweis zur Klasse _Word_
 
 Die Methode `int compareTo(other: Word)` soll so implementiert werden, dass
 damit Wörter aufsteigend nach ihrem Wert sortiert werden können.
 
-## Hinweise zur Klasse Dictionary
+## Hinweise zur Klasse _Dictionary_
 
 - Die Methode `void addEntry(sourceWord: Word, targetWord: Word)` soll den
   Einträgen des Wörterbuches (`entries`) die eingehenden Wörter als Eintrag

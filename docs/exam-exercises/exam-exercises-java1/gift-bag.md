@@ -15,25 +15,25 @@ classDiagram
     Present o-- Person
 
     class GiftBag {
-        -presents List~Present~
+        -presents: List~Present~
         +GiftBag()
-        +addPresent(present Present) void
+        +addPresent(present: Present) void
         +getMostExpensivePresent() Present
     }
 
     class Present {
-        -description String
-        -priceInEuro double
-        -sender Person
-        -recipient Person
-        +Present(description String, priceInEuro double, sender Person, recipient Person)
+        -description: String
+        -priceInEuro: double
+        -sender: Person
+        -recipient: Person
+        +Present(description: String, priceInEuro: double, sender: Person, recipient: Person)
     }
 
     class Person {
-        -name String
-        -age int
-        -gender char
-        +Player(name String, age int, gender char )
+        -name: String
+        -age: int
+        -gender: char
+        +Player(name: String, age: int, gender: char )
     }
 ```
 
@@ -44,7 +44,7 @@ classDiagram
 - So nicht anders angegeben, sollen Konstruktoren, Setter, Getter sowie die
   Object-Methoden wie gewohnt implementiert werden
 
-## Hinweise zur Klasse GiftBag
+## Hinweise zur Klasse _GiftBag_
 
 - Die Methode `void addPresent(present: present)` soll der Geschenkeliste
   (`presents`) das eingehende Geschenk hinzufügen

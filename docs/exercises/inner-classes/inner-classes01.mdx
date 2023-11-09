@@ -18,14 +18,14 @@ classDiagram
     House *-- Room
 
     class House {
-        -rooms ArrayList~Room~
-        +addRoom(room Room) void
+        -rooms: List~Room~
+        +addRoom(room: Room) void
         +printRooms() void
     }
 
     class Room {
-        -name String
-        +Room(name String)
+        -name: String
+        +Room(name: String)
         +printRoom() void
     }
 ```

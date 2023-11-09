@@ -29,35 +29,35 @@ classDiagram
         EGGS = Eier, 4
         FATS_AND_OILS = Fette und Öle, 5
         SWEETS = Süßigkeiten, 6
-        -description String
-        -points int
+        -description: String
+        -points: int
     }
 
     class Food {
-        -name String
-        -foodCategory FoodCategory
-        -calorificValueInKcal double
-        +Food(name String, foodCategory FoodCategory, calorificValueInKcal double)
+        -name: String
+        -foodCategory: FoodCategory
+        -calorificValueInKcal: double
+        +Food(name: String, foodCategory: FoodCategory, calorificValueInKcal: double)
     }
 
     class FastFood {
-        -isVegetarian boolean
-        -ratings List~Integer~
-        +FastFood(name String, foodCategory FoodCategory, calorificValueInKcal double, isVegetarian boolean)
-        +addRating(rating int) void
+        -isVegetarian: boolean
+        -ratings: List~Integer~
+        +FastFood(name: String, foodCategory: FoodCategory, calorificValueInKcal: double, isVegetarian: boolean)
+        +addRating(rating: int) void
         +getAverageRating() double
     }
 
     class Burger {
-        +Burger(name String, calorificValueInKcal double, isVegetarian boolean)
+        +Burger(name: String, calorificValueInKcal: double, isVegetarian: boolean)
     }
 
     class FastFoodShop {
-        -name String
-        -fastFood List~FastFood~
-        +FastFoodShop(name String)
-        +addFastFood(fastFood FastFood) void
-        +rateFastFood(fastFood FastFood, rating int) void
+        -name: String
+        -fastFood: List~FastFood~
+        +FastFoodShop(name: String)
+        +addFastFood(fastFood: FastFood) void
+        +rateFastFood(fastFood: FastFood, rating: int) void
         +getBestRatedBurger() Burger
     }
 ```
@@ -69,14 +69,14 @@ classDiagram
 - So nicht anders angegeben, sollen Konstruktoren, Setter, Getter sowie die
   Object-Methoden wie gewohnt implementiert werden
 
-## Hinweise zur Klasse FastFood
+## Hinweise zur Klasse _FastFood_
 
 - Die Methode `void addRating(rating: int)` soll den Bewertungen (`ratings`) die
   eingehende Bewertung hinzufügen
 - Die Methode `double getAverageRating()` soll die durchschnittliche Bewertung
   zurückgeben
 
-## Hinweise zur Klasse FastFoodShop
+## Hinweise zur Klasse _FastFoodShop_
 
 - Die Methode `void addFastFood(fastFood: FastFood)` soll das eingehende Fast
   Food zum Sortiment hinzufügen

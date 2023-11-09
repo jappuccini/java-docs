@@ -18,16 +18,16 @@ classDiagram
     Comparator~Coordinate~ <|.. CoordinateByDistanceToOriginPointComparator
 
     class CoordinateByDistanceToOriginPointComparator {
-        +compareTo(coordinate1 Coordinate, coordinate2 Coordinate) int
+        +compareTo(coordinate1: Coordinate, coordinate2: Coordinate) int
     }
 
     class Comparator~Coordinate~ {
         <<interface>>
-        +compare(o1 Coordinate, o2 Coordinate) int
+        +compare(o1: Coordinate, o2: Coordinate) int
     }
 ```
 
-## Hinweis zur Klasse CoordinateByDistanceToOriginComparator
+## Hinweis zur Klasse _CoordinateByDistanceToOriginComparator_
 
 Die Methode `int compare(coordinate1: Coordinate, coordinate2: Coordinate)` soll
 zwei eingehende Koordinaten anhand ihrer jeweiligen Distanz zum Nullpunkt

@@ -19,25 +19,25 @@ classDiagram
 
     class JobOffer {
         <<record>>
-        -id int
-        -title String
-        -recruiter Recruiter
-        -applicants List~Applicant~
-        +addApplicant(applicant Applicant) void
+        -id: int
+        -title: String
+        -recruiter: Recruiter
+        -applicants: List~Applicant~
+        +addApplicant(applicant: Applicant) void
     }
 
     class Person {
         <<abstract>>
-        -name String
-        -birthdateTimeStamp long
-        +Person(name String, birthdateTimeStamp long)
+        -name: String
+        -birthdateTimeStamp: long
+        +Person(name: String, birthdateTimeStamp: long)
     }
 
     class Applicant {
-        -applicantId int
-        -applicationDocuments List~ApplicationDocument~
-        +Applicant(name String, birthdateTimeStamp long, applicantId int)
-        +addApplicationDocument(applicationDocument ApplicationDocument) void
+        -applicantId: int
+        -applicationDocuments: List~ApplicationDocument~
+        +Applicant(name: String, birthdateTimeStamp: long, applicantId: int)
+        +addApplicationDocument(applicationDocument: ApplicationDocument) void
     }
 
     class Recruiter {
@@ -46,9 +46,9 @@ classDiagram
 
     class ApplicationDocument {
         <<record>>
-        -description String
-        -type String
-        -document File
+        -description: String
+        -type: String
+        -document: File
     }
 
     class JobOfferReader {
@@ -63,19 +63,19 @@ classDiagram
 - So nicht anders angegeben, sollen Konstruktoren, Setter, Getter sowie die
   Object-Methoden wie gewohnt implementiert werden
 
-## Hinweis zur Klasse Applicant
+## Hinweis zur Klasse _Applicant_
 
 Die Methode
 `void addApplicationDocument(applicationDocument: ApplicationDocument)` soll den
 Bewerbungsunterlagen (`applicationDocuments`) das eingehende Dokument
 hinzufügen.
 
-## Hinweis zur Klasse JobOffer
+## Hinweis zur Klasse _JobOffer_
 
 Die Methode `void addApplicant(applicant: Applicant)` soll der Bewerberliste
 (`applicants`) den eingehenden Bewerber hinzufügen.
 
-## Hinweis zur Klasse JobOfferReader
+## Hinweis zur Klasse _JobOfferReader_
 
 Die statische Methode `List<JobOffer> getJobOffers(file: File)` soll die
 Stellenangebote der eingehenden Datei zurückgeben. Die Ausnahme

@@ -16,29 +16,29 @@ classDiagram
     Player o-- Card
 
     class Player {
-        -cards List~Card~
-        +Player(cards List~Card~)
-        +addCard(card Card) void
+        -cards: List~Card~
+        +Player(cards: List~Card~)
+        +addCard(card: Card) void
         +getCardWithHighestValue() Card
-        +getCardsByColour(colour String) List~Card~
+        +getCardsByColour(colour: String) List~Card~
     }
 
     class CardDealer {
-        -deck List~Card~
-        -player1 Player
-        -player2 Player
-        +CardsDealer(deck List~Card~, player1 Player, player2 Player )
-        +dealCards(amount int) void
+        -deck: List~Card~
+        -player1: Player
+        -player2: Player
+        +CardsDealer(deck: List~Card~, player1: Player, player2: Player )
+        +dealCards(amount: int) void
     }
 
     class Card {
-        -colour String
-        -value int
-        +Card(colour String, value int)
+        -colour: String
+        -value: int
+        +Card(colour: String, value: int)
     }
 
     class CardsReader {
-        +getCards(file File) List~Card~
+        +getCards(file: File) List~Card~
     }
 ```
 
@@ -49,7 +49,7 @@ classDiagram
 - So nicht anders angegeben, sollen Konstruktoren, Setter, Getter sowie die
   Object-Methoden wie gewohnt implementiert werden
 
-## Hinweise zur Klasse Player
+## Hinweise zur Klasse _Player_
 
 - Die Methode `void addCard(card: Card)` soll dem Spieler die eingehende Karte
   hinzufügen
@@ -58,12 +58,12 @@ classDiagram
 - Die Methode `Card getCardWithHighestValue()` soll die Karte des Spielers mit
   dem höchsten Wert zurückgeben
 
-## Hinweis zur Klasse CardsDealer
+## Hinweis zur Klasse _CardsDealer_
 
 Die Methode `void dealCards(amount: int)` soll den beiden Spielern die
 eingehende Anzahl an zufälligen Karten des Decks austeilen
 
-## Hinweis zur Klasse CardsReader
+## Hinweis zur Klasse _CardsReader_
 
 Die Methode `List<Card> getCards(file: File)` soll alle Karten der eingehenden
 Datei zurückgeben.

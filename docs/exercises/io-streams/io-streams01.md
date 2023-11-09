@@ -12,12 +12,11 @@ description: ''
 
 ```mermaid
 classDiagram
-
     class Student {
         <<record>>
-        -id String
-        -name String
-        -gender char
+        -id: String
+        -name: String
+        -gender: char
     }
 ```
 

@@ -17,31 +17,31 @@ classDiagram
     Student o-- MatriculationNumber
 
     class MatriculationNumber {
-        -digits int[]
-        +MatriculationNumber(digit1 int, digit2 int, digit3 int, digit4 int, digit5 int, digit6 int, digit7 int)
+        -digits: int[]
+        +MatriculationNumber(digit1: int, digit2: int, digit3: int, digit4: int, digit5: int, digit6: int, digit7: int)
     }
 
     class Student {
-        -matriculationNumber MatriculationNumber
-        -name String
-        +Student(matriculationNumber int[7], name String)
+        -matriculationNumber: MatriculationNumber
+        -name: String
+        +Student(matriculationNumber: int[7], name: String)
     }
 
     class Lecture {
-        -code String
-        -description String
-        -creditPoints int
-        +Lecture(code String, description String, creditPoints int)
+        -code: String
+        -description: String
+        -creditPoints: int
+        +Lecture(code: String, description: String, creditPoints: int)
     }
 
     class StudyCourse {
-        -description String
-        -courseOfStudies CourseOfStudies
-        -lectures List~Lecture~
-        -students List~Student~
-        +StudyCourse(description String, courseOfStudies CourseOfStudies)
-        +addStudent(student Student) void
-        +addLecture(lecture Lecture) void
+        -description: String
+        -courseOfStudies: CourseOfStudies
+        -lectures: List~Lecture~
+        -students: List~Student~
+        +StudyCourse(description: String, courseOfStudies: CourseOfStudies)
+        +addStudent(student: Student) void
+        +addLecture(lecture: Lecture) void
         +getLectureWithMostCreditPoints() Lecture
     }
 
@@ -50,7 +50,7 @@ classDiagram
         WI = Wirtschaftsinformatik
         INF = Informatik
         BWL = BWL
-        -description String
+        -description: String
     }
 ```
 
@@ -61,7 +61,7 @@ classDiagram
 - So nicht anders angegeben, sollen Konstruktoren, Setter, Getter sowie die
   Object-Methoden wie gewohnt implementiert werden
 
-## Hinweis zur Klasse StudentCourse
+## Hinweis zur Klasse _StudentCourse_
 
 Die Methode `Lecture getLectureWithMostCreditPoints()` soll die Vorlesung mit
 den meisten ECTS-Punkten zurückgeben.

@@ -9,10 +9,10 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 Die Java API stellt unter Anderem die Schnittstelle `List<E>` sowie die Klassen
-`ArrayList<E>` und `Arrays` zur Verfügung, mit deren Hilfe Listen realisiert
-werden. Unter einer Liste versteht man eine geordnete Folge von Elementen, die
-auch doppelt enthalten sein können. Der Zugriff auf die Elemente erfolgt über
-den Index oder sequentiell.
+`ArrayList<E>`, `LinkedList<E>` und `Arrays` zur Verfügung, mit deren Hilfe
+Listen realisiert werden. Unter einer Liste versteht man eine geordnete Folge
+von Elementen, die auch doppelt enthalten sein können. Der Zugriff auf die
+Elemente erfolgt über den Index oder sequentiell.
 
 <Tabs>
   <TabItem value="list" label="Unveränderbare Listen" default>
@@ -71,7 +71,7 @@ public class MainClass {
 
 Die Klasse `ArrayList<E>` stellt eine veränderbare Liste dynamischer Größe auf
 Basis eine Feldes dar, die Klasse `LinkedList<E>` eine veränderbare Liste
-dynamischer Größe auf Basis einfach verketteter Elemente.
+dynamischer Größe auf Basis doppelt verketteter Elemente.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
@@ -94,9 +94,9 @@ public class MainClass {
 
 :::note Hinweis
 
-Eine ArrayList ist bei wahlfreiem Zugriff schneller als eine LinkedList; eine
-LinkedList ist bei Anfüge- und Löschoperationen (insbesondere bei großen
-Elementzahlen) schneller als eine ArrayList.
+Eine feldbasierte Liste ist bei wahlfreiem Zugriff schneller als eine verkettete
+Liste; eine verkettete Liste ist bei Anfüge- und Löschoperationen (insbesondere
+bei großen Elementzahlen) schneller als eine feldbasierte Liste.
 
 :::
 

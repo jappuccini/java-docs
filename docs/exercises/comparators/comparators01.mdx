@@ -16,22 +16,22 @@ classDiagram
     Comparable~Coordinate~ <|.. Coordinate
 
     class Coordinate {
-        -x int
-        -y int
-        +Coordinate(x int, y int)
+        -x: int
+        -y: int
+        +Coordinate(x: int, y: int)
         +getX() int
         +getY() int
         +getDistanceToOriginPoint() double
-        +compareTo(other Coordinate) int
+        +compareTo(other: Coordinate) int
     }
 
     class Comparable~Coordinate~ {
         <<interface>>
-        +compareTo(o Coordinate) int
+        +compareTo(o: Coordinate) int
     }
 ```
 
-## Hinweise zur Klasse Coordinate
+## Hinweise zur Klasse _Coordinate_
 
 - Die Methode `double getDistanceToOriginPoint()` soll die Distanz der
   Koordinate zum Nullpunkt zurückgeben

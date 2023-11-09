@@ -28,23 +28,23 @@ classDiagram
     Dice <|-- HighValueDice
 
     class Player {
-        -name String
-        -score int
-        -isActive boolean
-        -specialAvailable boolean
-        +Player(name String)
+        -name: String
+        -score: int
+        -isActive: boolean
+        -specialAvailable: boolean
+        +Player(name: String)
         +getName() String
         +getScore() int
-        +setScore(int score) void
+        +setScore(int: score) void
         +isActive() boolean
-        +setActive(isActive boolean) void
+        +setActive(isActive: boolean) void
         +getSpecialAvailable() boolean
-        +setSpecialAvailable(specialAvailable boolean) void
+        +setSpecialAvailable(specialAvailable: boolean) void
     }
 
     class Dice {
-        -id int
-        #value int
+        -id: int
+        #value: int
         +Dice(id int)
         +getId() int
         +getValue() int
@@ -52,35 +52,35 @@ classDiagram
     }
 
     class LowValueDice {
-        +LowValueDice(id int)
+        +LowValueDice(id: int)
         +rollTheDice() void
     }
 
     class HighValueDice {
-        +HighValueDice(id int)
+        +HighValueDice(id: int)
         +rollTheDice() void
     }
 
     class DiceCup {
-        +rollTheDices(dices Dice...) void
+        +rollTheDices(dices: Dice...) void
     }
 
     class DiceGame {
-        -diceCup DiceCup
-        -dices ArrayList~Dice~
-        -players ArrayList~Player~
-        -scanner Scanner
-        +DiceGame(players ArrayList~Player~)
+        -diceCup: DiceCup
+        -dices: ArrayList~Dice~
+        -players: ArrayList~Player~
+        -scanner: Scanner
+        +DiceGame(players: ArrayList~Player~)
         +start() void
-        +move(player Player) void
+        +move(player: Player) void
     }
 ```
 
-## Hinweis zur Klasse HighValueDice
+## Hinweis zur Klasse _HighValueDice_
 
 Die Methode `void rollTheDice()` soll nur 4er, 5er und 6er "würfeln".
 
-## Hinweis zur Klasse LowValueDice
+## Hinweis zur Klasse _LowValueDice_
 
 Die Methode `void rollTheDice()` soll nur 1er, 2er und 3er "würfeln".
 

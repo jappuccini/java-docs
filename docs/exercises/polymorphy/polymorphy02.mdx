@@ -20,18 +20,18 @@ classDiagram
     Rental o-- Vehicle
 
     class Vehicle {
-        -make String
-        -model String
-        -engine Engine
-        #speed double
-        -numberOfVehicles int$
-        +Vehicle(make String, model String, engine Engine)
+        -make: String
+        -model: String
+        -engine: Engine
+        #speed: double
+        -numberOfVehicles: int$
+        +Vehicle(make: String, model: String, engine: Engine)
         +getMake() String
         +getModel() String
         +getEngine() Engine
         +getSpeed() double
-        +accelerate(value int) void
-        +brake(value int) void
+        +accelerate(value: int) void
+        +brake(value: int) void
         +print() void
         +getNumberOfVehicles()$ int
     }
@@ -42,21 +42,21 @@ classDiagram
         PETROL = Benzin
         GAS = Gas
         ELECTRO = Elektro
-        -description String
+        -description: String
     }
 
     class Car {
-        -seats int
-        +Car(make String, model String, engine Engine, seats int)
+        -seats: int
+        +Car(make: String, model: String, engine: Engine, seats: int)
         +getSeats() int
         +doATurboBoost() void
         +print() void
     }
 
     class Truck {
-        -cargo int
-        -isTransformed boolean
-        +Truck(make String, model String, engine Engine, cargo int)
+        -cargo: int
+        -isTransformed: boolean
+        +Truck(make: String, model: String, engine: Engine, cargo: int)
         +getCargo() int
         +isTransformed() boolean
         +transform() void
@@ -64,16 +64,16 @@ classDiagram
     }
 
     class Rental {
-        -name String
-        -vehicles ArrayList~Vehicle~
-        +Rental(name String)
-        +addVehicle(vehicle Vehicle) void
-        +addAllVehicles(vehicles Vehicle...) void
+        -name: String
+        -vehicles: ArrayList~Vehicle~
+        +Rental(name: String)
+        +addVehicle(vehicle: Vehicle) void
+        +addAllVehicles(vehicles: Vehicle...) void
         +print() void
     }
 ```
 
-## Hinweise zur Klasse Rental
+## Hinweise zur Klasse _Rental_
 
 - Der Konstruktor soll alle Attribute initialisieren
 - Die Methode `void addVehicle(vehicle: Vehicle)` soll der Fahrzeugvermietung

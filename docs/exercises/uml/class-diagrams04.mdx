@@ -18,44 +18,44 @@ classDiagram
     Employee o-- Person
 
     class Company {
-        -name String
-        -employees ArrayList~Employee~
-        -numberOfEmployees int
-        +Company(name String)
-        +addEmployee(employee Employee) void
+        -name: String
+        -employees: ArrayList~Employee~
+        -numberOfEmployees: int
+        +Company(name: String)
+        +addEmployee(employee: Employee) void
         +print() void
     }
 
     class Person {
-        -name String
-        +Person(name String)
+        -name: String
+        +Person(name: String)
         +getName() String
     }
 
     class Employee {
-        -employeeId int
-        -person Person
-        -salary int
-        +Employee(employeeId int, person Person, salary int)
+        -employeeId: int
+        -person: Person
+        -salary: int
+        +Employee(employeeId: int, person: Person, salary: int)
         +getEmployeeId() int
         +getName() String
-        +setSalary(salary int) void
+        +setSalary(salary: int) void
         +getSalary() int
         +print() void
     }
 ```
 
-## Hinweis zur Klasse Person
+## Hinweis zur Klasse _Person_
 
 Der Konstruktor soll den Namen initialisieren.
 
-## Hinweise zur Klasse Employee
+## Hinweise zur Klasse _Employee_
 
 - Der Konstruktor soll alle Attribute initialisieren
 - Die Methode `String getName()` soll den Namen des Mitarbeiters zurückgeben
 - Die Methode `void print()` soll alle Attribute auf der Konsole ausgeben
 
-## Hinweise zur Klasse Company
+## Hinweise zur Klasse _Company_
 
 - Der Konstruktor soll den Namen sowie die Mitarbeiterliste initialisieren
 - Die Methode `void addEmployee(employee: Employee)` soll der Mitarbeiterliste
