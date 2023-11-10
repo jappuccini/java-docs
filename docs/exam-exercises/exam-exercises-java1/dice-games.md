@@ -18,7 +18,7 @@ classDiagram
     ShapeSymbolDice o-- ShapeSymbol
 
     class Player {
-        -name: String
+        -name: String &#123final&#125
         -points: int
         +Player(name: String, points: int)
         +addPoints(points: int) void
@@ -30,7 +30,7 @@ classDiagram
     }
 
     class CardColorDice {
-        -cardColor: CardColor
+        -cardColor: CardColor &#123final&#125
         +rollTheDice() void
     }
 
@@ -50,8 +50,8 @@ classDiagram
         SPADE = Pik, 2
         HEARTS = Herz, 3
         DIAMONDS = Karo, 4
-        -description: String
-        -priority: int
+        -description: String &#123final&#125
+        -priority: int &#123final&#125
     }
 
     class ShapeSymbol {
@@ -59,7 +59,7 @@ classDiagram
         CIRCLE = 0
         SQUARE = 4
         TRIANGLE = 3
-        -corners: int
+        -corners: int &#123final&#125
     }
 ```
 

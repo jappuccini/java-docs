@@ -20,8 +20,8 @@ classDiagram
         USB_C = USB C, true
         USB_MICRO = USB Micro, false
         THUNDERBOLT = Thunderbolt, true
-        -description: String
-        -isModern: boolean
+        -description: String &#123final&#125
+        -isModern: boolean &#123final&#125
     }
 
     class Brand {
@@ -33,22 +33,18 @@ classDiagram
 
     class Phone {
         <<record>>
-        -description: String
-        -brand: Brand
-        -conncetionType: ConnectionType
-        -numberOfCameras: int
-        -batteryCapacityInMAh: int
-        -cpuPowerInGHz: double
-        -priceInEuro: double
-    }
-
-    class DataProvider {
-        +getPhones()$ List~Phone~
+        description: String
+        brand: Brand
+        conncetionType: ConnectionType
+        numberOfCameras: int
+        batteryCapacityInMAh: int
+        cpuPowerInGHz: double
+        priceInEuro: double
     }
 
     class PhoneStore {
         <<record>>
-        -phones: List~Phone~
+        phones: List~Phone~
         +query1() List~Phone~
         +query2() OptionalDouble
         +query3(maxPriceInEuro: double) List~Phone~

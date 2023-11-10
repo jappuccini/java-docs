@@ -16,8 +16,8 @@ classDiagram
 
     class HumanResources {
         <<record>>
-        -telephoneBook: Map~TelephoneNumber, Person~
-        -staff: List~Person~
+        telephoneBook: Map~TelephoneNumber, Person~
+        staff: List~Person~
         +addTelephoneNumber(telephoneNumber: TelephoneNumber, person: Person) void
         +addStaff(person: Person) void
         +getTelephoneNumbersByPersonId(id: int) List~TelephoneNumber~
@@ -25,13 +25,13 @@ classDiagram
 
     class Person {
         <<record>>
-        -id: int
-        -name: String
+        id: int
+        name: String
     }
 
     class TelephoneNumber {
         <<record>>
-        -digits: int[*]
+        digits: int[*]
     }
 ```
 
