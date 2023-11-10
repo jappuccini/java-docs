@@ -19,15 +19,15 @@ classDiagram
 
     class Product {
         <<abstract>>
-        -description: String
+        -description: String &#123final&#125
         -price: double
         -currency: String
         +Product(description: String, price: double, currency: String)
     }
 
     class Goods {
-        -classOfGoods: ClassOfGoods
-        -unit: String
+        -classOfGoods: ClassOfGoods &#123final&#125
+        -unit: String &#123final&#125
         +Goods(description: String, price: double, currency: String, classOfGoods: ClassOfGoods, unit: String)
         +compareTo(other: Goods) int
     }
@@ -39,8 +39,8 @@ classDiagram
 
     class CornerShop {
         <<record>>
-        -name: String
-        -store: Map~Goods, Integer~
+        name: String
+        store: Map~Goods, Integer~
         +getAmountByDescription(description: String) Optional~Integer~
         +buyGoods(goods: Goods, amount: int) void
         +sellGoods(goods: Goods, amount: int) void
@@ -52,7 +52,7 @@ classDiagram
         DAIRY_PRODUCTS = Milchprodukte
         FRUITS = Obst
         VEGETABLES = Gemüse
-        -description: String
+        -description: String &#123final&#125
     }
 ```
 

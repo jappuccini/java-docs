@@ -16,8 +16,8 @@ classDiagram
     Animal <|-- Fish
 
     class Zoo {
-        -name: String
-        -animals: List~Animal~
+        -name: String &#123final&#125
+        -animals: List~Animal~ &#123final&#125
         +Zoo(name: String, animals: List~Animal~)
         +addAnimal(animal: Animal) void
         +getBiggestAnimal() Animal
@@ -25,9 +25,9 @@ classDiagram
     }
 
     class Animal {
-        -description: String
-        -sizeInM: double
-        -weigthInKg: double
+        -description: String &#123final&#125
+        -sizeInM: double &#123final&#125
+        -weigthInKg: double &#123final&#125
         +Animal(description: String, sizeInM: double, weigthInKg: double)
     }
 
