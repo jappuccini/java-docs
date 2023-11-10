@@ -42,10 +42,6 @@ classDiagram
         -priceInEuro: double
     }
 
-    class DataProvider {
-        +getPhones()$ List~Phone~
-    }
-
     class PhoneStore {
         <<record>>
         -phones: List~Phone~

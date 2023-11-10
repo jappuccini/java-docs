@@ -75,7 +75,3 @@ classDiagram
 - Die Methode `void printLongestTankFromGermany()` soll den Namen des längsten
   Panzers aus Deutschland auf der Konsole aus- geben. Gibt es keinen Panzer aus
   Deutschland, soll stattdessen der Wert `null` ausgegeben werden
-
-## Hinweis zur Klasse _Tanks_
-
-Die Methode `List<Tank> getTanks()` soll verschiedene Panzer zurückgeben.

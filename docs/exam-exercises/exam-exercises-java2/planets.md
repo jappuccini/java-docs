@@ -34,10 +34,6 @@ classDiagram
         TERRESTRIAL_PLANET
         DWARF_PLANET
     }
-
-    class Planets {
-        +getPlanets()$ List~Planet~
-    }
 ```
 
 ## Allgemeine Hinweise
@@ -46,8 +42,3 @@ classDiagram
   Object-Methoden dargestellt
 - So nicht anders angegeben, sollen Konstruktoren, Setter, Getter sowie die
   Object-Methoden wie gewohnt implementiert werden
-
-## Hinweis zur Klasse _Planets_
-
-Die Methode `List<Planet> getPlanets()` soll alle Planeten des Sonnensystems
-zurückgeben.
