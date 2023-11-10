@@ -22,35 +22,35 @@ import Exercise from '@site/src/components/Exercise';
 
 ## Attribute der Klasse _Engine_
 
-| Attribut      | Datentyp | Sichtbarkeit | Level            |
-| ------------- | -------- | ------------ | ---------------- |
-| _description_ | _String_ | _private_    | _nicht-statisch_ |
+| Attribut      | Datentyp | Sichtbarkeit | Veränderlichkeit | Level            |
+| ------------- | -------- | ------------ | ---------------- | ---------------- |
+| _description_ | _String_ | _private_    | _unveränderlich_ | _nicht-statisch_ |
 
 ## Methoden der Klasse Engine
 
 | Methode                       | Rückgabewert | Sichtbarkeit | Level            | Beschreibung                        |
 | ----------------------------- | ------------ | ------------ | ---------------- | ----------------------------------- |
 | _Engine(description: String)_ | _void_       | _private_    | _nicht-statisch_ | _Festlegen der Motorenbeschreibung_ |
-| _getDescription()_            | _String_     | _public_     | _nicht-statisch_ | _Rückgabe der Motorenbeschreibung_  |
+| _description()_               | _String_     | _public_     | _nicht-statisch_ | _Rückgabe der Motorenbeschreibung_  |
 
 ## Attribute der Klasse _Vehicle_
 
-| Attribut         | Datentyp | Sichtbarkeit | Level            |
-| ---------------- | -------- | ------------ | ---------------- |
-| make             | String   | private      | nicht-statisch   |
-| model            | String   | private      | nicht-statisch   |
-| _engine_         | _Engine_ | _private_    | _nicht-statisch_ |
-| speed            | double   | private      | nicht-statisch   |
-| numberOfVehicles | int      | private      | statisch         |
+| Attribut         | Datentyp | Sichtbarkeit | Veränderlichkeit | Level            |
+| ---------------- | -------- | ------------ | ---------------- | ---------------- |
+| make             | String   | private      | unveränderlich   | nicht-statisch   |
+| model            | String   | private      | unveränderlich   | nicht-statisch   |
+| _engine_         | _Engine_ | _private_    | _unveränderlich_ | _nicht-statisch_ |
+| speed            | double   | private      | veränderlich     | nicht-statisch   |
+| numberOfVehicles | int      | private      | veränderlich     | statisch         |
 
 ## Methoden der Klasse _Vehicle_
 
 | Methode                                                | Rückgabewert | Sichtbarkeit | Level            | Beschreibung                                            |
 | ------------------------------------------------------ | ------------ | ------------ | ---------------- | ------------------------------------------------------- |
 | _Vehicle(make: String, model: String, engine: Engine)_ | void         | public       | nicht-statisch   | _Festlegen des Herstellers, des Modells und des Motors_ |
-| getMake()                                              | String       | public       | nicht-statisch   | Rückgabe des Herstellers                                |
-| getModel()                                             | String       | public       | nicht-statisch   | Rückgabe des Modells                                    |
-| _getEngine()_                                          | _Engine_     | _public_     | _nicht-statisch_ | _Rückgabe des Motors_                                   |
+| make()                                                 | String       | public       | nicht-statisch   | Rückgabe des Herstellers                                |
+| model()                                                | String       | public       | nicht-statisch   | Rückgabe des Modells                                    |
+| _engine()_                                             | _Engine_     | _public_     | _nicht-statisch_ | _Rückgabe des Motors_                                   |
 | getSpeed()                                             | double       | public       | nicht-statisch   | Rückgabe der Geschwindigkeit                            |
 | accelerate(value: int)                                 | void         | public       | nicht-statisch   | Erhöhung der Geschwindigkeit um den eingehenden Wert    |
 | brake(value: int)                                      | void         | public       | nicht-statisch   | Reduzierung der Geschwindigkeit um den eingehenden Wert |

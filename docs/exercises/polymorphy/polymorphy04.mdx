@@ -28,12 +28,12 @@ classDiagram
     Dice <|-- HighValueDice
 
     class Player {
-        -name: String
+        -name: String &#123final&#125
         -score: int
         -isActive: boolean
         -specialAvailable: boolean
         +Player(name: String)
-        +getName() String
+        +name() String
         +getScore() int
         +setScore(int: score) void
         +isActive() boolean
@@ -43,10 +43,10 @@ classDiagram
     }
 
     class Dice {
-        -id: int
+        -id: int &#123final&#125
         #value: int
         +Dice(id int)
-        +getId() int
+        +id() int
         +getValue() int
         +rollTheDice() void
     }
@@ -66,10 +66,10 @@ classDiagram
     }
 
     class DiceGame {
-        -diceCup: DiceCup
-        -dices: ArrayList~Dice~
-        -players: ArrayList~Player~
-        -scanner: Scanner
+        -diceCup: DiceCup &#123final&#125
+        -dices: ArrayList~Dice~ &#123final&#125
+        -players: ArrayList~Player~ &#123final&#125
+        -scanner: Scanner &#123final&#125
         +DiceGame(players: ArrayList~Player~)
         +start() void
         +move(player: Player) void

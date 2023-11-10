@@ -20,15 +20,15 @@ classDiagram
     Rental o-- Vehicle
 
     class Vehicle {
-        -make: String
-        -model: String
-        -engine: Engine
+        -make: String &#123final&#125
+        -model: String &#123final&#125
+        -engine: Engine &#123final&#125
         #speed: double
         -numberOfVehicles: int$
         +Vehicle(make: String, model: String, engine: Engine)
-        +getMake() String
-        +getModel() String
-        +getEngine() Engine
+        +make() String
+        +model() String
+        +engine() Engine
         +getSpeed() double
         +accelerate(value: int) void
         +brake(value: int) void
@@ -42,31 +42,33 @@ classDiagram
         PETROL = Benzin
         GAS = Gas
         ELECTRO = Elektro
-        -description: String
+        -description: String &#123final&#125
     }
 
     class Car {
-        -seats: int
+        -seats: int &#123final&#125
         +Car(make: String, model: String, engine: Engine, seats: int)
-        +getSeats() int
+        +seats() int
         +doATurboBoost() void
         +print() void
     }
 
     class Truck {
-        -cargo: int
+        -cargo: int &#123final&#125
         -isTransformed: boolean
         +Truck(make: String, model: String, engine: Engine, cargo: int)
-        +getCargo() int
+        +cargo() int
         +isTransformed() boolean
         +transform() void
         +print() void
     }
 
     class Rental {
-        -name: String
-        -vehicles: ArrayList~Vehicle~
+        -name: String &#123final&#125
+        -vehicles: ArrayList~Vehicle~ &#123final&#125
         +Rental(name: String)
+        +name() String
+        +vehicles() ArrayList~Vehicle~
         +addVehicle(vehicle: Vehicle) void
         +addAllVehicles(vehicles: Vehicle...) void
         +transformAllTrucks() void

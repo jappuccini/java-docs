@@ -21,15 +21,15 @@ classDiagram
 
     class Vehicle {
         <<abstract>>
-        -make: String
-        -model: String
-        -engine: Engine
+        -make: String &#123final&#125
+        -model: String &#123final&#125
+        -engine: Engine &#123final&#125
         #speed: double
         -numberOfVehicles: int$
         +Vehicle(make: String, model: String, engine: Engine)
-        +getMake() String
-        +getModel() String
-        +getEngine() Engine
+        +make() String
+        +model() String
+        +engine() Engine
         +getSpeed() double
         +accelerate(value: int) void &#123final&#125
         +brake(value: int) void &#123final&#125
@@ -43,38 +43,39 @@ classDiagram
         PETROL = Benzin
         GAS = Gas
         ELECTRO = Elektro
-        -description: String
+        -description: String &#123final&#125
     }
 
     class Car {
         <<final>>
-        -seats: int
+        -seats: int &#123final&#125
         +Car(make: String, model: String, engine: Engine, seats: int)
-        +getSeats() int
+        +seats() int
         +doATurboBoost() void
         +print() void
     }
 
     class Truck {
         <<final>>
-        -cargo: int
+        -cargo: int &#123final&#125
         -isTransformed: boolean
         +Truck(make: String, model: String, engine: Engine, cargo: int)
-        +getCargo() int
+        +cargo() int
         +isTransformed() boolean
         +transform() void
         +print() void
     }
 
     class Rental {
-        -name: String
-        -vehicles: List~Vehicle~
+        -name: String &#123final&#125
+        -vehicles: List~Vehicle~ &#123final&#125
         +Rental(name: String)
+        +name() String
+        +vehicles() List~Vehicle~
         +addVehicle(vehicle: Vehicle) void
         +addAllVehicles(vehicles: Vehicle...) void
         +transformAllTrucks() void
         +accelerateAllVehicles(value: int) void
-        +getVehicles() List~Vehicle~
         +print() void
     }
 
@@ -84,9 +85,11 @@ classDiagram
     }
 
     class TravelAgency {
-        -name: String
-        -partners: List~Partner~
+        -name: String &#123final&#125
+        -partners: List~Partner~ &#123final&#125
         +TravelAgency(name: String)
+        +name() String
+        +partners() List~Partner~
         +addPartner(partner: Partner) void
         +print() void
     }

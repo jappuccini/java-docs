@@ -25,19 +25,15 @@ classDiagram
 
     class Console {
         <<record>>
-        -title: String
-        -maker: Maker
-        -lifespan: int
-        -soldUnitsInMillions: double
-    }
-
-    class DataProvider {
-        +getConsoles()$ List~Console~
+        title: String
+        maker: Maker
+        lifespan: int
+        soldUnitsInMillions: double
     }
 
     class ConsoleQueries {
         <<record>>
-        -consoles: List~Console~
+        consoles: List~Console~
         +getAllCurrentConsoleNames() List~String~
         +getAllConsolesSortedByLifespan() List~Console~
         +isAnyConsoleWithMoreThan150MillionSoldUnits() boolean

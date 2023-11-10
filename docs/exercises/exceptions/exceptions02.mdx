@@ -16,9 +16,11 @@ import Exercise from '@site/src/components/Exercise';
 classDiagram
 
     class Barrel {
-        -capacity: int
+        -capacity: int &#123final&#125
         -fluidLevel: int
         +Barrel(capacity: int)
+        +capacity() int
+        +getFluidLevel() int
         +addFluid(value: int) void
         +printFluidLevel() void
     }

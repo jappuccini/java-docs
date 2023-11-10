@@ -16,17 +16,17 @@ classDiagram
 
     class Author {
         <<record>>
-        -name: String
+        name: String
     }
 
     class Book {
         <<record>>
-        -title: String
+        title: String
     }
 
     class BookCollection {
         <<record>>
-        -collection: Map~Author&sbquo; List~Book~~
+        collection: Map~Author&sbquo; List~Book~~
         +addAuthor(author: Author) void
         +addBook(author: Author, book: Book) void
         +getMostDiligentAuthor() Optional~Author~

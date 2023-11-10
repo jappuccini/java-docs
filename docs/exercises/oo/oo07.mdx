@@ -15,20 +15,20 @@ import Exercise from '@site/src/components/Exercise';
 
 ## Attribute der Klasse _Vehicle_
 
-| Attribut           | Datentyp | Sichtbarkeit | Level          |
-| ------------------ | -------- | ------------ | -------------- |
-| make               | String   | private      | nicht-statisch |
-| model              | String   | private      | nicht-statisch |
-| speed              | double   | private      | nicht-statisch |
-| _numberOfVehicles_ | _int_    | _private_    | _statisch_     |
+| Attribut           | Datentyp | Sichtbarkeit | Veränderlichkeit | Level          |
+| ------------------ | -------- | ------------ | ---------------- | -------------- |
+| make               | String   | private      | unveränderlich   | nicht-statisch |
+| model              | String   | private      | unveränderlich   | nicht-statisch |
+| speed              | double   | private      | veränderlich     | nicht-statisch |
+| _numberOfVehicles_ | _int_    | _private_    | _veränderlich_   | _statisch_     |
 
 ## Methoden der Klasse _Vehicle_
 
 | Methode                              | Rückgabewert | Sichtbarkeit | Level          | Beschreibung                                                                          |
 | ------------------------------------ | ------------ | ------------ | -------------- | ------------------------------------------------------------------------------------- |
 | Vehicle(make: String, model: String) | void         | public       | nicht-statisch | _Festlegen des Herstellers und des Modells sowie Inkrementieren der Anzahl Fahrzeuge_ |
-| getMake()                            | String       | public       | nicht-statisch | Rückgabe des Herstellers                                                              |
-| getModel()                           | String       | public       | nicht-statisch | Rückgabe des Modells                                                                  |
+| make()                               | String       | public       | nicht-statisch | Rückgabe des Herstellers                                                              |
+| model()                              | String       | public       | nicht-statisch | Rückgabe des Modells                                                                  |
 | getSpeed()                           | double       | public       | nicht-statisch | Rückgabe der Geschwindigkeit                                                          |
 | accelerate(value: int)               | void         | public       | nicht-statisch | Erhöhung der Geschwindigkeit um den eingehenden Wert                                  |
 | brake(value: int)                    | void         | public       | nicht-statisch | Reduzierung der Geschwindigkeit um den eingehenden Wert                               |

@@ -16,11 +16,11 @@ classDiagram
     Comparable~Coordinate~ <|.. Coordinate
 
     class Coordinate {
-        -x: int
-        -y: int
+        -x: int &#123final&#125
+        -y: int &#123final&#125
         +Coordinate(x: int, y: int)
-        +getX() int
-        +getY() int
+        +x() int
+        +y() int
         +getDistanceToOriginPoint() double
         +compareTo(other: Coordinate) int
     }
