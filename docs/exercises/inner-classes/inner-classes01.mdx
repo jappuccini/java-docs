@@ -20,6 +20,8 @@ classDiagram
         -rooms: List~Room~ &#123final&#125
         +rooms() List~Room~
         +addRoom(room: Room) void
+        +equals(object: Object) boolean
+        +hashCode() int
         +toString() String
     }
 
@@ -27,6 +29,8 @@ classDiagram
         -name: String &#123final&#125
         +Room(name: String)
         +name() String
+        +equals(object: Object) boolean
+        +hashCode() int
         +toString() String
     }
 ```

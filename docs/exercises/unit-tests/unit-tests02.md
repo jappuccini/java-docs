@@ -33,6 +33,8 @@ classDiagram
         +getSpeedInKmh() double
         +accelerate(valueInKmh: int) void &#123final&#125
         +brake(valueInKmh: int) void &#123final&#125
+        +equals(object: Object) boolean
+        +hashCode() int
         +toString() String
         +getNumberOfVehicles()$ int
     }
@@ -52,6 +54,8 @@ classDiagram
         +Car(make: String, model: String, engine: Engine, seats: int)
         +seats() int
         +doATurboBoost() void
+        +equals(object: Object) boolean
+        +hashCode() int
         +toString() String
     }
 
@@ -63,6 +67,8 @@ classDiagram
         +cargo() int
         +isTransformed() boolean
         +transform() void
+        +equals(object: Object) boolean
+        +hashCode() int
         +toString() String
     }
 
@@ -76,6 +82,8 @@ classDiagram
         +addAllVehicles(vehicles: Vehicle...) void
         +transformAllTrucks() void
         +accelerateAllVehicles(valueInKmh: int) void
+        +equals(object: Object) boolean
+        +hashCode() int
         +toString() String
     }
 
@@ -91,6 +99,8 @@ classDiagram
         +name() String
         +partners() List~Partner~
         +addPartner(partner: Partner) void
+        +equals(object: Object) boolean
+        +hashCode() int
         +toString() String
     }
 

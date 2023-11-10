@@ -28,6 +28,8 @@ classDiagram
         +employees() List~Employee~
         +getNumberOfEmployees() int
         +addEmployee(employee: Employee) void
+        +equals(object: Object) boolean
+        +hashCode() int
         +toString() String
     }
 
@@ -35,6 +37,9 @@ classDiagram
         -name: String &#123final&#125
         +Person(name: String)
         +name() String
+        +equals(object: Object) boolean
+        +hashCode() int
+        +toString() String
     }
 
     class Employee {
@@ -46,6 +51,8 @@ classDiagram
         +name() String
         +setSalaryInEuro(salaryInEuro: int) void
         +getSalaryInEuro() int
+        +equals(object: Object) boolean
+        +hashCode() int
         +toString() String
     }
 ```
