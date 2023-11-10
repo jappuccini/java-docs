@@ -64,7 +64,7 @@ classDiagram
         AZW = Amazon Kindle
         EPUB = Electronic Publication
         LRF = Portable Reader File
-        -description: String
+        -description: String &#123final&#125
     }
 ```
 
