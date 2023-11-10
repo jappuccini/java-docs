@@ -40,7 +40,7 @@ import Exercise from '@site/src/components/Exercise';
 | make             | String   | private      | unveränderlich   | nicht-statisch   |
 | model            | String   | private      | unveränderlich   | nicht-statisch   |
 | _engine_         | _Engine_ | _private_    | _unveränderlich_ | _nicht-statisch_ |
-| speed            | double   | private      | veränderlich     | nicht-statisch   |
+| speedInKmh       | double   | private      | veränderlich     | nicht-statisch   |
 | numberOfVehicles | int      | private      | veränderlich     | statisch         |
 
 ## Methoden der Klasse _Vehicle_
@@ -51,9 +51,9 @@ import Exercise from '@site/src/components/Exercise';
 | make()                                                 | String       | public       | nicht-statisch   | Rückgabe des Herstellers                                |
 | model()                                                | String       | public       | nicht-statisch   | Rückgabe des Modells                                    |
 | _engine()_                                             | _Engine_     | _public_     | _nicht-statisch_ | _Rückgabe des Motors_                                   |
-| getSpeed()                                             | double       | public       | nicht-statisch   | Rückgabe der Geschwindigkeit                            |
-| accelerate(value: int)                                 | void         | public       | nicht-statisch   | Erhöhung der Geschwindigkeit um den eingehenden Wert    |
-| brake(value: int)                                      | void         | public       | nicht-statisch   | Reduzierung der Geschwindigkeit um den eingehenden Wert |
+| getSpeedInKmh()                                        | double       | public       | nicht-statisch   | Rückgabe der Geschwindigkeit                            |
+| accelerate(valueInKmh: int)                            | void         | public       | nicht-statisch   | Erhöhung der Geschwindigkeit um den eingehenden Wert    |
+| brake(valueInKmh: int)                                 | void         | public       | nicht-statisch   | Reduzierung der Geschwindigkeit um den eingehenden Wert |
 | toString()                                             | String       | public       | nicht-statisch   | Rückgabe: Hersteller Modell (Motorenbeschreibung)\_     |
 | getNumberOfVehicles()                                  | int          | public       | statisch         | Rückgabe der Anzahl Fahrzeuge                           |
 

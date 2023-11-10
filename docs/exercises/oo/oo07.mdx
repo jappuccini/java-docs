@@ -19,7 +19,7 @@ import Exercise from '@site/src/components/Exercise';
 | ------------------ | -------- | ------------ | ---------------- | -------------- |
 | make               | String   | private      | unveränderlich   | nicht-statisch |
 | model              | String   | private      | unveränderlich   | nicht-statisch |
-| speed              | double   | private      | veränderlich     | nicht-statisch |
+| speedInKmh         | double   | private      | veränderlich     | nicht-statisch |
 | _numberOfVehicles_ | _int_    | _private_    | _veränderlich_   | _statisch_     |
 
 ## Methoden der Klasse _Vehicle_
@@ -29,9 +29,9 @@ import Exercise from '@site/src/components/Exercise';
 | Vehicle(make: String, model: String) | void         | public       | nicht-statisch | _Festlegen des Herstellers und des Modells sowie Inkrementieren der Anzahl Fahrzeuge_ |
 | make()                               | String       | public       | nicht-statisch | Rückgabe des Herstellers                                                              |
 | model()                              | String       | public       | nicht-statisch | Rückgabe des Modells                                                                  |
-| getSpeed()                           | double       | public       | nicht-statisch | Rückgabe der Geschwindigkeit                                                          |
-| accelerate(value: int)               | void         | public       | nicht-statisch | Erhöhung der Geschwindigkeit um den eingehenden Wert                                  |
-| brake(value: int)                    | void         | public       | nicht-statisch | Reduzierung der Geschwindigkeit um den eingehenden Wert                               |
+| getSpeedInKmh()                      | double       | public       | nicht-statisch | Rückgabe der Geschwindigkeit                                                          |
+| accelerate(valueInKmh: int)          | void         | public       | nicht-statisch | Erhöhung der Geschwindigkeit um den eingehenden Wert                                  |
+| brake(valueInKmh: int)               | void         | public       | nicht-statisch | Reduzierung der Geschwindigkeit um den eingehenden Wert                               |
 | toString()                           | String       | public       | nicht-statisch | Rückgabe: Hersteller Modell                                                           |
 | _getNumberOfVehicles()_              | _int_        | _public_     | _statisch_     | _Rückgabe der Anzahl Fahrzeuge_                                                       |
 

@@ -23,15 +23,15 @@ classDiagram
         -make: String &#123final&#125
         -model: String &#123final&#125
         -engine: Engine &#123final&#125
-        #speed: double
+        #speedInKmh: double
         -numberOfVehicles: int$
         +Vehicle(make: String, model: String, engine: Engine)
         +make() String
         +model() String
         +engine() Engine
-        +getSpeed() double
-        +accelerate(value: int) void
-        +brake(value: int) void
+        +getSpeedInKmh() double
+        +accelerate(valueInKmh: int) void
+        +brake(valueInKmh: int) void
         +toString() String
         +getNumberOfVehicles()$ int
     }

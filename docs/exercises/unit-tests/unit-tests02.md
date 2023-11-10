@@ -24,15 +24,15 @@ classDiagram
         -make: String &#123final&#125
         -model: String &#123final&#125
         -engine: Engine &#123final&#125
-        #speed: double
+        #speedInKmh: double
         -numberOfVehicles: int$
         +Vehicle(make: String, model: String, engine: Engine)
         +make() String
         +model() String
         +engine() Engine
-        +getSpeed() double
-        +accelerate(value: int) void &#123final&#125
-        +brake(value: int) void &#123final&#125
+        +getSpeedInKmh() double
+        +accelerate(valueInKmh: int) void &#123final&#125
+        +brake(valueInKmh: int) void &#123final&#125
         +toString() String
         +getNumberOfVehicles()$ int
     }
@@ -75,7 +75,7 @@ classDiagram
         +addVehicle(vehicle: Vehicle) void
         +addAllVehicles(vehicles: Vehicle...) void
         +transformAllTrucks() void
-        +accelerateAllVehicles(value: int) void
+        +accelerateAllVehicles(valueInKmh: int) void
         +toString() String
     }
 
@@ -104,8 +104,8 @@ classDiagram
 
 ## Hinweis zur Klasse _Rental_
 
-Die Methode `void accelerateAllVehicles(value: int)` soll alle Fahrzeuge der
-Fahrzeugvermietung um den eingehenden Wert beschleunigen.
+Die Methode `void accelerateAllVehicles(valueInKmh: int)` soll alle Fahrzeuge
+der Fahrzeugvermietung um den eingehenden Wert beschleunigen.
 
 ## Hinweise zur Klasse _RentalTest_
 
@@ -115,7 +115,7 @@ Fahrzeugvermietung um den eingehenden Wert beschleunigen.
   der Methode `void transformAllTrucks()` der Klasse `Rental` alle Lastwagen in
   Autobots umgewandelt werden und nach erneutem Ausführen wieder
   zurückverwandelt werden
-- Die Testmethode `void testAccelerateAllVehicles(int)` soll prüfen, ob beim
-  Ausführen der Methode `void accelerateAllVehicles(value: int)` der Klasse
+- Die Testmethode `void testAccelerateAllVehicles()` soll prüfen, ob beim
+  Ausführen der Methode `void accelerateAllVehicles(valueInKmh: int)` der Klasse
   `Rental` mit einem negativen Wert die Ausnahme `InvalidValueException`
   ausgelöst wird

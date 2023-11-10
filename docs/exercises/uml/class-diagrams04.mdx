@@ -38,12 +38,12 @@ classDiagram
     class Employee {
         -employeeId: int &#123final&#125
         -person: Person &#123final&#125
-        -salary: int
-        +Employee(employeeId: int, person: Person, salary: int)
+        -salaryInEuro: int
+        +Employee(employeeId: int, person: Person, salaryInEuro: int)
         +employeeId() int
         +name() String
-        +setSalary(salary: int) void
-        +getSalary() int
+        +setSalaryInEuro(salaryInEuro: int) void
+        +getSalaryInEuro() int
         +toString() String
     }
 ```
