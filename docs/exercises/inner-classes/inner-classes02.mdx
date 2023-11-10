@@ -11,7 +11,6 @@ import Exercise from '@site/src/components/Exercise';
 - Passe die ausführbare Klasse aus Übungsaufgabe
   [Exceptions03](../exceptions/exceptions03) so an, dass sie fehlerfrei
   ausgeführt werden kann
-- Die Klasse Emplyee soll hierbei eine Element Klasse sein.
 
 ## Klassendiagramm
 
@@ -29,7 +28,7 @@ classDiagram
         +employees() List~Employee~
         +getNumberOfEmployees() int
         +addEmployee(employee: Employee) void
-        +print() void
+        +toString() String
     }
 
     class Person {
@@ -47,7 +46,7 @@ classDiagram
         +name() String
         +setSalary(salary: int) void
         +getSalary() int
-        +print() void
+        +toString() String
     }
 ```
 

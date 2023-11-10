@@ -9,7 +9,6 @@ import Exercise from '@site/src/components/Exercise';
   Klassendiagramms
 - Erstelle eine ausführbare Klasse, welche ein Haus mit mehreren Räumen erzeugt
   und auf der Konsole ausgibt
-- Die Klasse Room soll hierbei eine Element Klasse sein.
 
 ## Klassendiagramm
 
@@ -21,14 +20,14 @@ classDiagram
         -rooms: List~Room~ &#123final&#125
         +rooms() List~Room~
         +addRoom(room: Room) void
-        +printRooms() void
+        +toString() String
     }
 
     class Room {
         -name: String &#123final&#125
         +Room(name: String)
         +name() String
-        +printRoom() void
+        +toString() String
     }
 ```
 

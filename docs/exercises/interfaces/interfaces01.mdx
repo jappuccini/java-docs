@@ -39,7 +39,7 @@ classDiagram
         +getSpeed() double
         +accelerate(value: int) void &#123final&#125
         +brake(value: int) void &#123final&#125
-        +print() void &#123abstract&#125
+        +toString() String
         +getNumberOfVehicles()$ int
     }
 
@@ -58,7 +58,7 @@ classDiagram
         +Car(make: String, model: String, engine: Engine, seats: int)
         +seats() int
         +doATurboBoost() void
-        +print() void
+        +toString() String
     }
 
     class Truck {
@@ -69,7 +69,7 @@ classDiagram
         +cargo() int
         +isTransformed() boolean
         +transform() void
-        +print() void
+        +toString() String
     }
 
     class Rental {
@@ -81,12 +81,12 @@ classDiagram
         +addVehicle(vehicle: Vehicle) void
         +addAllVehicles(vehicles: Vehicle...) void
         +transformAllTrucks() void
-        +print() void
+        +toString() String
     }
 
     class Partner {
         <<interface>>
-        +print() void
+        +toString() String
     }
 
     class TravelAgency {
@@ -96,7 +96,7 @@ classDiagram
         +name() String
         +partners() List~Partner~
         +addPartner(partner: Partner) void
-        +print() void
+        +toString() String
     }
 ```
 
@@ -105,7 +105,6 @@ classDiagram
 - Der Konstruktor soll alle Attribute initialisieren
 - Die Methode `void addPartner(partner: Partner)` soll dem Reisebüro einen
   Partner hinzufügen
-- Die Methode `void print()` soll alle Attribute auf der Konsole ausgeben
 
 ## Konsolenausgabe
 

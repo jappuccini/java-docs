@@ -33,7 +33,7 @@ classDiagram
         +getSpeed() double
         +accelerate(value: int) void
         +brake(value: int) void
-        +print() void
+        +toString() String
         +getNumberOfVehicles()$ int
     }
 
@@ -51,7 +51,7 @@ classDiagram
         +Car(make: String, model: String, engine: Engine, seats: int)
         +seats() int
         +doATurboBoost() void
-        +print() void
+        +toString() String
     }
 
     class Truck {
@@ -61,7 +61,7 @@ classDiagram
         +cargo() int
         +isTransformed() boolean
         +transform() void
-        +print() void
+        +toString() String
     }
 ```
 
@@ -69,13 +69,11 @@ classDiagram
 
 - Der Konstruktor soll alle Attribute initialisieren
 - Die Methode `void doATurboBoost()` soll die Geschwindigkeit verdoppeln
-- Die Methode `void print()` soll alle Attribute auf der Konsole ausgeben
 
 ## Hinweise zur Klasse _Truck_
 
 - Der Konstruktor soll alle Attribute initialisieren
 - Die Methode `void transform()` soll das Attribut isTransformed invertieren
-- Die Methode `void print()` soll alle Attribute auf der Konsole ausgeben
 
 ## Konsolenausgabe
 

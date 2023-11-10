@@ -32,7 +32,7 @@ classDiagram
         +getSpeed() double
         +accelerate(value: int) void
         +brake(value: int) void
-        +print() void
+        +toString() String
         +getNumberOfVehicles()$ int
     }
 
@@ -50,7 +50,7 @@ classDiagram
         +Car(make: String, model: String, engine: Engine, seats: int)
         +seats() int
         +doATurboBoost() void
-        +print() void
+        +toString() String
     }
 
     class Truck {
@@ -60,7 +60,7 @@ classDiagram
         +cargo() int
         +isTransformed() boolean
         +transform() void
-        +print() void
+        +toString() String
     }
 
     class Rental {
@@ -71,7 +71,7 @@ classDiagram
         +vehicles() ArrayList~Vehicle~
         +addVehicle(vehicle: Vehicle) void
         +addAllVehicles(vehicles: Vehicle...) void
-        +print() void
+        +toString() String
     }
 ```
 
@@ -82,7 +82,6 @@ classDiagram
   ein Fahrzeug hinzufügen
 - Die Methode `void addAllVehicles(vehicles: Vehicle...)` soll der
   Fahrzeugvermietung mehrere Fahrzeug hinzufügen
-- Die Methode `void print()` soll alle Attribute auf der Konsole ausgeben
 
 ## Konsolenausgabe
 

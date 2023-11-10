@@ -32,7 +32,7 @@ classDiagram
         +getSpeed() double
         +accelerate(value: int) void
         +brake(value: int) void
-        +print() void
+        +toString() String
         +getNumberOfVehicles()$ int
     }
 
@@ -50,7 +50,7 @@ classDiagram
         +Car(make: String, model: String, engine: Engine, seats: int)
         +seats() int
         +doATurboBoost() void
-        +print() void
+        +toString() String
     }
 
     class Truck {
@@ -60,7 +60,7 @@ classDiagram
         +cargo() int
         +isTransformed() boolean
         +transform() void
-        +print() void
+        +toString() String
     }
 
     class Rental {
@@ -72,7 +72,7 @@ classDiagram
         +addVehicle(vehicle: Vehicle) void
         +addAllVehicles(vehicles: Vehicle...) void
         +transformAllTrucks() void
-        +print() void
+        +toString() String
     }
 ```
 

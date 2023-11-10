@@ -26,7 +26,7 @@ classDiagram
         +employees() ArrayList~Employee~
         +getNumberOfEmployees() int
         +addEmployee(employee: Employee) void
-        +print() void
+        +toString() String
     }
 
     class Person {
@@ -44,7 +44,7 @@ classDiagram
         +name() String
         +setSalary(salary: int) void
         +getSalary() int
-        +print() void
+        +toString() String
     }
 ```
 
@@ -56,14 +56,12 @@ Der Konstruktor soll den Namen initialisieren.
 
 - Der Konstruktor soll alle Attribute initialisieren
 - Die Methode `String name()` soll den Namen des Mitarbeiters zurückgeben
-- Die Methode `void print()` soll alle Attribute auf der Konsole ausgeben
 
 ## Hinweise zur Klasse _Company_
 
 - Der Konstruktor soll den Namen sowie die Mitarbeiterliste initialisieren
 - Die Methode `void addEmployee(employee: Employee)` soll der Mitarbeiterliste
   einen Mitarbeiter hinzufügen
-- Die Methode `void print()` soll alle Attribute auf der Konsole ausgeben
 
 ## Konsolenausgabe
 
