@@ -17,13 +17,13 @@ classDiagram
 
     class Tank {
         <<record>>
-        -name: String
-        -type: Type
-        -nation: Nation
-        -performanceInHorsePower: int
-        -weightInTons: int
-        -lengthInMeters :double
-        -maxSpeedInKmh: int
+        name: String
+        type: Type
+        nation: Nation
+        performanceInHorsePower: int
+        weightInTons: int
+        lengthInMeters :double
+        maxSpeedInKmh: int
     }
 
     class Type {
@@ -45,7 +45,7 @@ classDiagram
 
     class TankQueries {
         <<record>>
-        -tanks: List~Tank~
+        tanks: List~Tank~
         +printAllTanksWithWeightBT25TonsByType() void
         +getAveragePerformanceInHorsePower() OptionalDouble
         +getAllNations() List~Nation~

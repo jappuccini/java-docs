@@ -20,8 +20,8 @@ classDiagram
 
     class Library {
         <<record>>
-        -name: String
-        -books: Map~Book, Status~
+        name: String &#123final&#125
+        books: Map~Book, Status~ &#123final&#125
         +addBook(book: Book) void
         +getBookByTitle(title: String) Optional~Book~
         +getPaperBooksByStatus(status: Status) List~PaperBook~
@@ -31,32 +31,32 @@ classDiagram
         <<enumeration>>
         AVAILABLE = verfügbar
         LENT = verliehen
-        -description: String
+        -description: String &#123final&#125
     }
 
     class Book {
         <<abstract>>
-        -id: UUID
-        -author: Author
-        -title: String
+        -id: UUID &#123final&#125
+        -author: Author &#123final&#125
+        -title: String &#123final&#125
         +Book(author: Author, title: String)
     }
 
     class EBook {
-        -fileFormat: FileFormat
-        -fileSizeInKb: int
+        -fileFormat: FileFormat &#123final&#125
+        -fileSizeInKb: int &#123final&#125
         +EBook(author: Author, title: String, fileFormat: FileFormat, fileSizeInKb: int)
     }
 
     class PaperBook {
-        -pages: int
+        -pages: int &#123final&#125
         +PaperBook(author: Author, title: String, pages: int)
     }
 
     class Author {
         <<record>>
-        -name: String
-        -nationality: String
+        name: String
+        nationality: String
     }
 
     class FileFormat {

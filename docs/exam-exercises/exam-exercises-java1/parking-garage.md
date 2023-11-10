@@ -17,18 +17,18 @@ classDiagram
     Vehicle <|-- Bus
 
     class ParkingSpot {
-        -vehicle: Vehicle
-        -lengthInM: double
-        -heightInM: double
-        -isForBusesOnly: boolean
+        -vehicle: Vehicle &#123final&#125
+        -lengthInM: double &#123final&#125
+        -heightInM: double &#123final&#125
+        -isForBusesOnly: boolean &#123final&#125
         +ParkingSpot(lengthInM: double, heightInM: double, isForBusesOnly: boolean)
     }
 
     class Vehicle {
-        -make: String
-        -model: String
-        -lengthInM: double
-        -heightInM: double
+        -make: String &#123final&#125
+        -model: String &#123final&#125
+        -lengthInM: double &#123final&#125
+        -heightInM: double &#123final&#125
         +Vehicle(make: String, model: String, lengthInM: double, heightInM: double)
     }
 
@@ -41,7 +41,7 @@ classDiagram
     }
 
     class ParkingGarage {
-        -parkingSpots: ParkingSpot[]
+        -parkingSpots: ParkingSpot[] &#123final&#125
         +ParkingGarage(numberOfParkingSpots: int)
         +parkIn(car: Car, parkingSpotNumber: int) String
         +parkOut(car: Car) String

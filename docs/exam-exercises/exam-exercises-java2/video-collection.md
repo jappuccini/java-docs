@@ -19,7 +19,7 @@ classDiagram
 
     class VideoCollection {
         <<record>>
-        -videos: List~Video~
+        videos: List~Video~
         +addVideo(video: Video) void
         +importVideos(file: File) void
         +getVideoByMovieTitle(title: String) Optional~Video~
@@ -27,25 +27,25 @@ classDiagram
 
     class Video {
         <<abstract>>
-        -movie: Movie
+        -movie: Movie &#123final&#125
         +Video(movie: Movie)
     }
 
     class VHS {
-        -isRewritable: boolean
+        -isRewritable: boolean &#123final&#125
         +VHS(movie: Movie, isRewritable: boolean)
     }
 
     class BluRay {
-        -capacityInGb: double
+        -capacityInGb: double &#123final&#125
         +BluRay(movie: Movie, capacityInGb: double)
     }
 
     class Movie {
         <<record>>
-        -title: String
-        -genre: Genre
-        -publishingYear: short
+        title: String
+        genre: Genre
+        publishingYear: short
     }
 
     class Genre {
@@ -54,7 +54,7 @@ classDiagram
         HORROR = Horror
         ACTION = Action
         COMEDY = Komödie
-        -description: String
+        -description: String &#123final&#125
     }
 ```
 

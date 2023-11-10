@@ -21,11 +21,11 @@ classDiagram
 
     class Planet {
         <<record>>
-        -name: String
-        -diameterInKm: double
-        -massInE24Kg: double
-        -moons: int
-        -type: Type
+        name: String
+        diameterInKm: double
+        massInE24Kg: double
+        moons: int
+        type: Type
     }
 
     class Type {

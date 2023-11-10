@@ -16,16 +16,16 @@ classDiagram
 
     class SpaceStation {
         <<record>>
-        -name: String
-        -bays: Map~Integer, SpaceFighter~
+        name: String
+        bays: Map~Integer, SpaceFighter~
         +land(bayNumber: Integer, spaceFighter: SpaceFighter) void
         +getFastestSpaceFighter() Optional~SpaceFighter~
     }
 
     class SpaceFighter {
         <<record>>
-        -id: String
-        -type: Type
+        id: String
+        type: Type
     }
 
     class Type {
@@ -35,7 +35,7 @@ classDiagram
         X_WING = 1050
         Y_WING = 1000
         TIE_FIGHTER = 1200
-        -maxSpeedInKmh: int
+        -maxSpeedInKmh: int &#123final&#125
     }
 ```
 

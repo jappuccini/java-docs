@@ -43,7 +43,7 @@ classDiagram
 
     class Sportsman {
         <<abstract>>
-        -name: String
+        -name: String &#123final&#125
         +Sportsman(name: String)
         +getScorerPoints() int &#123abstrakt&#125
         +compareTo(other: Sportsman) int
@@ -51,8 +51,8 @@ classDiagram
 
     class Team~T extends Sportsman~ {
         <<record>>
-        -name: String
-        -members: Map~T, Position~
+        name: String
+        members: Map~T, Position~
         +addTeamMember(member: T, position: Position) void
         +getBestScorer() Optional~T~
         +getAllTeamMembersByPosition(position: Position) List~T~
