@@ -120,10 +120,10 @@ classDiagram
     Class o-- CourseOfStudies
 
     class Class {
-        -description: String
-        -courseOfStudies: CourseOfStudies
-        -lectures: List~Lecture~
-        -students: List~Student~
+        -description: String &#123final&#125
+        -courseOfStudies: CourseOfStudies &#123final&#125
+        -lectures: List~Lecture~ &#123final&#125
+        -students: List~Student~ &#123final&#125
         +Class(description: String, courseOfStudies: CourseOfStudies)
         +description() String
         +courseOfStudies() CourseOfStudies
@@ -136,8 +136,8 @@ classDiagram
     }
 
     class Student {
-        -matriculationNumber: String
-        -name: String
+        -matriculationNumber: String &#123final&#125
+        -name: String &#123final&#125
         +Student(matriculationNumber: String, name: String)
         +matriculationNumber() String
         +name() String
@@ -145,8 +145,8 @@ classDiagram
     }
 
     class Lecture {
-        -description: String
-        -creditPoints: int
+        -description: String &#123final&#125
+        -creditPoints: int &#123final&#125
         +Lecture(description: String, creditPoints: int)
         +description() String
         +creditPoints() int
@@ -158,7 +158,7 @@ classDiagram
         WI = Wirtschaftsinformatik
         INF = Informatik
         BWL = Betriebswirtschaftslehre
-        -description: String
+        -description: String &#123final&#125
     }
 
     class ExamTask02 {
@@ -185,10 +185,10 @@ classDiagram
 ```java title="Class.java" showLineNumbers
 public class Class { // 0,5
 
-  private String description; // 0,25
-  private CourseOfStudies courseOfStudies; // 0,25
-  private List<Lecture> lectures; // 0,25
-  private List<Student> students; // 0,25
+  private final String description; // 0,25
+  private final CourseOfStudies courseOfStudies; // 0,25
+  private final List<Lecture> lectures; // 0,25
+  private final List<Student> students; // 0,25
 
   public Class(String description, CourseOfStudies courseOfStudies) { // 0,5
     this.description = description; // 0,25
@@ -381,9 +381,9 @@ classDiagram
     }
 
     class Player {
-        -name: String
+        -name: String &#123final&#125
         -healthPoints: int
-        -dice: Dice
+        -dice: Dice &#123final&#125
         +Player(name: String)
         +name() String
         +getHealthPoints() int
@@ -433,9 +433,9 @@ Hans gewinnt
 ```java title="Player.java" showLineNumbers
 public class Player { // 0,5
 
-  private String name; // 0,25
+  private final String name; // 0,25
   private int healthPoints; // 0,25
-  private Dice dice; // 0,25
+  private final Dice dice; // 0,25
 
   public Player(String name) { // 0,5
     this.name = name; // 0,25
@@ -528,34 +528,34 @@ classDiagram
     Recipe o-- Ingredient
 
     class CookieJar {
-        -cookies: List~Cookie~
+        -cookies: List~Cookie~ &#123final&#125
         +CookieJar()
         +addCookie(cookie: Cookie) void
         +getStuffedCookie() StuffedCookie
     }
 
     class Cookie {
-        -name: String
-        -dough: Recipe
+        -name: String &#123final&#125
+        -dough: Recipe &#123final&#125
         +Cookie(name: String, dough: Recipe)
         +getIngredients() List~Ingredient~
     }
 
     class StuffedCookie {
-        -jam: Recipe
+        -jam: Recipe &#123final&#125
         +StuffedCookie(name: String, dough: Recipe, jam: Recipe)
         +getIngredients() List~Ingredient~
     }
 
     class Recipe {
-        -name: String
-        -ingredients: List~Ingredient~
+        -name: String &#123final&#125
+        -ingredients: List~Ingredient~ &#123final&#125
         +Recipe(name: String)
         +addIngredient(ingredient: Ingredient) void
     }
 
     class Ingredient {
-        -name: String
+        -name: String &#123final&#125
         +Ingredient(name: String)
     }
 
@@ -597,7 +597,7 @@ Zucker
 ```java title="StuffedCookie.java" showLineNumbers
 public class StuffedCookie extends Cookie { // 1
 
-  private Recipe jam; // 0,25
+  private final Recipe jam; // 0,25
 
   public StuffedCookie(String name, Recipe dough, Recipe jam) { // 0,5
     super(name, dough); // 1
@@ -622,7 +622,7 @@ public class StuffedCookie extends Cookie { // 1
 ```java title="CookieJar.java" showLineNumbers
 public class CookieJar { // 0,5
 
-  private List<Cookie> cookies; // 0,25
+  private final List<Cookie> cookies; // 0,25
 
   public CookieJar() { // 0,5
     cookies = new ArrayList<>(); // 0,25
