@@ -27,11 +27,16 @@ nicht flexibel.
 ```mermaid
 classDiagram
     class FilteredStudents {
-        -students: List~Student~
-        -mandatoryFilter: Predicate~Student~
+        -students: List~Student~ &#123final&#125
+        -mandatoryFilter: Predicate~Student~ &#123final&#125
         +FilteredStudents(mandatoryFilter: Predicate~Student~)
+        +students() List~Student~
+        +mandatoryFilter() Predicate~Student~
         +add(student: Student) void
         +printStudents() void
+        +equals(object: Object) boolean
+        +hashCode() int
+        +toString() String
     }
 ```
 

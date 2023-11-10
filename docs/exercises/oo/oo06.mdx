@@ -11,11 +11,11 @@ import Exercise from '@site/src/components/Exercise';
 
 ## Attribute der Klasse _Creature_
 
-| Attribut      | Datentyp | Sichtbarkeit |
-| ------------- | -------- | ------------ |
-| _name_        | _String_ | _private_    |
-| _attackvalue_ | _int_    | _private_    |
-| _hitPoints_   | _int_    | _private_    |
+| Attribut      | Datentyp | Sichtbarkeit | Veränderlichkeit |
+| ------------- | -------- | ------------ | ---------------- |
+| _name_        | _String_ | _private_    | _unveränderlich_ |
+| _attackValue_ | _int_    | _private_    | _unveränderlich_ |
+| _hitPoints_   | _int_    | _private_    | _veränderlich_   |
 
 ## Methoden der Klasse _Creature_
 
@@ -23,8 +23,8 @@ import Exercise from '@site/src/components/Exercise';
 | ---------------------------------------------------------- | ------------ | ------------ | --------------------------------------------------------------------------------------------------- |
 | _Creature(name: String, attackValue: int, hitPoints: int)_ | _void_       | _public_     | _Setzen aller Attribute_                                                                            |
 | _attackCreature(enemy: Creature)_                          | _void_       | _public_     | _Reduktion der Lebenspunkte der angegriffenen Kreatur um den Angriffswert der angreifenden Kreatur_ |
-| _getName()_                                                | _String_     | _public_     | _Rückgabe des Namens_                                                                               |
-| _getAttackValue()_                                         | _int_        | _public_     | _Rückgabe des Angriffswertes_                                                                       |
+| _name()_                                                   | _String_     | _public_     | _Rückgabe des Namens_                                                                               |
+| _attackValue()_                                            | _int_        | _public_     | _Rückgabe des Angriffswertes_                                                                       |
 | _getHitPoints()_                                           | _int_        | _public_     | _Rückgabe der Lebenspunkte_                                                                         |
 
 ## Konsolenausgabe

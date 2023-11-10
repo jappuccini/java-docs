@@ -19,23 +19,23 @@ classDiagram
 
     class Pair~Club~ {
         <<record>>
-        -partA: T
-        -partB: T
+        partA: T
+        partB: T
     }
 
     class Tournament {
         <<record>>
-        -title: String
-        -clubs: List~Club~
-        -pairs: List~Pair~Club~~
+        title: String
+        clubs: List~Club~
+        pairs: List~Pair~Club~~
         +addClub(club: Club) void
         +pairs() List~Pair~Club~~
     }
 
     class Club {
         <<record>>
-        -name: String
-        -marketValueInMillionEuros: int
+        name: String
+        marketValueInMillionEuros: int
     }
 ```
 

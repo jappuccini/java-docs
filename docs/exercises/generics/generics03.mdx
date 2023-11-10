@@ -18,22 +18,22 @@ classDiagram
 
     class Pair~T~ {
         <<record>>
-        -partA: T
-        -partB: T
+        partA: T
+        partB: T
     }
 
     class SchoolClass {
         <<record>>
-        -name: String
-        -pupils: List~Pupil~
+        name: String
+        pupils: List~Pupil~
         +addPupil(pupil: Pupil) void
         +getPairs() List~Pair~Pupil~~
     }
 
     class Pupil {
         <<record>>
-        -name: String
-        -gender: String
+        name: String
+        gender: String
     }
 ```
 

@@ -12,22 +12,22 @@ import Exercise from '@site/src/components/Exercise';
 
 ## Attribute der Klasse _Vehicle_
 
-| Attribut | Datentyp | Sichtbarkeit |
-| -------- | -------- | ------------ |
-| make     | String   | private      |
-| model    | String   | private      |
-| speed    | double   | private      |
+| Attribut   | Datentyp | Sichtbarkeit | Veränderlichkeit |
+| ---------- | -------- | ------------ | ---------------- |
+| make       | String   | private      | _unveränderlich_ |
+| model      | String   | private      | _unveränderlich_ |
+| speedInKmh | double   | private      | veränderlich     |
 
 ## Methoden der Klasse _Vehicle_
 
 | Methode                                | Rückgabewert | Sichtbarkeit | Beschreibung                                            |
 | -------------------------------------- | ------------ | ------------ | ------------------------------------------------------- |
 | _Vehicle(make: String, model: String)_ | _void_       | _public_     | _Festlegen des Herstellers und des Modells_             |
-| getMake()                              | String       | public       | Rückgabe des Herstellers                                |
-| getModel()                             | String       | public       | Rückgabe des Modells                                    |
-| getSpeed()                             | double       | public       | Rückgabe der Geschwindigkeit                            |
-| accelerate(value: int)                 | void         | public       | Erhöhung der Geschwindigkeit um den eingehenden Wert    |
-| brake(value: int)                      | void         | public       | Reduzierung der Geschwindigkeit um den eingehenden Wert |
-| print()                                | void         | public       | Ausgabe: Hersteller Modell                              |
+| _make()_                               | String       | public       | Rückgabe des Herstellers                                |
+| _model()_                              | String       | public       | Rückgabe des Modells                                    |
+| getSpeedInKmh()                        | double       | public       | Rückgabe der Geschwindigkeit                            |
+| accelerate(valueInKmh: int)            | void         | public       | Erhöhung der Geschwindigkeit um den eingehenden Wert    |
+| brake(valueInKmh: int)                 | void         | public       | Reduzierung der Geschwindigkeit um den eingehenden Wert |
+| toString()                             | String       | public       | Rückgabe: Hersteller Modell                             |
 
 <Exercise pullRequest="24" branchSuffix="oo/02" />

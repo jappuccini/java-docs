@@ -16,11 +16,15 @@ import Exercise from '@site/src/components/Exercise';
 classDiagram
 
     class Barrel {
-        -capacity: int
+        -capacity: int &#123final&#125
         -fluidLevel: int
         +Barrel(capacity: int)
+        +capacity() int
+        +getFluidLevel() int
         +addFluid(value: int) void
-        +printFluidLevel() void
+        +equals(object: Object) boolean
+        +hashCode() int
+        +toString() String
     }
 ```
 
@@ -30,8 +34,6 @@ classDiagram
 - Die Methode `void addFluid(value: int)` soll den Füllstand um den eingehenden
   Betrag erhöhen. Bei Überschreiten der Kapazität soll die Ausnahme
   `BarrelOverflowException` ausgelöst werden
-- Die Methode `void printFluidLevel()` soll den Füllstand auf der Konsole
-  ausgeben
 
 ## Konsolenausgabe
 
