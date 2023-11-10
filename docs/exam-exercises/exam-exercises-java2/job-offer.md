@@ -19,23 +19,23 @@ classDiagram
 
     class JobOffer {
         <<record>>
-        -id: int
-        -title: String
-        -recruiter: Recruiter
-        -applicants: List~Applicant~
+        id: int
+        title: String
+        recruiter: Recruiter
+        applicants: List~Applicant~
         +addApplicant(applicant: Applicant) void
     }
 
     class Person {
         <<abstract>>
-        -name: String
-        -birthdateTimeStamp: long
+        -name: String &#123final&#125
+        -birthdateTimeStamp: long &#123final&#125
         +Person(name: String, birthdateTimeStamp: long)
     }
 
     class Applicant {
-        -applicantId: int
-        -applicationDocuments: List~ApplicationDocument~
+        -applicantId: int &#123final&#125
+        -applicationDocuments: List~ApplicationDocument~ &#123final&#125
         +Applicant(name: String, birthdateTimeStamp: long, applicantId: int)
         +addApplicationDocument(applicationDocument: ApplicationDocument) void
     }
@@ -46,9 +46,9 @@ classDiagram
 
     class ApplicationDocument {
         <<record>>
-        -description: String
-        -type: String
-        -document: File
+        description: String
+        type: String
+        document: File
     }
 
     class JobOfferReader {

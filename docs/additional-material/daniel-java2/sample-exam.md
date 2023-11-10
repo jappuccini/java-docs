@@ -40,9 +40,9 @@ classDiagram
 
     class SuperHuman {
         <<abstract>>
-        -name: String
-        -universe: Universe
-        -power: int
+        -name: String &#123final&#125
+        -universe: Universe &#123final&#125
+        -power: int &#123final&#125
         +SuperHuman(name: String, universe: Universe, power: int)
         +name() String
         +universe() Universe
@@ -65,9 +65,9 @@ classDiagram
 
     class SuperLeague~T extends SuperHuman~ {
         <<record>>
-        -name: String
-        -universe: Universe
-        -members: Map~T, Boolean~
+        name: String
+        universe: Universe
+        members: Map~T, Boolean~
         +addSuperHuman(t: T) void
         +getMostPowerfulSuperHuman() Optional~T~
         +getAllAvailableSuperHumans() List~T~
@@ -169,9 +169,9 @@ classDiagram
 
     class SuperHuman {
         <<abstract>>
-        -name: String
-        -universe: Universe
-        -power: int
+        -name: String &#123final&#125
+        -universe: Universe &#123final&#125
+        -power: int &#123final&#125
         +SuperHuman(name: String, universe: Universe, power: int)
         +name() String
         +universe() Universe
@@ -194,9 +194,9 @@ classDiagram
 
     class SuperLeague~T extends SuperHuman~ {
         <<record>>
-        -name: String
-        -universe: Universe
-        -members: Map~T, Boolean~
+        name: String
+        universe: Universe
+        members: Map~T, Boolean~
         +addSuperHuman(t: T) void
         +getMostPowerfulSuperHuman() Optional~T~
         +getAllAvailableSuperHumans() List~T~
@@ -277,18 +277,18 @@ classDiagram
 
     class Single {
         <<record>>
-        -name: String
-        -artist: Artist
-        -salesInMillions: int
-        -publishingYear: String
+        name: String
+        artist: Artist
+        salesInMillions: int
+        publishingYear: String
     }
 
     class Artist {
         <<record>>
-        -name: String
-        -country: Country
-        -birthdate: LocalDate
-        -isAlive: boolean
+        name: String
+        country: Country
+        birthdate: LocalDate
+        isAlive: boolean
     }
 
     class Country {
@@ -304,7 +304,7 @@ classDiagram
 
     class SingleQueries {
         <<record>>
-        -singles: List~Single~
+        singles: List~Single~
         +printAllSinglesWithMoreThan25MillionSalesPerCountry() void
         +printAverageBirthYearOfAllDeceasedArtists() void
         +isAnySingleFromChinaWithMoreThan10MillionSales() boolean

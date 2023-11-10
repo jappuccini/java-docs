@@ -15,9 +15,9 @@ classDiagram
     ChristmasTree o-- Candle
 
     class ChristmasTree {
-        -type: String
-        -sizeInM: double
-        -candles: List~Candle~
+        -type: String &#123final&#125
+        -sizeInM: double &#123final&#125
+        -candles: List~Candle~ &#123final&#125
         +ChristmasTree(type: String, sizeInM: double)
         +addCandle(candle: Candle) void
         +lightChristmasTree() void
@@ -27,7 +27,7 @@ classDiagram
 
     class Candle {
         #isBurning: boolean
-        -colour: String
+        -colour: String &#123final&#125
         +Candle(colour: String)
         +lightACandle() void
         +turnOffACandle() void

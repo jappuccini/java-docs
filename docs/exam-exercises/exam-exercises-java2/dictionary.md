@@ -19,8 +19,8 @@ classDiagram
 
     class Word {
         <<record>>
-        -value: String
-        -language: Language
+        value: String
+        language: Language
         +compareTo(other: Word) int
     }
 
@@ -33,8 +33,8 @@ classDiagram
         <<enumeration>>
         DE = DE, Deutsch
         EN = EN, Englisch
-        -code: String
-        -description: String
+        -code: String &#123final&#125
+        -description: String &#123final&#125
     }
 
     class Dictionary {

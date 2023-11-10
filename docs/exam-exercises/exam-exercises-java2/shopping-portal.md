@@ -16,7 +16,7 @@ classDiagram
     ShoppingCart *-- Item
 
     class ShoppingCart~T extends Sellable~ {
-        -items: List~Item~
+        -items: List~Item~ &#123final&#125
         +ShoppingCart()
         +addItem(sellable: T, amount: int) void
         +removeItem(sellable: T) void
@@ -24,8 +24,8 @@ classDiagram
     }
 
     class Item {
-        -sellable: T
-        -amount: int
+        -sellable: T &#123final&#125
+        -amount: int &#123final&#125
         -Item(sellable: T, amount: int)
         +getSubTotalInEuro() double
     }
@@ -37,14 +37,14 @@ classDiagram
 
     class Product {
         <<record>>
-        -description: String
-        -priceInEuro: double
+        description: String
+        priceInEuro: double
     }
 
     class ShoppingPortal {
         <<record>>
-        -user: String
-        -shoppingCart: ShoppingCart~Product~
+        user: String
+        shoppingCart: ShoppingCart~Product~
         +addProductToShoppingCart(product: Product, amount: int) void
         +removeProductFromShoppingCart(product: Product) void
         +clearShoppingCart() void
