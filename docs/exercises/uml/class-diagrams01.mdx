@@ -18,10 +18,10 @@ import Exercise from '@site/src/components/Exercise';
 classDiagram
 
     class Player {
-        -name: String
+        -name: String &#123final&#125
         -score: int
         +Player(String: name)
-        +getName() String
+        +name() String
         +getScore() int
         +setScore(score: int) void
     }

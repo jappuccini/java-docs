@@ -18,30 +18,33 @@ classDiagram
     Employee o-- Person
 
     class Company {
-        -name: String
-        -employees: ArrayList~Employee~
+        -name: String &#123final&#125
+        -employees: ArrayList~Employee~ &#123final&#125
         -numberOfEmployees: int
         +Company(name: String)
+        +name() String
+        +employees() ArrayList~Employee~
+        +getNumberOfEmployees() int
         +addEmployee(employee: Employee) void
-        +print() void
+        +toString() String
     }
 
     class Person {
-        -name: String
+        -name: String &#123final&#125
         +Person(name: String)
-        +getName() String
+        +name() String
     }
 
     class Employee {
-        -employeeId: int
-        -person: Person
-        -salary: int
-        +Employee(employeeId: int, person: Person, salary: int)
-        +getEmployeeId() int
-        +getName() String
-        +setSalary(salary: int) void
-        +getSalary() int
-        +print() void
+        -employeeId: int &#123final&#125
+        -person: Person &#123final&#125
+        -salaryInEuro: int
+        +Employee(employeeId: int, person: Person, salaryInEuro: int)
+        +employeeId() int
+        +name() String
+        +setSalaryInEuro(salaryInEuro: int) void
+        +getSalaryInEuro() int
+        +toString() String
     }
 ```
 
@@ -52,15 +55,13 @@ Der Konstruktor soll den Namen initialisieren.
 ## Hinweise zur Klasse _Employee_
 
 - Der Konstruktor soll alle Attribute initialisieren
-- Die Methode `String getName()` soll den Namen des Mitarbeiters zurückgeben
-- Die Methode `void print()` soll alle Attribute auf der Konsole ausgeben
+- Die Methode `String name()` soll den Namen des Mitarbeiters zurückgeben
 
 ## Hinweise zur Klasse _Company_
 
 - Der Konstruktor soll den Namen sowie die Mitarbeiterliste initialisieren
 - Die Methode `void addEmployee(employee: Employee)` soll der Mitarbeiterliste
   einen Mitarbeiter hinzufügen
-- Die Methode `void print()` soll alle Attribute auf der Konsole ausgeben
 
 ## Konsolenausgabe
 

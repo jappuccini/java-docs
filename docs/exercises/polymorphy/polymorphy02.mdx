@@ -20,19 +20,19 @@ classDiagram
     Rental o-- Vehicle
 
     class Vehicle {
-        -make: String
-        -model: String
-        -engine: Engine
-        #speed: double
+        -make: String &#123final&#125
+        -model: String &#123final&#125
+        -engine: Engine &#123final&#125
+        #speedInKmh: double
         -numberOfVehicles: int$
         +Vehicle(make: String, model: String, engine: Engine)
-        +getMake() String
-        +getModel() String
-        +getEngine() Engine
-        +getSpeed() double
-        +accelerate(value: int) void
-        +brake(value: int) void
-        +print() void
+        +make() String
+        +model() String
+        +engine() Engine
+        +getSpeedInKmh() double
+        +accelerate(valueInKmh: int) void
+        +brake(valueInKmh: int) void
+        +toString() String
         +getNumberOfVehicles()$ int
     }
 
@@ -42,34 +42,36 @@ classDiagram
         PETROL = Benzin
         GAS = Gas
         ELECTRO = Elektro
-        -description: String
+        -description: String &#123final&#125
     }
 
     class Car {
-        -seats: int
+        -seats: int &#123final&#125
         +Car(make: String, model: String, engine: Engine, seats: int)
-        +getSeats() int
+        +seats() int
         +doATurboBoost() void
-        +print() void
+        +toString() String
     }
 
     class Truck {
-        -cargo: int
+        -cargo: int &#123final&#125
         -isTransformed: boolean
         +Truck(make: String, model: String, engine: Engine, cargo: int)
-        +getCargo() int
+        +cargo() int
         +isTransformed() boolean
         +transform() void
-        +print() void
+        +toString() String
     }
 
     class Rental {
-        -name: String
-        -vehicles: ArrayList~Vehicle~
+        -name: String &#123final&#125
+        -vehicles: ArrayList~Vehicle~ &#123final&#125
         +Rental(name: String)
+        +name() String
+        +vehicles() ArrayList~Vehicle~
         +addVehicle(vehicle: Vehicle) void
         +addAllVehicles(vehicles: Vehicle...) void
-        +print() void
+        +toString() String
     }
 ```
 
@@ -80,7 +82,6 @@ classDiagram
   ein Fahrzeug hinzufügen
 - Die Methode `void addAllVehicles(vehicles: Vehicle...)` soll der
   Fahrzeugvermietung mehrere Fahrzeug hinzufügen
-- Die Methode `void print()` soll alle Attribute auf der Konsole ausgeben
 
 ## Konsolenausgabe
 

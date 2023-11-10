@@ -28,8 +28,8 @@ classDiagram
         CHECKERS = Checkers, 3
         KING = King, 4
         ACE = Ace, 11
-        -description: String
-        -value: int
+        -description: String &#123final&#125
+        -value: int &#123final&#125
     }
 
     class SkatCardColor {
@@ -38,23 +38,23 @@ classDiagram
         HEARTS = Hearts
         SPADE = Spade
         CLUBS = Clubs
-        -description: String
+        -description: String &#123final&#125
     }
 
     class SkatCard {
-        -color: SkatCardColor
-        -value: SkatCardValue
+        -color: SkatCardColor &#123final&#125
+        -value: SkatCardValue &#123final&#125
         +SkatCard(color: SkatCardColor, value: SkatCardValue)
-        +getColor() SkatCardColor
-        +getValue() SkatCardValue
+        +color() SkatCardColor
+        +value() SkatCardValue
         +getCardDescription() String
     }
 
     class SkatCardDeck {
-        -skatCards: ArrayList~SkatCard~
+        -skatCards: ArrayList~SkatCard~ &#123final&#125
         +SkatCardDeck()
+        +skatCards() ArrayList~SkatCard~
         +shuffleSkatCards() void
-        +getSkatCards() ArrayList~SkatCard~
     }
 ```
 

@@ -27,6 +27,9 @@ classDiagram
         -box6: Bottle
         +insertBottle(bottle: Bottle, box: int) void
         +takeBottle(box: int) Bottle
+        +equals(object: Object) boolean
+        +hashCode() int
+        +toString() String
     }
 
     class Bottle {

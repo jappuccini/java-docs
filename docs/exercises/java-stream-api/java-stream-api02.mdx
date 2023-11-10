@@ -5,8 +5,8 @@ description: ''
 
 import Exercise from '@site/src/components/Exercise';
 
-- Erstelle die Klassen `FootballClub`, `Position`, `Footballer` und `Queries`
-  anhand des abgebildeten Klassendiagramms
+- Erstelle die Klassen `FootballClub`, `Position`, `Footballer` und
+  `FootballerQueries` anhand des abgebildeten Klassendiagramms
 - Erstelle eine ausführbare Klasse, welche alle erstellten Abfragen ausführt und
   die Ergebnisse auf der Konsole ausgibt
 
@@ -16,7 +16,7 @@ import Exercise from '@site/src/components/Exercise';
 classDiagram
     Footballer o-- Position
     Footballer o-- FootballClub
-    Queries o-- Footballer
+    FootballerQueries o-- Footballer
 
     class Position {
         <<enumeration>>
@@ -28,29 +28,25 @@ classDiagram
 
     class Footballer {
         <<record>>
-        -name: String
-        -position: Position
-        -birthdate: LocalDate
-        -sizeInCm: int
-        -footballClub: FootballClub
-        -numberOfGames: int
-        -numberOfGoals: int
+        name: String
+        position: Position
+        birthdate: LocalDate
+        sizeInCm: int
+        footballClub: FootballClub
+        numberOfGames: int
+        numberOfGoals: int
     }
 
     class FootballClub {
         <<record>>
-        -name: String
-        -positionInAllTimeTable: int
-        -pointsInAllTimeTable: int
+        name: String
+        positionInAllTimeTable: int
+        pointsInAllTimeTable: int
     }
 
-    class DataProvider {
-        +getFootballers()$ List~Footballer~
-    }
-
-    class Queries {
+    class FootballerQueries {
         <<record>>
-        -footballers: List~Footballer~
+        footballers: List~Footballer~
         +getTotalOfAllGoalsByMidfielders() int
         +getNameOfVfLWolfsburgFootballerWithMostPlayedGames() Optional~Footballer~
         +getNamesOfAllFootballClubs() List~FootballClub~

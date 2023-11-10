@@ -44,9 +44,9 @@ Klassen werden im Klassendiagramm als Rechteck mit verschiedenen Bereichen
 ```mermaid
 classDiagram
     class Person {
-        -name: String
-        -age: int
-        -gender: char
+        -name: String &#123final&#125
+        -age: int &#123final&#125
+        -gender: char &#123final&#125
         -numberOfPersons: int$
         +Person(name: String, age: int, gender: char)
         +name() String
@@ -85,7 +85,7 @@ classDiagram
         FRIDAY = Friday
         SATURDAY = Saturday
        SUNDAY = Sunday
-        -description: String
+        -description: String &#123final&#125
     }
 ```
 
@@ -127,15 +127,16 @@ classDiagram
 Datenklassen werden im Klassendiagramm durch den Stereotypen `record` kenntlich
 gemacht. Dieser impliziert, dass die Datenklasse einen entsprechenden
 Konstruktor, Getter zu allen Attributen sowie entsprechende Implementierungen
-für die Object-Methoden besitzt.
+für die Object-Methoden besitzt, dass sämtliche Attribute private und
+unveränderlich sind und dass die Klasse selbst unveränderlich ist.
 
 ```mermaid
 classDiagram
     class Person {
         <<record>>
-        -name: String
-        -age: int
-        -gender: char
+        name: String
+        age: int
+        gender: char
     }
 ```
 

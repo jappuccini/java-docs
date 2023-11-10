@@ -17,26 +17,26 @@ classDiagram
     CreatureGame o-- Creature
 
     class CreatureGame {
-        -creature1: Creature
-        -creature2: Creature
+        -creature1: Creature &#123final&#125
+        -creature2: Creature &#123final&#125
         -numberOfRounds: int
         +Game(creature1: Creature, creature2: Creature)
         +simulateFight() void
         -move(creature1: Creature, creature2: Creature) boolean
-        -print() void
+        -toString() String
     }
 
     class Creature {
-        -name: String
-        -attackValue: int
+        -name: String &#123final&#125
+        -attackValue: int &#123final&#125
         -hitpoints: int
         +Creature(name: String, attackValue: int, hitpoints: int)
         +attackCreature(creature: Creature) boolean
-        +getName() String
-        +getAttackValue() int
+        +name() String
+        +attackValue() int
         +getHitpoints() int
         +setHitpoints(hitpoints: int) void
-        +print() void
+        +toString() String
     }
 ```
 
@@ -45,7 +45,6 @@ classDiagram
 - Passe die Methode `boolean attack(creature: Creature)` so an, dass der
   Rückgabewert `true` ist, wenn die Lebenspunkte der angegriffenen Kreatur
   kleiner gleich Null sind, bzw. `false`, wenn nicht
-- Die Methode `void print()` soll alle Attribute auf der Konsole ausgeben
 
 ## Hinweise zur Klasse _CreatureGame_
 
@@ -55,7 +54,6 @@ classDiagram
 - Die Methode `boolean move(creature1: Creature, creature2: Creature)` soll eine
   Kreatur die andere angreifen lassen und den Rückgabewert `true` liefern, wenn
   die angegriffene Kreatur "stirbt", bzw. `false`, wenn nicht
-- Die Methode `void print()` soll alle Attribute auf der Konsole ausgeben
 
 ## Konsolenausgabe
 
