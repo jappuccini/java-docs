@@ -1,7 +1,7 @@
 ---
 title: Bäume
 description: ''
-sidebar_position: 350
+sidebar_position: 226
 tags: [trees]
 ---
 
