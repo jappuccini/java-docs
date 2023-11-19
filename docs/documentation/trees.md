@@ -112,16 +112,16 @@ flowchart TD
     node5 --> node8
     node5 --> node9
 
-    node1(0)
-    node2(1)
-    node3(2)
-    node4(3)
+    node1(6)
+    node2(2)
+    node3(8)
+    node4(1)
     node5(4)
-    node6(5)
-    node7(6)
-    node8(7)
-    node9(8)
+    node6(7)
+    node7(9)
+    node8(3)
+    node9(5)
 
-    depth[Tiefendurchlauf: 0, 1, 3, 4, 7, 8, 2, 5, 6
-    Breitendurchlauf: 0, 1, 2, 3, 4, 5, 6, 7, 8]
+    depth[Tiefendurchlauf: 6, 2, 1, 4, 3, 5, 8, 7, 9
+    Breitendurchlauf: 6, 2, 8, 1, 4, 7, 9, 3, 5]
 ```
