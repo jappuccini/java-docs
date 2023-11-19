@@ -2,7 +2,7 @@
 title: Softwaretests
 description: ''
 sidebar_position: 310
-tags: []
+tags: [tests]
 ---
 
 Softwaretests sollen sicherstellen, dass bei der Entwicklung oder Änderung einer

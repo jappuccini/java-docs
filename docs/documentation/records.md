@@ -2,7 +2,7 @@
 title: Datenklassen (Records)
 description: ''
 sidebar_position: 250
-tags: []
+tags: [records]
 ---
 
 Datenklassen sind Klassen die lediglich der Kapselung unveränderlicher Daten

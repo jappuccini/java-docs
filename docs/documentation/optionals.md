@@ -2,7 +2,7 @@
 title: Optionals
 description: ''
 sidebar_position: 290
-tags: []
+tags: [optionals]
 ---
 
 Der Umgang mit null-Werten stellt in vielen Programmiersprachen eine große
