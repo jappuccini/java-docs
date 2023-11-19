@@ -119,5 +119,5 @@ Wahrscheinlichkeit dem Formensymbol (`shadeSymbol`) einen Wert zuweisen
     beiden Spieler keine Punkte mehr hat
   - In jeder Runde verliert der Spieler mit dem schlechteren Wurfwert Punkte
     (die Differenz der beiden Wurfwerte)
-- Hinweis: Der Wurfwert berechnet sich nach der Formel _Zahlenwert des
-  Zahlenwürfels \* Anzahl Ecken des gewürfelten Formensymbols_
+- Hinweis: Der Wurfwert berechnet sich als Produkt aus dem Zahlenwert des
+  Zahlenwürfels und der Anzahl Ecken des gewürfelten Formensymbols

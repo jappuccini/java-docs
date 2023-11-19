@@ -87,8 +87,8 @@ classDiagram
 
 ## Hinweis zur Klasse _Item_
 
-Die Methode `double getSubTotalInEuro()` soll die Zwischensumme gemäß der Formel
-_Anzahl \* Preis_ zurückgeben
+Die Methode `double getSubTotalInEuro()` soll die Zwischensumme als Produkt aus
+der Anzahl und dem Preis zurückgeben.
 
 ## Hinweise zur Klasse _ShoppingCart_
 
