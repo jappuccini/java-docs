@@ -2,7 +2,7 @@
 title: Softwaredesign
 description: ''
 sidebar_position: 15
-tags: []
+tags: [design]
 ---
 
 Als Teilprozess der Softwareentwicklumg umfasst das Softwaredesign die

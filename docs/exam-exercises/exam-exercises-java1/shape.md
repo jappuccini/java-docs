@@ -64,16 +64,16 @@ classDiagram
 ## Hinweise zur Klasse _Circle_
 
 - Die Methode `double getAreaInCm2()` soll den Flächeninhalt gemäß der Formel
-  _Pi * r * r_ berechnen und zurückgeben
+  `𝐴 = 𝜋 ∗ 𝑟 ∗ 𝑟` berechnen und zurückgeben
 - Die Methode `double getCircumferenceInCm()` soll den Umfang gemäß der Formel
-  _2 * Pi * r_ berechnen und zurückgeben
+  `U = 2 ∗ 𝜋 ∗ 𝑟` berechnen und zurückgeben
 
 ## Hinweise zur Klasse _Rectangle_
 
 - Die Methode `double getAreaInCm2()` soll den Flächeninhalt gemäß der Formel
-  _a \* b_ berechnen und zurückgeben
+  `𝐴 = 𝑎 ∗ 𝑏` berechnen und zurückgeben
 - Die Methode `double getCircumferenceInCm()` soll den Umfang gemäß der Formel
-  _2 * a + 2 * b_ berechnen und zurückgeben
+  `U = 2 ∗ 𝑎 + 2 ∗ 𝑏` berechnen und zurückgeben
 
 ## Hinweise zur Klasse _ShapeReader_
 
