@@ -66,7 +66,7 @@ const config: Config = {
         },
         {
           type: 'doc',
-          docId: 'exercises/programming/programming',
+          docId: 'exercises/coding/coding',
           position: 'left',
           label: 'Übungsaufgaben',
         },
