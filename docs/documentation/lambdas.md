@@ -2,7 +2,7 @@
 title: Lambda-Ausdrücke (Lambdas)
 description: ''
 sidebar_position: 265
-tags: [lambdas]
+tags: [inner-classes, lambdas]
 ---
 
 Lambda-Ausdrücke sind anonyme Funktionen, die nur über ihre Referenz

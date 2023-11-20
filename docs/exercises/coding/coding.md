@@ -2,7 +2,7 @@
 title: Programmieren
 description: ''
 sidebar_position: 10
-tags: [programming]
+tags: [coding]
 ---
 
 ## Übungsaufgaben von tutego.de

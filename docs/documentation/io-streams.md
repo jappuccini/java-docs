@@ -2,7 +2,7 @@
 title: Datenströme (IO-Streams)
 description: ''
 sidebar_position: 340
-tags: []
+tags: [io-streams]
 ---
 
 Datenströme (IO-Streams) sind unidirektionale Pipelines, die Schnittstellen

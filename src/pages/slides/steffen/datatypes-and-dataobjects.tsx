@@ -32,7 +32,7 @@ export default function DataTypesAndDataObjects(): JSX.Element {
           </aside>
         </section>
         <section>
-          <Link to="/documentation/programming#programmausführung">
+          <Link to="/documentation/coding#programmausführung">
             Programmausführung
           </Link>
           <NKR />

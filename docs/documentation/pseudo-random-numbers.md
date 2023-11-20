@@ -2,7 +2,7 @@
 title: Pseudozufallszahlen
 description: ''
 sidebar_position: 80
-tags: []
+tags: [java-api, random]
 ---
 
 Die Klasse `Random` ermöglicht das Erzeugen von Pseudozufallszahlen.
