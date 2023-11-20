@@ -2,7 +2,7 @@
 title: Datentypen
 description: ''
 sidebar_position: 30
-tags: []
+tags: [data-types]
 ---
 
 Datentypen legen neben der Größe des Arbeitsspeichers, die ein Datenobjekt

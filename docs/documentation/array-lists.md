@@ -2,7 +2,7 @@
 title: Feldbasierte Listen (ArrayLists)
 description: ''
 sidebar_position: 120
-tags: []
+tags: [collections, arrays, lists]
 ---
 
 Das Arbeiten mit Feldern stellt einige Herausforderungen bereit:

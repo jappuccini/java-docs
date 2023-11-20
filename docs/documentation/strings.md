@@ -2,7 +2,7 @@
 title: Zeichenketten (Strings)
 description: ''
 sidebar_position: 50
-tags: []
+tags: [java-api, strings]
 ---
 
 Ketten von beliebigen Zeichen werden durch die Klasse `String` realisiert. Diese

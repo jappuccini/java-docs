@@ -2,7 +2,7 @@
 title: Mathematische Berechnungen
 description: ''
 sidebar_position: 70
-tags: []
+tags: [java-api, math]
 ---
 
 Die Klasse `Math` stellt neben einigen Konstanten wie der Kreiszahl _Pi_ und der

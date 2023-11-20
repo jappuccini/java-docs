@@ -2,7 +2,7 @@
 title: Die Mutter aller Klassen
 description: ''
 sidebar_position: 190
-tags: []
+tags: [object]
 ---
 
 Alle Klassen in Java sind letztlich Unterklassen der Klasse `Object`. Daher wird
