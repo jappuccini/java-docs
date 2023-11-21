@@ -1,0 +1,373 @@
+---
+title: Algorithmen
+description: ''
+sidebar_position: 350
+tags: [algorithms]
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+Ein Algorithmus stellt ein Verfahren zur Lösung eines Problems mit einer
+endlichen Anzahl von Schritten dar. In der Prpgrammierung ist ein Algorithmus
+eine Reihe von Anweisungen, die festlegen, was und wie etwas getan werden muss.
+Zielsetzung ist dabei, aus einer gegebenen Eingabe eine entsprechende Ausgabe zu
+erhalten. Beispiele aus der realen Welt für Algorithmen sind Aufbauanleitungen,
+Rezepte, Spielanleitungen und Beipackzettel.
+
+```mermaid
+flowchart LR
+    input --> algorithm --> output
+
+    input(Eingabe)
+    algorithm{Algorithmus}
+    output(Ausgabe)
+```
+
+Das nachfolgende Rezept beschreibt die Zubereitung von Pankcakes:
+
+1. 3 Eiweiss zu festem Eischnee verarbeiten
+2. 3 Eigelb und 50g Zucker schaumig rühren
+3. 300g Mehl, 300g Milch, 1 TL Backpulver und etwas Salz unter die
+   Eigelb-Zuckermasse rühren
+4. Sollte der Teig zu fest sein, zusätzlich Milch unterrühren
+5. Den Eischnee unter den Teig heben
+6. Eine Pfanne mit etwas Fett erhitzen
+7. Die Pancakes goldgelb ausbacken
+8. Die Pancakes mit Puderzucker und Ahornsirup servieren
+
+:::note Hinweis
+
+Die Überführung einer formalen Anleitung, also ein Algorithmus, in ein
+ausführbares Programm bezeichnet man als Programmierung.
+
+:::
+
+## Eigenschaften von Algorithmen
+
+Damit ein Verfahren als Algorithmus angesehen werden kann, muss es verschiedene
+Eigenschaften erfüllen:
+
+- Determiniertheit: Ein Verfahren ist deterministisch, wenn es bei beliebig
+  häufiger Wiederholung für gleiche Eingabewerte und gleichen Rahmenbedingungen
+  immer zum gleichen Ergebnis führt.
+- Eindeutigkeit (Determinismus): Ein Verfahren ist determiniert, wenn die
+  Schrittfolge immer gleich ist und immer zu einem eindeutigen Ergebnis führt.
+- Endlichkeit (Terminiertheit): Ein Verfahren ist terministisch, wenn die Anzahl
+  der Schritte endlich ist, also wenn das Verfahren nach endlichen Schritten ein
+  Ergebnis liefert.
+- Korrektheit: Ein Verfahren ist korrekt, wenn es immer zu einem richtigen
+  Ergebnis führt.
+
+## Komplexität von Algorithmen
+
+Da der Zeitaufwand von Algorithmen aufgrund unterschiedlicher Faktoren
+(Hardware, parallele Verarbeitung, Eingabereihenfolge,…) nicht genau ermittelt
+werden kann, wird diese mit Hilfe der Landau-Notation dargestellt. Diese teilt
+Algorithmen in unterschiedliche Komplexitätsklassen (logarithmisch, linear,
+polynomial,…) ein. Die Komplexität einer Klasse ergibt sich dabei aus der Anzahl
+der Schritte, die abhängig von der Größe der Eingangsvariablen ausgeführt werden
+müssen.
+
+| Algorithmus         | Best Case        | Average Case     | Worst Case       |
+| ------------------- | ---------------- | ---------------- | ---------------- |
+| Linearsuche         | 𝒪(1)             | 𝒪(𝑛)             | 𝒪(𝑛)             |
+| Binärsuche          | 𝒪(1)             | 𝒪(𝑙𝑜𝑔 ⁡𝑛)        | 𝒪(𝑙𝑜𝑔 ⁡𝑛)        |
+| Interpolationssuche | 𝒪(1)             | 𝒪(𝑙𝑜𝑔 𝑙𝑜𝑔 ⁡𝑛)    | 𝒪(𝑛)             |
+| Bubblesort          | 𝒪(𝑛<sup>2</sup>) | 𝒪(𝑛<sup>2</sup>) | 𝒪(𝑛<sup>2</sup>) |
+| Insertsort          | 𝒪(𝑛)             | 𝒪(𝑛<sup>2</sup>) | 𝒪(𝑛<sup>2</sup>) |
+| Selectsort          | 𝒪(𝑛<sup>2</sup>) | 𝒪(𝑛<sup>2</sup>) | 𝒪(𝑛<sup>2</sup>) |
+| Quicksort           | 𝒪(𝑛 𝑙𝑜𝑔 ⁡𝑛)      | 𝒪(𝑛 𝑙𝑜𝑔 ⁡𝑛)      | 𝒪(𝑛<sup>2</sup>) |
+| Mergesort           | 𝒪(𝑛 𝑙𝑜𝑔 ⁡𝑛)      | 𝒪(𝑛 𝑙𝑜𝑔 ⁡𝑛)      | 𝒪(𝑛 𝑙𝑜𝑔 ⁡𝑛)      |
+
+:::note Hinweis
+
+Das Landau-Symbol 𝒪 steht für _Ordnung von_.
+
+:::
+
+## Suchalgorithmen
+
+Suchalgorithmen sollen innerhalb einer Datensammlung einen oder mehrere
+Datensätze mit bestimmten Eigenschaften finden. Zu den wichtigen Suchalgorithmen
+zählen die Linearsuche, die Binärsuche sowie die Interpolationssuche.
+
+<Tabs>
+  <TabItem value="linearSearch" label="Linearsuche" default>
+
+Bei der Linearsuche werden alle Einträge einer Datensammlung nacheinander
+durchlaufen, d.h. eine Suche kann im besten Fall beim ersten Eintrag und im
+schlechtesten Fall beim letzten Eintrag beendet sein. Bei einer erfolglosen
+Suche müssen alle Einträge durchlaufen werden.
+
+Im nachfolgenden Beispiel wird die Zahlenfolge
+`12, 16, 36, 49, 50, 68, 70, 76, 99` nach dem Wert 70 durchsucht.
+
+| Index | 1      | 2      | 3      | 4      | 5      | 6      | 7      |
+| ----- | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
+| 0     | **12** | **12** | **12** | **12** | **12** | **12** | **12** |
+| 1     | 16     | **16** | **16** | **16** | **16** | **16** | **16** |
+| 2     | 36     | 36     | **36** | **36** | **36** | **36** | **36** |
+| 3     | 49     | 49     | 49     | **49** | **49** | **49** | **49** |
+| 4     | 50     | 50     | 50     | 50     | **50** | **50** | **50** |
+| 5     | 68     | 68     | 68     | 68     | 68     | **68** | **68** |
+| 6     | 70     | 70     | 70     | 70     | 70     | 70     | **70** |
+| 7     | 76     | 76     | 76     | 76     | 76     | 76     | 76     |
+| 8     | 99     | 99     | 99     | 99     | 99     | 99     | 99     |
+
+:::note Hinweis
+
+Durch vorheriges Sortieren der Sammlung kann die Leistung des Algorithmus
+verbessert werden.
+
+:::
+
+  </TabItem>
+  <TabItem value="binarySearch" label="Binärsuche">
+
+Bei der Binärsuche wird die sortierte Sammlung schrittweise halbiert.
+Anschließend wird nur noch in der jeweils passenden Hälfte weitergesucht. Die
+Binärsuche folgt damit dem Teile-und-Herrsche-Prinzip und ist i.d.R. schneller
+als die Linearsuche, setzt aber eine sortierte Sammlung voraus.
+
+Im nachfolgenden Beispiel wird die Zahlenfolge
+`12, 16, 36, 49, 50, 68, 70, 76, 99` nach dem Wert 70 durchsucht.
+
+| Index | 1    | 2      |
+| ----- | ---- | ------ |
+| 0     | 12   | **12** |
+| 1     | 16   | **16** |
+| 2     | 36   | **36** |
+| 3     | 49   | **49** |
+| 4     | [50] | **50** |
+| 5     | 68   | 68     |
+| 6     | 70   | [70]   |
+| 7     | 76   | 76     |
+| 8     | 99   | 99     |
+
+| Durchlauf | l   | r   | m   |
+| --------- | --- | --- | --- |
+| 1         | 0   | 8   | 4   |
+| 2         | 5   | 8   | 6   |
+
+:::note Legende
+
+l = linke Grenze, r = rechte Grenze, m = Mitte
+
+:::
+
+:::note Hinweis
+
+Bei der Ermittlung der Mitte wird i.d.R. die Abrundungsfunktion verwendet, d.h.
+zu einer reellen Zahl wird die größte ganze Zahl, die kleiner als die reelle
+Zahl ist, verwendet.
+
+:::
+
+  </TabItem>
+  <TabItem value="interpolationSearch" label="Interpolationsuche">
+
+Die Interpolationssuche basiert auf der Binärsuche, halbiert die Sammlung aber
+nicht, sondern versucht, durch Interpolation, einen geeigneteren Teiler zu
+ermitteln. Dieser wird mit Hilfe der Formel
+`t = ⌊𝑙 + ((𝑠 − 𝑑[𝑙]) / (𝑑[𝑟] − 𝑑[𝑙])) ∗ (𝑟 − 𝑙)⌋` ermittelt.
+
+Im nachfolgenden Beispiel wird die Zahlenfolge
+`12, 16, 36, 49, 50, 68, 70, 76, 99` nach dem Wert 70 durchsucht.
+
+| Index | 1    | 2      |
+| ----- | ---- | ------ |
+| 0     | 12   | **12** |
+| 1     | 16   | **16** |
+| 2     | 36   | **36** |
+| 3     | 49   | **49** |
+| 4     | 50   | **50** |
+| 5     | [68] | **68** |
+| 6     | 70   | [70]   |
+| 7     | 76   | 76     |
+| 8     | 99   | 99     |
+
+| Durchlauf | s   | l   | r   | d[l] | d[r] | t   |
+| --------- | --- | --- | --- | ---- | ---- | --- |
+| 1         | 70  | 0   | 8   | 12   | 99   | 5   |
+| 2         | 70  | 6   | 8   | 70   | 99   | 6   |
+
+:::note Legende
+
+𝑠 = Schlüssel, 𝑙 = linke Grenze, 𝑟 = rechte Grenze, 𝑑 = Datensammlung, t =
+Teiler, ⌊ ⌋ = untere Gaußklammer
+
+:::
+
+  </TabItem>
+</Tabs>
+
+## Sortieralgorithmen
+
+Sortieralgorithmen sollen eine möglichst effiziente Speicherung von Daten und
+deren Auswertung ermöglichen. Man unterscheidet dabei zwischen einfachen und
+rekursiven Sortieralgorithmen.
+
+<Tabs>
+  <TabItem value="bubbleSort" label="Bubblesort" default>
+
+Der Bubblesort verfolgt die Idee, das größere Blasen schneller aufsteigen als
+kleinere. Dementsprechend werden beim Bubblesort Nachbarelemente miteinander
+verglichen und gegebenenfalls vertauscht, so dass am Ende eines Durchlaufs das
+jeweils größte Element am Ende des noch unsortierten Teils steht.
+
+| Index | 0   | 1      | 2      | 3      | 4      | 5      | 6      | 7      | 8      | 9      |
+| ----- | --- | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
+| 0     | 12  | 12     | 12     | 12     | 12     | 12     | 12     | 12     | 12     | **12** |
+| 1     | 99  | 50     | 50     | 36     | 36     | 36     | 36     | 16     | **16** | **16** |
+| 2     | 50  | 68     | 36     | 49     | 49     | 49     | 16     | **36** | **36** | **36** |
+| 3     | 68  | 36     | 49     | 50     | 50     | 16     | **49** | **49** | **49** | **49** |
+| 4     | 36  | 49     | 68     | 68     | 16     | **50** | **50** | **50** | **50** | **50** |
+| 5     | 49  | 76     | 70     | 16     | **68** | **68** | **68** | **68** | **68** | **68** |
+| 6     | 76  | 70     | 16     | **70** | **70** | **70** | **70** | **70** | **70** | **70** |
+| 7     | 70  | 16     | **76** | **76** | **76** | **76** | **76** | **76** | **76** | **76** |
+| 8     | 16  | **99** | **99** | **99** | **99** | **99** | **99** | **99** | **99** | **99** |
+
+  </TabItem>
+  <TabItem value="insertSort" label="Insertsort">
+
+Beim Insertsort (auch Insertion Sort) wird dem unsortierten Teil der
+Ausgangsdaten ein beliebiges Element entnommen (z.B. das jeweils erste) und an
+der richtigen Stelle im sortierten Teil wieder eingefügt. Beim Einfügen wird das
+entnommene Element mit den bereits sortierten Elementen verglichen.
+
+| Index | 0   | 1      | 2      | 3      | 4      | 5      | 6      | 7      | 8      | 9      |
+| ----- | --- | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
+| 0     | 12  | **12** | **12** | **12** | **12** | **12** | **12** | **12** | **12** | **12** |
+| 1     | 99  | 99     | **99** | **50** | **50** | **36** | **36** | **36** | **36** | **16** |
+| 2     | 50  | 50     | 50     | **99** | **68** | **50** | **49** | **49** | **49** | **36** |
+| 3     | 68  | 68     | 68     | 68     | **99** | **68** | **50** | **50** | **50** | **49** |
+| 4     | 36  | 36     | 36     | 36     | 36     | **99** | **68** | **68** | **68** | **50** |
+| 5     | 49  | 49     | 49     | 49     | 49     | 49     | **99** | **76** | **70** | **68** |
+| 6     | 76  | 76     | 76     | 76     | 76     | 76     | 76     | **99** | **76** | **70** |
+| 7     | 70  | 70     | 70     | 70     | 70     | 70     | 70     | 70     | **99** | **76** |
+| 8     | 16  | 16     | 16     | 16     | 16     | 16     | 16     | 16     | 16     | **99** |
+
+  </TabItem>
+  <TabItem value="selectSort" label="Selectsort">
+
+Beim Selectsort (auch Selection Sort) wird dem unsortierten Teil der
+Ausgangsdaten das jeweils kleinste Element entnommen und dem sortierten Teil
+angehängt.
+
+| Index | 0   | 1      | 2      | 3      | 4      | 5      | 6      | 7      | 8      | 9      |
+| ----- | --- | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
+| 0     | 12  | **12** | **12** | **12** | **12** | **12** | **12** | **12** | **12** | **12** |
+| 1     | 99  | 99     | **16** | **16** | **16** | **16** | **16** | **16** | **16** | **16** |
+| 2     | 50  | 50     | 99     | **36** | **36** | **36** | **36** | **36** | **36** | **36** |
+| 3     | 68  | 68     | 50     | 99     | **49** | **49** | **49** | **49** | **49** | **49** |
+| 4     | 36  | 36     | 68     | 50     | 99     | **50** | **50** | **50** | **50** | **50** |
+| 5     | 49  | 49     | 36     | 68     | 50     | 99     | **68** | **68** | **68** | **68** |
+| 6     | 76  | 76     | 49     | 49     | 68     | 68     | 99     | **70** | **70** | **70** |
+| 7     | 70  | 70     | 76     | 76     | 76     | 76     | 76     | 99     | **76** | **76** |
+| 8     | 16  | 16     | 70     | 70     | 70     | 70     | 70     | 76     | 99     | **99** |
+
+  </TabItem>
+  <TabItem value="quickSort" label="Quicksort">
+
+Beim Quicksort wird die jeweilige Sammlung anhand eines beliebigen Elements
+(i.d.R. das mittlere Element) in zwei Hälften aufgeteilt: eine Hälfte mit
+Elementen kleiner oder gleich dem Teiler-Element und eine Hälfte mit Elementen
+größer dem Teiler-Element. Der Quicksort setzt folglich auf das
+Teile-und-Herrsche-Prinzip.
+
+| Index | 0    | 1    | 2      | 3      | 4      | 5      | 6      |
+| ----- | ---- | ---- | ------ | ------ | ------ | ------ | ------ |
+| 0     | 12   | 12   | **12** | **12** | **12** | **12** | **12** |
+| 1     | 99   | [16] | **16** | **16** | **16** | **16** | **16** |
+| 2     | 50   | 36   | **36** | **36** | **36** | **36** | **36** |
+| 3     | 68   | _68_ | 68     | **49** | **49** | **49** | **49** |
+| 4     | [36] | _50_ | 50     | 50     | 50     | **50** | **50** |
+| 5     | 49   | _49_ | [49]   | 68     | [68]   | **68** | **68** |
+| 6     | 76   | _76_ | 76     | [76]   | 70     | **70** | **70** |
+| 7     | 70   | _70_ | 70     | 70     | _76_   | [76]   | **76** |
+| 8     | 16   | _99_ | 99     | 99     | _99_   | 99     | **99** |
+
+| Durchlauf | l   | r   | m   | d[m] | i   | j   | l-j | i-r |
+| --------- | --- | --- | --- | ---- | --- | --- | --- | --- |
+| 1         | 0   | 8   | 4   | 36   | 3   | 2   | 0-2 | 3-8 |
+| 2         | 0   | 2   | 1   | 16   | 2   | 0   | 0-0 | 2-2 |
+| 3         | 3   | 8   | 5   | 49   | 4   | 3   | 3-3 | 4-8 |
+| 4         | 4   | 8   | 6   | 76   | 7   | 6   | 4-6 | 7-8 |
+| 5         | 4   | 6   | 5   | 68   | 6   | 4   | 4-4 | 6-6 |
+| 6         | 7   | 8   | 7   | 76   | 8   | 6   | 7-6 | 8-8 |
+
+:::note Legende
+
+l = linke Grenze, r = rechte Grenze, m = Mitte, d = Datensammlung, i = linker
+Index, j = rechter Index
+
+:::
+
+:::note Hinweis
+
+Bei der Ermittlung der Mitte wird i.d.R. die Abrundungsfunktion verwendet, d.h.
+zu einer reellen Zahl wird die größte ganze Zahl, die kleiner als die reelle
+Zahl ist, verwendet.
+
+:::
+
+  </TabItem>
+  <TabItem value="mergeSort" label="Mergesort">
+
+Beim Mergesort wird die Ausgangsliste zunächst in kleinere Listen zerlegt, die
+anschließend im Reißverschlussverfahren wieder zusammengefügt bzw. verschmolzen
+werden.
+
+```mermaid
+flowchart
+    split0 --> split1
+    split0 --> split2
+    split1 --> split11
+    split1 --> split12
+    split11 --> split111
+    split11 --> split112
+    split2 --> split21
+    split2 --> split22
+
+    split111 --> merge1
+    split112 --> merge12
+    merge1 --> merge2
+    merge12 --> merge2
+    merge2 --> merge3
+    split12 --> merge0
+    merge0 --> merge3
+    split21 --> merge4
+    split22 --> merge5
+    merge4 --> merge6
+    merge5 --> merge6
+    merge3 --> merge7
+    merge6 --> merge7
+
+    subgraph split
+        split0(12, 99, 50, 68, 36, 49, 76, 70, 16)
+        split1(12, 99, 50, 68, 36)
+        split2(49, 76, 70, 16)
+        split11(12, 99, 50)
+        split111(12, 99)
+        split112(50)
+        split12(68, 36)
+        split21(49, 76)
+        split22(70, 16)
+    end
+
+    subgraph merge
+        merge1(12, 99)
+        merge12(50)
+        merge2(12, 50, 99)
+        merge0(36, 68)
+        merge3(12, 36, 50, 68, 99)
+        merge4(49, 76)
+        merge5(16, 70)
+        merge6(16, 49, 70, 76)
+        merge7(12, 16, 36, 49, 50, 68, 70, 76, 99)
+    end
+```
+
+  </TabItem>
+</Tabs>
