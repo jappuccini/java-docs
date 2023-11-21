@@ -8,9 +8,81 @@ tags: [algorithms]
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-:::danger Hinweis
+Ein Algorithmus stellt ein Verfahren zur Lösung eines Problems mit einer
+endlichen Anzahl von Schritten dar. In der Prpgrammierung ist ein Algorithmus
+eine Reihe von Anweisungen, die festlegen, was und wie etwas getan werden muss.
+Zielsetzung ist dabei, aus einer gegebenen Eingabe eine entsprechende Ausgabe zu
+erhalten. Beispiele aus der realen Welt für Algorithmen sind Aufbauanleitungen,
+Rezepte, Spielanleitungen und Beipackzettel.
 
-ToDo
+```mermaid
+flowchart LR
+    input --> algorithm --> output
+
+    input(Eingabe)
+    algorithm{Algorithmus}
+    output(Ausgabe)
+```
+
+Das nachfolgende Rezept beschreibt die Zubereitung von Pankcakes:
+
+1. 3 Eiweiss zu festem Eischnee verarbeiten
+2. 3 Eigelb und 50g Zucker schaumig rühren
+3. 300g Mehl, 300g Milch, 1 TL Backpulver und etwas Salz unter die
+   Eigelb-Zuckermasse rühren
+4. Sollte der Teig zu fest sein, zusätzlich Milch unterrühren
+5. Den Eischnee unter den Teig heben
+6. Eine Pfanne mit etwas Fett erhitzen
+7. Die Pancakes goldgelb ausbacken
+8. Die Pancakes mit Puderzucker und Ahornsirup servieren
+
+:::note Hinweis
+
+Die Überführung einer formalen Anleitung, also ein Algorithmus, in ein
+ausführbares Programm bezeichnet man als Programmierung.
+
+:::
+
+## Eigenschaften von Algorithmen
+
+Damit ein Verfahren als Algorithmus angesehen werden kann, muss es verschiedene
+Eigenschaften erfüllen:
+
+- Determiniertheit: Ein Verfahren ist deterministisch, wenn es bei beliebig
+  häufiger Wiederholung für gleiche Eingabewerte und gleichen Rahmenbedingungen
+  immer zum gleichen Ergebnis führt.
+- Eindeutigkeit (Determinismus): Ein Verfahren ist determiniert, wenn die
+  Schrittfolge immer gleich ist und immer zu einem eindeutigen Ergebnis führt.
+- Endlichkeit (Terminiertheit): Ein Verfahren ist terministisch, wenn die Anzahl
+  der Schritte endlich ist, also wenn das Verfahren nach endlichen Schritten ein
+  Ergebnis liefert.
+- Korrektheit: Ein Verfahren ist korrekt, wenn es immer zu einem richtigen
+  Ergebnis führt.
+
+## Komplexität von Algorithmen
+
+Da der Zeitaufwand von Algorithmen aufgrund unterschiedlicher Faktoren
+(Hardware, parallele Verarbeitung, Eingabereihenfolge,…) nicht genau ermittelt
+werden kann, wird diese mit Hilfe der Landau-Notation dargestellt. Diese teilt
+Algorithmen in unterschiedliche Komplexitätsklassen (logarithmisch, linear,
+polynomial,…) ein. Die Komplexität einer Klasse ergibt sich dabei aus der Anzahl
+der Schritte, die abhängig von der Größe der Eingangsvariablen ausgeführt werden
+müssen.
+
+| Algorithmus         | Best Case        | Average Case     | Worst Case       |
+| ------------------- | ---------------- | ---------------- | ---------------- |
+| Linearsuche         | 𝒪(1)             | 𝒪(𝑛)             | 𝒪(𝑛)             |
+| Binärsuche          | 𝒪(1)             | 𝒪(𝑙𝑜𝑔 ⁡𝑛)        | 𝒪(𝑙𝑜𝑔 ⁡𝑛)        |
+| Interpolationssuche | 𝒪(1)             | 𝒪(𝑙𝑜𝑔 𝑙𝑜𝑔 ⁡𝑛)    | 𝒪(𝑛)             |
+| Bubblesort          | 𝒪(𝑛<sup>2</sup>) | 𝒪(𝑛<sup>2</sup>) | 𝒪(𝑛<sup>2</sup>) |
+| Insertsort          | 𝒪(𝑛)             | 𝒪(𝑛<sup>2</sup>) | 𝒪(𝑛<sup>2</sup>) |
+| Selectsort          | 𝒪(𝑛<sup>2</sup>) | 𝒪(𝑛<sup>2</sup>) | 𝒪(𝑛<sup>2</sup>) |
+| Quicksort           | 𝒪(𝑛 𝑙𝑜𝑔 ⁡𝑛)      | 𝒪(𝑛 𝑙𝑜𝑔 ⁡𝑛)      | 𝒪(𝑛<sup>2</sup>) |
+| Mergesort           | 𝒪(𝑛 𝑙𝑜𝑔 ⁡𝑛)      | 𝒪(𝑛 𝑙𝑜𝑔 ⁡𝑛)      | 𝒪(𝑛 𝑙𝑜𝑔 ⁡𝑛)      |
+
+:::note Hinweis
+
+Das Landau-Symbol 𝒪 steht für _Ordnung von_.
 
 :::
 
@@ -24,9 +96,9 @@ zählen die Linearsuche, die Binärsuche sowie die Interpolationssuche.
   <TabItem value="linearSearch" label="Linearsuche" default>
 
 Bei der Linearsuche werden alle Einträge einer Datensammlung nacheinander
-durchlaufen, d.h. eine Suche kann im besten Fall (Best Case) beim ersten Eintrag
-und im schlechtesten Fall beim letzten Eintrag beendet sein. Bei einer
-erfolglosen Suche müssen alle Einträge durchlaufen werden.
+durchlaufen, d.h. eine Suche kann im besten Fall beim ersten Eintrag und im
+schlechtesten Fall beim letzten Eintrag beendet sein. Bei einer erfolglosen
+Suche müssen alle Einträge durchlaufen werden.
 
 Im nachfolgenden Beispiel wird die Zahlenfolge
 `12, 16, 36, 49, 50, 68, 70, 76, 99` nach dem Wert 70 durchsucht.
@@ -299,30 +371,3 @@ flowchart
 
   </TabItem>
 </Tabs>
-
-## Komplexität von Algorithmen
-
-Da der Zeitaufwand von Algorithmen aufgrund unterschiedlicher Faktoren
-(Hardware, parallele Verarbeitung, Eingabereihenfolge,…) nicht genau ermittelt
-werden kann, wird diese mit Hilfe der Landau-Notation dargestellt. Diese teilt
-Algorithmen in unterschiedliche Komplexitätsklassen (logarithmisch, linear,
-polynomial,…) ein. Die Komplexität einer Klasse ergibt sich dabei aus der Anzahl
-der Schritte, die abhängig von der Größe der Eingangsvariablen ausgeführt werden
-müssen.
-
-| Algorithmus         | Best Case        | Average Case     | Worst Case       |
-| ------------------- | ---------------- | ---------------- | ---------------- |
-| Linearsuche         | 𝒪(1)             | 𝒪(𝑛)             | 𝒪(𝑛)             |
-| Binärsuche          | 𝒪(1)             | 𝒪(𝑙𝑜𝑔 ⁡𝑛)        | 𝒪(𝑙𝑜𝑔 ⁡𝑛)        |
-| Interpolationssuche | 𝒪(1)             | 𝒪(𝑙𝑜𝑔 𝑙𝑜𝑔 ⁡𝑛)    | 𝒪(𝑛)             |
-| Bubblesort          | 𝒪(𝑛<sup>2</sup>) | 𝒪(𝑛<sup>2</sup>) | 𝒪(𝑛<sup>2</sup>) |
-| Insertsort          | 𝒪(𝑛)             | 𝒪(𝑛<sup>2</sup>) | 𝒪(𝑛<sup>2</sup>) |
-| Selectsort          | 𝒪(𝑛<sup>2</sup>) | 𝒪(𝑛<sup>2</sup>) | 𝒪(𝑛<sup>2</sup>) |
-| Quicksort           | 𝒪(𝑛 𝑙𝑜𝑔 ⁡𝑛)      | 𝒪(𝑛 𝑙𝑜𝑔 ⁡𝑛)      | 𝒪(𝑛<sup>2</sup>) |
-| Mergesort           | 𝒪(𝑛 𝑙𝑜𝑔 ⁡𝑛)      | 𝒪(𝑛 𝑙𝑜𝑔 ⁡𝑛)      | 𝒪(𝑛 𝑙𝑜𝑔 ⁡𝑛)      |
-
-:::note Hinweis
-
-Das Landau-Symbol 𝒪 steht für _Ordnung von_.
-
-:::
