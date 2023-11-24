@@ -15,8 +15,8 @@ benötigt.
 
 ## Lesen von Dateien mit Hilfe der Klasse _Scanner_
 
-Zum Lesen einer Datei können entweder [Datenstromklassen](../io-streams) oder
-die Klasse `Scanner` verwendet werden.
+Zum Lesen einer Datei können entweder [Datenstromklassen](io-streams) oder die
+Klasse `Scanner` verwendet werden.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
