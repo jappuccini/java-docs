@@ -1,0 +1,60 @@
+---
+title: Cases05
+description: ''
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+Welche Ausgabe erwartest Du nach Ablauf des abgebildeten Codings?
+
+## Coding
+
+```java showLineNumbers
+int a = 5;
+int b = 5;
+boolean c = true;
+boolean d = true;
+boolean e;
+int f = 5;
+int g = 3;
+int h = 2;
+int i = 4;
+int j = 0;
+
+e = c && (a > 2 ? (b == (a = a * 2)) : d);
+j += ((h < ((f - g == 3) ? 3 : 2)) && (i < 5)) ? 1 : 2;
+
+System.out.println("a: " + a);
+System.out.println("e: " + e);
+System.out.println("j: " + j);
+```
+
+<Tabs>
+  <TabItem value="a" label="-" default>
+
+  </TabItem>
+  <TabItem value="b" label="a">
+
+| Zeile | Wert            |
+| ----- | --------------- |
+| 1     | a = 5           |
+| 12    | a = 5 \* 2 = 10 |
+
+  </TabItem>
+  <TabItem value="c" label="e">
+
+| Zeile | Wert                                                                        |
+| ----- | --------------------------------------------------------------------------- |
+| 12    | e = true && (5 > 2 ? (true == (5 \* 2)) : true) = true && (5 == 10) = false |
+
+  </TabItem>
+  <TabItem value="d" label="j">
+
+| Zeile | Wert                                                                                                     |
+| ----- | -------------------------------------------------------------------------------------------------------- |
+| 10    | j = 0                                                                                                    |
+| 13    | j = 0 + ((2 < ((5 - 3 == 3) ? 3 : 2)) && (4 < 5)) ? 1 : 2 = 0 + ((2 < 2) && (4 < 5)) ? 1 : 2 = 0 + 2 = 2 |
+
+  </TabItem>
+</Tabs>
