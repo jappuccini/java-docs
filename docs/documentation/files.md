@@ -1,7 +1,7 @@
 ---
 title: Dateien und Verzeichnisse
 description: ''
-sidebar_position: 30
+sidebar_position: 143
 tags: [java-api, files]
 ---
 

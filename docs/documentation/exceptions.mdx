@@ -5,19 +5,24 @@ sidebar_position: 230
 tags: [exceptions]
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 Programmfehler (Bugs) führen dazu, dass Programme unerwartete Ergebnisse liefern
 oder abstürzen. Je komplexer das Programm, desto wichtiger wird eine durchdachte
 und konsequente Fehlerbehandlung. Man unterscheidt dabei zwischen verschiedenen
 Fehlerarten: Kompilierungsfehler, Logikfehler und Laufzeitfehler.
 
-## Kompilierungsfehler
+<Tabs>
+  <TabItem value="a" label="Kompilierungsfehler" default>
 
 Kompilierungsfehler sind Programmfehler, die verhindern, dass das Programm
 ausgeführt werden kann. Sie können relativ einfach behoben werden, da sie schon
 zur Designzeit auftreten und von den meisten Entwicklungsumgebungen direkt
 angezeigt werden.
 
-## Logikfehler
+  </TabItem>
+  <TabItem value="b" label="Logikfehler">
 
 Verhält sich das Programm nicht wie beabsichtigt, spricht man von Logikfehlern.
 Sie sind mit am schwersten zu entdecken und zu beheben. Zur Unterstüzung bei der
@@ -29,7 +34,8 @@ Inhalte von Datenobjekten überprüfen. Zudem bietet der Debugger die Möglichke
 die weitere Ausführung des Programms in der gewünschten Schrittweite
 forzuführen.
 
-## Laufzeitfehler
+  </TabItem>
+  <TabItem value="c" label="Laufzeitfehler">
 
 Laufzeitfehler treten erst beim Ausführen des Programms auf. Sie entstehen meist
 dann, wenn das Programm versucht, eine Operation auszuführen, die nicht
@@ -43,7 +49,10 @@ _Catch-or-Throw-Regel_ Man unterscheidet zwischen _geprüften_ (checked) und
 _ungeprüften_ (unchecked) Ausnahmen. Geprüfte Ausnahmen müssen, ungeprüfte
 Ausnahmen können behandelt bzw. weitergeleitet werden.
 
-### Die Klassenhierarchie der Laufzeitfehler
+  </TabItem>
+</Tabs>
+
+## Die Klassenhierarchie der Laufzeitfehler
 
 Die Klasse `Throwable` stellt die Oberklasse aller Laufzeitfehler dar.
 Schwerwiegende Fehler (hauptsächlich Probleme in der JVM (Java Virtual Machine))
@@ -61,7 +70,7 @@ classDiagram
     RunTimeException <|-- ArithmeticException
 ```
 
-### Definition von Ausnahmenklassen
+## Definition von Ausnahmenklassen
 
 Eigene Ausnahmenklassen werden durch einfaches Ableiten von einer bestehenden
 Ausnahmenklasse definiert. Ausnahmenklassen sollten dabei immer von der Klasse
@@ -78,7 +87,7 @@ public class QuxException extends Exception {
 }
 ```
 
-### Auslösen von Ausnahmen
+## Auslösen von Ausnahmen
 
 Mit dem Schlüsselwort `throw` kann innerhalb einer Methode eine Ausnahme
 ausgelöst werden. Die Methode, in der die Ausnahme ausgelöst wird, muss mit dem
@@ -94,7 +103,7 @@ public class Foo {
 }
 ```
 
-### Weiterleiten von Ausnahmen
+## Weiterleiten von Ausnahmen
 
 Ausnahmen können weitergeleitet werden. Hierbei wird die Fehlerbehandlung an die
 nächsthöhere Ebene weitergegeben. Um eine Ausnahme weiterzuleiten, muss in der
@@ -115,7 +124,7 @@ public class Foo {
 }
 ```
 
-### Abfangen von Ausnahmen
+## Abfangen von Ausnahmen
 
 Mit Hilfe der try-catch-Anweisung können Methoden, die eine Ausnahme auslösen
 können, überwacht werden; d.h. die Ausnahmen werden gegebenenfalls abgefangen.

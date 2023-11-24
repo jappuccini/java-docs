@@ -16,14 +16,14 @@ Klassen vorgegeben bzw. eingeschänkt werden.
 Abstrakte Klassen können nicht instanziiert werden.
 
 <Tabs>
-  <TabItem value="abstractClass" label="Abstrakte Klasse" default>
+  <TabItem value="a" label="Abstrakte Klasse" default>
 
 ```java title="Person.java" showLineNumbers
 public abstract class Person { }
 ```
 
   </TabItem>
-  <TabItem value="mainClass" label="Startklasse" default>
+  <TabItem value="b" label="Startklasse">
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
@@ -45,7 +45,7 @@ Methodenrumpf und müssen in den abgeleiteten Klassen der abstrakten Klasse
 überschrieben werden.
 
 <Tabs>
-  <TabItem value="abstractClassWithAbstractMethod" label="Abstrakte Klasse mit abstrakter Methode">
+  <TabItem value="a" label="Abstrakte Klasse mit abstrakter Methode" default>
 
 ```java title="Person.java" showLineNumbers
 public abstract class Person {
@@ -56,7 +56,7 @@ public abstract class Person {
 ```
 
   </TabItem>
-  <TabItem value="mainClass" label="Startklasse">
+  <TabItem value="b" label="Startklasse">
 
 ```java title="Student.java" showLineNumbers
 public class Student extends Person {
@@ -74,14 +74,14 @@ public class Student extends Person {
 Finale Klassen können nicht abgeleitet werden.
 
 <Tabs>
-  <TabItem value="finalClass" label="Finale Klasse">
+  <TabItem value="a" label="Finale Klasse" default>
 
 ```java title="Person.java" showLineNumbers
 public final class Person { }
 ```
 
   </TabItem>
-  <TabItem value="subClass" label="Unterklasse">
+  <TabItem value="b" label="Unterklasse">
 
 ```java title="Student.java" showLineNumbers
 public class Student extends Person { } // Kompilierungsfehler
@@ -95,7 +95,7 @@ public class Student extends Person { } // Kompilierungsfehler
 Finale Methoden können nicht überschrieben werden.
 
 <Tabs>
-  <TabItem value="classWithFinalMethod" label="Oberklasse mit finaler Methode">
+  <TabItem value="a" label="Oberklasse mit finaler Methode" default>
 
 ```java title="Person.java" showLineNumbers
 public class Person {
@@ -113,7 +113,7 @@ public class Person {
 ```
 
   </TabItem>
-  <TabItem value="subClass" label="Unterklasse">
+  <TabItem value="b" label="Unterklasse">
 
 ```java title="Student.java" showLineNumbers
 public class Student extends Person {

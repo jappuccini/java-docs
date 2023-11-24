@@ -1,7 +1,7 @@
 ---
 title: Aktivitätsdiagramme
 description: ''
-sidebar_position: 20
+sidebar_position: 165
 tags: [uml, activity-diagrams]
 ---
 
