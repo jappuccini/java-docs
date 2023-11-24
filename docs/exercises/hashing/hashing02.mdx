@@ -3,10 +3,37 @@ title: Hashing02
 description: ''
 ---
 
-- Füge die Zahlen 26, 12, 7, 54, 14 und 9 in ein Feld der Länge 8 unter
-  Verwendung der Divisionsrestmethode ohne Sondierung ein
-- Füge die Zahlen 26, 12, 7, 54, 14 und 9 in ein Feld der Länge 8 unter
-  Verwendung der Multiplikativen Methode (𝐴 = 0,62) mit linearer Sondierung
-  (Intervallschritt = 1) ein
-- Füge die Zahlen 26, 12, 7, 54, 14 und 9 in ein Feld der Länge 8 unter
-  Verwendung der Multiplikativen Methode (𝐴 = 0,62) ohne Sondierung ein
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+Füge die Zahlen 26, 12, 7, 54, 14 und 9 in ein Feld der Länge 8 unter Verwendung
+der Divisionsrestmethode ohne Sondierung, unter Verwendung der multiplikativen
+Methode (𝐴 = 0,62) mit linearer Sondierung (Intervallschritt = 2) und unter
+Verwendung der multiplikativen Methode (𝐴 = 0,62) ohne Sondierung ein.
+
+<Tabs>
+  <TabItem value="a" label="-" default>
+
+  </TabItem>
+  <TabItem value="b" label="Divisionsrestmethode ohne Sondierung">
+
+| 0   | 1   | 2   | 3   | 4   | 5   | 6      | 7   |
+| --- | --- | --- | --- | --- | --- | ------ | --- |
+| -   | 9   | 26  | -   | 12  | -   | 54, 14 | 7   |
+
+  </TabItem>
+  <TabItem value="c" label="Multiplikative Methode mit linearer Sondierung">
+
+| 0   | 1   | 2   | 3   | 4   | 5   | 6   | 7   |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 26  | -   | 7   | 12  | 9   | 54  | -   | 14  |
+
+  </TabItem>
+  <TabItem value="d" label="Multiplikative Methode ohne Sondierung">
+
+| 0   | 1   | 2   | 3      | 4   | 5   | 6   | 7   |
+| --- | --- | --- | ------ | --- | --- | --- | --- |
+| 26  | -   | 7   | 12, 54 | 9   | 14  | -   | -   |
+
+  </TabItem>
+</Tabs>

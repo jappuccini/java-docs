@@ -3,10 +3,15 @@ title: Trees01
 description: ''
 ---
 
-- Bestimme für den abgebildeten Baum die Höhe
-- Bestimme für jeden Knoten des abgebildeten Baumes den Grad und die Tiefe
-- Traversiere den abgebildeten Baum unter Verwendung des Tiefendurchlaufs
-- Traversiere den abgebildeten Baum unter Verwendung des Breitendurchlaufs
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+- Bestimme für den abgebildeten Binärbaum die Höhe
+- Bestimme für jeden Knoten des abgebildeten Binärbaums den Grad und die Tiefe
+- Traversiere den abgebildeten Binärbaum unter Verwendung des Tiefendurchlaufs
+- Traversiere den abgebildeten Binärbaum unter Verwendung des Breitendurchlaufs
+
+## Binärbaum
 
 ```mermaid
 flowchart TD
@@ -31,3 +36,51 @@ flowchart TD
     node9(40)
     node10(30)
 ```
+
+<Tabs>
+  <TabItem value="a" label="-" default>
+
+  </TabItem>
+  <TabItem value="b" label="Höhe">
+
+4
+
+  </TabItem>
+  <TabItem value="c" label="Grad und Tiefe">
+
+```mermaid
+flowchart TD
+    node1 --> node2
+    node1 --> node3
+    node2 --> node4
+    node2 --> node5
+    node3 --> node6
+    node3 --> node7
+    node5 --> node8
+    node5 --> node9
+    node8 --> node10
+
+    node1(44\nGrad: 2, Tiefe: 0)
+    node2(29\nGrad: 2, Tiefe: 1)
+    node3(65\nGrad: 2, Tiefe: 1)
+    node4(17\nGrad: 0, Tiefe: 2)
+    node5(37\nGrad: 2, Tiefe: 2)
+    node6(50\nGrad: 0, Tiefe: 2)
+    node7(66\nGrad: 0, Tiefe: 2)
+    node8(35\nGrad: 1, Tiefe: 3)
+    node9(40\nGrad: 0, Tiefe: 3)
+    node10(30\nGrad: 0, Tiefe: 4)
+```
+
+  </TabItem>
+  <TabItem value="d" label="Tiefendurchlauf">
+
+44, 29, 17, 37, 35, 30, 40, 65, 50, 66
+
+  </TabItem>
+  <TabItem value="e" label="Breitendurchlauf">
+
+44, 29, 65, 17, 37, 50, 66, 35, 40, 30
+
+  </TabItem>
+</Tabs>

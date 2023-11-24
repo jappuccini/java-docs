@@ -93,7 +93,7 @@ Datensätze mit bestimmten Eigenschaften finden. Zu den wichtigen Suchalgorithme
 zählen die Linearsuche, die Binärsuche sowie die Interpolationssuche.
 
 <Tabs>
-  <TabItem value="linearSearch" label="Linearsuche" default>
+  <TabItem value="a" label="Linearsuche" default>
 
 Bei der Linearsuche werden alle Einträge einer Datensammlung nacheinander
 durchlaufen, d.h. eine Suche kann im besten Fall beim ersten Eintrag und im
@@ -103,17 +103,17 @@ Suche müssen alle Einträge durchlaufen werden.
 Im nachfolgenden Beispiel wird die Zahlenfolge
 `12, 16, 36, 49, 50, 68, 70, 76, 99` nach dem Wert 70 durchsucht.
 
-| Index | 1      | 2      | 3      | 4      | 5      | 6      | 7      |
-| ----- | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
-| 0     | **12** | **12** | **12** | **12** | **12** | **12** | **12** |
-| 1     | 16     | **16** | **16** | **16** | **16** | **16** | **16** |
-| 2     | 36     | 36     | **36** | **36** | **36** | **36** | **36** |
-| 3     | 49     | 49     | 49     | **49** | **49** | **49** | **49** |
-| 4     | 50     | 50     | 50     | 50     | **50** | **50** | **50** |
-| 5     | 68     | 68     | 68     | 68     | 68     | **68** | **68** |
-| 6     | 70     | 70     | 70     | 70     | 70     | 70     | **70** |
-| 7     | 76     | 76     | 76     | 76     | 76     | 76     | 76     |
-| 8     | 99     | 99     | 99     | 99     | 99     | 99     | 99     |
+| Index | 1    | 2      | 3      | 4      | 5      | 6      | 7      |
+| ----- | ---- | ------ | ------ | ------ | ------ | ------ | ------ |
+| 0     | [12] | **12** | **12** | **12** | **12** | **12** | **12** |
+| 1     | 16   | [16]   | **16** | **16** | **16** | **16** | **16** |
+| 2     | 36   | 36     | [36]   | **36** | **36** | **36** | **36** |
+| 3     | 49   | 49     | 49     | [49]   | **49** | **49** | **49** |
+| 4     | 50   | 50     | 50     | 50     | [50]   | **50** | **50** |
+| 5     | 68   | 68     | 68     | 68     | 68     | [68]   | **68** |
+| 6     | 70   | 70     | 70     | 70     | 70     | 70     | [70]   |
+| 7     | 76   | 76     | 76     | 76     | 76     | 76     | 76     |
+| 8     | 99   | 99     | 99     | 99     | 99     | 99     | 99     |
 
 :::note Hinweis
 
@@ -123,7 +123,7 @@ verbessert werden.
 :::
 
   </TabItem>
-  <TabItem value="binarySearch" label="Binärsuche">
+  <TabItem value="b" label="Binärsuche">
 
 Bei der Binärsuche wird die sortierte Sammlung schrittweise halbiert.
 Anschließend wird nur noch in der jeweils passenden Hälfte weitergesucht. Die
@@ -165,7 +165,7 @@ Zahl ist, verwendet.
 :::
 
   </TabItem>
-  <TabItem value="interpolationSearch" label="Interpolationsuche">
+  <TabItem value="c" label="Interpolationsuche">
 
 Die Interpolationssuche basiert auf der Binärsuche, halbiert die Sammlung aber
 nicht, sondern versucht, durch Interpolation, einen geeigneteren Teiler zu
@@ -209,7 +209,7 @@ deren Auswertung ermöglichen. Man unterscheidet dabei zwischen einfachen und
 rekursiven Sortieralgorithmen.
 
 <Tabs>
-  <TabItem value="bubbleSort" label="Bubblesort" default>
+  <TabItem value="a" label="Bubblesort" default>
 
 Der Bubblesort verfolgt die Idee, das größere Blasen schneller aufsteigen als
 kleinere. Dementsprechend werden beim Bubblesort Nachbarelemente miteinander
@@ -229,12 +229,12 @@ jeweils größte Element am Ende des noch unsortierten Teils steht.
 | 8     | 16  | **99** | **99** | **99** | **99** | **99** | **99** | **99** | **99** | **99** |
 
   </TabItem>
-  <TabItem value="insertSort" label="Insertsort">
+  <TabItem value="b" label="Insertionsort">
 
-Beim Insertsort (auch Insertion Sort) wird dem unsortierten Teil der
-Ausgangsdaten ein beliebiges Element entnommen (z.B. das jeweils erste) und an
-der richtigen Stelle im sortierten Teil wieder eingefügt. Beim Einfügen wird das
-entnommene Element mit den bereits sortierten Elementen verglichen.
+Beim Insertionsort wird dem unsortierten Teil der Ausgangsdaten ein beliebiges
+Element entnommen (z.B. das jeweils erste) und an der richtigen Stelle im
+sortierten Teil wieder eingefügt. Beim Einfügen wird das entnommene Element mit
+den bereits sortierten Elementen verglichen.
 
 | Index | 0   | 1      | 2      | 3      | 4      | 5      | 6      | 7      | 8      | 9      |
 | ----- | --- | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
@@ -249,11 +249,10 @@ entnommene Element mit den bereits sortierten Elementen verglichen.
 | 8     | 16  | 16     | 16     | 16     | 16     | 16     | 16     | 16     | 16     | **99** |
 
   </TabItem>
-  <TabItem value="selectSort" label="Selectsort">
+  <TabItem value="c" label="Selectionsort">
 
-Beim Selectsort (auch Selection Sort) wird dem unsortierten Teil der
-Ausgangsdaten das jeweils kleinste Element entnommen und dem sortierten Teil
-angehängt.
+Beim Selectionsort wird dem unsortierten Teil der Ausgangsdaten das jeweils
+kleinste Element entnommen und dem sortierten Teil angehängt.
 
 | Index | 0   | 1      | 2      | 3      | 4      | 5      | 6      | 7      | 8      | 9      |
 | ----- | --- | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
@@ -268,7 +267,7 @@ angehängt.
 | 8     | 16  | 16     | 70     | 70     | 70     | 70     | 70     | 76     | 99     | **99** |
 
   </TabItem>
-  <TabItem value="quickSort" label="Quicksort">
+  <TabItem value="d" label="Quicksort">
 
 Beim Quicksort wird die jeweilige Sammlung anhand eines beliebigen Elements
 (i.d.R. das mittlere Element) in zwei Hälften aufgeteilt: eine Hälfte mit
@@ -313,7 +312,7 @@ Zahl ist, verwendet.
 :::
 
   </TabItem>
-  <TabItem value="mergeSort" label="Mergesort">
+  <TabItem value="e" label="Mergesort">
 
 Beim Mergesort wird die Ausgangsliste zunächst in kleinere Listen zerlegt, die
 anschließend im Reißverschlussverfahren wieder zusammengefügt bzw. verschmolzen

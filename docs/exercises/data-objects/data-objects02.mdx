@@ -10,84 +10,60 @@ Welche Ausgabe erwartest Du nach Ablauf des abgebildeten Codings?
 
 ## Coding
 
-```java
-int a = 101;
-int b = 0b101;
-int c = 0x101;
-int d = 0xAFFE;
-int e = 128;
+```java showLineNumbers
+short a = 101;
+short b = 0b101;
+short c = 0x101;
+short d = 0xAFFE;
+int e = 230;
 byte f = (byte) e;
-double g = 9.87654321;
-int h = (int) g;
 
 System.out.println("a: " + a);
 System.out.println("b: " + b);
 System.out.println("c: " + c);
 System.out.println("d: " + d);
 System.out.println("f: " + f);
-System.out.println("h: " + h);
 ```
 
 <Tabs>
-  <TabItem value="a" label="a" default>
-
-```console
-a: 101
-```
+  <TabItem value="a" label="-" default>
 
   </TabItem>
-  <TabItem value="b" label="0b101">
+  <TabItem value="b" label="a">
 
-| 4   | 2   | 1   |       |
-| --- | --- | --- | ----- |
-| 1   | 0   | 1   | **5** |
-
-```console
-b: 5
-```
+| 10.000 | 1.000 | 100 | 10  | 1   |                  |
+| ------ | ----- | --- | --- | --- | ---------------- |
+| 0      | 0     | 1   | 0   | 1   | 101<sub>10</sub> |
 
   </TabItem>
-  <TabItem value="c" label="0x101">
+  <TabItem value="c" label="b">
 
-| 4096 | 256 | 16  |  1  |         |
-| :--: | :-: | :-: | :-: | ------- |
-|      |  1  |  0  |  1  | **257** |
-
-```console
-c: 257
-```
+| 65.536 | ... | 128 | 64  | 32  | 16  | 8   | 4   | 2   | 1   |                |
+| ------ | --- | --- | --- | --- | --- | --- | --- | --- | --- | -------------- |
+| 0      | ... | 0   | 0   | 0   | 0   | 0   | 1   | 0   | 1   | 5<sub>10</sub> |
 
   </TabItem>
-  <TabItem value="d" label="0xAFFE">
+  <TabItem value="d" label="c">
 
-| 4096 | 256 | 16  |  1  |            |
-| :--: | :-: | :-: | :-: | ---------- |
-|  10  | 15  | 15  | 14  | **45.054** |
+| 4.096 | 256 | 16  | 1   |                  |
+| ----- | --- | --- | --- | ---------------- |
+| 0     | 1   | 0   | 1   | 257<sub>10</sub> |
 
-```console
-d: 45054
-```
+  </TabItem>
+  <TabItem value="e" label="d">
+
+| 4.096 | 256 | 16  | 1   |                     |
+| ----- | --- | --- | --- | ------------------- |
+| 10    | 15  | 15  | 14  | 45.054<sub>10</sub> |
 
   </TabItem>
   <TabItem value="f" label="f">
 
-|     | 128 | 64  | 32  | 16  |  8  |  4  |  2  |  1  |      |
-| :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :--: |
-| 128 |  1  |  0  |  0  |  0  |  0  |  0  |  0  |  0  |      |
-|  ~  |  0  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |      |
-|  +  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |      |
-|     |  1  |  0  |  0  |  0  |  0  |  0  |  0  |  0  | -128 |
-
-```console
-f: -128
-```
-
-  </TabItem>
-  <TabItem value="h" label="h">
-
-```console
-h: 9
-```
+|                  | 128 | 64  | 32  | 16  | 8   | 4   | 2   | 1   |                  |
+| ---------------- | --- | --- | --- | --- | --- | --- | --- | --- | ---------------- |
+| 230<sub>10</sub> | 1   | 1   | 1   | 0   | 0   | 1   | 1   | 0   |                  |
+| ~                | 0   | 0   | 0   | 1   | 1   | 0   | 0   | 1   |                  |
+| +1               | 0   | 0   | 0   | 1   | 1   | 0   | 1   | 0   | -26<sub>10</sub> |
 
   </TabItem>
 </Tabs>
