@@ -1,0 +1,45 @@
+---
+title: Die Programmiersprache Java
+description: ''
+sidebar_position: 14
+tags: [java]
+---
+
+Die Programmiersprache Java gehört zu den problemorientierten
+Programmiersprachen und ist daher einfacher zu erlernen und einfacher zu
+verstehen als maschinenorientierte Programmiersprachen. Bei der Entwicklung von
+Java verfolgte man das Ziel, eine einfache, objektorientierte, robuste,
+architekturneutrale und parallelisierbare Programmiersprache zu entwickeln. Java
+wurde hauptsächlich von C und C++ beeinflusst, ist allerdings im Gegensatz zu C
+und C++ nicht darauf ausgelegt, möglichst leistungsfähige Programme zu erzeugen,
+sondern möglichst sichere und fehlerfreie Programme.
+
+## Die Geschichte von Java
+
+Anfang der 90er begannen bei der Firma Sun Microsystems unter Federführung des
+Chefentwicklers James Gosling die Arbeiten an einem Projekt mit dem Codenamen
+_The Green Project_ mit dem Ziel, eine vollständige Betriebssystemumgebung für
+unterschiedliche Zwecke (interaktives Kabelfernsehen, intelligente
+Kaffeemaschinen etc.) zu entwickeln. Die daraus entstehende Programmiersprache
+sollte ursprünglich den Namen _Oak_ (Object Application Kernel) tragen, wurde
+aber schließlich im Mai 1995 unter dem Namen _Java_ veröffentlicht. Der große
+Durchbruch von Java kam 1996 durch eine Kooperation mit der Firma Netscape
+zustande, die eine Integration von Java-Applets mit Hilfe von JavaScript in den
+Browser Netscape Navigator 2.0 ermöglichte. Weitere wichtige Meilensteine in der
+Geschichte von Java waren die Veröffentlichungen der Google-Entwicklungsumgebung
+Android 2008 sowie des Computerspiels Minecraft 2009.
+
+:::note Hinweis
+
+Java war der Name der beliebtesten Kaffeesorte der Entwickler.
+
+:::
+
+## JDK und JRE
+
+Das JDK (Java Development Kit) stellt die wichtigste Komponente zum
+Programmieren von Java-Programmen dar. Es enthält neben dem Compiler und
+Debugger weitere wichtige Werkzeuge sowie umfangreiche Bibliotheken (siehe
+[Die Java API](java-api)). Die JRE (Java Runtime Environment) enthält den
+Interpreter (die _Java Virtual Machine_) und wird zum Ausführen von
+Java-Applikationen benötigt.

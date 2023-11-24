@@ -3,7 +3,30 @@ title: Hashing01
 description: ''
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 Berechne die Hashwerte der Objekte `Person[name=Petra, age=33, gender=w]`,
-`Person[name=Heidi, age=17, gender=w]` und
-`Person[name=Ludwig, age=47, gender=m]` unter Verwendung der Hashfunktion
-`Hashwert Name / Hashwert Alter + Hashwert Geschlecht`.
+`Person[name=Heidi, age=17, gender=w]` und `Person[name=Max, age=47, gender=m]`
+gemäß der Formel `Hashwert Name / Hashwert Alter + Hashwert Geschlecht`.
+
+<Tabs>
+  <TabItem value="a" label="-" default>
+
+  </TabItem>
+  <TabItem value="b" label="Hashwert 1">
+
+(80 + 101 + 116 + 114 + 97) / 33 + 119 = 134
+
+  </TabItem>
+  <TabItem value="c" label="Hashwert 2">
+
+(72 + 101 + 105 + 100 + 105) / 17 + 119 = 147
+
+  </TabItem>
+  <TabItem value="d" label="Hashwert 3">
+
+(77 + 97 + 120) / 47 + 109 = 115
+
+  </TabItem>
+</Tabs>

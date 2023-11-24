@@ -41,7 +41,7 @@ Grund werden Hashtabellen auch als Streuwerttabellen bezeichnet.
 ## Hashfunktionen
 
 <Tabs>
-  <TabItem value="modulo" label="Divisionsrestmethode" default>
+  <TabItem value="a" label="Divisionsrestmethode" default>
 
 Die Divisionsrest-Methode stellt eine einfache und schnelle Hashfunktion dar.
 Die Berechnung des Index erfolgt dabei gemäß der Formel `ℎ(𝑘) = 𝑘 𝑚𝑜𝑑 𝑚`.
@@ -60,7 +60,7 @@ Die Berechnung des Index erfolgt dabei gemäß der Formel `ℎ(𝑘) = 𝑘 𝑚
 :::
 
   </TabItem>
-  <TabItem value="multiplication" label="Multiplikative Methode" default>
+  <TabItem value="b" label="Multiplikative Methode">
 
 Die Multiplikative Methode stellt eine Hashfunktion dar, die man als
 Verallgemeinerung der Divisionsrest-Methode sehen kann. Die Berechnung des Index
@@ -97,7 +97,7 @@ eine geeignete Tabellengröße sowie eine geeignete Hashfunktion gewählt werden
 Zur Auflösung von Kollisionen gibt es verschiedene Möglichkeiten.
 
 <Tabs>
-  <TabItem value="closedHashing" label="Geschlossenes Hashing mit offener Adressierung" default>
+  <TabItem value="a" label="Geschlossenes Hashing mit offener Adressierung" default>
 
 Beim geschlossenen Hashing mit offener Adressierung wird bei einer Kollision
 über unterschiedliche Verfahren eine freie Stelle in der Hashtabelle gesucht:
@@ -115,7 +115,7 @@ Intervallschritt mit Hilfe einer zusätzlichen Hashfunktion berechnet.
 | 4     | Milch     |
 
   </TabItem>
-  <TabItem value="openHashing" label="Offenes Hashing mit geschlossener Adressierung">
+  <TabItem value="b" label="Offenes Hashing mit geschlossener Adressierung">
 
 Beim offenen Hashing mit geschlossener Adressierung werden alle Schlüssel mit
 demselben Index in einem Behälter (Bucket) gespeichert. Diese Behälter werden

@@ -1,7 +1,7 @@
 ---
 title: Schleifen
 description: ''
-sidebar_position: 20
+sidebar_position: 105
 tags: [control-structures, loops]
 ---
 
@@ -71,10 +71,10 @@ public class MainClass {
 
 ## for-each-Schleifen
 
-Mit Hilfe der for-each-Schleife können Datensammlungen wie z.B.
-[Felder](../arrays) und [Listen](../lists) elementweise durchlaufen werden.
-Allerdings können die Elemente einer Datensammlung nur geändert werden, nicht
-jedoch die Datensammlung selbst.
+Mit Hilfe der for-each-Schleife können Datensammlungen wie z.B. [Felder](arrays)
+und [Listen](lists) elementweise durchlaufen werden. Allerdings können die
+Elemente einer Datensammlung nur geändert werden, nicht jedoch die Datensammlung
+selbst.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {

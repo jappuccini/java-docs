@@ -5,6 +5,9 @@ sidebar_position: 60
 tags: [operators]
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 Operatoren sind Zeichen, mit denen Daten manipuliert werden können. Mit Hilfe
 von Operanden und Operatoren können beliebig komplexe Ausdrücke abgebildet
 werden. Operatoren mit einem, zwei oder drei Operanden werden als _unäre
@@ -12,7 +15,8 @@ Operatoren_ _binäre Operatoren_ und _ternäre Operatoren_ bezeichnet. Man
 unterscheidet zudem zwischen arithmetischen, bitweisen und logischen Operatoren
 sowie Vergleichsoperatoren.
 
-## Arithmetische Operatoren
+<Tabs>
+  <TabItem value="a" label="Arithmetische Operatoren" default>
 
 Für die arithmetischen Grundrechenarten stehen verschiedene arithmetische
 Operatoren zur Verfügung.
@@ -29,7 +33,8 @@ Operatoren zur Verfügung.
 | x--                   | Dekrementiere x und gib den alten Wert an den Ausdruck zurück |
 | --x                   | Dekrementiere x und gib den neuen Wert an den Ausdruck zurück |
 
-## Bitweise Operatoren
+  </TabItem>
+  <TabItem value="b" label="Bitweise Operatoren">
 
 Bitweise Operatoren können dazu verwendet werden, Binäroperationen auf Operanden
 durchzuführen.
@@ -41,7 +46,8 @@ durchzuführen.
 | a ^ b                 | Bitweise XOR-Verknüpfung |
 | ~a                    | Bitweises NOT            |
 
-## Logische Operatoren
+  </TabItem>
+  <TabItem value="c" label="Logische Operatoren">
 
 Logische Operatoren können dazu verwendet werden, logische Aussagen miteinander
 zu verknüpfen.
@@ -52,7 +58,8 @@ zu verknüpfen.
 | a \|\| b              | Logische OR-Verknüpfung  |
 | !a                    | Logisches NOT            |
 
-## Vergleichsoperatoren
+  </TabItem>
+  <TabItem value="d" label="Vergleichsoperatoren">
 
 Logische Bedingungen für zwei Werte eines elementaren Datentyps können durch
 Vergleichsoperatoren realisiert werden.
@@ -74,9 +81,12 @@ verwendet werden.
 
 :::
 
+  </TabItem>
+</Tabs>
+
 ## Priorität von Operatoren
 
-Operatoren werden gemäß ihrer Priorität verarbeitet.
+Die Verarbeitung von Operatoren erfolgt gemäß ihrer Priorität.
 
 | Priorität | Operator                                                     |
 | --------- | ------------------------------------------------------------ |

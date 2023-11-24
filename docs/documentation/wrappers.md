@@ -1,7 +1,7 @@
 ---
 title: Wrapper-Klassen
 description: ''
-sidebar_position: 10
+sidebar_position: 141
 tags: [java-api, wrappers]
 ---
 

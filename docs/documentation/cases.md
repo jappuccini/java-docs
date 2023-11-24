@@ -1,12 +1,13 @@
 ---
 title: Verzweigungen
 description: ''
-sidebar_position: 10
+sidebar_position: 95
 tags: [control-structures, cases]
 ---
 
 Mit Hilfe von Verzweigungen können unterschiedliche Anweisungsblöcke ausgeführt
-werden.
+werden. Verzweigungen sind - genau wie Schleifen - wesentliche Bestandteile der
+Programmierung un werden auch als _Kontrollstrukturen_ bezeichnet.
 
 ## Einfache Verzweigungen
 
