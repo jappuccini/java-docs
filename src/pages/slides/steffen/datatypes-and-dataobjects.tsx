@@ -8,10 +8,22 @@ export default function DataTypesAndDataObjects(): JSX.Element {
     <Slides initSlides={defaultInitSlides}>
       <section>
         <section>
-          <h2>Wiederholung</h2>
+          <h2>Agenda</h2>
+          <ul>
+            <li className="fragment">Besprechung Aufgabe</li>
+            <li className="fragment">Einführung Git</li>
+            <li className="fragment">Datentypen</li>
+            <li className="fragment">Datenobjekte</li>
+            <li className="fragment">Zusammenfassung</li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h2>Besprechung Aufgabe</h2>
         </section>
         <section>
-          <h2>Besprechung Hello World Aufgabe</h2>
+          <h2>Hello World</h2>
           <p className="fragment">
             Die Schlüsselwörter <strong>public</strong>, <strong>class</strong>{' '}
             und <strong>static</strong> werden später behandelt.
@@ -32,6 +44,13 @@ export default function DataTypesAndDataObjects(): JSX.Element {
           </aside>
         </section>
         <section>
+          <h2>Demo main-Methode</h2>
+          <ul>
+            <li className="fragment">main2 erstellen</li>
+            <li className="fragment">main löschen</li>
+          </ul>
+        </section>
+        <section>
           <Link to="/documentation/coding#programmausführung">
             Programmausführung
           </Link>
@@ -45,12 +64,12 @@ export default function DataTypesAndDataObjects(): JSX.Element {
         <section>
           <h2>git switch</h2>
           <p>Wechseln zwischen Branches</p>
-          <pre className="fragment">
+          <pre>
             <code
               className="bash"
               dangerouslySetInnerHTML={{
                 __html:
-                  'Syntax: git switch &lt;branchname&gt;\n' +
+                  '# Syntax: git switch &lt;branchname&gt;\n' +
                   'git switch exercises/class-structure/01\n' +
                   'git switch solutions/class-structure/01\n',
               }}
@@ -61,7 +80,7 @@ export default function DataTypesAndDataObjects(): JSX.Element {
         <section>
           <h2>git stash</h2>
           <p>aktuelle Änderungen verstecken und wiederherstellen</p>
-          <pre className="fragment">
+          <pre>
             <code
               className="bash"
               dangerouslySetInnerHTML={{
@@ -77,8 +96,7 @@ export default function DataTypesAndDataObjects(): JSX.Element {
           <NKR />
         </section>
         <section>
-          <h2>Demo</h2>
-          <NKR />
+          <h2>Demo Git stash</h2>
         </section>
       </section>
       <section>
