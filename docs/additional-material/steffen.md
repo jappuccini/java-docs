@@ -12,7 +12,7 @@ tags: []
 - [Methoden und Operatoren 19.01.](/slides/steffen/methods-and-operators)
 - [Kontrollstrukturen und Arrays 01.02.](/slides/steffen/if-and-switch)
 - [Math, Random und Scanner 02.02.](/slides/steffen/math-random-scanner)
-- Kurztest 08.02. 
+- Kurztest 08.02.
 - [Klassen und Objekte 08.02.](/slides/steffen/classes-and-objects)
 - [Konstruktor und static 09.02.](/slides/steffen/constructor-and-static)
 - [Java API, Enum, Klassendiagramm, Aktivitätsdiagramm 15.02. & 16.02.](/slides/steffen/class-diagram-java-api-enum)
@@ -23,7 +23,6 @@ tags: []
 - [Exceptions 01.02.](/slides/steffen/exceptions)
 - Klausurvorbereitung 07.03. & 08.03.
 - Klausur 15.03.
-
 
 ## Java II
 
