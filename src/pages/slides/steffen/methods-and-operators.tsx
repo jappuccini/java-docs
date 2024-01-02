@@ -6,8 +6,15 @@ export default function MethodsAndOperators(): JSX.Element {
   return (
     <Slides initSlides={defaultInitSlides}>
       <section>
-        <section>Fragen oder Probleme?</section>
-        <section>Gitpod: Parameter Hints deaktivieren</section>
+        <section>
+          <h2>Agenda</h2>
+          <ul>
+            <li className="fragment">Wiederholung</li>
+            <li className="fragment">Was sind Methoden?</li>
+            <li className="fragment">Was sind Programme?</li>
+            <li className="fragment">Zusammenfassung</li>
+          </ul>
+        </section>
       </section>
       <section>
         <section>
@@ -32,17 +39,6 @@ export default function MethodsAndOperators(): JSX.Element {
             <li className="fragment">Standard für Ganzzahlen: int</li>
             <li className="fragment">Standard für Gleitkommazahlen: double</li>
           </ul>
-        </section>
-        <section>
-          <h2>Warum 'f' und 'd' bei float / double?</h2>
-          <NKR />
-        </section>
-        <section>
-          <h2>Escapen von speziellen Zeichen</h2>
-          <NKR />
-        </section>
-        <section>
-          <h2>Casten von Datentypen</h2>
         </section>
       </section>
       <section>
@@ -70,7 +66,15 @@ export default function MethodsAndOperators(): JSX.Element {
           </ul>
         </section>
         <section>
-          <h2>Demo zu den 4 Beispielen</h2>
+          <h2>Demo - Methoden</h2>
+          <ul>
+            <li className="fragment">Addieren von zwei Zahlen</li>
+            <li className="fragment">
+              Berechnen von Titel, Vorname und Nachname
+            </li>
+            <li className="fragment">Brief zu Briefkasten bringen</li>
+            <li className="fragment">aktuelle Uhrzeit nennen</li>
+          </ul>
         </section>
       </section>
       <section>
@@ -257,13 +261,20 @@ export default function MethodsAndOperators(): JSX.Element {
       <section>
         <section>
           <h2>Zusammenfassung</h2>
-          <ul>
-            <li className="fragment">Was sind Methoden?</li>
-            <li className="fragment">Was sind Operatoren?</li>
-          </ul>
         </section>
         <section>
-          <h2>Aufgaben</h2>
+          <h2>Was sind Methoden?</h2>
+          <p className="fragment">Bezeichner, Parameter, Rückgabetyp</p>
+          <p className="fragment">beinhaltet Logik im Methodenrumpf</p>
+        </section>
+        <section>
+          <h2>Was sind Operatoren?</h2>
+          <p className="fragment">Arithmetische Operatoren</p>
+          <p className="fragment">Vergleichsoperatoren</p>
+          <p className="fragment">Logische Operatoren</p>
+        </section>
+        <section>
+          <h2>Rest of the day</h2>
           <ul>
             <li>DataObjects 01</li>
             <li>DataObjects 02 (optional)</li>

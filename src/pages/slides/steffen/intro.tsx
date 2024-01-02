@@ -6,9 +6,20 @@ export default function Intro(): JSX.Element {
   return (
     <Slides initSlides={defaultInitSlides}>
       <section>
-        <h2>Einführung</h2>
+        <section>
+          <h2>Agenda</h2>
+          <ul>
+            <li className="fragment">Einführung</li>
+            <li className="fragment">Organisatorisches</li>
+            <li className="fragment">Was sind Programme?</li>
+            <li className="fragment">Zusammenfassung</li>
+          </ul>
+        </section>
       </section>
       <section>
+        <section>
+          <h2>Einführung</h2>
+        </section>
         <section>
           <h2>Steffen Merk</h2>
           <p>Software Engineer</p>
@@ -17,28 +28,25 @@ export default function Intro(): JSX.Element {
           <h2>Lebenslauf</h2>
           <p className="fragment">Systemadministrator @Framo Morat</p>
           <p className="fragment">Wirtschaftsinformatik DHBW Ravensburg @SAP</p>
-          <p className="fragment">Software Developer @SAP</p>
-          <p className="fragment">Software Engineer @remberg</p>
+          <p className="fragment">
+            Software Developer @SAP, @remberg & @Airbus
+          </p>
         </section>
         <section>
           <h2>Techstack</h2>
           <p className="fragment">Angular + NgRx</p>
-          <p className="fragment">NodeJS + NestJS + MongoDB</p>
+          <p className="fragment">NodeJS + NestJS</p>
         </section>
         <section>
           <h2>Top Focus Topics</h2>
-          <p className="fragment">Zuletzt: NeoVim + NgRx + Kubernetes</p>
-          <p className="fragment">Jetzt: NeoVim + NestJS + MongoDB</p>
+          <p className="fragment">Algorithmen und Datenstrukturen</p>
+          <p className="fragment">Gradle</p>
         </section>
         <section data-background-iframe="https://giphy.com/embed/8dgmMbeCA8jeg"></section>
-      </section>
-      <section>
         <section>
           <h2>Wollt ihr euch vorstellen?</h2>
         </section>
         <section data-background-iframe="https://giphy.com/embed/8vUEXZA2me7vnuUvrs"></section>
-      </section>
-      <section>
         <section>
           <h2>Was erwartet euch?</h2>
           <p className="fragment">Fokus liegt auf dem Programmieren</p>
@@ -51,14 +59,6 @@ export default function Intro(): JSX.Element {
             <li className="fragment">Fragt nach! Mich oder Kommilitonen</li>
             <li className="fragment">Macht die Aufgaben zeitnah!</li>
           </ol>
-        </section>
-        <section>
-          <h2>Was ist everything as code?</h2>
-          <ul>
-            <li className="fragment">Alles durchsuchbar</li>
-            <li className="fragment">Alles überprüfbar</li>
-            <li className="fragment">Alles automatisierbar</li>
-          </ul>
         </section>
         <section>
           <h2>Real talk Steffen: Macht es Spaß?</h2>
@@ -74,16 +74,27 @@ export default function Intro(): JSX.Element {
           <h2>Organisatorisches</h2>
         </section>
         <section>
+          <h2>Ihr habt Fragen?</h2>
+          <ul>
+            <li className="fragment">Hand heben</li>
+            <li className="fragment">
+              Anonym auf{' '}
+              <Link to="https://frag.jetzt/participant/room/jappuccini">
+                Frag jetzt
+              </Link>
+            </li>
+          </ul>
+        </section>
+        <section>
           <h2>Wo findet ihr was?</h2>
           <p className="fragment">
             <Link to="https://jappuccini.github.io/java-docs/">
-              Folien, Dokumentation, Aufgaben (auch Externe), Lösungen und
-              Anleitungen
+              Dokumentation, Aufgaben, Folien
             </Link>
           </p>
           <p className="fragment">
             <Link to="https://github.com/jappuccini/java-docs">
-              Quellcode von Folien, Dokumentation, etc.
+              Quellcode von Dokumentation und Folien
             </Link>
           </p>
           <p className="fragment">
@@ -99,6 +110,14 @@ export default function Intro(): JSX.Element {
             <li className="fragment">Verwenden von Tools</li>
             <li className="fragment">Verwenden der Kommandozeile</li>
             <li className="fragment">Verwenden von git</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Für was die Laptops?</h2>
+          <ul>
+            <li className="fragment">Alles vorinstalliert für die Vorlesung</li>
+            <li className="fragment">Alles vorinstalliert für die Prüfungen</li>
+            <li className="fragment">Was macht ihr daheim?</li>
           </ul>
         </section>
         <section>
@@ -135,6 +154,13 @@ export default function Intro(): JSX.Element {
             </li>
           </ul>
         </section>
+        <section>
+          <h2>Prüfung</h2>
+          <ul>
+            <li className="fragment">Findet am PC statt</li>
+            <li className="fragment">Nur Editor zum Schreiben von Text</li>
+          </ul>
+        </section>
       </section>
       <section>
         <section>
@@ -142,9 +168,20 @@ export default function Intro(): JSX.Element {
         </section>
         <section>
           <h2>Verschiedene Arten</h2>
-          <li className="fragment">Programme mit GUI</li>
-          <li className="fragment">Hintergrundprogramme</li>
-          <li className="fragment">Programme mit TUI</li>
+          <ul>
+            <li className="fragment">Programme mit GUI</li>
+            <li className="fragment">Hintergrundprogramme</li>
+            <li className="fragment">Programme mit TUI</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Demo GUI und TUI</h2>
+          <ul>
+            <li className="fragment">Ordner erstellen</li>
+            <li className="fragment">Datei erstellen</li>
+            <li className="fragment">Datei verschieben</li>
+            <li className="fragment">Ordner löschen</li>
+          </ul>
         </section>
         <section>
           <h2>Kommandozeile</h2>
@@ -193,7 +230,7 @@ export default function Intro(): JSX.Element {
           <p className="fragment">Quellcode wird in Programm kompiliert</p>
         </section>
         <section>
-          <h2>Aufgaben</h2>
+          <h2>Rest of the day</h2>
           <p className="fragment">
             Development Environment einrichten (GitPod oder lokal)
           </p>
