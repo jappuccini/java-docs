@@ -5,7 +5,14 @@ export default function MethodsAndOperators(): JSX.Element {
   return (
     <Slides initSlides={defaultInitSlides}>
       <section>
-        <section>Fragen oder Probleme?</section>
+        <section>
+          <h2>Agenda</h2>
+          <ul>
+            <li className="fragment">Wiederholung</li>
+            <li className="fragment">Hilfsklassen (Math, Random, Scanner)</li>
+            <li className="fragment">Aufgaben</li>
+          </ul>
+        </section>
       </section>
       <section>
         <section>
@@ -106,7 +113,9 @@ export default function MethodsAndOperators(): JSX.Element {
           </pre>
         </section>
         <section
-          data-background-image={require('@site/static/img/scanner-error.png')}
+          data-background-image={
+            require('@site/static/img/scanner-error.png').default
+          }
         ></section>
       </section>
       <section>
@@ -115,8 +124,9 @@ export default function MethodsAndOperators(): JSX.Element {
           <h2>Aufgaben</h2>
           <ul>
             <li className="fragment">Konsolenanwendungen</li>
-            <li className="fragment">Kontrollstrukturen - Cases 05 optional</li>
-            <li className="fragment">Felder - Arrays 04 optional</li>
+            <li className="fragment">Verzweigungen - Cases 05 optional</li>
+            <li className="fragment">Schleifen</li>
+            <li className="fragment">Felder (Arrays) - Arrays 04 optional</li>
           </ul>
         </section>
       </section>
