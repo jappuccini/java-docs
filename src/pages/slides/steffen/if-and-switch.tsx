@@ -5,8 +5,14 @@ export default function MethodsAndOperators(): JSX.Element {
   return (
     <Slides initSlides={defaultInitSlides}>
       <section>
-        <section>Fragen oder Probleme?</section>
-        <section>Escapezeichen nicht konfigurierbar</section>
+        <section>
+          <h2>Agenda</h2>
+          <ul>
+            <li className="fragment">Wiederholung</li>
+            <li className="fragment">Kontrollstrukturen</li>
+            <li className="fragment">Arrays</li>
+          </ul>
+        </section>
       </section>
       <section>
         <section>
@@ -32,11 +38,10 @@ export default function MethodsAndOperators(): JSX.Element {
             <li className="fragment">Bitweise Operatoren (&, |, ^, ~)</li>
           </ul>
         </section>
-        <section>.equals Methode für Stringvergleiche benutzen</section>
       </section>
       <section>
         <section>
-          <h2>Was sind Kontrollstrukturen?</h2>
+          <h2>Kontrollstrukturen</h2>
         </section>
         <section>
           <h2>Beispiele für Fallunterscheidung</h2>
@@ -61,6 +66,7 @@ export default function MethodsAndOperators(): JSX.Element {
           </ul>
         </section>
         <section>
+          <h2>Beispiel If-Anweisung</h2>
           <pre>
             <code
               className="java"
@@ -71,20 +77,21 @@ export default function MethodsAndOperators(): JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Demo zu den ersten zwei Beispielen</h2>
+          <h2>Demo If-Anweisung</h2>
           <ul>
             <li>wenn unter 16 Jahre alt, dann kein Alkohol</li>
             <li>wenn weiblich, dann ist die Anrede "Frau"</li>
           </ul>
         </section>
         <section>
-          Wie behandelt man den anderen Fall?
+          <h2>Wie behandelt man den anderen Fall?</h2>
           <ul>
             <li className="fragment">else Schlüsselwort</li>
             <li className="fragment">Code Block</li>
           </ul>
         </section>
         <section>
+          <h2>Beispiel Else-Anweisung</h2>
           <pre>
             <code
               className="java"
@@ -95,7 +102,16 @@ export default function MethodsAndOperators(): JSX.Element {
           </pre>
         </section>
         <section>
-          Wie behandelt man weitere Fälle?
+          <h2>Demo If-Else-Anweisung</h2>
+          <ul>
+            <li>
+              wenn unter 16 Jahre alt, dann kein Alkohol, ansonsten Alkohol
+            </li>
+            <li>wenn weiblich, dann ist die Anrede "Frau", ansonsten "Mann"</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Wie behandelt man weitere Fälle?</h2>
           <ul>
             <li className="fragment">else if Schlüsselwort</li>
             <li className="fragment">Bedingung</li>
@@ -103,6 +119,7 @@ export default function MethodsAndOperators(): JSX.Element {
           </ul>
         </section>
         <section>
+          <h2>Beispiel Else-If-Anweisung</h2>
           <pre>
             <code
               className="java"
@@ -111,10 +128,26 @@ export default function MethodsAndOperators(): JSX.Element {
               }}
             ></code>
           </pre>
-          <p>else bezieht sich immer nur auf die aktuelle if-else-if-Leiter</p>
+          <p>
+            else bezieht sich immer nur auf die aktuelle
+            if-else-if-Verschachtelung
+          </p>
         </section>
         <section>
-          Verschachtelungen, um jegliche Fälle abzuprüfen.
+          <h2>Demo If-Else-Anweisung</h2>
+          <ul>
+            <li>
+              wenn unter 16 Jahre alt, dann kein Alkohol, wenn unter 18 Jahre
+              alt, dann Bier, ansonsten jeden Alkohol
+            </li>
+            <li>
+              wenn weiblich, dann ist die Anrede "Frau", wenn männlich, dann ist
+              die Anrede "Herr", ansonsten Vor- und Nachname
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Verschachtelungen</h2>
           <pre className="fragment">
             <code
               className="java"
@@ -124,15 +157,22 @@ export default function MethodsAndOperators(): JSX.Element {
                   '  if ( Bedingung ) {\n' +
                   '    if ( Bedingung ) {\n' +
                   '      ...\n' +
+                  '    } else if ( Bedingung ) {\n' +
+                  '      ...\n' +
+                  '    } else \n' +
+                  '      ...\n' +
                   '    }\n' +
                   '  }\n' +
                   '}',
               }}
             ></code>
           </pre>
+          <p className="fragment">
+            Mit Verschachtelungen können jegliche Fälle abgedeckt werden.
+          </p>
         </section>
         <section>
-          <h4>switch als "Alternative" zur If-Anweisung</h4>
+          <h2>switch</h2>
           <ul>
             <li className="fragment">switch Schlüsselwort</li>
             <li className="fragment">Datenobjekt, das geprüft werden soll</li>
@@ -141,8 +181,12 @@ export default function MethodsAndOperators(): JSX.Element {
             <li className="fragment">Code Block</li>
             <li className="fragment">break Schlüsselwort</li>
           </ul>
+          <p className="fragment">
+            switch kann als Alternative zur If-Anweisung verwendet werden.
+          </p>
         </section>
         <section>
+          <h2>Beispiel Switch-Anweisung</h2>
           <pre>
             <code
               className="java"
@@ -163,12 +207,22 @@ export default function MethodsAndOperators(): JSX.Element {
             ></code>
           </pre>
           <div className="fragment">
-            switch geht nur mit <strong>int</strong>, <strong>String</strong> &{' '}
-            <strong>Enum</strong>
+            switch geht nur mit <strong>int</strong>, <strong>char</strong>,{' '}
+            <strong>String</strong> & <strong>Enum</strong>
           </div>
         </section>
         <section>
-          <h2>Demo zu switch mit Gender</h2>
+          <h2>Demo Switch-Anweisung</h2>
+          <ul>
+            <li>
+              wenn unter 16 Jahre alt, dann kein Alkohol, wenn unter 18 Jahre
+              alt, dann Bier, ansonsten jeden Alkohol
+            </li>
+            <li>
+              wenn "w", "W", "f", "F", dann ist die Anrede "Frau", wenn "m",
+              "M", dann ist die Anrede "Herr", ansonsten Vor- und Nachname
+            </li>
+          </ul>
         </section>
         <section>
           <h2>switch vs if</h2>
@@ -208,16 +262,13 @@ export default function MethodsAndOperators(): JSX.Element {
           </ul>
         </section>
         <section>
-          <h2>Welche Arten von Schleifen gibt es?</h2>
+          <h2>Arten von Schleifen</h2>
           <ul>
             <li className="fragment">while-Schleife</li>
             <li className="fragment">do-while-Schleife</li>
             <li className="fragment">for-Schleife</li>
             <li className="fragment">for-each-Schleife</li>
           </ul>
-          <p className="fragment">
-            Wir machen alle Schleifen, um die Zahlen 0 bis 4 auszugeben.
-          </p>
         </section>
         <section>
           <h2>while-Schleife</h2>
@@ -228,6 +279,7 @@ export default function MethodsAndOperators(): JSX.Element {
           </ul>
         </section>
         <section>
+          <h2>Beispiel while-Schleife</h2>
           <pre>
             <code
               className="java"
@@ -236,6 +288,12 @@ export default function MethodsAndOperators(): JSX.Element {
               }}
             ></code>
           </pre>
+        </section>
+        <section>
+          <h2>Demo while-Schleife</h2>
+          <ul>
+            <li>Zahlen von 0 bis 4 ausgeben.</li>
+          </ul>
         </section>
         <section>
           <h2>do-while-Schleife</h2>
@@ -247,6 +305,7 @@ export default function MethodsAndOperators(): JSX.Element {
           </ul>
         </section>
         <section>
+          <h2>Beispiel do-while-Schleife</h2>
           <pre>
             <code
               className="java"
@@ -264,6 +323,12 @@ export default function MethodsAndOperators(): JSX.Element {
           </p>
         </section>
         <section>
+          <h2>Demo do-while-Schleife</h2>
+          <ul>
+            <li>Zahlen von 0 bis 4 ausgeben.</li>
+          </ul>
+        </section>
+        <section>
           <h2>for-Schleife</h2>
           <ul>
             <li className="fragment">for Schlüsselwort</li>
@@ -274,6 +339,7 @@ export default function MethodsAndOperators(): JSX.Element {
           </ul>
         </section>
         <section>
+          <h2>Beispiel for-Schleife</h2>
           <pre>
             <code
               className="java"
@@ -285,6 +351,12 @@ export default function MethodsAndOperators(): JSX.Element {
               }}
             ></code>
           </pre>
+        </section>
+        <section>
+          <h2>Demo for-Schleife</h2>
+          <ul>
+            <li>Zahlen von 0 bis 4 ausgeben.</li>
+          </ul>
         </section>
         <section>
           <h2>for-each-Schleife</h2>
@@ -299,6 +371,7 @@ export default function MethodsAndOperators(): JSX.Element {
           <p className="fragment">Kann erst mit Arrays verstanden werden.</p>
         </section>
         <section>
+          <h2>Beispiel for-each-Schleife</h2>
           <pre>
             <code
               className="java"
@@ -313,10 +386,22 @@ export default function MethodsAndOperators(): JSX.Element {
           </pre>
         </section>
         <section>
+          <h2>Demo for-each-Schleife</h2>
+          <ul>
+            <li>Zahlen von 0 bis 4 ausgeben.</li>
+          </ul>
+        </section>
+        <section>
           <h2>break Schlüsselwort</h2>
           <p>
             beendet die <strong>komplette</strong> Schleife
           </p>
+        </section>
+        <section>
+          <h2>Demo break</h2>
+          <ul>
+            <li>Beende Schleife, wenn durch 2 teilbar.</li>
+          </ul>
         </section>
         <section>
           <h2>continue Schlüsselwort</h2>
@@ -324,10 +409,16 @@ export default function MethodsAndOperators(): JSX.Element {
             beendet den <strong>aktuellen</strong> Code Block
           </p>
         </section>
+        <section>
+          <h2>Demo continue</h2>
+          <ul>
+            <li>Überspringe alle ungeraden Zahlen</li>
+          </ul>
+        </section>
       </section>
       <section>
         <section>
-          <h2>Was sind Arrays?</h2>
+          <h2>Arrays</h2>
         </section>
         <section>
           <h2>Eigenschaften eines Arrays</h2>
@@ -520,7 +611,7 @@ export default function MethodsAndOperators(): JSX.Element {
           </p>
         </section>
         <section>
-          <h2>Demo</h2>
+          <h2>Demo Array und ArrayList</h2>
           <p>for-Schleife mit Array und ArrayList</p>
         </section>
         <section>
