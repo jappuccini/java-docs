@@ -5,17 +5,26 @@ export default function Polymorphy(): JSX.Element {
   return (
     <Slides initSlides={defaultInitSlides}>
       <section>
-        <section>Fragen oder Probleme?</section>
+        <section>
+          <h2>Agenda</h2>
+          <ul>
+            <li className="fragment">Wiederholung</li>
+            <li className="fragment">Polymorphie</li>
+            <li className="fragment">Zusammenfassung</li>
+          </ul>
+        </section>
       </section>
       <section>
         <section>
           <h2>Wiederholung</h2>
+        </section>
+        <section>
+          <h2>Vererbung</h2>
           <ul>
-            <li className="fragment">Gemeinsamkeiten mehrerer Klassen</li>
-            <li className="fragment">Generalisierung</li>
-            <li className="fragment">Vererbung</li>
-            <li className="fragment">protected</li>
+            <li className="fragment">Generalisierung in Oberklasse</li>
+            <li className="fragment">Vererbung an Unterklasse</li>
             <li className="fragment">super</li>
+            <li className="fragment">protected</li>
           </ul>
         </section>
       </section>
@@ -26,29 +35,25 @@ export default function Polymorphy(): JSX.Element {
         <section>
           <p>Bezeichner kann unterschiedliche Datentypen annehmen</p>
           <ul>
-            <li className="fragment">Vehicle -&gt; Car oder Truck</li>
-            <li className="fragment">Human -&gt; Baby, Child oder Adult</li>
+            <li className="fragment">Vehicle &rarr; Car oder Truck</li>
+            <li className="fragment">Human &rarr; Baby, Child oder Adult</li>
             <li className="fragment">
-              Smartphone -&gt; Samsung Galaxy, Apple iPhone
+              Smartphone &rarr; Samsung Galaxy, Apple iPhone
             </li>
           </ul>
         </section>
         <section>
           <h2>Limitationen der Polymorphie</h2>
           <ul>
-            <li className="fragment">
-              spezifische Klasse muss generische Klasse erweitern
-            </li>
-            <li className="fragment">
-              nur public Methoden/Attribute der generischen Klasse verwendbar
-            </li>
+            <li className="fragment">Unterklasse muss Oberklasse erweitern</li>
+            <li className="fragment">nur public der Oberklasse verwendbar</li>
           </ul>
         </section>
         <section>
-          <h2>Demo</h2>
+          <h2>Demo Polymorphie</h2>
           <ul>
-            <li className="fragment">Methode makeSound</li>
-            <li className="fragment">Animal Array mit Dog und Cat</li>
+            <li className="fragment">Oberklassenmethode makeSound</li>
+            <li className="fragment">ArrayList mit Dog und Cat</li>
           </ul>
         </section>
         <section>
@@ -59,8 +64,8 @@ export default function Polymorphy(): JSX.Element {
           </p>
         </section>
         <section>
-          <h2>Upcast</h2>
-          <pre className="fragment">
+          <h2>Beispiel Upcast</h2>
+          <pre>
             <code
               className="java"
               dangerouslySetInnerHTML={{
@@ -79,8 +84,8 @@ export default function Polymorphy(): JSX.Element {
           </p>
         </section>
         <section>
-          <h2>Downcast</h2>
-          <pre className="fragment">
+          <h2>Beispiel Downcast</h2>
+          <pre>
             <code
               className="java"
               dangerouslySetInnerHTML={{
@@ -91,15 +96,13 @@ export default function Polymorphy(): JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Demo</h2>
+          <h2>Demo Downcast</h2>
           <ul>
-            <li className="fragment">Downcast von Animal zu Dog</li>
+            <li className="fragment">Animal zu Dog</li>
           </ul>
         </section>
         <section>
-          <p>
-            Der <strong>instanceof</strong> Operator
-          </p>
+          <h2>instanceof Operator</h2>
           <ul>
             <li className="fragment">
               prüft, ob eine Referenzvariable eine Instanz einer bestimmten
@@ -108,6 +111,7 @@ export default function Polymorphy(): JSX.Element {
           </ul>
         </section>
         <section>
+          <h2>Beispiel instanceof</h2>
           <pre>
             <code
               className="java"
@@ -125,7 +129,7 @@ export default function Polymorphy(): JSX.Element {
           <h2>Demo</h2>
           <ul>
             <li className="fragment">Dog und Cat spezifische Methoden</li>
-            <li className="fragment">instanceof mit Downcast in Array</li>
+            <li className="fragment">instanceof mit Downcast in ArrayList</li>
           </ul>
         </section>
       </section>

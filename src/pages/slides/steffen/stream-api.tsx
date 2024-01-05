@@ -353,7 +353,7 @@ export default function StreamApi(): JSX.Element {
                   'public class Main {\n' +
                   '  public static void main(String[] args) {\n' +
                   '    // Collection.stream(); // interface\n' +
-                  '    // --> Klassen die Collection implementieren:\n' +
+                  '    // &rarr; Klassen die Collection implementieren:\n' +
                   '    ArrayList&lt;Student&gt; students = new ArrayList&lt;&gt;();\n' +
                   '    students.stream();\n' +
                   '    \n' +

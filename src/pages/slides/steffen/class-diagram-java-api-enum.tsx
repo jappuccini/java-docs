@@ -6,7 +6,18 @@ export default function KlassdiagramJavaAPIEnum(): JSX.Element {
   return (
     <Slides initSlides={defaultInitSlides}>
       <section>
-        <section>Fragen oder Probleme?</section>
+        <section>
+          <h2>Agenda</h2>
+          <ul>
+            <li className="fragment">Wiederholung</li>
+            <li className="fragment">Java API</li>
+            <li className="fragment">final Modifier</li>
+            <li className="fragment">Enumeration</li>
+            <li className="fragment">Klassendiagramm</li>
+            <li className="fragment">Aktivitätsdiagramm</li>
+            <li className="fragment">Zusammenfassung</li>
+          </ul>
+        </section>
       </section>
       <section>
         <section>
@@ -31,10 +42,12 @@ export default function KlassdiagramJavaAPIEnum(): JSX.Element {
         <section>
           <h2>Modifiers</h2>
           <ul>
-            <li className="fragment">public/private</li>
-            <li className="fragment">Getter- und Settermethoden</li>
+            <li className="fragment">public & private</li>
+            <li className="fragment">Getter und Setter</li>
             <li className="fragment">this</li>
             <li className="fragment">Überladen von Methoden</li>
+            <li className="fragment">Konstruktor</li>
+            <li className="fragment">static</li>
           </ul>
         </section>
       </section>
@@ -102,14 +115,15 @@ export default function KlassdiagramJavaAPIEnum(): JSX.Element {
       </section>
       <section>
         <section>
-          <h2>Was ist der final Modifier?</h2>
+          <h2>final Modifier</h2>
         </section>
         <section>
           <h2>Kann angewendet werden auf</h2>
           <ul>
-            <li className="fragment">(Referenz)variablen</li>
+            <li className="fragment">Klassen (wird später behandelt)</li>
+            <li className="fragment">Methoden (wird später behandelt)</li>
             <li className="fragment">Attribute</li>
-            <li className="fragment">Klassen(wird später behandelt)</li>
+            <li className="fragment">Variablen</li>
           </ul>
         </section>
         <section>
@@ -120,7 +134,7 @@ export default function KlassdiagramJavaAPIEnum(): JSX.Element {
           </ul>
         </section>
         <section>
-          <h2>Demo</h2>
+          <h2>Demo final Modifier</h2>
           <ul>
             <li className="fragment">char gender</li>
             <li className="fragment">String firstName</li>
@@ -129,11 +143,11 @@ export default function KlassdiagramJavaAPIEnum(): JSX.Element {
       </section>
       <section>
         <section>
-          <h2>Enumerations</h2>
+          <h2>Enumeration</h2>
         </section>
         <section>
-          <h2>Was sind Enumerations?</h2>
-          <p className="fragement">Gruppe von Konstanten</p>
+          <h2>Was ist eine Enumeration?</h2>
+          <p className="fragment">Gruppe von Konstanten</p>
           <ul>
             <li className="fragment">Geschlecht (Male, Female, Divers)</li>
             <li className="fragment">Motorart (Benzin, Diesel, Elektro)</li>
@@ -142,14 +156,19 @@ export default function KlassdiagramJavaAPIEnum(): JSX.Element {
           </ul>
         </section>
         <section>
-          <h2>Wie kann man das realisieren? (Gender)</h2>
+          <h2>Wie kann man das realisieren?</h2>
           <ul>
-            <li className="fragment">Anzahl an Gender?</li>
-            <li className="fragment">Attribute?</li>
-            <li className="fragment">Gender verfügbar machen?</li>
-            <li className="fragment">keine weiteren Gender zulassen?</li>
+            <li className="fragment">Anzahl an Geschlechtern?</li>
+            <li className="fragment">Welche Attribute sind interessant?</li>
             <li className="fragment">
-              manipulation innerhalb der Klasse verhindern?
+              Wie kann eine andere Klasse ein Geschlecht verwenden?
+            </li>
+            <li className="fragment">
+              Wie keine weiteren Geschlechtinstanzen zulassen?
+            </li>
+            <li className="fragment">
+              Wie die Manipulation existierender Geschlechtsinstanzen
+              verhindern?
             </li>
           </ul>
         </section>
@@ -158,12 +177,11 @@ export default function KlassdiagramJavaAPIEnum(): JSX.Element {
           <ul>
             <li className="fragment">enum anstatt class</li>
             <li className="fragment">Konstanten kommagetrennt festlegen</li>
-            <li className="fragment">Konstruktor access modifier optional</li>
+            <li className="fragment">access modifier Konstruktor optional</li>
           </ul>
         </section>
         <section>
-          <h2>Was macht man mit Enums?</h2>
-          <p>Demo</p>
+          <h2>Demo Enumeration</h2>
           <ul>
             <li className="fragment">switch</li>
             <li className="fragment">isBinary</li>
@@ -173,7 +191,7 @@ export default function KlassdiagramJavaAPIEnum(): JSX.Element {
       </section>
       <section>
         <section>
-          <h2>Klassendiagramme</h2>
+          <h2>Klassendiagramm</h2>
         </section>
         <section>
           <h2>Was sind Klassendiagramme?</h2>
@@ -186,7 +204,7 @@ export default function KlassdiagramJavaAPIEnum(): JSX.Element {
         <section>
           <img
             height={'400px'}
-            src={require('@site/static/img/class-diagram-example.png')}
+            src={require('@site/static/img/class-diagram-example.png').default}
           />
         </section>
         <section>
@@ -266,7 +284,8 @@ export default function KlassdiagramJavaAPIEnum(): JSX.Element {
       </section>
       <section>
         <section>
-          <h2>Aktivitätsdiagramme</h2>
+          <h2>Aktivitätsdiagramm*</h2>
+          <NKR />
         </section>
         <section>
           <h2>Was sind Aktivitätsdiagramme?</h2>
@@ -278,11 +297,10 @@ export default function KlassdiagramJavaAPIEnum(): JSX.Element {
         <section>
           <img
             height={'400px'}
-            src={require('@site/static/img/activity-diagram-example.png')}
+            src={
+              require('@site/static/img/activity-diagram-example.png').default
+            }
           />
-        </section>
-        <section>
-          In der Klausur ist nur das Lesen von Aktivitätsdiagrammen relevant.
         </section>
       </section>
       <section>

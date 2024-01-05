@@ -6,7 +6,15 @@ export default function ClassesAndObjects(): JSX.Element {
   return (
     <Slides initSlides={defaultInitSlides}>
       <section>
-        <section>Fragen oder Probleme?</section>
+        <section>
+          <h2>Agenda</h2>
+          <ul>
+            <li className="fragment">Wiederholung</li>
+            <li className="fragment">Einführung Objektorientierung</li>
+            <li className="fragment">Modifier</li>
+            <li className="fragment">Zusammenfassung</li>
+          </ul>
+        </section>
       </section>
       <section>
         <section>
@@ -92,10 +100,10 @@ export default function ClassesAndObjects(): JSX.Element {
       </section>
       <section>
         <section>
-          <h2>Einführung in die Objektorientierung</h2>
+          <h2>Einführung Objektorientierung</h2>
         </section>
         <section>
-          <h2>Was sind Beispiele für Objekte in unserer Umgebung?</h2>
+          <h2>Objekte in unserer Umgebung</h2>
           <ul>
             <li className="fragment">
               Handy<strong>s</strong>
@@ -175,6 +183,7 @@ export default function ClassesAndObjects(): JSX.Element {
           </ul>
         </section>
         <section>
+          <h2>Beispiel Klasse Mensch</h2>
           <pre>
             <code
               className="java"
@@ -194,8 +203,10 @@ export default function ClassesAndObjects(): JSX.Element {
         </section>
         <section>
           <h2>Demo Objekte</h2>
-          <li className="fragment">Steffen, Marianna, Mirco</li>
-          <li className="fragment">Audi A3, Fiat 500, BMW 335i</li>
+          <ul>
+            <li className="fragment">Steffen, Marianna, Mirco</li>
+            <li className="fragment">Audi A3, Fiat 500, BMW 335i</li>
+          </ul>
         </section>
         <section>
           <h2>Was ist ein Objekt?</h2>
@@ -226,7 +237,7 @@ export default function ClassesAndObjects(): JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Demo</h2>
+          <h2>Demo Objekt</h2>
           <ul>
             <li className="fragment">Lesen und Schreiben von Attributen</li>
             <li className="fragment">
@@ -238,7 +249,7 @@ export default function ClassesAndObjects(): JSX.Element {
       </section>
       <section>
         <section>
-          <h2>Was sind Modifier?</h2>
+          <h2>Modifier</h2>
         </section>
         <section>
           <h2>Arten von Modifiern</h2>
@@ -294,10 +305,10 @@ export default function ClassesAndObjects(): JSX.Element {
           </ul>
         </section>
         <section>
-          <h2>Demo</h2>
+          <h2>Demo Modifiers</h2>
           <ul>
-            <li className="fragment">public/private</li>
-            <li className="fragment">Getter- und Settermethoden</li>
+            <li className="fragment">public & private</li>
+            <li className="fragment">Getter & Setter</li>
             <li className="fragment">
               Schlüsselwort <strong>this</strong>
             </li>
@@ -328,8 +339,8 @@ export default function ClassesAndObjects(): JSX.Element {
         <section>
           <h2>Modifiers</h2>
           <ul>
-            <li className="fragment">public/private</li>
-            <li className="fragment">Getter- und Settermethoden</li>
+            <li className="fragment">public & private</li>
+            <li className="fragment">Getter & Setter</li>
             <li className="fragment">this</li>
             <li className="fragment">Überladen von Methoden</li>
           </ul>
@@ -338,7 +349,6 @@ export default function ClassesAndObjects(): JSX.Element {
           <h2>Rest of the day</h2>
           <ul>
             <li className="fragment">Aufgabe Objects 01</li>
-            <li className="fragment">Wiederholen</li>
           </ul>
         </section>
       </section>

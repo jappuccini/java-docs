@@ -7,10 +7,30 @@ export default function Interfaces(): JSX.Element {
     <Slides initSlides={defaultInitSlides}>
       <section>
         <section>
+          <h2>Agenda</h2>
+          <ul>
+            <li className="fragment">Wiederholung</li>
+            <li className="fragment">variable Argumentlisten</li>
+            <li className="fragment">Interface</li>
+            <li className="fragment">Komparator</li>
+            <li className="fragment">Zusammenfassung</li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <section>
           <h2>Wiederholung</h2>
+        </section>
+        <section>
+          <h2>abstract Modifier</h2>
           <ul>
             <li className="fragment">abstrakte Klassen</li>
             <li className="fragment">abstrakte Methoden</li>
+          </ul>
+        </section>
+        <section>
+          <h2>final Modifier</h2>
+          <ul>
             <li className="fragment">finale Klassen</li>
             <li className="fragment">finale Methoden</li>
           </ul>
@@ -19,7 +39,7 @@ export default function Interfaces(): JSX.Element {
       <section>
         <section>
           <h2>Variable Argumentlisten*</h2>
-          <p className="fragment">werden als VarArgs bezeichnet</p>
+          <p>werden als VarArgs bezeichnet</p>
           <NKR />
         </section>
         <section>
@@ -126,7 +146,7 @@ export default function Interfaces(): JSX.Element {
           </ul>
         </section>
         <section>
-          <h2>Demo</h2>
+          <h2>Demo Interface</h2>
           <ul>
             <li className="fragment">ShoppingCart</li>
             <li className="fragment">Dog und Cat implementieren Interface</li>
@@ -157,9 +177,16 @@ export default function Interfaces(): JSX.Element {
           <h2>Funktionsweise</h2>
           <ul>
             <li className="fragment">Vergleichen von zwei Objekten</li>
-            <li className="fragment">Element davor einordnen: 1</li>
-            <li className="fragment">Element dahinter einordnen: -1</li>
-            <li className="fragment">Elemente gleich einordnen: 0</li>
+            <li className="fragment">erstes Element davor einordnen: -1</li>
+            <li className="fragment">erstes Element dahinter einordnen: 1</li>
+            <li className="fragment">erstes Element gleich einordnen: 0</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Demo Reallife Vergleich</h2>
+          <ul>
+            <li className="fragment">3 Personen nach vorne</li>
+            <li className="fragment">nach Größe aufsteigend sortieren</li>
           </ul>
         </section>
         <section>
@@ -203,7 +230,7 @@ export default function Interfaces(): JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Demo</h2>
+          <h2>Demo Komparatoren</h2>
           <ul>
             <li className="fragment">Human Comparable</li>
             <li className="fragment">AgeComparator</li>
@@ -211,6 +238,14 @@ export default function Interfaces(): JSX.Element {
         </section>
       </section>
       <section>
+        <section>
+          <h2>Zusammenfassung</h2>
+          <ul>
+            <li className="fragment">variable Argumentlisten</li>
+            <li className="fragment">Interfaces</li>
+            <li className="fragment">Komparatoren</li>
+          </ul>
+        </section>
         <section>
           <h2>Rest of the day</h2>
           <ul>
