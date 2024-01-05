@@ -5,7 +5,15 @@ export default function ConstructorAndStatic(): JSX.Element {
   return (
     <Slides initSlides={defaultInitSlides}>
       <section>
-        <section>Fragen oder Probleme?</section>
+        <section>
+          <h2>Agenda</h2>
+          <ul>
+            <li className="fragment">Wiederholung</li>
+            <li className="fragment">Konstruktor</li>
+            <li className="fragment">static Modifier</li>
+            <li className="fragment">Zusammenfassung</li>
+          </ul>
+        </section>
       </section>
       <section>
         <section>
@@ -42,16 +50,14 @@ export default function ConstructorAndStatic(): JSX.Element {
           <h2>Konstruktor</h2>
         </section>
         <section>
-          <h2>Für was ist ein Konstruktor</h2>
+          <h2>Zweck des Konstruktors</h2>
           <ul>
             <li className="fragment">Initialisierung eines Objekts</li>
-            <li className="fragment">
-              Verschiedene Initialisierungen eines Objekts
-            </li>
+            <li className="fragment">Verschiedene Initialisierungen</li>
           </ul>
         </section>
         <section>
-          <h2>Wie erstelle ich einen Konstruktor?</h2>
+          <h2>Aufbau eines Konstruktors</h2>
           <ul>
             <li className="fragment">Access Modifier</li>
             <li className="fragment">Klassenname</li>
@@ -60,9 +66,11 @@ export default function ConstructorAndStatic(): JSX.Element {
           </ul>
         </section>
         <section>
+          <h2>Beispiel Konstruktor</h2>
           <pre>
             <code
               className="java"
+              data-line-numbers="5-8"
               dangerouslySetInnerHTML={{
                 __html:
                   'public class Car {\n' +
@@ -87,9 +95,11 @@ export default function ConstructorAndStatic(): JSX.Element {
           </ul>
         </section>
         <section>
+          <h2>Beispiel mehrere Konstruktoren</h2>
           <pre>
             <code
               className="java"
+              data-line-numbers="5-13"
               dangerouslySetInnerHTML={{
                 __html:
                   'public class Car {\n' +
@@ -111,7 +121,7 @@ export default function ConstructorAndStatic(): JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Demo</h2>
+          <h2>Demo Konstruktor</h2>
           <ul>
             <li className="fragment">Human</li>
           </ul>
@@ -119,7 +129,7 @@ export default function ConstructorAndStatic(): JSX.Element {
       </section>
       <section>
         <section>
-          <h2>Was ist der static Modifier?</h2>
+          <h2>static Modifier</h2>
         </section>
         <section>
           <h2>Kann angewendet werden auf</h2>
@@ -130,30 +140,27 @@ export default function ConstructorAndStatic(): JSX.Element {
         </section>
         <section>
           <h2>Statische Attribute</h2>
-          <p className="fragment">beziehen sich auf die Klasse</p>
           <ul>
             <li className="fragment">
-              keine Unterscheidung zwischen Objekten notwendig
+              keine Unterscheidung zwischen Objekten notwendig, z.B. die Zahl Pi
             </li>
-            <li className="fragment">z. B. die Zahl Pi</li>
-            <li className="fragment">Zugriff über Klassenname</li>
-            <li className="fragment">z. B. Math.PI</li>
+            <li className="fragment">Zugriff über Klassenname, z.B. Math.PI</li>
           </ul>
         </section>
         <section>
           <h2>Statische Methoden</h2>
-          <p className="fragment">beziehen sich auf die Klasse</p>
           <ul>
             <li className="fragment">
-              kein Zugriff auf Objektattribute möglich
+              kein Zugriff auf Objektattribute möglich, z.B. berechnen des
+              Betrags
             </li>
-            <li className="fragment">z. B. berechnen eines absoluten Wertes</li>
-            <li className="fragment">Zugriff über Klassenname</li>
-            <li className="fragment">Math.abs()</li>
+            <li className="fragment">
+              Zugriff über Klassenname, z.B. Math.abs()
+            </li>
           </ul>
         </section>
         <section>
-          <h2>Demo privat/public static</h2>
+          <h2>Demo static mit private & public</h2>
           <ul>
             <li className="fragment">Humans</li>
           </ul>
@@ -169,18 +176,14 @@ export default function ConstructorAndStatic(): JSX.Element {
           <h2>Konstruktor</h2>
           <ul>
             <li className="fragment">Initialisierung von Objekten</li>
-            <li className="fragment">
-              Mehrere Konstruktoren durch Methodenüberladung
-            </li>
+            <li className="fragment">Mehrere Konstruktoren</li>
           </ul>
         </section>
         <section>
-          <h2>Der static Modifier</h2>
+          <h2>static Modifier</h2>
           <ul>
             <li className="fragment">Methoden und Attribute</li>
-            <li className="fragment">
-              Zugriff auf Instanzattribute nicht möglich
-            </li>
+            <li className="fragment">kein Zugriff auf Instanzattribute</li>
           </ul>
         </section>
         <section>
@@ -188,7 +191,6 @@ export default function ConstructorAndStatic(): JSX.Element {
           <ul>
             <li className="fragment">Aufgabe Objects 02 - 07</li>
             <li className="fragment">Tutego</li>
-            <li className="fragment">Wiederholen</li>
           </ul>
         </section>
       </section>

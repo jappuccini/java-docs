@@ -6,10 +6,20 @@ export default function Exceptions(): JSX.Element {
     <Slides initSlides={defaultInitSlides}>
       <section>
         <section>
+          <h2>Agenda</h2>
+          <ul>
+            <li className="fragment">Wiederholung</li>
+            <li className="fragment">Exceptions</li>
+            <li className="fragment">Zusammenfassung</li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <section>
           <h2>Wiederholung</h2>
           <ul>
             <li className="fragment">Interfaces</li>
-            <li className="fragment">Comparatoren</li>
+            <li className="fragment">Komparatoren</li>
           </ul>
         </section>
       </section>
@@ -81,7 +91,7 @@ export default function Exceptions(): JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Demo</h2>
+          <h2>Demo Exceptions</h2>
           <ul>
             <li className="fragment">PasswordTooShortException</li>
             <li className="fragment">throw PasswordTooShortException</li>

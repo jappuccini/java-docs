@@ -5,11 +5,22 @@ export default function AbstractAndFinal(): JSX.Element {
   return (
     <Slides initSlides={defaultInitSlides}>
       <section>
-        <section>Fragen oder Probleme?</section>
+        <section>
+          <h2>Agenda</h2>
+          <ul>
+            <li className="fragment">Wiederholung</li>
+            <li className="fragment">abstract Modifier</li>
+            <li className="fragment">final Modifier</li>
+            <li className="fragment">Zusammenfassung</li>
+          </ul>
+        </section>
       </section>
       <section>
         <section>
           <h2>Wiederholung</h2>
+        </section>
+        <section>
+          <h2>Polymorphie</h2>
           <ul>
             <li className="fragment">Polymorphie</li>
             <li className="fragment">Upcast</li>
@@ -20,9 +31,7 @@ export default function AbstractAndFinal(): JSX.Element {
       </section>
       <section>
         <section>
-          <p>
-            Was ist der <strong>abstract</strong> Modifier?
-          </p>
+          <h2>abstract Modifier</h2>
         </section>
         <section>
           <h2>Kann angewendet werden auf</h2>
@@ -50,7 +59,7 @@ export default function AbstractAndFinal(): JSX.Element {
           </ul>
         </section>
         <section>
-          <h2>Demo</h2>
+          <h2>Demo abstrakte Klasse</h2>
           <ul>
             <li className="fragment">Animal Klasse abstrakt machen</li>
           </ul>
@@ -74,7 +83,7 @@ export default function AbstractAndFinal(): JSX.Element {
           </ul>
         </section>
         <section>
-          <h2>Demo</h2>
+          <h2>Demo abstrakte Methode</h2>
           <ul>
             <li className="fragment">abstrakte Methode makeSound</li>
           </ul>
@@ -82,14 +91,13 @@ export default function AbstractAndFinal(): JSX.Element {
       </section>
       <section>
         <section>
-          <p>
-            Was ist der <strong>final</strong> Modifier?
-          </p>
+          <h2>final Modifier</h2>
         </section>
         <section>
           <h2>Kann angewendet werden auf</h2>
           <ul>
             <li className="fragment">Klassen</li>
+            <li className="fragment">Methoden</li>
             <li className="fragment">Attribute</li>
             <li className="fragment">Variablen</li>
           </ul>
@@ -110,7 +118,7 @@ export default function AbstractAndFinal(): JSX.Element {
           </ul>
         </section>
         <section>
-          <h2>Demo</h2>
+          <h2>Demo finale Klasse</h2>
           <ul>
             <li className="fragment">Dog Klasse final machen</li>
           </ul>
@@ -124,11 +132,11 @@ export default function AbstractAndFinal(): JSX.Element {
         <section>
           <h2>Zweck von finalen Methoden</h2>
           <ul>
-            <li className="fragment">internes Verhalten erzwingen</li>
+            <li className="fragment">Verhalten erzwingen</li>
           </ul>
         </section>
         <section>
-          <h2>Demo</h2>
+          <h2>Demo finale Methode</h2>
           <ul>
             <li className="fragment">finale Methode bark</li>
           </ul>

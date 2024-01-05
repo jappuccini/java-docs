@@ -6,17 +6,54 @@ export default function Inheritance(): JSX.Element {
   return (
     <Slides initSlides={defaultInitSlides}>
       <section>
-        <section>Fragen oder Probleme?</section>
+        <section>
+          <h2>Agenda</h2>
+          <ul>
+            <li className="fragment">Wiederholung</li>
+            <li className="fragment">Vererbung</li>
+            <li className="fragment">Zusammenfassung</li>
+          </ul>
+        </section>
       </section>
       <section>
         <section>
           <h2>Wiederholung</h2>
+        </section>
+        <section>
+          <h2>Java API</h2>
           <ul>
-            <li className="fragment">Java API</li>
-            <li className="fragment">final modifier</li>
-            <li className="fragment">Enumerations</li>
-            <li className="fragment">Klassendiagramme</li>
-            <li className="fragment">Aktivitätsdiagramme</li>
+            <li className="fragment">Wrapper Klassen</li>
+            <li className="fragment">LocalDateTime</li>
+            <li className="fragment">File</li>
+          </ul>
+        </section>
+        <section>
+          <h2>final modifier</h2>
+          <ul>
+            <li className="fragment">Attribute</li>
+            <li className="fragment">Variablen</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Enumeration</h2>
+          <ul>
+            <li className="fragment">Gruppe von Konstanten</li>
+            <li className="fragment">switch</li>
+            <li className="fragment">isBinary</li>
+            <li className="fragment">values, ordinal</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Klassendiagramm</h2>
+          <ul>
+            <li className="fragment">Bereiche</li>
+            <li className="fragment"> + - * ~ </li>
+            <li className="fragment">
+              {' '}
+              <u>static</u>{' '}
+            </li>
+            <li className="fragment"> &#123; final &#125;</li>
+            <li className="fragment"> &lt;&lt; enumeration &gt;&gt;</li>
           </ul>
         </section>
       </section>
@@ -59,9 +96,7 @@ export default function Inheritance(): JSX.Element {
           </p>
         </section>
         <section>
-          <h2>
-            Das Schlüsselwort <strong>extends</strong>
-          </h2>
+          <h2>Beispiel extends</h2>
           <pre className="fragment">
             <code
               className="java"
@@ -77,7 +112,7 @@ export default function Inheritance(): JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Demo</h2>
+          <h2>Demo Vererbung</h2>
           <ul>
             <li className="fragment">Generalisierung von Dog und Cat</li>
             <li className="fragment">Vererbung an Dog und Cat</li>
@@ -98,6 +133,7 @@ export default function Inheritance(): JSX.Element {
           </ul>
         </section>
         <section>
+          <h2>Beispiel super</h2>
           <pre>
             <code
               className="java"
@@ -119,7 +155,7 @@ export default function Inheritance(): JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Demo</h2>
+          <h2>Demo super</h2>
           <ul>
             <li className="fragment">super call mit Animal</li>
           </ul>
@@ -150,8 +186,10 @@ export default function Inheritance(): JSX.Element {
           </div>
         </section>
         <section>
-          <h2>Demo</h2>
+          <h2>Demo protected</h2>
           <ul>
+            <li className="fragment">public name</li>
+            <li className="fragment">private name</li>
             <li className="fragment">protected name</li>
           </ul>
         </section>

@@ -37,3 +37,8 @@ code > table {
 .reveal table tbody tr:last-child td {
   border-bottom: 1px solid white;
 }
+
+.reveal code table tbody tr:last-child th,
+.reveal code table tbody tr:last-child td {
+  border-bottom: none;
+}

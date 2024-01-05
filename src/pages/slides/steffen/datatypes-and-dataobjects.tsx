@@ -249,7 +249,7 @@ export default function DataTypesAndDataObjects(): JSX.Element {
             <code
               className="java"
               dangerouslySetInnerHTML={{
-                __html: 'String myName; // --> Deklaration\n',
+                __html: 'String myName; // &rarr; Deklaration\n',
               }}
             ></code>
           </pre>
@@ -257,7 +257,7 @@ export default function DataTypesAndDataObjects(): JSX.Element {
             <code
               className="java"
               dangerouslySetInnerHTML={{
-                __html: 'myName = "Steffen"; // --> Initialisierung\n',
+                __html: 'myName = "Steffen"; // &rarr; Initialisierung\n',
               }}
             ></code>
           </pre>
@@ -265,13 +265,14 @@ export default function DataTypesAndDataObjects(): JSX.Element {
             <code
               className="java"
               dangerouslySetInnerHTML={{
-                __html: 'String myName = "Steffen"; // --> Zusammenfassung\n',
+                __html:
+                  'String myName = "Steffen"; // &rarr; Zusammenfassung\n',
               }}
             ></code>
           </pre>
         </section>
         <section>
-          <h2>Demo</h2>
+          <h2>Demo Deklaration & Initialisierung</h2>
         </section>
       </section>
       <section>
