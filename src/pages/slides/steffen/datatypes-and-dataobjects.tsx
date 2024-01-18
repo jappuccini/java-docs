@@ -89,7 +89,8 @@ export default function DataTypesAndDataObjects(): JSX.Element {
                   'git stash apply # das zuletzt versteckte wiederherstellen\n' +
                   'git stash save "wip" # alles unter dem Namen "wip" verstecken\n' +
                   'git stash list # alle stashes anzeigen\n' +
-                  'git stash apply 3 # stash 3 wiederherstellen\n',
+                  'git stash apply 3 # stash 3 wiederherstellen\n' +
+                  'git stash apply stash^{/wip} # "wip" wiederherstellen\n',
               }}
             ></code>
           </pre>
