@@ -65,7 +65,7 @@ export default function Intro(): JSX.Element {
           <ul>
             <li className="fragment">Keine UI bringt weniger Motivation</li>
             <li className="fragment">Ohne Programmiergrundlagen keine Apps</li>
-            <li className="fragment">Java 2, Verteilte Systeme, ABAP</li>
+            <li className="fragment">Java 2, Verteilte Systeme</li>
           </ul>
         </section>
       </section>
