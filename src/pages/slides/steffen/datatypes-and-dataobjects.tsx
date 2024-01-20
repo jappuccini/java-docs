@@ -51,7 +51,7 @@ export default function DataTypesAndDataObjects(): JSX.Element {
           </ul>
         </section>
         <section>
-          <Link to="/documentation/coding#programmausführung">
+          <Link to="/documentation/coding">
             Programmausführung
           </Link>
           <NKR />
