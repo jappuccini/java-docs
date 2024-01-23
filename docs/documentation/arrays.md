@@ -89,7 +89,7 @@ public class MainClass {
 }
 ```
 
-## Variable Arugmentlisten (VarArgs)
+## Variable Argumentlisten (VarArgs)
 
 Variable Argumentlisten (VarArgs) ermöglichen die Definition von Methoden, denen
 beliebig viele Werte eines Datentyps mitgegeben werden können. Die
