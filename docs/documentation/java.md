@@ -42,4 +42,11 @@ Programmieren von Java-Programmen dar. Es enthält neben dem Compiler und
 Debugger weitere wichtige Werkzeuge sowie umfangreiche Bibliotheken (siehe
 [Die Java API](java-api)). Die JRE (Java Runtime Environment) enthält den
 Interpreter (die _Java Virtual Machine_) und wird zum Ausführen von
-Java-Applikationen benötigt.
+Java-Applikationen benötigt. Seit September 2017 wird alle sechs Monate eine
+neue JDK-Version veröffentlicht (i.d.R. Mitte März und Mitte September eines
+Jahres). Diese Versionen werden von Oracle nur bis zum Erscheinen der jeweils
+nächsten Version unterstützt. Eine Ausnahme bilden hier die LTS-Versionen
+(long-term-support-releases). Die aktuellen LTS-Versionen sind 8, 11, 17 und 21.
+Die Neuerungen einer Version werden durch sogenannte JEPs (JDK Enhancement
+Proposals) festgelegt. Weitere Informationen zu den verschiedenen JDK-Versionen
+können auf der offziellen [JDK-Seite](https://jdk.java.net/) gefunden werden.

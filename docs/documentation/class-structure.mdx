@@ -118,12 +118,15 @@ public class MainClass {
 }
 ```
 
-## Kommentare
+## Kommentare und Dokumentation
 
-Kommentare sollen die Lesbarkeit des Programms verbessern. Sie bewirken bei der
-Ausführung keine Aktion und werden vom Java-Compiler ignoriert. Java kennt
-einzeilige Kommentare mit `//`, Kommentarblöcke mit `/* */` und
-Dokumentationskommentare mit `/** */`.
+Kommentare sollen die Lesbarkeit und Verwendbarkeit des Programms verbessern.
+Sie bewirken bei der Ausführung keine Aktion und werden vom Java-Compiler
+ignoriert. Man unterscheidet dabei zwischen Quellcode-Kommentaren, die einzelne
+Anweisungen oder Anweisungsblöcke erklären und Dokumentationskommentaren, die
+Beschreiben, wie eine Methode oder einer Klasse verwendet wird (siehe
+[Javadoc](java-api#das-javadoc)). In Java werden einzeilige Kommentare mit `//`,
+Kommentarblöcke mit `/* */` und Dokumentationskommentare mit `/** */` erstellt.
 
 ```java title="MainClass.java" showLineNumbers
 /**
@@ -147,6 +150,13 @@ public class MainClass {
 
 }
 ```
+
+:::note Hinweis
+
+Guter Quellcode sollte immer selbsterklärend sein. Das heißt, dass auf den
+Einsatz von Quellcode-Kommentaren i.d.R. verzichtet werden sollte.
+
+:::
 
 ## Entwicklungspakete
 
