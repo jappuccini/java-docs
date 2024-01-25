@@ -9,7 +9,7 @@ import Tabs from '@theme/Tabs'; import TabItem from '@theme/TabItem';
 
 ## Wiederholklausur Q2 2023
 
-- Kurse: WWIBE122 und WWIBE222
+- Kurse: WWIBE122
 - Anzahl Klausuren: 10
 - Punkteschnitt: 55,9 von 100
 
@@ -61,7 +61,7 @@ pie
 
 ## Klausur Q4 2022
 
-- Kurse: WWIBE122 und WWIBE222
+- Kurse: WWIBE122
 - Anzahl Klausuren: 33
 - Punkteschnitt: 62,2 von 100
 
@@ -113,7 +113,7 @@ pie
 
 ## Wiederholklausur Q3 2022
 
-- Kurse: WWIBE121 und WWIBE221
+- Kurse: WWIBE121
 - Anzahl Klausuren: 6
 - Punkteschnitt: 62,2 von 100
 
@@ -165,7 +165,7 @@ pie
 
 ## Klausur Q1 2022
 
-- Kurse: WWIBE121 und WWIBE221
+- Kurse: WWIBE121
 - Anzahl Klausuren: 36
 - Punkteschnitt: 62,9 von 100
 
