@@ -72,6 +72,6 @@ C:\Users\Maier\Projects\Java\bin>java demos.MainClass
 :::danger Hinweis
 
 Um eine Bytecode-Datei ausführen zu können, benötigt die dazugehörige
-Java-Klasse die Methode `void main(String[])`.
+Java-Klasse die Methode `void main(args: String[])`.
 
 :::
