@@ -16,7 +16,7 @@ tags: []
 - [Klassen und Objekte 08.02.](/slides/steffen/classes-and-objects)
 - [Konstruktor und static 09.02.](/slides/steffen/constructor-and-static)
 - [Java API, Enum, Klassendiagramm, Aktivitätsdiagramm 15.02. & 16.02.](/slides/steffen/class-diagram-java-api-enum)
-- [Vererbung 21.02. & 23.02.](/slides/steffen/Inheritance)
+- [Vererbung 21.02. & 23.02.](/slides/steffen/inheritance)
 - [Polymorphie 21.02. & 23.02.](/slides/steffen/polymorphy)
 - [Abstrakte und finale Klassen 21.02. & 23.02.](/slides/steffen/abstract-and-final)
 - [Interfaces 29.02.](/slides/steffen/interfaces)
