@@ -124,7 +124,7 @@ export default function MethodsAndOperators(): JSX.Element {
           <h2>Aufgaben</h2>
           <ul>
             <li className="fragment">Konsolenanwendungen</li>
-            <li className="fragment">Verzweigungen - Cases 05 optional</li>
+            <li className="fragment">Verzweigungen - Cases 05 wichtig</li>
             <li className="fragment">Schleifen</li>
             <li className="fragment">Felder (Arrays) - Arrays 04 optional</li>
           </ul>
