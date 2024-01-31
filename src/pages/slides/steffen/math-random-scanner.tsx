@@ -80,6 +80,20 @@ export default function MethodsAndOperators(): JSX.Element {
           </pre>
         </section>
         <section>
+          <h2>Konvertieren von double in int</h2>
+          <pre>
+            <code
+              className="java"
+              dangerouslySetInnerHTML={{
+                __html:
+                  'double doubleNumber = 3.5;\n' +
+                  'int intNumber  = (int) doubleNumber;\n' +
+                  'System.out.println(int); // gibt 3 aus',
+              }}
+            ></code>
+          </pre>
+        </section>
+        <section>
           <h2>Zufallszahlen generieren</h2>
           <pre>
             <code
