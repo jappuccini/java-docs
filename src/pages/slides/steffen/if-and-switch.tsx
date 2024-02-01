@@ -1,5 +1,6 @@
 import Slides from '../../../components/Slides';
 import { defaultInitSlides } from '../../../components/Slides/initSlides';
+import { NKR } from '../../../components/Slides/nkr';
 
 export default function MethodsAndOperators(): JSX.Element {
   return (
@@ -237,6 +238,15 @@ export default function MethodsAndOperators(): JSX.Element {
             <li className="fragment">
               Mehrfachbehandlung deutlich lesbarer mit switch
             </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Ternary Operator</h2>
+          <NKR />
+          <ul>
+            <li className="fragment">Kurzform von if-else</li>
+            <li className="fragment">macht in return statement Sinn</li>
+            <li className="fragment">Demo Ternary Operator</li>
           </ul>
         </section>
         <section>
