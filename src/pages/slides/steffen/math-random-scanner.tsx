@@ -9,6 +9,7 @@ export default function MethodsAndOperators(): JSX.Element {
           <h2>Agenda</h2>
           <ul>
             <li className="fragment">Wiederholung</li>
+            <li className="fragment">Ablauf Test</li>
             <li className="fragment">Hilfsklassen (Math, Random, Scanner)</li>
             <li className="fragment">Aufgaben</li>
           </ul>
@@ -54,6 +55,11 @@ export default function MethodsAndOperators(): JSX.Element {
       </section>
       <section>
         <section>
+          <h2>Ablauf Test</h2>
+        </section>
+      </section>
+      <section>
+        <section>
           <h2>Ready for Hustle?</h2>
         </section>
         <section data-background-iframe="https://giphy.com/embed/m3864rBwwBTKMAbpn3"></section>
@@ -88,7 +94,7 @@ export default function MethodsAndOperators(): JSX.Element {
                 __html:
                   'double doubleNumber = 3.5;\n' +
                   'int intNumber  = (int) doubleNumber;\n' +
-                  'System.out.println(int); // gibt 3 aus',
+                  'System.out.println(intNumber); // gibt 3 aus',
               }}
             ></code>
           </pre>
