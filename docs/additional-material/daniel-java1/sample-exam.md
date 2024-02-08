@@ -21,11 +21,13 @@ tags: []
 
 ## Aufgabe 1 (20 Punkte)
 
-- Welche Konsolenausgabe erzeugen die Methoden `void a()`, `void b()`,
-  `void c()` und `void d()` der abgebildeten Klasse `ExamTask01` (15 Punkte)?
+- Welche Konsolenausgabe erzeugen die Methoden `void a()`, `void b()` und
+  `void c()` der abgebildeten Klasse `ExamTask01` (10 Punkte)?
+- Beschreibe kurz alle Syntaxfehler der Methode `String d()` (inklusive
+  Zeilennummer) (5 Punkte)
 - Notiere jeweils Bezeichner sowie Zeilennummer der Deklaration und Zeilennummer
-  der Initialisierung aller Datenobjekte der Methode `void d()` der abgebildeten
-  Klasse `ExamTask01` (5 Punkte)
+  der Initialisierung aller Datenobjekte der Methode `void e(size: int)` der
+  abgebildeten Klasse `ExamTask01` (5 Punkte)
 
 ### Quelltext
 
@@ -33,46 +35,58 @@ tags: []
 public class ExamTask01 {
 
   private static String textA, textB;
+  private String name;
 
   private static void a() {
-    byte byte1 = 0b1011010;
-    byte byte2 = 0b101110;
-    int int1 = byte1 - byte2;
+    byte byte1 = (byte) 0b11011010;
+    byte byte2 = 0b01101110;
     System.out.println("byte1: " + byte1);
     System.out.println("byte2: " + byte2);
-    System.out.println("int1: " + int1);
   }
 
   private static void b() {
-    String[] values = {"cold", "AEIOU", "hot"};
-    int index1 = values[2].length() == 3 ? 2 : 0;
-    String value1 = values[index1];
-    int index2 = (int) (2.1 + 2.8);
-    char value2 = values[1].charAt(index2);
-    System.out.println(index1 + value1 + index2 + value2);
+    String[] strings = {"java", "c++", "python", "abap"};
+    int int1 = strings[1].length();
+    char char1 = int1 > 3 ? int1 == 4 ? 'x' : 'y' : 'z';
+    int int2 = (int) (1.1 + 0.8);
+    String string1 = strings[int2];
+    char char2 = strings[strings.length - 1].charAt(0);
+    System.out.println(char1 + string1 + 2 + 4 + char2);
   }
 
   private static void c() {
     char x = 'X';
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < 3; i++) {
       System.out.print(i + ": ");
-      for (int j = 5 - i - 1; j > 0; j--) {
+      for (int j = 3 - i - 1; j > 0; j--) {
         System.out.print(x);
       }
       System.out.println();
     }
   }
 
-  private static void d() {
-    textA = new String("Text A");
-    textB = new String("Text B");
-    boolean boolean1, boolean2;
-    int int2 = 1;
-    boolean1 = (textA == textB) ? true : false;
-    boolean2 = boolean1 && ++int2 % 2 == 0 ? true : false;
-    System.out.println("int2: " + int2);
-    System.out.println("boolean1: " + boolean1);
-    System.out.println("boolean2: " + boolean2);
+  private static String d() {
+    int i;
+    string name2 = new String("Max");
+    name = "Peter";
+    for (int x = 0; x > 0; x--) {
+      System.out.println(x);
+    }
+    System.out.println(i);
+    System.out.println(x);
+  }
+
+  private static void e(int size) {
+    textA = "Text A";
+    textB = "Text B";
+    boolean boolean1;
+    for (int i = 0; i < size; i++) {
+      boolean1 = (textA == textB) ? true : false;
+    }
+  }
+
+  public static void main(String[] args) {
+    e(5);
   }
 
 }
@@ -80,28 +94,35 @@ public class ExamTask01 {
 
 ### Musterlösung
 
+**Konsolenausgabe**
+
 ```console
-byte1: 90
-byte2: 46
-int1: 44
-2hot4U
-0: XXXX
-1: XXX
-2: XX
-3: X
-4:
-int2: 1
-boolean1: false
-boolean2: false
+byte1: -38
+byte2: 110
+zc++24a
+0: XX
+1: X
+2:
 ```
+
+**Syntaxfehler**
+
+- Zeile 34: Die Methode müsste eine Zeichenkette zurückgeben
+- Zeile 36: Der primitive Datentyp `string` existiert nicht
+- Zeile 37: In einer statischen Methode kann nur auf andere statische Elemente
+  zugegriffen werden
+- Zeile 41: Die Variable `i` wird vor Verwendung nicht initialisiert
+- Zeile 42: Die Sichtbarkeit der Variablen `x` ist auf die for-Schleife begrenzt
+
+**Deklarationen und Initialisierungen**
 
 | Bezeichner | Deklaration | Initialisierung |
 | ---------- | ----------- | --------------- |
-| `textA`    | 3           | 35              |
-| `textB`    | 3           | 36              |
-| `boolean1` | 37          | 39              |
-| `boolean2` | 37          | 40              |
-| `int2`     | 38          | 38              |
+| `size`     | 45          | 55              |
+| `textA`    | 3           | 46              |
+| `textB`    | 3           | 47              |
+| `boolean1` | 48          | 50              |
+| `i`        | 49          | 49              |
 
 ## Aufgabe 2 (20 Punkte)
 
@@ -270,25 +291,134 @@ anhand der abgebildeten Aktivitätsdiagramme.
 
 ### Klassendiagramm
 
-folgt
+```mermaid
+classDiagram
+    class ExamTask03 {
+        -pin: int[]$
+        +main(args: String[]) void$
+        +textToPin(text: String) void$
+        +checkPinLength() boolean$
+        +checkPinValue() boolean$
+    }
+```
 
-### Aktivitätsdiagramme
+### Aktivitätsdiagramm _main_
 
-folgt
+```mermaid
+stateDiagram
+    state "PIN Eingeben und prüfen" as main {
+        state "Ausgabe: Bitte PIN eingeben" as main1
+        state "Eingabe: Zeichenkette" as main2
+        state "Zeichenkette in Zahlenfeld umwandeln (Aktivität textToPin)" as main3
+        state "Länge des Zahlenfeldes prüfen (Aktivität checkPinLength)" as main4
+        state "Ausgabe: Länge der PIN ist ungültig" as main5
+        state "Zahlenwert des Zahlenfeldes prüfen (Aktivität checkPinValue)" as main6
+        state "Ausgabe: Zahlenwert der PIN ist ungültig" as main7
+        state "Ausgabe: PIN ist gültig" as main8
+        state mainif <<choice>>
+        state mainif2 <<choice>>
+        state mainfork <<fork>>
+        [*] --> main1
+        main1 --> main2
+        main2 --> main3
+        main3 --> main4
+        main4 --> mainif
+        mainif --> main6: Länge des Zahlenfeldes ist gültig
+        mainif --> main5: Länge des Zahlenfeldes ist ungültig
+        main6 --> mainif2
+        mainif2 --> main7: Zahlenwert des Zahlenfeldes is ungültig
+        mainif2 --> main8: Zahlenwert des Zahlenfeldes ist gültig
+        main5 --> mainfork
+        main7 --> mainfork
+        main8 --> mainfork
+        mainfork --> [*]
+    }
+```
 
-### Beispielhafte Konsolenausgaben
+### Aktivitätsdiagramm _textToPin_
+
+```mermaid
+stateDiagram
+    state "Zeichenkette in Zahlenfeld umwandeln" as ttp {
+        state "Länge der Zeichenkette ermittlen" as ttp1
+        state "Länge des Zahlenfeldes = Länge der Zeichenkette" as ttp2
+        state "Zählvariable = 0" as ttp3
+        state "Aktuelles Zeichen der Zeichenkette ermitteln" as ttp4
+        state "Zahlenwert des aktuellen Zeichens ermitteln" as ttp5
+        state "Zahlenwert dem Zahlenfeld hinzufügen" as ttp6
+        state "Zählvariable inkrementieren" as ttp7
+        state ttpif <<choice>>
+        [*] --> ttp1
+        ttp1 --> ttp2
+        ttp2 --> ttp3
+        ttp3 --> ttpif
+        ttpif --> ttp4: Zählvariable < Länge des Zahlenfeldes
+        ttpif --> [*]: Zählvariable = Länge des Zahlenfeldes
+        ttp4 --> ttp5
+        ttp5 --> ttp6
+        ttp6 --> ttp7
+        ttp7 --> ttpif
+    }
+```
+
+### Aktivitätsdiagramm _checkPinLength_
+
+```mermaid
+stateDiagram
+    state "Länge des Zahlenfeldes prüfen" as cpl {
+        state "Länge des Zahlenfeldes ermitteln" as cpl1
+        state "Rückgabe: Wahr" as cpl2
+        state "Rückgabe: Falsch" as cpl3
+        state cplif <<choice>>
+        state cplfork <<fork>>
+        [*] --> cpl1
+        cpl1 --> cplif
+        cplif --> cpl2: Länge des Zahlenfeldes >= 4 und <= 8
+        cplif --> cpl3: Länge des Zahlenfeldes < 4 oder > 8
+        cpl3 --> cplfork
+        cpl2 --> cplfork
+        cplfork --> [*]
+    }
+```
+
+### Aktivitätsdiagramm _checkPinValue_
+
+```mermaid
+stateDiagram
+    state "Zahlenwert des Zahlenfeldes prüfen" as cpv {
+        state "Länge des Zahlenfeldes ermitteln" as cpv1
+        state "Zahlenwert = 0" as cpv2
+        state "Zählvariable = 0" as cpv3
+        state "Zahlenwert = Zahlenwert + aktuelle Ziffer" as cpv4
+        state "Zählvariable inkrementieren" as cpv5
+        state "Rückgabe: Falsch" as cpv6
+        state "Rückgabe: Wahr" as cpv7
+        state cpvif1 <<choice>>
+        state cpvif2 <<choice>>
+        state cpvfork <<fork>>
+        [*] --> cpv1
+        cpv1 --> cpv2
+        cpv2 --> cpv3
+        cpv3 --> cpvif1
+        cpvif1 --> cpv4: Zählvariable < Länge des Zahlenfeldes
+        cpv4 --> cpv5
+        cpv5 --> cpvif1
+        cpvif1 --> cpvif2: Zählvariable = Länge des Zahlenfeldes
+        cpvif2 --> cpv6: Zahlenwert ungerade
+        cpvif2 --> cpv7: Zahlenwert gerade
+        cpv6 --> cpvfork
+        cpv7 --> cpvfork
+        cpvfork --> [*]
+    }
+```
+
+### Beispielhafte Konsolenausgabe
 
 ```console
 PIN: 387
 PIN ist ungültig (Länge)
-```
-
-```console
 PIN: 3871
 PIN ist ungültig (Zahlenwert)
-```
-
-```console
 PIN: 3872
 PIN ist gültig
 ```
@@ -308,9 +438,9 @@ public class ExamTask03 { // 0,5
     String text = sc.next(); // 0,5
     textToPin(text); // 0,5
     if (!checkPinLength()) { // 0,5
-      System.out.println("PIN ist ungültig (Länge)"); // 0,5
+      System.out.println("Länge der PIN ist ungültig"); // 0,5
     } else if (!checkPinValue()) { // 0,5
-      System.out.println("PIN ist ungültig (Zahlenwert)"); // 0,5
+      System.out.println("Zahlenwert der PIN ist ungültig"); // 0,5
     } else { // 0,5
       System.out.println("PIN ist gültig"); // 0,5
     }
@@ -374,9 +504,9 @@ classDiagram
     Player o-- Dice
 
     class ExamTask04 {
-        -player1: Player &#123static&#125
-        -player2: Player &#123static&#125
-        -scanner: Scanner &#123static&#125
+        -player1: Player$
+        -player2: Player$
+        -scanner: Scanner$
         +main(args: String[])$ void
     }
 
