@@ -78,7 +78,7 @@ const config: Config = {
         },
         {
           type: 'doc',
-          docId: 'additional-material/instructions/use-cli',
+          docId: 'additional-material/daniel/sample-exam-java1',
           position: 'left',
           label: 'Zusatzmaterial',
         },
