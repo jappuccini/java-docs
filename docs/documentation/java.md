@@ -50,3 +50,13 @@ nächsten Version unterstützt. Eine Ausnahme bilden hier die LTS-Versionen
 Die Neuerungen einer Version werden durch sogenannte JEPs (JDK Enhancement
 Proposals) festgelegt. Weitere Informationen zu den verschiedenen JDK-Versionen
 können auf der offziellen [JDK-Seite](https://jdk.java.net/) gefunden werden.
+
+## Entwicklung von Java-Programmen
+
+Zur Entwicklung von Java-Programmen wird neben dem _Java Development Kit_ (JDK)
+nur ein einfacher Texteditor benötigt. Das Kompilieren und Ausführen der Klassen
+erfolgt dann über die Kommandozeile (Command Line Interface, kurz CLI).
+Alternativ kann auch eine Entwicklungsumgebung (Integrated Development
+Environment, kurz IDE) verwendet werden. Diese bieten in der Regel zusätzliche
+Komfortfunktionen wie Syntaxhighlighting, Autovervollständigung,
+Vorschlagslisten etc. und vereinfachen so die Entwicklung von Programmen.
