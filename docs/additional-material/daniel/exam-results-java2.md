@@ -1,5 +1,5 @@
 ---
-title: Klausurergebnisse
+title: Klausurergebnisse Java 2
 description: ''
 sidebar_position: 60
 tags: []

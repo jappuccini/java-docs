@@ -1,5 +1,5 @@
 ---
-title: Cheatsheet
+title: Cheatsheet Java 1
 description: ''
 sidebar_position: 30
 tags: []

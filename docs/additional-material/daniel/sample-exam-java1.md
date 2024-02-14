@@ -1,5 +1,5 @@
 ---
-title: Musterklausur
+title: Musterklausur Java 1
 description: ''
 sidebar_position: 10
 tags: []
