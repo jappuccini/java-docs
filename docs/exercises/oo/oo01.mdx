@@ -12,11 +12,11 @@ import Exercise from '@site/src/components/Exercise';
 
 ## Attribute der Klasse _Vehicle_
 
-| Attribut     | Datentyp | Sichtbarkeit |
-| ------------ | -------- | ------------ |
-| _make_       | _String_ | _private_    |
-| _model_      | _String_ | _private_    |
-| _speedInKmh_ | _double_ | _private_    |
+| Attribut     | Datentyp | Sichtbarkeit | Veränderlichkeit |
+| ------------ | -------- | ------------ | ---------------- |
+| _make_       | _String_ | _private_    | veränderlich     |
+| _model_      | _String_ | _private_    | veränderlich     |
+| _speedInKmh_ | _double_ | _private_    | veränderlich     |
 
 ## Methoden der Klasse _Vehicle_
 
@@ -31,13 +31,18 @@ import Exercise from '@site/src/components/Exercise';
 | _brake(valueInKmh: int)_      | _void_       | _public_     | _Reduzierung der Geschwindigkeit um den eingehenden Wert_ |
 | _toString()_                  | _String_     | _public_     | _Rückgabe: Hersteller Modell_                             |
 
+## Hinweise zur Klasse _Vehicle_
+
+Die Methoden accelerate und brake sollen nach der Geschwindigkeitsänderung diese
+auf der Konsole ausgeben und die Methode toString verwenden.
+
 ## Konsolenausgabe
 
 ```console
-Porsche 911 beschleunigt auf 30km/h
-Porsche 911 beschleunigt auf 60km/h
-Porsche 911 bremst auf 40km/h ab
-Porsche 911 beschleunigt auf 80km/h
+Porsche 911 beschleunigt auf 30.0km/h
+Porsche 911 beschleunigt auf 60.0km/h
+Porsche 911 bremst auf 40.0km/h ab
+Porsche 911 beschleunigt auf 80.0km/h
 ```
 
 <Exercise pullRequest="23" branchSuffix="oo/01" />
