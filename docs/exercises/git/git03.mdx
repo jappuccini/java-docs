@@ -1,0 +1,40 @@
+---
+title: Git03
+description: ''
+---
+
+- Starte die Kommandozeile (z.B. Windows PowerShell)
+- Führe den Befehl
+  `git init "[Pfad/Der Name Deines ersten lokalen Repositorys]"` aus, um ein
+  lokales Repository zu erstellen
+- Führe den Befehl `cd "[Pfad/Der Name Deines ersten lokalen Repositorys]"` aus,
+  um zum Arbeitsbereich Deines ersten lokalen Repositorys zu wechseln
+- Führe den Befehl
+  `git remote add origin "https://github.com/[Dein GitHub Benutzername]/[Der Name Deines remote Repositorys]"`
+  aus, um eine Verbindung zwischen dem lokalen Repository und dem remote
+  Repository herzustellen
+- Führe den Befehl `git pull origin main` aus, um den Arbeitsbereich zu
+  aktualisieren
+- Führe den Befehl `git switch main` aus, um zum Branch _main_ zu wechseln
+
+## Beispielhafte Konsolenausgabe
+
+```console
+PS C:\Users\Schmid> git init "C:/Users/Schmid/git/JavaA"
+Initialized empty Git repository in C:/Users/Schmid/git/JavaA/.git/
+PS C:\Users\Schmid> cd "C:/Users/Schmid/git/JavaA"
+PS C:\Users\Schmid\git\JavaA> git remote add origin "https://github.com/schmid/Java"
+PS C:\Users\Schmid\git\JavaA> git pull origin main
+remote: Enumerating objects: 10, done.
+remote: Counting objects: 100% (10/10), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 10 (delta 2), reused 5 (delta 1), pack-reused 0
+Unpacking objects: 100% (10/10), 2.28 KiB | 44.00 KiB/s, done.
+From https://github.com/appenmaier/Java
+ * branch            main       -> FETCH_HEAD
+ * [new branch]      main       -> origin/main
+PS C:\Users\Schmid\git\JavaA> git switch main
+Switched to a new branch 'main'
+branch 'main' set up to track 'origin/main'.
+PS C:\Users\Schmid\git\JavaA>
+```
