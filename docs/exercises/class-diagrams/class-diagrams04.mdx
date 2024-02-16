@@ -32,7 +32,7 @@ classDiagram
     class Person {
         -name: String &#123final&#125
         +Person(name: String)
-        +name() String
+        +getName() String
     }
 
     class Employee {
@@ -40,8 +40,8 @@ classDiagram
         -person: Person &#123final&#125
         -salaryInEuro: int
         +Employee(employeeId: int, person: Person, salaryInEuro: int)
-        +employeeId() int
-        +name() String
+        +getEmployeeId() int
+        +getName() String
         +setSalaryInEuro(salaryInEuro: int) void
         +getSalaryInEuro() int
         +toString() String

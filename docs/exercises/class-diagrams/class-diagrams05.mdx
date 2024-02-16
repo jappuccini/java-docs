@@ -30,6 +30,8 @@ classDiagram
         ACE = Ace, 11
         -description: String &#123final&#125
         -value: int &#123final&#125
+        +getDescription() String
+        +getValue() int
     }
 
     class SkatCardColor {
@@ -39,14 +41,15 @@ classDiagram
         SPADE = Spade
         CLUBS = Clubs
         -description: String &#123final&#125
+        +getDescription() String
     }
 
     class SkatCard {
         -color: SkatCardColor &#123final&#125
         -value: SkatCardValue &#123final&#125
         +SkatCard(color: SkatCardColor, value: SkatCardValue)
-        +color() SkatCardColor
-        +value() SkatCardValue
+        +getColor() SkatCardColor
+        +getValue() SkatCardValue
         +getCardDescription() String
     }
 
