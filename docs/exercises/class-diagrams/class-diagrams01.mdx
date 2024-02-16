@@ -11,6 +11,7 @@ import Exercise from '@site/src/components/Exercise';
   - Würfelwert von Spieler 1 > Würfelwert von Spieler 2: Spieler 1 gewinnt
   - Würfelwert von Spieler 1 < Würfelwert von Spieler 2: Spieler 2 gewinnt
   - Würfelwert von Spieler 1 = Würfelwert von Spieler 2: Unentschieden
+- Verwende die Klasse bereitgestellte Klasse Dice.
 
 ## Klassendiagramm
 
@@ -20,7 +21,7 @@ classDiagram
     class Player {
         -name: String &#123final&#125
         -score: int
-        +Player(String: name)
+        +Player(name: String)
         +name() String
         +getScore() int
         +setScore(score: int) void
