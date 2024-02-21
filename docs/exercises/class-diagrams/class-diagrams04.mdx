@@ -22,8 +22,8 @@ classDiagram
         -employees: ArrayList~Employee~ &#123final&#125
         -numberOfEmployees: int
         +Company(name: String)
-        +name() String
-        +employees() ArrayList~Employee~
+        +getName() String
+        +getEmployees() ArrayList~Employee~
         +getNumberOfEmployees() int
         +addEmployee(employee: Employee) void
         +toString() String
@@ -55,7 +55,7 @@ Der Konstruktor soll den Namen initialisieren.
 ## Hinweise zur Klasse _Employee_
 
 - Der Konstruktor soll alle Attribute initialisieren
-- Die Methode `String name()` soll den Namen des Mitarbeiters zurückgeben
+- Die Methode `String getName()` soll den Namen des Mitarbeiters zurückgeben
 
 ## Hinweise zur Klasse _Company_
 
