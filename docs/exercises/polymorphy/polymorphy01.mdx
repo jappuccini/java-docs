@@ -16,8 +16,8 @@ import Exercise from '@site/src/components/Exercise';
 
 ```mermaid
 classDiagram
-    Vehicle <|-- Car
-    Vehicle <|-- Truck
+    Vehicle <|-- Car : extends
+    Vehicle <|-- Truck : extends
     Vehicle o-- Engine
 
     class Vehicle {
@@ -27,9 +27,9 @@ classDiagram
         #speedInKmh: double
         -numberOfVehicles: int$
         +Vehicle(make: String, model: String, engine: Engine)
-        +make() String
-        +model() String
-        +engine() Engine
+        +getMake() String
+        +getModel() String
+        +getEngine() Engine
         +getSpeedInKmh() double
         +accelerate(valueInKmh: int) void
         +brake(valueInKmh: int) void
@@ -44,12 +44,14 @@ classDiagram
         GAS = Gas
         ELECTRO = Elektro
         -description: String &#123final&#125
+        Engine(description: String)
+        +getDescription() String
     }
 
     class Car {
         -seats: int &#123final&#125
         +Car(make: String, model: String, engine: Engine, seats: int)
-        +seats() int
+        +getSeats() int
         +doATurboBoost() void
         +toString() String
     }
@@ -58,7 +60,7 @@ classDiagram
         -cargo: int &#123final&#125
         -isTransformed: boolean
         +Truck(make: String, model: String, engine: Engine, cargo: int)
-        +cargo() int
+        +getCargo() int
         +isTransformed() boolean
         +transform() void
         +toString() String
@@ -89,4 +91,4 @@ Porsche 911 macht einen TurboBoost und beschleunigt auf 100 km/h
 MAN TGX verwandelt sich in einen Lastwagen zurück
 ```
 
-<Exercise pullRequest="41" branchSuffix="polymorphy/01" />
+<Exercise pullRequest="86" branchSuffix="polymorphy/01" />
