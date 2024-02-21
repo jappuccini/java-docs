@@ -48,7 +48,7 @@ export default function Inheritance(): JSX.Element {
           <h2>Klassendiagramm</h2>
           <ul>
             <li className="fragment">Bereiche</li>
-            <li className="fragment"> + - * ~ </li>
+            <li className="fragment"> + - # ~ </li>
             <li className="fragment">
               {' '}
               <u>static</u>{' '}
@@ -253,7 +253,7 @@ export default function Inheritance(): JSX.Element {
                   '  \n' +
                   '  public Car(int hp) {\n' +
                   '   this.hp = hp;\n' +
-                  "   this.engineType = 'b'\n" +
+                  "   this.engineType = 'b';\n" +
                   '  }\n' +
                   '}',
               }}
