@@ -334,6 +334,39 @@ Auch Konstruktoren können überladen werden.
 
 :::
 
+## Konstruktoren wiederverwenden
+
+Gibt es mehrere Konstruktoren für eine Klasse kann der spezifische Konstruktor
+von den anderen Konstruktoren wiederverwendet werden. Damit kann sichergestellt
+werden, dass die Initialisierungslogik für ein Objekt nur einmal implementiert
+werden muss. In dem nachfolgenden Bespiel verwendet der unspezifische
+Konstruktor `Car(String make)` den spezifischen Konstruktor und setzt den
+Standardwert für den Motor auf Benzin. Konstruktoren der selben Klasse können
+mit `this()` aufgerufen werden.
+
+```java title="Foo.java" showLineNumbers
+public class Car {
+
+  private String make;
+  private char engine; // b = Benziner, e = Elektro
+
+
+  public Car(String make) { // unspezifischer Konstruktor
+    this(make, 'b'); // Aufruf des spezifischen Konstruktors mit dem Wert 'b'.
+    /*
+      Implementierung des Konstruktors ohne wiederverwendung:
+      this.make = make;
+      this.engine = 'b';
+    */
+  }
+
+  public Car(String make, char engine) { // spezifischer Konstruktor
+    this.make = make;
+    this.engine = engine;
+  }
+}
+```
+
 ## Statische Attribute und Methoden
 
 Neben "normalen" Attributen und Methoden kann eine Klasse auch statische
