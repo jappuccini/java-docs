@@ -1,7 +1,12 @@
 import Link from '@docusaurus/Link';
 import React from 'react';
 
-export default function Contributor({ pullRequest, userId, description }) {
+export default function Contributor({
+  exercisePullRequest,
+  docsPullRequest,
+  userId,
+  description,
+}) {
   return (
     <div
       style={{
@@ -15,12 +20,22 @@ export default function Contributor({ pullRequest, userId, description }) {
         style={{ height: '50px' }}
         src={`https://avatars.githubusercontent.com/u/${userId}?s=50&v=4`}
       />
-      <Link
-        style={{ margin: '1rem' }}
-        to={`https://github.com/jappuccini/java-exercises/pull/${pullRequest}`}
-      >
-        #{pullRequest} {description}
-      </Link>
+      {exercisePullRequest && (
+        <Link
+          style={{ margin: '1rem' }}
+          to={`https://github.com/jappuccini/java-exercises/pull/${exercisePullRequest}`}
+        >
+          #{exercisePullRequest} {description}
+        </Link>
+      )}
+      {docsPullRequest && (
+        <Link
+          style={{ margin: '1rem' }}
+          to={`https://github.com/jappuccini/java-docs/pull/${docsPullRequest}`}
+        >
+          #{docsPullRequest} {description}
+        </Link>
+      )}
     </div>
   );
 }
