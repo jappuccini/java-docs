@@ -14,8 +14,8 @@ import Exercise from '@site/src/components/Exercise';
 
 ```mermaid
 classDiagram
-    Vehicle <|-- Car
-    Vehicle <|-- Truck
+    Vehicle <|-- Car : extends
+    Vehicle <|-- Truck : extends
     Vehicle o-- Engine
     Rental o-- Vehicle
 
@@ -26,9 +26,9 @@ classDiagram
         #speedInKmh: double
         -numberOfVehicles: int$
         +Vehicle(make: String, model: String, engine: Engine)
-        +make() String
-        +model() String
-        +engine() Engine
+        +getMake() String
+        +getModel() String
+        +getEngine() Engine
         +getSpeedInKmh() double
         +accelerate(valueInKmh: int) void
         +brake(valueInKmh: int) void
@@ -43,12 +43,14 @@ classDiagram
         GAS = Gas
         ELECTRO = Elektro
         -description: String &#123final&#125
+        Engine(description: String)
+        +getDescription() String
     }
 
     class Car {
         -seats: int &#123final&#125
         +Car(make: String, model: String, engine: Engine, seats: int)
-        +seats() int
+        +getSeats() int
         +doATurboBoost() void
         +toString() String
     }
@@ -57,7 +59,7 @@ classDiagram
         -cargo: int &#123final&#125
         -isTransformed: boolean
         +Truck(make: String, model: String, engine: Engine, cargo: int)
-        +cargo() int
+        +getCargo() int
         +isTransformed() boolean
         +transform() void
         +toString() String
@@ -67,8 +69,8 @@ classDiagram
         -name: String &#123final&#125
         -vehicles: ArrayList~Vehicle~ &#123final&#125
         +Rental(name: String)
-        +name() String
-        +vehicles() ArrayList~Vehicle~
+        +getName() String
+        +getVehicles() ArrayList~Vehicle~
         +addVehicle(vehicle: Vehicle) void
         +addAllVehicles(vehicles: Vehicle...) void
         +toString() String
@@ -93,4 +95,4 @@ MAN TGX (Diesel, 20t)
 Opel Zafira Life (Diesel, 7 Sitzplätze)
 ```
 
-<Exercise pullRequest="42" branchSuffix="polymorphy/02" />
+<Exercise pullRequest="87" branchSuffix="polymorphy/02" />

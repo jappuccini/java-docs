@@ -11,6 +11,7 @@ export default function Inheritance(): JSX.Element {
           <ul>
             <li className="fragment">Wiederholung</li>
             <li className="fragment">Vererbung</li>
+            <li className="fragment">Konstruktoren II</li>
             <li className="fragment">Zusammenfassung</li>
           </ul>
         </section>
@@ -47,7 +48,7 @@ export default function Inheritance(): JSX.Element {
           <h2>Klassendiagramm</h2>
           <ul>
             <li className="fragment">Bereiche</li>
-            <li className="fragment"> + - * ~ </li>
+            <li className="fragment"> + - # ~ </li>
             <li className="fragment">
               {' '}
               <u>static</u>{' '}
@@ -191,6 +192,102 @@ export default function Inheritance(): JSX.Element {
             <li className="fragment">public name</li>
             <li className="fragment">private name</li>
             <li className="fragment">protected name</li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h2>Konstruktoren II</h2>
+        </section>
+        <section>
+          <h2>Konstruktoren II</h2>
+          <ul>
+            <li className="fragment">spezifische Konstruktoren</li>
+            <li className="fragment">unspezifische Konstruktoren</li>
+          </ul>
+        </section>
+        <section>
+          <h2>spezifische Konstruktoren</h2>
+          <ul>
+            <li className="fragment">initialisieren alle Attribute</li>
+            <li className="fragment">(fast) alle Attribute als Parameter</li>
+          </ul>
+        </section>
+        <section>
+          <h2>spezifischer Konstruktor</h2>
+          <pre className="fragment">
+            <code
+              className="java"
+              dangerouslySetInnerHTML={{
+                __html:
+                  'public class Car {\n' +
+                  '  public int hp;\n' +
+                  '  public char engineType;\n' +
+                  '  \n' +
+                  '  public Car(int hp, char engineType) {\n' +
+                  '   this.hp = hp;\n' +
+                  '   this.engineType = engineType;\n' +
+                  '  }\n' +
+                  '}',
+              }}
+            ></code>
+          </pre>
+        </section>
+        <section>
+          <h2>unspezifische Konstruktoren</h2>
+          <ul>
+            <li className="fragment">verwenden spezifischen Konstruktor</li>
+            <li className="fragment">nicht alle Attribute als Parameter</li>
+          </ul>
+        </section>
+        <section>
+          <h2>unspezifischer Konstruktor</h2>
+          <pre className="fragment">
+            <code
+              className="java"
+              dangerouslySetInnerHTML={{
+                __html:
+                  'public class Car {\n' +
+                  '  public int hp;\n' +
+                  '  public char engineType;\n' +
+                  '  \n' +
+                  '  public Car(int hp) {\n' +
+                  '   this.hp = hp;\n' +
+                  "   this.engineType = 'b';\n" +
+                  '  }\n' +
+                  '}',
+              }}
+            ></code>
+          </pre>
+        </section>
+        <section>
+          <h2>Konstruktor wiederverwenden</h2>
+          <pre className="fragment">
+            <code
+              className="java"
+              dangerouslySetInnerHTML={{
+                __html:
+                  'public class Car {\n' +
+                  '  public int hp;\n' +
+                  '  public char engineType;\n' +
+                  '  \n' +
+                  '  public Car(int hp) {\n' +
+                  "   this(hp, 'b');\n" +
+                  '  }\n' +
+                  '  public Car(int hp, char engineType) {\n' +
+                  '   this.hp = hp;\n' +
+                  '   this.engineType = engineType;\n' +
+                  '  }\n' +
+                  '}',
+              }}
+            ></code>
+          </pre>
+        </section>
+        <section>
+          <h2>Demo</h2>
+          <ul>
+            <li className="fragment">Attribut age in Dog (default 0)</li>
+            <li className="fragment">Attribut age in Animal</li>
           </ul>
         </section>
       </section>

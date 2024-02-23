@@ -20,21 +20,19 @@ classDiagram
 
     class Vehicle {
         <<abstract>>
-        -make: String &#123final&#125
-        -model: String &#123final&#125
-        -engine: Engine &#123final&#125
+        -make: String
+        -model: String
+        -engine: Engine
         #speedInKmh: double
         -numberOfVehicles: int$
         +Vehicle(make String, model String, engine Engine)
-        +make() String
-        +model() String
-        +engine() Engine
+        +getMake() String
+        +getModel() String
+        +getEngine() Engine
         +getSpeedInKmh() double
         +accelerate(valueInKmh: int) void &#123final&#125
         +brake(valueInKmh: int) void &#123final&#125
-        +equals(object: Object) boolean
-        +hashCode() int
-        +toString() String
+        +toString() String &#123abstract&#125
         +getNumberOfVehicles()$ int
     }
 
@@ -45,16 +43,16 @@ classDiagram
         GAS = Gas
         ELECTRO = Elektro
         -description: String &#123final&#125
+        Engine(description: String)
+        +getDescription() String
     }
 
     class Car {
         <<final>>
         -seats: int &#123final&#125
         +Car(make: String, model: String, engine: Engine, seats: int)
-        +seats() int
+        +getSeats() int
         +doATurboBoost() void
-        +equals(object: Object) boolean
-        +hashCode() int
         +toString() String
     }
 
@@ -63,11 +61,9 @@ classDiagram
         -cargo: int &#123final&#125
         -isTransformed boolean
         +Truck(make: String, model: String, engine: Engine, cargo: int)
-        +cargo() int
+        +getCargo() int
         +isTransformed() boolean
         +transform() void
-        +equals(object: Object) boolean
-        +hashCode() int
         +toString() String
     }
 
@@ -75,13 +71,11 @@ classDiagram
         -name: String &#123final&#125
         -vehicles: ArrayList~Vehicle~ &#123final&#125
         +Rental(name: String)
-        +name() String
-        +vehicles() ArrayList~Vehicle~
+        +getName() String
+        +getVehicles() ArrayList~Vehicle~
         +addVehicle(vehicle: Vehicle) void
         +addAllVehicles(vehicles: Vehicle...) void
         +transformAllTrucks() void
-        +equals(object: Object) boolean
-        +hashCode() int
         +toString() String
     }
 ```

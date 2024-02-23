@@ -10,6 +10,7 @@ import Exercise from '@site/src/components/Exercise';
   abgebildeten Informationen an
 - Passe die ausführbare Klasse aus Übungsaufgabe [OO07](../oo/oo07) so an, dass
   sie fehlerfrei ausgeführt werden kann
+- Gebe alle Vehicles in der Konsole aus
 
 ## Aufzählungskonstanten der Klasse _Engine_
 
@@ -31,7 +32,7 @@ import Exercise from '@site/src/components/Exercise';
 | Methode                       | Rückgabewert | Sichtbarkeit | Level            | Beschreibung                        |
 | ----------------------------- | ------------ | ------------ | ---------------- | ----------------------------------- |
 | _Engine(description: String)_ |              | _private_    | _nicht-statisch_ | _Festlegen der Motorenbeschreibung_ |
-| _description()_               | _String_     | _public_     | _nicht-statisch_ | _Rückgabe der Motorenbeschreibung_  |
+| _getDescription()_            | _String_     | _public_     | _nicht-statisch_ | _Rückgabe der Motorenbeschreibung_  |
 
 ## Attribute der Klasse _Vehicle_
 
@@ -39,8 +40,8 @@ import Exercise from '@site/src/components/Exercise';
 | ---------------- | -------- | ------------ | ---------------- | ---------------- |
 | make             | String   | private      | unveränderlich   | nicht-statisch   |
 | model            | String   | private      | unveränderlich   | nicht-statisch   |
-| _engine_         | _Engine_ | _private_    | _unveränderlich_ | _nicht-statisch_ |
 | speedInKmh       | double   | private      | veränderlich     | nicht-statisch   |
+| _engine_         | _Engine_ | _private_    | _unveränderlich_ | _nicht-statisch_ |
 | numberOfVehicles | int      | private      | veränderlich     | statisch         |
 
 ## Methoden der Klasse _Vehicle_
@@ -48,13 +49,13 @@ import Exercise from '@site/src/components/Exercise';
 | Methode                                                | Rückgabewert | Sichtbarkeit | Level            | Beschreibung                                            |
 | ------------------------------------------------------ | ------------ | ------------ | ---------------- | ------------------------------------------------------- |
 | _Vehicle(make: String, model: String, engine: Engine)_ | void         | public       | nicht-statisch   | _Festlegen des Herstellers, des Modells und des Motors_ |
-| make()                                                 | String       | public       | nicht-statisch   | Rückgabe des Herstellers                                |
-| model()                                                | String       | public       | nicht-statisch   | Rückgabe des Modells                                    |
-| _engine()_                                             | _Engine_     | _public_     | _nicht-statisch_ | _Rückgabe des Motors_                                   |
-| getSpeedInKmh()                                        | double       | public       | nicht-statisch   | Rückgabe der Geschwindigkeit                            |
+| getMake()                                              | String       | public       | nicht-statisch   | Rückgabe des Herstellers                                |
+| getModel()                                             | String       | public       | nicht-statisch   | Rückgabe des Modells                                    |
+| getSpeed()                                             | double       | public       | nicht-statisch   | Rückgabe der Geschwindigkeit                            |
+| _getEngine()_                                          | _Engine_     | _public_     | _nicht-statisch_ | _Rückgabe des Motors_                                   |
 | accelerate(valueInKmh: int)                            | void         | public       | nicht-statisch   | Erhöhung der Geschwindigkeit um den eingehenden Wert    |
 | brake(valueInKmh: int)                                 | void         | public       | nicht-statisch   | Reduzierung der Geschwindigkeit um den eingehenden Wert |
-| toString()                                             | String       | public       | nicht-statisch   | Rückgabe: Hersteller Modell (Motorenbeschreibung)\_     |
+| toString()                                             | String       | public       | nicht-statisch   | _Rückgabe: Hersteller Modell \(Motorenbeschreibung\)_   |
 | getNumberOfVehicles()                                  | int          | public       | statisch         | Rückgabe der Anzahl Fahrzeuge                           |
 
-<Exercise pullRequest="34" branchSuffix="enums/01" />
+<Exercise pullRequest="85" branchSuffix="enums/01" />
