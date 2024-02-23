@@ -14,8 +14,8 @@ import Exercise from '@site/src/components/Exercise';
 
 ```mermaid
 classDiagram
-    Vehicle <|-- Car
-    Vehicle <|-- Truck
+    Vehicle <|-- Car : extends
+    Vehicle <|-- Truck : extends
     Vehicle o-- Engine
     Rental o-- Vehicle
 
