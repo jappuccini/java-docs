@@ -33,7 +33,7 @@ export default function Polymorphy(): JSX.Element {
           <h2>Polymorphie</h2>
         </section>
         <section>
-          <p>Bezeichner kann unterschiedliche Datentypen annehmen</p>
+          <p>Eine Referenzvariable kann abgeleitetes Objekt referenzieren</p>
           <ul>
             <li className="fragment">Vehicle &rarr; Car oder Truck</li>
             <li className="fragment">Human &rarr; Baby, Child oder Adult</li>
