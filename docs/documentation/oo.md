@@ -340,11 +340,11 @@ Gibt es mehrere Konstruktoren für eine Klasse kann der spezifische Konstruktor
 von den anderen Konstruktoren wiederverwendet werden. Damit kann sichergestellt
 werden, dass die Initialisierungslogik für ein Objekt nur einmal implementiert
 werden muss. In dem nachfolgenden Bespiel verwendet der unspezifische
-Konstruktor `Car(String make)` den spezifischen Konstruktor und setzt den
+Konstruktor `Car(make: String)` den spezifischen Konstruktor und setzt den
 Standardwert für den Motor auf Benzin. Konstruktoren der selben Klasse können
 mit `this()` aufgerufen werden.
 
-```java title="Foo.java" showLineNumbers
+```java title="Car.java" showLineNumbers
 public class Car {
 
   private String make;
