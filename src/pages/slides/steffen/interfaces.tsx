@@ -117,7 +117,7 @@ export default function Interfaces(): JSX.Element {
         <section>
           <h2>Interfaces</h2>
           <ul>
-            <li className="fragment">definieren Methoden und Attribute</li>
+            <li className="fragment">definieren Methoden</li>
             <li className="fragment">werden von Klassen implementiert</li>
           </ul>
         </section>
@@ -180,13 +180,6 @@ export default function Interfaces(): JSX.Element {
             <li className="fragment">erstes Element davor einordnen: -1</li>
             <li className="fragment">erstes Element dahinter einordnen: 1</li>
             <li className="fragment">erstes Element gleich einordnen: 0</li>
-          </ul>
-        </section>
-        <section>
-          <h2>Demo Reallife Vergleich</h2>
-          <ul>
-            <li className="fragment">3 Personen nach vorne</li>
-            <li className="fragment">nach Größe aufsteigend sortieren</li>
           </ul>
         </section>
         <section>
