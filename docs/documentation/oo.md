@@ -168,7 +168,7 @@ public class Computer {
     this.cpu = cpu;
   }
 
-  public void getCPU(){
+  public CPU getCPU(){
     return cpu;
   }
 
