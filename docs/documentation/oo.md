@@ -33,10 +33,10 @@ Jedes Objekt ist eindeutig identifizierbar.
 ## Datenkapselung
 
 Ein wesentlicher Grundsatz der Objektorientierung ist, dass Attribute durch
-Methoden gekapselt werden. Datenkapselung bedeutet, dass Attribute nicht direkt
-geändert werden können, sondern nur durch den indirekten Zugriff über Methoden.
-Typische Methoden zum Lesen und Schreiben von Attributen sind die sogenannten
-Getter bzw. Setter.
+Methoden gekapselt werden. Datenkapselung bedeutet, dass auf Attribute nicht
+direkt zugegriffen werden kann, sondern nur indirekt über Methoden. Typische
+Methoden zum Lesen und Schreiben von Attributen sind die sogenannten Getter bzw.
+Setter (auch Set- und Get-Methoden bzw. Accessors genannt).
 
 ```mermaid
 flowchart LR
@@ -56,11 +56,11 @@ flowchart LR
     end
 ```
 
-## Sichtbarkeit von Attributen und Methoden
+## Sichtbarkeit von Klassen, Attributen und Methoden
 
-Um die Sichtbarkeit von Attributen und Methoden zu definieren, existieren
-verschiedene Zugriffsrechte. Die Sichtbarkeit bestimmt, von welchem Ort aus
-Attribute und Methoden verwendet bzw. aufgerufen werden dürfen.
+Um die Sichtbarkeit von Klassen, Attributen und Methoden zu definieren,
+existieren verschiedene Zugriffsrechte. Die Sichtbarkeit bestimmt, von welchem
+Ort aus Klassen, Attribute und Methoden verwendet bzw. aufgerufen werden dürfen.
 
 | Zugriffsrecht | Zugriff aus gleicher Klasse | Zugriff von einer Klasse aus dem gleichen Paket | Zugriff von einer Unterklasse | Zugriff von einer beliebigen Klasse |
 | ------------- | --------------------------- | ----------------------------------------------- | ----------------------------- | ----------------------------------- |
@@ -74,51 +74,62 @@ Attribute und Methoden verwendet bzw. aufgerufen werden dürfen.
 Klassen werden in Java mit dem Schlüsselwort `class` definiert. Die Angabe des
 Zugriffsrechts legt die Sichtbarkeit der Klasse fest.
 
-```java title="Foo.java" showLineNumbers
-public class Foo {
+```java title="Computer.java" showLineNumbers
+public class Computer {
+}
+```
+
+```java title="CPU.java" showLineNumbers
+public class CPU {
+}
+```
+
+```java title="GraphicCard.java" showLineNumbers
+public class GraphicCard {
 }
 ```
 
 ## Definition von Attributen
 
 Die Attribute einer Klasse sind Datenobjekte und werdern daher analog zu
-Variablen und Konstanten definiert. Die Angabe des Zugriffsrechts legt die
-Sichtbarkeit des Attributs fest.
+Variablen und Konstanten definiert. Das Schlüsselwort `final` erlaubt die
+Definition von unveränderlichen Attributen, also Attributen, deren Wert nicht
+geändert werden kann. Die Initialisierung dieser unveränderlichen Attribute
+erfolgt durch [Konstruktoren](oo#konstruktoren).
 
-```java title="Foo.java" showLineNumbers
-public class Foo {
+```java title="Computer.java" showLineNumbers
+public class Computer {
 
-  private String bar;
-  public int baz;
+  private CPU cpu;
+  private int mainMemoryInGB;
+  private GraphicCard graphicCard;
 
 }
 ```
 
-## Definition und Implementierung von Methoden
+```java title="CPU.java" showLineNumbers
+public class CPU {
 
-Methoden sind in der Programmierung eine Verallgemeinerung von mathematischen
-Funktionen. Eine Methode besteht aus einem Methodennamen, einer Liste von
-Eingabeparameter (optional), einem Rückgabewert (optional) sowie dem
-Methodenrumpf.
+  private final double powerInGHz;
+  private final int numberOfCores;
 
-Methoden können entweder genau einen Rückgabewert oder keinen Rückgabewert
-besitzen. Methoden mit genau einem Rückgabewert müssen vor dem Methodennamen den
-Datentyp des Rückgabewerts angeben und am Ende des Methodenrumpfes immer die
-Anweisung `return` besitzen, Methoden ohne Rückgabewert müssen dies mit dem
-Schlüsselwort `void` kenntlich machen.
-
-```java title="Foo.java" showLineNumbers
-public class Foo {
-
-  private String bar;
-  public int baz;
-
-  public void setBar(String bar) {
-    this.bar = bar;
+  public CPU(double powerInGHz, int numberOfCores) {
+    this.powerInGHz = powerInGHz;
+    this.numberOfCores = numberOfCores;
   }
 
-  public String getBar() {
-    return bar;
+}
+```
+
+```java title="GraphicCard.java" showLineNumbers
+public class GraphicCard {
+
+  private final String description;
+  private final String graphicsChip;
+
+  public GraphicCard(String description, String graphicsChip) {
+    this.description = description;
+    this.graphicsChip = graphicsChip;
   }
 
 }
@@ -126,10 +137,59 @@ public class Foo {
 
 :::note Hinweis
 
-Die Signatur einer Methode setzt sich aus Methodenname und den Datentypen der
-Parameterliste zusammen.
+Die Selbstreferenz `this` verweist innerhalb einer Klasse auf das eigene Objekt
+(siehe auch
+[Deklaration von Referenzvariablen](oo#deklaration-von-referenzvariablen)).
 
 :::
+
+## Definition und Implementierung von Methoden
+
+Methoden sind in der Programmierung eine Verallgemeinerung von mathematischen
+Funktionen. Eine Methode besteht aus einem Methodennamen, einer Liste von
+Eingabeparameter (optional), einem Rückgabewert (optional) sowie dem
+Methodenrumpf. Die Kombination aus Methodenname und den Datentypen der
+Parameterliste bezeichent man als _Signatur einer Methode_.
+
+Methoden können entweder genau einen Rückgabewert oder keinen Rückgabewert
+besitzen. Methoden mit genau einem Rückgabewert müssen vor dem Methodennamen den
+Datentyp des Rückgabewerts angeben und am Ende des Methodenrumpfes immer die
+Anweisung `return` besitzen, Methoden ohne Rückgabewert müssen dies mit dem
+Schlüsselwort `void` kenntlich machen.
+
+```java title="Computer.java" showLineNumbers
+public class Computer {
+
+  private CPU cpu;
+  private int mainMemoryInGB;
+  private GraphicCard graphicCard;
+
+  public void setCPU(){
+    this.cpu = cpu;
+  }
+
+  public void getCPU(){
+    return cpu;
+  }
+
+  public void setMainMemoryInGB(int mainMemoryInGB) {
+    this.mainMemoryInGB = mainMemoryInGB;
+  }
+
+  public int getMainMemoryInGB() {
+    return= mainMemoryInGB;
+  }
+
+  public void setGraphicCard(GraphicCard graphicCard) {
+    this.graphicCard = graphicCard;
+  }
+
+  public GraphicCard getGraphicCard() {
+    return graphicCard;
+  }
+
+}
+```
 
 ## Deklaration von Referenzvariablen
 
@@ -151,7 +211,7 @@ flowchart LR
 
 :::note Hinweis
 
-Der Standarwert von Referenzvariablen ist `null`.
+Der Standarwert von Referenzvariablen ist `null` (auch Nullreferenz genannt).
 
 :::
 
@@ -160,28 +220,13 @@ Der Standarwert von Referenzvariablen ist `null`.
 Beim Erzeugen eines Objekts mit Hilfe des Operators `new` wird der bei der
 Deklaration reservierte Speicherplatz durch das Objekt belegt.
 
-```java title="Foo.java" showLineNumbers
-public class Foo {
-
-  private String bar;
-  public int baz;
-
-  public void setBar(String bar) {
-    this.bar = bar;
-  }
-
-  public String getBar() {
-    return bar;
-  }
-
-}
-```
-
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
   public static void main(String[] args) {
-    Foo foo = new Foo();
+    CPU myCPU = new CPU(3.5, 8);
+    GraphicCard myGraphicCard = new GraphicCard("Gigabyte RTX 4090 Gaming", "GeForce RTX 4090");
+    Computer myComputer = new Computer();
   }
 
 }
@@ -189,7 +234,8 @@ public class MainClass {
 
 :::danger Hinweis
 
-Nach dem new-Operator muss immer ein Konstruktor der Klasse stehen.
+Nach dem new-Operator muss immer ein [Konstruktor](oo#konstruktoren) der Klasse
+stehen.
 
 :::
 
@@ -199,30 +245,16 @@ Erlauben die Zugriffsrechte den Zugriff auf ein Attribut, kann über die
 deklarierte Referenzvariable und einem nachgestellten Punkt auf das Attribut
 zugegriffen werden. Auch sichtbare Methoden werden über diese Syntax aufgerufen.
 
-```java title="Foo.java" showLineNumbers
-public class Foo {
-
-  private String bar;
-  public int baz;
-
-  public void setBar(String bar) {
-    this.bar = bar;
-  }
-
-  public String getBar() {
-    return bar;
-  }
-
-}
-```
-
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
   public static void main(String[] args) {
-    Foo foo = new Foo();
-    foo.setBar("Winter is Coming");
-    foo.baz = 42;
+    CPU myCPU = new CPU(3.5, 8);
+    GraphicCard myGraphicCard = new GraphicCard("Gigabyte RTX 4090 Gaming", "GeForce RTX 4090");
+    Computer myComputer = new Computer();
+    myComputer.setCPU(myCPU);
+    myComputer.setMainMemoryInGB(32);
+    myComputer.setGraphicCard(myGraphicCard);
   }
 
 }
@@ -243,22 +275,39 @@ als überladene Methoden bezeichnet. Man spricht in diesem Zusammenhang auch von
 statischer Polymorphie, da der Aufruf gleichnamiger Methoden unterschiedliche
 Ergebnisse liefern kann.
 
-```java title="Foo.java" showLineNumbers
-public class Foo {
+```java title="Computer.java" showLineNumbers
+public class Computer {
 
-  private String bar;
-  public int baz;
+  private CPU cpu;
+  private int mainMemoryInGB;
+  private GraphicCard graphicCard;
 
-  public void setBar(String bar) {
-    this.bar = bar;
+  public void setCPU(){
+    this.cpu = cpu;
   }
 
-  public void setBar(int bar) {
-    this.bar = bar + "";
+  public void getCPU(){
+    return cpu;
   }
 
-  public String getBar() {
-    return bar;
+  public void setMainMemoryInGB(int mainMemoryInGB) {
+    this.mainMemoryInGB = mainMemoryInGB;
+  }
+
+  public int getMainMemoryInGB() {
+    return= mainMemoryInGB;
+  }
+
+  public void setGraphicCard(GraphicCard graphicCard) {
+    this.graphicCard = graphicCard;
+  }
+
+  public void setGraphicCard(String description, String graphicsChip) {
+    graphicCard = new GraphicCard(description, graphicsChip);
+  }
+
+  public GraphicCard getGraphicCard() {
+    return graphicCard;
   }
 
 }
@@ -268,9 +317,12 @@ public class Foo {
 public class MainClass {
 
   public static void main(String[] args) {
-    Foo foo = new Foo();
-    foo.setBar("Winter is Coming");
-    foo.setBar(42);
+    GraphicCard myGraphicCard = new GraphicCard("Gigabyte RTX 4090 Gaming", "GeForce RTX 4090");
+    Computer myComputer1 = new Computer();
+    myComputer1.setGraphicCard(myGraphicCard);
+
+    Computer myComputer2 = new Computer();
+    myComputer2.setGraphicCard("ASUS ATI Radeon RX 6800", "ATI Radeon RX 6800");
   }
 
 }
@@ -296,22 +348,52 @@ der sogenannte Garbage Collector, der nicht mehr benötigte Objekte (also
 Objekte, die nicht mehr über eine Referenzvariable angesprochen werden können)
 löscht.
 
-```java title="Foo.java" showLineNumbers
-public class Foo {
+```java title="Computer.java" showLineNumbers
+public class Computer {
 
-  private String bar;
-  public int baz;
+  private CPU cpu;
+  private int mainMemoryInGB;
+  private GraphicCard graphicCard;
 
-  public Foo(String bar) {
-    this.bar = bar;
+  public Computer() {
   }
 
-  public Foo(int bar) {
-    this.bar = bar + "";
+  public Computer(CPU cpu, int mainMemoryInGB) {
+    this.cpu = cpu;
+    this.mainMemoryInGB = mainMermoryInGB;
   }
 
-  public String getBar() {
-    return bar;
+  public Computer(CPU cpu, int mainMemoryInGB, GraphicCard graphicCard) {
+    this(cpu, mainMermoryInGB);
+    this.graphicCard = graphicCard;
+  }
+
+  public void setCPU(){
+    this.cpu = cpu;
+  }
+
+  public void getCPU(){
+    return cpu;
+  }
+
+  public void setMainMemoryInGB(int mainMemoryInGB) {
+    this.mainMemoryInGB = mainMemoryInGB;
+  }
+
+  public int getMainMemoryInGB() {
+    return= mainMemoryInGB;
+  }
+
+  public void setGraphicCard(GraphicCard graphicCard) {
+    this.graphicCard = graphicCard;
+  }
+
+  public void setGraphicCard(String description, String graphicsChip) {
+    graphicCard = new GraphicCard(description, graphicsChip);
+  }
+
+  public GraphicCard getGraphicCard() {
+    return graphicCard;
   }
 
 }
@@ -321,8 +403,11 @@ public class Foo {
 public class MainClass {
 
   public static void main(String[] args) {
-    Foo foo = new Foo("Winter is Coming");
-    Foo foo2 = new Foo(42);
+    GraphicCard myGraphicCard = new GraphicCard("Gigabyte RTX 4090 Gaming", "GeForce RTX 4090");
+    CPU myCPU = new CPU(3.5, 8);
+    Computer myComputer1 = new Computer(myCPU, 32, myGraphicCard);
+
+    Computer myComputer2 = new Computer();
   }
 
 }
@@ -330,42 +415,11 @@ public class MainClass {
 
 :::note Hinweis
 
-Auch Konstruktoren können überladen werden.
+Auch Konstruktoren können überladen werden, dass heißt eine Klasse kann über
+mehrere Konstruktoren verfügen. Der Aufruf eines Konstruktors innerhalb eines
+anderen Konstruktors erfolgt dabei über die Selbstreferenz `this`.
 
 :::
-
-## Konstruktoren wiederverwenden
-
-Gibt es mehrere Konstruktoren für eine Klasse kann der spezifische Konstruktor
-von den anderen Konstruktoren wiederverwendet werden. Damit kann sichergestellt
-werden, dass die Initialisierungslogik für ein Objekt nur einmal implementiert
-werden muss. In dem nachfolgenden Bespiel verwendet der unspezifische
-Konstruktor `Car(make: String)` den spezifischen Konstruktor und setzt den
-Standardwert für den Motor auf Benzin. Konstruktoren der selben Klasse können
-mit `this()` aufgerufen werden.
-
-```java title="Car.java" showLineNumbers
-public class Car {
-
-  private String make;
-  private char engine; // b = Benziner, e = Elektro
-
-
-  public Car(String make) { // unspezifischer Konstruktor
-    this(make, 'b'); // Aufruf des spezifischen Konstruktors mit dem Wert 'b'.
-    /*
-      Implementierung des Konstruktors ohne wiederverwendung:
-      this.make = make;
-      this.engine = 'b';
-    */
-  }
-
-  public Car(String make, char engine) { // spezifischer Konstruktor
-    this.make = make;
-    this.engine = engine;
-  }
-}
-```
 
 ## Statische Attribute und Methoden
 
@@ -380,29 +434,22 @@ Schlüsselwort `static` zum Einsatz. Für den Zugriff auf ein statisches Attribu
 bzw. den Aufruf einer statischen Methode wird keine Instanziierung benötigt,
 d.h. der der Zugriff bzw. Aufruf erfolgt über den Klassennamen.
 
-```java title="Foo.java" showLineNumbers
-public class Foo {
+```java title="CPU.java" showLineNumbers
+public class CPU {
 
-  private String bar;
-  public int baz;
+  private final double powerInGHz;
+  private final int numberOfCores;
 
-  private static int foobar;
+  private static int numberOfCPUs;
 
-  public Foo(String bar) {
-    this.bar = bar;
-    foobar++;
+  public CPU(double powerInGHz, int numberOfCores) {
+    this.powerInGHz = powerInGHz;
+    this.numberOfCores = numberOfCores;
+    numberOfCPUs++;
   }
 
-  public Foo(int bar) {
-    this.bar = bar + "";
-  }
-
-  public String getBar() {
-    return bar;
-  }
-
-  public static int getFoobar() {
-    return foobar;
+  public static int getNumberOfCPUs() {
+    return numberOfCPUs;
   }
 
 }
@@ -412,9 +459,9 @@ public class Foo {
 public class MainClass {
 
   public static void main(String[] args) {
-    Foo foo = new Foo("Winter is Coming");
-    int foobar = Foo.getFoobar();
-    System.out.println(foobar);
+    System.out.println(CPU.getNumberOfCPUs());
+    CPU myCPU = new CPU(3.5, 8);
+    System.out.println(CPU.getNumberOfCPUs());
   }
 
 }
