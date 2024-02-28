@@ -5,374 +5,94 @@ sidebar_position: 90
 tags: []
 ---
 
-## Aufgabe 3
+## Aufgabe 1
 
-Erstelle die Klassen **Present** (9 Punkte), **GiftBag** (7 Punkte) und
-**ExamTask02** (4 Punkte) anhand des abgebildeten Klassendiagramms.
-
-```mermaid
-classDiagram
-  Present o-- Person
-
-  class PriceCategory {
-    <<enumeration>>
-    A = "HIGH",
-    B = "MEDIUM",
-    C = "LOW"
-    - category : String
-
-    +getCategory() String
-  }
-
-  class Seat {
-    -int number &lcub; final &rcub;
-    -category PriceCategory &lcub; final &rcub;
-    -basePrice double &lcub; final &rcub;
-
-    +Seat(number: int, category: PriceCategory)
-    +getSeatPrice() double
-  }
-
-  class Row {
-    -number int
-    -rows ArrayList~Seat~ &lcub; final &rcub;
-    +Row()
-  }
-
-  class Present {
-    -description String &lcub; final &rcub;
-    -price double &lcub; final &rcub;
-    -sender Person &lcub; final &rcub;
-    -recipient Person &lcub; final &rcub;
-
-    +Present(description: String, price: double, sender: Person, recipient: Person) void
-    +getDescription() String
-    +getPrice() double
-    +getSender() Person
-    +getRecipient() Person
-    +toString() String
-  }
-
-  class GiftBag {
-    -presents ArrayList~Present~ &lcub; final &rcub;
-
-    +GiftBag()
-    +addPresent(present: Present) void
-    +getMostExpensivePresent() Present
-  }
-
-  class ExamTask03 {
-    +main(args: String[])$ void
-  }
-
-```
-
-### Hinweise zur Klasse ExamTask02
-
-- Erzeuge einen Geschenkesack (GiftBag) mit zwei unterschiedlichen Geschenken
-  (Present) für ein und dieselbe Person (Person).
-- Gib anschließend das teuerste Geschenk des Geschenkesacks auf der Konsole aus
-
-**Beispielhafte Konsolenausgabe:**
-`Present[description=PS5, price=499.0, sender=Hans, recipient=Lisa]`
-
-### Hinweise zur Klasse Present
-
-- Der Konstruktor soll alle Attribute initialisieren
-- Die Methode **toString** soll alle Attribute in nachfolgender Form
-  zurückgeben.
-  `Present [description=[Beschreibung], price=[Preis], sender=[Name des Senders], recipient=[Name des Empfängers]]`
-
-### Hinweise zur Klasse GiftBag
-
-- Der Konstruktor soll alle Attribute initialisieren
-- Die Methode **addPresent** soll dem Geschenkesack (Giftbag) das eingehende
-  Geschenk (Present) hinzufügen.
-- Die Methode **getMostExpensivePresent** soll das teuerste Geschenk
-  zurückgeben.
-
-## Aufgabe 4
-
-Erstelle die Klassen **Circle** (6 Punkte) und **ShapeReader** (14 Punkte)
-anhand des abgebildeten Klassendiagramms.
+Erstelle die Klassen **EngineType (6 Punkte)**, **Vehicle (4 Punkte)**, **Car (3
+Punkte)**, **Truck (4 Punkte)** und **ExamTask01 (7 Punkte)** anhand des
+abgebildeten Klassendiagramms.
 
 ```mermaid
 classDiagram
-  Shape --o ShapeReader
-  Circle --|> Shape : extends
-  Rectangle --|> Shape : extends
+  EngineType --o Vehicle
+  Car --|> Vehicle : extends
+  Truck --|> Vehicle : extends
 
-  class Shape {
-    +getArea() double
-    +getCircumference() double
-  }
-
-  class Circle {
-    -r double &lcub; final &rcub;
-
-    +Circle(r: double)
-    +getR() double
-    +getArea() double
-    +getCircumference() double
-    +toString() String
-  }
-
-  class Rectangle {
-    -a double &lcub; final &rcub;
-    -b double &lcub; final &rcub;
-
-    +Rectangle(a: double, b: double)
-    +getA() double
-    +getB() double
-    +getArea() double
-    +getCircumference() double
-    +toString() String
-  }
-
-  class ShapeReader {
-    -shapes ArrayList~Shape~ &lcub; final &rcub;
-
-    +ShapeReader(elements: String[])
-    +getCircles() ArrayList~Circle~
-    +getShapes() ArrayList~Shape~
-    +getShapes(minArea: double) ArrayList~Shape~
-  }
-```
-
-### Hinweise zur Klasse Circle
-
-- Der Konstruktor soll alle Attribute initialisieren
-- Die Methode **getArea** soll den Flächeninhalt eines Kreises (πr²) zurückgeben
-- Die Methode **getCircumference** soll den Umfang eines Kreises (2πr)
-  zurückgeben
-- Die Methode **toString** soll alle Attribute in nachfolgender Form
-  zurückgeben. `Circle [r=[Wert von r]]`
-
-### Hinweise zur Klasse ShapeReader
-
-- Der Konstruktor soll für jedes Element des eingehenden Arrays ein Objekt der
-  Klasse Circle oder Rectangle erzeugen und der Formenliste (shapes) hinzugefügt
-  werden.
-
-  Die Elemente des eingehenden Arrays haben folgende Struktur:
-
-  ```text
-  Circle;2
-  Rectangle;1;4
-  Circle;1
-  Circle;6
-  Rectangle;2;2
-  ```
-
-- Die Methode **getCircles** soll alle Kreise (Circle) der Formenliste (shapes)
-  als Liste zurückgeben.
-- Die Methode **getShape** soll den spezifischen Konstruktor **getShape(minArea:
-  double)** aufrufen und alle Formen (Shape) zurückgeben.
-- Die Methode **getShape(minArea: double)** soll alle Formen mit einem
-  Flächeninhalt der größer oder gleich dem eingehenden Flächeninhalt (minArea)
-  ist als Liste zurückgeben.
-
-## Aufgabe 5
-
-```mermaid
-classDiagram
-  class ExamTask {
-    +main(args: String[])$ void
-    +split(numbers: int[], index: int)$ void
-  }
-```
-
-### Hinweise zur Methode split
-
-Die Methode **split** soll ein Array vom Typ int so verarbeiten, dass ein neues
-Array erstellt wird, was alle Elemente des eingehenden Arrays bis zum
-angegebenen Index enthält. Das neu erstellte Array soll anschließend
-zurückgegeben werden.
-
-Verwende keine ArrayList!
-
-Bsp.: Der Parameter numbers enthält die Elemente 10, 8, 3, 22 & 1 der Parameter
-index ist gleich 2. Zurückgegeben werden soll ein neues Array, das die Elemente
-10, 8 & 3 enthält.
-
-### Hinweise zur Methode main
-
-In der Methode main soll ein Arrays erstellt werden, dass die Ganzzahlen 10, 8,
-3, 22 & 1 enthält. Erstelle mithilfe der Methode split ein neues Array, dass die
-ersten drei Elemente des ersten Arrays enthalten soll. Gib mithilfe einer
-For-Schleife alle Elemente des neu erstellten Arrays aus.
-
-## Aufgabe 6
-
-```mermaid
-classDiagram
-  direction LR
-
-  Barrel -- OverflowException
-  Barrel -- ExamTask06
-
-  class Barrel {
-    -capacity int
-    -fluidLevel int
-    +Barrel(capacity: int)
-    +addFluid(value: int) void
-  }
-
-  class OverflowException {
-    <<Exception>>
-    -higherThanCapacity int &lcub; final &rcub;
-    +OverflowException(higherThanCapacity: int)
-    +getHigherThanCapacity() int
-  }
-
-  class ExamTask06 {
-    +main(args: String[])$ void
-  }
-```
-
-### Hinweise zur Klasse OverflowException
-
-- Der Konstruktor soll alle Attribute initialisieren.
-- Die Methode **getHigherThanCapacity** soll die zu viel hinzugefügte
-  Flüssigkeit zurückgeben.
-
-### Hinweise zur Klasse Barrel
-
-- Der Konstruktor soll alle Attribute initialisieren. Das Fass ist Anfangs immer
-  leer.
-- Die Methode **addFluid** soll die OverflowException auslösen, wenn die Summe
-  der eingehenden Flüssigkeit und der im Fass befindenden Flüssigkeit die
-  Kapazität überschreitet. Übergebe der Ausnahme den Wert, um wieviel die
-  maximale Kapazität überschritten wurde. Wenn die maximale Kapazität nicht
-  überschritten wird, soll die eingehende Flüssigkeit dem Fass hinzugefügt
-  werden
-
-### Hinweise zur Klasse ExamTask06
-
-Erstelle ein neues Fass, das die maximale Kapazität von 100 hat. Versuche
-anschließend das Fass auf 101 zu füllen und fange die Ausnahme ab. Gib in der
-Konsole aus, um wieviel die maximale Kapazität überschritten wurde.
-
-Bsp. Konsolenausgabe: `Es wäre um 1 zu viel befüllt worden.`
-
-## Aufgabe 7
-
-```mermaid
-classDiagram
-
-  EnergySource --o Phone
-  CablePhone --> Phone
-  SmartPhone --> Phone
-
-  class EnergySource {
-    <<enumeration>>
-    BATTERY('B')
-    POWER_PLUG('P')
-    -type char
-    EnergySource(type: char)
-    +getType() char
-    +canBeUsedEverywhere() boolean
-  }
-
-  class Phone {
+  class Vehicle {
     <<abstract>>
-    #energySource EnergySource &lcub; final &rcub;
-    +Phone(energySource: EnergySource)
-    +readyForUse()* boolean
+    -allVehicles: ArrayList~Vehicle~ &lcub; final &rcub; $
+    #engineType: EngineType &lcub; final &rcub;
+
+    Vehicle(engineType: EngineType)
+    +readyForUse() boolean &lcub; abstract &rcub;
+    +getAllVehicles() ArrayList~Vehicle~ $
   }
 
-  class CablePhone {
-    -pluggedIn boolean
-    -poweredOn boolean
-    +CablePhone(energySource: EnergySource, pluggedIn: boolean, poweredOn: boolean)
-    +readyForUse(): boolean
-  }
+  class EngineType {
+    <<enumeration>>
+    ELECTRO = 'E'
+    HYDROGEN = 'H'
+    DIESEL = 'D'
+    PETROL = 'P'
+    -type: char
 
-  class SmartPhone {
-    -MINIMUM_POWER int$
-    -power int
-    +SmartPhone(energySource: EnergySource, power: int)
-    +readyForUse(): boolean
-  }
-
-  class ExamTask04 {
-    +main(args: String[])$ void
-  }
-```
-
-### Hinweise zur Klasse EnergySource
-
-- Erstelle die zwei Konstanten Batterie und Steckdose für die Arten einer
-  Energiequelle.
-- Der Konstruktor soll alle Attribute initialisieren.
-- Die Methode **getType** soll den Typ der Energiequelle zurückgeben.
-- Die Methode **canBeUsedEverywhere** soll true zurückgeben, wenn die
-  Energiequelle eine Batterie ist.
-
-### Hinweise zur Klasse Phone
-
-- Der Konstruktor soll alle Attribute initialisieren.
-
-### Hinweise zur Klasse CablePhone
-
-- Der Konstruktor soll alle Attribute initialisieren.
-- Die Methode readyForUse soll true zurückgeben, wenn das Kabeltelefon
-  eingesteckt und eingeschalten ist.
-
-### Hinweise zur Klasse SmartPhone
-
-- Die minimale Energie soll 200 betragen.
-- Der Konstruktor soll alle Attribute initialisieren.
-- Die Methode readyForUse soll true zurückgeben, wenn die Energie des
-  Smartphones die minimal erforderliche Energie überschreitet.
-
-### Hinweise zur Klasse ExamTask04
-
-Erzeuge ein Kabeltelefon mit Akku und eines, dass an die Steckdose angeschlossen
-ist. Erzeuge ein leeres Smartphone und eines das halb voll ist. Speichere alle
-erzeugten Fahrzeuge in einer ArrayList. Ermittle mithilfe einer Schleife die
-Anzahl der betriebsbereiten Telefone. Gib die Anzahl in der Konsole aus.
-
-## Aufgabe 8
-
-```mermaid
-classDiagram
-  direction LR
-
-  Comparator~Car~ <.. ConstructionYearComparator
-  CarVendor --  ConstructionYearComparator
-  CarVendor o--  Car
-
-  class Comparator~Car~ {
-    <<interface>>
-    +compare(c1: Car, c2: Car) int
-  }
-
-  class ConstructionYearComparator {
-    +compare(c1: Car, c2: Car) int
-  }
-
-  class CarVendor {
-    -cars ArrayList~Car~
-    +CarVendor()
-    +sortByConstructionYear() void
-    +print() void
+    EngineType(type: char)
+    +getType() char
+    +canBeSustainable() boolean
   }
 
   class Car {
-    <<interface>>
-    +getConstructionYear() int
+    -fuelLevel int
+
+    +Car(engineType: EngineType, fuelLevel: int)
+    +readyForUse() boolean
+  }
+
+  class Truck {
+    -MAXIMUM_ALLOWED_WEIGHT int &lcub; final &rcub; = 7500$
+    -weight int
+
+    +Truck(engineType: EngineType, weight: int)
+    +readyForUse() boolean
+  }
+
+  class ExamTask01 {
+    +main(args: String[]) void$
   }
 ```
 
-### Hinweise zur Klasse CarVendor
+### Hinweise zur Klasse EngineType
+
+- Erstelle die vier Konstanten Elektro, Wasserstoff, Diesel und Benzin für die
+  Arten eines Motors.
+- Der Konstruktor soll alle Attribute initialisieren.
+- Die Methode **getType** soll den Typ der Motorart zurückgeben.
+- Die Methode **canBeSustainable** soll true zurückgeben, wenn es ein Elektro-
+  oder Wasserstoffmotor ist.
+
+### Hinweise zur Klasse Vehicle
+
+- Der Konstruktor soll engineType initialisieren und das erstellte Vehicle der
+  ArrayList allVehicles hinzufügen.
+- Die Methode **getAllVehicles** soll die Liste der erstellten Fahrzeuge
+  zurückgeben.
+
+### Hinweise zur Klasse Car
 
 - Der Konstruktor soll alle Attribute initialisieren.
-- Die Methode sortByConstructionYear soll die Autos absteigend nach Baujahr
-  sortieren.
-- Die Methode print soll das Baujahr aller Autos in der Konsole ausgeben.
+- Die Methode **readyForUse** soll true zurückgeben, wenn der Tank nicht leer
+  ist.
 
-### Hinweise zur Klasse ConstructionYearComparator
+### Hinweise zur Klasse Truck
 
-- Der ConstructionYearComparator soll das Comparator Interface implementieren
-  und Autos absteigend nach Baujahr sortieren.
+- Der Konstruktor soll alle Attribute initialisieren.
+- Die Methode **readyForUse** soll true zurückgeben, wenn das Gewicht des Trucks
+  das maximal erlaubte Gewicht nicht überschreitet.
+
+### Hinweise zur Klasse ExamTask04
+
+Erzeuge ein Elektroauto mit leerem Akku und ein Benzinauto mit einem Tanklevel
+von 50. Erzeuge ein Dieseltruck mit einem Gewicht von 6000 und ein
+Wasserstofftruck der 1500 wiegt.
+
+Überprüfe alle erzeugten Fahrzeuge mithilfe einer Schleife und ermittle die
+Anzahl der betriebsbereiten Autos. Gib die Anzahl in der Konsole aus.
