@@ -233,6 +233,7 @@ classDiagram
 
   Barrel -- OverflowException
   Barrel -- ExamTask06
+  OverflowException --|> Exception : extends
 
   class Barrel {
     -capacity int
@@ -250,6 +251,10 @@ classDiagram
 
   class ExamTask06 {
     +main(args: String[])$ void
+  }
+
+  class Exception {
+
   }
 ```
 
@@ -284,8 +289,8 @@ Bsp. Konsolenausgabe: `Es wäre um 1 zu viel befüllt worden.`
 classDiagram
 
   EnergySource --o Phone
-  CablePhone --> Phone
-  SmartPhone --> Phone
+  CablePhone --> Phone : extends
+  SmartPhone --> Phone : extends
 
   class EnergySource {
     <<enumeration>>
@@ -362,7 +367,7 @@ Anzahl der betriebsbereiten Telefone. Gib die Anzahl in der Konsole aus.
 classDiagram
   direction LR
 
-  Comparator~Car~ <.. ConstructionYearComparator
+  Comparator~Car~ <.. ConstructionYearComparator : implements
   CarVendor --  ConstructionYearComparator
   CarVendor o--  Car
 
