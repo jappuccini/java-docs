@@ -106,8 +106,8 @@ abgebildeten Klassendiagramms.
 ```mermaid
 classDiagram
   Human --o Company
-  Human --|> Comparable~Human~ : implements
-  SalaryComparator --|> Comparator~Human~ : implements
+  Human ..> Comparable~Human~ : implements
+  SalaryComparator ..> Comparator~Human~ : implements
   SalaryComparator -- Company
 
   class Human {
