@@ -7,8 +7,8 @@ tags: []
 
 ## Aufgabe 1
 
-Erstelle die Klassen **EngineType (6 Punkte)**, **Vehicle (4 Punkte)**, **Car (3
-Punkte)**, **Truck (4 Punkte)** und **ExamTask01 (7 Punkte)** anhand des
+Erstelle die Klassen **EngineType** (6 Punkte), **Vehicle** (4 Punkte), **Car**
+(3 Punkte), **Truck** (4 Punkte) und **ExamTask01** (7 Punkte) anhand des
 abgebildeten Klassendiagramms.
 
 ```mermaid
@@ -96,3 +96,97 @@ Wasserstofftruck der 1500 wiegt.
 
 Überprüfe alle erzeugten Fahrzeuge mithilfe einer Schleife und ermittle die
 Anzahl der betriebsbereiten Autos. Gib die Anzahl in der Konsole aus.
+
+## Aufgabe 2
+
+Erstelle die Klassen **Human** (8 Punkte), **Company** (6.5 Punkte),
+**SalaryComparator** (2.5 Punkte), **ExamTask02** (4 Punkte) anhand des
+abgebildeten Klassendiagramms.
+
+```mermaid
+classDiagram
+  Human --o Company
+  Human --|> Comparable~Human~ : implements
+  SalaryComparator --|> Comparator~Human~ : implements
+  SalaryComparator -- Company
+
+  class Human {
+    +firstName: String &lcub; final &rcub;
+    +lastName: String &lcub; final &rcub;
+    +age: int &lcub; final &rcub;
+    +salary: int &lcub; final &rcub;
+
+    +Human(firstName: String, lastName: String, age: int, salary: int)
+    +compareTo(other: Human) int
+    +toString() String
+  }
+
+  class Company {
+    -employees: ArrayList~Human~ &lcub; final &rcub;
+
+    +Company()
+    +addEmployee(human: Human...) void
+    +sortDefault() void
+    +sortBySalary() void
+    +printAllEmployees() void
+  }
+
+  class SalaryComparator {
+    +compare(h1: Human, h2: Human) int
+  }
+
+  class Comparator~Human~ {
+    compare(h1: Human, h2: Human) int
+  }
+
+  class Comparable~Human~ {
+    compareTo(other: Human) int
+  }
+
+  class ExamTask02 {
+    +main(args: String[]) void$
+  }
+```
+
+### Hinweise zur Klasse Human
+
+- Der Konstruktor soll alle Attribute initialisieren.
+
+- Die Methode **compareTo** soll die natürliche Ordnung der Klasse Human
+  definieren. Hierbei sollen die Menschen aufsteigend nach ihrem Alter sortiert
+  werden. Sind zwei Menschen gleich alt, sollen die Menschen absteigend nach dem
+  Gehalt sortiert werden.
+
+- Die Methode **toString** soll die Werte eines Objektes als String zurückgeben.
+
+  Bsp: "Human \[Fullname=Steffen Merk\] \[age=28\] \[salary=1000\]"
+
+### Hinweise zur Klasse SalaryComparator
+
+- Der SalaryComparator soll das Comparator Interface implementieren und Menschen
+  absteigend nach Gehalt sortieren.
+
+### Hinweise zur Klasse Company
+
+- Der Konstruktor soll alle Attribute initialisieren.
+
+- Die Methode **addEmployee** soll alle eingehenden Menschen der
+  Mitarbeiterliste hinzufügen.
+
+- Die Methode **sortDefault** soll die Mitarbeiterliste der natürlichen Ordnung
+  nach sortieren.
+
+- Die Methode **sortBySalary** soll die Mitarbeiterliste absteigend nach Gehalt
+  sortieren.
+
+- Die Methode **printAllEmployees** soll jeden Mitarbeiter in der Konsole
+  ausgeben.
+
+### Hinweise zur Klasse ExamTask02
+
+Erzeuge eine Firma und füge dieser 2 Mitarbeiter hinzu. Der erste Mitarbeiter
+heißt Steffen Merk, ist 24 Jahre alt und hat ein Gehalt von 1000. Die zweite
+Mitarbeiterin heißt Marianna, ist 28 Jahre alt und hat ein Gehalt von 2000.
+
+Sortiere die Mitarbeiter zuerst nach dem Gehalt und anschließend nach der
+natürlichen Ordnung. Gebe nach jeder Sortierung alle Mitarbeiter der Firma aus.
