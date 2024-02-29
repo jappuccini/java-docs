@@ -56,7 +56,7 @@ classDiagram
     -age int
     -gender char
 
-    +Person(name: String, age: int, gender: char) void
+    +Person(name: String, age: int, gender: char)
     +getName() String
     +getAge() int
     +getGender() char
@@ -68,7 +68,7 @@ classDiagram
     -sender Person &lcub; final &rcub;
     -recipient Person &lcub; final &rcub;
 
-    +Present(description: String, price: double, sender: Person, recipient: Person) void
+    +Present(description: String, price: double, sender: Person, recipient: Person)
     +getDescription() String
     +getPrice() double
     +getSender() Person
