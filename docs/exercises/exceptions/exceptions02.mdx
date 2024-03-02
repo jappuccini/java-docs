@@ -15,25 +15,51 @@ import Exercise from '@site/src/components/Exercise';
 ```mermaid
 classDiagram
 
+    Barrel -- BarrelOverflowException
+    BarrelOverflowException --|> Exception : extends
+
     class Barrel {
-        -capacity: int &#123final&#125
+        -capacity: int
         -fluidLevel: int
         +Barrel(capacity: int)
-        +capacity() int
+        +getCapacity() int
         +getFluidLevel() int
         +addFluid(value: int) void
-        +equals(object: Object) boolean
-        +hashCode() int
         +toString() String
+    }
+
+    class BarrelOverflowException {
+      +BarrelOverflowException()
+    }
+
+    class Exception {
+
     }
 ```
 
 ## Hinweise zur Klasse _Barrel_
 
-- Der Konstruktor soll das Attribut `capacity` initialisieren
-- Die Methode `void addFluid(value: int)` soll den Füllstand um den eingehenden
-  Betrag erhöhen. Bei Überschreiten der Kapazität soll die Ausnahme
-  `BarrelOverflowException` ausgelöst werden
+- Der Konstruktor soll alle Attribute initialisieren. Jedes Fass, dass erstellt
+  wird ist leer.
+
+- Die Methode **getCapacity** soll die Kapazität des Fasses zurückgeben.
+
+- Die Methode **getFluidLevel** soll die aktuelle Füllmenge des Fasses
+  zurückgeben.
+
+- Die Methode **addFluid** soll den Füllstand um den eingehenden Betrag erhöhen.
+
+  Ist der eingehende Betrag höher als die verfügbare Restkapazität soll der
+  Füllstand die maximale Füllmenge haben und anschließend die
+  BarrelOverflowException auslösen.
+
+  Ist der eingehende Betrag kleiner oder gleich groß wie die verfügbare
+  Restkapazität soll der Füllstand um die eingehende Menge erhöht werden.
+
+- Die Methode **toString** soll alle Attribute des Objektes als String
+  zurückgeben.
+
+  Beispiel: `Barrel [capacity=10] [fluidlevel=8]`
 
 ## Konsolenausgabe
 
