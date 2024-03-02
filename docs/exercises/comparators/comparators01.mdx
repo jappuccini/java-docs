@@ -13,18 +13,15 @@ import Exercise from '@site/src/components/Exercise';
 
 ```mermaid
 classDiagram
-    Comparable~Coordinate~ <|.. Coordinate
+    Comparable~Coordinate~ <|.. Coordinate : implements
 
     class Coordinate {
-        -x: int &#123final&#125
-        -y: int &#123final&#125
+        -x: int
+        -y: int
         +Coordinate(x: int, y: int)
-        +x() int
-        +y() int
+        +getX() int
+        +getY() int
         +getDistanceToOriginPoint() double
-        +equals(object: Object) boolean
-        +hashCode() int
-        +toString() String
         +compareTo(other: Coordinate) int
     }
 
@@ -36,13 +33,12 @@ classDiagram
 
 ## Hinweise zur Klasse _Coordinate_
 
-- Die Methode `double getDistanceToOriginPoint()` soll die Distanz der
-  Koordinate zum Nullpunkt zurückgeben
-- Die Methode `int compareTo(other: Coordinate)` soll die Koordinate mit der
-  eingehenden Koordinate anhand ihrer jeweiligen Distanz zum Nullpunkt
-  vergleichen. Ist die Distanz der Koordinate zum Nullpunkt kleiner als bzw.
-  größer als bzw. gleich die der eingehenden Koordinate, soll der Wert 1 bzw. -1
-  bzw. 0 zurückgegeben werden
+- Die Methode **getDistanceToOriginPoint()** soll die Distanz der Koordinate zum
+  Nullpunkt zurückgeben
+- Die Methode **compareTo** soll die Koordinate mit der eingehenden Koordinate
+  anhand ihrer jeweiligen Distanz zum Nullpunkt vergleichen. Ist die Distanz der
+  Koordinate zum Nullpunkt kleiner als bzw. größer als bzw. gleich die der
+  eingehenden Koordinate, soll der Wert 1 bzw. -1 bzw. 0 zurückgegeben werden
 
 ## Hinweis
 

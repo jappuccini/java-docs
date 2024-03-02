@@ -54,10 +54,10 @@ classDiagram
     }
 
     class DiceGame {
-        -diceCup: DiceCup &#123final&#125
-        -dices: ArrayList~Dice~ &#123final&#125
-        -players: ArrayList~Player~ &#123final&#125
-        -scanner: Scanner &#123final&#125
+        -diceCup: DiceCup
+        -dices: ArrayList~Dice~
+        -players: ArrayList~Player~
+        -scanner: Scanner
         -numberOfActivePlayers: int
         +DiceGame(players: ArrayList~Player~)
         +start() void
