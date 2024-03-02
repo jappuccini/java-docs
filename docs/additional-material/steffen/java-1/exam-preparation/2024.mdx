@@ -125,7 +125,7 @@ classDiagram
     -employees: ArrayList~Human~ &lcub; final &rcub;
 
     +Company()
-    +addEmployee(human: Human...) void
+    +addEmployee(human: Human) void
     +sortDefault() void
     +sortBySalary() void
     +printAllEmployees() void
@@ -170,8 +170,8 @@ classDiagram
 
 - Der Konstruktor soll alle Attribute initialisieren.
 
-- Die Methode **addEmployee** soll alle eingehenden Menschen der
-  Mitarbeiterliste hinzufügen.
+- Die Methode **addEmployee** soll den eingehenden Menschen der Mitarbeiterliste
+  hinzufügen.
 
 - Die Methode **sortDefault** soll die Mitarbeiterliste der natürlichen Ordnung
   nach sortieren.

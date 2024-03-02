@@ -18,30 +18,29 @@ import Exercise from '@site/src/components/Exercise';
 
 ```mermaid
 classDiagram
-    Vehicle <|-- Car
-    Vehicle <|-- Truck
+    Vehicle <|-- Car : extends
+    Vehicle <|-- Truck : extends
     Vehicle o-- Engine
     Rental o-- Vehicle
-    Partner <|.. Rental
+    Partner <|.. Rental : implements
     TravelAgency o-- Partner
 
     class Vehicle {
         <<abstract>>
-        -make: String &#123final&#125
-        -model: String &#123final&#125
-        -engine: Engine &#123final&#125
+        -make: String
+        -model: String
+        -engine: Engine
         #speedInKmh: double
         -numberOfVehicles: int$
+
         +Vehicle(make: String, model: String, engine: Engine)
-        +make() String
-        +model() String
-        +engine() Engine
+        +getMake() String
+        +getModel() String
+        +getEngine() Engine
         +getSpeedInKmh() double
         +accelerate(valueInKmh: int) void &#123final&#125
         +brake(valueInKmh: int) void &#123final&#125
-        +equals(object: Object) boolean
-        +hashCode() int
-        +toString() String
+        +toString() String &#123abstract&#125
         +getNumberOfVehicles()$ int
     }
 
@@ -52,16 +51,15 @@ classDiagram
         GAS = Gas
         ELECTRO = Elektro
         -description: String &#123final&#125
+        +getDescription() String
     }
 
     class Car {
         <<final>>
         -seats: int &#123final&#125
         +Car(make: String, model: String, engine: Engine, seats: int)
-        +seats() int
+        +getSeats() int
         +doATurboBoost() void
-        +equals(object: Object) boolean
-        +hashCode() int
         +toString() String
     }
 
@@ -70,25 +68,21 @@ classDiagram
         -cargo: int &#123final&#125
         -isTransformed: boolean
         +Truck(make: String, model: String, engine: Engine, cargo: int)
-        +cargo() int
+        +getCargo() int
         +isTransformed() boolean
         +transform() void
-        +equals(object: Object) boolean
-        +hashCode() int
         +toString() String
     }
 
     class Rental {
         -name: String &#123final&#125
-        -vehicles: List~Vehicle~ &#123final&#125
+        -vehicles: ArrayList~Vehicle~ &#123final&#125
         +Rental(name: String)
-        +name() String
-        +vehicles() List~Vehicle~
+        +getName() String
+        +getVehicles() ArrayList~Vehicle~
         +addVehicle(vehicle: Vehicle) void
         +addAllVehicles(vehicles: Vehicle...) void
         +transformAllTrucks() void
-        +equals(object: Object) boolean
-        +hashCode() int
         +toString() String
     }
 
@@ -98,14 +92,10 @@ classDiagram
     }
 
     class TravelAgency {
-        -name: String &#123final&#125
-        -partners: List~Partner~ &#123final&#125
+        -name: String
+        -partners: ArrayList~Partner~
         +TravelAgency(name: String)
-        +name() String
-        +partners() List~Partner~
         +addPartner(partner: Partner) void
-        +equals(object: Object) boolean
-        +hashCode() int
         +toString() String
     }
 ```
