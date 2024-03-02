@@ -5,14 +5,67 @@ description: ''
 
 import Exercise from '@site/src/components/Exercise';
 
-- Erstelle die Ausnahmenklassen `SalaryIncreaseTooHighException` und
-  `SalaryDecreaseException` und passe die Methode
-  `void setSalaryInEuro(salaryInEuro: int)` so an, dass bei einer
-  Gehaltserhöhung größer 10% die Ausnahme `SalaryIncreaseTooHighException` und
-  bei einer Gehaltsverringerung die Ausnahme `SalaryDecreaseException` ausgelöst
-  wird
+- Erstelle die Klassen **SalaryIncreaseTooHighException** und
+  **SalaryDecreaseException**.
+- Passe die Klasse Employee an.
 - Passe die ausführbare Klasse aus Übungsaufgabe
   [ClassDiagrams04](../class-diagrams/class-diagrams04) so an, dass ein oder
-  mehrere Mitarbeiter eine Gehaltserhöhung bekommen
+  mehrere Mitarbeiter eine Gehaltserhöhung bekommen. Behandle alle möglichen
+  Ausnahmen und gebe passende Fehlermeldungen in der Konsole aus.
+
+```mermaid
+classDiagram
+    Company o-- Employee
+    Employee o-- Person
+    SalaryIncreaseTooHighException --|> Exception : extends
+    SalaryIncreaseTooHighException -- Employee
+    SalaryDecreaseException --|> Exception : extends
+    SalaryDecreaseException -- Employee
+
+    class Company {
+        -name: String &#123final&#125
+        -employees: ArrayList~Employee~ &#123final&#125
+        -numberOfEmployees: int
+        +Company(name: String)
+        +getName() String
+        +getEmployees() ArrayList~Employee~
+        +getNumberOfEmployees() int
+        +addEmployee(employee: Employee) void
+        +toString() String
+    }
+
+    class Person {
+        -name: String &#123final&#125
+        +Person(name: String)
+        +getName() String
+    }
+
+    class Employee {
+        -employeeId: int &#123final&#125
+        -person: Person &#123final&#125
+        -salaryInEuro: int
+        +Employee(employeeId: int, person: Person, salaryInEuro: int)
+        +getEmployeeId() int
+        +getName() String
+        +setSalaryInEuro(salaryInEuro: int) void
+        +getSalaryInEuro() int
+        +toString() String
+    }
+
+    class SalaryIncreaseTooHighException {
+    }
+    class SalaryDecreaseException {
+    }
+```
+
+## Hinweise zur Klasse _Employee_
+
+- Die Methode **setSalaryInEuro** soll das Gehalt eines Mitarbeiters festlegen.
+
+  Ist das eingehende Gehalt mehr als 10% des bestehenden Gehalts, soll die
+  **SalaryIncreaseTooHighException** ausgelöst werden.
+
+  Ist das eingehende Gehalt weniger als das bestehende Gehalt, soll die
+  **SalaryDecreaseException** ausgelöst werden.
 
 <Exercise pullRequest="51" branchSuffix="exceptions/03" />

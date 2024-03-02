@@ -5,13 +5,115 @@ description: ''
 
 import Exercise from '@site/src/components/Exercise';
 
-- Erstelle die Ausnahmenklasse `InvalidValueException`, passe die Methode
-  `void accelerate(value: int)` so an, dass bei einem eingehenden Wert kleiner
-  gleich Null die Ausnahme `InvalidValueException` ausgelöst wird und passe die
-  Methode `void brake(value: int)` so an, dass bei einem eingehenden Wert
-  kleiner gleich Null die Ausnahme `InvalidValueException` ausgelöst wird
+- Erstelle die Ausnahmenklasse InvalidValueException.
+- Passe die Klasse Vehicle an.
 - Passe die ausführbare Klasse aus Übungsaufgabe
-  [Interfaces01](../interfaces/interfaces01) so an, dass sie fehlerfrei
-  ausgeführt werden kann
+  [Interfaces01](../interfaces/interfaces01) so an, dass ein Auto mit einem
+  ungültigen Wert beschleunigt wird und im Ausnahmefall in der Konsole
+  ausgegeben wird, dass der Wert größer als 0 sein muss.
+
+```mermaid
+classDiagram
+    Vehicle <|-- Car : extends
+    Vehicle <|-- Truck : extends
+    Vehicle o-- Engine
+    Vehicle -- InvalidValueException
+    Rental o-- Vehicle
+    Partner <|.. Rental : implements
+    TravelAgency o-- Partner
+    Exception <|-- InvalidValueException : extends
+
+    class Vehicle {
+        <<abstract>>
+        -make: String
+        -model: String
+        -engine: Engine
+        #speedInKmh: double
+        -numberOfVehicles: int$
+
+        +Vehicle(make: String, model: String, engine: Engine)
+        +getMake() String
+        +getModel() String
+        +getEngine() Engine
+        +getSpeedInKmh() double
+        +accelerate(valueInKmh: int) void &#123final&#125
+        +brake(valueInKmh: int) void &#123final&#125
+        +toString() String &#123abstract&#125
+        +getNumberOfVehicles()$ int
+    }
+
+    class Engine {
+        <<enumeration>>
+        DIESEL = Diesel
+        PETROL = Benzin
+        GAS = Gas
+        ELECTRO = Elektro
+        -description: String &#123final&#125
+        +getDescription() String
+    }
+
+    class Car {
+        <<final>>
+        -seats: int &#123final&#125
+        +Car(make: String, model: String, engine: Engine, seats: int)
+        +getSeats() int
+        +doATurboBoost() void
+        +toString() String
+    }
+
+    class Truck {
+        <<final>>
+        -cargo: int &#123final&#125
+        -isTransformed: boolean
+        +Truck(make: String, model: String, engine: Engine, cargo: int)
+        +getCargo() int
+        +isTransformed() boolean
+        +transform() void
+        +toString() String
+    }
+
+    class Rental {
+        -name: String &#123final&#125
+        -vehicles: ArrayList~Vehicle~ &#123final&#125
+        +Rental(name: String)
+        +getName() String
+        +getVehicles() ArrayList~Vehicle~
+        +addVehicle(vehicle: Vehicle) void
+        +addAllVehicles(vehicles: Vehicle...) void
+        +transformAllTrucks() void
+        +toString() String
+    }
+
+    class Partner {
+        <<interface>>
+        +toString() String
+    }
+
+    class TravelAgency {
+        -name: String
+        -partners: ArrayList~Partner~
+        +TravelAgency(name: String)
+        +addPartner(partner: Partner) void
+        +toString() String
+    }
+
+    class InvalidValueException {
+    }
+
+    class Exception {
+    }
+```
+
+## Hinweise zur Klasse _InvalidValueException_
+
+- Der Konstruktor soll alle Attribute initialisieren
+
+## Hinweise zur Klasse _Vehicle_
+
+- Die Methode **accelerate** soll den eingehenden Wert überprüfen. Ist der
+  eingehende Wert kleiner als 0 soll die InvalidValueException ausgelöst werden.
+
+- Die Methode **brake** soll den eingehenden Wert überprüfen. Ist der eingehende
+  Wert kleiner als 0 soll die InvalidValueException ausgelöst werden.
 
 <Exercise pullRequest="49" branchSuffix="exceptions/01" />
