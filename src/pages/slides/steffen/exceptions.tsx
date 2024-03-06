@@ -41,7 +41,7 @@ export default function Exceptions(): JSX.Element {
         <section>
           <h2>technische Sichtweise</h2>
           <ul>
-            <li className="fragment">Exceptions sind Objekte</li>
+            <li className="fragment">Exceptions sind Klassen</li>
             <li className="fragment">
               eine Exceptionklasse erweitert die Klasse Exception
             </li>
@@ -94,10 +94,10 @@ export default function Exceptions(): JSX.Element {
           <h2>Demo Exceptions</h2>
           <ul>
             <li className="fragment">PasswordTooShortException</li>
+            <li className="fragment">super call</li>
             <li className="fragment">throw PasswordTooShortException</li>
             <li className="fragment">catch PasswordTooShortException</li>
             <li className="fragment">mehr Informationen mitgeben</li>
-            <li className="fragment">super call</li>
             <li className="fragment">PasswordTooLongException</li>
             <li className="fragment">instance of und multiple catch</li>
           </ul>
