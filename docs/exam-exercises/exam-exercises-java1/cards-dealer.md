@@ -17,7 +17,7 @@ classDiagram
 
     class Player {
         -cards: List~Card~ &#123final&#125
-        +Player(cards: List~Card~)
+        +Player()
         +addCard(card: Card) void
         +getCardWithHighestValue() Card
         +getCardsByColour(colour: String) List~Card~
