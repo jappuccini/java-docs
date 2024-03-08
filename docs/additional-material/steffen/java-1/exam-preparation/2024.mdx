@@ -22,7 +22,7 @@ classDiagram
     -allVehicles: ArrayList~Vehicle~ &lcub; final &rcub; $
     #engineType: EngineType &lcub; final &rcub;
 
-    Vehicle(engineType: EngineType)
+    +Vehicle(engineType: EngineType)
     +readyForUse() boolean &lcub; abstract &rcub;
     +getAllVehicles() ArrayList~Vehicle~ $
   }
