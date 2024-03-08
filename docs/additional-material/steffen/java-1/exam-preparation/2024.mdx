@@ -190,3 +190,234 @@ Mitarbeiterin heißt Marianna, ist 28 Jahre alt und hat ein Gehalt von 2000.
 
 Sortiere die Mitarbeiter zuerst nach dem Gehalt und anschließend nach der
 natürlichen Ordnung. Gebe nach jeder Sortierung alle Mitarbeiter der Firma aus.
+
+## Aufgabe 3 (Probeklausur Moodle)
+
+- [Klausur](/pdf/steffen/klausur.pdf)
+- [Klassendiagramm](/pdf/steffen/klassendiagramm.pdf)
+- [API](/pdf/steffen/api.pdf)
+
+### ExamTask01
+
+```java
+public class ExamTask01 { // 0.5
+  public static void main(String[] args) { // 0.5
+    Street s = new Street(20); // 0.5
+    s.sortByFee(); // 0.5
+    Flat cheapestFlat = null; // 0.25
+    for (House h : s.houses) { // 0.5
+      for (Flat flat : h.flats) { // 0.5
+        if (cheapestFlat == null) { // 0.5
+          cheapestFlat = flat; // 0.25
+        } else if (flat.fee < cheapestFlat.fee) { // 0.5
+          cheapestFlat = flat; // 0.25
+        }
+      }
+    }
+    System.out.println(cheapestFlat.fee); // 0.5
+  }
+}
+```
+
+### Flat.java
+
+```java
+public class Flat implements Rentable { // 0.5
+
+  public double fee; // 0.25
+  private Person renter; // 0.25
+
+  public Flat(double fee) { // 0.5
+    this.fee = fee; // 0.25
+    this.renter = null; // 0.25
+  }
+
+  public boolean isFree() { // 0.5
+    return renter == null; // 0.5
+  }
+
+  public boolean isRentable() { // 0.5
+    return fee > 0; // 0.5
+  }
+
+  public void rent(Person person) throws NotRentableException, TooLowBudgetException { // 1.0
+    if (!isRentable() || !isFree()) { // 0.5
+      throw new NotRentableException(); // 0.5
+    } else if (fee > person.budget) { // 0.5
+      throw new TooLowBudgetException(fee - person.budget); // 0.5
+    } else {
+      this.renter = person; // 0.5
+    }
+  }
+}
+```
+
+### House
+
+```java
+public class House implements Rentable, Comparable<House> { // 1.0
+  private final int number; // 0.25
+  public final double fee; // 0.25
+  private Person renter; // 0.25
+  public final ArrayList<Flat> flats; // 0.25
+
+  public House(int number, int numberOfFlats) { // 0.5
+    this(number, numberOfFlats, 0); // 0.5
+  }
+
+  public House(int number, int numberOfFlats, double fee) { // 0.5
+    this.number = number; // 0.25
+    this.fee = fee; // 0.25
+    this.flats = new ArrayList<>(); // 0.25
+    this.renter = null; // 0.25
+    double flatFee = 500; // 0.25
+    for (int i = 0; i < number; i++) { // 0.5
+      this.flats.add(new Flat(flatFee)); // 0.5
+      flatFee += 100; // 0.25
+    }
+  }
+
+  public int getNumber() { // 0.5
+    return number; // 0.5
+  }
+
+  public boolean isRentable() { // 0.5
+    return fee > 0 && renter == null; // 0.5
+  }
+
+  public void rent(Person person) throws NotRentableException, TooLowBudgetException { // 1.0
+    if (!isRentable()) { // 0.5
+      throw new NotRentableException(); // 1
+    } else if (fee > person.budget) { // 0.5
+      throw new TooLowBudgetException(fee - person.budget); // 1
+    } else {
+      this.renter = person; // 0.5
+    }
+  }
+
+  public int compareTo(House o) { // 0.5
+    if (number > o.getNumber()) { // 0.5
+      return 1; // 0.25
+    } else {
+      return -1; // 0.25
+    }
+  }
+}
+```
+
+### HouseFeeComparator
+
+```java
+public class HouseFeeComparator implements Comparator<House> { // 0.5
+
+  public int compare(House h1, House h2) { // 0.5
+    if (h1.fee > h2.fee) { // 0.5
+      return 1; // 0.25
+    } else if (h1.fee < h2.fee) { // 0.5
+      return -1; // 0.25
+    } else {
+      return 0; // 0.25
+    }
+  }
+}
+```
+
+### HouseFeeComparator
+
+```java
+public class HouseFeeComparator implements Comparator<House> { // 0.5
+
+  public int compare(House h1, House h2) { // 0.5
+    if (h1.fee > h2.fee) { // 0.5
+      return 1; // 0.25
+    } else if (h1.fee < h2.fee) { // 0.5
+      return -1; // 0.25
+    } else {
+      return 0; // 0.25
+    }
+  }
+}
+```
+
+### Rentable
+
+```java
+public interface Rentable { // 0.5
+  public void rent(Person person) throws NotRentableException, TooLowBudgetException; // 1.5
+}
+```
+
+### Street
+
+```java
+public class Street { // 0.5
+  public final ArrayList<House> houses; // 0.25
+
+  public Street(int numberOfHouses) { // 0.5
+    this.houses = new ArrayList<>(); // 0.25
+    for (int i = 0; i < numberOfHouses; i++) { // 0.5
+      int houseNumber = i + 1; // 0.25
+      if (houseNumber % 2 == 0) { // 0.5
+        this.houses.add(new House(houseNumber, 5)); // 0.5
+      } else {
+        this.houses.add(new House(houseNumber, 0, 2000)); // 0.5
+      }
+    }
+  }
+
+  public void rentHouse(Person person) { // 0.5
+    for (House house : houses) { // 0.5
+      try { // 0.25
+        house.rent(person); // 0.5
+        break; // 0.25
+      } catch (Exception e) { // 0.5
+        if (e instanceof TooLowBudgetException l) { // 0.5
+          System.out.println("Es wird " + l.missingMoney + " mehr Geld gebraucht"); // 0.5
+        }
+        if (e instanceof NotRentableException) { // 0.5
+          System.out.println(
+              "Die Hausnummer " + house.getNumber() + " kann nicht gemietet werden."); // 0.5
+        }
+      }
+    }
+  }
+
+  public boolean rentFlat(Person person) { // 0.5
+    for (House house : houses) { // 0.5
+      for (int i = 0; i < house.flats.size(); i++) { // 0.5
+        Flat flat = house.flats.get(i); // 0.5
+        try { // 0.25
+          flat.rent(person); // 0.5
+          return true; // 0.5
+        } catch (TooLowBudgetException e) { // 0.5
+          System.out.println("Zu wenig Geld für Wohnung. Gebühr: " + flat.fee); // 0.5
+        } catch (NotRentableException e) { // 0.5
+          System.out.println("Wohnung " + (i + 1) + " nicht Mietbar."); // 0.5
+        }
+      }
+    }
+    return false; // 0.5
+  }
+
+  public void sortByFee() { // 0.5
+    Collections.sort(this.houses, new HouseFeeComparator()); // 0.5
+  }
+
+  public void sort() { // 0.5
+    Collections.sort(this.houses); // 0.5
+  }
+}
+```
+
+### TooLowBudgetException
+
+```java
+public class TooLowBudgetException extends Exception { // 0.5
+  final double missingMoney; // 0.25
+
+  public TooLowBudgetException(double missingMoney) { // 0.5
+    super(); // 0.5
+    this.missingMoney = missingMoney; // 0.25
+  }
+}
+```
