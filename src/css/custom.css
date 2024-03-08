@@ -42,3 +42,25 @@ code > table {
 .reveal code table tbody tr:last-child td {
   border-bottom: none;
 }
+
+/* slide specific css adjustments */
+
+[data-tooltip]:focus:before {
+  content: attr(data-tooltip);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+[data-tooltip]:after {
+  content: '?';
+  text-align: center;
+  margin-left: 1rem;
+  cursor: pointer;
+  border-radius: 64px;
+  border: 1px solid grey;
+  padding-left: 18px;
+  padding-right: 18px;
+}

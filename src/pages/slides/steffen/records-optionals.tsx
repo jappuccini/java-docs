@@ -101,10 +101,30 @@ export default function RecordsOptionals(): JSX.Element {
           </ul>
         </section>
         <section>
-          <h2>Demo</h2>
+          <h2>Demo - Record vs Cat I</h2>
           <ul>
             <li className="fragment">Cat Klasse</li>
             <li className="fragment">Dog Record</li>
+            <li className="fragment">toString</li>
+            <li className="fragment">equals - Vergleich 2 Katzen</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Was ist die Methode equals?</h2>
+          <ul>
+            <li className="fragment">
+              Jede Klasse erbt implizit von der Klasse Object
+            </li>
+            <li className="fragment">standardmäßig Referenzvergleich</li>
+            <li className="fragment">
+              equals muss selber überschrieben werden
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Demo - Record vs Cat II</h2>
+          <ul>
+            <li className="fragment">equals - Cat</li>
             <li className="fragment">height - Attribut</li>
             <li className="fragment">isBig - Methode Record</li>
           </ul>
