@@ -97,6 +97,110 @@ Wasserstofftruck der 1500 wiegt.
 Überprüfe alle erzeugten Fahrzeuge mithilfe einer Schleife und ermittle die
 Anzahl der betriebsbereiten Autos. Gib die Anzahl in der Konsole aus.
 
+### Lösungen
+
+#### EngineType
+
+```java
+public enum EngineType {
+    ELECTRO('E'),
+    HYDROGEN('H'),
+    DIESEL('D'),
+    PETROL('P');
+
+    private char type;
+
+    EngineType(char type) {
+        this.type = type;
+    }
+
+    public char getType() {
+        return type;
+    }
+
+    public boolean canBeSustainable() {
+        return this == EngineType.ELECTRO || this == EngineType.HYDROGEN;
+    }
+}
+```
+
+#### Vehicle
+
+```java
+public abstract class Vehicle {
+    private final static ArrayList<Vehicle> allVehicles = new ArrayList<>();
+    protected final EngineType engineType;
+
+    Vehicle(EngineType engineType) {
+        this.engineType = engineType;
+        Vehicle.allVehicles.add(this);
+    }
+
+    public abstract boolean readyForUse();
+
+    public static ArrayList<Vehicle> getAllVehicles() {
+        return Vehicle.allVehicles;
+    }
+}
+```
+
+#### Car
+
+```java
+public class Car extends Vehicle {
+    private int fuelLevel;
+
+    public Car(EngineType engineType, int fuelLevel) {
+        super(engineType);
+        this.fuelLevel = fuelLevel;
+    }
+
+    public boolean readyForUse() {
+        return fuelLevel > 0;
+    }
+}
+```
+
+#### Truck
+
+```java
+public class Truck extends Vehicle {
+    private final static int MAXIMUM_ALLOWED_WEIGHT = 7500;
+    private int weight;
+
+    public Truck(EngineType engineType, int weight) {
+        super(engineType);
+        this.weight = weight;
+    }
+
+    public boolean readyForUse() {
+        return weight <= Truck.MAXIMUM_ALLOWED_WEIGHT;
+    }
+}
+```
+
+#### ExamTask01
+
+```java
+public class ExamTask01 {
+    public static void main(String[] args) {
+        new Car(EngineType.ELECTRO, 0);
+        new Car(EngineType.PETROL, 50);
+        new Truck(EngineType.DIESEL, 6000);
+        new Truck(EngineType.HYDROGEN, 1500);
+
+        int readyVehicles = 0;
+        for (Vehicle vehicle : Vehicle.getAllVehicles()) {
+            if (vehicle instanceof Car && vehicle.readyForUse()) {
+                readyVehicles++;
+            }
+        }
+
+        System.out.println(readyVehicles);
+    }
+}
+```
+
 ## Aufgabe 2
 
 Erstelle die Klassen **Human** (8 Punkte), **Company** (6.5 Punkte),
@@ -191,35 +295,147 @@ Mitarbeiterin heißt Marianna, ist 28 Jahre alt und hat ein Gehalt von 2000.
 Sortiere die Mitarbeiter zuerst nach dem Gehalt und anschließend nach der
 natürlichen Ordnung. Gebe nach jeder Sortierung alle Mitarbeiter der Firma aus.
 
+### Lösungen
+
+#### Human
+
+```java
+public class Human implements Comparable<Human> {
+    public final String firstName;
+    public final String lastName;
+    public final int age;
+    public final int salary;
+
+    public Human(String firstName, String lastName, int age, int salary) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.salary = salary;
+    }
+
+    public int compareTo(Human other) {
+        if (age > other.age) {
+            return 1;
+        } else if (age < other.age) {
+            return -1;
+        } else {
+            if (salary > other.salary) {
+                return -1;
+            } else if (salary < other.salary) {
+                return 1;
+            } else {
+                return 0;
+            }
+        }
+    }
+
+    public String toString() {
+        return "Human [Fullname=" + firstName + " " + lastName + "] [age=" + age + "] [salary=" + salary + "]";
+    }
+}
+```
+
+#### SalaryComparator
+
+```java
+public class SalaryComparator implements Comparator<Human> {
+    public int compare(Human h1, Human h2) {
+        if (h1.salary > h2.salary) {
+            return -1;
+        } else if (h1.salary < h2.salary) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+}
+```
+
+#### Company
+
+```java
+public class Company {
+    private final ArrayList<Human> employees;
+
+    public Company() {
+        employees = new ArrayList<>();
+    }
+
+    public void addEmployee(Human human) {
+        employees.add(human);
+    }
+
+    public void sortDefault() {
+        Collections.sort(employees);
+    }
+
+    public void sortSortBySalary() {
+        Collections.sort(employees, new SalaryComparator());
+    }
+
+    public void printAllEmployees() {
+        for (Human employee : employees) {
+            System.out.println(employee.toString());
+        }
+    }
+}
+```
+
+#### ExamTask02
+
+```java
+public class ExamTask02 {
+    public static void main(String[] args) {
+        Company c = new Company();
+        c.addEmployee(new Human("Steffen", "Merk", 24, 1000));
+        c.addEmployee(new Human("Marianna", "Maglio", 28, 2000));
+
+        c.sortSortBySalary();
+        c.printAllEmployees();
+        c.sortDefault();
+        c.printAllEmployees();
+    }
+}
+```
+
 ## Aufgabe 3 (Probeklausur Moodle)
 
 - [Klausur](/pdf/steffen/klausur.pdf)
 - [Klassendiagramm](/pdf/steffen/klassendiagramm.pdf)
 - [API](/pdf/steffen/api.pdf)
 
-### ExamTask01
+### Rentable
 
 ```java
-public class ExamTask01 { // 0.5
-  public static void main(String[] args) { // 0.5
-    Street s = new Street(20); // 0.5
-    s.sortByFee(); // 0.5
-    Flat cheapestFlat = null; // 0.25
-    for (House h : s.houses) { // 0.5
-      for (Flat flat : h.flats) { // 0.5
-        if (cheapestFlat == null) { // 0.5
-          cheapestFlat = flat; // 0.25
-        } else if (flat.fee < cheapestFlat.fee) { // 0.5
-          cheapestFlat = flat; // 0.25
-        }
-      }
-    }
-    System.out.println(cheapestFlat.fee); // 0.5
+public interface Rentable { // 0.5
+  public void rent(Person person) throws NotRentableException, TooLowBudgetException; // 1.5
+}
+```
+
+### NotRentableException
+
+```java
+public class NotRentableException extends Exception { // 0.5
+  public NotRentableException() { // 0.5
+    super(); // 0.5
   }
 }
 ```
 
-### Flat.java
+### TooLowBudgetException
+
+```java
+public class TooLowBudgetException extends Exception { // 0.5
+  final double missingMoney; // 0.25
+
+  public TooLowBudgetException(double missingMoney) { // 0.5
+    super(); // 0.5
+    this.missingMoney = missingMoney; // 0.25
+  }
+}
+```
+
+### Flat
 
 ```java
 public class Flat implements Rentable { // 0.5
@@ -322,31 +538,6 @@ public class HouseFeeComparator implements Comparator<House> { // 0.5
 }
 ```
 
-### HouseFeeComparator
-
-```java
-public class HouseFeeComparator implements Comparator<House> { // 0.5
-
-  public int compare(House h1, House h2) { // 0.5
-    if (h1.fee > h2.fee) { // 0.5
-      return 1; // 0.25
-    } else if (h1.fee < h2.fee) { // 0.5
-      return -1; // 0.25
-    } else {
-      return 0; // 0.25
-    }
-  }
-}
-```
-
-### Rentable
-
-```java
-public interface Rentable { // 0.5
-  public void rent(Person person) throws NotRentableException, TooLowBudgetException; // 1.5
-}
-```
-
 ### Street
 
 ```java
@@ -409,15 +600,24 @@ public class Street { // 0.5
 }
 ```
 
-### TooLowBudgetException
+### ExamTask01
 
 ```java
-public class TooLowBudgetException extends Exception { // 0.5
-  final double missingMoney; // 0.25
-
-  public TooLowBudgetException(double missingMoney) { // 0.5
-    super(); // 0.5
-    this.missingMoney = missingMoney; // 0.25
+public class ExamTask01 { // 0.5
+  public static void main(String[] args) { // 0.5
+    Street s = new Street(20); // 0.5
+    s.sortByFee(); // 0.5
+    Flat cheapestFlat = null; // 0.25
+    for (House h : s.houses) { // 0.5
+      for (Flat flat : h.flats) { // 0.5
+        if (cheapestFlat == null) { // 0.5
+          cheapestFlat = flat; // 0.25
+        } else if (flat.fee < cheapestFlat.fee) { // 0.5
+          cheapestFlat = flat; // 0.25
+        }
+      }
+    }
+    System.out.println(cheapestFlat.fee); // 0.5
   }
 }
 ```
