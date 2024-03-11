@@ -11,11 +11,13 @@ tags: []
   nicht anders kenntlich gemacht – auf alle Geschlechter
 - Es kann davon ausgegangen werden, dass sämtliche Klassen entsprechende
   Implementierungen der Object-Methoden besitzen
-- Der Stereotyp `<<enumeration>>` impliziert, dass die Aufzählung einen
-  passenden, privaten Konstruktor sowie gegebenenfalls passende Getter für alle
-  Attribute besitzt
+- Der Stereotyp _enumeration_ impliziert, dass die Aufzählung einen passenden
+  Konstruktor sowie gegebenenfalls passende Getter für alle Attribute besitzt
 - Pakete und Klassenimporte müssen nicht angegeben werden
-- Für die Konsolenausgabe kann das Kürzel _sysout_ verwendet werden
+- So nicht anders angegeben, sollen Konstruktoren, Setter, Getter sowie die
+  Object-Methoden wie gewohnt implementiert werden
+- Für die Konsolenausgabe können die Kürzel _sysout_, _syso_ und _sout_
+  verwendet werden
 - Methoden- und Attributsbezeichner dürfen sinnvoll gekürzt geschrieben werden
   (Beispiel _getLWMCP()_ statt _getLectureWithMostCreditPoints()_)
 
@@ -214,7 +216,6 @@ public class Class { // 0,5
   public Class(String description, CourseOfStudies courseOfStudies) { // 0,5
     this.description = description; // 0,25
     this.courseOfStudies = courseOfStudies; // 0,25
-    this.lectures = lectures; // 0,25
     lectures = new ArrayList<>(); // 0,25
     students = new ArrayList<>(); // 0,25
   }
@@ -257,7 +258,7 @@ public class Class { // 0,5
 
   public String toString() { // 0,5
     return "Class [description=" + description + ", courseOfStudies=" + courseOfStudies.description()
-      + ", lectures=" + lectures + ", students=" + students + "]"; // 1
+      + ", lectures=" + lectures + ", students=" + students + "]"; // 1,25
   }
 
 }
@@ -268,13 +269,11 @@ public class ExamTask02 { // 0,5
 
   public static void main(String[] args) { // 0,5
 
-    List<Lecture> lectures = new ArrayList<>(); // 0,5
-    lectures.add(new Lecture("Mathe", 5)); // 0,5
-    lectures.add(new Lecture("Programmierung", 10)); // 0,5
-
-    Class class1 = new Class("WWIBE122", CourseOfStudies.WI, lectures); // 0,5
+    Class class1 = new Class("WWIBE122", CourseOfStudies.WI); // 1
     class1.addStudent(new Student("8271625", "Hans Maier")); // 0,5
     class1.addStudent(new Student("9102934", "Peter Müller")); // 0,5
+    class1.addLecture(new Lecture("Mathe", 5)); // 0,5
+    class1.addLecture(new Lecture("Programmierung", 10)); // 0,5
 
     System.out.println(class1.toString()); // 0,5
     System.out.println(class1.getLectureWithMostCreditPoints()); // 0,5
@@ -517,7 +516,7 @@ classDiagram
         +Player(name: String)
         +name() String
         +getHealthPoints() int
-        +reduceHealthPoints() int
+        +reduceHealthPoints() void
         +rollTheDice() int
     }
 
