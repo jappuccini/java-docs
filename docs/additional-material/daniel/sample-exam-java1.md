@@ -9,17 +9,18 @@ tags: []
 
 - Die in dieser Klausur verwendeten Personenbezeichnungen beziehen sich – sofern
   nicht anders kenntlich gemacht – auf alle Geschlechter
+- Pakete und Klassenimporte müssen nicht angegeben werden
 - Es kann davon ausgegangen werden, dass sämtliche Klassen entsprechende
   Implementierungen der Object-Methoden besitzen
-- Der Stereotyp _enumeration_ impliziert, dass die Aufzählung einen passenden
+- Der Stereotyp `enumeration` impliziert, dass die Aufzählung einen passenden
   Konstruktor sowie gegebenenfalls passende Getter für alle Attribute besitzt
-- Pakete und Klassenimporte müssen nicht angegeben werden
-- So nicht anders angegeben, sollen Konstruktoren, Setter, Getter sowie die
-  Object-Methoden wie gewohnt implementiert werden
-- Für die Konsolenausgabe können die Kürzel _sysout_, _syso_ und _sout_
-  verwendet werden
+- So nicht anders angegeben sollen Konstruktoren, Setter, Getter sowie die
+  Object-Methoden wie in der Vorlesung gezeigt implementiert werden
+- Die Konsolenausgaben-Methoden der Klasse `PrintStream` dürfen sinnvoll gekürzt
+  geschrieben werden (zum Beispiel `syso("Hello World")` statt
+  `System.out.println("Hello World")`)
 - Methoden- und Attributsbezeichner dürfen sinnvoll gekürzt geschrieben werden
-  (Beispiel _getLWMCP()_ statt _getLectureWithMostCreditPoints()_)
+  (Beispiel `getLWMCP()` statt `getLectureWithMostCreditPoints()`)
 
 ## Aufgabe 1 (20 Punkte)
 
