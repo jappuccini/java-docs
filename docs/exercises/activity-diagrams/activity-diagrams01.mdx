@@ -21,15 +21,15 @@ classDiagram
     }
 ```
 
-## Aktivitätsdiagramm _main_
+## Aktivitätsdiagramm zur Methode _void main(args: String[])_
 
 ```mermaid
 stateDiagram-v2
-    state "Scanner initialisieren" as state1
+    state "Konsoleneingabe initialisieren" as state1
     state "Zufallszahl erzeugen" as state2
-    state "Ausführen: play()" as state3
+    state "Aktivität 'Spielen' ausführen" as state3
 
-    state main {
+    state "Ratespiel" as main {
         [*] --> state1
         state1 --> state2
         state2 --> state3
@@ -37,63 +37,65 @@ stateDiagram-v2
     }
 ```
 
-## Aktivitätsdiagramm _play_
+## Aktivitätsdiagramm zur Methode _void play()_
 
 ```mermaid
 stateDiagram-v2
     state "Ausgabe: Spieler 1, Name eingeben" as state1
-    state "Eingabe: [Name Spieler 1]" as state2
+    state "Eingabe: Name 1" as state2
     state "Ausgabe: Spieler 2, Name eingeben" as state3
-    state "Eingabe: [Name Spieler 2]" as state4
-    state "Ausführen: move([Name Spieler1])" as state5
-    state "Ausführen: move([Name Spieler 2])" as state6
-    state if <<choice>>
-    state if2 <<choice>>
-    state fork <<fork>>
+    state "Eingabe: Name 2" as state4
+    state "Aktivität 'Zug' mit [Name 1] ausführen" as state5
+    state "Aktivität 'Zug' mit [Name 2] ausführen" as state6
 
-    state play {
+    state if1 <<choice>>
+    state if2 <<choice>>
+    state fork1 <<fork>>
+
+    state "Spielen" as play {
         [*] --> state1
         state1 --> state2
         state2 --> state3
         state3 --> state4
         state4 --> state5
-        state5 --> if
-        if --> fork : Rückgabe = false
-        if --> state6 : Rückgabe = true
+        state5 --> if1
+        if1 --> fork1: sonst
+        if1 --> state6: Rückgabe = true
         state6 --> if2
-        if2 --> state5 : Rückgabe = true
-        if2 --> fork : Rückgabe = false
-        fork --> [*]
+        if2 --> state5: Rückgabe = true
+        if2 --> fork1: sonst
+        fork1 --> [*]
     }
 ```
 
-## Aktivitätsdiagramm _move_
+## Aktivitätsdiagramm zur Methode _boolean move(name: String)_
 
 ```mermaid
 stateDiagram-v2
     state "Ausgabe: [Name], Tipp eingeben" as state1
-    state "Eingabe: [Tipp]" as state2
+    state "Eingabe: Tipp" as state2
     state "Ausgabe: Richtig, das war die gesuchte Zahl" as state3
     state "Rückgabe: true" as state4
     state "Ausgabe: Die gesuchte Zahl ist kleiner" as state5
     state "Ausgabe: Die gesuchte Zahl ist größer" as state6
     state "Rückgabe: false" as state7
-    state if <<choice>>
-    state fork <<fork>>
 
-    state move {
+    state if1 <<choice>>
+    state fork1 <<fork>>
+
+    state "Zug" as move {
         [*] --> state1
         state1 --> state2
-        state2 --> if
-        if --> state3 : [Tipp] = [Zufallszahl]
-        if --> state5 : [Tipp] > [Zufallszahl]
-        if --> state6 : [Tipp] < [Zufallszahl]
+        state2 --> if1
+        if1 --> state3: sonst
+        if1 --> state5: Tipp > Zufallszahl
+        if1 --> state6: Tipp < Zufallszahl
         state3 --> state4
-        state4 --> fork
+        state4 --> fork1
         state5 --> state7
         state6 --> state7
-        state7 --> fork
-        fork --> [*]
+        state7 --> fork1
+        fork1 --> [*]
     }
 ```
 

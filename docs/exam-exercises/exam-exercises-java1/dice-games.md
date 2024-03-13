@@ -121,3 +121,17 @@ Wahrscheinlichkeit dem Formensymbol (`shadeSymbol`) einen Wert zuweisen
     (die Differenz der beiden Wurfwerte)
 - Hinweis: Der Wurfwert berechnet sich als Produkt aus dem Zahlenwert des
   Zahlenwürfels und der Anzahl Ecken des gewürfelten Formensymbols
+
+## Hinweise zum Würfelspiel 3
+
+- Anzahl Spieler: beliebig viele
+- Würfel: 3 Kartenfarbenwürfel
+- Ablauf:
+  - Alle Spieler sollen zu Beginn des Spiels ihre Namen eingeben
+  - Alle Spieler sollen das Spiel mit 0 Punkten beginnen
+  - Alle Spieler sollen abwechselnd solange drei Würfel werfen, bis einer der
+    Spieler 50 oder mehr Punkte besitzt
+  - In jeder Runde bekommt der Spieler mit dem höchsten Wurfwert diese Wurfwert
+    als Punkte gutgeschrieben
+- Hinweis: Der Wurfwert berechnet sich als Summe aller geworfenen
+  Kartenfarben-Prioritätswerte
