@@ -32,9 +32,9 @@ tags: []
   der Initialisierung aller Datenobjekte der Methode `void e(size: int)` der
   abgebildeten Klasse `ExamTask01` (5 Punkte)
 
-### Quelltext
+### Quellcode zur Klasse _ExamTask01_
 
-```java title="ExamTask01" showLineNumbers
+```java title="ExamTask01.java" showLineNumbers
 public class ExamTask01 {
 
   private static String textA, textB;
@@ -302,124 +302,131 @@ classDiagram
     }
 ```
 
-### Aktivitätsdiagramm _main_
+### Aktivitätsdiagramm zur Methode _void main(args: String[])_
 
 ```mermaid
-stateDiagram
-    state "PIN Eingeben und prüfen" as main {
-        state "Ausgabe: Bitte PIN eingeben" as main1
-        state "Eingabe: Zeichenkette" as main2
-        state "Zeichenkette in Zahlenfeld umwandeln (Aktivität textToPin)" as main3
-        state "Länge des Zahlenfeldes prüfen (Aktivität checkPinLength)" as main4
-        state "Ausgabe: Länge der PIN ist ungültig" as main5
-        state "Zahlenwert des Zahlenfeldes prüfen (Aktivität checkPinValue)" as main6
-        state "Ausgabe: Zahlenwert der PIN ist ungültig" as main7
-        state "Ausgabe: PIN ist gültig" as main8
-        state mainif <<choice>>
-        state mainif2 <<choice>>
-        state mainfork <<fork>>
-        [*] --> main1
-        main1 --> main2
-        main2 --> main3
-        main3 --> main4
-        main4 --> mainif
-        mainif --> main6: Länge des Zahlenfeldes ist gültig
-        mainif --> main5: Länge des Zahlenfeldes ist ungültig
-        main6 --> mainif2
-        mainif2 --> main7: Zahlenwert des Zahlenfeldes is ungültig
-        mainif2 --> main8: Zahlenwert des Zahlenfeldes ist gültig
-        main5 --> mainfork
-        main7 --> mainfork
-        main8 --> mainfork
-        mainfork --> [*]
+stateDiagram-v2
+    state "Ausgabe: Bitte PIN eingeben" as state1
+    state "Eingabe: Zeichenkette" as state2
+    state "Aktivität 'Zeichenkette in Zahlenfeld umwandeln' mit [Zeichenkette] ausführen" as state3
+    state "Aktivität 'Länge des Zahlenfeldes prüfen' ausführen" as state4
+    state "Ausgabe: Länge der PIN ist ungültig" as state5
+    state "Aktivität 'Zahlenwert des Zahlenfeldes prüfen' ausführen" as state6
+    state "Ausgabe: Zahlenwert der PIN ist ungültig" as state7
+    state "Ausgabe: PIN ist gültig" as state8
+
+    state if1 <<choice>>
+    state if2 <<choice>>
+    state fork1 <<fork>>
+
+    state "PIN-Test" as main {
+        [*] --> state1
+        state1 --> state2
+        state2 --> state3
+        state3 --> state4
+        state4 --> if1
+        if1 --> state6: Rückgabe = true
+        if1 --> state5: sonst
+        state6 --> if2
+        if2 --> state7: sonst
+        if2 --> state8: Rückgabe = true
+        state5 --> fork1
+        state7 --> fork1
+        state8 --> fork1
+        fork1 --> [*]
     }
 ```
 
-### Aktivitätsdiagramm _textToPin_
+### Aktivitätsdiagramm zur Methode _void textToPin(text: String)_
 
 ```mermaid
-stateDiagram
-    state "Zeichenkette in Zahlenfeld umwandeln" as ttp {
-        state "Länge der Zeichenkette ermittlen" as ttp1
-        state "Länge des Zahlenfeldes = Länge der Zeichenkette" as ttp2
-        state "Zählvariable = 0" as ttp3
-        state "Aktuelles Zeichen der Zeichenkette ermitteln" as ttp4
-        state "Zahlenwert des aktuellen Zeichens ermitteln" as ttp5
-        state "Zahlenwert dem Zahlenfeld hinzufügen" as ttp6
-        state "Zählvariable inkrementieren" as ttp7
-        state ttpif <<choice>>
-        [*] --> ttp1
-        ttp1 --> ttp2
-        ttp2 --> ttp3
-        ttp3 --> ttpif
-        ttpif --> ttp4: Zählvariable < Länge des Zahlenfeldes
-        ttpif --> [*]: Zählvariable = Länge des Zahlenfeldes
-        ttp4 --> ttp5
-        ttp5 --> ttp6
-        ttp6 --> ttp7
-        ttp7 --> ttpif
+stateDiagram-v2
+    state "Länge der Zeichenkette ermitteln" as state1
+    state "Länge des Zahlenfeldes = Länge der Zeichenkette" as state2
+    state "Zählvariable = 0" as state3
+    state "Aktuelles Zeichen der Zeichenkette ermitteln" as state4
+    state "Zahlenwert des aktuellen Zeichens ermitteln" as state5
+    state "Zahlenwert dem Zahlenfeld hinzufügen" as state6
+    state "Zählvariable inkrementieren" as state7
+    state stateif <<choice>>
+
+    state "Zeichenkette in Zahlenfeld umwandeln" as textToPin {
+        [*] --> state1
+        state1 --> state2
+        state2 --> state3
+        state3 --> stateif
+        stateif --> state4: Zählvariable < Länge des Zahlenfeldes
+        stateif --> [*]: sonst
+        state4 --> state5
+        state5 --> state6
+        state6 --> state7
+        state7 --> stateif
     }
 ```
 
-### Aktivitätsdiagramm _checkPinLength_
+### Aktivitätsdiagramm zur Methode _boolean checkPinLength()_
 
 ```mermaid
-stateDiagram
-    state "Länge des Zahlenfeldes prüfen" as cpl {
-        state "Länge des Zahlenfeldes ermitteln" as cpl1
-        state "Rückgabe: Wahr" as cpl2
-        state "Rückgabe: Falsch" as cpl3
-        state cplif <<choice>>
-        state cplfork <<fork>>
-        [*] --> cpl1
-        cpl1 --> cplif
-        cplif --> cpl2: Länge des Zahlenfeldes >= 4 und <= 8
-        cplif --> cpl3: Länge des Zahlenfeldes < 4 oder > 8
-        cpl3 --> cplfork
-        cpl2 --> cplfork
-        cplfork --> [*]
+stateDiagram-v2
+    state "Länge des Zahlenfeldes ermitteln" as state1
+    state "Rückgabe: true" as state2
+    state "Rückgabe: false" as state3
+
+    state if1 <<choice>>
+    state fork1 <<fork>>
+
+    state "Länge des Zahlenfeldes prüfen" as checkPinLength {
+        [*] --> state1
+        state1 --> if1
+        if1 --> state2: sonst
+        if1 --> state3: Länge des Zahlenfeldes < 4 oder > 8
+        state3 --> fork1
+        state2 --> fork1
+        fork1 --> [*]
     }
 ```
 
-### Aktivitätsdiagramm _checkPinValue_
+### Aktivitätsdiagramm zur Methode _boolean checkPinValue()_
 
 ```mermaid
-stateDiagram
-    state "Zahlenwert des Zahlenfeldes prüfen" as cpv {
-        state "Länge des Zahlenfeldes ermitteln" as cpv1
-        state "Zahlenwert = 0" as cpv2
-        state "Zählvariable = 0" as cpv3
-        state "Zahlenwert = Zahlenwert + aktuelle Ziffer" as cpv4
-        state "Zählvariable inkrementieren" as cpv5
-        state "Rückgabe: Falsch" as cpv6
-        state "Rückgabe: Wahr" as cpv7
-        state cpvif1 <<choice>>
-        state cpvif2 <<choice>>
-        state cpvfork <<fork>>
-        [*] --> cpv1
-        cpv1 --> cpv2
-        cpv2 --> cpv3
-        cpv3 --> cpvif1
-        cpvif1 --> cpv4: Zählvariable < Länge des Zahlenfeldes
-        cpv4 --> cpv5
-        cpv5 --> cpvif1
-        cpvif1 --> cpvif2: Zählvariable = Länge des Zahlenfeldes
-        cpvif2 --> cpv6: Zahlenwert ungerade
-        cpvif2 --> cpv7: Zahlenwert gerade
-        cpv6 --> cpvfork
-        cpv7 --> cpvfork
-        cpvfork --> [*]
+stateDiagram-v2
+    state "Länge des Zahlenfeldes ermitteln" as state1
+    state "Zahlenwert = 0" as state2
+    state "Zählvariable = 0" as state3
+    state "Zahlenwert = Zahlenwert + aktuelle Ziffer" as state4
+    state "Zählvariable inkrementieren" as state5
+    state "Rückgabe: false" as state6
+    state "Rückgabe: true" as state7
+
+    state if1 <<choice>>
+    state if2 <<choice>>
+    state fork <<fork>>
+
+    state "Zahlenwert des Zahlenfeldes prüfen" as checkPinValue {
+        [*] --> state1
+        state1 --> state2
+        state2 --> state3
+        state3 --> if1
+        if1 --> state4: Zählvariable < Länge des Zahlenfeldes
+        state4 --> state5
+        state5 --> if1
+        if1 --> if2: sonst
+        if2 --> state6: Zahlenwert ungerade
+        if2 --> state7: sonst
+        state6 --> fork
+        state7 --> fork
+        fork --> [*]
     }
 ```
 
 ### Beispielhafte Konsolenausgabe
 
 ```console
-PIN: 387
-PIN ist ungültig (Länge)
-PIN: 3871
-PIN ist ungültig (Zahlenwert)
-PIN: 3872
+Bitte PIN eingeben: 387
+Länge der PIN ist ungültig
+Bitte PIN eingeben: 3871
+Zahlenwert der PIN ist ungültig
+Bitte PIN eingeben: 3872
 PIN ist gültig
 ```
 
