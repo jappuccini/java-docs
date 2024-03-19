@@ -27,7 +27,7 @@ classDiagram
         -healthPoints: int
         +Player(name: String)
         +rollTheDice() int
-        +reducePoints(points: int) void
+        +reduceHealthPoints(points: int) void
     }
 
     class Dice {

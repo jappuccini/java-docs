@@ -82,6 +82,7 @@ stateDiagram-v2
 
     state if1 <<choice>>
     state fork1 <<fork>>
+    state fork2 <<fork>>
 
     state "Zug" as move {
         [*] --> state1
@@ -91,11 +92,12 @@ stateDiagram-v2
         if1 --> state5: Tipp > Zufallszahl
         if1 --> state6: Tipp < Zufallszahl
         state3 --> state4
-        state4 --> fork1
-        state5 --> state7
-        state6 --> state7
-        state7 --> fork1
-        fork1 --> [*]
+        state4 --> fork2
+        state5 --> fork1
+        state6 --> fork1
+        fork1 --> state7
+        state7 --> fork2
+        fork2 --> [*]
     }
 ```
 

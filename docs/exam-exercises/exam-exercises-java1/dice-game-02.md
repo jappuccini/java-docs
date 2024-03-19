@@ -17,6 +17,7 @@ classDiagram
         -scanner: Scanner$
         -dices: List~Dice~$
         -points: int$
+        -rounds: int$
         +main(args: String[]) void$
     }
 
