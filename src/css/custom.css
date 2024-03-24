@@ -56,6 +56,7 @@ code > table {
 
 [data-tooltip]:after {
   content: '?';
+  font-size: 42px;
   text-align: center;
   margin-left: 1rem;
   cursor: pointer;
@@ -63,4 +64,12 @@ code > table {
   border: 1px solid grey;
   padding-left: 18px;
   padding-right: 18px;
+}
+
+.reveal .foot-note {
+  font-size: medium;
+  position: fixed;
+  bottom: 10px;
+  left: 0;
+  right: 0;
 }
