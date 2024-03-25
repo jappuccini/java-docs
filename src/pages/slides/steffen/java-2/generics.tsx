@@ -233,8 +233,8 @@ export default function Generics(): JSX.Element {
                 __html:
                   'public class Main {\n' +
                   '  public static void main(String[] args) {\n' +
-                  '    Team&lt;FootballPlayer&gt; scf = new Team&lt;&gt;();\n' +
-                  '    Team&lt;HockeyPlayer&gt; wildwings  = new Team&lt;&gt;();\n' +
+                  '    Team&lt;FootballPlayer&gt; scf = new Team&lt;&gt;("SC Freiburg");\n' +
+                  '    Team&lt;HockeyPlayer&gt; wildwings  = new Team&lt;&gt;("Wildwings");\n' +
                   '    \n' +
                   '    scf.addMember(new FootballPlayer("Steffen");\n' +
                   '    scf.addMember(new HockeyPlayer("Mirco"); // fails\n' +
