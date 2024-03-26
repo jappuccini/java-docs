@@ -9,6 +9,7 @@ export default function Generics(): JSX.Element {
           <h2>Agenda</h2>
           <ul>
             <li className="fragment">Generics</li>
+            <li className="fragment">Optionals</li>
           </ul>
         </section>
       </section>
@@ -363,6 +364,130 @@ export default function Generics(): JSX.Element {
             <li className="fragment">
               Spieler eines Generischen Teams ausgeben
             </li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h2>Optionals</h2>
+        </section>
+        <section>
+          <h2>Optional - Klasse</h2>
+          <p className="fragment">
+            Mit Hilfe der Optional Klasse kann man NullPointerExceptions einfach
+            behandeln.
+          </p>
+          <p className="fragment">Was sind NullPointerExceptions?</p>
+        </section>
+        <section>
+          <h2>Null Pointer Exception I</h2>
+          <pre className="fragment">
+            <code
+              className="java"
+              dangerouslySetInnerHTML={{
+                __html:
+                  'public class Dog {\n' +
+                  ' public String name;\n' +
+                  ' public Dog(String name) {\n' +
+                  '  this.name = name;\n' +
+                  ' }\n' +
+                  '}\n',
+              }}
+            ></code>
+          </pre>
+        </section>
+        <section>
+          <h2>Null Pointer Exception II</h2>
+          <pre className="fragment">
+            <code
+              className="java"
+              dangerouslySetInnerHTML={{
+                __html:
+                  'public class Main {\n' +
+                  '  public static void main(String[] args) {\n' +
+                  '    Dog doggo = new Dog(null);\n' +
+                  '    doggo.name.equals("Bello"); // funktioniert nicht\n' +
+                  ' }\n' +
+                  '}\n',
+              }}
+            ></code>
+          </pre>
+        </section>
+        <section>
+          <h2>Optional als Lösung</h2>
+          <pre className="fragment">
+            <code
+              className="java"
+              dangerouslySetInnerHTML={{
+                __html:
+                  'public class Dog {\n' +
+                  ' public Optional&lt;String&gt; name;\n' +
+                  ' public Dog(String name) {\n' +
+                  '  this.name = Optional.ofNullable(name);\n' +
+                  ' }\n' +
+                  '}\n',
+              }}
+            ></code>
+          </pre>
+        </section>
+        <section>
+          <h2>Optional - Wrapper um den echten Wert</h2>
+          <p className="fragment">
+            Die Optional Klasse verpackt den echten Wert hinter Methoden.
+          </p>
+          <p className="fragment">
+            Mithilfe von Methoden kann überprüft werden, ob ein Wert Null ist
+            oder nicht.
+          </p>
+        </section>
+        <section>
+          <h2>Optional - Methoden I</h2>
+          <pre className="fragment">
+            <code
+              className="java"
+              dangerouslySetInnerHTML={{
+                __html:
+                  'public class Main {\n' +
+                  '  public static void main(String[] args) {\n' +
+                  '    Optional&lt;String&gt; name = Name.createName();\n' +
+                  '    if(name.isPresent()) {\n' +
+                  '      System.out.println(name.get());\n' +
+                  '    }\n' +
+                  '    if(name.isEmpty()) {\n' +
+                  '      System.out.println("No Name");\n' +
+                  '    }\n' +
+                  ' }\n' +
+                  '}\n',
+              }}
+            ></code>
+          </pre>
+        </section>
+        <section>
+          <h2>Optional - Methoden II</h2>
+          <pre className="fragment">
+            <code
+              className="java"
+              dangerouslySetInnerHTML={{
+                __html:
+                  'public class Main {\n' +
+                  '  public static void main(String[] args) {\n' +
+                  '    Optional&lt;String&gt; name = Name.createName();\n' +
+                  '    name.ifPresent((value) -> System.out.println(value));\n' +
+                  '    name.ifPresentOrElse(\n' +
+                  '      (value) -> System.out.println(value),\n' +
+                  '      () -> System.out.println("No Name")\n' +
+                  '    );\n' +
+                  '  }\n' +
+                  '}\n',
+              }}
+            ></code>
+          </pre>
+        </section>
+        <section>
+          <h2>Demo</h2>
+          <ul>
+            <li className="fragment">Human Middlename</li>
+            <li className="fragment">University Search Student</li>
           </ul>
         </section>
       </section>
