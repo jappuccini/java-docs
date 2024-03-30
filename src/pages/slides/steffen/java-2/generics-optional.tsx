@@ -1,7 +1,9 @@
+import Link from '@docusaurus/Link';
 import Slides from '../../../../components/Slides';
 import { defaultInitSlides } from '../../../../components/Slides/initSlides';
+import { NKR } from '@site/src/components/Slides/nkr';
 
-export default function Generics(): JSX.Element {
+export default function GenericsAndOptional(): JSX.Element {
   return (
     <Slides initSlides={defaultInitSlides}>
       <section>
@@ -9,7 +11,7 @@ export default function Generics(): JSX.Element {
           <h2>Agenda</h2>
           <ul>
             <li className="fragment">Generics</li>
-            <li className="fragment">Optionals</li>
+            <li className="fragment">Optional</li>
           </ul>
         </section>
       </section>
@@ -285,11 +287,15 @@ export default function Generics(): JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Demo</h2>
+          <h2>
+            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/generics">
+              Demo - Generics
+            </Link>
+          </h2>
           <ul>
             <li className="fragment">spezifisches Football- und Hockeyteam</li>
             <li className="fragment">Generische Team Klasse</li>
-            <li className="fragment">Spieler eines Teams ausgeben</li>
+            <li className="fragment">Problem: Spieler eines Teams ausgeben</li>
           </ul>
         </section>
         <section>
@@ -332,7 +338,7 @@ export default function Generics(): JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Einschränken von Typplatzhaltern IV</h2>
+          <h2>Einschränken von Typparametern IV</h2>
           <pre>
             <code
               className="java"
@@ -359,17 +365,21 @@ export default function Generics(): JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Demo</h2>
+          <h2>
+            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/generics">
+              Demo - Generics
+            </Link>
+          </h2>
+          <span>Spieler eines Generischen Teams ausgeben </span>
           <ul>
-            <li className="fragment">
-              Spieler eines Generischen Teams ausgeben
-            </li>
+            <li className="fragment">Vererbung</li>
+            <li className="fragment">Interface</li>
           </ul>
         </section>
       </section>
       <section>
         <section>
-          <h2>Optionals</h2>
+          <h2>Optional</h2>
         </section>
         <section>
           <h2>Optional - Klasse</h2>
@@ -445,6 +455,7 @@ export default function Generics(): JSX.Element {
           <pre className="fragment">
             <code
               className="java"
+              data-line-numbers="3-9|3|4|5|7|8"
               dangerouslySetInnerHTML={{
                 __html:
                   'public class Main {\n' +
@@ -463,7 +474,7 @@ export default function Generics(): JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Optional - Methoden II</h2>
+          <h2>Optional - Methoden II*</h2>
           <pre className="fragment">
             <code
               className="java"
@@ -482,9 +493,16 @@ export default function Generics(): JSX.Element {
               }}
             ></code>
           </pre>
+          <div className="fragment">
+            <NKR />
+          </div>
         </section>
         <section>
-          <h2>Demo</h2>
+          <h2>
+            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/optional">
+              Demo - Optional
+            </Link>
+          </h2>
           <ul>
             <li className="fragment">Human Middlename</li>
             <li className="fragment">University Search Student</li>
