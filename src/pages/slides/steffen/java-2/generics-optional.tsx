@@ -12,6 +12,7 @@ export default function GenericsAndOptional(): JSX.Element {
           <ul>
             <li className="fragment">Generics</li>
             <li className="fragment">Optional</li>
+            <li className="fragment">Record I</li>
           </ul>
         </section>
       </section>
@@ -507,6 +508,50 @@ export default function GenericsAndOptional(): JSX.Element {
             <li className="fragment">Human Middlename</li>
             <li className="fragment">University Search Student</li>
           </ul>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h2>Record I</h2>
+        </section>
+        <section>
+          <h2>Records</h2>
+          <p className="fragment">
+            Ein Record ist eine Datenklasse, deren Attribute nicht verändert
+            werden können.
+          </p>
+          <p className="fragment">
+            Eine Datenklasse hat somit finale Attribute und Getter.
+          </p>
+        </section>
+        <section>
+          <h2>Beispiel Record Dog</h2>
+          <pre className="fragment">
+            <code
+              className="java"
+              dangerouslySetInnerHTML={{
+                __html: 'public record Dog(String name, int age) {}\n',
+              }}
+            ></code>
+          </pre>
+        </section>
+        <section>
+          <h2>Verwendung Record Dog</h2>
+          <pre className="fragment">
+            <code
+              className="java"
+              dangerouslySetInnerHTML={{
+                __html:
+                  'public class Main {\n' +
+                  '  public static void main(String[] args) {\n' +
+                  '    Dog bello = new Dog("Bello", 12);\n' +
+                  '    String name = bello.name();\n' +
+                  '    int age = bello.age();\n' +
+                  '  }\n' +
+                  '}\n',
+              }}
+            ></code>
+          </pre>
         </section>
       </section>
       <section>
