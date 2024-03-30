@@ -1,3 +1,4 @@
+import Link from '@docusaurus/Link';
 import Slides from '../../../../components/Slides';
 import { defaultInitSlides } from '../../../../components/Slides/initSlides';
 
@@ -22,7 +23,12 @@ export default function SetsMapsHashesRecords(): JSX.Element {
         <section>
           <h2>Konzept</h2>
           <ul>
-            <li className="fragment">Set ist ein Interface</li>
+            <li className="fragment">
+              <Link to="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html">
+                Set
+              </Link>{' '}
+              ist ein Interface
+            </li>
             <li className="fragment">Realisiert eine Menge</li>
             <li className="fragment">Vereinigung (Union)</li>
             <li className="fragment">Durchschnitt (Intersection)</li>
@@ -30,12 +36,21 @@ export default function SetsMapsHashesRecords(): JSX.Element {
           </ul>
         </section>
         <section>
-          <h2>HashSet - Klasse</h2>
+          <h2>
+            <Link to="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/HashSet.html">
+              HashSet
+            </Link>
+            - Klasse
+          </h2>
           <p className="fragment">implementiert das Set interface</p>
           <p className="fragment">hat einen Typparameter</p>
         </section>
         <section>
-          <h2>Demo - HashSet</h2>
+          <h2>
+            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/hashcollection/hashset">
+              Demo - HashSet
+            </Link>
+          </h2>
           <ul>
             <li className="fragment">Mengen erstellen (1-4) und (2,3,5)</li>
             <li className="fragment">Vereinigung (Union)</li>
@@ -75,7 +90,12 @@ export default function SetsMapsHashesRecords(): JSX.Element {
         <section>
           <h2>Konzept</h2>
           <ul>
-            <li className="fragment">Map ist ein Interface</li>
+            <li className="fragment">
+              <Link to="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html">
+                Map
+              </Link>{' '}
+              ist ein Interface
+            </li>
             <li className="fragment">Realisiert ein Schlüssel-Wert-Paar</li>
             <li className="fragment">Keine doppelten Schlüssel möglich</li>
             <li className="fragment">Existiert ein Schlüssel oder Wert</li>
@@ -96,14 +116,23 @@ export default function SetsMapsHashesRecords(): JSX.Element {
           </ul>
         </section>
         <section>
-          <h2>HashMap - Klasse</h2>
+          <h2>
+            <Link to="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/HashMap.html">
+              HashMap
+            </Link>
+            - Klasse
+          </h2>
           <p className="fragment">implementiert das Map interface</p>
           <p className="fragment">hat zwei Typparameter</p>
         </section>
         <section>
-          <h2>Demo - HashMap</h2>
+          <h2>
+            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/hashcollection/hashmap/studentgrades">
+              Demo - HashMap
+            </Link>
+          </h2>
           <ul>
-            <li className="fragment">Map erstellen (Student/Note)</li>
+            <li className="fragment">Map erstellen (Matrikelnummer/Note)</li>
             <li className="fragment">Hinzufügen und Löschen von Noten</li>
           </ul>
         </section>
@@ -139,7 +168,11 @@ export default function SetsMapsHashesRecords(): JSX.Element {
           <h2>Hashes</h2>
         </section>
         <section>
-          <h2>Demo HashMap</h2>
+          <h2>
+            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/hashcollection/hashmap/dogowners/bug">
+              Demo - Hashmap Dog Inventory
+            </Link>
+          </h2>
           <ul>
             <li className="fragment">ein Hund und deren Besitzer</li>
             <li className="fragment">Besitzer des Hundes ändern</li>
@@ -175,51 +208,54 @@ export default function SetsMapsHashesRecords(): JSX.Element {
         </section>
         <section>
           <h2>Beispiel Hashfunktion</h2>
+          <table>
+            <th>Name</th>
+            <th>Summe</th>
+            <th>Hash</th>
+            <tr>
+              <td className="fragment">Steffen</td>
+              <td
+                data-tooltip="S:83 t:116 e:101 f:102 f:102 e:101 n:110"
+                tabIndex={0}
+                className="fragment"
+              >
+                715
+              </td>
+              <td data-tooltip="715 % 4" tabIndex={0} className="fragment">
+                3
+              </td>
+            </tr>
+            <tr>
+              <td className="fragment">Mirco</td>
+              <td
+                data-tooltip="M:77 i:105 r:114 c:99 o:111"
+                tabIndex={0}
+                className="fragment"
+              >
+                506
+              </td>
+              <td data-tooltip="506 % 4" tabIndex={0} className="fragment">
+                2
+              </td>
+            </tr>
+            <tr>
+              <td className="fragment">Marianna</td>
+              <td
+                data-tooltip="M:77 a:97 r:114 i:105 a:97 n:110 n:110 a:97"
+                tabIndex={0}
+                className="fragment"
+              >
+                807
+              </td>
+              <td data-tooltip="807 % 4" tabIndex={0} className="fragment">
+                3
+              </td>
+            </tr>
+          </table>
           <p>
-            <table>
-              <th>Name</th>
-              <th>Summe</th>
-              <th>Hash</th>
-              <tr>
-                <td className="fragment">Steffen</td>
-                <td
-                  data-tooltip="S:83 t:116 e:101 f:102 f:102 e:101 n:110"
-                  tabIndex={0}
-                  className="fragment"
-                >
-                  715
-                </td>
-                <td data-tooltip="715 % 4" tabIndex={0} className="fragment">
-                  3
-                </td>
-              </tr>
-              <tr>
-                <td className="fragment">Mirco</td>
-                <td
-                  data-tooltip="M:77 i:105 r:114 c:99 o:111"
-                  tabIndex={0}
-                  className="fragment"
-                >
-                  506
-                </td>
-                <td data-tooltip="506 % 4" tabIndex={0} className="fragment">
-                  2
-                </td>
-              </tr>
-              <tr>
-                <td className="fragment">Marianna</td>
-                <td
-                  data-tooltip="M:77 a:97 r:114 i:105 a:97 n:110 n:110 a:97"
-                  tabIndex={0}
-                  className="fragment"
-                >
-                  807
-                </td>
-                <td data-tooltip="807 % 4" tabIndex={0} className="fragment">
-                  3
-                </td>
-              </tr>
-            </table>
+            <span className="fragment">Einwegfunktion, </span>
+            <span className="fragment">Deterministisch, </span>
+            <span className="fragment">Kollisionsbehaftet</span>
           </p>
         </section>
         <section>
@@ -242,10 +278,10 @@ export default function SetsMapsHashesRecords(): JSX.Element {
               falls Wert an diesem Index &rarr; Werte vergleichen
             </li>
             <li className="fragment">
-              falls Werte gleich --&gt; Wert ersetzen
+              falls Werte gleich &rarr; Wert ersetzen
             </li>
             <li className="fragment">
-              falls Werte ungleich --&gt;{' '}
+              falls Werte ungleich &rarr;{' '}
               <span
                 data-tooltip="Array vergrößern, Schlüssel neu berechnen, umsortieren"
                 tabIndex={0}
@@ -256,7 +292,12 @@ export default function SetsMapsHashesRecords(): JSX.Element {
           </ol>
         </section>
         <section>
-          <h2>Die Klasse Object</h2>
+          <h2>
+            Die Klasse{' '}
+            <Link to="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html">
+              Object
+            </Link>
+          </h2>
           <ul>
             <li className="fragment" tabIndex={0}>
               hashCode
@@ -281,7 +322,11 @@ export default function SetsMapsHashesRecords(): JSX.Element {
           </p>
         </section>
         <section>
-          <h2>Demo HashCode und Equals</h2>
+          <h2>
+            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/hashcollection/hashmap/dogowners/hashcodeandequals">
+              Demo - HashCode und Equals
+            </Link>
+          </h2>
           <ul>
             <li className="fragment">hashCode überschreiben und loggen</li>
             <li className="fragment">equals überschreiben und loggen</li>
@@ -289,9 +334,6 @@ export default function SetsMapsHashesRecords(): JSX.Element {
             <li className="fragment">hashCode implementieren</li>
             <li className="fragment">equals implementieren</li>
           </ul>
-        </section>
-        <section>
-          <h2>Frag jetzt!</h2>
         </section>
       </section>
       <section>
@@ -382,7 +424,11 @@ export default function SetsMapsHashesRecords(): JSX.Element {
           </ul>
         </section>
         <section>
-          <h2>Demo - Record vs Class</h2>
+          <h2>
+            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/hashcollection/hashmap/dogowners/records">
+              Demo - Record vs Class
+            </Link>
+          </h2>
           <ul>
             <li className="fragment">Cat Klasse &rarr; Cat Record</li>
             <li className="fragment">equals</li>
