@@ -8,18 +8,16 @@ export default function Recap(): JSX.Element {
         <section>
           <h2>Agenda</h2>
           <ul>
-            <li className="fragment">Wiederholung Java I</li>
-            <li className="fragment">Besprechung Klausur</li>
+            <li className="fragment">Wiederholung</li>
+            <li className="fragment">Klausurbesprechung</li>
             <li className="fragment">Fortgeschrittene Programmierung</li>
           </ul>
         </section>
       </section>
       <section>
         <section>
-          <h2>Wiederholung Java I</h2>
+          <h2>Wiederholung</h2>
         </section>
-      </section>
-      <section>
         <section>
           <h2>Datentypen</h2>
         </section>
@@ -47,11 +45,6 @@ export default function Recap(): JSX.Element {
           </p>
         </section>
         <section>
-          <h2>Frag jetzt!</h2>
-        </section>
-      </section>
-      <section>
-        <section>
           <h2>Methoden</h2>
         </section>
         <section>
@@ -75,11 +68,6 @@ export default function Recap(): JSX.Element {
           <span className="fragment fade-in-then-out">Parameter</span>
           <span className="fragment fade-in-then-out">Methodenrumpf</span>
         </section>
-        <section>
-          <h2>Frag jetzt!</h2>
-        </section>
-      </section>
-      <section>
         <section>
           <h2>Operatoren</h2>
         </section>
@@ -126,9 +114,6 @@ export default function Recap(): JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Frag jetzt!</h2>
-        </section>
-        <section>
           <h2>Vergleichsoperatoren</h2>
           <pre>
             <code
@@ -149,9 +134,6 @@ export default function Recap(): JSX.Element {
               }}
             ></code>
           </pre>
-        </section>
-        <section>
-          <h2>Frag jetzt!</h2>
         </section>
         <section>
           <h2>Logische Operatoren I - AND</h2>
@@ -221,11 +203,6 @@ export default function Recap(): JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Frag jetzt!</h2>
-        </section>
-      </section>
-      <section>
-        <section>
           <h2>Kontrollstrukturen</h2>
         </section>
         <section>
@@ -253,9 +230,6 @@ export default function Recap(): JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Frag jetzt!</h2>
-        </section>
-        <section>
           <h2>switch</h2>
           <pre>
             <code
@@ -279,9 +253,6 @@ export default function Recap(): JSX.Element {
               }}
             ></code>
           </pre>
-        </section>
-        <section>
-          <h2>Frag jetzt!</h2>
         </section>
         <section>
           <h2>while-Schleife</h2>
@@ -385,11 +356,6 @@ export default function Recap(): JSX.Element {
           </ul>
         </section>
         <section>
-          <h2>Frag jetzt!</h2>
-        </section>
-      </section>
-      <section>
-        <section>
           <h2>Arrays</h2>
         </section>
         <section>
@@ -433,11 +399,6 @@ export default function Recap(): JSX.Element {
             ></code>
           </pre>
         </section>
-        <section>
-          <h2>Frag jetzt!</h2>
-        </section>
-      </section>
-      <section>
         <section>
           <h2>Klassen und Objekte</h2>
         </section>
@@ -495,9 +456,6 @@ export default function Recap(): JSX.Element {
               }}
             ></code>
           </pre>
-        </section>
-        <section>
-          <h2>Frag jetzt!</h2>
         </section>
         <section>
           <h2>Konstruktor</h2>
@@ -564,11 +522,6 @@ export default function Recap(): JSX.Element {
             ></code>
           </pre>
         </section>
-        <section>
-          <h2>Frag jetzt!</h2>
-        </section>
-      </section>
-      <section>
         <section>
           <h2>Vererbung</h2>
         </section>
@@ -647,11 +600,6 @@ export default function Recap(): JSX.Element {
             <li className="fragment">super</li>
           </ul>
         </section>
-        <section>
-          <h2>Frag jetzt!</h2>
-        </section>
-      </section>
-      <section>
         <section>
           <h2>Polymorphie</h2>
         </section>
@@ -736,11 +684,6 @@ export default function Recap(): JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Frag jetzt!</h2>
-        </section>
-      </section>
-      <section>
-        <section>
           <h2>Modifier</h2>
         </section>
         <section>
@@ -790,9 +733,6 @@ export default function Recap(): JSX.Element {
             ></code>
           </pre>
           <p>Von dieser Klasse kann nicht geerbt werden.</p>
-        </section>
-        <section>
-          <h2>Frag jetzt!</h2>
         </section>
         <section>
           <h2>Public Modifier - Attribut</h2>
@@ -991,9 +931,6 @@ export default function Recap(): JSX.Element {
               }}
             ></code>
           </pre>
-        </section>
-        <section>
-          <h2>Frag jetzt!</h2>
         </section>
         <section>
           <h2>Public Modifier - Methode</h2>
@@ -1226,11 +1163,6 @@ export default function Recap(): JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Frag jetzt!</h2>
-        </section>
-      </section>
-      <section>
-        <section>
           <h2>Enumeration</h2>
         </section>
         <section>
@@ -1300,19 +1232,11 @@ export default function Recap(): JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Frag jetzt!</h2>
-        </section>
-      </section>
-      <section>
-        <section>
           <h2>Interfaces</h2>
         </section>
         <section>
           <h2>Interfaces</h2>
-          <p>
-            Definieren Attribute und Methoden unabhängig von der
-            Vererbungshierarchie.
-          </p>
+          <p>Definieren Methoden unabhängig von der Vererbungshierarchie.</p>
           <p className="fragment">
             Dient als Schnittstelle zwischen Ersteller und Verwender einer
             Funktionalität.
@@ -1386,11 +1310,6 @@ export default function Recap(): JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Frag jetzt!</h2>
-        </section>
-      </section>
-      <section>
-        <section>
           <h2>Comparator</h2>
         </section>
         <section>
@@ -1442,11 +1361,6 @@ export default function Recap(): JSX.Element {
             ></code>
           </pre>
         </section>
-        <section>
-          <h2>Frag jetzt!</h2>
-        </section>
-      </section>
-      <section>
         <section>
           <h2>Exceptions</h2>
         </section>
@@ -1528,15 +1442,7 @@ export default function Recap(): JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Frag jetzt!</h2>
-        </section>
-      </section>
-      <section>
-        <section>
           <h2>Klassendiagramme (Doku)</h2>
-        </section>
-        <section>
-          <h2>Frag jetzt!</h2>
         </section>
       </section>
       <section>
@@ -1558,7 +1464,7 @@ export default function Recap(): JSX.Element {
         <section>
           <h2>Rest of the day</h2>
           <ul>
-            <li className="fragment">Wiederholung Java I</li>
+            <li className="fragment">Wiederholung</li>
             <li className="fragment">Entwicklungsumgebung einrichten</li>
           </ul>
         </section>
