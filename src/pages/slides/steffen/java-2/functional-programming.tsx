@@ -72,7 +72,7 @@ export default function FunctionalProgramming(): JSX.Element {
         </section>
         <section>
           <h2>
-            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/functionalprogramming">
+            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/functionalprogramming">
               Demo - Lambda Funktionen
             </Link>
           </h2>
@@ -335,7 +335,7 @@ export default function FunctionalProgramming(): JSX.Element {
         </section>
         <section>
           <h2>
-            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/functionalinterfaces/owninterfaces">
+            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/functionalinterfaces/owninterfaces">
               Demo - Eigene Funktionale Interfaces
             </Link>
           </h2>
@@ -472,7 +472,7 @@ export default function FunctionalProgramming(): JSX.Element {
         </section>
         <section>
           <h2>
-            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/functionalinterfaces/knowninterfaces">
+            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/functionalinterfaces/knowninterfaces">
               Demo - Allgemeine Funktionale Interfaces
             </Link>
           </h2>
@@ -499,7 +499,12 @@ export default function FunctionalProgramming(): JSX.Element {
           </p>
         </section>
         <section>
-          <h2>Beispiel ArrayList</h2>
+          <h2>
+            Beispiel ArrayList -{' '}
+            <Link to="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html#forEach(java.util.function.Consumer)">
+              For Each
+            </Link>
+          </h2>
           <pre>
             <code
               className="java"
@@ -534,7 +539,7 @@ export default function FunctionalProgramming(): JSX.Element {
         </section>
         <section>
           <h2>
-            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/functionalinterfaces/methodreferences">
+            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/functionalinterfaces/methodreferences">
               Demo - Methodenreferenzen
             </Link>
           </h2>
@@ -547,8 +552,16 @@ export default function FunctionalProgramming(): JSX.Element {
       <section>
         <h2>Rest of the Day</h2>
         <ul>
-          <li className="fragment">TBD</li>
+          <li tabIndex={0} className="fragment">
+            <Link to="https://jappuccini.github.io/java-docs/exercises/lambdas/">
+              Lambdas
+            </Link>
+          </li>
         </ul>
+        <p className="fragment font-medium">
+          Bei Lambdas 01 kann die Teilaufgabe mit anonymer Klasse ignoriert
+          werden.
+        </p>
       </section>
     </Slides>
   );
