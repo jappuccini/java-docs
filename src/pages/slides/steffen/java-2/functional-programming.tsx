@@ -552,7 +552,7 @@ export default function FunctionalProgramming(): JSX.Element {
       <section>
         <h2>Rest of the Day</h2>
         <ul>
-          <li tabIndex={0} className="fragment">
+          <li className="fragment">
             <Link to="https://jappuccini.github.io/java-docs/exercises/lambdas/">
               Lambdas
             </Link>

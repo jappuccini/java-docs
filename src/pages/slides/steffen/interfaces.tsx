@@ -38,61 +38,6 @@ export default function Interfaces(): JSX.Element {
       </section>
       <section>
         <section>
-          <h2>Variable Argumentlisten*</h2>
-          <p>werden als VarArgs bezeichnet</p>
-          <NKR />
-        </section>
-        <section>
-          <h2>VarArgs</h2>
-          <ul>
-            <li className="fragment">stehen am Ende der Parameterliste</li>
-            <li className="fragment">nur ein VarArgs Parameter je Methode</li>
-            <li className="fragment">
-              VarArgs Parameter ist ein Array von einem Datentyp
-            </li>
-            <li className="fragment">
-              Argumente werden kommagetrennt definiert
-            </li>
-          </ul>
-        </section>
-        <section>
-          <p>Implementieren einer Methode mit VarArgs</p>
-          <pre>
-            <code
-              className="java"
-              data-line-numbers="1-5|1|2-4"
-              dangerouslySetInnerHTML={{
-                __html:
-                  'public void addCars(Car... cars) {\n' +
-                  '  for(Car car : cars) {\n' +
-                  '    System.out.println(car.getBrand());\n' +
-                  '  }\n' +
-                  '}',
-              }}
-            ></code>
-          </pre>
-        </section>
-        <section>
-          <p>Verwenden einer Methode mit VarArgs</p>
-          <pre>
-            <code
-              className="java"
-              data-line-numbers="1-5|3-4"
-              dangerouslySetInnerHTML={{
-                __html:
-                  'public static void main(String[] args) {\n' +
-                  '  //...\n' +
-                  '  carManager.addCars(new Car(), new Car());\n' +
-                  '  carManager.addCars(new Car());\n' +
-                  '  //...\n' +
-                  '}',
-              }}
-            ></code>
-          </pre>
-        </section>
-      </section>
-      <section>
-        <section>
           <h2>Interfaces</h2>
         </section>
         <section>

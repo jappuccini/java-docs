@@ -629,6 +629,71 @@ export default function MethodsAndOperators(): JSX.Element {
           <p className="fragment">Demo</p>
         </section>
       </section>
+      <section>
+        <section>
+          <h2>Variable Argumentlisten*</h2>
+          <p className="fragment foot-note">
+            werden auch als VarArgs bezeichnet
+          </p>
+          <NKR />
+        </section>
+        <section>
+          <h2>Variable Argumentlisten</h2>
+          <p>
+            Damit eine Methode eine variable Anzahl von Argumenten eines
+            gleichen Datentyps verarbeiten kann, muss ein Parameter als variable
+            Argumentliste definiert werden.
+          </p>
+        </section>
+        <section>
+          <h2>Beispiel Verwendung</h2>
+          <pre>
+            <code
+              className="java"
+              data-line-numbers="1-5|2|3|4"
+              dangerouslySetInnerHTML={{
+                __html:
+                  'public static void main(Stirng[] args) {\n' +
+                  '  int twoParameters   = Example.sum(1, 2);\n' +
+                  '  int threeParameters = Example.sum(1, 2, 3);\n' +
+                  '  int fourParameters  = Example.sum(1, 2, 3, 4);\n' +
+                  '}',
+              }}
+            ></code>
+          </pre>
+        </section>
+        <section>
+          <h2>Beispiel Implementierung</h2>
+          <pre>
+            <code
+              className="java"
+              data-line-numbers="|1-2|3-7"
+              dangerouslySetInnerHTML={{
+                __html:
+                  'public static int sum(int... numbers) {\n' +
+                  '  // numbers ist ein Array\n' +
+                  '  int sum = 0;\n' +
+                  '  for(int number : numbers) {\n' +
+                  '    sum = sum + number;\n' +
+                  '  }\n' +
+                  '  return sum;\n' +
+                  '}',
+              }}
+            ></code>
+          </pre>
+        </section>
+        <section>
+          <h2>VarArgs</h2>
+          <ul>
+            <li className="fragment">stehen am Ende der Parameterliste</li>
+            <li className="fragment">nur ein VarArgs Parameter je Methode</li>
+            <li className="fragment">VarArgs Parameter ist ein Array</li>
+            <li className="fragment">
+              Argumente werden kommagetrennt definiert
+            </li>
+          </ul>
+        </section>
+      </section>
     </Slides>
   );
 }
