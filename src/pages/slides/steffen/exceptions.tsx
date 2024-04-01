@@ -105,11 +105,11 @@ export default function Exceptions(): JSX.Element {
         <section>
           <h2>Schlüsselwörter</h2>
           <ul>
-            <li className="fragment">throw -&gt; Methode</li>
-            <li className="fragment">throws -&gt; Methodensignatur</li>
-            <li className="fragment">try -&gt; ohne Error</li>
-            <li className="fragment">catch -&gt; falls Error </li>
-            <li className="fragment">finally -&gt; immer </li>
+            <li className="fragment">throw &rarr; Methode</li>
+            <li className="fragment">throws &rarr; Methodensignatur</li>
+            <li className="fragment">try &rarr; ohne Error</li>
+            <li className="fragment">catch &rarr; falls Error </li>
+            <li className="fragment">finally &rarr; immer </li>
           </ul>
         </section>
       </section>
