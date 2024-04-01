@@ -544,6 +544,19 @@ export default function MethodsAndOperators(): JSX.Element {
           <p className="fragment">Schlüsselwort new ignorieren</p>
         </section>
         <section>
+          <h2>Wie kann ich die Größe eines Arrays ermitteln?</h2>
+          <pre className="fragment">
+            <code
+              className="java"
+              dangerouslySetInnerHTML={{
+                __html:
+                  'int[] numbers = { 0, 1, 2, 3, 4 } \n' +
+                  'int size = numbers.length; // size ist 5\n',
+              }}
+            ></code>
+          </pre>
+        </section>
+        <section>
           <table className="fragment">
             <thead>
               <tr>
@@ -639,11 +652,24 @@ export default function MethodsAndOperators(): JSX.Element {
             ></code>
           </pre>
           <p className="fragment">
-            &lt;Integer&gt; sind Generics --&gt; Java 2
+            &lt;Integer&gt; sind Generics &rarr; Java 2
           </p>
           <p className="fragment">
             new kann erst mit Objekten verstanden werden
           </p>
+        </section>
+        <section>
+          <h2>Wie kann ich die Größe einer ArrayList ermitteln?</h2>
+          <pre className="fragment">
+            <code
+              className="java"
+              dangerouslySetInnerHTML={{
+                __html:
+                  'ArrayList&lt;Integer&gt; numbers = new ArrayList&lt;&gt;();\n' +
+                  'int size = numbers.size(); // size ist 0\n',
+              }}
+            ></code>
+          </pre>
         </section>
         <section>
           <h2>Demo Array und ArrayList</h2>

@@ -72,34 +72,6 @@ export default function MethodsAndOperators(): JSX.Element {
           </ul>
         </section>
         <section>
-          <h2>Hilfsmethoden der Klasse String</h2>
-          <pre>
-            <code
-              className="java"
-              dangerouslySetInnerHTML={{
-                __html:
-                  'String name = "Steffen";\n' +
-                  'char buchstabe = name.charAt(2);\n' +
-                  'System.out.println(buchstabe); // gibt "e" aus',
-              }}
-            ></code>
-          </pre>
-        </section>
-        <section>
-          <h2>Konvertieren von double in int</h2>
-          <pre>
-            <code
-              className="java"
-              dangerouslySetInnerHTML={{
-                __html:
-                  'double doubleNumber = 3.5;\n' +
-                  'int intNumber  = (int) doubleNumber;\n' +
-                  'System.out.println(intNumber); // gibt 3 aus',
-              }}
-            ></code>
-          </pre>
-        </section>
-        <section>
           <h2>Zufallszahlen generieren</h2>
           <pre>
             <code

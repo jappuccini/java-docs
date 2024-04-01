@@ -14,6 +14,7 @@ export default function DataTypesAndDataObjects(): JSX.Element {
             <li className="fragment">Einführung Git</li>
             <li className="fragment">Datentypen</li>
             <li className="fragment">Datenobjekte</li>
+            <li className="fragment">Operationen mit Datentypen</li>
             <li className="fragment">Zusammenfassung</li>
           </ul>
         </section>
@@ -272,6 +273,43 @@ export default function DataTypesAndDataObjects(): JSX.Element {
         </section>
         <section>
           <h2>Demo Deklaration & Initialisierung</h2>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h2>Operationen mit Datentypen</h2>
+        </section>
+        <section>
+          <h2>double in int konvertieren</h2>
+          <p>Beim Konvertieren von double zu int wird immer abgerundet.</p>
+        </section>
+        <section>
+          <h2>Beispiel double in int</h2>
+          <pre>
+            <code
+              className="java"
+              dangerouslySetInnerHTML={{
+                __html:
+                  'double doubleNumber = 3.5;\n' +
+                  'int intNumber = (int) doubleNumber;\n' +
+                  'System.out.println(intNumber); // gibt 3 aus',
+              }}
+            ></code>
+          </pre>
+        </section>
+        <section>
+          <h2>Hilfsmethoden der Klasse String</h2>
+          <pre>
+            <code
+              className="java"
+              dangerouslySetInnerHTML={{
+                __html:
+                  'String name = "Steffen";\n' +
+                  'char buchstabe = name.charAt(2);\n' +
+                  'System.out.println(buchstabe); // gibt "e" aus',
+              }}
+            ></code>
+          </pre>
         </section>
       </section>
       <section>
