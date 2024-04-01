@@ -337,11 +337,11 @@ export default function GenericsAndMaps(): JSX.Element {
           <h4>Beispiel Schlüssel-Wert-Paare</h4>
           <ul>
             <li className="fragment">
-              Studentendaten -&gt; MatrikelNummer, Student
+              Studentendaten &rarr; MatrikelNummer, Student
             </li>
-            <li className="fragment">Produktinventar -&gt; Produkt, Anzahl</li>
-            <li className="fragment">StadtInfos -&gt; Stadtname, CityInfo</li>
-            <li className="fragment">Hauptstädte -&gt; Land, Hauptstadt</li>
+            <li className="fragment">Produktinventar &rarr; Produkt, Anzahl</li>
+            <li className="fragment">StadtInfos &rarr; Stadtname, CityInfo</li>
+            <li className="fragment">Hauptstädte &rarr; Land, Hauptstadt</li>
           </ul>
         </section>
         <section>
