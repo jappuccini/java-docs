@@ -241,13 +241,38 @@ export default function MethodsAndOperators(): JSX.Element {
           </ul>
         </section>
         <section>
-          <h2>Ternary Operator</h2>
-          <NKR />
+          <h2>Ternary Operator*</h2>
           <ul>
             <li className="fragment">Kurzform von if-else</li>
             <li className="fragment">macht in return statement Sinn</li>
-            <li className="fragment">Demo Ternary Operator</li>
           </ul>
+          <NKR />
+        </section>
+        <section>
+          <h2>Beispiel Ternary Operator*</h2>
+          <pre>
+            <code
+              className="java"
+              data-line-numbers="2-8|10"
+              dangerouslySetInnerHTML={{
+                __html:
+                  'public static void main(String[] args) {\n' +
+                  '  String output;\n' +
+                  '  int availableCash = 300;\n' +
+                  '  if(availableCash > 0) {\n' +
+                  '    output = "Patte fließt";\n' +
+                  '  } else {\n' +
+                  '    output = "Pleite";\n' +
+                  '  }\n' +
+                  '  \n' +
+                  '  output = availableCash > 0 ? "Patte fließt" : "Pleite";\n' +
+                  '}',
+              }}
+            ></code>
+          </pre>
+        </section>
+        <section>
+          <h2>Demo Ternary Operator</h2>
         </section>
         <section>
           <h2>Warum braucht man Schleifen?</h2>
