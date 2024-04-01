@@ -1,7 +1,6 @@
 import Link from '@docusaurus/Link';
 import Slides from '../../../../components/Slides';
 import { defaultInitSlides } from '../../../../components/Slides/initSlides';
-import { NKR } from '../../../../components/Slides/nkr';
 
 export default function StreamApi(): JSX.Element {
   return (
@@ -63,7 +62,7 @@ export default function StreamApi(): JSX.Element {
         </section>
         <section>
           <h2>
-            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/functionalinterfaces/methodreferences">
+            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/streamapi/intro">
               Demo - Intro Stream API
             </Link>
           </h2>
@@ -117,7 +116,11 @@ export default function StreamApi(): JSX.Element {
           </ul>
         </section>
         <section>
-          <h2>Demo Stream API</h2>
+          <h2>
+            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/streamapi/pipeline">
+              Demo - Stream API
+            </Link>
+          </h2>
           <ul>
             <li className="fragment">Intermediate Optional</li>
             <li className="fragment">
@@ -134,9 +137,6 @@ export default function StreamApi(): JSX.Element {
             <li className="fragment">Intermediate Operations</li>
             <li className="fragment">Terminal Operations</li>
           </ul>
-        </section>
-        <section>
-          <h2>Frag jetzt!</h2>
         </section>
       </section>
       <section>
@@ -205,9 +205,6 @@ export default function StreamApi(): JSX.Element {
               }}
             ></code>
           </pre>
-        </section>
-        <section>
-          <h2>Frag jetzt!</h2>
         </section>
       </section>
       <section>
@@ -448,7 +445,11 @@ export default function StreamApi(): JSX.Element {
           </p>
         </section>
         <section>
-          <h2>Demo Lambda Funktionen Auslagern</h2>
+          <h2>
+            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/streamapi/review">
+              Demo - Lambda Funktionen Auslagern
+            </Link>
+          </h2>
           <ul>
             <li className="fragment">Review von Stream Api Examples</li>
             <li className="fragment">Attribut: minimumFirstName</li>
@@ -456,7 +457,6 @@ export default function StreamApi(): JSX.Element {
             <li className="fragment">Attribut: toFullName</li>
             <li className="fragment">Methode: olderThanYears</li>
             <li className="fragment">Methode: fullNameIsLongerThan</li>
-            <li className="fragment">Number Example Limit und Reihenfolge</li>
           </ul>
         </section>
       </section>
@@ -641,15 +641,19 @@ export default function StreamApi(): JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Demo</h2>
+          <h2>
+            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/streamapi/collectors">
+              Demo - Collectors
+            </Link>
+          </h2>
           <ul>
             <li className="fragment">
               <Link to="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/Collectors.html">
                 Collectors Klasse
               </Link>
             </li>
-            <li className="fragment">Collectors.toMap</li>
-            <li className="fragment">Collectors.groupingBy</li>
+            <li className="fragment">toMap</li>
+            <li className="fragment">groupingBy</li>
           </ul>
         </section>
         <section>
@@ -870,8 +874,11 @@ export default function StreamApi(): JSX.Element {
       <section>
         <h2>Rest of the Day</h2>
         <ul>
-          <li className="fragment">Lambda Aufgaben</li>
-          <li className="fragment">Stream API Aufgaben</li>
+          <li className="fragment">
+            <Link to="https://jappuccini.github.io/java-docs/exercises/java-stream-api/">
+              Stream API Aufgaben
+            </Link>
+          </li>
         </ul>
       </section>
     </Slides>

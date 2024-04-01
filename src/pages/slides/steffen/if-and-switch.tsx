@@ -241,13 +241,38 @@ export default function MethodsAndOperators(): JSX.Element {
           </ul>
         </section>
         <section>
-          <h2>Ternary Operator</h2>
-          <NKR />
+          <h2>Ternary Operator*</h2>
           <ul>
             <li className="fragment">Kurzform von if-else</li>
             <li className="fragment">macht in return statement Sinn</li>
-            <li className="fragment">Demo Ternary Operator</li>
           </ul>
+          <NKR />
+        </section>
+        <section>
+          <h2>Beispiel Ternary Operator*</h2>
+          <pre>
+            <code
+              className="java"
+              data-line-numbers="2-8|10"
+              dangerouslySetInnerHTML={{
+                __html:
+                  'public static void main(String[] args) {\n' +
+                  '  String output;\n' +
+                  '  int availableCash = 300;\n' +
+                  '  if(availableCash > 0) {\n' +
+                  '    output = "Patte fließt";\n' +
+                  '  } else {\n' +
+                  '    output = "Pleite";\n' +
+                  '  }\n' +
+                  '  \n' +
+                  '  output = availableCash > 0 ? "Patte fließt" : "Pleite";\n' +
+                  '}',
+              }}
+            ></code>
+          </pre>
+        </section>
+        <section>
+          <h2>Demo Ternary Operator</h2>
         </section>
         <section>
           <h2>Warum braucht man Schleifen?</h2>
@@ -519,6 +544,19 @@ export default function MethodsAndOperators(): JSX.Element {
           <p className="fragment">Schlüsselwort new ignorieren</p>
         </section>
         <section>
+          <h2>Wie kann ich die Größe eines Arrays ermitteln?</h2>
+          <pre className="fragment">
+            <code
+              className="java"
+              dangerouslySetInnerHTML={{
+                __html:
+                  'int[] numbers = { 0, 1, 2, 3, 4 } \n' +
+                  'int size = numbers.length; // size ist 5\n',
+              }}
+            ></code>
+          </pre>
+        </section>
+        <section>
           <table className="fragment">
             <thead>
               <tr>
@@ -614,11 +652,24 @@ export default function MethodsAndOperators(): JSX.Element {
             ></code>
           </pre>
           <p className="fragment">
-            &lt;Integer&gt; sind Generics --&gt; Java 2
+            &lt;Integer&gt; sind Generics &rarr; Java 2
           </p>
           <p className="fragment">
             new kann erst mit Objekten verstanden werden
           </p>
+        </section>
+        <section>
+          <h2>Wie kann ich die Größe einer ArrayList ermitteln?</h2>
+          <pre className="fragment">
+            <code
+              className="java"
+              dangerouslySetInnerHTML={{
+                __html:
+                  'ArrayList&lt;Integer&gt; numbers = new ArrayList&lt;&gt;();\n' +
+                  'int size = numbers.size(); // size ist 0\n',
+              }}
+            ></code>
+          </pre>
         </section>
         <section>
           <h2>Demo Array und ArrayList</h2>
@@ -627,6 +678,71 @@ export default function MethodsAndOperators(): JSX.Element {
         <section>
           <h2>Was sind jetzt die args in der main Methode?</h2>
           <p className="fragment">Demo</p>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h2>Variable Argumentlisten*</h2>
+          <p className="fragment foot-note">
+            werden auch als VarArgs bezeichnet
+          </p>
+          <NKR />
+        </section>
+        <section>
+          <h2>Variable Argumentlisten</h2>
+          <p>
+            Damit eine Methode eine variable Anzahl von Argumenten eines
+            gleichen Datentyps verarbeiten kann, muss ein Parameter als variable
+            Argumentliste definiert werden.
+          </p>
+        </section>
+        <section>
+          <h2>Beispiel Verwendung</h2>
+          <pre>
+            <code
+              className="java"
+              data-line-numbers="1-5|2|3|4"
+              dangerouslySetInnerHTML={{
+                __html:
+                  'public static void main(Stirng[] args) {\n' +
+                  '  int twoParameters   = Example.sum(1, 2);\n' +
+                  '  int threeParameters = Example.sum(1, 2, 3);\n' +
+                  '  int fourParameters  = Example.sum(1, 2, 3, 4);\n' +
+                  '}',
+              }}
+            ></code>
+          </pre>
+        </section>
+        <section>
+          <h2>Beispiel Implementierung</h2>
+          <pre>
+            <code
+              className="java"
+              data-line-numbers="|1-2|3-7"
+              dangerouslySetInnerHTML={{
+                __html:
+                  'public static int sum(int... numbers) {\n' +
+                  '  // numbers ist ein Array\n' +
+                  '  int sum = 0;\n' +
+                  '  for(int number : numbers) {\n' +
+                  '    sum = sum + number;\n' +
+                  '  }\n' +
+                  '  return sum;\n' +
+                  '}',
+              }}
+            ></code>
+          </pre>
+        </section>
+        <section>
+          <h2>VarArgs</h2>
+          <ul>
+            <li className="fragment">stehen am Ende der Parameterliste</li>
+            <li className="fragment">nur ein VarArgs Parameter je Methode</li>
+            <li className="fragment">VarArgs Parameter ist ein Array</li>
+            <li className="fragment">
+              Argumente werden kommagetrennt definiert
+            </li>
+          </ul>
         </section>
       </section>
     </Slides>

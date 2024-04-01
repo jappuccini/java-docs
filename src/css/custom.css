@@ -73,3 +73,7 @@ code > table {
   left: 0;
   right: 0;
 }
+
+.reveal .font-medium {
+  font-size: medium;
+}
