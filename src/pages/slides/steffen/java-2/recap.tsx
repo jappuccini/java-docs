@@ -1452,11 +1452,67 @@ export default function Recap(): JSX.Element {
       </section>
       <section>
         <section>
+          <h2>Organisatorsiches</h2>
+        </section>
+        <section>
           <h2>Fortgeschrittene Programmierung</h2>
           <ul>
+            <li className="fragment">Algorithmen und Datenstrukturen</li>
             <li className="fragment">Generische Programmierung</li>
             <li className="fragment">Funktionale Programmierung</li>
-            <li className="fragment">Algorithmen und Datenstrukturen</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Prüfungsleistungen</h2>
+          <ul>
+            <li className="fragment">Projektbericht (50 Punkte)</li>
+            <li className="fragment">Klausur am PC (50 Punkte)</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Projektbericht - Termine</h2>
+          <ul>
+            <li className="fragment">
+              30.04.2024 - Problem und Daten in Moodle
+            </li>
+            <li className="fragment">
+              30.05.2025 - Abgabe Projektbericht (Moodle/Papier)
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Projektbericht - Problem</h2>
+          <ul>
+            <li className="fragment">findet ein Problem (im Unternehmen)</li>
+            <li className="fragment">(er)findet dazu Daten</li>
+            <li className="fragment">mindestens eine Verknüpfung</li>
+            <li className="fragment">
+              keine doppelten Themen (Selbstorganisiert)
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Projektbericht - Ergebnis am 30.04</h2>
+          <ul>
+            <li className="fragment">Problembeschreibung (Textdatei)</li>
+            <li className="fragment">
+              Tabelle mit mindestens 20 Datensätzen (CSV-Datei)
+            </li>
+            <li className="fragment">Hochladen in Moodle</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Projektbericht - Ergebnis am 31.05</h2>
+          <ul>
+            <li className="fragment">Erklärung am 30.04</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Klausur am PC</h2>
+          <ul>
+            <li className="fragment">Ablauf wie Test/Klausur</li>
+            <li className="fragment">VSCode anstatt Notepad++</li>
+            <li className="fragment">Keine Fragenbeschreibung in Moodle</li>
           </ul>
         </section>
       </section>
