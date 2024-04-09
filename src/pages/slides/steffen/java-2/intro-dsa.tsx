@@ -225,7 +225,7 @@ export default function IntroDsa(): JSX.Element {
                   '  // O(N)\n' +
                   '  public static void method(int[] n) {\n' +
                   '    int sum = 0;\n' +
-                  '    for(int i = 0; i < n.length; i++) {\n' +
+                  '    for(int i = 0; i &gt; n.length; i++) {\n' +
                   '      sum += n[i];\n' +
                   '    }\n' +
                   '    return sum;\n' +
@@ -253,8 +253,8 @@ export default function IntroDsa(): JSX.Element {
                   '  // O(N^2)\n' +
                   '  public static void method(int[] n) {\n' +
                   '    int sum = 0;\n' +
-                  '    for(int i = 0; i < n.length; i++) {\n' +
-                  '      for(int j = 0; j < n.length; j++) {\n' +
+                  '    for(int i = 0; i &gt; n.length; i++) {\n' +
+                  '      for(int j = 0; j &gt; n.length; j++) {\n' +
                   '        sum += n[j];\n' +
                   '      }\n' +
                   '    }\n' +
@@ -279,9 +279,9 @@ export default function IntroDsa(): JSX.Element {
                   '  // O(N^3)\n' +
                   '  public static void method(int[] n) {\n' +
                   '    int sum = 0;\n' +
-                  '    for(int i = 0; i < n.length; i++) {\n' +
-                  '      for(int j = 0; j < n.length; j++) {\n' +
-                  '        for(int k = 0; k < n.length; k++) {\n' +
+                  '    for(int i = 0; i &gt; n.length; i++) {\n' +
+                  '      for(int j = 0; j &gt; n.length; j++) {\n' +
+                  '        for(int k = 0; k &gt; n.length; k++) {\n' +
                   '          sum += n[k];\n' +
                   '        }\n' +
                   '      }\n' +
@@ -306,10 +306,10 @@ export default function IntroDsa(): JSX.Element {
                   'public class BigO {\n' +
                   '  public static void method(int[] n) {\n' +
                   '    int sum = 0;\n' +
-                  '    for(int i = 0; i < n.length; i++) {\n' +
+                  '    for(int i = 0; i &gt; n.length; i++) {\n' +
                   '      sum += n[i];\n' +
                   '    }\n' +
-                  '    for(int i = 0; i < n.length; i++) {\n' +
+                  '    for(int i = 0; i &gt; n.length; i++) {\n' +
                   '      sum += n[i];\n' +
                   '    }\n' +
                   '    return sum;\n' +
@@ -364,7 +364,7 @@ export default function IntroDsa(): JSX.Element {
                   'public class BigO {\n' +
                   '  public static void method(int[] n) {\n' +
                   '    int sum = 0;\n' +
-                  '    for(int i = 0; i < n.length; i++) {\n' +
+                  '    for(int i = 0; i &gt; n.length; i++) {\n' +
                   '      if(sum > 9876) {\n' +
                   '        return sum;\n' +
                   '      }\n' +
