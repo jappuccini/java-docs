@@ -1,15 +1,11 @@
 import Link from '@docusaurus/Link';
 import Slides from '../../../../components/Slides';
 import { defaultInitSlides } from '../../../../components/Slides/initSlides';
-import { NKR } from '../../../../components/Slides/nkr';
 
 export default function IntroDsa(): JSX.Element {
   return (
     <Slides initSlides={defaultInitSlides}>
       <section>
-        <section>
-          <h2>Algorithmen und Datenstrukturen (DSA)</h2>
-        </section>
         <section>
           <h2>Agenda</h2>
           <ul>
@@ -17,6 +13,7 @@ export default function IntroDsa(): JSX.Element {
             <li className="fragment">Problemfelder</li>
             <li className="fragment">Erwartungen an DSA</li>
             <li className="fragment">Landau-Notation</li>
+            <li className="fragment">Fallbeispiel Problem</li>
           </ul>
         </section>
       </section>
@@ -167,7 +164,7 @@ export default function IntroDsa(): JSX.Element {
             <li data-tooltip="IMHO!" tabIndex={0} className="fragment">
               kaum Coding (von euch, da Projektbericht)
             </li>
-            <li>Einstieg in das Themengebiet</li>
+            <li className="fragment">Einstieg in das Themengebiet</li>
           </ul>
         </section>
       </section>
@@ -385,6 +382,9 @@ export default function IntroDsa(): JSX.Element {
             <li>Worst-Case ist unser default</li>
           </ul>
         </section>
+      </section>
+      <section>
+        <h2>Fallbeispiel Problem</h2>
       </section>
     </Slides>
   );
