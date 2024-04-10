@@ -365,6 +365,7 @@ export default function IntroDsa(): JSX.Element {
                   '      if(sum > 9876) {\n' +
                   '        return sum;\n' +
                   '      }\n' +
+                  '      sum += n[i];\n' +
                   '    }\n' +
                   '    return sum;\n' +
                   '  }\n' +
