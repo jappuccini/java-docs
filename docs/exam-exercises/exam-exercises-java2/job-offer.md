@@ -11,10 +11,10 @@ ausführbare Klasse und/oder eine Testklasse.
 
 ```mermaid
 classDiagram
-    Person <|-- Recruiter
-    Person <|-- Applicant
+    Person <|-- Recruiter : extends
+    Person <|-- Applicant : extends
     JobOffer o-- Recruiter
-    JobOffer o-- Applicant
+    Applicant --o JobOffer
     Applicant o-- ApplicationDocument
 
     class JobOffer {

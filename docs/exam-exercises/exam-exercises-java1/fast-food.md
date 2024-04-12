@@ -11,9 +11,9 @@ ausführbare Klasse.
 
 ```mermaid
 classDiagram
-    Food o-- FoodCategory
-    Food <|-- FastFood
-    FastFood <|-- Burger
+    FoodCategory --o Food
+    Food <|-- FastFood : extends
+    FastFood <|-- Burger : extends
     FastFoodShop o-- FastFood
 
     class FoodCategory {

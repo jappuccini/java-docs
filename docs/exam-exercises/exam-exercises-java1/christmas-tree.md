@@ -11,7 +11,7 @@ ausführbare Klasse.
 
 ```mermaid
 classDiagram
-    Candle <|-- ElectricCandle
+    Candle <|-- ElectricCandle : extends
     ChristmasTree o-- Candle
 
     class ChristmasTree {

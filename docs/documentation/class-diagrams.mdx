@@ -230,10 +230,10 @@ einem geschlossenen Pfeil hin zur Schnittstelle sowie einer gestrichelten Linie.
 
 ```mermaid
 classDiagram
-    Person <|-- Student
-    Person <|-- Lecturer
-    Comparable~T~ <|.. Person
-    Serializable <|.. Person
+    Person <|-- Student : extends
+    Person <|-- Lecturer : extends
+    Comparable~T~ <|.. Person : implements
+    Serializable <|.. Person : implements
 ```
 
 ## Darstellung von Multiplizitäten

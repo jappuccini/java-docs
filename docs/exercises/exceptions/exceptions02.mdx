@@ -15,8 +15,7 @@ import Exercise from '@site/src/components/Exercise';
 ```mermaid
 classDiagram
 
-    Barrel -- BarrelOverflowException
-    BarrelOverflowException --|> Exception : extends
+    BarrelOverflowException <.. Barrel : throws
 
     class Barrel {
         -capacity: int
@@ -29,37 +28,30 @@ classDiagram
     }
 
     class BarrelOverflowException {
-      +BarrelOverflowException()
-    }
-
-    class Exception {
-
+        <<exception>>
+        +BarrelOverflowException()
     }
 ```
 
+## Hinweis zur Klasse _BarrelOverflowException_
+
+Der Konstruktor soll das Attribut `detailMessage` initialisieren.
+
 ## Hinweise zur Klasse _Barrel_
 
-- Der Konstruktor soll alle Attribute initialisieren. Jedes Fass, dass erstellt
-  wird ist leer.
-
-- Die Methode **getCapacity** soll die Kapazität des Fasses zurückgeben.
-
-- Die Methode **getFluidLevel** soll die aktuelle Füllmenge des Fasses
-  zurückgeben.
-
-- Die Methode **addFluid** soll den Füllstand um den eingehenden Betrag erhöhen.
-
-  Ist der eingehende Betrag höher als die verfügbare Restkapazität soll der
-  Füllstand die maximale Füllmenge haben und anschließend die
-  BarrelOverflowException auslösen.
-
-  Ist der eingehende Betrag kleiner oder gleich groß wie die verfügbare
-  Restkapazität soll der Füllstand um die eingehende Menge erhöht werden.
-
-- Die Methode **toString** soll alle Attribute des Objektes als String
-  zurückgeben.
-
-  Beispiel: `Barrel [capacity=10] [fluidlevel=8]`
+- Der Konstruktor soll alle Attribute initialisieren. Jedes Fass soll dabei
+  standardmäßig leer sein
+- Die Methode `int getCapacity()` soll die Kapazität des Fasses zurückgeben
+- Die Methode `int getFluidLevel()` soll die aktuelle Füllmenge des Fasses
+  zurückgeben
+- Die Methode `void addFluid(value: int)` soll den Füllstand um den eingehenden
+  Betrag erhöhen. Ist der eingehende Betrag höher als die verfügbare
+  Restkapazität, soll der Füllstand auf die maximale Füllmenge gesetzt und
+  anschließend die Ausnahme `BarrelOverflowException` ausgelöst werden. Ist der
+  eingehende Betrag kleiner oder gleich groß wie die verfügbare Restkapazität,
+  soll der Füllstand um die eingehende Menge erhöht werden.
+- Die Methode `String toString()` soll alle Attribute in der Form _Barrel
+  [capacity=[maximale Füllmenge]] [fluidlevel=[Füllstand]]_ zurückgeben
 
 ## Konsolenausgabe
 

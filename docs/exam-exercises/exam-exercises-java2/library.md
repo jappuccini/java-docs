@@ -12,10 +12,10 @@ ausführbare Klasse und/oder eine Testklasse.
 ```mermaid
 classDiagram
     Library o-- Book
-    Library o-- Status
-    Book <|-- EBook
-    Book <|-- PaperBook
-    Book o-- Author
+    Status --o Library
+    Book <|-- EBook : extends
+    Book <|-- PaperBook : extends
+    Author --o Book
     EBook o-- FileFormat
 
     class Library {

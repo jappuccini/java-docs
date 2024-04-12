@@ -11,13 +11,13 @@ ausführbare Klasse.
 
 ```mermaid
 classDiagram
-    Product <|-- Goods
+    Product <|-- Goods : extends
     Item o-- Goods
     ShoppingCart o-- Item
     Goods o-- ClassOfGoods
-    CashierSystem o-- Goods
+    Goods --o CashierSystem
     CashierSystem o-- Cashier
-    CashierSystem o-- ShoppingCart
+    ShoppingCart --o CashierSystem
 
     class Product {
         -id: int &#123final&#125

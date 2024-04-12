@@ -34,9 +34,9 @@ Klassendiagramms.
 
 ```mermaid
 classDiagram
-    SuperHuman <|-- Villain
-    SuperHuman <|-- Hero
-    SuperHuman o-- Universe
+    SuperHuman <|-- Villain : extends
+    SuperHuman <|-- Hero : extends
+    Universe --o SuperHuman
     SuperLeague~T extends SuperHuman~ o-- Universe
     SuperLeagueTest o-- Hero
     SuperLeagueTest o-- SuperLeague
@@ -78,6 +78,7 @@ classDiagram
     }
 
     class SuperLeagueTest {
+        <<test>>
         -avengers: SuperLeague~Hero~
         -superman: Hero
         -ironman: Hero
@@ -165,9 +166,9 @@ Klassendiagrams.
 
 ```mermaid
 classDiagram
-    SuperHuman <|-- Villain
-    SuperHuman <|-- Hero
-    SuperHuman o-- Universe
+    SuperHuman <|-- Villain : extends
+    SuperHuman <|-- Hero : extends
+    Universe --o SuperHuman
     SuperLeague~T extends SuperHuman~ o-- Universe
 
     class SuperHuman {
