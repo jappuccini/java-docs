@@ -23,9 +23,9 @@ import Exercise from '@site/src/components/Exercise';
 classDiagram
     DiceGame o-- Dice
     DiceGame o-- Player
-    DiceGame o-- DiceCup
-    Dice <|-- LowValueDice
-    Dice <|-- HighValueDice
+    DiceCup --o DiceGame
+    Dice <|-- LowValueDice : extends
+    Dice <|-- HighValueDice : extends
 
     class Player {
         -name: String

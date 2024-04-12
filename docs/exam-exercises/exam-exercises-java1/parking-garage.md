@@ -13,8 +13,8 @@ ausführbare Klasse.
 classDiagram
     ParkingGarage o-- ParkingSpot
     ParkingSpot o-- Vehicle
-    Vehicle <|-- Car
-    Vehicle <|-- Bus
+    Vehicle <|-- Car : extends
+    Vehicle <|-- Bus : extends
 
     class ParkingSpot {
         -vehicle: Vehicle &#123final&#125

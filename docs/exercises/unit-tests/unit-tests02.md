@@ -11,11 +11,11 @@ abgebildeten Klassendiagramms.
 
 ```mermaid
 classDiagram
-    Vehicle <|-- Car
-    Vehicle <|-- Truck
-    Vehicle o-- Engine
+    Vehicle <|-- Car : extends
+    Vehicle <|-- Truck : extends
+    Engine --o Vehicle
     Rental o-- Vehicle
-    Partner <|.. Rental
+    Partner <|.. Rental : implements
     TravelAgency o-- Partner
     RentalTest o-- Rental
 
@@ -105,6 +105,7 @@ classDiagram
     }
 
     class RentalTest {
+        <<test>>
         -rental: Rental
         +setUp() void
         +testTransformAllTrucks() void

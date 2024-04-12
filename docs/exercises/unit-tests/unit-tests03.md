@@ -32,6 +32,7 @@ classDiagram
     }
 
     class TelephoneBookTest {
+        <<test>>
         -telephoneBook: TelephoneBook
         +setUp() void
         +testAddEntry() void

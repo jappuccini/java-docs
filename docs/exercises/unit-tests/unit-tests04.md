@@ -34,6 +34,7 @@ classDiagram
     }
 
     class BookCollectionTest {
+        <<test>>
         -bookCollection: BookCollection
         -stephenKing: Author
         -georgeRRMartin: Author

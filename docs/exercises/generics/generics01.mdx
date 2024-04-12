@@ -14,8 +14,8 @@ import Exercise from '@site/src/components/Exercise';
 
 ```mermaid
 classDiagram
-    Bottle <|-- BeerBottle
-    Bottle <|-- WineBottle
+    Bottle <|-- BeerBottle : extends
+    Bottle <|-- WineBottle : extends
     Crate o-- Bottle
 
     class Crate {

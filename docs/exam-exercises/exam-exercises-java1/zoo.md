@@ -12,8 +12,8 @@ ausführbare Klasse.
 ```mermaid
 classDiagram
     Zoo o-- Animal
-    Animal <|-- Bird
-    Animal <|-- Fish
+    Animal <|-- Bird : extends
+    Animal <|-- Fish : extends
 
     class Zoo {
         -name: String &#123final&#125

@@ -12,7 +12,7 @@ ausführbare Klasse.
 ```mermaid
 classDiagram
     CookieJar o-- Cookie
-    Cookie <|-- StuffedCookie
+    Cookie <|-- StuffedCookie : extends
     Cookie o-- Recipe
     StuffedCookie o-- Recipe
     Recipe o-- Ingredient

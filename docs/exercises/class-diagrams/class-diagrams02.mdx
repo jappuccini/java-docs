@@ -24,7 +24,7 @@ import Exercise from '@site/src/components/Exercise';
 classDiagram
     DiceGame o-- Dice
     DiceGame o-- Player
-    DiceGame o-- DiceCup
+    DiceCup --o DiceGame
 
     class Player {
         -name: String

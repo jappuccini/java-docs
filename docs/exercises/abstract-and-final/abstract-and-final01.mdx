@@ -13,9 +13,9 @@ Klassendiagramms an.
 
 ```mermaid
 classDiagram
-    Vehicle <|-- Car
-    Vehicle <|-- Truck
-    Vehicle o-- Engine
+    Vehicle <|-- Car: extends
+    Vehicle <|-- Truck: extends
+    Engine --o Vehicle
     Rental o-- Vehicle
 
     class Vehicle {

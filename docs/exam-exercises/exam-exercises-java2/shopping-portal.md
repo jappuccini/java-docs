@@ -11,7 +11,7 @@ ausführbare Klasse und/oder eine Testklasse.
 
 ```mermaid
 classDiagram
-    Sellable <|.. Product
+    Sellable <|.. Product : implements
     ShoppingPortal o-- ShoppingCart~T extends Sellable~
     ShoppingCart *-- Item
 

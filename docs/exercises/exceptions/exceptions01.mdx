@@ -5,23 +5,23 @@ description: ''
 
 import Exercise from '@site/src/components/Exercise';
 
-- Erstelle die Ausnahmenklasse InvalidValueException.
-- Passe die Klasse Vehicle an.
+- Erstelle die Ausnahmenklasse `InvalidValueException` anhand des abgebildeten
+  Klassendiagramms
+- Passe die Klasse `Vehicle` anhand der Hinweise an
 - Passe die ausführbare Klasse aus Übungsaufgabe
   [Interfaces01](../interfaces/interfaces01) so an, dass ein Auto mit einem
-  ungültigen Wert beschleunigt wird und im Ausnahmefall in der Konsole
-  ausgegeben wird, dass der Wert größer als 0 sein muss.
+  ungültigen Wert beschleunigt wird und in der Konsole ausgegeben wird, dass der
+  Wert größer als 0 sein muss.
 
 ```mermaid
 classDiagram
     Vehicle <|-- Car : extends
     Vehicle <|-- Truck : extends
-    Vehicle o-- Engine
-    Vehicle -- InvalidValueException
+    Engine --o Vehicle
+    InvalidValueException <.. Vehicle : throws
     Rental o-- Vehicle
     Partner <|.. Rental : implements
     TravelAgency o-- Partner
-    Exception <|-- InvalidValueException : extends
 
     class Vehicle {
         <<abstract>>
@@ -98,22 +98,17 @@ classDiagram
     }
 
     class InvalidValueException {
-    }
-
-    class Exception {
+    	<<exception>>
     }
 ```
 
-## Hinweise zur Klasse _InvalidValueException_
-
-- Der Konstruktor soll alle Attribute initialisieren
-
 ## Hinweise zur Klasse _Vehicle_
 
-- Die Methode **accelerate** soll den eingehenden Wert überprüfen. Ist der
-  eingehende Wert kleiner als 0 soll die InvalidValueException ausgelöst werden.
-
-- Die Methode **brake** soll den eingehenden Wert überprüfen. Ist der eingehende
-  Wert kleiner als 0 soll die InvalidValueException ausgelöst werden.
+- Die Methode `void accelerate(valueInKmh: int)` soll den eingehenden Wert
+  überprüfen. Ist der eingehende Wert kleiner als 0 soll die Ausnahme
+  `InvalidValueException` ausgelöst werden
+- Die Methode `void brake(valueInKmh: int)` soll den eingehenden Wert
+  überprüfen. Ist der eingehende Wert kleiner als 0 soll die Ausnahme
+  `InvalidValueException` ausgelöst werden
 
 <Exercise pullRequest="49" branchSuffix="exceptions/01" />

@@ -12,9 +12,9 @@ ausführbare Klasse und/oder eine Testklasse.
 
 ```mermaid
 classDiagram
-    Comparable~Word~ <|.. Word
+    Comparable~Word~ <|.. Word : implements
     Word o-- Language
-    Dictionary o-- Word
+    Word --o Dictionary
     Dictionary o-- Language
 
     class Word {
