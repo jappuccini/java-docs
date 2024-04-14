@@ -184,7 +184,7 @@ export default function IterationAndRecursion(): JSX.Element {
       </section>
       <section>
         <section>
-          <h2>Fun with Mazes - TBD</h2>
+          <h2>Fun with Mazes</h2>
         </section>
       </section>
       <section>
