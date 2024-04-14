@@ -9,7 +9,7 @@ tags: []
 
 - [Wiederholung und Klausurbesprechung, Organisatorisches 09.04.24](/slides/steffen/java-2/recap)
 - [Intro Algorithmen und Datenstrukturen 10.04.2024](/slides/steffen/java-2/intro-dsa)
-- [Suchalgorithmen & Big-O Notation 16.04.2024](/slides/steffen/tbd)
+- [Suchalgorithmen 16.04.2024](/slides/steffen/java-2/search-algo)
 - [Suchalgorithmen & Big-O Notation 17.05.2024](/slides/steffen/tbd)
 - [Sortieren Linear & Rekursiv 23.04.2024](/slides/steffen/tbd)
 - [List, Queue, Stack 24.04.2024](/slides/steffen/tbd)
