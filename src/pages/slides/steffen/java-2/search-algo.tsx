@@ -119,7 +119,7 @@ export default function SearchAlgo(): JSX.Element {
           <h2>Zusammenfassung</h2>
           <ul>
             <li className="fragment">
-              Kann unabhänging von Sortierung benutz werden
+              Kann unabhänging von Sortierung benutzt werden
             </li>
             <li className="fragment">Kein weiterer Speicherbedarf</li>
             <li className="fragment">Geeignet für kleine Datenmengen</li>

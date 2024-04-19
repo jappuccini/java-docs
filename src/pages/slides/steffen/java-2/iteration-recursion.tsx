@@ -13,9 +13,8 @@ export default function IterationAndRecursion(): JSX.Element {
           <h2>Agenda</h2>
           <ul>
             <li className="fragment">Intro</li>
-            <li className="fragment">Iterativ</li>
-            <li className="fragment">Rekursiv</li>
-            <li className="fragment">Binary Search rekursiv</li>
+            <li className="fragment">Rekursion</li>
+            <li className="fragment">Fun With Mazes</li>
           </ul>
         </section>
       </section>
