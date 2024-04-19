@@ -141,7 +141,7 @@ zc++24a
 classDiagram
     Class o-- Lecture
     Class o-- Student
-    Class o-- CourseOfStudies
+    CourseOfStudies --o Class
 
     class Class {
         -description: String &#123final&#125
@@ -659,7 +659,7 @@ Erstelle die Klassen `StuffedCookie` (8 Punkte), `CookieJar` (7 Punkte) und
 ```mermaid
 classDiagram
     CookieJar o-- Cookie
-    Cookie <|-- StuffedCookie
+    Cookie <|-- StuffedCookie : extends
     Cookie o-- Recipe
     StuffedCookie o-- Recipe
     Recipe o-- Ingredient

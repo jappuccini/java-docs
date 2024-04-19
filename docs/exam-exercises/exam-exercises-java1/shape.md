@@ -12,9 +12,9 @@ ausführbare Klasse.
 ```mermaid
 classDiagram
     ShapeReader o-- Shape
-    Shape <|-- Circle
-    Shape <|-- Rectangle
-    Rectangle <|-- Square
+    Shape <|-- Circle : extends
+    Shape <|-- Rectangle : extends
+    Rectangle <|-- Square : extends
 
     class ShapeReader {
         -shapes: List~Shape~ &#123final&#125

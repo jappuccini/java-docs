@@ -39,8 +39,8 @@ export default function StreamApi(): JSX.Element {
         <section>
           <h2>Collection II</h2>
           <ul>
-            <li>Daten abfragen -&gt; Name des ältesten Studenten</li>
-            <li>Daten ändern -&gt; Preis eines Produkts erhöhen</li>
+            <li>Daten abfragen &rarr; Name des ältesten Studenten</li>
+            <li>Daten ändern &rarr; Preis eines Produkts erhöhen</li>
           </ul>
         </section>
         <section>

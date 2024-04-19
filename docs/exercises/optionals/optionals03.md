@@ -14,8 +14,8 @@ description: ''
 
 ```mermaid
 classDiagram
-    Bottle <|-- BeerBottle
-    Bottle <|-- WineBottle
+    Bottle <|-- BeerBottle : extends
+    Bottle <|-- WineBottle : extends
 
     class Crate~T extends Bottle~ {
         -box1: T

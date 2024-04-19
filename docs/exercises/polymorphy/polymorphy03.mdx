@@ -16,7 +16,7 @@ import Exercise from '@site/src/components/Exercise';
 classDiagram
     Vehicle <|-- Car : extends
     Vehicle <|-- Truck : extends
-    Vehicle o-- Engine
+    Engine --o Vehicle
     Rental o-- Vehicle
 
     class Vehicle {

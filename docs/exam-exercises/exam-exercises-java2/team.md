@@ -22,9 +22,9 @@ ausführbare Klasse und/oder eine Testklasse.
 
 ```mermaid
 classDiagram
-    Sportsman <|-- Footballer
+    Sportsman <|-- Footballer : extends
     Team~T extends Sportsman~ o-- Position
-    Comparable~Footballer~ <|.. Sportsman
+    Comparable~Footballer~ <|.. Sportsman : implements
 
     class Footballer {
         -numberOfGoals: int

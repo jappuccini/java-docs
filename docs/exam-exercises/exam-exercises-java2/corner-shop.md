@@ -12,9 +12,9 @@ ausführbare Klasse und/oder eine Testklasse.
 
 ```mermaid
 classDiagram
-    Product <|-- Goods
+    Product <|-- Goods : extends
     CornerShop o-- Goods
-    Comparable~Goods~ <|.. Goods
+    Goods ..|> Comparable~Goods~ : implements
     Goods o-- ClassOfGoods
 
     class Product {

@@ -1,0 +1,257 @@
+---
+title: JavaFX
+description: ''
+sidebar_position: 370
+tags: [gui, javafx]
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+Java stellt mit dem _AWT_ (Abstract Window Toolkit) und _Swing_ zwei
+Bibliotheken zur Entwicklung grafischer Benutzeroberflächen zur Verfügung. Swing
+baut dabei auf dem älteren AWT auf und verwendet teilweise Klasse daraus. Der
+Nachfolger von Swing heißt JavaFX und stellt im Gegensatz zu AWT und Swing keine
+Bibliothek, sondern ein Framework zur Entwicklung plattformübergreifender
+grafischer Benutzeroberflächen dar. Unter einem Framework versteht man ein
+Programmiergerüst, welches die Architektur für die Anwendung vorgibt und den
+Kontrollfluss der Anwendung steuert. So werden die Funktionen einer Anwendung
+beim Framework registriert, welches die Funktionen zu einem späteren Zeitpunkt
+aufruft, d.h. die Steuerung des Kontrollfluss obliegt nicht der Anwendung,
+sondern dem Framework. Diese Umkehr der Steuerung kann auch als Anwendung des
+Hollywood-Prinzips (_Don´t call us, we´ll call you_) verstanden werden.
+
+:::note Hinweis
+
+Bis Java 11 war JavaFX Bestandteil des JDK, seit Java 11 stellt es ein
+eigenständiges SDK (Software Development Kit) dar.
+
+:::
+
+## Aufbau und Lebenszyklus von JavaFX-Anwendungen
+
+JavaFX-Anwendungen bestehen aus einer oder mehreren Bühnen (Stages), die
+beliebig vielen Szenen (Scenes) enthalten können, wobei jede Szene wiederum
+beliebig viele Bildschirmelemente (Nodes) enthalten kann. Jede JavaFX-Anwendung
+ist eine Unterklasse der Klasse `Application`. Diese stellt die verschiedenen
+Lebenszyklus-Methoden der JavaFX-Anwendung bereit.
+
+- Die Methode `void launch(args: String[])` speichert die Aufrufparameter,
+  erzeugt ein Objekt der eigenen Klasse und ruft die weiteren
+  Lebenszyklus-Methoden auf
+- Die Methode `void init()` kann genutzt werden, um z.B. die Aufrufparameter
+  auszulesen
+- Die Methode `void start(primaryStage: Stage)` bekommt eine Bühne übergeben und
+  wird dazu verwendet, die Bühne zu gestalten und die erste Szene aufzurufen
+- Die Methode `void stop()` wird aufgerufen, bevor der Prozess gestoppt wird und
+  kann genutzt werden, um Aufräumarbeiten durchzuführen
+
+## Definition von Szenen
+
+Die Definition einer Szene (View) erfolgt deklarativ mit Hilfe von
+FXML-Dokumenten. FXML stellt eine auf XML-basierende Sprache dar und ermöglicht
+eine klare Trennung zwischen Layout und Code. XML (Extensible Markup Language)
+wiederum stellt eine Auszeichnungssprache zur Beschreibung strukturierter Daten
+dar.
+
+Mit Hilfe spezifischer JavaFX-Eigenschaften wird eine Verbindung zwischen der
+Szene und der Ereignisbehandler-Klasse hergestellt:
+
+- Bildschirmelementen können über die Eigenschaft `fx:id` IDs zugewiesen werden,
+  über die die Ereignisbehandler-Klasse auf die jeweiligen Elemente zugreifen
+  kann
+- Die verantwortliche Ereignisbehandler-Klasse wird über die Eigenschaft
+  `fx:controller` festgelegt
+- Den zu behandelnden Ereignissen können über entsprechende Eigenschaften wie
+  z.B. `onAction` bei Drucktasten Behandlermethoden der Ereignisbehandler-Klasse
+  zugewiesen werden
+
+<Tabs>
+  <TabItem value="a" label="InputView" default>
+
+```xml title="InputView.fxml" showLineNumbers
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="5.0" xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="InputController">
+  <children>
+    <TextField fx:id="valueTextField" promptText="Wert" />
+    <Button text="Zur Ausgabe" onAction="#goToOutput"/>
+  </children>
+  <padding>
+    <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+  </padding>
+</VBox>
+```
+
+  </TabItem>
+  <TabItem value="b" label="OutputView">
+
+```xml title="InputView.fxml" showLineNumbers
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="5.0" xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="OutputController">
+  <children>
+    <Label fx:id="valueLabel" />
+  </children>
+  <padding>
+    <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+  </padding>
+</VBox>
+```
+
+  </TabItem>
+</Tabs>
+
+## Aufruf von Szenen
+
+Die statische Methode `Parent load(location: URL)` der Klasse `FXMLLoader`
+überführt das angegebene FXML-Dokument in einen Szenegraphen und gibt den
+dazugehörigen Wurzelknoten vom Typ `Parent` zurück, mit dessen Hilfe
+anschließend die Szene erstellt und angezeigt werden kann. Zusätzlich
+instanziiert der FXML-Loader den Controller und ruft bei der Anzeige der Szene
+die (optionale) Methode
+`void initialize(location: URL, resources: ResourceBundle)` der entsprechenden
+Ereignisbehandler-Klasse auf.
+
+```java title="MainClass.java" showLineNumbers
+public class MainClass extends Application {
+
+  public static void main(String[] args) {
+    launch(args);
+  }
+
+  @Override
+  public void start(Stage primaryStage) throws Exception {
+    Parent root = FXMLLoader.load(getClass().getResource("InputView.fxml"));
+    Scene scene = new Scene(root);
+    primaryStage.setTitle("JavaFX");
+    primaryStage.setScene(scene);
+    primaryStage.show();
+  }
+
+}
+```
+
+## Implementierung von Ereignisbehandler-Klassen
+
+In den Ereignisbehandler-Klassen (Controller) werden die Behandlermethoden
+implementiert. Diese müssen zwingend einen Parameter vom Typ des Ereignisses
+besitzen (z.B. `ActionEvent`), mit dessen Hilfe auf das ausgelöste Ereignis
+zugegriffen werden kann. Das Verknüpfen von Attributen der
+Ereignisbehandler-Klasse mit den Elementen des FXML-Dokuments erfolgt über die
+Annotation `@FXML` und der Namensgleichheit zwischen den Attributen der
+Ereignisbehandler-Klasse sowie den festgelegten Ids der entsprechenden Elemente
+des FXML-Dokuments.
+
+Der Wechsel von Szenen erfolgt über die Methode `void setScene(value: Scene)`
+der Klasse `Window`. Die Methode `Object getSource()` der Klasse `ActionEvent`
+gibt das Bildschirmelement zurück, welches das Ereignis ausgelöst hat; die
+Methode `Window getWindow()` der Klasse `Scene` die Bühne, auf der die aktuelle
+Szene aufgeführt wird.
+
+<Tabs>
+  <TabItem value="a" label="InputController" default>
+
+```java title="InputController.java" showLineNumbers
+public class InputController implements Initializable {
+
+  @FXML
+  private TextField valueTextField;
+  private Model model;
+
+  @Override
+  public void initialize(URL location, ResourceBundle resources) {
+    model = Model.getInstance();
+  }
+
+  @FXML
+  public void goToOutput(ActionEvent actionEvent) throws IOException {
+    String value = valueTextField.getText();
+    model.setValue(value);
+
+    Parent root = FXMLLoader.load(getClass().getResource("OutputView.fxml"));
+    Scene scene = new Scene(root);
+    Node node = (Node) actionEvent.getSource();
+    Stage stage = (Stage) node.getScene().getWindow();
+    stage.setScene(scene);
+    stage.show();
+  }
+
+}
+```
+
+  </TabItem>
+  <TabItem value="b" label="OutputController">
+
+```java title="OutputController.java" showLineNumbers
+public class OutputController implements Initializable {
+
+  @FXML
+  private Label valueLabel;
+  private Model model;
+
+  @Override
+  public void initialize(URL location, ResourceBundle resources) {
+    model = Model.getInstance();
+
+    String value = model.getValue();
+    outputLabel.setText(value);
+  }
+
+}
+```
+
+  </TabItem>
+</Tabs>
+
+:::note Hinweis
+
+Die Methode `void initialize(location: URL, resources: ResourceBundle)` der
+Schnittstelle `Initializable` wird vom FXML-Loader vor Anzeige der dazugehörigen
+Szene aufgerufen und ermöglicht es, die Szene dynamisch anzupassen.
+
+:::
+
+## Implementierung von Model-Klassen
+
+Model-Klassen sind für die zentrale Verwaltung der Daten zuständig. Da die
+verschiedenen Klassen einer JavaFX-Anwendung nur lose miteiander gekoppelt sind,
+kann über das Entwurfsmuster _Singleton_ sichergestellt werden, dass zur
+Model-Klasse genau ein Objekt, das sogenannte Singleton, zur Laufzeit existiert.
+
+```java title="Model.java" showLineNumbers
+public class Model {
+
+  private static Model instance;
+  private String value;
+
+  private Model() {}
+
+  public static Model getInstance() {
+    if (instance == null) {
+      instance = new Model();
+    }
+    return instance;
+  }
+
+  public String getValue() {
+    return value;
+  }
+
+  public void setValue(String value) {
+    this.value = value;
+  }
+
+}
+```

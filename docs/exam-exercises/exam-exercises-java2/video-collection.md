@@ -12,9 +12,9 @@ ausführbare Klasse und/oder eine Testklasse.
 ```mermaid
 classDiagram
     VideoCollection o-- Video
-    Video <|-- BluRay
-    Video <|-- VHS
-    Video o-- Movie
+    Video <|-- BluRay : extends
+    Video <|-- VHS : extends
+    Movie --o Video
     Movie o-- Genre
 
     class VideoCollection {

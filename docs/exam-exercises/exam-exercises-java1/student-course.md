@@ -13,7 +13,7 @@ ausführbare Klasse.
 classDiagram
     StudyCourse o-- Student
     StudyCourse o-- Lecture
-    StudyCourse o-- CourseOfStudies
+    CourseOfStudies --o StudyCourse
     Student o-- MatriculationNumber
 
     class MatriculationNumber {

@@ -12,9 +12,9 @@ ausführbare Klasse und/oder eine Testklasse.
 ```mermaid
 classDiagram
     Lego <|-- LegoBrick
-    LegoBrick <|-- LegoBrick2x2x2
-    LegoBrick <|-- LegoBrick4x2x1
-    Comparator~LegoBrick~ <|.. LegoBrickVolumeComparator
+    LegoBrick <|-- LegoBrick2x2x2 : extends
+    LegoBrick <|-- LegoBrick4x2x1 : extends
+    Comparator~LegoBrick~ <|.. LegoBrickVolumeComparator : implements
 
     class Lego {
         <<abstract>>

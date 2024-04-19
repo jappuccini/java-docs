@@ -51,57 +51,32 @@ classDiagram
 ## Hinweis zur Klasse _Person_
 
 - Der Konstruktor soll alle Attribute initialisieren
-- Die Methode **getName** soll den Namen der Person zurückgeben
+- Die Methode `String getName()` soll den Namen der Person zurückgeben
 
 ## Hinweise zur Klasse _Employee_
 
 - Der Konstruktor soll alle Attribute initialisieren
-- Die Methode **getEmployeeId** soll die Id des Mitarbeiters zurückgeben
-- Die Methode **getName** soll den Namen des Mitarbeiters zurückgeben
-- Die Methode **setSalaryInEuro** soll das Gehalt des Mitarbeiters festlegen.
-- Die Methode **getSalaryInEuro** soll das Gehalt des Mitarbeiters zurückgeben.
-- Die Methode **toString** soll alle Attribute des Objektes als String
-  zurückgeben.
-
-  Format: `Mitarbeiternummer - Name - Gehalt`
-
-  Beispiel: `4001 - Steffen - 40000€`
+- Die Methode `int getEmployeeId()` soll die Id des Mitarbeiters zurückgeben
+- Die Methode String getName()` soll den Namen des Mitarbeiters zurückgeben
+- Die Methode `void setSalaryInEuro(salaryInEuro: int)` soll das Gehalt des
+  Mitarbeiters festlegen
+- Die Methode `int getSalaryInEuro()` soll das Gehalt des Mitarbeiters
+  zurückgeben
+- Die Methode `String toString()` soll alle Attribute in der Form
+  _Mitarbeiternummer - Name - Gehalt_ zurückgeben
 
 ## Hinweise zur Klasse _Company_
 
 - Der Konstruktor soll alle Attribute initialisieren
-- Die Methode **getName** soll den Namen der Firma zurückgeben
-- Die Methode **getEmployees** soll die Mitarbeiterliste zurückgeben
-- Die Methode **getNumberOfEmployees** soll die Anzahl der Mitarbeiter
+- Die Methode `String getName()` soll den Namen der Firma zurückgeben
+- Die Methode `ArrayList<Employee> getEmployees()` soll die Mitarbeiterliste
   zurückgeben
-- Die Methode **addEmployee** soll den eingehenden Mitarbeiter der
-  Mitarbeiterliste hinzufügen
-- Die Methode **toString** soll alle Attribute des Objektes und alle Mitarbeiter
-  als String zurückgeben.
-
-  Format:
-
-  ```console
-  Firmenname (Mitarbeiteranzahl)
-  Mitarbeiternummer - Name - Gehalt
-  ```
-
-  Beispiel:
-
-  ```console
-  Softwareklitsche GmbH (3 Mitarbeiter)
-  4001 - Steffen - 40000€
-  4002 - Marianna - 120000€
-  4003 - Mirco - 100000€
-  ```
-
-:::note Hinweis
-
-Um in einem String einen Zeilenumbruch zu erzeugen muss `\n` verwendet werden.
-Der String `Hello World` wird ohne Umbruch in einer Zeile dargestellt. Der
-String `Hello\nWorld` wird mit Umbruch in zwei Zeilen dargestellt.
-
-:::
+- Die Methode `int getNumberOfEmployees()` soll die Anzahl der Mitarbeiter
+  zurückgeben
+- Die Methode `void addEmployee(employee: Employee)` soll den eingehenden
+  Mitarbeiter der Mitarbeiterliste hinzufügen
+- Die Methode `String toString()` soll alle Attribute in der Form _Firmenname
+  (Mitarbeiteranzahl)\nMitarbeiter\n..._ zurückgeben
 
 ## Konsolenausgabe
 

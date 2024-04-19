@@ -5,9 +5,9 @@ description: ''
 
 import Exercise from '@site/src/components/Exercise';
 
-- Erstelle die Klassen **SalaryIncreaseTooHighException** und
-  **SalaryDecreaseException**.
-- Passe die Klasse Employee an.
+- Erstelle die Ausnhamenklassen `SalaryIncreaseTooHighException` sowie
+  `SalaryDecreaseException` anhand des abgebildeten Klassendiagramms
+- Passe die Klasse `Employee` anhand der Hinweise an
 - Passe die ausführbare Klasse aus Übungsaufgabe
   [ClassDiagrams04](../class-diagrams/class-diagrams04) so an, dass ein oder
   mehrere Mitarbeiter eine Gehaltserhöhung bekommen. Behandle alle möglichen
@@ -15,12 +15,10 @@ import Exercise from '@site/src/components/Exercise';
 
 ```mermaid
 classDiagram
-    Company o-- Employee
+    Employee --o Company
     Employee o-- Person
-    SalaryIncreaseTooHighException --|> Exception : extends
-    SalaryIncreaseTooHighException -- Employee
-    SalaryDecreaseException --|> Exception : extends
-    SalaryDecreaseException -- Employee
+    SalaryIncreaseTooHighException <.. Employee : throws
+    SalaryDecreaseException <.. Employee : throws
 
     class Company {
         -name: String &#123final&#125
@@ -53,19 +51,20 @@ classDiagram
     }
 
     class SalaryIncreaseTooHighException {
+    	<<exception>>
     }
+
     class SalaryDecreaseException {
+    	<<exception>>
     }
 ```
 
-## Hinweise zur Klasse _Employee_
+## Hinweis zur Klasse _Employee_
 
-- Die Methode **setSalaryInEuro** soll das Gehalt eines Mitarbeiters festlegen.
-
-  Ist das eingehende Gehalt mehr als 10% des bestehenden Gehalts, soll die
-  **SalaryIncreaseTooHighException** ausgelöst werden.
-
-  Ist das eingehende Gehalt weniger als das bestehende Gehalt, soll die
-  **SalaryDecreaseException** ausgelöst werden.
+Die Methode `void setSalaryInEuro(salaryInEuro: int)` soll das Gehalt eines
+Mitarbeiters festlegen. Ist das eingehende Gehalt mehr als 10% des bestehenden
+Gehalts, soll die Ausnhame `SalaryIncreaseTooHighException` ausgelöst werden.
+Ist das eingehende Gehalt weniger als das bestehende Gehalt, soll die Ausnhame
+`SalaryDecreaseException` ausgelöst werden.
 
 <Exercise pullRequest="51" branchSuffix="exceptions/03" />
