@@ -267,7 +267,7 @@ export default function SortAlgo(): JSX.Element {
         </section>
         <section>
           <h2>
-            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/dsa/sort/BubbleSort.java">
+            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/dsa/sort/InsertionSort.java">
               Demo - Insertion Sort
             </Link>
           </h2>
@@ -412,7 +412,7 @@ export default function SortAlgo(): JSX.Element {
         </section>
         <section>
           <h2>
-            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/dsa/sort/QuickSort.java">
+            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/dsa/sort/MergeSort.java">
               Demo - Merge Sort
             </Link>
           </h2>
