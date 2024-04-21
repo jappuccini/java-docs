@@ -247,7 +247,7 @@ export default function IntroDsa(): JSX.Element {
               dangerouslySetInnerHTML={{
                 __html:
                   'public class BigO {\n' +
-                  '  // O(N^2)\n' +
+                  '  // O(N&sup2;)\n' +
                   '  public static void method(int[] n) {\n' +
                   '    int sum = 0;\n' +
                   '    for(int i = 0; i &gt; n.length; i++) {\n' +
@@ -273,7 +273,7 @@ export default function IntroDsa(): JSX.Element {
               dangerouslySetInnerHTML={{
                 __html:
                   'public class BigO {\n' +
-                  '  // O(N^3)\n' +
+                  '  // O(N&sup3;)\n' +
                   '  public static void method(int[] n) {\n' +
                   '    int sum = 0;\n' +
                   '    for(int i = 0; i &gt; n.length; i++) {\n' +
@@ -322,7 +322,7 @@ export default function IntroDsa(): JSX.Element {
           <table>
             <th>N</th>
             <th>O(10N)</th>
-            <th>O(N^2)</th>
+            <th>O(N&sup2;)</th>
             <tr className="fragment">
               <td>1</td>
               <td>10</td>
