@@ -40,30 +40,35 @@ export default function SortAlgo(): JSX.Element {
           <h2>Begriffe</h2>
           <ul>
             <li
+              className="fragment"
               tabIndex={0}
-              data-tooltip="Ein In-place Sortieralgorithmus tausch Elemente innerhalb der Liste aus."
+              data-tooltip="Ein In-place Sortieralgorithmus tauscht Elemente innerhalb der Liste aus."
             >
               In-place sorting
             </li>
             <li
+              className="fragment"
               tabIndex={0}
               data-tooltip="Der komplette Input wird im lokalen Speicher gehalten. Der Input kann nicht größer sein als der lokale Speicher."
             >
               Internal Sorting
             </li>
             <li
+              className="fragment"
               tabIndex={0}
               data-tooltip="Der komplette Input muss nicht im lokalen Speicher gehalten werden. Der Input kann größer sein als der lokale Speicher."
             >
               External Sorting
             </li>
             <li
+              className="fragment"
               tabIndex={0}
               data-tooltip="Falls zwei Elemente 'gleich' sind, wird die ursprüngliche Reihenfolge beibehalten."
             >
               Stable Sorting
             </li>
             <li
+              className="fragment"
               tabIndex={0}
               data-tooltip="Falls zwei Elemente 'gleich' sind, wird die ursprüngliche Reihenfolge nicht beibehalten."
             >
@@ -464,10 +469,12 @@ export default function SortAlgo(): JSX.Element {
         </section>
         <section>
           <table>
-            <th>Algorithmus</th>
-            <th>Best </th>
-            <th>Average </th>
-            <th>Worst </th>
+            <tr>
+              <th>Algorithmus</th>
+              <th>Best </th>
+              <th>Average </th>
+              <th>Worst </th>
+            </tr>
             <tr className="fragment">
               <td>Selection Sort</td>
               <td>O(N&sup2;)</td>
