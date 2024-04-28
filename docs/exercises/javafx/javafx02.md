@@ -60,7 +60,7 @@ flowchart LR
 
 ## Allgemeiner Hinweis
 
-Der Konstruktor `Image(url: String)` der Klasse `Image` ermöglicht das Erstellen
+Der Konstruktor `Image(url: String)` der Klasse `Image` ermöglicht das Erzeugen
 eines Grafik-Objektes.
 
 ## Hinweise zur Klasse _Dice_
