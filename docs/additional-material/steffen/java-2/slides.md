@@ -13,7 +13,7 @@ tags: []
 - [Rekursion 17.04.2024](/slides/steffen/java-2/iteration-recursion)
 - [Sortieralgorithmen 23.04.2024](/slides/steffen/java-2/sort-algo)
 - [Stack, Queue, List, 24.04.2024](/slides/steffen/java-2/stack-queue-list)
-- [Trees 30.04.2024](/slides/steffen/tbd)
+- [Trees 30.04.2024](/slides/steffen/java-2/trees)
 - [Generics und Optional 07.05.2024](/slides/steffen/java-2/generics-optional)
 - [Set, Map, Hashes & Records 08.05.2024 & 14.05.2024](/slides/steffen/java-2/sets-maps-hashes-records)
 - [Funktionale Programmierung 15.05.2024](/slides/steffen/java-2/functional-programming)
