@@ -469,42 +469,46 @@ export default function SortAlgo(): JSX.Element {
         </section>
         <section>
           <table>
-            <tr>
-              <th>Algorithmus</th>
-              <th>Best </th>
-              <th>Average </th>
-              <th>Worst </th>
-            </tr>
-            <tr className="fragment">
-              <td>Selection Sort</td>
-              <td>O(N&sup2;)</td>
-              <td>O(N&sup2;)</td>
-              <td>O(N&sup2;)</td>
-            </tr>
-            <tr className="fragment">
-              <td>Bubble Sort</td>
-              <td>O(N)</td>
-              <td>O(N&sup2;)</td>
-              <td>O(N&sup2;)</td>
-            </tr>
-            <tr className="fragment">
-              <td>Insertion Sort</td>
-              <td>O(N)</td>
-              <td>O(N&sup2;)</td>
-              <td>O(N&sup2;)</td>
-            </tr>
-            <tr className="fragment">
-              <td>Quick Sort</td>
-              <td>O(N log N)</td>
-              <td>O(N log N)</td>
-              <td>O(N&sup2;)</td>
-            </tr>
-            <tr className="fragment">
-              <td>Merge Sort</td>
-              <td>O(N log N)</td>
-              <td>O(N log N)</td>
-              <td>O(N log N)</td>
-            </tr>
+            <thead>
+              <tr>
+                <th>Algorithmus</th>
+                <th>Best </th>
+                <th>Average </th>
+                <th>Worst </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="fragment">
+                <td>Selection Sort</td>
+                <td>O(N&sup2;)</td>
+                <td>O(N&sup2;)</td>
+                <td>O(N&sup2;)</td>
+              </tr>
+              <tr className="fragment">
+                <td>Bubble Sort</td>
+                <td>O(N)</td>
+                <td>O(N&sup2;)</td>
+                <td>O(N&sup2;)</td>
+              </tr>
+              <tr className="fragment">
+                <td>Insertion Sort</td>
+                <td>O(N)</td>
+                <td>O(N&sup2;)</td>
+                <td>O(N&sup2;)</td>
+              </tr>
+              <tr className="fragment">
+                <td>Quick Sort</td>
+                <td>O(N log N)</td>
+                <td>O(N log N)</td>
+                <td>O(N&sup2;)</td>
+              </tr>
+              <tr className="fragment">
+                <td>Merge Sort</td>
+                <td>O(N log N)</td>
+                <td>O(N log N)</td>
+                <td>O(N log N)</td>
+              </tr>
+            </tbody>
           </table>
           <p className="fragment foot-note">
             Merge Sort hat eine Speicherkomplexität von O(N)

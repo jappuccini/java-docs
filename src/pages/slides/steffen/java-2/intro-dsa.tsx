@@ -320,34 +320,40 @@ export default function IntroDsa(): JSX.Element {
         <section>
           <h2>Warum O(N) anstatt O(2N)</h2>
           <table>
-            <th>N</th>
-            <th>O(10N)</th>
-            <th>O(N&sup2;)</th>
-            <tr className="fragment">
-              <td>1</td>
-              <td>10</td>
-              <td>1</td>
-            </tr>
-            <tr className="fragment">
-              <td>5</td>
-              <td>50</td>
-              <td>25</td>
-            </tr>
-            <tr className="fragment">
-              <td>100</td>
-              <td>1000</td>
-              <td>10.000</td>
-            </tr>
-            <tr className="fragment">
-              <td>1000</td>
-              <td>10.000</td>
-              <td>1.000.000</td>
-            </tr>
-            <tr className="fragment">
-              <td>10.000</td>
-              <td>100.000</td>
-              <td>100.000.000</td>
-            </tr>
+            <thead>
+              <tr>
+                <th>N</th>
+                <th>O(10N)</th>
+                <th>O(N&sup2;)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="fragment">
+                <td>1</td>
+                <td>10</td>
+                <td>1</td>
+              </tr>
+              <tr className="fragment">
+                <td>5</td>
+                <td>50</td>
+                <td>25</td>
+              </tr>
+              <tr className="fragment">
+                <td>100</td>
+                <td>1000</td>
+                <td>10.000</td>
+              </tr>
+              <tr className="fragment">
+                <td>1000</td>
+                <td>10.000</td>
+                <td>1.000.000</td>
+              </tr>
+              <tr className="fragment">
+                <td>10.000</td>
+                <td>100.000</td>
+                <td>100.000.000</td>
+              </tr>
+            </tbody>
           </table>
           <p className="fragment">Konstanten können ignoriert werden.</p>
         </section>

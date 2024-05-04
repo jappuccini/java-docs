@@ -255,19 +255,25 @@ export default function SearchAlgo(): JSX.Element {
         <section>
           <h2>Lineare Suche vs Binäre Suche</h2>
           <table>
-            <th>Linear</th>
-            <th>Binary</th>
-            <th>Interpolation</th>
-            <tr className="fragment">
-              <td>Sortierung irrelevant</td>
-              <td>Sortierung notwendig</td>
-              <td>Sortierung notwendig</td>
-            </tr>
-            <tr className="fragment">
-              <td>Zeit: O(N)</td>
-              <td>Zeit: O(log N)</td>
-              <td>Zeit: O(N)</td>
-            </tr>
+            <thead>
+              <tr>
+                <th>Linear</th>
+                <th>Binary</th>
+                <th>Interpolation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="fragment">
+                <td>Sortierung irrelevant</td>
+                <td>Sortierung notwendig</td>
+                <td>Sortierung notwendig</td>
+              </tr>
+              <tr className="fragment">
+                <td>Zeit: O(N)</td>
+                <td>Zeit: O(log N)</td>
+                <td>Zeit: O(N)</td>
+              </tr>
+            </tbody>
           </table>
           <p className="fragment foot-note"> abhängig von Anwendungsfall</p>
         </section>
