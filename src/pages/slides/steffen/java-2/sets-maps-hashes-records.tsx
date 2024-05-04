@@ -209,48 +209,54 @@ export default function SetsMapsHashesRecords(): JSX.Element {
         <section>
           <h2>Beispiel Hashfunktion</h2>
           <table>
-            <th>Name</th>
-            <th>Summe</th>
-            <th>Hash</th>
-            <tr>
-              <td className="fragment">Steffen</td>
-              <td
-                data-tooltip="S:83 t:116 e:101 f:102 f:102 e:101 n:110"
-                tabIndex={0}
-                className="fragment"
-              >
-                715
-              </td>
-              <td data-tooltip="715 % 4" tabIndex={0} className="fragment">
-                3
-              </td>
-            </tr>
-            <tr>
-              <td className="fragment">Mirco</td>
-              <td
-                data-tooltip="M:77 i:105 r:114 c:99 o:111"
-                tabIndex={0}
-                className="fragment"
-              >
-                506
-              </td>
-              <td data-tooltip="506 % 4" tabIndex={0} className="fragment">
-                2
-              </td>
-            </tr>
-            <tr>
-              <td className="fragment">Marianna</td>
-              <td
-                data-tooltip="M:77 a:97 r:114 i:105 a:97 n:110 n:110 a:97"
-                tabIndex={0}
-                className="fragment"
-              >
-                807
-              </td>
-              <td data-tooltip="807 % 4" tabIndex={0} className="fragment">
-                3
-              </td>
-            </tr>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Summe</th>
+                <th>Hash</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="fragment">Steffen</td>
+                <td
+                  data-tooltip="S:83 t:116 e:101 f:102 f:102 e:101 n:110"
+                  tabIndex={0}
+                  className="fragment"
+                >
+                  715
+                </td>
+                <td data-tooltip="715 % 4" tabIndex={0} className="fragment">
+                  3
+                </td>
+              </tr>
+              <tr>
+                <td className="fragment">Mirco</td>
+                <td
+                  data-tooltip="M:77 i:105 r:114 c:99 o:111"
+                  tabIndex={0}
+                  className="fragment"
+                >
+                  506
+                </td>
+                <td data-tooltip="506 % 4" tabIndex={0} className="fragment">
+                  2
+                </td>
+              </tr>
+              <tr>
+                <td className="fragment">Marianna</td>
+                <td
+                  data-tooltip="M:77 a:97 r:114 i:105 a:97 n:110 n:110 a:97"
+                  tabIndex={0}
+                  className="fragment"
+                >
+                  807
+                </td>
+                <td data-tooltip="807 % 4" tabIndex={0} className="fragment">
+                  3
+                </td>
+              </tr>
+            </tbody>
           </table>
           <p>
             <span className="fragment">Einwegfunktion, </span>
