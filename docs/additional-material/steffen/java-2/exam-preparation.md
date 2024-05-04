@@ -1,7 +1,7 @@
 ---
 title: Klausurvorbereitung
 description: ''
-sidebar_position: 20
+sidebar_position: 30
 tags: []
 ---
 
