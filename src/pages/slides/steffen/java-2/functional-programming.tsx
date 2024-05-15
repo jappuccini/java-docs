@@ -328,7 +328,7 @@ export default function FunctionalProgramming(): JSX.Element {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  'OneParamReturnFunction function = h -&gt; h.age() > 10\n',
+                  'OneParamReturnFunction function = h -&gt; h.age() > 10;\n',
               }}
             ></code>
           </pre>
@@ -494,8 +494,8 @@ export default function FunctionalProgramming(): JSX.Element {
             Mit Methodenreferenzen kann man noch weniger Code schreiben.
           </p>
           <p className="fragment">
-            Hat ein Parameter die gleiche Signatur, wie eine Methode, kann diese
-            Methode als Methodenreferenz übergeben werden.
+            Hat ein Parameter die gleiche Signatur, wie eine statische Methode,
+            kann diese Methode als Methodenreferenz übergeben werden.
           </p>
         </section>
         <section>
