@@ -89,13 +89,13 @@ export default function StreamApi(): JSX.Element {
                 __html:
                   'public class Main {\n' +
                   '  public static void main(String[] args) {\n' +
-                  '    ArrayList&lt;String&gt; names = new ArrayList&lt;&gt;()\n' +
+                  '    ArrayList&lt;String&gt; names = new ArrayList&lt;&gt;();\n' +
                   '    \n' +
                   '    names.stream() // source\n' +
                   '      .filter(name -&gt; name.length > 4) //inter-\n' +
                   '      .map(name -&gt; name.toUpperCase()) //mediate\n' +
                   '      .limit(12)                      //operations\n' +
-                  '      .forEach(System.out::println) // terminal operation\n' +
+                  '      .forEach(System.out::println); // terminal operation\n' +
                   '  }\n' +
                   '}\n',
               }}
