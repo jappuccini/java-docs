@@ -7,6 +7,8 @@ tags: []
 
 [Cheatsheet Java II](/pdf/java-cheat-sheet.pdf)
 
+[Altklausuren Java II](/zip/java-1-exams.zip)
+
 1. Altklausuren 2022 Q3 - Klausur Java 2 Aufgabe 3
 
 ```java
@@ -72,13 +74,15 @@ classDiagram
   }
 ```
 
-** Hinweise zu den Konstruktoren** <br/> Die Konstruktoren sollen alle Attribute
-initialisieren.
+**Hinweise zu den Konstruktoren**
 
-** Hinweise zur Methode toString ** <br/> Die Methode toString soll die
-Attribute brand, model und addition zurückgeben. Die Attribute sollen durch eine
-Leertaste getrennt sein. Falls addition keinen Wert besitz, soll dieser
-ignoriert werden.
+Die Konstruktoren sollen alle Attribute initialisieren.
+
+**Hinweise zur Methode toString**
+
+Die Methode toString soll die Attribute brand, model und addition zurückgeben.
+Die Attribute sollen durch eine Leertaste getrennt sein. Falls addition keinen
+Wert besitz, soll dieser ignoriert werden.
 
 Erstelle eine ausführbare Klasse in der ein Auto mit der Marke "Mercedes", dem
 Modell "CLA45" und dem Zusatz "AMG" initialisiert wird. Gib das Auto in der
@@ -158,9 +162,10 @@ classDiagram
   }
 ```
 
-** Hinweise zur Klasse Helper** <br/> Im Klassendiagramm sind keine
-Rückgabetypen für die statischen Attribute angegeben. Gib für jedes Attribut den
-geeigneten Typ an.
+**Hinweise zur Klasse Helper**
+
+Im Klassendiagramm sind keine Rückgabetypen für die statischen Attribute
+angegeben. Gib für jedes Attribut den geeigneten Typ an.
 
 - Das Attribut **isNewBorn** soll eine Lambdafunktion enthalten die ermittelt,
   ob ein Tier jünger als 1 Jahr alt ist.
@@ -170,7 +175,7 @@ geeigneten Typ an.
   abhängig vom Parameter size überprüft, ob ein Tier größer als die angegebene
   Größe ist.
 
-**Hinweise zur Klasse Data** <br/>
+**Hinweise zur Klasse Data**
 
 - Die Methode **getAnimals** soll einen Stream von einem einzelnen Tier mit den
   Werten deiner Wahl zurückgeben.
