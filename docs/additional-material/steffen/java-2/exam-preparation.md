@@ -7,7 +7,7 @@ tags: []
 
 [Cheatsheet Java II](/pdf/java-cheat-sheet.pdf)
 
-[Altklausuren Java II](/zip/java-1-exams.zip)
+[Altklausuren Java II](/zip/java-2-exams.zip)
 
 1. Altklausuren 2022 Q3 - Klausur Java 2 Aufgabe 3
 
