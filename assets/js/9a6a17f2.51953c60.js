@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkjava_docs=self.webpackChunkjava_docs||[]).push([[5770],{63269:a=>{a.exports=JSON.parse('{"tag":{"label":"design","permalink":"/java-docs/tags/design","allTagsPath":"/java-docs/tags","count":1,"items":[{"id":"documentation/design","title":"Softwaredesign","description":"","permalink":"/java-docs/documentation/design"}],"unlisted":false}}')}}]);
