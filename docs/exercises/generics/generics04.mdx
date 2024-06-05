@@ -15,9 +15,9 @@ import Exercise from '@site/src/components/Exercise';
 ```mermaid
 classDiagram
     Tournament o-- Club
-    Tournament o-- Pair~Club~
+    Tournament o-- Pair~T~
 
-    class Pair~Club~ {
+    class Pair~T~ {
         <<record>>
         partA: T
         partB: T
