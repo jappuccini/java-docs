@@ -15,6 +15,7 @@ description: ''
 classDiagram
     BookCollection o-- Author
     BookCollection o-- Book
+    DuplicateKeyException <.. BookCollection : throws
 
     class Author {
         <<record>>
@@ -33,5 +34,9 @@ classDiagram
         +addBook(author: Author, book: Book) void
         +getMostDiligentAuthor() Optional~Author~
         +getBookByTitle(title: String) Optional~Book~
+    }
+
+    class DuplicateKeyException {
+        <<exception>>
     }
 ```
