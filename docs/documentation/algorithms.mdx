@@ -206,7 +206,10 @@ Teiler, ⌊ ⌋ = untere Gaußklammer
 
 Sortieralgorithmen sollen eine möglichst effiziente Speicherung von Daten und
 deren Auswertung ermöglichen. Man unterscheidet dabei zwischen einfachen und
-rekursiven Sortieralgorithmen.
+rekursiven Sortieralgorithmen. Zusätzlich wird bei Sortierverfahren zwischen
+stabilen und nichtstabilen Verfahren unterschieden. Bei stabilen
+Sortierverfahren bleibt die Reihenfolge von gleich großen Datensätzen bei der
+Sortierung erhalten.
 
 <Tabs>
   <TabItem value="a" label="Bubblesort" default>
@@ -214,7 +217,8 @@ rekursiven Sortieralgorithmen.
 Der Bubblesort verfolgt die Idee, das größere Blasen schneller aufsteigen als
 kleinere. Dementsprechend werden beim Bubblesort Nachbarelemente miteinander
 verglichen und gegebenenfalls vertauscht, so dass am Ende eines Durchlaufs das
-jeweils größte Element am Ende des noch unsortierten Teils steht.
+jeweils größte Element am Ende des noch unsortierten Teils steht. Beim
+Bubblesort handelt es sich um ein stabiles Sortierverfahren.
 
 | Index | 0   | 1      | 2      | 3      | 4      | 5      | 6      | 7      | 8      | 9      |
 | ----- | --- | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
@@ -234,7 +238,8 @@ jeweils größte Element am Ende des noch unsortierten Teils steht.
 Beim Insertionsort wird dem unsortierten Teil der Ausgangsdaten ein beliebiges
 Element entnommen (z.B. das jeweils erste) und an der richtigen Stelle im
 sortierten Teil wieder eingefügt. Beim Einfügen wird das entnommene Element mit
-den bereits sortierten Elementen verglichen.
+den bereits sortierten Elementen verglichen. Beim Insertionsort handelt es sich
+um ein stabiles Sortierverfahren.
 
 | Index | 0   | 1      | 2      | 3      | 4      | 5      | 6      | 7      | 8      | 9      |
 | ----- | --- | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
@@ -252,7 +257,8 @@ den bereits sortierten Elementen verglichen.
   <TabItem value="c" label="Selectionsort">
 
 Beim Selectionsort wird dem unsortierten Teil der Ausgangsdaten das jeweils
-kleinste Element entnommen und dem sortierten Teil angehängt.
+kleinste Element entnommen und dem sortierten Teil angehängt. Beim Selectionsort
+handelt es sich um ein nichtstabiles Sortierverfahren.
 
 | Index | 0   | 1      | 2      | 3      | 4      | 5      | 6      | 7      | 8      | 9      |
 | ----- | --- | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
@@ -273,7 +279,8 @@ Beim Quicksort wird die jeweilige Sammlung anhand eines beliebigen Elements
 (i.d.R. das mittlere Element) in zwei Hälften aufgeteilt: eine Hälfte mit
 Elementen kleiner oder gleich dem Teiler-Element und eine Hälfte mit Elementen
 größer dem Teiler-Element. Der Quicksort setzt folglich auf das
-Teile-und-Herrsche-Prinzip.
+Teile-und-Herrsche-Prinzip. Beim Quicksort handelt es sich um ein nichtstabiles
+Sortierverfahren.
 
 | Index | 0    | 1    | 2      | 3      | 4      | 5      | 6      |
 | ----- | ---- | ---- | ------ | ------ | ------ | ------ | ------ |
@@ -316,7 +323,7 @@ Zahl ist, verwendet.
 
 Beim Mergesort wird die Ausgangsliste zunächst in kleinere Listen zerlegt, die
 anschließend im Reißverschlussverfahren wieder zusammengefügt bzw. verschmolzen
-werden.
+werden. Beim Mergesort handelt es sich um ein stabiles Sortierverfahren.
 
 ```mermaid
 flowchart
