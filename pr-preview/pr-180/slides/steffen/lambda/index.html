@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="de" dir="ltr" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.4.0">
+<title data-rh="true">Programmieren mit Java</title><meta data-rh="true" property="og:title" content="Programmieren mit Java"><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://jappuccini.github.io/java-docs/pr-preview/pr-180/slides/steffen/lambda"><meta data-rh="true" property="og:locale" content="de"><meta data-rh="true" name="docusaurus_locale" content="de"><meta data-rh="true" name="docusaurus_tag" content="default"><meta data-rh="true" name="docsearch:language" content="de"><meta data-rh="true" name="docsearch:docusaurus_tag" content="default"><link data-rh="true" rel="icon" href="/java-docs/pr-preview/pr-180/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://jappuccini.github.io/java-docs/pr-preview/pr-180/slides/steffen/lambda"><link data-rh="true" rel="alternate" href="https://jappuccini.github.io/java-docs/pr-preview/pr-180/slides/steffen/lambda" hreflang="de"><link data-rh="true" rel="alternate" href="https://jappuccini.github.io/java-docs/pr-preview/pr-180/slides/steffen/lambda" hreflang="x-default"><link rel="stylesheet" href="/java-docs/pr-preview/pr-180/assets/css/styles.95d0ecfc.css">
+<script src="/java-docs/pr-preview/pr-180/assets/js/runtime~main.2f04e670.js" defer="defer"></script>
+<script src="/java-docs/pr-preview/pr-180/assets/js/main.1eaff784.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div class="reveal reveal-viewport" style="width:100vw;height:100vh"><div class="slides"><section><section><h2>Agenda</h2><ul><li class="fragment">Innere Klassen</li><li class="fragment">Lambdafunktionen</li></ul></section></section><section><section><h2>Innere Klassen</h2></section><section><h2>Innere Klassen</h2><p class="fragment">Dateien die ausschließlich eine einzige Klasse beinhalten nennt man<span> Äußere Klassen</span>.</p><p class="fragment">Wird eine Klasse innerhalb einer anderen Klasse definiert, nennt man diese <span> Innere Klasse </span>.</p></section><section><h2>Arten von Inneren Klassen</h2><ul><li class="fragment">Geschachtelte Klassen</li><li class="fragment">Element Klassen</li><li class="fragment">Lokale Klassen</li><li class="fragment">Anonyme Klassen</li></ul></section><section><h2>Geschachtelte Klasse - Definition</h2><p class="fragment">Die innere Klasse wird innerhalb der Klassendefinition erstellt und mit dem Schlüsselwort <span> static</span> markiert.</p><pre class="fragment"><code class="java">public class HumanComparator {
+ //...
+ public static class AgeDescComparator 
+   implements Comparator&lt;Human&gt; {
+   //...
+ }
+ //...
+}
+</code></pre></section><section><h2>Geschachtelte Klasse - Verwendung</h2><pre class="fragment"><code class="java">ArrayList&lt;Human&gt; humans = new ArrayList&lt;&gt;();
+
+HumanComparator.AgeDescComparator comparator;
+comparator = new HumanComparator.AgeDescComparator();
+
+Collections.sort(humans, comparator);
+</code></pre></section><section><h2>Element Klasse - Definition</h2><p class="fragment">Die innere Klasse wird innerhalb der Klassendefinition erstellt.</p><pre class="fragment"><code class="java">public class HumanComparator {
+ //...
+ public class AgeDescComparator 
+   implements Comparator&lt;Human&gt; {
+   //...
+ }
+ //...
+}
+</code></pre></section><section><h2>Element Klasse - Verwendung</h2><pre class="fragment"><code class="java">ArrayList&lt;Human&gt; humans = new ArrayList&lt;&gt;();
+
+HumanComparator humanComparator = new HumanComparator();
+
+Collections.sort(humans, humanComparator.new AgeDescComparator());
+</code></pre></section><section><h2>Lokale Klasse</h2><p class="fragment">Die lokale Klasse wird innerhalb einer Methode erstellt und mit keinem Schlüsselwort markiert. Sie kann nur in der erstellten Methode verwendet verwendet.</p><pre class="fragment"><code class="java"> //...
+ public static void main(String[] args) {
+   class AgeDescComparator implements Comparator&lt;Human&gt; {
+     //...
+   }
+   AgeDescComparator comparator = new AgeDescComparator();
+ }
+ //...
+</code></pre></section><section><h2>Anonyme Klasse</h2><p class="fragment">Die innere Klasse wird innerhalb des Methodenaufrufs definiert und instanziiert.</p><pre class="fragment"><code class="java">Collections.sort(humans, new Comparator&lt;Human&gt;() {
+  public int compare(Human h1, Human h2) {
+    // Implementierung der Comparatorlogik
+  }
+});
+</code></pre></section><section><h2>Frag jetzt!</h2></section><section><h2>Demo</h2><ul><li class="fragment">Geschachtelte Klassen</li><li class="fragment">Element Klassen</li><li class="fragment">Lokale Klassen</li><li class="fragment">Anonyme Klassen</li><li class="fragment">Ausblick Lambdafunktion</li></ul></section><section><h2>Frag jetzt!</h2></section></section><section><section><h2>Lambdafunktionen</h2></section><section><h2>Lambdafunktion</h2><p class="fragment">Eine Lambdafunktion ist eine Methode ohne Name, die wie eine Referenzvariable verwendet werden kann.</p><pre class="fragment"><code class="java">public class Main {
+  public static void main(String[] args) {
+    BinaryOperator&lt;Integer&gt; add = (x, y) -> x + y;
+  }
+}
+</code></pre></section><section><h2>Funktionales Interface</h2><p class="fragment">Ein funktionales Interface ist ein Interface mit genau einer abstrakten Methode.</p><p class="fragment">Das funkionale Interface wird für die Typisierung einer Lambdafunktion verwendet.</p><pre class="fragment"><code class="java">public class Main {
+  public static void main(String[] args) {
+    BinaryOperator&lt;Integer&gt; add = (x, y) -> x + y;
+  }
+}
+</code></pre></section><section><h2>Nicht Funktionales Interface</h2><p class="fragment">Nicht jedes Interface mit einer einzigen abstrakten Methode ist funktional, z.B.<!-- --> <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html" target="_blank" rel="noopener noreferrer">Comparable</a></p><p class="fragment">Funktionale Interfaces werden mit @FunctionalInterface markiert, z.B.<!-- --> <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Comparator.html" target="_blank" rel="noopener noreferrer">Comparator</a></p><pre class="fragment"><code class="java">@FunctionalInterface
+public interface NameChangesConsumer {
+  public void nameChanges(String changedName);
+}
+</code></pre></section><section><h2>Syntax Lambdafunktion - Kein Parameter</h2><p class="fragment">Hat das funktionale Interface keinen Parameter, werden runde Klammern benötigt.</p><pre class="fragment"><code class="java">shoppingList.cleared(() -&gt; {
+  System.out.println("Liste wurde geleert.");
+});
+</code></pre></section><section><h2>Syntax Lambdafunktion - Ein Parameter</h2><p class="fragment">Hat das funktionale Interface einen Parameter, werden keine runden Klammern benötigt.</p><pre class="fragment"><code class="java">shoppingList.itemAdded(item -&gt; {
+  System.out.println(item.getName() + " wurde hinzugefügt.");
+});
+</code></pre></section><section><h2>Syntax Lambdafunktion - Mehrere Parameter</h2><p class="fragment">Hat das funktionale Interface mehrere Parameter, werden runden Klammern benötigt.</p><pre class="fragment"><code class="java">shoppingList.getData((int sum, int count) -&gt; {
+  System.out.println("Warenwert: " + sum);
+  System.out.println("Artikelanzahl: " + count);
+});
+</code></pre></section><section><h2>Syntax Lambdafunktion - Mehrere Anweisungen</h2><p class="fragment">Besteht die Lambdafunktion aus mehrern Anweisungen sind geschweifte Klammern notwendig.</p><pre class="fragment"><code class="java">shoppingList.getData((int sum, int count) -&gt; {
+  System.out.println("Warenwert: " + sum);
+  System.out.println("Artikelanzahl: " + count);
+});
+</code></pre></section><section><h2>Syntax Lambdafunktion - Eine Anweisung</h2><p class="fragment">Besteht die Lambdafunktion aus einer Anweisung sind keine geschweifte Klammern notwendig.</p><pre class="fragment"><code class="java">shoppingList.getData((int sum, int count) -&gt; 
+  System.out.println("Wert: " + sum + " Anzahl: " + count);
+);
+</code></pre></section><section><h2>Syntax Lambdafunktion - return-Anweisung</h2><p class="fragment">Besteht die Lambdafunktion aus einer einzelnen return Anweisung, sind keine geschweifte Klammern notwendig und das return Statement kann weggelassen werden.</p><pre class="fragment"><code class="java">shoppingList.calculate((int a, int b) -&gt; a + b);
+</code></pre></section><section><h2>Frag jetzt!</h2></section><section><h2>Demo</h2><ul><li class="fragment">Intro Shopping List Example</li><li class="fragment">After List Printed (kein Parameter)</li><li class="fragment">After Item Added (ein Parameter)</li><li class="fragment">Items Changed (mehrere Parameter)</li></ul></section><section><h2>Frag jetzt!</h2></section></section><section><h2>Rest of the Day</h2><ul><li class="fragment">Java I Wiederholung</li><li class="fragment">Aufgaben: Innere Klassen</li></ul></section></div></div></div>
+</body>
+</html>
