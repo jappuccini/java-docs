@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="de" dir="ltr" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.4.0">
+<title data-rh="true">Programmieren mit Java</title><meta data-rh="true" property="og:title" content="Programmieren mit Java"><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://jappuccini.github.io/java-docs/pr-preview/pr-182/slides/steffen/generics-maps"><meta data-rh="true" property="og:locale" content="de"><meta data-rh="true" name="docusaurus_locale" content="de"><meta data-rh="true" name="docusaurus_tag" content="default"><meta data-rh="true" name="docsearch:language" content="de"><meta data-rh="true" name="docsearch:docusaurus_tag" content="default"><link data-rh="true" rel="icon" href="/java-docs/pr-preview/pr-182/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://jappuccini.github.io/java-docs/pr-preview/pr-182/slides/steffen/generics-maps"><link data-rh="true" rel="alternate" href="https://jappuccini.github.io/java-docs/pr-preview/pr-182/slides/steffen/generics-maps" hreflang="de"><link data-rh="true" rel="alternate" href="https://jappuccini.github.io/java-docs/pr-preview/pr-182/slides/steffen/generics-maps" hreflang="x-default"><link rel="stylesheet" href="/java-docs/pr-preview/pr-182/assets/css/styles.0f219bf9.css">
+<script src="/java-docs/pr-preview/pr-182/assets/js/runtime~main.65f14122.js" defer="defer"></script>
+<script src="/java-docs/pr-preview/pr-182/assets/js/main.395074d6.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div class="reveal reveal-viewport" style="width:100vw;height:100vh"><div class="slides"><section><section><h2>Agenda</h2><ul><li class="fragment">Generics</li><li class="fragment">Maps</li></ul></section></section><section><section><h2>Generics</h2></section><section><h2>Generische Typen</h2><p class="fragment">In Java können Klassen und Interfaces generisch sein.</p><p class="fragment">Generisch heißt, dass Funktionalität unabhängig von einem Typ implementiert werden können.</p></section><section><h2>Beispiele Generische Klassen</h2><ul><li class="fragment">ArrayList</li><li class="fragment">Optional</li></ul><p class="fragment">Beide Klassen stellen immer die gleiche Funktionalität bereit, egal welchen Typ wir verwenden.</p></section><section><h2>Beispiele ArrayList</h2><p class="fragment">Egal ob wir Objekte vom Typ Human, Dog, String oder Integer in einer ArrayList abspeichern, wir haben immer die gleichen Methoden zur verfügung.</p><p class="fragment">add, remove, size etc.</p></section><section><h2>Beispiel Optional</h2><p class="fragment">Egal ob wir Objekte vom Typ Human, Dog, String oder Integer mit Optional.of, Optional.ofNullable oder Optional.empty erstellen, wir haben immer die gleichen Methoden zur verfügung.</p><p class="fragment">isPresent, isEmpty, get</p></section><section><h2>Verwendung Generics I</h2><p class="fragment">Will man in seiner Anwendung eine Liste von Menschen abspeichern ist der <b>spezifische</b> Typ bekannt.</p><p class="fragment">Nach dem Klassennamen wird innerhalb von spitzen Klammern, der<!-- --> <b>spezifische</b> Typ angegeben.</p></section><section><h2>Verwendung Generics II</h2><pre class="fragment"><code class="java">public class Main {
+  public static void main(String[] args) {
+    ArrayList&lt;Human&gt; humans = new ArrayList&lt;&gt;();
+    Optional&ltHuman&gt; human = Optional.empty();
+  }
+}
+</code></pre></section><section><h2>Implementierung Generics I</h2><p class="fragment">Um eine generische Klasse zu erstellen, wird nach dem Klassennamen in spitzen Klammern der Platzhalter für einen Typ angegeben.</p><pre class="fragment"><code class="java">public class Team&lt;T&gt; {
+  // implementierung der Klasse
+}
+</code></pre></section><section><h2>Typplatzhalter I</h2><pre><code class="java">public class Team&lt;T&gt; {
+  // implementierung der Klasse
+}
+</code></pre><pre class="fragment"><code class="java">public class Team&lt;A&gt; {
+  // implementierung der Klasse
+}
+</code></pre><pre class="fragment"><code class="java">public class Team&lt;HANS&gt; {
+  // implementierung der Klasse
+}
+</code></pre><pre class="fragment"><code class="java">public class Team&lt;BLIBLABLUBB&gt; {
+  // implementierung der Klasse
+}
+</code></pre><p class="fragment">Der Namen des Platzhalters kann frei gewählt werden.</p></section><section><h2>Typplatzhalter II</h2><pre><code class="java">public class Team&lt;T&gt; {
+  // implementierung der Klasse
+}
+</code></pre><pre class="fragment"><code class="java">public class Team&lt;T,U&gt; {
+  // implementierung der Klasse
+}
+</code></pre><pre class="fragment"><code class="java">public class Team&lt;T, U, V&gt; {
+  // implementierung der Klasse
+}
+</code></pre><p class="fragment">Es können mehrere Platzhalter kommagetrennt angegeben werden.</p></section><section><h2>Verwenden von Typplatzhaltern I</h2><pre><code class="java">public class Team&lt;T&gt; {
+  private String teamName;
+  private ArrayList&lt;T&gt; teamMembers = new ArrayList&lt;&gt;();
+  
+  public String teamName() {
+    return this.teamName;
+  }
+  
+  public void addMember(T member) {
+    this.teamMembers.add(member);
+  }
+}
+</code></pre></section><section><h2>Verwenden von Typplatzhaltern II</h2><pre><code class="java">public class Main {
+  public static void main(String[] args) {
+    Team&lt;FootballPlayer&gt; scfreiburg = new Team&lt;&gt;();
+    Team&lt;HockeyPlayer&gt; wildwings  = new Team&lt;&gt;();
+    
+    scfreiburg.addMember(new FootballPlayer("Steffen");
+    scfreiburg.addMember(new HockeyPlayer("Mirco"); // fails
+    wildwings.addMember(new HockeyPlayer("Mirco");
+ }
+}
+</code></pre></section><section><h2>Demo</h2><ul><li class="fragment">Football- und Hockeyteam</li><li class="fragment">Generische Team Klasse</li><li class="fragment">Spieler eines Teams ausgeben</li></ul></section><section><h2>Einschränken von Typplatzhaltern I</h2><p>Um noch mehr Funktionalitäten in eine generische Klasse auszulagern ist es notwendig den Typ einzuschränken.</p></section><section><h2>Einschränken von Typplatzhaltern II</h2><p>Mit <b>extends</b> und <b>super</b> können die möglichen Typen eingeschränkt werden.</p></section><section><h2>Einschränken von Typplatzhaltern III</h2><pre><code class="java">public class Team&lt;T extends Player&gt; {
+  // Player und Subtypen von Player erlaubt
+}
+</code></pre><pre class="fragment"><code class="java">public class Team&lt;T super Player&gt; {
+  // Player und Supertypen von Player erlaubt 
+}
+</code></pre></section><section><h2>Einschränken von Typplatzhaltern IV</h2><pre><code class="java">public class Player {}
+public class BaseballPlayer extends Player {}
+public class FootballPlayer extends Player {}
+public class ExtremeFootballPlayer extends FootballPlayer {}
+</code></pre><pre class="fragment"><code class="java">public class Team&lt;T extends Player&gt; {} //PBFE erlaubt
+public class Team&lt;T extends FootballPlayer&gt; {} //FE erlaubt
+public class Team&lt;T super Player&gt; {} // P erlaubt
+public class Team&lt;T super FootballPlayer&gt; {} //PF erlaubt</code></pre></section><section><h2>Demo</h2><ul><li class="fragment">Spieler eines Generischen Teams ausgeben</li></ul></section></section><section><section><h2>Maps</h2></section><section><h2>Maps</h2><p>Wir kennen das Array oder die ArrayList als Datenstruktur. Hierbei greifen wir über den Index auf Elemente zu.</p><p class="fragment">Mithilfe einer HashMap lassen sich Daten in Form von Schlüssel-Wert-Paaren effizient speichern und abrufen.</p></section><section><h4>Beispiel Schlüssel-Wert-Paare</h4><ul><li class="fragment">Studentendaten → MatrikelNummer, Student</li><li class="fragment">Produktinventar → Produkt, Anzahl</li><li class="fragment">StadtInfos → Stadtname, CityInfo</li><li class="fragment">Hauptstädte → Land, Hauptstadt</li></ul></section><section><h2>Erzeugen einer HashMap</h2><pre class="fragment"><code class="java">public class Main {
+  public static void main(String[] args) {
+    Student steffen = new Student("Steffen");
+    HashMap&lt;Integer, Student&gt; students = new HashMap&lt;&gt;();
+    students.put(4545, steffen); // add value to map
+    students.get(4545); // get value from map
+    students.remove(4545); // remove value from map
+    students.clear(); // clear map
+    students.size(); // number of items in map
+    students.containsKey(4545); // check if key exists
+    students.containsValue(steffen); // check if value exists
+    students.keySet(); // get all keys as Set
+    students.entrySet(); // get all entries as Set-Entry
+    students.values(); // get all entries as Collection
+  }
+}
+</code></pre></section><section><h2>Demo</h2><ul><li class="fragment">Studentendaten</li><li class="fragment">Daten liegen unsortiert vor</li><li class="fragment">Objekte als Schlüssel</li></ul></section><section><h2>Maps</h2><p>Daten liegen unsortiert vor.</p><p class="fragment">Maps mit Objekten als Schlüssel müssen je nach Anwendungsfall richtig implementiert werden.</p><p class="fragment">equals - Methode muss zusätzlich zu hashCode implementiert werden</p><p class="fragment">performance outlook</p></section><section><h2>Frag jetzt!</h2></section></section><section><h2>Rest of the Day</h2><ul><li class="fragment">Generics</li><li class="fragment">Maps</li></ul></section></div></div></div>
+</body>
+</html>
