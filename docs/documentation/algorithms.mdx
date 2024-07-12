@@ -63,34 +63,22 @@ Eigenschaften erfüllen:
 
 Da der Zeitaufwand von Algorithmen aufgrund unterschiedlicher Faktoren
 (Hardware, parallele Verarbeitung, Eingabereihenfolge,…) nicht genau ermittelt
-werden kann, wird diese mit Hilfe der Landau-Notation dargestellt. Diese teilt
-Algorithmen in unterschiedliche Komplexitätsklassen (logarithmisch, linear,
-polynomial,…) ein. Die Komplexität einer Klasse ergibt sich dabei aus der Anzahl
-der Schritte, die abhängig von der Größe der Eingangsvariablen ausgeführt werden
-müssen.
-
-| Algorithmus         | Best Case        | Average Case     | Worst Case       |
-| ------------------- | ---------------- | ---------------- | ---------------- |
-| Linearsuche         | 𝒪(1)             | 𝒪(𝑛)             | 𝒪(𝑛)             |
-| Binärsuche          | 𝒪(1)             | 𝒪(𝑙𝑜𝑔 ⁡𝑛)        | 𝒪(𝑙𝑜𝑔 ⁡𝑛)        |
-| Interpolationssuche | 𝒪(1)             | 𝒪(𝑙𝑜𝑔 𝑙𝑜𝑔 ⁡𝑛)    | 𝒪(𝑛)             |
-| Bubblesort          | 𝒪(𝑛<sup>2</sup>) | 𝒪(𝑛<sup>2</sup>) | 𝒪(𝑛<sup>2</sup>) |
-| Insertsort          | 𝒪(𝑛)             | 𝒪(𝑛<sup>2</sup>) | 𝒪(𝑛<sup>2</sup>) |
-| Selectsort          | 𝒪(𝑛<sup>2</sup>) | 𝒪(𝑛<sup>2</sup>) | 𝒪(𝑛<sup>2</sup>) |
-| Quicksort           | 𝒪(𝑛 𝑙𝑜𝑔 ⁡𝑛)      | 𝒪(𝑛 𝑙𝑜𝑔 ⁡𝑛)      | 𝒪(𝑛<sup>2</sup>) |
-| Mergesort           | 𝒪(𝑛 𝑙𝑜𝑔 ⁡𝑛)      | 𝒪(𝑛 𝑙𝑜𝑔 ⁡𝑛)      | 𝒪(𝑛 𝑙𝑜𝑔 ⁡𝑛)      |
-
-:::note Hinweis
-
-Das Landau-Symbol 𝒪 steht für _Ordnung von_.
-
-:::
+werden kann, wird diese mit Hilfe der Landau-Notation 𝒪 (_Ordnung von_)
+dargestellt. Diese teilt Algorithmen in unterschiedliche Komplexitätsklassen
+(logarithmisch, linear, polynomial,…) ein. Die Komplexität einer Klasse ergibt
+sich dabei aus der Anzahl der Schritte, die abhängig von der Größe der
+Eingangsvariablen ausgeführt werden müssen.
 
 ## Suchalgorithmen
 
 Suchalgorithmen sollen innerhalb einer Datensammlung einen oder mehrere
-Datensätze mit bestimmten Eigenschaften finden. Zu den wichtigen Suchalgorithmen
-zählen die Linearsuche, die Binärsuche sowie die Interpolationssuche.
+Datensätze mit bestimmten Eigenschaften finden.
+
+| Algorithmus         | Komplexität Best Case | Komplexität Average Case | Komplexität Worst Case |
+| ------------------- | --------------------- | ------------------------ | ---------------------- |
+| Linearsuche         | 𝒪(1)                  | 𝒪(𝑛)                     | 𝒪(𝑛)                   |
+| Binärsuche          | 𝒪(1)                  | 𝒪(𝑙𝑜𝑔 ⁡𝑛)                | 𝒪(𝑙𝑜𝑔 ⁡𝑛)              |
+| Interpolationssuche | 𝒪(1)                  | 𝒪(𝑙𝑜𝑔 𝑙𝑜𝑔 ⁡𝑛)            | 𝒪(𝑛)                   |
 
 <Tabs>
   <TabItem value="a" label="Linearsuche" default>
@@ -206,7 +194,21 @@ Teiler, ⌊ ⌋ = untere Gaußklammer
 
 Sortieralgorithmen sollen eine möglichst effiziente Speicherung von Daten und
 deren Auswertung ermöglichen. Man unterscheidet dabei zwischen einfachen und
-rekursiven Sortieralgorithmen.
+rekursiven Sortieralgorithmen. Zusätzlich wird bei Sortierverfahren zwischen
+stabilen und nichtstabilen Verfahren unterschieden. Bei stabilen
+Sortierverfahren bleibt die Reihenfolge von gleich großen Datensätzen bei der
+Sortierung erhalten. Die Platzkomplexität eines Sortierverfahrens schließlich
+gibt an, ob zusätzlicher Speicherplatz für Zwischenergebnisse unabhängig von der
+Anzahl Daten ist (_in-place_) oder nicht (_out-of-place_).
+
+| Algorithmus   | Komplexität Best Case | Komplexität Average Case | Komplexität Worst Case | Stabil | In-Place |
+| ------------- | --------------------- | ------------------------ | ---------------------- | ------ | -------- |
+| Bubblesort    | 𝒪(𝑛<sup>2</sup>)      | 𝒪(𝑛<sup>2</sup>)         | 𝒪(𝑛<sup>2</sup>)       | ja     | ja       |
+| Insertionsort | 𝒪(𝑛)                  | 𝒪(𝑛<sup>2</sup>)         | 𝒪(𝑛<sup>2</sup>)       | ja     | ja       |
+| Selectionsort | 𝒪(𝑛<sup>2</sup>)      | 𝒪(𝑛<sup>2</sup>)         | 𝒪(𝑛<sup>2</sup>)       | nein   | ja       |
+| Quicksort     | 𝒪(𝑛 𝑙𝑜𝑔 ⁡𝑛)           | 𝒪(𝑛 𝑙𝑜𝑔 ⁡𝑛)              | 𝒪(𝑛<sup>2</sup>)       | nein   | ja       |
+| Mergesort     | 𝒪(𝑛 𝑙𝑜𝑔 ⁡𝑛)           | 𝒪(𝑛 𝑙𝑜𝑔 ⁡𝑛)              | 𝒪(𝑛 𝑙𝑜𝑔 ⁡𝑛)            | ja     | nein     |
+| Heapsort      | 𝒪(𝑛 𝑙𝑜𝑔 ⁡𝑛)           | 𝒪(𝑛 𝑙𝑜𝑔 ⁡𝑛)              | 𝒪(𝑛 𝑙𝑜𝑔 ⁡𝑛)            | nein   | ja       |
 
 <Tabs>
   <TabItem value="a" label="Bubblesort" default>
@@ -365,6 +367,160 @@ flowchart
         merge5(16, 70)
         merge6(16, 49, 70, 76)
         merge7(12, 16, 36, 49, 50, 68, 70, 76, 99)
+    end
+```
+
+  </TabItem>
+  <TabItem value="f" label="Heapsort">
+
+Beim Heapsort werden die Daten zunächst in einen binären Max-Heap überführt,
+d.h. in einen Binärbaum, bei dem jeder Elternknoten größer ist als seine
+Kindknoten. Anschließend wird in jedem Durchlauf das jeweils letzte Element mit
+dem Wurzelknoten ausgetauscht und anschließend durch Vergleichen und Austauschen
+sichergestellt, dass weiterhin alle Knoten die Heap-Bedingung erfüllen. Dieser
+Schritt wird als Heapify oder Versickern bezeichnet.
+
+```mermaid
+flowchart TD
+    1(99)
+    2(70)
+    3(76)
+    4(68)
+    5(36)
+    6(49)
+    7(50)
+    8(12)
+    9(16)
+
+	subgraph "Build-Max-Heap"
+		array(16, 12, 50, 49, 36, 68, 76, 70, 99)
+    	1 --> 2
+    	1 --> 3
+    	2 --> 4
+    	2 --> 5
+    	3 --> 6
+    	3 --> 7
+    	4 --> 8
+    	4 --> 9
+    end
+```
+
+```mermaid
+flowchart TD
+    1(76)
+    2(70)
+    3(50)
+    4(68)
+    5(36)
+    6(49)
+    7(16)
+    8(12)
+
+    subgraph "Heapify 1"
+    	array(12, 16, 49, 36, 68, 50, 70, 76, 99)
+    	1 --> 2
+    	1 --> 3
+    	2 --> 4
+    	2 --> 5
+    	3 --> 6
+    	3 --> 7
+    	4 --> 8
+    end
+```
+
+```mermaid
+flowchart TD
+    1(70)
+    2(68)
+    3(50)
+    4(12)
+    5(36)
+    6(49)
+    7(16)
+
+    subgraph "Heapify 2"
+    	array(16, 49, 36, 12, 68, 50, 70, 76, 99)
+    	1 --> 2
+    	1 --> 3
+    	2 --> 4
+    	2 --> 5
+    	3 --> 6
+    	3 --> 7
+    end
+```
+
+```mermaid
+flowchart TD
+    1(68)
+    2(36)
+    3(50)
+    4(12)
+    5(16)
+    6(49)
+
+	subgraph "Heapify 3"
+		array(16, 12, 50, 36, 49, 68, 70, 76, 99)
+    	1 --> 2
+    	1 --> 3
+    	2 --> 4
+    	2 --> 5
+    	3 --> 6
+    end
+```
+
+```mermaid
+flowchart TD
+    1(50)
+    2(36)
+    3(49)
+    4(12)
+    5(16)
+
+	subgraph "Heapify 4"
+		array(12, 49, 36, 16, 50, 68, 70, 76, 99)
+    	1 --> 2
+    	1 --> 3
+    	2 --> 4
+    	2 --> 5
+    end
+```
+
+```mermaid
+flowchart TD
+    1(49)
+    2(36)
+    3(16)
+    4(12)
+
+	subgraph "Heapify 5"
+		array(16, 36, 12, 49, 50, 68, 70, 76, 99)
+    	1 --> 2
+    	1 --> 3
+    	2 --> 4
+    end
+```
+
+```mermaid
+flowchart TD
+    1(36)
+    2(12)
+    3(16)
+
+	subgraph "Heapify 6"
+		array(12, 16, 36, 49, 50, 68, 70, 76, 99)
+    	1 --> 2
+    	1 --> 3
+    end
+```
+
+```mermaid
+flowchart TD
+    1(16)
+    2(12)
+
+	subgraph "Heapify 7"
+		array(12, 16, 36, 49, 50, 68, 70, 76, 99)
+    	1 --> 2
     end
 ```
 

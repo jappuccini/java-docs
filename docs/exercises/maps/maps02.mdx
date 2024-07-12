@@ -17,8 +17,7 @@ import Exercise from '@site/src/components/Exercise';
 classDiagram
     BookCollection o-- Author
     BookCollection o-- Book
-    BookCollection -- DuplicateKeyException
-    DuplicateKeyException --> Exception : extends
+    DuplicateKeyException <.. BookCollection : throws
 
     class Author {
         <<record>>
@@ -39,8 +38,9 @@ classDiagram
         +getBookByTitle(title: String) Book
     }
 
-    class DuplicateKeyException { }
-    class Exception { }
+    class DuplicateKeyException {
+    	<<exception>>
+    }
 ```
 
 ## Hinweise zur Klasse _BookCollection_
