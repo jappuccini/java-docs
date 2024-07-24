@@ -1,0 +1,58 @@
+---
+title: Lombok
+description: ''
+sidebar_position: 255
+tags: [lombok]
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+[Lombok](https://projectlombok.org/) stellt eine Java-Bibliothek dar, die das
+Erstellen von Boilerplate-Code überflüssig macht. Repetitive Methoden wie
+Konstruktoren, Getter, Setter und die Objekt-Methoden müssen nicht manuell
+implementiwert werden, sondern werden beim Kompilieren generiert. Durch
+entsprechende Annotationen kann dabei gesteuert werden, welche Methoden wie
+generiert werden sollen.
+
+<Tabs>
+  <TabItem value="a" label="Fachklasse" default>
+
+```java title="Student.java" showLineNumbers
+@RequiredArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+@EqualsAndHashCode
+@ToString
+public class Student {
+
+  public final int id;
+  public final String name;
+  public double averageGrade;
+
+}
+```
+
+  </TabItem>
+  <TabItem value="b" label="Startklasse" default>
+
+```java title="MainClass.java" showLineNumbers
+public class MainClass {
+
+  public static void main(String[] args) {
+
+    Student student1 = new Student("8172534", "Hans Maier");
+    student1.setAverageGrade(2.2);
+    System.out.println(student1.getName());
+
+    Student student2 = new Student("9167121", "Lisa Müller", 1.8);
+    System.out.println(student2);
+
+  }
+
+}
+```
+
+  </TabItem>
+</Tabs>
