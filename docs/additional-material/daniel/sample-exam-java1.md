@@ -17,10 +17,10 @@ tags: []
 - So nicht anders angegeben sollen Konstruktoren, Setter, Getter sowie die
   Object-Methoden wie in der Vorlesung gezeigt implementiert werden
 - Die Konsolenausgaben-Methoden der Klasse `PrintStream` dürfen sinnvoll gekürzt
-  geschrieben werden (zum Beispiel `syso("Hello World")` statt
-  `System.out.println("Hello World")`)
+  geschrieben werden (zum Beispiel _syso("Hello World")_ statt
+  _System.out.println("Hello World")_)
 - Methoden- und Attributsbezeichner dürfen sinnvoll gekürzt geschrieben werden
-  (Beispiel `getLWMCP()` statt `getLectureWithMostCreditPoints()`)
+  (zum Beispiel _getLWMCP()_ statt _getLectureWithMostCreditPoints()_)
 
 ## Aufgabe 1 (20 Punkte)
 

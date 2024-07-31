@@ -21,12 +21,121 @@ tags: []
   Object-Methoden wie in der Vorlesung gezeigt implementiert werden
 - Annotationen der Lombok-Bibliothek dürfen verwendet werden
 - Die Konsolenausgaben-Methoden der Klasse `PrintStream` dürfen sinnvoll gekürzt
-  geschrieben werden (zum Beispiel `syso("Hello World")` statt
-  `System.out.println("Hello World")`)
+  geschrieben werden (zum Beispiel _syso("Hello World")_ statt
+  _System.out.println("Hello World")_)
 - Methoden- und Attributsbezeichner dürfen sinnvoll gekürzt geschrieben werden
-  (Beispiel `getLWMCP()` statt `getLectureWithMostCreditPoints()`)
+  (zum Beispiel _getLWMCP()_ statt _getLectureWithMostCreditPoints()_)
 
-## Aufgabe 1 (14 Punkte)
+## Aufgabe 1 (16 Punkte)
+
+Erstelle die Klasse `SuperLeague<T extends SuperHuman>` anhand des abgebildeten
+Klassendiagrams.
+
+### Klassendiagramm
+
+```mermaid
+classDiagram
+    SuperHuman <|-- Villain : extends
+    SuperHuman <|-- Hero : extends
+    Universe --o SuperHuman
+    SuperLeague~T extends SuperHuman~ o-- Universe
+
+    class SuperHuman {
+        <<abstract>>
+        -name: String &#123final&#125
+        -universe: Universe &#123final&#125
+        -power: int &#123final&#125
+        +SuperHuman(name: String, universe: Universe, power: int)
+        +name() String
+        +universe() Universe
+        +power() int
+    }
+
+    class Villain {
+        +Villain(name: String, universe: Universe, power: int)
+    }
+
+    class Hero {
+        +Hero(name: String, universe: Universe, power: int)
+    }
+
+    class Universe {
+        <<enumeration>>
+        MARVEL
+        DC
+    }
+
+    class SuperLeague~T extends SuperHuman~ {
+        <<record>>
+        name: String
+        universe: Universe
+        members: Map~T, Boolean~
+        +addSuperHuman(t: T) void
+        +getMostPowerfulSuperHuman() Optional~T~
+        +getAllAvailableSuperHumans() List~T~
+        +sendSuperHumanOnMission(t: T) void
+    }
+```
+
+### Hinweise zur Klasse _SuperLeague_
+
+- Die Schlüssel-Werte-Paare des Assoziativspeichers beinhalten als Schlüssel die
+  Übermenschen der Liga sowie als Wert deren Verfügbarkeit
+- Die Methode `Optional<T> getMostPowerfulSuperHuman()` soll den stärksten
+  Übermenschen der Liga zurückgeben
+- Die Methode `void addSuperHuman(t: T)` soll der Liga den eingehenden
+  Übermenschen als verfügbares Mitglied hinzufügen. Für den Fall, dass das
+  Universum des eingehenden Übermenschen nicht dem Universum der Liga
+  entspricht, soll die Ausnahme `WrongUniverseException` ausgelöst werden
+- Die Methode `List<T> getAllAvailableSuperHumans()` soll alle verfügbaren
+  Übermenschen der Liga zurückgeben
+- Die Methode `void sendSuperHumanOnMission(t: T)` soll die Verfügbarkeit des
+  eingehenden Übermenschen auf _nicht verfügbar_ setzen
+
+### Musterlösung
+
+```java title="SuperLeage.java" showLineNumbers
+public record SuperLeague<T extends SuperHuman>
+  (String name, Universe universe, Map<T, Boolean> members) { // 1
+
+  public Optional<T> getMostPowerfulSuperHuman() { // 0,5
+    T mostPowerfulSuperHuman = null; // 0,5
+    int power = 0; // 0,5
+    for (T t : members.keySet()) { // 1
+      if (t.power() > power) { // 0,5
+        power = t.power(); // 0,5
+        mostPowerfulSuperHuman = t; // 0,5
+      }
+    }
+    return Optional.ofNullable(mostPowerfulSuperHuman); // 1
+  }
+
+  public void addSuperHuman(T t) throws WrongUniverseException { // 1
+    if (!t.universe().equals(universe)) { // 1
+      throw new WrongUniverseException(); // 1
+    }
+
+    members.put(t, true); // 1
+  }
+
+  public List<T> getAllAvailableSuperHumans() { // 0,5
+    List<T> allAvailableSuperHumans = new ArrayList<>(); // 0,5
+    for (Entry<T, Boolean> entry : members.entrySet()) { // 1
+      if (entry.getValue().equals(true)) { // 1
+        allAvailableSuperHumans.add(entry.getKey()); // 1
+      }
+    }
+    return allAvailableSuperHumans; // 0,5
+  }
+
+  public void sendSuperHumanOnMission(T t) { // 0,5
+    members.put(t, false); // 1
+  }
+
+}
+```
+
+## Aufgabe 2 (14 Punkte)
 
 Erstelle die JUnit-5-Testklasse `SuperLeagueTest` anhand des abgebildeten
 Klassendiagramms.
@@ -93,31 +202,23 @@ classDiagram
 
 ### Hinweise zur Klasse _SuperLeagueTest_
 
-- Die Lebenszyklus-Methode `void setUp()` soll das nachfolgende Testszenario
-  aufbauen:
-  - Es sollen die Superhelden Superman (DC, Stärke 10), Iron Man (MARVEL, 7) und
-    Spider-Man (MARVEL, 8) erstellt und den entsprechenden Attributen zugewiesen
-    werden
-  - Es soll eine MARVEL-Superheldenliga mit dem Namen _Avengers_ erstellt und
-    dem entsprechenden Attribut zugewiesen werden
-  - Die Superhelden Iron Man und Spider-Man sollen den Avengers als verfügbaren
-    Superhelden hinzugefügt werden
-  - Der Superheld mit dem Namen Spider-Man soll auf eine Mission geschickt
-    werden
+- Die Lebenszyklus-Methode `void setUp()` soll den Superhelden _Superman_ (Name:
+  Superman, Universum: DC, Stärke: 10), den Superhelden _Iron Man_ (Name: Iron
+  Man, Universum: MARVEL, Stärke: 7), den Superhelden _Spider-Man_ (Name:
+  Spider-Man, Universum: MARVEL, Stärke: 8) sowie die Superheldenliga _Avengers_
+  (Name: Avengers, Universum: MARVEL) erstellen und den entsprechenden
+  Attributen zuweisen, die Superhelden _Iron Man_ und _Spider-Man_ der
+  Superheldenliga _Avengers_ als verfügbare Superhelden hinzugefügen und den
+  Superheld _Spider-Man_ auf eine Mission schicken
 - Die Testmethode `void testAddSuperHuman()` soll prüfen, ob beim Aufruf der
-  Methode `void addSuperHuman(t: T)` auf das Attribut `avengers` mit dem Wert
-  `superman` die Ausnahme `WrongUniverseException` ausgelöst wird
+  Methode `void addSuperHuman(t: T)` mit dem Superhelden _Superman_ die Ausnahme
+  `WrongUniverseException` ausgelöst wird
 - Die Testmethode `void testGetAllAvailableSuperHumans()` soll prüfen, ob beim
-  Aufruf der Methode `List<T> getAllAvailableSuperHumans()` auf das Attribut
-  `avengers` eine Liste der Größe 1 zurückgegeben wird
+  Aufruf der Methode `List<T> getAllAvailableSuperHumans()` eine Liste der Größe
+  1 zurückgegeben wird
 - Die Testmethode `void testGetMostPowerfulSuperHuman()` soll prüfen, ob beim
-  Aufruf der Methode `Optional<T> getMostPowerfulSuperHuman()` auf das Attribut
-  `avengers` der Superheld Spider-Man als Optional zurückgegeben wird
-
-### Hinweis zur Klasse _SuperLeague_
-
-Die Methode `void addSuperHuman(t: T)` kann die Ausnahme
-`WrongUniverseException` auslösen.
+  Aufruf der Methode `Optional<T> getMostPowerfulSuperHuman()` der Superheld
+  _Spider-Man_ als Optional zurückgegeben wird
 
 ### Musterlösung
 
@@ -153,116 +254,6 @@ public class SuperLeagueTest { // 0,5
   @Test // 0,25
   void testGetMostPowerfulSuperHuman() { // 0,25
     assertEquals(spiderman, avengers.getMostPowerfulSuperHuman().get()); // 1,5
-  }
-
-}
-```
-
-## Aufgabe 2 (16 Punkte)
-
-Erstelle die Klasse `SuperLeague<T extends SuperHuman>` anhand des abgebildeten
-Klassendiagrams.
-
-### Klassendiagramm
-
-```mermaid
-classDiagram
-    SuperHuman <|-- Villain : extends
-    SuperHuman <|-- Hero : extends
-    Universe --o SuperHuman
-    SuperLeague~T extends SuperHuman~ o-- Universe
-
-    class SuperHuman {
-        <<abstract>>
-        -name: String &#123final&#125
-        -universe: Universe &#123final&#125
-        -power: int &#123final&#125
-        +SuperHuman(name: String, universe: Universe, power: int)
-        +name() String
-        +universe() Universe
-        +power() int
-    }
-
-    class Villain {
-        +Villain(name: String, universe: Universe, power: int)
-    }
-
-    class Hero {
-        +Hero(name: String, universe: Universe, power: int)
-    }
-
-    class Universe {
-        <<enumeration>>
-        MARVEL
-        DC
-    }
-
-    class SuperLeague~T extends SuperHuman~ {
-        <<record>>
-        name: String
-        universe: Universe
-        members: Map~T, Boolean~
-        +addSuperHuman(t: T) void
-        +getMostPowerfulSuperHuman() Optional~T~
-        +getAllAvailableSuperHumans() List~T~
-        +sendSuperHumanOnMission(t: T) void
-    }
-```
-
-### Hinweise zur Klasse _SuperLeague_
-
-- Der Assoziativspeicher `members` beinhaltet als Schlüssel alle Übermenschen
-  der Liga sowie als Wert deren Verfügbarkeit (verfügbar: `true`, nicht
-  verfügbar: `false`)
-- Die Methode `Optional<T> getMostPowerfulSuperHuman()` soll den stärksten
-  Übermenschen der Liga als Optional zurückgeben
-- Die Methode `void addSuperHuman(t: T)` soll der Liga den eingehenden
-  Übermenschen als verfügbares Mitglied hinzufügen. Für den Fall, dass das
-  Universum des eingehenden Übermenschen nicht dem Universum der Liga
-  entspricht, soll die Ausnahme `WrongUniverseException` ausgelöst werden
-- Die Methode `List<T> getAllAvailableSuperHumans()` soll alle verfügbaren
-  Übermenschen der Liga als Liste zurückgeben
-- Die Methode `void sendSuperHumanOnMission(t: T)` soll die Verfügbarkeit des
-  eingehenden Übermenschen auf nicht verfügbar setzen
-
-### Musterlösung
-
-```java title="SuperLeage.java" showLineNumbers
-public record SuperLeague<T extends SuperHuman>
-  (String name, Universe universe, Map<T, Boolean> members) { // 1
-
-  public Optional<T> getMostPowerfulSuperHuman() { // 0,5
-    T mostPowerfulSuperHuman = null; // 0,5
-    int power = 0; // 0,5
-    for (T t : members.keySet()) { // 1
-      if (t.power() > power) { // 0,5
-        power = t.power(); // 0,5
-        mostPowerfulSuperHuman = t; // 0,5
-      }
-    }
-    return Optional.ofNullable(mostPowerfulSuperHuman); // 1
-  }
-
-  public void addSuperHuman(T t) throws WrongUniverseException { // 1
-    if (!t.universe().equals(universe)) { // 1
-      throw new WrongUniverseException(); // 1
-    }
-
-    members.put(t, true); // 1
-  }
-
-  public List<T> getAllAvailableSuperHumans() { // 0,5
-    List<T> allAvailableSuperHumans = new ArrayList<>(); // 0,5
-    for (Entry<T, Boolean> entry : members.entrySet()) { // 1
-      if (entry.getValue().equals(true)) { // 1
-        allAvailableSuperHumans.add(entry.getKey()); // 1
-      }
-    }
-    return allAvailableSuperHumans; // 0,5
-  }
-
-  public void sendSuperHumanOnMission(T t) { // 0,5
-    members.put(t, false); // 1
   }
 
 }
