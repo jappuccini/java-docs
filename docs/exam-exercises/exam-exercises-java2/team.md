@@ -24,7 +24,7 @@ ausführbare Klasse und/oder eine Testklasse.
 classDiagram
     Sportsman <|-- Footballer : extends
     Team~T extends Sportsman~ o-- Position
-    Comparable~Footballer~ <|.. Sportsman : implements
+    Comparable~Sportsman~ <|.. Sportsman : implements
 
     class Footballer {
         -numberOfGoals: int
