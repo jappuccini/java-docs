@@ -45,7 +45,7 @@ classDiagram
         <<abstract>>
         -name: String &#123final&#125
         +Sportsman(name: String)
-        +getScorerPoints() int &#123abstrakt&#125
+        +getScorerPoints() int &#123abstract&#125
         +compareTo(other: Sportsman) int
     }
 
