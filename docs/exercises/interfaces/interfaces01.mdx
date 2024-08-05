@@ -6,13 +6,13 @@ description: ''
 import Exercise from '@site/src/components/Exercise';
 
 - Passe die Klasse `Rental` aus Übungsaufgabe
-  [Abstract and Final 01](../abstract-and-final/abstract-and-final01) anhand des
+  [AbstractAndFinal01](../abstract-and-final/abstract-and-final01) anhand des
   abgebildeten Klassendiagramms an und erstelle die Klasse `TravelAgency` sowie
   die Schnittstelle `Partner`
 - Passe die ausführbare Klasse aus Übungsaufgabe
-  [Abstract and Final 01](../abstract-and-final/abstract-and-final01) so an,
-  dass ein Reisebüro erzeugt wird, dass diesem die Autovermietung hinzugefügt
-  wird und dass alle Attribute des Reisebüros ausgegeben werden
+  [AbstractAndFinal01](../abstract-and-final/abstract-and-final01) so an, dass
+  ein Reisebüro erzeugt wird, dass diesem die Autovermietung hinzugefügt wird
+  und dass alle Attribute des Reisebüros ausgegeben werden
 
 ## Klassendiagramm
 
@@ -92,7 +92,7 @@ classDiagram
     }
 
     class TravelAgency {
-        -name: String
+        -name: String &#123final&#125
         -partners: ArrayList~Partner~
         +TravelAgency(name: String)
         +addPartner(partner: Partner) void

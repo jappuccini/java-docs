@@ -48,8 +48,8 @@ classDiagram
         <<record>>
         footballers: List~Footballer~
         +getTotalOfAllGoalsByMidfielders() int
-        +getNameOfVfLWolfsburgFootballerWithMostPlayedGames() Optional~Footballer~
-        +getNamesOfAllFootballClubs() List~FootballClub~
+        +getNameOfVfLWolfsburgFootballerWithMostPlayedGames() Optional~String~
+        +getAllFootballClubs() List~FootballClub~
         +isFootballerWithSizeInCmLT170AndNumberOfGoalsBT0() boolean
         +getAllFootballersByBirthyear() Map~Integer&sbquo; List~Footballer~~
         +getAverageNumberOfPointsFromAllBundesligaFootballClubs() OptionalDouble
@@ -63,11 +63,10 @@ classDiagram
 - Die Methode `int getTotalOfAllGoalsByMidfielders()` soll die Summe aller
   geschossener Tore von Mittelfeldspielerinnen zurückgeben
 - Die Methode
-  `Optional<Footballer> getNameOfVfLWolfsburgFootballerWithMostPlayedGames()`
-  soll den Namen der Spielerin vom VfL Wolfsburg mit den meisten Spielen
+  `Optional<String> getNameOfVfLWolfsburgFootballerWithMostPlayedGames()` soll
+  den Namen der Spielerin vom VfL Wolfsburg mit den meisten Spielen zurückgeben
+- Die Methode `List<FootballClub> getAllFootballClubs()` soll alle Vereine
   zurückgeben
-- Die Methode `List<FootballClub> getNamesOfAllFootballClubs()` soll die Namen
-  aller Vereine zurückgeben
 - Die Methode `boolean isFootballerWithSizeInCmLT170AndNumbreOfGoalsBT0()` soll
   die Antwort auf die Frage, ob es eine Spielerin gibt, die kleiner als 170cm
   ist und mindestens ein Tor geschossen hat, zurückgeben
