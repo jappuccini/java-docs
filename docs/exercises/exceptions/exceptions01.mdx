@@ -90,7 +90,7 @@ classDiagram
     }
 
     class TravelAgency {
-        -name: String
+        -name: String &#123final&#125
         -partners: ArrayList~Partner~
         +TravelAgency(name: String)
         +addPartner(partner: Partner) void

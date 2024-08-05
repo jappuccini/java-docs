@@ -144,12 +144,12 @@ Klassendiagramms.
 
 ```mermaid
 classDiagram
+    SuperLeagueTest o-- Hero
+    SuperLeagueTest o-- SuperLeague
     SuperHuman <|-- Villain : extends
     SuperHuman <|-- Hero : extends
     Universe --o SuperHuman
     SuperLeague~T extends SuperHuman~ o-- Universe
-    SuperLeagueTest o-- Hero
-    SuperLeagueTest o-- SuperLeague
 
     class SuperHuman {
         <<abstract>>
