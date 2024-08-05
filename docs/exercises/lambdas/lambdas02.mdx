@@ -6,26 +6,55 @@ description: ''
 import Exercise from '@site/src/components/Exercise';
 
 Gegeben sind die beiden Klassen `FilteredAdultStudents` und
-`FilteredTeenStudents`. Beide sollen sicherstellen, dass nur bestimmte Objekte
+`FilteredTeenStudents`. Beide sollen sicherstellen, dass nur bestimmte Studenten
 hinzugefügt werden können. Die Klasse `FilteredAdultStudents` ermöglicht nur das
 Hinzufügen von Studenten, die mindesten 18 Jahre alt sind; die Klasse
-`FilteredTeenStudents` das Hinzufügen von Studenten unter 18 Jahren. In der
-Klasse `Exercise` wird ein erwachsener Student sowie ein jugendlicher Student
-erzeugt. Die Studenten werden den beiden FilteredStudents-Klassen hinzugefügt
-und anschließend ausgegeben. Dieser Ansatz funktioniert zwar, ist allerdings
-nicht flexibel.
+`FilteredTeenStudents` das Hinzufügen von Studenten unter 18 Jahren. Dieser
+Ansatz funktioniert zwar, ist allerdings nicht flexibel.
 
+- Erstelle eine ausführbare Klasse, welche mehrere Objekte der Klasse `Student`
+  erzeugt und versucht, diese Objekten der Klasse `FilteredAdultList` bzw.
+  `FilteredTeenList` hinzuzufügen
 - Erstelle die Klasse `FilteredStudents` anhand des abgebildeten
   Klassendiagramms
-- Lösche die Klassen `FilteredTeenStudents` und `FilteredAdultStudents`
-- Passe die Klasse `Exercise` so an, dass nur noch die Klasse `FilteredStudents`
-  verwendet wird und übergib dem Konstruktor das Prädikat jeweils in Form eines
-  Lambda-Ausdrucks
+- Passe die ausführbare Klasse so an, dass nur noch die Klasse
+  `FilteredStudents` verwendet wird und übergib dem Konstruktor das Prädikat
+  jeweils in Form eines Lambda-Ausdrucks
 
 ## Klassendiagramm
 
 ```mermaid
 classDiagram
+    Student --o FilteredAdultStudents
+    Student --o FilteredTeenStudents
+    FilteredStudents o-- Student
+    FilteredStudents o-- Predicate~T~
+
+    class Student {
+        <<record>>
+        name: String
+        age: int
+    }
+
+    class Predicate~T~ {
+        <<interface>>
+        +test(t: T) boolean
+    }
+
+    class FilteredAdultStudents {
+        -students: List~Student~ &#123final&#125
+        +FilteredAdultStudents()
+        +add(student: Student) void
+        +printStudents() void
+    }
+
+    class FilteredTeenStudents {
+        -students: List~Student~ &#123final&#125
+        +FilteredTeenStudents()
+        +add(student: Student) void
+        +printStudents() void
+    }
+
     class FilteredStudents {
         -students: List~Student~ &#123final&#125
         -mandatoryFilter: Predicate~Student~ &#123final&#125
