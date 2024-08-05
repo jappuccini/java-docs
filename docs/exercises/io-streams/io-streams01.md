@@ -14,9 +14,8 @@ description: ''
 classDiagram
     class Student {
         <<record>>
-        id: String
         name: String
-        gender: char
+        age: int
     }
 ```
 
@@ -24,7 +23,7 @@ classDiagram
 
 ```console
 Moechtest Du Lesen (1) oder Schreiben (2): 1
-Student[id=8172093, name=Hans Maier, gender=m]
-Student[id=2335409, name=Peter Mueller, gender=m]
-Student[id=5065411, name=Lisa Schmid, gender=w]
+Student[name=Hans Maier, age=19
+Student[name=Peter Mueller, age=23]
+Student[name=Lisa Schmid, age=20]
 ```

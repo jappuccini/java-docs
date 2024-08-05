@@ -5,14 +5,26 @@ description: ''
 
 import Exercise from '@site/src/components/Exercise';
 
-Erweitere die gegebene Klasse `Exercise` wie folgt:
-
-- Verwende die forEach-Methode der Klasse `ArrayList<E>`, um eine anonyme Klasse
-  zu übergeben. Die anonyme Klasse soll alle Studenten die älter sind als 26 auf
-  der Konsole ausgeben
-- Verwende die forEach-Methode der der Klasse `ArrayList<E>`, um einen
-  Lambda-Ausdruck zu übergeben. Die Methode soll sich exakt so verhalten wie die
+- Erstelle die Klasse `Student` anhand des abgebildeten Klassendiagramms
+- Erstelle eine ausführbare Klasse, welche mehrere Objekte der Klasse `Student`
+  erzeugt und diese einer Liste hinzufügt
+- Rufe in der ausführbaren Klasse die forEach-Methode auf, und übergib eine
+  anonyme Klasse. Die anonyme Klasse soll alle Studenten die älter sind als 26
+  auf der Konsole ausgeben
+- Rufe in der ausführbaren Klasse die forEach-Methode auf, und übergib einen
+  Lambda-Ausdruck. Der Lambda-Ausdruck soll sich exakt so verhalten wie die
   zuvor implementierte anonyme Klasse
+
+## Klassendiagramm
+
+```mermaid
+classDiagram
+    class Student {
+        <<record>>
+        name: String
+        age: int
+    }
+```
 
 ## Konsolenausgabe
 
