@@ -56,8 +56,8 @@ Wert `-1` (Stand: 14.06.2023)
 - Die Methode `List<String> getAllCurrentConsoleNames()` soll die Namen aller
   Konsolen, die aktuell noch verkauft werden zurückgeben (_Nintendo Switch,
   PlayStation 4, XBox One_)
-- Die Methode `List<VideoGameConsole> getAllConsolesSortedByLifespan()` soll
-  alle Konsolen absteigend sortiert nach der Lebensspanne zurückgeben
+- Die Methode `List<Console> getAllConsolesSortedByLifespan()` soll alle
+  Konsolen absteigend sortiert nach der Lebensspanne zurückgeben
   (_VideoGameConsole\[title=Nintendo Wii, maker=NINTENDO, lifespan=13,
   soldUnits=101.63]_,...)
 - Die Methode `boolean isAnyConsoleWithMoreThan150MillionSoldUnits()` soll die
@@ -77,8 +77,8 @@ Wert `-1` (Stand: 14.06.2023)
   `OptionalDouble getAverageSoldUnitsInMillionsPerYearFromAllOutdatedConsoles()`
   soll den Durchschnitt verkaufter Einheiten pro Jahr in Millionen aller
   Konsolen, die nicht mehr verkauft werden zurückgeben (_9.900365412365412_)
-- Die Methode `Map<Maker, List<VideogameConsole>> getAllConsolesByMaker()` soll
-  alle Konsolen gruppiert nach den Herstellern zurückgeben (_MICROSOFT:
+- Die Methode `Map<Maker, List<Console>> getAllConsolesByMaker()` soll alle
+  Konsolen gruppiert nach den Herstellern zurückgeben (_MICROSOFT:
   \[VideoGameConsole\[title=XBox 360, maker=MICROSOFT, lifespan=12,
   soldUnitsInMillions=85.81]_,...],...)
 - Die Methode `Map<Maker, Double> getTotalSoldUnitsInMillionsPerMaker()` soll
