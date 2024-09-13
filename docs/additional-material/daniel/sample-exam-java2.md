@@ -39,6 +39,7 @@ classDiagram
     SuperHuman <|-- Hero : extends
     Universe --o SuperHuman
     SuperLeague~T extends SuperHuman~ o-- Universe
+    WrongUniverseException <.. SuperLeague~T extends SuperHuman~ : throws
 
     class SuperHuman {
         <<abstract>>
@@ -65,14 +66,21 @@ classDiagram
         DC
     }
 
+    class WrongUniverseException {
+        <<exception>>
+    }
+
     class SuperLeague~T extends SuperHuman~ {
-        <<record>>
-        name: String
-        universe: Universe
-        members: Map~T, Boolean~
+        -name: String &#123final&#125
+        -universe: Universe &#123final&#125
+        -members: Map~T, Boolean~ &#123final&#125
+        +SuperLeague(name: String, universe: Universe, members: Map~T, Boolean~)
         +addSuperHuman(t: T) void
-        +getMostPowerfulSuperHuman() Optional~T~
         +getAllAvailableSuperHumans() List~T~
+        +getMembers() Map~T, Boolean~
+        +getMostPowerfulSuperHuman() Optional~T~
+        +getName() String
+        +getUniverse() Universe
         +sendSuperHumanOnMission(t: T) void
     }
 ```
@@ -95,8 +103,33 @@ classDiagram
 ### Musterlösung
 
 ```java title="SuperLeage.java" showLineNumbers
+/* Option A */
 public record SuperLeague<T extends SuperHuman>
   (String name, Universe universe, Map<T, Boolean> members) { // 1
+/* Option A */
+
+/* Option B */
+@Data // 0,5
+public class SuperLeague<T extends SuperHuman> { // 0,125
+  private final String name; // 0,125
+  private final Universe universe; // 0,125
+  private final Map<T, Boolean> members; // 0,125
+/* Option B */
+
+/* Option C */
+public class SuperLeague<T extends SuperHuman> { // 0,125
+  private final String name; // 0,125
+  private final Universe universe; // 0,125
+  private final Map<T, Boolean> members; // 0,125
+  public SuperLeague(String name, Universe universe, Map<T, Boolean> members) {
+    this.name = name;
+    this.universe = universe;
+    this.members = members;
+  } // 0,125
+  public String getName() { return name; } // 0,125
+  public Universe getUniverse() { return universe; } // 0,125
+  public Map<T, Boolean> getMembers() { return members; } // 0,125
+/* Option C */
 
   public Optional<T> getMostPowerfulSuperHuman() { // 0,5
     T mostPowerfulSuperHuman = null; // 0,5
@@ -150,6 +183,7 @@ classDiagram
     SuperHuman <|-- Hero : extends
     Universe --o SuperHuman
     SuperLeague~T extends SuperHuman~ o-- Universe
+    WrongUniverseException <.. SuperLeague~T extends SuperHuman~ : throws
 
     class SuperHuman {
         <<abstract>>
@@ -176,14 +210,21 @@ classDiagram
         DC
     }
 
+    class WrongUniverseException {
+        <<exception>>
+    }
+
     class SuperLeague~T extends SuperHuman~ {
-        <<record>>
-        name: String
-        universe: Universe
-        members: Map~T, Boolean~
+        -name: String &#123final&#125
+        -universe: Universe &#123final&#125
+        -members: Map~T, Boolean~ &#123final&#125
+        +SuperLeague(name: String, universe: Universe, members: Map~T, Boolean~)
         +addSuperHuman(t: T) void
-        +getMostPowerfulSuperHuman() Optional~T~
         +getAllAvailableSuperHumans() List~T~
+        +getMembers() Map~T, Boolean~
+        +getMostPowerfulSuperHuman() Optional~T~
+        +getName() String
+        +getUniverse() Universe
         +sendSuperHumanOnMission(t: T) void
     }
 
@@ -207,15 +248,15 @@ classDiagram
   Man, Universum: MARVEL, Stärke: 7), den Superhelden _Spider-Man_ (Name:
   Spider-Man, Universum: MARVEL, Stärke: 8) sowie die Superheldenliga _Avengers_
   (Name: Avengers, Universum: MARVEL) erstellen und den entsprechenden
-  Attributen zuweisen, die Superhelden _Iron Man_ und _Spider-Man_ der
-  Superheldenliga _Avengers_ als verfügbare Superhelden hinzugefügen und den
-  Superheld _Spider-Man_ auf eine Mission schicken
+  Attributen zuweisen und die Superhelden _Iron Man_ sowie _Spider-Man_ der
+  Superheldenliga _Avengers_ als verfügbare Superhelden hinzufügen
 - Die Testmethode `void testAddSuperHuman()` soll prüfen, ob beim Aufruf der
   Methode `void addSuperHuman(t: T)` mit dem Superhelden _Superman_ die Ausnahme
   `WrongUniverseException` ausgelöst wird
-- Die Testmethode `void testGetAllAvailableSuperHumans()` soll prüfen, ob beim
-  Aufruf der Methode `List<T> getAllAvailableSuperHumans()` eine Liste der Größe
-  1 zurückgegeben wird
+- Die Testmethode `void testGetAllAvailableSuperHumans()` soll den Superheld
+  _Spider-Man_ auf eine Mission schicken und prüfen, ob beim Aufruf der Methode
+  `List<T> getAllAvailableSuperHumans()` eine Liste der Größe 1 zurückgegeben
+  wird
 - Die Testmethode `void testGetMostPowerfulSuperHuman()` soll prüfen, ob beim
   Aufruf der Methode `Optional<T> getMostPowerfulSuperHuman()` der Superheld
   _Spider-Man_ als Optional zurückgegeben wird
@@ -231,29 +272,44 @@ public class SuperLeagueTest { // 0,5
   private Hero spiderman; // 0,25
 
   @BeforeEach // 0,25
-  void setUp() throws WrongUniverseException { // 0,75
+  void setUp() { throws WrongUniverseException { // 0,25 +0,5 (bei Option A)
     superman = new Hero("Superman", Universe.DC, 10); // 1
     ironman = new Hero("Iron Man", Universe.MARVEL, 7); // 1
     spiderman = new Hero("Spider-Man", Universe.MARVEL, 8); // 1
     avengers = new SuperLeague<>("Avengers", Universe.MARVEL, new HashMap<>()); // 1
+
+    /* Option A */
     avengers.addSuperHuman(ironman); // 1
     avengers.addSuperHuman(spiderman); // 1
-    avengers.sendSuperHumanOnMission(spiderman); // 0,5
+    /* Option A */
+
+    /* Option B */
+    avengers.members().put(ironman, true); // 1,25
+    avengers.members().put(spiderman, true); // 1,25
+    /* Option B */
   }
 
   @Test // 0,25
   void testAddSuperHuman() { // 0,25
-    assertThrows(WrongUniverseException.class, () -> avengers.addSuperHuman(superman)); // 1
+    assertThrows(WrongUniverseException.class, () -> avengers.addSuperHuman(superman)); // 1,5
   }
 
   @Test // 0,25
   void testGetAllAvailableSuperHumans() { // 0,25
-    assertEquals(1, avengers.getAllAvailableSuperHumans().size()); // 1
+    avengers.sendSuperHumanOnMission(spiderman); // 0,5
+    List<Hero> heroes = avengers.getAllAvailableSuperHumans(); // 0,5
+    assertEquals(1, heroes.size()); // 1
   }
 
   @Test // 0,25
   void testGetMostPowerfulSuperHuman() { // 0,25
-    assertEquals(spiderman, avengers.getMostPowerfulSuperHuman().get()); // 1,5
+    /* Option A */
+    assertEquals(spiderman, avengers.getMostPowerfulSuperHuman().get()); // 1
+    /* Option A */
+
+    /* Option B */
+    assertEquals(Optional.of(spiderman), avengers.getMostPowerfulSuperHuman()); // 1
+    /* Option B */
   }
 
 }
@@ -335,46 +391,62 @@ classDiagram
 ```java title="SingleQueries" showLineNumbers
 public record SingleQueries(List<Single> singles) { // 1
 
-  public void a() { // 0,5
-    Map<Country, List<Single>> tmp = singles.stream() // 1
-      .filter(a -> a.salesInMillions() > 25) // 0,5
-      .collect(Collectors.groupingBy(a -> a.artist().country())); // 1
+  public void printAllSinglesWithMoreThan25MillionSalesPerCountry() { // 0,5
+    Map<Country, List<Single>> allSinglesWithMoreThan25MillionSalesPerCountry = singles.stream() // 1
+      .filter(s -> s.salesInMillions() > 25) // 0,5
 
-    tmp.forEach((c, sl) -> System.out.println(c + ": " + sl); // 1
+      /* Option A */
+      .collect(Collectors.groupingBy(s -> s.artist().country())); // 1
+      /* Option A */
+
+      /* Option B */
+      .map(Single::artist) // 0,5
+      .collect(Collectors.groupingBy(Artist::country)); // 0,5
+      /* Option B */
+
+    allSinglesWithMoreThan25MillionSalesPerCountry
+      .forEach((c, sl) -> System.out.println(c + ": " + sl); // 1
     }
   }
 
-  public void b() { // 0,5
-    OptionalDouble tmp = singles.stream() // 1
-      .map(a -> a.artist()) // 0,5
+  public void printAverageBirthYearOfAllDeceasedArtists() { // 0,5
+    OptionalDouble averageBirthYearOfAllDeceasedArtists = singles.stream() // 1
+      .map(Single::Artist) // 0,5
       .distinct() // 0,5
       .filter(a -> !a.isAlive()) // 0,5
       .mapToInt(a -> a.birthdate().getYear()) // 1
       .average(); // 0,5
 
-    tmp.ifPresentOrElse(System.out::println, () -> System.out.println(-1)); // 1
+    averageBirthYearOfAllDeceasedArtists
+      .ifPresentOrElse(System.out::println, () -> System.out.println(-1)); // 1
   }
 
-  public boolean c() { // 0,5
-    return singles.stream() // 1
-      .anyMatch(a -> a.salesInMillions() > 10 // 0,5
-        && a.artist().country().equals(Country.CHN)); // 1
+  public boolean isAnySingleFromChinaWithMoreThan10MillionSales() { // 0,5
+    boolean isAnySingleFromChinaWithMoreThan10MillionSales; // 0,25
+    isAnySingleFromChinaWithMoreThan10MillionSales = singles.stream() // 0,5
+      .filter(s -> s.salesInMillions() > 10) // 0,5
+      .anyMatch(s -> s.artist().country().equals(Country.CHN)); // 1
+    return isAnySingleFromChinaWithMoreThan10MillionSales; // 0,25
   }
 
-  public List<String> d() { // 0,5
-    return singles.stream() // 1
-      .filter(a -> a.publishingYear().compareTo("2000") > 0) // 1
-      .sorted((a1, a2) -> Integer.valueOf(a2.salesInMillions()).compareTo(a1.salesInMillions())) // 1
-      .map(a -> a.name() + ": " + a.artist().name() + ", " + a.salesInMillions() + " Millionen") // 1
+  public List<String> getTop3SinglesOfThisCenturyBySalesInMillions() { // 0,5
+    List<String> top3SinglesOfThisCenturyBySalesInMillions; // 0,25
+    top3SinglesOfThisCenturyBySalesInMillions = singles.stream() // 0,5
+      .filter(s -> s.publishingYear().compareTo("2000") > 0) // 1
+      .sorted((s1, s2) -> Integer.valueOf(s2.salesInMillions()).compareTo(s1.salesInMillions())) // 1
+      .map(s -> s.name() + ": " + s.artist().name() + ", " + s.salesInMillions() + " Millionen") // 1
       .limit(3) // 0,5
       .toList(); // 0,5
+    return top3SinglesOfThisCenturyBySalesInMillions; // 0,25
   }
 
-  public List<Single> e() { // 0,5
-    return singles.stream() // 1
-      .filter(a -> a.artist().equals(
-        new Artist("Ed Sheeran", Country.GBR, LocalDate.of(1991, 2, 17), true))) // 1
+  public List<Single> getAllSinglesFromEdSheeran() { // 0,5
+    List<Single> allSinglesFromEdSheeran; // 0,25
+    Artist sheeran = new Artist("Ed Sheeran", Country.GBR, LocalDate.of(1991, 2, 17), true); // 0,5
+    allSinglesFromEdSheeran = singles.stream() // 0,5
+      .filter(s -> s.artist().equals(sheeran)) // 0,5
       .toList(); // 0,5
+    return allSinglesFromEdSheeran; // 0,25
   }
 
 }
