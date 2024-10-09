@@ -141,7 +141,7 @@ public class SuperLeague<T extends SuperHuman> { // 0,125
       }
     }
     return Optional.ofNullable(mostPowerfulSuperHuman); // 1
-  }
+  } // 5
 
   public void addSuperHuman(T t) throws WrongUniverseException { // 1
     if (!t.universe().equals(universe)) { // 1
@@ -149,7 +149,7 @@ public class SuperLeague<T extends SuperHuman> { // 0,125
     }
 
     members.put(t, true); // 1
-  }
+  } // 4
 
   public List<T> getAllAvailableSuperHumans() { // 0,5
     List<T> allAvailableSuperHumans = new ArrayList<>(); // 0,5
@@ -159,13 +159,13 @@ public class SuperLeague<T extends SuperHuman> { // 0,125
       }
     }
     return allAvailableSuperHumans; // 0,5
-  }
+  } // 4,5
 
   public void sendSuperHumanOnMission(T t) { // 0,5
     members.put(t, false); // 1
-  }
+  } // 1,5
 
-}
+} // 16
 ```
 
 ## Aufgabe 2 (14 Punkte)
@@ -284,22 +284,22 @@ public class SuperLeagueTest { // 0,5
     /* Option A */
 
     /* Option B */
-    avengers.members().put(ironman, true); // 1,25
-    avengers.members().put(spiderman, true); // 1,25
+    avengers.members().put(ironman, true); // 1
+    avengers.members().put(spiderman, true); // 1
     /* Option B */
-  }
+  } // 6,5
 
   @Test // 0,25
   void testAddSuperHuman() { // 0,25
     assertThrows(WrongUniverseException.class, () -> avengers.addSuperHuman(superman)); // 1,5
-  }
+  } // 2
 
   @Test // 0,25
   void testGetAllAvailableSuperHumans() { // 0,25
     avengers.sendSuperHumanOnMission(spiderman); // 0,5
     List<Hero> heroes = avengers.getAllAvailableSuperHumans(); // 0,5
     assertEquals(1, heroes.size()); // 1
-  }
+  } // 2,5
 
   @Test // 0,25
   void testGetMostPowerfulSuperHuman() { // 0,25
@@ -310,9 +310,9 @@ public class SuperLeagueTest { // 0,5
     /* Option B */
     assertEquals(Optional.of(spiderman), avengers.getMostPowerfulSuperHuman()); // 1
     /* Option B */
-  }
+  } // 1,5
 
-}
+} // 14
 ```
 
 ## Aufgabe 3 (22 Punkte)
@@ -392,34 +392,27 @@ classDiagram
 public record SingleQueries(List<Single> singles) { // 1
 
   public void printAllSinglesWithMoreThan25MillionSalesPerCountry() { // 0,5
-    Map<Country, List<Single>> allSinglesWithMoreThan25MillionSalesPerCountry = singles.stream() // 1
+    Map<Country, List<Single>> allSinglesWithMoreThan25MillionSalesPerCountry; // 0,25
+    allSinglesWithMoreThan25MillionSalesPerCountry = singles.stream() // 0,5
       .filter(s -> s.salesInMillions() > 25) // 0,5
-
-      /* Option A */
       .collect(Collectors.groupingBy(s -> s.artist().country())); // 1
-      /* Option A */
-
-      /* Option B */
-      .map(Single::artist) // 0,5
-      .collect(Collectors.groupingBy(Artist::country)); // 0,5
-      /* Option B */
 
     allSinglesWithMoreThan25MillionSalesPerCountry
-      .forEach((c, sl) -> System.out.println(c + ": " + sl); // 1
-    }
-  }
+      .forEach((c, sl) -> System.out.println(c + ": " + sl)); // 1,25
+  } // 4
 
   public void printAverageBirthYearOfAllDeceasedArtists() { // 0,5
-    OptionalDouble averageBirthYearOfAllDeceasedArtists = singles.stream() // 1
-      .map(Single::Artist) // 0,5
+    OptionalDouble averageBirthYearOfAllDeceasedArtists; // 0,25
+    averageBirthYearOfAllDeceasedArtists = singles.stream() // 0,5
+      .map(Single::artist) // 0,5
       .distinct() // 0,5
       .filter(a -> !a.isAlive()) // 0,5
       .mapToInt(a -> a.birthdate().getYear()) // 1
       .average(); // 0,5
 
     averageBirthYearOfAllDeceasedArtists
-      .ifPresentOrElse(System.out::println, () -> System.out.println(-1)); // 1
-  }
+      .ifPresentOrElse(System.out::println, () -> System.out.println(-1)); // 1,25
+  } // 5,5
 
   public boolean isAnySingleFromChinaWithMoreThan10MillionSales() { // 0,5
     boolean isAnySingleFromChinaWithMoreThan10MillionSales; // 0,25
@@ -427,27 +420,27 @@ public record SingleQueries(List<Single> singles) { // 1
       .filter(s -> s.salesInMillions() > 10) // 0,5
       .anyMatch(s -> s.artist().country().equals(Country.CHN)); // 1
     return isAnySingleFromChinaWithMoreThan10MillionSales; // 0,25
-  }
+  } // 3
 
   public List<String> getTop3SinglesOfThisCenturyBySalesInMillions() { // 0,5
     List<String> top3SinglesOfThisCenturyBySalesInMillions; // 0,25
     top3SinglesOfThisCenturyBySalesInMillions = singles.stream() // 0,5
-      .filter(s -> s.publishingYear().compareTo("2000") > 0) // 1
+      .filter(s -> s.publishingYear().compareTo("2000") >= 0) // 1
       .sorted((s1, s2) -> Integer.valueOf(s2.salesInMillions()).compareTo(s1.salesInMillions())) // 1
       .map(s -> s.name() + ": " + s.artist().name() + ", " + s.salesInMillions() + " Millionen") // 1
       .limit(3) // 0,5
       .toList(); // 0,5
     return top3SinglesOfThisCenturyBySalesInMillions; // 0,25
-  }
+  } // 5
 
   public List<Single> getAllSinglesFromEdSheeran() { // 0,5
     List<Single> allSinglesFromEdSheeran; // 0,25
-    Artist sheeran = new Artist("Ed Sheeran", Country.GBR, LocalDate.of(1991, 2, 17), true); // 0,5
+    Artist sheeran = new Artist("Ed Sheeran", Country.GBR, LocalDate.of(1991, 2, 17), true); // 1
     allSinglesFromEdSheeran = singles.stream() // 0,5
       .filter(s -> s.artist().equals(sheeran)) // 0,5
       .toList(); // 0,5
     return allSinglesFromEdSheeran; // 0,25
-  }
+  } // 3,5
 
-}
+} // 22
 ```
