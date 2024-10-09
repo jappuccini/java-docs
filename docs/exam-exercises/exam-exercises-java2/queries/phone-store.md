@@ -53,6 +53,13 @@ classDiagram
     }
 ```
 
+## Allgemeine Hinweise
+
+- Aus Gründen der Übersicht werden im Klassendiagramm keine Getter und
+  Object-Methoden dargestellt
+- So nicht anders angegeben, sollen Konstruktoren, Setter, Getter sowie die
+  Object-Methoden wie gewohnt implementiert werden
+
 ## Hinweise zur Klasse _PhoneStore_
 
 - Die Methode `List<Phone> query1()` soll die drei leistungsstärksten

@@ -65,7 +65,7 @@ classDiagram
 
 - Die Methode `void printAllTanksWithWeightBT25TonsByType()` soll alle Panzer
   mit einem Gewicht von mehr als 25 Tonnen gruppiert nach dem Typ in der Form
-  _Tank.type: [Tank, Tank,...]_ ausgeben
+  _Typ: [Panzer, Panzer,...]_ ausgeben
 - Die Methode `OptionalDouble getAveragePerformanceInHorsePower()` soll die
   durchschnittliche Leistung in Pfer- destärken aller Panzer zurückgeben
 - Die Methode `List<Nation> getAllNations()` soll die Nationen aller Panzer
