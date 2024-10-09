@@ -1,5 +1,5 @@
 ---
-title: Musterklausur Java 2
+title: Klausur Programmierung 2
 description: ''
 sidebar_position: 20
 tags: []
