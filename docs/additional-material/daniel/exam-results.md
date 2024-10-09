@@ -7,7 +7,7 @@ tags: []
 
 import Tabs from '@theme/Tabs'; import TabItem from '@theme/TabItem';
 
-## Klausurergebnisse Java 1
+## Programmierung 1
 
 <Tabs>
   <TabItem value="wwibe23" label="Klausur Q1 2024 (WWIBE23)" default>
@@ -54,7 +54,7 @@ xychart-beta
   </TabItem>
 </Tabs>
 
-## Klausurergebnisse Java 2
+## Programmierung 2
 
 <Tabs>
   <TabItem value="wwibe23" label="Klausur Q3 2024 (WWIBE23)" default>
