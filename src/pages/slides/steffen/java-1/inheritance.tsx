@@ -1,6 +1,6 @@
-import Slides from '../../../components/Slides';
-import { NKR } from '../../../components/Slides/nkr';
-import { defaultInitSlides } from '../../../components/Slides/initSlides';
+import Slides from '../../../../components/Slides';
+import { NKR } from '../../../../components/Slides/nkr';
+import { defaultInitSlides } from '../../../../components/Slides/initSlides';
 
 export default function Inheritance(): JSX.Element {
   return (
