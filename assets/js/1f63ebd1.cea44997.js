@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkjava_docs=self.webpackChunkjava_docs||[]).push([[2307],{29410:a=>{a.exports=JSON.parse('{"tag":{"label":"lombok","permalink":"/java-docs/tags/lombok","allTagsPath":"/java-docs/tags","count":1,"items":[{"id":"documentation/lombok","title":"Lombok","description":"","permalink":"/java-docs/documentation/lombok"}],"unlisted":false}}')}}]);
