@@ -1,6 +1,6 @@
-import Slides from '../../../components/Slides';
-import { defaultInitSlides } from '../../../components/Slides/initSlides';
-import { NKR } from '../../../components/Slides/nkr';
+import Slides from '../../../../components/Slides';
+import { defaultInitSlides } from '../../../../components/Slides/initSlides';
+import { NKR } from '../../../../components/Slides/nkr';
 
 export default function MethodsAndOperators(): JSX.Element {
   return (

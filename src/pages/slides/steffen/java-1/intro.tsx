@@ -1,6 +1,6 @@
 import Link from '@docusaurus/Link';
-import Slides from '../../../components/Slides';
-import { defaultInitSlides } from '../../../components/Slides/initSlides';
+import Slides from '../../../../components/Slides';
+import { defaultInitSlides } from '../../../../components/Slides/initSlides';
 
 export default function Intro(): JSX.Element {
   return (
