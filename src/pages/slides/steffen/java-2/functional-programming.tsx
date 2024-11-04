@@ -515,7 +515,7 @@ export default function FunctionalProgramming(): JSX.Element {
                   '    ArrayList&lt;String&gt; names = new ArrayList&lt;&gt;()\n' +
                   '    \n' +
                   '    // lambda funktion\n' +
-                  '    names.forEach((name) -&gt System.out.println(name));\n' +
+                  '    names.forEach((name) -&gt; System.out.println(name));\n' +
                   '    \n' +
                   '    // methodenreferenz\n' +
                   '    names.forEach(System.out::println);\n' +
