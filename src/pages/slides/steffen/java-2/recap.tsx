@@ -128,7 +128,7 @@ export default function Recap(): JSX.Element {
                   '    result = 3 &gt; 2; // true \n' +
                   '    result = 2 &gt;= 2; // true \n' +
                   '    result = 2 &lt; 2; // false \n' +
-                  '    result = 2 &lt= 2; // true \n' +
+                  '    result = 2 &lt;= 2; // true \n' +
                   '  }\n' +
                   '//...\n',
               }}

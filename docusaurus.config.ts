@@ -12,6 +12,9 @@ const config: Config = {
   projectName: 'java-docs',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'throw',
+  future: {
+    experimental_faster: true,
+  },
   markdown: {
     mermaid: true,
   },
