@@ -280,9 +280,9 @@ export default function ClassesAndObjects(): JSX.Element {
             <li className="fragment">protected</li>
             <li className="fragment">default*</li>
           </ul>
-          <p className="fragment">
+          <div className="fragment">
             <NKR />
-          </p>
+          </div>
         </section>
         <section>
           <h2>Wann verwendet man public?</h2>
