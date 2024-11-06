@@ -1,5 +1,5 @@
 ---
-title: Klausur Programmierung 1
+title: Musterklausur
 description: ''
 sidebar_position: 10
 tags: []
