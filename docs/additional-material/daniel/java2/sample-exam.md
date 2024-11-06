@@ -1,7 +1,7 @@
 ---
-title: Klausur Programmierung 2
+title: Klausur
 description: ''
-sidebar_position: 20
+sidebar_position: 10
 tags: []
 ---
 
