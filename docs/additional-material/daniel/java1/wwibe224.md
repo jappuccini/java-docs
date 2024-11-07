@@ -12,7 +12,7 @@ tags: []
 - [GitHub Repository Musterlösungen Klausuraufgaben](https://github.com/appenmaier/java_exam_exercises)
 - [Abbildungen](https://app.mural.co/t/programmierungwwibe2248240/m/programmierungwwibe2248240/1729834706630/301020393cfaff8bb3d89e41e78d79d332f429aa)
 
-## Wiederholungsaufgabe Vorlesung 1 - 3
+## Wiederholungsaufgabe 1 (Vorlesung 1 - 3)
 
 Es soll eine erste Version des Kill Team Spiels erstellt werden. Erstelle hierzu
 eine ausführbare Klasse wie folgt:
@@ -51,9 +51,9 @@ Spieler 2, Name: Peter
 Spieler 2, Kämpfer 1, Name: Bonekraka
 Spieler 2, Kämpfer 1, LP: 10
 
-*----------------*
-* Runde 1, Zug 1 *
-*----------------*
+*-------*
+* Zug 1 *
+*-------*
 Kämpfer von Hans: Gregor (8 LP)
 Kämpfer von Peter: Bonekraka (10 LP)
 
@@ -64,9 +64,9 @@ Bonekraka würfelt 1, 4 und 5.
 Bonekraka erzielt 10 Blocks.
 Bonekraka erleidet 3 Schaden und hat noch 7 LP.
 
-*----------------*
-* Runde 1, Zug 2 *
-*----------------*
+*-------*
+* Zug 2 *
+*-------*
 Kämpfer von Hans: Gregor (8 LP)
 Kämpfer von Peter: Bonekraka (7 LP)
 
@@ -78,7 +78,7 @@ Gregor erzielt 11 Blocks.
 Gregor erleidet -1 Schaden und hat noch 9 LP.
 ```
 
-## Wiederholungsaufgabe Vorlesung 4
+## Wiederholungsaufgabe 2 (Vorlesung 4)
 
 Es soll eine zweite Version des Kill Team Spiels entwickelt werden. Passe hierzu
 die ausführbare Klasse wie folgt an:
