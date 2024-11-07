@@ -19,7 +19,7 @@ eine ausführbare Klasse wie folgt:
 
 - es sollen Datenobjekte für die Eigenschaften _Name Spieler_, _Name Kämpfer_,
   _LP Kämpfer_ sowie _Wurfert_ des ER-Modells für 2 Spieler, 2 Kämpfer und 10
-  Würfel (je 5 por Spieler) deklariert werden
+  Würfel (je 5 pro Spieler) deklariert werden
 - es soll möglich sein, den Datenobjekten für die Eigenschaften der Spieler und
   Kämpfer Werte über die Konsole zuzuweisen
 - es sollen lediglich zwei einfache Angriffe simuliert werden
