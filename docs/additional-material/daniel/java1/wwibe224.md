@@ -78,7 +78,7 @@ Gregor erzielt 11 Blocks.
 Gregor erleidet -1 Schaden und hat noch 9 LP.
 ```
 
-## Wiederholungsaufgabe 2 (Vorlesung 4)
+## Wiederholungsaufgabe 2 (Vorlesung 4 und 5)
 
 Es soll eine zweite Version des Kill Team Spiels entwickelt werden. Passe hierzu
 die ausführbare Klasse wie folgt an:
@@ -167,3 +167,9 @@ Gregor würfelt 4, 2 und 4.
 Gregor erzielt 0 Blocks.
 Gregor erleidet 9 Schaden und stirbt.
 ```
+
+## Wiederholungsaufgabe 3 (Vorlesung 5 und 6)
+
+Es soll eine dritte Version des Kill Team Spiels entwickelt werden. Überführe
+hierzu den bisherigen imperativen Programmentwurf in einen objektorientierten
+Programmentwurf.
