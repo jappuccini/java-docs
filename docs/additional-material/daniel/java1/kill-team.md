@@ -18,7 +18,9 @@ Das Spiel soll aus mehreren Runden bestehen und solange dauern, bis ein Spieler
 keine Kämpfer mehr hat. In jeder Runde sollen sich die Kämpfer der Spieler
 gegenseitig abwechselnd angreifen können. Dabei soll jeder Spieler entscheiden
 können, ob der eigene Kämpfer einen Fernkampfangriff oder einen Nahkampfangriff
-ausführen soll. "Stirbt" einer Kämpfer (LP \<= 0), soll das Spiel enden.
+ausführen soll. Sinken die Lebenspunkte eines Kämpfer bei einem Angriff auf Null
+oder unter Null, "stirbt" der Kämpfer und steht dem Spieler nicht mehr zur
+Verfügung.
 
 ## Ablauf eines Fernkampfangriffs und Ermittlung des Schadens
 
