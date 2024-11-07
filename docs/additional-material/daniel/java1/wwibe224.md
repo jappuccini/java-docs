@@ -12,14 +12,14 @@ tags: []
 - [GitHub Repository Musterlösungen Klausuraufgaben](https://github.com/appenmaier/java_exam_exercises)
 - [Abbildungen](https://app.mural.co/t/programmierungwwibe2248240/m/programmierungwwibe2248240/1729834706630/301020393cfaff8bb3d89e41e78d79d332f429aa)
 
-## Wiederholungsaufgabe 1
+## Wiederholungsaufgabe Vorlesung 1 - 3
 
 Es soll eine erste Version des Kill Team Spiels erstellt werden. Erstelle hierzu
 eine ausführbare Klasse wie folgt:
 
 - es sollen Datenobjekte für die Eigenschaften _Name Spieler_, _Name Kämpfer_,
   _LP Kämpfer_ sowie _Wurfert_ des ER-Modells für 2 Spieler, 2 Kämpfer und 10
-  Würfel deklariert werden
+  Würfel (je 5 por Spieler) deklariert werden
 - es soll möglich sein, den Datenobjekten für die Eigenschaften der Spieler und
   Kämpfer Werte über die Konsole zuzuweisen
 - es sollen lediglich zwei einfache Angriffe simuliert werden
@@ -57,6 +57,7 @@ Spieler 2, Kämpfer 1, LP: 10
 Kämpfer von Hans: Gregor (8 LP)
 Kämpfer von Peter: Bonekraka (10 LP)
 
+Gregor greift Bonekraka an.
 Gregor würfelt 2, 2, 3 und 6.
 Gregor erzielt 13 Treffer.
 Bonekraka würfelt 1, 4 und 5.
@@ -69,6 +70,7 @@ Bonekraka erleidet 3 Schaden und hat noch 7 LP.
 Kämpfer von Hans: Gregor (8 LP)
 Kämpfer von Peter: Bonekraka (7 LP)
 
+Bonekraka greift Gregor an.
 Bonekraka würfelt 1, 1, 3 und 5.
 Bonekraka erzielt 10 Treffer.
 Gregor würfelt 2, 4 und 5.
@@ -76,59 +78,42 @@ Gregor erzielt 11 Blocks.
 Gregor erleidet -1 Schaden und hat noch 9 LP.
 ```
 
-## Wiederholungsaufgabe 2
+## Wiederholungsaufgabe Vorlesung 4
 
 Es soll eine zweite Version des Kill Team Spiels entwickelt werden. Passe hierzu
 die ausführbare Klasse wie folgt an:
 
 - es sollen zusätzliche Datenobjekte für die Eigenschaften _VW Kämpfer_, _RW
-  Kämpfer_, _Name Waffe_, _Typ Waffe_, _AW Waffe_, _BF/KG Waffe_, _SW Waffe_ und
-  _KS Waffe_ des ER-Modells für 2 Spieler, 2 Kämpfer, 2 Nah- sowie 2
-  Fernkampfwaffen (je eine Nah- und Fernkampfwaffe pro Kämpfer) und 10 Würfel
-  deklariert werden
+  Kämpfer_, _Name Waffe_, _AW Waffe_, _BF/KG Waffe_ und _SW Waffe_ des
+  ER-Modells für 2 Spieler, 2 Kämpfer, 2 Waffen (je eine pro Kämpfer) und 10
+  Würfel (je 5 pro Spieler) deklariert werden
 - es soll möglich sein, den neuen Datenobjekten Werte über die Konsole
   zuzuweisen (alternativ können den Datenobjekten auch statisch Werte zugewiesen
   werden)
-- es soll ein vollständiges Spiel umgesetzt werden
+- es soll ein vollständiges Spiel mit einfachen Angriffen umgesetzt werden
 
 ### Beispielhafte Konsolenausgabe
 
 ```console
-Spieler 1, Name: Hans
-Spieler 1, Kämpfer 1, Name: Gregor
-Spieler 1, Kämpfer 1, LP: 8
-Spieler 1, Kämpfer 1, VW: 3
-Spieler 1, Kämpfer 1, RW: 5
-Spieler 1, Kämpfer 1, Waffe 1, Name: Boltpistole
-Spieler 1, Kämpfer 1, Waffe 1, Ty: Fernkampfwaffe
-Spieler 1, Kämpfer 1, Waffe 1, AW: 4
-Spieler 1, Kämpfer 1, Waffe 1, BF_KG: 3
-Spieler 1, Kämpfer 1, Waffe 1, SW: 2
-Spieler 1, Kämpfer 1, Waffe 1, KS: 3
-Spieler 1, Kämpfer 1, Waffe 2, Name: Energieschwert
-Spieler 1, Kämpfer 1, Waffe 2, Typ: Nahkampfwaffe
-Spieler 1, Kämpfer 1, Waffe 2, AW: 4
-Spieler 1, Kämpfer 1, Waffe 2, BF_KG: 3
-Spieler 1, Kämpfer 1, Waffe 2, SW: 3
-Spieler 1, Kämpfer 1, Waffe 2, KS: 5
+Spieler 1, Name eingeben: Hans
+Spieler 1, Kämpfer 1, Name eingeben: Gregor
+Spieler 1, Kämpfer 1, LP eingeben: 8
+Spieler 1, Kämpfer 1, VW eingeben: 3
+Spieler 1, Kämpfer 1, RW eingeben: 5
+Spieler 1, Kämpfer 1, Waffe 1, Name eingeben: Boltpistole
+Spieler 1, Kämpfer 1, Waffe 1, AW eingeben: 4
+Spieler 1, Kämpfer 1, Waffe 1, BF_KG eingeben: 3
+Spieler 1, Kämpfer 1, Waffe 1, SW eingeben: 2
 
-Spieler 2, Name: Peter
-Spieler 2, Kämpfer 1, Name: Bonekraka
-Spieler 2, Kämpfer 1, LP: 10
-Spieler 2, Kämpfer 1, VW: 3
-Spieler 2, Kämpfer 1, RW: 5
-Spieler 2, Kämpfer 1, Waffe 1, Name: Bolter
-Spieler 2, Kämpfer 1, Waffe 1, Typ: Fernkampfwaffe
-Spieler 2, Kämpfer 1, Waffe 1, AW: 4
-Spieler 2, Kämpfer 1, Waffe 1, BF_KG: 3
-Spieler 2, Kämpfer 1, Waffe 1, SW: 3
-Spieler 2, Kämpfer 1, Waffe 1, KS: 4
-Spieler 2, Kämpfer 1, Waffe 2, Name: Spalta
-Spieler 2, Kämpfer 1, Waffe 2, Typ: Nahkampfwaffe
-Spieler 2, Kämpfer 1, Waffe 2, AW: 4
-Spieler 2, Kämpfer 1, Waffe 2, BF_KG: 4
-Spieler 2, Kämpfer 1, Waffe 2, SW: 3
-Spieler 2, Kämpfer 1, Waffe 2, KS: 4
+Spieler 2, Name eingeben: Peter
+Spieler 2, Kämpfer 1, Name eingeben: Bonekraka
+Spieler 2, Kämpfer 1, LP eingeben: 10
+Spieler 2, Kämpfer 1, VW eingeben: 3
+Spieler 2, Kämpfer 1, RW eingeben: 5
+Spieler 2, Kämpfer 1, Waffe 1, Name eingeben: Spalta
+Spieler 2, Kämpfer 1, Waffe 1, AW eingeben: 4
+Spieler 2, Kämpfer 1, Waffe 1, BF_KG eingeben: 4
+Spieler 2, Kämpfer 1, Waffe 1, SW eingeben: 3
 
 *----------------*
 * Runde 1, Zug 1 *
@@ -136,44 +121,49 @@ Spieler 2, Kämpfer 1, Waffe 2, KS: 4
 Kämpfer von Hans: Gregor (8 LP)
 Kämpfer von Peter: Bonekraka (10 LP)
 
-Gregor, Angriffsart (N-Nahkampfangriff, F-Fernkampfangriff): F
-
+Gregor greift Bonekraka mit Boltpistole an.
 Gregor würfelt 6, 4, 3 und 2.
-Gregor erzielt 2 Treffer und 1 Kritische Treffer.
+Gregor erzielt 3 Treffer.
 Bonekraka würfelt 4, 1 und 5.
-Bonekraka erzielt 1 Blocks und 0 Kritische Blocks.
-Bonekraka erleidet 2 Schaden und 3 Kritischen Schaden und hat noch 5 LP.
+Bonekraka erzielt 1 Blocks.
+Bonekraka erleidet 4 Schaden und hat noch 6 LP.
 
 *----------------*
 * Runde 1, Zug 2 *
 *----------------*
 Kämpfer von Hans: Gregor (8 LP)
-Kämpfer von Peter: Bonekraka (5 LP)
+Kämpfer von Peter: Bonekraka (6 LP)
 
-Bonekraka, Angriffsart (N-Nahkampfangriff, F-Fernkampfangriff): N
+Bonekraka greift Gregor mit Spalta an.
+Bonekraka würfelt 2, 4, 3 und 2.
+Bonekraka erzielt 1 Treffer.
+Gregor würfelt 3, 5 und 5.
+Gregor erzielt 2 Blocks.
+Gregor erleidet 0 Schaden und hat noch 8 LP.
 
-Bonekraka würfelt 6, 4, 5 und 1.
-Bonekraka erzielt 2 Attacken und 1 Kritische Attacken.
-Gregor würfelt 4, 5, 4 und 2.
-Gregor erzielt 3 Attacken und 0 Kritische Attacken.
+*----------------*
+* Runde 2, Zug 1 *
+*----------------*
+Kämpfer von Hans: Gregor (8 LP)
+Kämpfer von Peter: Bonekraka (6 LP)
 
-Bonekraka, Aktion (1-Kritisch Schlagen, 2-Schlagen, 3-Kritisch Blocken oder 4-Blocken): 1
-Gregor erleidet 4 Kritischen Schaden und hat noch 4 LP.
-Gregor, Aktion (1-Kritisch Schlagen, 2-Schlagen, 3-Kritisch Blocken oder 4-Blocken): 2
-Bonekraka erleidet 3 Schaden und hat noch 2 LP.
-Bonekraka, Aktion (1-Kritisch Schlagen, 2-Schlagen, 3-Kritisch Blocken oder 4-Blocken): 2
-Gregor erleidet 3 Schaden und hat noch 1 LP.
-Gregor, Aktion (1-Kritisch Schlagen, 2-Schlagen, 3-Kritisch Blocken oder 4-Blocken): 2
-Bonekraka erleidet 3 Schaden und stirbt.
+Gregor greift Bonekraka mit Boltpistole an.
+Gregor würfelt 1, 5, 5 und 3.
+Gregor erzielt 3 Treffer.
+Bonekraka würfelt 5, 4 und 2.
+Bonekraka erzielt 1 Blocks.
+Bonekraka erleidet 4 Schaden und hat noch 2 LP.
+
+*----------------*
+* Runde 2, Zug 2 *
+*----------------*
+Kämpfer von Hans: Gregor (8 LP)
+Kämpfer von Peter: Bonekraka (2 LP)
+
+Bonekraka greift Gregor mit Spalta an.
+Bonekraka würfelt 6, 4, 6 und 1.
+Bonekraka erzielt 3 Treffer.
+Gregor würfelt 4, 2 und 4.
+Gregor erzielt 0 Blocks.
+Gregor erleidet 9 Schaden und stirbt.
 ```
-
-## Wiederholungsaufgabe 3
-
-Es soll eine dritte Version des Kill Team Spiels entwickelt werden. Passe hierzu
-die ausführbare Klasse wie folgt an:
-
-- es sollen zusätzliche Datenobjekte für zusätzliche Kämpfer und Waffen
-  deklariert werden
-- es soll möglich sein, den neuen Datenobjekten Werte über die Konsole
-  zuzuweisen (alternativ können den Datenobjekten auch statisch Werte zugewiesen
-  werden)
