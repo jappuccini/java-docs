@@ -90,7 +90,22 @@ die ausführbare Klasse wie folgt an:
 - es soll möglich sein, den neuen Datenobjekten Werte über die Konsole
   zuzuweisen (alternativ können den Datenobjekten auch statisch Werte zugewiesen
   werden)
-- es soll ein vollständiges Spiel mit einfachen Angriffen umgesetzt werden
+- es soll ein vollständiges Spiel mit erweiterten einfachen Angriffen umgesetzt
+  werden
+
+## Ablauf eines erweiterten einfachen Angriffs und Ermittlung des Schadens
+
+Der angreifende Spieler würfelt mit der Anzahl AW seiner Waffe, der
+verteidigende Spieler würfelt mit der Anzahl VW. Anschließend wird der Schaden
+berechnet und dem verteidigenden Spieler Lebenspunkte in Höhe des Schadens
+abgezogen. Der Schaden berechnet sich dabei gemäß der Formel _(Anzahl Treffer -
+Anzahl Blocks) x SW_. Die Anzahl Treffer ergibt sich aus der Summe der Wurfwerte
+des angreifenden Spielers >= BF_KG, die Anzahl Blocks aus der Summe der
+Wurfwerte des verteidigenden Spielers >= RW.
+
+**Hinweis**
+
+Wurfwerte sollen zwischen 1 und 6 liegen.
 
 ### Beispielhafte Konsolenausgabe
 
