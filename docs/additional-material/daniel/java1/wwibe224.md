@@ -103,9 +103,7 @@ Anzahl Blocks) x SW_. Die Anzahl Treffer ergibt sich aus der Summe der Wurfwerte
 des angreifenden Spielers >= BF_KG, die Anzahl Blocks aus der Summe der
 Wurfwerte des verteidigenden Spielers >= RW.
 
-**Hinweis**
-
-Wurfwerte sollen zwischen 1 und 6 liegen.
+**Hinweis:** Wurfwerte sollen zwischen 1 und 6 liegen.
 
 ### Beispielhafte Konsolenausgabe
 
