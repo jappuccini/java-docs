@@ -12,35 +12,70 @@ tags: []
 - [GitHub Repository Musterlösungen Klausuraufgaben](https://github.com/appenmaier/java_exam_exercises)
 - [Abbildungen](https://app.mural.co/t/programmierungwwibe2248240/m/programmierungwwibe2248240/1729834706630/301020393cfaff8bb3d89e41e78d79d332f429aa)
 
-## Wiederholungsaufgabe 1 (Vorlesung 1 - 3)
+## Kill Team
 
-Es soll eine erste Version des Kill Team Spiels erstellt werden. Erstelle hierzu
-eine ausführbare Klasse wie folgt:
+Im Rahmen der Vorlesungswiederholung soll Schritt für Schritt eine abgespeckte
+Variante des Tabletop-Spiels
+_[Warhammer 40,000 Kill Team](https://www.warhammer.com/en-GB/other-games-kill-team-LP)_
+entwickelt werden. Bei diesem Strategiespiel für zwei Spieler kämpfen zwei
+sogenannten Kill Teams mit dem Ziel gegeneinander, entsprechende Missionsziele
+zu erfüllen bzw. das gegnerische Team auszulöschen.
 
-- es sollen Datenobjekte für die Eigenschaften _Name Spieler_, _Name Kämpfer_,
-  _LP Kämpfer_ sowie _Wurfert_ des ER-Modells für 2 Spieler, 2 Kämpfer und 10
-  Würfel (je 5 pro Spieler) deklariert werden
+### Version 1 (Vorlesung 1 bis 3)
+
+Erstelle eine ausführbare Klasse wie folgt:
+
+- es sollen Datenobjekte für alle Eigenschaften des abgebildeten ER-Modells für
+  2 Spieler, 2 Kämpfer (je einer pro Spieler) und 8 W6-Würfel (je 4 pro Spieler)
+  deklariert werden
 - es soll möglich sein, den Datenobjekten für die Eigenschaften der Spieler und
   Kämpfer Werte über die Konsole zuzuweisen
-- es sollen lediglich zwei einfache Angriffe simuliert werden
+- es soll genau eine Runde umgesetzt werden
 
-### Ablauf eines einfachen Angriffs und Ermittlung des Schadens
+**ER-Modell**
 
-Der angreifende Spieler würfelt mit 4 Würfeln, der verteidigende Spieler würfelt
-mit 3 Würfeln. Anschließend wird der Schaden berechnet und dem verteidigenden
-Spieler Lebenspunkte in Höhe des Schadens abgezogen. Der Schaden berechnet sich
-dabei gemäß der Formel _Anzahl Treffer - Anzahl Blocks_. Die Anzahl Treffer
-ergibt sich aus der Summe der Wurfwerte des angreifenden Spielers, die Anzahl
-Blocks aus der Summe der Wurfwerte des verteidigenden Spielers.
+```mermaid
+erDiagram
+    Spieler ||--o{ "Kämpfer" : hat
+    Spieler ||--|{ "W6-Würfel" : hat
 
-**Hinweise**
+    Spieler {
+        String Name
+    }
 
-- Wurfwerte sollen zwischen 1 und 6 liegen
-- Die Problematiken, dass ein verteidigender Spieler bei einem Angriff "geheilt"
-  wird (Anzahl Treffer < Anzahl Blocks) und dass ein "toter" Spieler angreift
-  (Schaden beim ersten Angriff >= LP), sollen aktuell noch ignoriert werden.
+    "Kämpfer" {
+        String Name
+        int LP
+    }
 
-### Beispielhafte Konsolenausgabe
+    "W6-Würfel" {
+        int Wurfwert
+    }
+```
+
+LP = Lebenspunkte
+
+**Ablauf einer Runde**
+
+Zu Beginn der Runde greift zunächst der Kämpfer des ersten Spielers den Kämpfer
+des zweiten Spielers mit einem einfachen Angriff an. Anschließend greift der
+Kämpfer des zweiten Spielers den Kämpfer des ersten Spielers mit einem einfachen
+Angriff an.
+
+**Ablauf eines einfachen Angriffs und Ermittlung des Schadens**
+
+Der angreifende Spieler würfelt mit 4 W6-Würfeln, der verteidigende Spieler
+würfelt mit 3 W6-Würfeln. Anschließend wird der Schaden berechnet und dem
+verteidigenden Spieler Lebenspunkte in Höhe des Schadens abgezogen. Der Schaden
+berechnet sich dabei gemäß der Formel _Anzahl Treffer - Anzahl Blocks_. Die
+Anzahl Treffer ergibt sich aus der Summe der Wurfwerte des angreifenden
+Spielers, die Anzahl Blocks aus der Summe der Wurfwerte des verteidigenden
+Spielers. Die Problematiken, dass ein verteidigender Spieler bei einem Angriff
+"geheilt" wird (Anzahl Treffer < Anzahl Blocks) und dass ein "toter" Spieler
+angreift (Schaden beim ersten Angriff >= LP), sollen aktuell noch ignoriert
+werden.
+
+**Beispielhafte Konsolenausgabe**
 
 ```console
 Spieler 1, Name: Hans
@@ -78,22 +113,64 @@ Gregor erzielt 11 Blocks.
 Gregor erleidet -1 Schaden und hat noch 9 LP.
 ```
 
-## Wiederholungsaufgabe 2 (Vorlesung 4 und 5)
+### Version 2 (Vorlesung 4 und 5)
 
-Es soll eine zweite Version des Kill Team Spiels entwickelt werden. Passe hierzu
-die ausführbare Klasse wie folgt an:
+Passe die ausführbare Klasse wie folgt an:
 
-- es sollen zusätzliche Datenobjekte für die Eigenschaften _VW Kämpfer_, _RW
-  Kämpfer_, _Name Waffe_, _AW Waffe_, _BF/KG Waffe_ und _SW Waffe_ des
-  ER-Modells für 2 Spieler, 2 Kämpfer, 2 Waffen (je eine pro Kämpfer) und 10
-  Würfel (je 5 pro Spieler) deklariert werden
+- es sollen zusätzliche Datenobjekte für alle zusätzlichen Eigenschaften des
+  abgebildeten ER-Modells für 2 Spieler, 2 Kämpfer (je einer pro Spieler), 2
+  Waffen (je eine pro Kämpfer) und 10 W6-Würfel (je 5 pro Spieler) deklariert
+  werden
 - es soll möglich sein, den neuen Datenobjekten Werte über die Konsole
   zuzuweisen (alternativ können den Datenobjekten auch statisch Werte zugewiesen
   werden)
-- es soll ein vollständiges Spiel mit erweiterten einfachen Angriffen umgesetzt
-  werden
+- es sollen mehrere Runden umgesetzt werden
+- das Spiel soll enden, sobald die Lebenspunkte eines der beiden Kämpfer auf 0
+  oder unter 0 gesunken sind
 
-## Ablauf eines erweiterten einfachen Angriffs und Ermittlung des Schadens
+**ER-Modell**
+
+```mermaid
+erDiagram
+    Spieler ||--o{ "Kämpfer" : hat
+    "Kämpfer" ||--|{ Waffe : hat
+    Spieler ||--|{ "W6-Würfel" : hat
+
+    Spieler {
+        String Name
+    }
+
+    "Kämpfer" {
+        String Name
+        int LP
+        int VW
+        int RW
+    }
+
+    Waffe {
+        String Name
+        int AW
+        int BF_KG
+        int SW
+    }
+
+    "W6-Würfel" {
+        int Wurfwert
+    }
+```
+
+LP = Lebenspunkte, VW = Verteidigungswert, RW = Rüstungswurf, AW = Attackenwert,
+BF_KG = Ballistische Fertigkeit / Kampfgeschick, SW = Schadenswert
+
+**Ablauf einer Runde**
+
+Zu Beginn einer jeden Runde greift zunächst der Kämpfer des ersten Spielers den
+Kämpfer des zweiten Spielers mit einem erweiterten einfachen Angriff an. Sollte
+der Kämpfer des zweiten Spielers diesen Angriff überleben, greift dieser
+anschließend den Kämpfer des ersten Spielers mit einem erweiterten einfachen
+Angriff an.
+
+**Ablauf eines erweiterten einfachen Angriffs und Ermittlung des Schadens**
 
 Der angreifende Spieler würfelt mit der Anzahl AW seiner Waffe, der
 verteidigende Spieler würfelt mit der Anzahl VW. Anschließend wird der Schaden
@@ -103,9 +180,7 @@ Anzahl Blocks) x SW_. Die Anzahl Treffer ergibt sich aus der Summe der Wurfwerte
 des angreifenden Spielers >= BF_KG, die Anzahl Blocks aus der Summe der
 Wurfwerte des verteidigenden Spielers >= RW.
 
-**Hinweis:** Wurfwerte sollen zwischen 1 und 6 liegen.
-
-### Beispielhafte Konsolenausgabe
+**Beispielhafte Konsolenausgabe**
 
 ```console
 Spieler 1, Name eingeben: Hans
@@ -181,8 +256,9 @@ Gregor erzielt 0 Blocks.
 Gregor erleidet 9 Schaden und stirbt.
 ```
 
-## Wiederholungsaufgabe 3 (Vorlesung 5 und 6)
+### Version 3 (Vorlesung 5 und 6)
 
-Es soll eine dritte Version des Kill Team Spiels entwickelt werden. Überführe
-hierzu den bisherigen imperativen Programmentwurf in einen objektorientierten
-Programmentwurf.
+Überführe den bisherigen imperativen Programmentwurf in einen objektorientierten
+Programmentwurf. Erweitere zudem den objektorientierten Programmentwurf so, dass
+zu Beginn einer jeden Runde per "Münzwurf" darüber entschieden wird, welcher
+Spieler den ersten Angriff in der jeweiligen Runde ausführen darf.
