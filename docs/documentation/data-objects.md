@@ -18,9 +18,9 @@ können Sie im Programm nicht angesprochen werden.
 
 ```mermaid
 flowchart
-    hans(Bezeichner: hans\nDatentyp: String\nWert: Hans)
-    i(Bezeichner: i\nDatentyp: int\nWert: 5)
-    isAvailable(Bezeichner: isAvailable\nDatentyp: boolean\nWert: true)
+    hans(Bezeichner: hans<br>Datentyp: String<br>Wert: Hans)
+    i(Bezeichner: i<br>Datentyp: int<br>Wert: 5)
+    isAvailable(Bezeichner: isAvailable<br>Datentyp: boolean<br>Wert: true)
 ```
 
 ## Deklaration von Datenobjekten

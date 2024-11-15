@@ -19,9 +19,9 @@ Objektorientierung zusammengefasst:
 
 ```mermaid
 flowchart LR
-    rectangle1(Bezeichner: rectangle1\nDatentyp: Shape\nWert: 13fee20c) --> o1[hashCode: 13fee20c\nareaInCm2: 12]
-    rectangle2(Bezeichner: rectangle2\nDatentyp: Shape\nWert: 88d45a01) --> o2[hashCode: 88d45a01\nareaInCm2: 12]
-    trapezoid(Bezeichner: trapezoid\nDatentyp: Shape\nWert: 915a002f) --> o3[/hashCode: 915a002f\nareaInCm2: 12\]
+    rectangle1(Bezeichner: rectangle1<br>Datentyp: Shape<br>Wert: 13fee20c) --> o1[hashCode: 13fee20c<br>areaInCm2: 12]
+    rectangle2(Bezeichner: rectangle2<br>Datentyp: Shape<br>Wert: 88d45a01) --> o2[hashCode: 88d45a01<br>areaInCm2: 12]
+    trapezoid(Bezeichner: trapezoid<br>Datentyp: Shape<br>Wert: 915a002f) --> o3[/hashCode: 915a002f<br>areaInCm2: 12\]
 ```
 
 :::note Hinweis
@@ -204,9 +204,9 @@ auf das eigene Objekt.
 
 ```mermaid
 flowchart LR
-    rectangle1(Bezeichner: rectangle1\nDatentyp: Shape\nWert: 13fee20c) --> o1[hashCode: 13fee20c\nareaInCm2: 12]
-    rectangle2(Bezeichner: rectangle2\nDatentyp: Shape\nWert: 13fee20c) --> o1[hashCode: 13fee20c\nareaInCm2: 12]
-    trapezoid(Bezeichner: trapezoid\nDatentyp: Shape\nWert: 915a002f) --> o3[/hashCode: 915a002f\nareaInCm2: 10\]
+    rectangle1(Bezeichner: rectangle1<br>Datentyp: Shape<br>Wert: 13fee20c) --> o1[hashCode: 13fee20c<br>areaInCm2: 12]
+    rectangle2(Bezeichner: rectangle2<br>Datentyp: Shape<br>Wert: 13fee20c) --> o1[hashCode: 13fee20c<br>areaInCm2: 12]
+    trapezoid(Bezeichner: trapezoid<br>Datentyp: Shape<br>Wert: 915a002f) --> o3[/hashCode: 915a002f<br>areaInCm2: 10\]
 ```
 
 :::note Hinweis

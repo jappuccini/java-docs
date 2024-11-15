@@ -13,10 +13,10 @@ einen Index angesprochen werden können.
 ```mermaid
 flowchart
     subgraph names
-        a[Index: 0\nWert: Hans] -.- b[Index: 1\nWert: Peter]
-        b -.- c[Index: 2\nWert: Lisa]
-        c -.- d[Index: 3\nWert: Max]
-        d -.- e[Index: 4\nWert: Heidi]
+        a[Index: 0<br>Wert: Hans] -.- b[Index: 1<br>Wert: Peter]
+        b -.- c[Index: 2<br>Wert: Lisa]
+        c -.- d[Index: 3<br>Wert: Max]
+        d -.- e[Index: 4<br>Wert: Heidi]
     end
 ```
 
