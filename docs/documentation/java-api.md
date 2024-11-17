@@ -34,9 +34,9 @@ bieten meist eine vollständige Integration der Java API an.
 | [Wrapper-Klassen](wrappers)                              | `Boolean`, `Double`, `Integer`                                                                                                                                                                                                           |
 | [Zeichenketten (Strings)](strings)                       | `String`                                                                                                                                                                                                                                 |
 
-## Das Javadoc
+## Die Javadoc
 
-Das Javadoc ist ein Werkzeug zur Software-Dokumentation und erstellt aus den
+Die Javadoc ist ein Werkzeug zur Software-Dokumentation und erstellt aus den
 öffentlichen Deklarationen von Klassen, Schnittstellen, Attributen und Methoden
 sowie eventuell vorhandenen
 [Dokumentationskommentaren](class-structure#kommentare-und-dokumentation)
@@ -44,3 +44,40 @@ HTML-Seiten. Um die Navigation innerhalb der Dokumentationsdateien zu
 erleichtern, werden zusätzlich verschiedene Index- und Hilfsdateien generiert.
 HTML-Tags in den Dokumentationskommentaren ermöglichen die Formatierung der
 Dokumentation.
+
+```java title="Computer.java (Auszug)" showLineNumbers
+/**
+ * Computer
+ *
+ * @author Hans Maier
+ * @version 1.0
+ *
+ */
+public class Computer {
+  ...
+  /**
+   * Central Processing Unit
+   */
+  private CPU cpu;
+
+  /**
+   * Returns the Central Processing Unit (CPU) of this Computer
+   *
+   * @return the Central Processing Unit
+   */
+  public CPU getCpu() {
+    return cpu;
+  }
+
+  /**
+   * Sets the Central Processing Unit of this Computer with the incoming data
+   *
+   * @param powerInGHz Power of the CPU in GHz
+   * @param numberOfCores Number of Cores
+   */
+  public void setCpu(double powerInGHz, int numberOfCores) {
+    cpu = new CPU(powerInGHz, numberOfCores);
+  }
+  ...
+}
+```

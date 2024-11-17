@@ -29,36 +29,36 @@ Attribute und Methoden der Oberklasse zugreifen.
 <Tabs>
   <TabItem value="a" label="Oberklasse" default>
 
-```java title="SuperClass.java" showLineNumbers
-public class SuperClass {
+```java title="Computer.java (Auszug)" showLineNumbers
+public class Computer {
+  ...
+  protected CPU cpu;
+  protected int memoryInGB;
 
-  public String foo;
-  protected String bar;
-  private String baz;
-
-  public SuperClass(String foo, String bar, String baz) {
-    this.foo = foo;
-    this.bar = bar;
-    this.baz = baz;
+  public Computer(String description, CPU cpu, int memoryInGB) {
+    this.description = description;
+    this.cpu = cpu;
+    this.memoryInGB = memoryInGB;
   }
-
+  ...
 }
 ```
 
   </TabItem>
   <TabItem value="b" label="Unterklasse">
 
-```java title="SubClass.java" showLineNumbers
-public class SubClass extends SuperClass {
+```java title="Notebook.java" showLineNumbers
+public class Notebook extends Computer {
 
-  public SubClass(String foo, String bar, String baz) {
-    super(foo, bar, baz);
+  private final double screenSizeInInches;
+
+  public Notebook(String description, CPU cpu, int memoryInGB, double screenSizeInInches) {
+    super(description, cpu, mainMemoryInGB);
+    this.screenSizeInInches = screenSizeInInches;
   }
 
-  public void foobar() {
-    System.out.println(foo);
-    System.out.println(bar);
-    System.out.println(baz); // Kompilierungsfehler
+  public double getScreenSizeInInches() {
+    return screenSizeInInches;
   }
 
 }
@@ -85,28 +85,33 @@ aufgerufen werden.
 <Tabs>
   <TabItem value="a" label="Oberklasse" default>
 
-```java title="SuperClass.java" showLineNumbers
-public class SuperClass {
-
-  public void foo() {
-    System.out.print("foo");
+```java title="Computer.java (Auszug)" showLineNumbers
+public class Computer {
+  ...
+  public ArrayList<String> getSpecification() {
+    ArrayList<String> specification = new ArrayList<>();
+    specification.add("description: " + description);
+    specification.add("cpu: " + cpu);
+    specification.add("memoryInGB: " + memoryInGB);
+    return specification;
   }
-
+  ...
 }
 ```
 
   </TabItem>
   <TabItem value="b" label="Unterklasse">
 
-```java title="SubClass.java" showLineNumbers
-public class SubClass extends SuperClass {
-
+```java title="Notebook.java (Auszug)" showLineNumbers
+public class Notebook extends Computer {
+  ...
   @Override
-  public void foo() {
-    super.foo();
-    System.out.println("bar");
+  public ArrayList<String> getSpecification() {
+    ArrayList<String> specification = super.getSpecification();
+    specification.add("screenSizeInInches: " + screenSizeInInches);
+    return specification;
   }
-
+  ...
 }
 ```
 

@@ -2,7 +2,7 @@
 title: (Dynamische) Polymorphie
 description: ''
 sidebar_position: 180
-tags: [oo, polymorphy]
+tags: [oo, polymorphism]
 ---
 
 import Tabs from '@theme/Tabs';
@@ -20,24 +20,45 @@ Methodenimplementierung aufgerufen wird. Die Typumwandlung von der abgeleiteten
 Unterklasse zur Oberklasse bezeichnet man als _Upcast_, die Rückumwandlung als
 _Downcast_.
 
-## Upcast
-
-Beim Upcast wird die Objektreferenz der Unterklasse in eine Objektreferenz der
-Oberklasse umgewandelt.
-
 <Tabs>
   <TabItem value="a" label="Oberklasse" default>
 
-```java title="SuperClass.java" showLineNumbers
-public class SuperClass {
+```java title="Computer.java (Auszug)" showLineNumbers
+public class Computer {
+  ...
+  public ArrayList<String> getSpecification() {
+    ArrayList<String> specification = new ArrayList<>();
+    specification.add("description: " + description);
+    specification.add("cpu: " + cpu);
+    specification.add("memoryInGB: " + memoryInGB);
+    return specification;
+  }
+  ...
 }
 ```
 
   </TabItem>
   <TabItem value="b" label="Unterklasse">
 
-```java title="SubClass.java" showLineNumbers
-public class SubClass extends SuperClass {
+```java title="Notebook.java (Auszug)" showLineNumbers
+public class Notebook extends Computer {
+  ...
+  public Notebook(String description, CPU cpu, int memoryInGB, double screenSizeInInches) {
+    super(description, cpu, mainMemoryInGB);
+    this.screenSizeInInches = screenSizeInInches;
+  }
+
+  public double getScreenSizeInInches() {
+    return screenSizeInInches;
+  }
+
+  @Override
+  public ArrayList<String> getSpecification() {
+    ArrayList<String> specification = super.getSpecification();
+    specification.add("screenSizeInInches: " + screenSizeInInches);
+    return specification;
+  }
+  ...
 }
 ```
 
@@ -48,9 +69,25 @@ public class SubClass extends SuperClass {
 public class MainClass {
 
   public static void main(String[] args) {
-    SuperClass superClass;
-    SubClass subClass = new SubClass();
-    superClass = subClass; // Upcast
+    CPU myCpu1 = new CPU(3.5, 8);
+    CPU myCpu2 = new CPU(4.7, 8);
+
+    Notebook myNotebook1 = new Notebook("Mein Office Laptop", myCpu1, 16, 14);
+    Notebook myNotebook2 = new Notebook("Mein Gaming Laptop", myCpu2, 32, 16);
+
+    Computer myComputer;
+    ArrayList<Computer> computers = new ArrayList<>();
+
+    myComputer = myNotebook1; // Upcast
+    computers.add(myComputer);
+    myComputer = myNotebook2; // Upcast
+    computers.add(myComputer);
+
+    for(Computer c : computers) {
+      System.out.println(c.getSpecification()); // Polymorphie
+      Notebook myNotebook = (Notebook) c; // Downcast
+      System.out.println(myNotebook.getScreenSizeInInches());
+    }
   }
 
 }
@@ -59,128 +96,41 @@ public class MainClass {
   </TabItem>
 </Tabs>
 
-## Downcast
+:::danger Hinweis
 
-Beim Downcast wird die Objektreferenz der Oberklasse in eine Objektreferenz der
-Unterklasse umgewandelt. Im Gegensatz zum Upcast muss bei einem Downcast der Typ
-explizit angegeben werden. Der Downcast einer nicht zuweisungskompatiblen
-Referenz führt zu einer `ClassCastException`.
+Im Gegensatz zum Upcast muss bei einem Downcast der Typ explizit angegeben
+werden. Der Downcast einer nicht zuweisungskompatiblen Referenz führt zu einer
+`ClassCastException`.
 
-<Tabs>
-  <TabItem value="a" label="Oberklasse" default>
-
-```java title="SuperClass.java" showLineNumbers
-public class SuperClass {
-}
-```
-
-  </TabItem>
-  <TabItem value="b" label="Unterklasse">
-
-```java title="SubClass.java" showLineNumbers
-public class SubClass extends SuperClass {
-}
-```
-
-  </TabItem>
-  <TabItem value="c" label="Startklasse">
-
-```java title="MainClass.java" showLineNumbers
-public class MainClass {
-
-  public static void main(String[] args) {
-    SuperClass superClass;
-    SubClass subClass = new SubClass();
-    superClass = subClass; // Upcast
-    subClass = (SubClass) superClass; // Downcast
-  }
-
-}
-```
-
-  </TabItem>
-</Tabs>
+:::
 
 ## Der instanceof-Operator
 
 Mit dem Operator `instanceof` kann zur Laufzeit geprüft werden, ob eine
 Objektreferenz zuweisungskompatibel zu einer Klasse ist. Eine Objektreferenz ist
 dann zuweisungskompatibel zu einer Klasse, wenn die Klasse des referenzierten
-Objektes in einer Vererbungsbeziehung zur Klasse steht.
+Objektes in einer Vererbungsbeziehung zur Klasse steht. Seit Java 16 ermöglicht
+der Mustervergleich bei `instanceof` das Vermeiden notwendiger Typumwandlungen
+und sorgt gleichzeitig für eine sicherere Programmierung.
 
-<Tabs>
-  <TabItem value="a" label="Oberklasse" default>
-
-```java title="SuperClass.java" showLineNumbers
-public class SuperClass {
-}
-```
-
-  </TabItem>
-  <TabItem value="b" label="Unterklasse">
-
-```java title="SubClass.java" showLineNumbers
-public class SubClass extends SuperClass {
-}
-```
-
-  </TabItem>
-  <TabItem value="c" label="Startklasse">
-
-```java title="MainClass.java" showLineNumbers
+```java title="MainClass.java (Auszug)" showLineNumbers
 public class MainClass {
 
   public static void main(String[] args) {
-    SuperClass superClass;
-    SubClass subClass = new SubClass();
-    superClass = subClass; // Upcast
-    if (superClass instanceof SubClass) {
-      subClass = (SubClass) superClass; // Downcast
+    ...
+    for(Computer c : computers) {
+      /* bis Java 16 */
+      if (c instanceof Notebook) {
+        Notebook myNotebook = (Notebook) c; // Downcast
+        System.out.println(myNotebook.getScreenSizeInInches());
+      }
+      /* seit Java 16 */
+      if (c instanceof Notebook myNotebook) { // Downcast
+        System.out.println(myNotebook.getScreenSizeInInches());
+      }
     }
+    ...
   }
 
 }
 ```
-
-  </TabItem>
-</Tabs>
-
-Seit Java 16 ermöglicht der Mustervergleich bei `instanceof` das Vermeiden
-notwendiger Typumwandlungen und sorgt gleichzeitig für eine sicherere
-Programmierung.
-
-<Tabs>
-  <TabItem value="a" label="Oberklasse" default>
-
-```java title="SuperClass.java" showLineNumbers
-public class SuperClass {
-}
-```
-
-  </TabItem>
-  <TabItem value="b" label="Unterklasse">
-
-```java title="SubClass.java" showLineNumbers
-public class SubClass extends SuperClass {
-}
-```
-
-  </TabItem>
-  <TabItem value="c" label="Startklasse">
-
-```java title="MainClass.java" showLineNumbers
-public class MainClass {
-
-  public static void main(String[] args) {
-    SuperClass superClass;
-    SubClass subClass = new SubClass();
-    superClass = subClass; // Upcast
-    if (superClass instanceof SubClass s) { // Downcast
-    }
-  }
-
-}
-```
-
-  </TabItem>
-</Tabs>
