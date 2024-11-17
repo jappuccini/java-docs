@@ -10,15 +10,9 @@ Datenstruktur-Variablen, sogenannte _Felder_ (Arrays), zurückgreifen. Die
 einzelnen Speicherplätze in einem Feld werden als Elemente bezeichnet, die über
 einen Index angesprochen werden können.
 
-```mermaid
-flowchart
-    subgraph names
-        a[Index: 0<br>Wert: Hans] -.- b[Index: 1<br>Wert: Peter]
-        b -.- c[Index: 2<br>Wert: Lisa]
-        c -.- d[Index: 3<br>Wert: Max]
-        d -.- e[Index: 4<br>Wert: Heidi]
-    end
-```
+| 0    | 1     | 2    | 3   | 4     |
+| ---- | ----- | ---- | --- | ----- |
+| Hans | Peter | Lisa | Max | Heidi |
 
 ## Erzeugen von Feldern
 

@@ -23,11 +23,16 @@ flowchart
 
     size[Höhe: 2]
 
-    node1(Wurzelknoten<br>Tiefe: 0, Grad: 2)
-    node2(Blattknoten<br>Tiefe: 1, Grad: 0)
-    node3(Kindknoten/Elternknoten<br>Tiefe: 1, Grad: 2)
-    node4(Blattknoten<br>Tiefe: 2, Grad: 0)
-    node5(Blattknoten<br>Tiefe: 2, Grad: 0)
+    node1(Wurzelknoten
+          Tiefe: 0, Grad: 2)
+    node2(Blattknoten
+          Tiefe: 1, Grad: 0)
+    node3(Kindknoten/Elternknoten
+          Tiefe: 1, Grad: 2)
+    node4(Blattknoten
+          Tiefe: 2, Grad: 0)
+    node5(Blattknoten
+          Tiefe: 2, Grad: 0)
 ```
 
 :::note Hinweis
