@@ -9,116 +9,61 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 Mit Hilfe der Schlüsselwörter `abstract` und `final` kann die Verwendung von
-Klassen vorgegeben bzw. eingeschänkt werden.
+Klassen vorgegeben bzw. eingeschänkt werden:
 
-## Abstrakte Klassen
-
-Abstrakte Klassen können nicht instanziiert werden.
+- Abstrakte Klassen können nicht instanziiert werden
+- Abstrakte Methoden werden in abstrakten Klassen definiert, besitzen dort
+  keinen Methodenrumpf und müssen in den abgeleiteten Klassen der abstrakten
+  Klasse überschrieben werden
+- Finale Klassen können nicht abgeleitet werden
+- Finale Methoden können nicht überschrieben werden
 
 <Tabs>
-  <TabItem value="a" label="Abstrakte Klasse" default>
+  <TabItem value="a" label="Abstrakte Klasse mit abstrakter und finaler Methode" default>
 
-```java title="Person.java" showLineNumbers
-public abstract class Person { }
+```java title="Computer.java (Auszug)" showLineNumbers
+public abstract class Computer {
+  ...
+  public abstract ArrayList<String> getSpecification();
+
+  public final CPU getCpu() {
+    return cpu;
+  }
+  ...
+}
 ```
 
   </TabItem>
-  <TabItem value="b" label="Startklasse">
+  <TabItem value="b" label="Finale Klasse">
+
+```java title="Notebook.java (Auszug)" showLineNumbers
+public final class Notebook extends Computer {
+  ...
+  @Override
+  public ArrayList<String> getSpecification() {
+    ArrayList<String> specification = new ArrayList<>();
+    specification.add("description: " + description);
+    specification.add("cpu: " + cpu);
+    specification.add("memoryInGB: " + memoryInGB);
+    specification.add("screenSizeInInches: " + screenSizeInInches);
+    return specification;
+  }
+
+  @Override
+  public CPU getCpu() {...} // Kompilierungsfehler
+  ...
+}
+```
+
+  </TabItem>
+  <TabItem value="c" label="Startklasse">
 
 ```java title="MainClass.java" showLineNumbers
-public class MainClass {
+public class MainClass extends Notebook { // Kompilierungsfehler
 
   public static void main(String[] args) {
-    Person person = new Person(); // Kompilierungsfehler
+    Computer myComputer = new Computer("Mein Office PC"); // Kompilierungsfehler
   }
-
-}
-```
-
-  </TabItem>
-</Tabs>
-
-## Abstrakte Methoden
-
-Abstrakte Methoden werden in abstrakten Klassen definiert, besitzen dort keinen
-Methodenrumpf und müssen in den abgeleiteten Klassen der abstrakten Klasse
-überschrieben werden.
-
-<Tabs>
-  <TabItem value="a" label="Abstrakte Klasse mit abstrakter Methode" default>
-
-```java title="Person.java" showLineNumbers
-public abstract class Person {
-
-  public abstract print();
-
-}
-```
-
-  </TabItem>
-  <TabItem value="b" label="Startklasse">
-
-```java title="Student.java" showLineNumbers
-public class Student extends Person {
-
-  public print() { }
-
-}
-```
-
-  </TabItem>
-</Tabs>
-
-## Finale Klassen
-
-Finale Klassen können nicht abgeleitet werden.
-
-<Tabs>
-  <TabItem value="a" label="Finale Klasse" default>
-
-```java title="Person.java" showLineNumbers
-public final class Person { }
-```
-
-  </TabItem>
-  <TabItem value="b" label="Unterklasse">
-
-```java title="Student.java" showLineNumbers
-public class Student extends Person { } // Kompilierungsfehler
-```
-
-  </TabItem>
-</Tabs>
-
-## Finale Methoden
-
-Finale Methoden können nicht überschrieben werden.
-
-<Tabs>
-  <TabItem value="a" label="Oberklasse mit finaler Methode" default>
-
-```java title="Person.java" showLineNumbers
-public class Person {
-
-  private String name;
-
-  public Person(String name) {
-    this.name = name;
-  }
-  public final name() {
-    return name;
-  }
-
-}
-```
-
-  </TabItem>
-  <TabItem value="b" label="Unterklasse">
-
-```java title="Student.java" showLineNumbers
-public class Student extends Person {
-
-  public name() { } // Kompilierungsfehler
 
 }
 ```

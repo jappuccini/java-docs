@@ -1,0 +1,105 @@
+---
+title: Referenzen und Objekte
+description: ''
+sidebar_position: 132
+tags: [oo]
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+Technisch gesehen handelt es sich bei einer Klasse um einen komplexen Datentyp.
+Analog zu den primitiven Datentypen können auch für Klassen Variablen –
+sogenannte _Referenzvariablen_ – definiert werden.
+
+Im Gegensatz zu "normalen" Variablen werden bei Referenzvariablen nicht die
+eigentlichen Werte in den Variablen gespeichert, sondern die Speicheradressen
+der erzeugten Objekte. Die Selbstreferenz `this` verweist innerhalb einer Klasse
+auf das eigene Objekt.
+
+```mermaid
+flowchart LR
+    subgraph Progamm
+    computer(Bezeichner: myComputer
+             Datentyp: Computer
+             Wert: 13FEE20C)
+    cpu(Bezeichner: myCpu
+        Datentyp: CPU
+        Wert: 88D45A01)
+
+    end
+
+    subgraph Hauptspeicher
+    o1((Klasse: Computer
+       hashCode: 13FEE20C
+       cpu: 88D45A01
+       memoryInGB: 32))
+    o2((Klasse: CPU
+       hashCode: 88D45A01
+       powerInGHZ: 3.5
+       numberOfCores: 8))
+    end
+
+    computer --> o1
+    cpu --> o2
+    o1 --> o2
+```
+
+:::note Hinweis
+
+Der Standarwert von Referenzvariablen ist `null` (auch Nullreferenz genannt).
+
+:::
+
+## Erzeugen von Objekten
+
+Beim Erzeugen eines Objekts mit Hilfe des Operators `new` wird der bei der
+Deklaration reservierte Speicherplatz durch das Objekt belegt.
+
+```java title="MainClass.java" showLineNumbers
+public class MainClass {
+
+  public static void main(String[] args) {
+    CPU myCpu = new CPU(3.5, 8);
+    Computer myComputer = new Computer("Mein Office PC");
+  }
+
+}
+```
+
+:::danger Hinweis
+
+Nach dem new-Operator muss immer ein
+[Konstruktor](classes#definition-von-konstruktoren) der Klasse stehen.
+
+:::
+
+## Zugriff auf Attribute und Aufruf von Methoden
+
+Erlauben die Zugriffsrechte den Zugriff auf ein Attribut bzw. den Aufruf einer
+Methode, kann über die deklarierte Referenzvariable und einem nachgestellten
+Punkt auf das Attribut zugegriffen bzw. die Methode aufgerufen werden. Der
+Zugriff auf statische Attribute bzw. der Aufruf statischer Methoden erfolgt über
+den Klassennamen sowie einem nachgestellten Punkt.
+
+```java title="MainClass.java" showLineNumbers
+public class MainClass {
+
+  public static void main(String[] args) {
+    CPU myCpu = new CPU(3.5, 8);
+    Computer myComputer = new Computer("Mein Office PC");
+    myComputer.setCpu(myCpu);
+    myComputer.setMemoryInGB(32);
+    System.out.println(Computer.getNumberOfComputers());
+  }
+
+}
+```
+
+:::danger Hinweis
+
+Beim Aufruf einer Methode müssen alle Parameter in der richtigen Reihenfolge
+versorgt werden. Parameter, die diesem Prinzip folgen, bezeichnet man als
+_Positionsparameter_
+
+:::
