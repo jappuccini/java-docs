@@ -1,7 +1,7 @@
 ---
 title: Tiefgarage
 description: ''
-tags: [oo, inheritance, polymorphy]
+tags: [oo, inheritance, polymorphism]
 ---
 
 Setze das abgebildete Klassendiagramm vollständig um. Erstelle zum Testen eine

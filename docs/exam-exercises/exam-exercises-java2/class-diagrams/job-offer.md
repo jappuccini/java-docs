@@ -1,7 +1,7 @@
 ---
 title: Stellenangebot
 description: ''
-tags: [inheritance, polymorphy, exceptions, records, io-streams]
+tags: [inheritance, polymorphism, exceptions, records, io-streams]
 ---
 
 Setze das abgebildete Klassendiagramm vollständig um. Erstelle zum Testen eine

@@ -4,7 +4,7 @@ description: ''
 tags:
   [
     inheritance,
-    polymorphy,
+    polymorphism,
     interfaces,
     comparators,
     exceptions,

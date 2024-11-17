@@ -1,7 +1,7 @@
 ---
 title: Würfelspiel 4
 description: ''
-tags: [console-applications, oo, enumerations, inheritance, polymorphy]
+tags: [console-applications, oo, enumerations]
 ---
 
 Setze das abgebildete Klassendiagramm vollständig um. Orientiere Dich bei der
@@ -41,6 +41,7 @@ classDiagram
     }
 
     class FoodCategory {
+        <<enumeration>>
         BEVERAGES = Getränke, 1
         VEGETABLES = Gemüse, 2
         FRUITS = Obst, 2

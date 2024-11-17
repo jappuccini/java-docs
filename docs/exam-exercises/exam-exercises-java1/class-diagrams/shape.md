@@ -1,7 +1,7 @@
 ---
 title: Geometrische Form
 description: ''
-tags: [oo, inheritance, polymorphy, io-streams]
+tags: [oo, inheritance, polymorphism, io-streams]
 ---
 
 Setze das abgebildete Klassendiagramm vollständig um. Erstelle zum Testen eine

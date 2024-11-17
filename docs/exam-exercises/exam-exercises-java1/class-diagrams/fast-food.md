@@ -1,7 +1,7 @@
 ---
 title: Fast Food
 description: ''
-tags: [oo, enumerations, inheritance, polymorphy]
+tags: [oo, enumerations, inheritance, polymorphism]
 ---
 
 Setze das abgebildete Klassendiagramm vollständig um. Erstelle zum Testen eine

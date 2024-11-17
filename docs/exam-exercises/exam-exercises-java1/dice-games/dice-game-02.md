@@ -1,7 +1,7 @@
 ---
 title: Würfelspiel 2
 description: ''
-tags: [console-applications, oo, enumerations, inheritance, polymorphy]
+tags: [console-applications, oo, enumerations]
 ---
 
 Setze das abgebildete Klassendiagramm vollständig um. Orientiere Dich bei der
