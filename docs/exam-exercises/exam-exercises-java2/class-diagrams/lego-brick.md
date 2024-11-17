@@ -1,7 +1,7 @@
 ---
 title: Lego-Baustein
 description: ''
-tags: [inheritance, polymorphy, interfaces, comparators]
+tags: [inheritance, polymorphism, interfaces, comparators]
 ---
 
 Setze das abgebildete Klassendiagramm vollständig um. Erstelle zum Testen eine

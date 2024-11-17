@@ -1,7 +1,7 @@
 ---
 title: Plätzchendose
 description: ''
-tags: [oo, enumerations, inheritance, polymorphy, io-streams]
+tags: [oo, enumerations, inheritance, polymorphism, io-streams]
 ---
 
 Setze das abgebildete Klassendiagramm vollständig um. Erstelle zum Testen eine
