@@ -49,6 +49,7 @@ classDiagram
     }
 
     class ClassOfGoods {
+        <<enumeration>>
         BAKERY_PRODUCTS = Backwaren
         DAIRY_PRODUCTS = Milchprodukte
         FRUITS = Obst
