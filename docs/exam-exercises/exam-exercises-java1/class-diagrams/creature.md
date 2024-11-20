@@ -15,9 +15,9 @@ classDiagram
     Creature o-- Type
 
     class Creature {
-        -name: String &#123final&#125
-        -position: Position &#123final&#125
-        -type: Type &#123final&#125
+        -name: String #123;final#125;
+        -position: Position #123;final#125;
+        -type: Type #123;final#125;
         +Creature(name: String, position: Position, type: Type)
         +moveUp() void
         +moveDown() void

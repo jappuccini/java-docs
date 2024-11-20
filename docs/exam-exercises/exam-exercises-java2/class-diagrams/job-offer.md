@@ -28,14 +28,14 @@ classDiagram
 
     class Person {
         <<abstract>>
-        -name: String &#123final&#125
-        -birthdateTimeStamp: long &#123final&#125
+        -name: String #123;final#125;
+        -birthdateTimeStamp: long #123;final#125;
         +Person(name: String, birthdateTimeStamp: long)
     }
 
     class Applicant {
-        -applicantId: int &#123final&#125
-        -applicationDocuments: List~ApplicationDocument~ &#123final&#125
+        -applicantId: int #123;final#125;
+        -applicationDocuments: List~ApplicationDocument~ #123;final#125;
         +Applicant(name: String, birthdateTimeStamp: long, applicantId: int)
         +addApplicationDocument(applicationDocument: ApplicationDocument) void
     }

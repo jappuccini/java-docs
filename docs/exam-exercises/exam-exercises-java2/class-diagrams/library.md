@@ -20,8 +20,8 @@ classDiagram
 
     class Library {
         <<record>>
-        name: String &#123final&#125
-        books: Map~Book, Status~ &#123final&#125
+        name: String #123;final#125;
+        books: Map~Book, Status~ #123;final#125;
         +addBook(book: Book) void
         +getBookByTitle(title: String) Optional~Book~
         +getPaperBooksByStatus(status: Status) List~PaperBook~
@@ -31,25 +31,25 @@ classDiagram
         <<enumeration>>
         AVAILABLE = verfügbar
         LENT = verliehen
-        -description: String &#123final&#125
+        -description: String #123;final#125;
     }
 
     class Book {
         <<abstract>>
-        -id: UUID &#123final&#125
-        -author: Author &#123final&#125
-        -title: String &#123final&#125
+        -id: UUID #123;final#125;
+        -author: Author #123;final#125;
+        -title: String #123;final#125;
         +Book(author: Author, title: String)
     }
 
     class EBook {
-        -fileFormat: FileFormat &#123final&#125
-        -fileSizeInKb: int &#123final&#125
+        -fileFormat: FileFormat #123;final#125;
+        -fileSizeInKb: int #123;final#125;
         +EBook(author: Author, title: String, fileFormat: FileFormat, fileSizeInKb: int)
     }
 
     class PaperBook {
-        -pages: int &#123final&#125
+        -pages: int #123;final#125;
         +PaperBook(author: Author, title: String, pages: int)
     }
 
@@ -64,7 +64,7 @@ classDiagram
         AZW = Amazon Kindle
         EPUB = Electronic Publication
         LRF = Portable Reader File
-        -description: String &#123final&#125
+        -description: String #123;final#125;
     }
 ```
 

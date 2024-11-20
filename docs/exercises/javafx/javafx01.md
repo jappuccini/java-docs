@@ -14,10 +14,10 @@ classDiagram
     Initializable <|.. Controller
 
     class Controller {
-        -canvas: Canvas &#123FXML&#125
+        -canvas: Canvas #123;FXML#125;
         -model: Model
         +initialize(location: URL, resources: ResourceBundle) void
-        +addCircle(actionEvent: ActionEvent) void &#123FXML&#125
+        +addCircle(actionEvent: ActionEvent) void #123;FXML#125;
     }
 
     class Initializable {

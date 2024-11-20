@@ -17,7 +17,7 @@ classDiagram
     House *-- Room
 
     class House {
-        -rooms: List~Room~ &#123final&#125
+        -rooms: List~Room~ #123;final#125;
         +rooms() List~Room~
         +addRoom(room: Room) void
         +equals(object: Object) boolean
@@ -26,7 +26,7 @@ classDiagram
     }
 
     class Room {
-        -name: String &#123final&#125
+        -name: String #123;final#125;
         +Room(name: String)
         +name() String
         +equals(object: Object) boolean

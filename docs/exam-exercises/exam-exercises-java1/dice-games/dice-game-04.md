@@ -26,7 +26,7 @@ classDiagram
     }
 
     class Player {
-        -name: String &#123final&#125
+        -name: String #123;final#125;
         -points: int
         +Player(name: String)
         +setPoints(points: int) void
@@ -53,8 +53,8 @@ classDiagram
         EGGS = Eier, 4
         FATS_AND_OILS = Fette und Öle, 5
         SWEETS = Süßigkeiten, 6
-        -description: String &#123final&#125
-        -points: int &#123final&#125
+        -description: String #123;final#125;
+        -points: int #123;final#125;
     }
 ```
 

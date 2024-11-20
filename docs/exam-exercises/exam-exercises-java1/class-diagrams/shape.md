@@ -17,7 +17,7 @@ classDiagram
     Rectangle <|-- Square : extends
 
     class ShapeReader {
-        -shapes: List~Shape~ &#123final&#125
+        -shapes: List~Shape~ #123;final#125;
         +ShapeReader(file: File)
         +getCircles() List~Circle~
         +getShapesWithMinArea(minAreaInCm2: double) List~Shape~
@@ -29,15 +29,15 @@ classDiagram
     }
 
     class Circle {
-        -rInCm: double &#123final&#125
+        -rInCm: double #123;final#125;
         +Circle(rInCm: double)
         +getAreaInCm2() double
         +getCircumferenceInCm() double
     }
 
     class Rectangle {
-        -aInCm: double &#123final&#125
-        -bInCm: double &#123final&#125
+        -aInCm: double #123;final#125;
+        -bInCm: double #123;final#125;
         +Rectangle(aInCm: double, bInCm: double)
         +getAreaInCm2() double
         +getCircumferenceInCm() double

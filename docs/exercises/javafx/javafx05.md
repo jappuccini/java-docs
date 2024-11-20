@@ -31,11 +31,11 @@ classDiagram
     }
 
     class Controller {
-        -inputTextField: TextField &#123FXML&#125
-        -outputLabel: Label &#123FXML&#125
+        -inputTextField: TextField #123;FXML#125;
+        -outputLabel: Label #123;FXML#125;
         -model: Model
         +initialize(location: URL, resources: ResourceBundle) void
-        +calculate(actionEvent: ActionEvent) void &#123FXML&#125
+        +calculate(actionEvent: ActionEvent) void #123;FXML#125;
     }
 
     class Initializable {

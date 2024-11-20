@@ -18,14 +18,14 @@ classDiagram
 
     class Lego {
         <<abstract>>
-        -id: int &#123final&#125
+        -id: int #123;final#125;
         +Lego(id: int)
     }
 
     class LegoBrick {
         <<abstract>>
-        -dimensions: int[3] &#123final&#125
-        -color: String &#123final&#125
+        -dimensions: int[3] #123;final#125;
+        -color: String #123;final#125;
         +LegoBrick(id: int, dimensions: int[3], color: String)
     }
 

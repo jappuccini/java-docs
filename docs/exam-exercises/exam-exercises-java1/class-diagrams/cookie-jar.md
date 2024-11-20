@@ -18,7 +18,7 @@ classDiagram
     Recipe o-- Ingredient
 
     class CookieJar {
-        -cookies: List~Cookie~ &#123final&#125
+        -cookies: List~Cookie~ #123;final#125;
         +CookieJar()
         +addCookie(cookie: Cookie) void
         +getStuffedCookie() StuffedCookie
@@ -26,27 +26,27 @@ classDiagram
     }
 
     class Cookie {
-        -name: String &#123final&#125
-        -dough: Recipe &#123final&#125
+        -name: String #123;final#125;
+        -dough: Recipe #123;final#125;
         +Cookie(name: String, dough: Recipe)
         +getIngredients() List~Ingredient~
     }
 
     class StuffedCookie {
-        -jam: Recipe &#123final&#125
+        -jam: Recipe #123;final#125;
         +StuffedCookie(name: String, dough: Recipe, jam: Recipe)
         +getIngredients() List~Ingredient~
     }
 
     class Recipe {
-        -name: String &#123final&#125
-        -ingredients: List~Ingredient~ &#123final&#125
+        -name: String #123;final#125;
+        -ingredients: List~Ingredient~ #123;final#125;
         +Recipe(name: String)
         +addIngredient(ingredient: Ingredient) void
     }
 
     class Ingredient {
-        -name: String &#123final&#125
+        -name: String #123;final#125;
         +Ingredient(name: String)
     }
 

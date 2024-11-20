@@ -43,9 +43,9 @@ classDiagram
 
     class Sportsman {
         <<abstract>>
-        -name: String &#123final&#125
+        -name: String #123;final#125;
         +Sportsman(name: String)
-        +getScorerPoints() int &#123abstract&#125
+        +getScorerPoints() int #123;abstract#125;
         +compareTo(other: Sportsman) int
     }
 

@@ -42,22 +42,22 @@ classDiagram
     }
 
     class FilteredAdultStudents {
-        -students: List~Student~ &#123final&#125
+        -students: List~Student~ #123;final#125;
         +FilteredAdultStudents()
         +add(student: Student) void
         +printStudents() void
     }
 
     class FilteredTeenStudents {
-        -students: List~Student~ &#123final&#125
+        -students: List~Student~ #123;final#125;
         +FilteredTeenStudents()
         +add(student: Student) void
         +printStudents() void
     }
 
     class FilteredStudents {
-        -students: List~Student~ &#123final&#125
-        -mandatoryFilter: Predicate~Student~ &#123final&#125
+        -students: List~Student~ #123;final#125;
+        -mandatoryFilter: Predicate~Student~ #123;final#125;
         +FilteredStudents(mandatoryFilter: Predicate~Student~)
         +add(student: Student) void
         +printStudents() void

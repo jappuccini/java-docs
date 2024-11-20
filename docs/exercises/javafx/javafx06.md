@@ -35,15 +35,15 @@ classDiagram
     }
 
     class LoginController {
-        -userNameTextField: TextField &#123FXML&#125
-        -passwordPasswordField: PasswordField &#123FXML&#125
+        -userNameTextField: TextField #123;FXML#125;
+        -passwordPasswordField: PasswordField #123;FXML#125;
         -model: Model
         +initialize(location: URL, resources: ResourceBundle) void
-        +login(actionEvent: ActionEvent) void &#123FXML&#125
+        +login(actionEvent: ActionEvent) void #123;FXML#125;
     }
 
     class UserController {
-        -greetingsLabel: Label &#123FXML&#125
+        -greetingsLabel: Label #123;FXML#125;
         -model: Model
         +initialize(location: URL, resources: ResourceBundle) void
     }

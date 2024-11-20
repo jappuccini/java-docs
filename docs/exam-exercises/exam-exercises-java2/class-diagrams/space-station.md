@@ -35,7 +35,7 @@ classDiagram
         X_WING = 1050
         Y_WING = 1000
         TIE_FIGHTER = 1200
-        -maxSpeedInKmh: int &#123final&#125
+        -maxSpeedInKmh: int #123;final#125;
     }
 ```
 
