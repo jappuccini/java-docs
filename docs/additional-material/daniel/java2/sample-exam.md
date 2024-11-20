@@ -43,9 +43,9 @@ classDiagram
 
     class SuperHuman {
         <<abstract>>
-        -name: String &#123final&#125
-        -universe: Universe &#123final&#125
-        -power: int &#123final&#125
+        -name: String #123;final#125;
+        -universe: Universe #123;final#125;
+        -power: int #123;final#125;
         +SuperHuman(name: String, universe: Universe, power: int)
         +name() String
         +universe() Universe
@@ -71,9 +71,9 @@ classDiagram
     }
 
     class SuperLeague~T extends SuperHuman~ {
-        -name: String &#123final&#125
-        -universe: Universe &#123final&#125
-        -members: Map~T, Boolean~ &#123final&#125
+        -name: String #123;final#125;
+        -universe: Universe #123;final#125;
+        -members: Map~T, Boolean~ #123;final#125;
         +SuperLeague(name: String, universe: Universe, members: Map~T, Boolean~)
         +addSuperHuman(t: T) void
         +getAllAvailableSuperHumans() List~T~
@@ -187,9 +187,9 @@ classDiagram
 
     class SuperHuman {
         <<abstract>>
-        -name: String &#123final&#125
-        -universe: Universe &#123final&#125
-        -power: int &#123final&#125
+        -name: String #123;final#125;
+        -universe: Universe #123;final#125;
+        -power: int #123;final#125;
         +SuperHuman(name: String, universe: Universe, power: int)
         +name() String
         +universe() Universe
@@ -215,9 +215,9 @@ classDiagram
     }
 
     class SuperLeague~T extends SuperHuman~ {
-        -name: String &#123final&#125
-        -universe: Universe &#123final&#125
-        -members: Map~T, Boolean~ &#123final&#125
+        -name: String #123;final#125;
+        -universe: Universe #123;final#125;
+        -members: Map~T, Boolean~ #123;final#125;
         +SuperLeague(name: String, universe: Universe, members: Map~T, Boolean~)
         +addSuperHuman(t: T) void
         +getAllAvailableSuperHumans() List~T~

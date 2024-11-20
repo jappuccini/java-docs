@@ -27,17 +27,17 @@ classDiagram
 
     class Video {
         <<abstract>>
-        -movie: Movie &#123final&#125
+        -movie: Movie #123;final#125;
         +Video(movie: Movie)
     }
 
     class VHS {
-        -isRewritable: boolean &#123final&#125
+        -isRewritable: boolean #123;final#125;
         +VHS(movie: Movie, isRewritable: boolean)
     }
 
     class BluRay {
-        -capacityInGb: double &#123final&#125
+        -capacityInGb: double #123;final#125;
         +BluRay(movie: Movie, capacityInGb: double)
     }
 
@@ -54,7 +54,7 @@ classDiagram
         HORROR = Horror
         ACTION = Action
         COMEDY = Komödie
-        -description: String &#123final&#125
+        -description: String #123;final#125;
     }
 ```
 

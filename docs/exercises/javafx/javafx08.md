@@ -20,8 +20,8 @@ classDiagram
     Field --|> StackPane : extends
 
     class ChessFigure {
-        -color: ChessColor &#123final&#125
-        -type: ChessFigureType &#123final&#125
+        -color: ChessColor #123;final#125;
+        -type: ChessFigureType #123;final#125;
         +ChessFigure(type: ChessFigureType, color: ChessColor, image: Image)
         +getColor() ChessColor
         +getType() ChessFigureType
@@ -31,7 +31,7 @@ classDiagram
     	<<enumeration>>
         BLACK = schwarz
         WHITE = weiß
-        -description: String &#123final&#125
+        -description: String #123;final#125;
         +getDescription() String
     }
 
@@ -43,19 +43,19 @@ classDiagram
 		PAWN = Bauer
 		QUEEN = Dame
 		ROOK = Turm
-        -description: String &#123final&#125
+        -description: String #123;final#125;
         +getDescription() String
     }
 
     class ChessBoard {
-    	-fields: Field[][] &#123final&#125
+    	-fields: Field[][] #123;final#125;
     	+ChessBoard()
     	+getFields() [][]
     }
 
     class Field {
-    	-row: int &#123final&#125
-    	-column: char &#123final&#125
+    	-row: int #123;final#125;
+    	-column: char #123;final#125;
     	-isSelected: boolean
     	+Field(row: int, column: char, color: Color)
     	+setSelected(boolean: isSelected) void
@@ -68,7 +68,7 @@ classDiagram
 	}
 
     class Controller {
-        -board: ChessBoard &#123FXML&#125
+        -board: ChessBoard #123;FXML#125;
         -oldField: Field
         +initialize(location: URL, resources: ResourceBundle) void
         -setHighlight(field: Field, highlight: boolean) void

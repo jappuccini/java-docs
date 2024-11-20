@@ -39,10 +39,10 @@ classDiagram
     CourseOfStudies --o Class
 
     class Class {
-        -description: String &#123final&#125
-        -courseOfStudies: CourseOfStudies &#123final&#125
-        -lectures: List~Lecture~ &#123final&#125
-        -students: List~Student~ &#123final&#125
+        -description: String #123;final#125;
+        -courseOfStudies: CourseOfStudies #123;final#125;
+        -lectures: List~Lecture~ #123;final#125;
+        -students: List~Student~ #123;final#125;
         +Class(description: String, courseOfStudies: CourseOfStudies)
         +description() String
         +courseOfStudies() CourseOfStudies
@@ -55,8 +55,8 @@ classDiagram
     }
 
     class Student {
-        -matriculationNumber: String &#123final&#125
-        -name: String &#123final&#125
+        -matriculationNumber: String #123;final#125;
+        -name: String #123;final#125;
         +Student(matriculationNumber: String, name: String)
         +matriculationNumber() String
         +name() String
@@ -64,8 +64,8 @@ classDiagram
     }
 
     class Lecture {
-        -description: String &#123final&#125
-        -creditPoints: int &#123final&#125
+        -description: String #123;final#125;
+        -creditPoints: int #123;final#125;
         +Lecture(description: String, creditPoints: int)
         +description() String
         +creditPoints() int
@@ -77,7 +77,7 @@ classDiagram
         WI = Wirtschaftsinformatik
         INF = Informatik
         BWL = Betriebswirtschaftslehre
-        -description: String &#123final&#125
+        -description: String #123;final#125;
     }
 
     class ExamTask02 {
@@ -413,9 +413,9 @@ classDiagram
     }
 
     class Player {
-        -name: String &#123final&#125
+        -name: String #123;final#125;
         -healthPoints: int
-        -dice: Dice &#123final&#125
+        -dice: Dice #123;final#125;
         +Player(name: String)
         +name() String
         +getHealthPoints() int
@@ -560,34 +560,34 @@ classDiagram
     Recipe o-- Ingredient
 
     class CookieJar {
-        -cookies: List~Cookie~ &#123final&#125
+        -cookies: List~Cookie~ #123;final#125;
         +CookieJar()
         +addCookie(cookie: Cookie) void
         +getStuffedCookie() StuffedCookie
     }
 
     class Cookie {
-        -name: String &#123final&#125
-        -dough: Recipe &#123final&#125
+        -name: String #123;final#125;
+        -dough: Recipe #123;final#125;
         +Cookie(name: String, dough: Recipe)
         +getIngredients() List~Ingredient~
     }
 
     class StuffedCookie {
-        -jam: Recipe &#123final&#125
+        -jam: Recipe #123;final#125;
         +StuffedCookie(name: String, dough: Recipe, jam: Recipe)
         +getIngredients() List~Ingredient~
     }
 
     class Recipe {
-        -name: String &#123final&#125
-        -ingredients: List~Ingredient~ &#123final&#125
+        -name: String #123;final#125;
+        -ingredients: List~Ingredient~ #123;final#125;
         +Recipe(name: String)
         +addIngredient(ingredient: Ingredient) void
     }
 
     class Ingredient {
-        -name: String &#123final&#125
+        -name: String #123;final#125;
         +Ingredient(name: String)
     }
 

@@ -34,10 +34,10 @@ classDiagram
     }
 
     class Controller {
-        -diceImageView: ImageView &#123FXML&#125
+        -diceImageView: ImageView #123;FXML#125;
         -model: Model
         +initialize(location: URL, resources: ResourceBundle) void
-        +rollTheDice(actionEvent: ActionEvent) void &#123FXML&#125
+        +rollTheDice(actionEvent: ActionEvent) void #123;FXML#125;
     }
 
     class Initializable {

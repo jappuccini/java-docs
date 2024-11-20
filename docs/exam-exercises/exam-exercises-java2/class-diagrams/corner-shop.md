@@ -27,15 +27,15 @@ classDiagram
 
     class Product {
         <<abstract>>
-        -description: String &#123final&#125
+        -description: String #123;final#125;
         -price: double
         -currency: String
         +Product(description: String, price: double, currency: String)
     }
 
     class Goods {
-        -classOfGoods: ClassOfGoods &#123final&#125
-        -unit: String &#123final&#125
+        -classOfGoods: ClassOfGoods #123;final#125;
+        -unit: String #123;final#125;
         +Goods(description: String, price: double, currency: String, classOfGoods: ClassOfGoods, unit: String)
         +compareTo(other: Goods) int
     }
@@ -60,7 +60,7 @@ classDiagram
         DAIRY_PRODUCTS = Milchprodukte
         FRUITS = Obst
         VEGETABLES = Gemüse
-        -description: String &#123final&#125
+        -description: String #123;final#125;
     }
 ```
 

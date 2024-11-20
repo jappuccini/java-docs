@@ -21,13 +21,13 @@ classDiagram
     }
 
     class Controller {
-        -initialCapitalTextField: TextField &#123FXML&#125
-        -interestRateTexField: TextField &#123FXML&#125
-        -runningTimeTextField: TextField &#123FXML&#125
-        -interestLabel: Label &#123FXML&#125
+        -initialCapitalTextField: TextField #123;FXML#125;
+        -interestRateTexField: TextField #123;FXML#125;
+        -runningTimeTextField: TextField #123;FXML#125;
+        -interestLabel: Label #123;FXML#125;
         -model: Model
         +initialize(location: URL, resources: ResourceBundle) void
-        +calculateInterest(actionEvent: ActionEvent) void &#123FXML&#125
+        +calculateInterest(actionEvent: ActionEvent) void #123;FXML#125;
     }
 
     class Initializable {

@@ -21,9 +21,9 @@ classDiagram
 
     class Vehicle {
         <<abstract>>
-        -make: String &#123final&#125
-        -model: String &#123final&#125
-        -engine: Engine &#123final&#125
+        -make: String #123;final#125;
+        -model: String #123;final#125;
+        -engine: Engine #123;final#125;
         #speedInKmh: double
         -numberOfVehicles: int$
         +Vehicle(make: String, model: String, engine: Engine)
@@ -31,8 +31,8 @@ classDiagram
         +model() String
         +engine() Engine
         +getSpeedInKmh() double
-        +accelerate(valueInKmh: int) void &#123final&#125
-        +brake(valueInKmh: int) void &#123final&#125
+        +accelerate(valueInKmh: int) void #123;final#125;
+        +brake(valueInKmh: int) void #123;final#125;
         +equals(object: Object) boolean
         +hashCode() int
         +toString() String
@@ -45,12 +45,12 @@ classDiagram
         PETROL = Benzin
         GAS = Gas
         ELECTRO = Elektro
-        -description: String &#123final&#125
+        -description: String #123;final#125;
     }
 
     class Car {
         <<final>>
-        -seats: int &#123final&#125
+        -seats: int #123;final#125;
         +Car(make: String, model: String, engine: Engine, seats: int)
         +seats() int
         +doATurboBoost() void
@@ -61,7 +61,7 @@ classDiagram
 
     class Truck {
         <<final>>
-        -cargo: int &#123final&#125
+        -cargo: int #123;final#125;
         -isTransformed: boolean
         +Truck(make: String, model: String, engine: Engine, cargo: int)
         +cargo() int
@@ -73,8 +73,8 @@ classDiagram
     }
 
     class Rental {
-        -name: String &#123final&#125
-        -vehicles: List~Vehicle~ &#123final&#125
+        -name: String #123;final#125;
+        -vehicles: List~Vehicle~ #123;final#125;
         +Rental(name: String)
         +name() String
         +vehicles() List~Vehicle~
@@ -93,8 +93,8 @@ classDiagram
     }
 
     class TravelAgency {
-        -name: String &#123final&#125
-        -partners: List~Partner~ &#123final&#125
+        -name: String #123;final#125;
+        -partners: List~Partner~ #123;final#125;
         +TravelAgency(name: String)
         +name() String
         +partners() List~Partner~

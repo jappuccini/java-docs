@@ -36,9 +36,9 @@ classDiagram
         +getModel() String
         +getEngine() Engine
         +getSpeedInKmh() double
-        +accelerate(valueInKmh: int) void &#123final&#125
-        +brake(valueInKmh: int) void &#123final&#125
-        +toString() String &#123abstract&#125
+        +accelerate(valueInKmh: int) void #123;final#125;
+        +brake(valueInKmh: int) void #123;final#125;
+        +toString() String #123;abstract#125;
         +getNumberOfVehicles()$ int
     }
 
@@ -48,13 +48,13 @@ classDiagram
         PETROL = Benzin
         GAS = Gas
         ELECTRO = Elektro
-        -description: String &#123final&#125
+        -description: String #123;final#125;
         +getDescription() String
     }
 
     class Car {
         <<final>>
-        -seats: int &#123final&#125
+        -seats: int #123;final#125;
         +Car(make: String, model: String, engine: Engine, seats: int)
         +getSeats() int
         +doATurboBoost() void
@@ -63,7 +63,7 @@ classDiagram
 
     class Truck {
         <<final>>
-        -cargo: int &#123final&#125
+        -cargo: int #123;final#125;
         -isTransformed: boolean
         +Truck(make: String, model: String, engine: Engine, cargo: int)
         +getCargo() int
@@ -73,8 +73,8 @@ classDiagram
     }
 
     class Rental {
-        -name: String &#123final&#125
-        -vehicles: ArrayList~Vehicle~ &#123final&#125
+        -name: String #123;final#125;
+        -vehicles: ArrayList~Vehicle~ #123;final#125;
         +Rental(name: String)
         +getName() String
         +getVehicles() ArrayList~Vehicle~
@@ -90,7 +90,7 @@ classDiagram
     }
 
     class TravelAgency {
-        -name: String &#123final&#125
+        -name: String #123;final#125;
         -partners: ArrayList~Partner~
         +TravelAgency(name: String)
         +addPartner(partner: Partner) void

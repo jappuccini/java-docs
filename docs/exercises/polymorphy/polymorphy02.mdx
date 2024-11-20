@@ -20,9 +20,9 @@ classDiagram
     Rental o-- Vehicle
 
     class Vehicle {
-        -make: String &#123final&#125
-        -model: String &#123final&#125
-        -engine: Engine &#123final&#125
+        -make: String #123;final#125;
+        -model: String #123;final#125;
+        -engine: Engine #123;final#125;
         #speedInKmh: double
         -numberOfVehicles: int$
         +Vehicle(make: String, model: String, engine: Engine)
@@ -42,13 +42,13 @@ classDiagram
         PETROL = Benzin
         GAS = Gas
         ELECTRO = Elektro
-        -description: String &#123final&#125
+        -description: String #123;final#125;
         Engine(description: String)
         +getDescription() String
     }
 
     class Car {
-        -seats: int &#123final&#125
+        -seats: int #123;final#125;
         +Car(make: String, model: String, engine: Engine, seats: int)
         +getSeats() int
         +doATurboBoost() void
@@ -56,7 +56,7 @@ classDiagram
     }
 
     class Truck {
-        -cargo: int &#123final&#125
+        -cargo: int #123;final#125;
         -isTransformed: boolean
         +Truck(make: String, model: String, engine: Engine, cargo: int)
         +getCargo() int
@@ -66,8 +66,8 @@ classDiagram
     }
 
     class Rental {
-        -name: String &#123final&#125
-        -vehicles: ArrayList~Vehicle~ &#123final&#125
+        -name: String #123;final#125;
+        -vehicles: ArrayList~Vehicle~ #123;final#125;
         +Rental(name: String)
         +getName() String
         +getVehicles() ArrayList~Vehicle~
