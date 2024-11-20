@@ -24,9 +24,9 @@ classDiagram
     }
 
     class Player {
-        -name: String &#123final&#125
-        -handCards: List~Card~ &#123final&#125
-        -playedCards: Map~Card, Integer~ &#123final&#125
+        -name: String #123;final#125;
+        -handCards: List~Card~ #123;final#125;
+        -playedCards: Map~Card, Integer~ #123;final#125;
         -actionPoints: int
         +Player(name: String, handCards: List~Card~, playedCards: Map~Card, Integer~)
         +getActionPoints() int

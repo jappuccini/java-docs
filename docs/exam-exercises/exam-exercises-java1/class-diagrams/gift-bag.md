@@ -15,24 +15,24 @@ classDiagram
     Present o-- Person
 
     class GiftBag {
-        -presents: List~Present~ &#123final&#125
+        -presents: List~Present~ #123;final#125;
         +GiftBag()
         +addPresent(present: Present) void
         +getMostExpensivePresent() Present
     }
 
     class Present {
-        -description: String &#123final&#125
-        -priceInEuro: double &#123final&#125
-        -sender: Person &#123final&#125
-        -recipient: Person &#123final&#125
+        -description: String #123;final#125;
+        -priceInEuro: double #123;final#125;
+        -sender: Person #123;final#125;
+        -recipient: Person #123;final#125;
         +Present(description: String, priceInEuro: double, sender: Person, recipient: Person)
     }
 
     class Person {
-        -name: String &#123final&#125
-        -age: int &#123final&#125
-        -gender: char &#123final&#125
+        -name: String #123;final#125;
+        -age: int #123;final#125;
+        -gender: char #123;final#125;
         +Player(name: String, age: int, gender: char )
     }
 ```

@@ -30,7 +30,7 @@ classDiagram
         CIRCLE = 0
         SQUARE = 4
         TRIANGLE = 3
-        -corners: int &#123final&#125
+        -corners: int #123;final#125;
     }
 ```
 

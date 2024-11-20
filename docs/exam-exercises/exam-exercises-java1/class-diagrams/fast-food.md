@@ -29,20 +29,20 @@ classDiagram
         EGGS = Eier, 4
         FATS_AND_OILS = Fette und Öle, 5
         SWEETS = Süßigkeiten, 6
-        -description: String &#123final&#125
-        -points: int &#123final&#125
+        -description: String #123;final#125;
+        -points: int #123;final#125;
     }
 
     class Food {
-        -name: String &#123final&#125
-        -foodCategory: FoodCategory &#123final&#125
-        -calorificValueInKcal: double &#123final&#125
+        -name: String #123;final#125;
+        -foodCategory: FoodCategory #123;final#125;
+        -calorificValueInKcal: double #123;final#125;
         +Food(name: String, foodCategory: FoodCategory, calorificValueInKcal: double)
     }
 
     class FastFood {
-        -isVegetarian: boolean &#123final&#125
-        -ratings: List~Integer~ &#123final&#125
+        -isVegetarian: boolean #123;final#125;
+        -ratings: List~Integer~ #123;final#125;
         +FastFood(name: String, foodCategory: FoodCategory, calorificValueInKcal: double, isVegetarian: boolean)
         +addRating(rating: int) void
         +getAverageRating() double
@@ -53,8 +53,8 @@ classDiagram
     }
 
     class FastFoodShop {
-        -name: String &#123final&#125
-        -fastFood: List~FastFood~ &#123final&#125
+        -name: String #123;final#125;
+        -fastFood: List~FastFood~ #123;final#125;
         +FastFoodShop(name: String)
         +addFastFood(fastFood: FastFood) void
         +rateFastFood(fastFood: FastFood, rating: int) void

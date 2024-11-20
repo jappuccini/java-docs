@@ -20,8 +20,8 @@ classDiagram
     ShoppingCart --o CashierSystem
 
     class Product {
-        -id: int &#123final&#125
-        -description: String &#123final&#125
+        -id: int #123;final#125;
+        -description: String #123;final#125;
         -unit: String
         -priceInEuro: double
         +Product(id: int, description: String, unit: String, priceInEuro: double)
@@ -29,12 +29,12 @@ classDiagram
     }
 
     class Goods {
-        -classOfGoods: ClassOfGoods &#123final&#125
+        -classOfGoods: ClassOfGoods #123;final#125;
         +Goods(id: int, description: String, unit: String, priceInEuro: double, classOfGoods: ClassOfGoods)
     }
 
     class Item {
-        -goods: Goods &#123final&#125
+        -goods: Goods #123;final#125;
         -amount: int
         +Item(goods: Goods, amount: int)
         +setAmount(amount: int) void
@@ -42,7 +42,7 @@ classDiagram
     }
 
     class ShoppingCart {
-        -items: List~Item~ &#123final&#125
+        -items: List~Item~ #123;final#125;
         +ShoppingCart()
         +createItem(goods: Goods, amount: int) void
         +getTotalInEuro() double
@@ -54,13 +54,13 @@ classDiagram
         DAIRY_PRODUCTS = Milchprodukte
         FRUITS = Obst
         VEGETABLES = Gemüse
-        -description: String &#123final&#125
+        -description: String #123;final#125;
     }
 
     class CashierSystem {
-        -name: String &#123final&#125
-        -goods: List~Goods~ &#123final&#125
-        -cashiers: List~Cashier~ &#123final&#125
+        -name: String #123;final#125;
+        -goods: List~Goods~ #123;final#125;
+        -cashiers: List~Cashier~ #123;final#125;
         -shoppingCart: ShoppingCart
         -cashier: Cashier
         +CashierSystem(name: String)
@@ -73,8 +73,8 @@ classDiagram
     }
 
     class Cashier {
-        -id: int &#123final&#125
-        -name: String &#123final&#125
+        -id: int #123;final#125;
+        -name: String #123;final#125;
         +Cashier(name: String, id: int)
     }
 ```

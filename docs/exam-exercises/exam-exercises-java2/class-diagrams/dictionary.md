@@ -33,8 +33,8 @@ classDiagram
         <<enumeration>>
         DE = DE, Deutsch
         EN = EN, Englisch
-        -code: String &#123final&#125
-        -description: String &#123final&#125
+        -code: String #123;final#125;
+        -description: String #123;final#125;
     }
 
     class Dictionary {

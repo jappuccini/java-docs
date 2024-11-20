@@ -16,7 +16,7 @@ classDiagram
     ShoppingCart *-- Item
 
     class ShoppingCart~T extends Sellable~ {
-        -items: List~Item~ &#123final&#125
+        -items: List~Item~ #123;final#125;
         +ShoppingCart()
         +addItem(sellable: T, amount: int) void
         +removeItem(sellable: T) void
@@ -24,8 +24,8 @@ classDiagram
     }
 
     class Item {
-        -sellable: T &#123final&#125
-        -amount: int &#123final&#125
+        -sellable: T #123;final#125;
+        -amount: int #123;final#125;
         -Item(sellable: T, amount: int)
         +getSubTotalInEuro() double
     }

@@ -22,8 +22,8 @@ classDiagram
     }
 
     class Player {
-        -name: String &#123final&#125
-        -dice: Dice &#123final&#125
+        -name: String #123;final#125;
+        -dice: Dice #123;final#125;
         -healthPoints: int
         +Player(name: String)
         +rollTheDice() int

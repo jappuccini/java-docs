@@ -17,28 +17,28 @@ classDiagram
     Student o-- MatriculationNumber
 
     class MatriculationNumber {
-        -digits: int[] &#123final&#125
+        -digits: int[] #123;final#125;
         +MatriculationNumber(digit1: int, digit2: int, digit3: int, digit4: int, digit5: int, digit6: int, digit7: int)
     }
 
     class Student {
-        -matriculationNumber: MatriculationNumber &#123final&#125
-        -name: String &#123final&#125
+        -matriculationNumber: MatriculationNumber #123;final#125;
+        -name: String #123;final#125;
         +Student(matriculationNumber: int[7], name: String)
     }
 
     class Lecture {
-        -code: String &#123final&#125
-        -description: String &#123final&#125
-        -creditPoints: int &#123final&#125
+        -code: String #123;final#125;
+        -description: String #123;final#125;
+        -creditPoints: int #123;final#125;
         +Lecture(code: String, description: String, creditPoints: int)
     }
 
     class StudyCourse {
-        -description: String &#123final&#125
-        -courseOfStudies: CourseOfStudies &#123final&#125
-        -lectures: List~Lecture~ &#123final&#125
-        -students: List~Student~ &#123final&#125
+        -description: String #123;final#125;
+        -courseOfStudies: CourseOfStudies #123;final#125;
+        -lectures: List~Lecture~ #123;final#125;
+        -students: List~Student~ #123;final#125;
         +StudyCourse(description: String, courseOfStudies: CourseOfStudies)
         +addStudent(student: Student) void
         +addLecture(lecture: Lecture) void
@@ -50,7 +50,7 @@ classDiagram
         WI = Wirtschaftsinformatik
         INF = Informatik
         BWL = BWL
-        -description: String &#123final&#125
+        -description: String #123;final#125;
     }
 ```
 

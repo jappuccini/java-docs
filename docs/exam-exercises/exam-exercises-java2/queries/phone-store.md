@@ -20,8 +20,8 @@ classDiagram
         USB_C = USB C, true
         USB_MICRO = USB Micro, false
         THUNDERBOLT = Thunderbolt, true
-        -description: String &#123final&#125
-        -isModern: boolean &#123final&#125
+        -description: String #123;final#125;
+        -isModern: boolean #123;final#125;
     }
 
     class Brand {

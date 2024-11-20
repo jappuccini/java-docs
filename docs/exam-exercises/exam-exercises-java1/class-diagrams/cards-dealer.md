@@ -16,7 +16,7 @@ classDiagram
     Player o-- Card
 
     class Player {
-        -cards: List~Card~ &#123final&#125
+        -cards: List~Card~ #123;final#125;
         +Player()
         +addCard(card: Card) void
         +getCardWithHighestValue() Card
@@ -24,16 +24,16 @@ classDiagram
     }
 
     class CardDealer {
-        -deck: List~Card~ &#123final&#125
-        -player1: Player &#123final&#125
-        -player2: Player &#123final&#125
+        -deck: List~Card~ #123;final#125;
+        -player1: Player #123;final#125;
+        -player2: Player #123;final#125;
         +CardsDealer(deck: List~Card~, player1: Player, player2: Player )
         +dealCards(amount: int) void
     }
 
     class Card {
-        -colour: String &#123final&#125
-        -value: int &#123final&#125
+        -colour: String #123;final#125;
+        -value: int #123;final#125;
         +Card(colour: String, value: int)
     }
 

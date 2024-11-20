@@ -34,15 +34,15 @@ classDiagram
     }
 
     class Controller {
-        -layer1: Circle &#123FXML&#125
-        -layer2: Circle &#123FXML&#125
-        -layer3: Circle &#123FXML&#125
-        -layer4: Circle &#123FXML&#125
+        -layer1: Circle #123;FXML#125;
+        -layer2: Circle #123;FXML#125;
+        -layer3: Circle #123;FXML#125;
+        -layer4: Circle #123;FXML#125;
         -model: Model
         +initialize(location: URL, resources: ResourceBundle) void
-        +switchOn(actionEvent: ActionEvent) void &#123FXML&#125
-        +switchOff(actionEvent: ActionEvent) void &#123FXML&#125
-        +switchColor(actionEvent: ActionEvent) void &#123FXML&#125
+        +switchOn(actionEvent: ActionEvent) void #123;FXML#125;
+        +switchOff(actionEvent: ActionEvent) void #123;FXML#125;
+        +switchColor(actionEvent: ActionEvent) void #123;FXML#125;
     }
 
     class Initializable {

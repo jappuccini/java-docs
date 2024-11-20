@@ -17,8 +17,8 @@ classDiagram
     CreatureGame o-- Creature
 
     class CreatureGame {
-        -creature1: Creature &#123final&#125
-        -creature2: Creature &#123final&#125
+        -creature1: Creature #123;final#125;
+        -creature2: Creature #123;final#125;
         -numberOfRounds: int
         +Game(creature1: Creature, creature2: Creature)
         +simulateFight() void
@@ -27,8 +27,8 @@ classDiagram
     }
 
     class Creature {
-        -name: String &#123final&#125
-        -attackValue: int &#123final&#125
+        -name: String #123;final#125;
+        -attackValue: int #123;final#125;
         -hitpoints: int
         +Creature(name: String, attackValue: int, hitpoints: int)
         +attackCreature(creature: Creature) boolean

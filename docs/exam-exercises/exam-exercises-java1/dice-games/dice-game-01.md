@@ -24,7 +24,7 @@ classDiagram
     }
 
     class Player {
-        -name: String &#123final&#125
+        -name: String #123;final#125;
         -points: int
         +Player(name: String, points: int)
         +reducePoints(value: int) void
@@ -41,8 +41,8 @@ classDiagram
         SPEAR = Speer, 2
         AXE = Axt, 3
         CLUB = Keule, 1
-        -description: String &#123final&#125
-        -power: int &#123final&#125
+        -description: String #123;final#125;
+        -power: int #123;final#125;
     }
 ```
 
