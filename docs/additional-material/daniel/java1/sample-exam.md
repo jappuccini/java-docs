@@ -202,11 +202,11 @@ classDiagram
 ```mermaid
 stateDiagram-v2
     state "Ausgabe: Bitte PIN eingeben" as state1
-    state "Eingabe: Zeichenkette" as state2
-    state "Aktivität 'Zeichenkette in Zahlenfeld umwandeln' mit [Zeichenkette] ausführen" as state3
-    state "Aktivität 'Länge des Zahlenfeldes prüfen' ausführen" as state4
+    state "Eingabe: [Zeichenkette]" as state2
+    state "Ausführen: [Zeichenkette in Zahlenfeld umwandeln] mit [Zeichenkette]" as state3
+    state "Ausführen: [Länge des Zahlenfeldes prüfen]" as state4
     state "Ausgabe: Länge der PIN ist ungültig" as state5
-    state "Aktivität 'Zahlenwert des Zahlenfeldes prüfen' ausführen" as state6
+    state "Ausführen: [Zahlenwert des Zahlenfeldes prüfen]" as state6
     state "Ausgabe: Zahlenwert der PIN ist ungültig" as state7
     state "Ausgabe: PIN ist gültig" as state8
 
@@ -236,13 +236,13 @@ stateDiagram-v2
 
 ```mermaid
 stateDiagram-v2
-    state "Länge der Zeichenkette ermitteln" as state1
-    state "Länge des Zahlenfeldes = Länge der Zeichenkette" as state2
-    state "Zählvariable = 0" as state3
-    state "Aktuelles Zeichen der Zeichenkette ermitteln" as state4
-    state "Zahlenwert des aktuellen Zeichens ermitteln" as state5
-    state "Zahlenwert dem Zahlenfeld hinzufügen" as state6
-    state "Zählvariable inkrementieren" as state7
+    state "[Länge der Zeichenkette] ermitteln" as state1
+    state "[Länge des Zahlenfeldes] = [Länge der Zeichenkette]" as state2
+    state "[Zählvariable] = 0" as state3
+    state "[Aktuelles Zeichen der Zeichenkette] ermitteln" as state4
+    state "[Zahlenwert] von [Aktuelles Zeichen der Zeichenkette] ermitteln" as state5
+    state "[Zahlenwert] dem [Zahlenfeld] hinzufügen" as state6
+    state "[Zählvariable] inkrementieren" as state7
     state stateif <<choice>>
 
     state "Zeichenkette in Zahlenfeld umwandeln" as textToPin {
@@ -250,7 +250,7 @@ stateDiagram-v2
         state1 --> state2
         state2 --> state3
         state3 --> stateif
-        stateif --> state4: Zählvariable < Länge des Zahlenfeldes
+        stateif --> state4: [Zählvariable] < [Länge des Zahlenfeldes]
         stateif --> [*]: sonst
         state4 --> state5
         state5 --> state6
@@ -263,7 +263,7 @@ stateDiagram-v2
 
 ```mermaid
 stateDiagram-v2
-    state "Länge des Zahlenfeldes ermitteln" as state1
+    state "[Länge des Zahlenfeldes] ermitteln" as state1
     state "Rückgabe: true" as state2
     state "Rückgabe: false" as state3
 
@@ -274,7 +274,7 @@ stateDiagram-v2
         [*] --> state1
         state1 --> if1
         if1 --> state2: sonst
-        if1 --> state3: Länge des Zahlenfeldes < 4 oder > 8
+        if1 --> state3: [Länge des Zahlenfeldes] < 4 oder > 8
         state3 --> fork1
         state2 --> fork1
         fork1 --> [*]
@@ -285,11 +285,11 @@ stateDiagram-v2
 
 ```mermaid
 stateDiagram-v2
-    state "Länge des Zahlenfeldes ermitteln" as state1
-    state "Zahlenwert = 0" as state2
-    state "Zählvariable = 0" as state3
-    state "Zahlenwert = Zahlenwert + aktuelle Ziffer" as state4
-    state "Zählvariable inkrementieren" as state5
+    state "[Länge des Zahlenfeldes] ermitteln" as state1
+    state "[Zahlenwert] = 0" as state2
+    state "[Zählvariable] = 0" as state3
+    state "[Zahlenwert] = [Zahlenwert] + [Aktuelle Ziffer]" as state4
+    state "[Zählvariable] inkrementieren" as state5
     state "Rückgabe: false" as state6
     state "Rückgabe: true" as state7
 
@@ -302,11 +302,11 @@ stateDiagram-v2
         state1 --> state2
         state2 --> state3
         state3 --> if1
-        if1 --> state4: Zählvariable < Länge des Zahlenfeldes
+        if1 --> state4: [Zählvariable] < [Länge des Zahlenfeldes]
         state4 --> state5
         state5 --> if1
         if1 --> if2: sonst
-        if2 --> state6: Zahlenwert ungerade
+        if2 --> state6: [Zahlenwert] ungerade
         if2 --> state7: sonst
         state6 --> fork
         state7 --> fork
