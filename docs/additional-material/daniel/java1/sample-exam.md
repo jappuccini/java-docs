@@ -80,7 +80,7 @@ classDiagram
         -description: String #123;final#125;
     }
 
-    class ExamTask02 {
+    class ExamTask01 {
         +main(args: String[])$ void
     }
 ```
