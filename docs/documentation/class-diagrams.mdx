@@ -98,11 +98,11 @@ Abstrakte und finale Klassen werden durch die Stereotypen `abstract` bzw.
 
 ```mermaid
 classDiagram
-    Foo <|-- Bar
-    class Foo {
+    AbstractList~E~ <|-- MyIntegerList
+    class AbstractList~E~ {
         <<abstract>>
     }
-    class Bar {
+    class MyIntegerList {
         <<final>>
     }
 ```
@@ -195,7 +195,7 @@ Klasse dargestellt.
 classDiagram
     Person --o Team
     class Team {
-        +members List~Person~
+        +members: List~Person~
     }
 ```
 
@@ -209,7 +209,7 @@ dargestellt.
 classDiagram
     OrderItem --* Order
     class Order {
-        +items List~OrderItem~
+        +items: List~OrderItem~
     }
 ```
 

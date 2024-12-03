@@ -66,11 +66,11 @@ eine einfache Möglichkeit zur Implementierung der Methode `boolean hashCode()`.
 ## Die Methode _toString()_
 
 Die Methode `String toString()` liefert eine eindeutige Kennung des Objektes in
-der Form _[Vollständiger Klassenname]_@_[Adresse des Objektes im
-Hauptspeicher in hexadezimaler Notation]_ zurück. Die Methode sollte so
-überschrieben werden, dass alle relevanten Attribute des Objektes als
-Zeichenkette zurückgegeben werden. In der Regel geschieht dies in der Form
-_[Klassenname] [[Attribut]=[Attributswert], ...]_.
+der Form _[Vollständiger Klassenname]_@_[Adresse des Objektes im Hauptspeicher
+in hexadezimaler Notation]_ zurück. Die Methode sollte so überschrieben werden,
+dass alle relevanten Attribute des Objektes als Zeichenkette zurückgegeben
+werden. In der Regel geschieht dies in der Form _[Klassenname]
+[[Attribut]=[Attributswert], ...]_.
 
 ```java title="Computer.java" showLineNumbers
 public class Computer {
