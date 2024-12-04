@@ -45,9 +45,9 @@ stateDiagram-v2
     state "[Zählvariable 2] = [Zählvariable 1] + 1" as state3
     state "[Index] = [Zählvariable 2]" as state4
     state "[Zählvariable 2] inkrementieren" as state5
-    state "[Temporäre Variable] = [Liste][[Index]]" as state6
-    state "[Liste][[Index]] = [Liste][[Zählvariable 1]]" as state7
-    state "[Liste][[Zählvariable 1]] = [Temporäre Variable]" as state8
+    state "[Temporäre Variable] = Element [Index] von [Liste]" as state6
+    state "Element [Index] von [Liste] = Element [Zählvariable 1] von [Liste]" as state7
+    state "Element [Zählvariable 1] von [Liste] = [Temporäre Variable]" as state8
     state "[Zählvariable 1] inkrementieren" as state9
 
     state if1 <<choice>>
@@ -64,7 +64,7 @@ stateDiagram-v2
         state3 --> if2
         if2 --> if3: [Zählvariable 2] < [Länge der Liste]
         if2 --> state6: sonst
-        if3 --> state4: [Liste][[Zählvariable 2]] < [Liste][[Index]]
+        if3 --> state4: Element [Zählvariable 2] von [Liste] < Element [Index] von [Liste]
         if3 --> fork1: sonst
         state4 --> fork1
         fork1 --> state5
