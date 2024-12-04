@@ -42,11 +42,11 @@ stateDiagram-v2
     state "[Zählvariable A] = 1" as state2
     state "[Zähler] inkrementieren" as state3
     state "[Zählvariable B] = [Zählvariable A]" as state4
-    state "[Temporäre Variable] = [Feld][[Zählvariable B]]" as state5
-    state "[Feld][[Zählvariable B]] = [Temporäre Variable]" as state6
+    state "[Temporäre Variable] = Element [Zählvariable B] von [Feld]" as state5
+    state "Element [Zählvariable B] von [Feld] = [Temporäre Variable]" as state6
     state "Ausführen: [Feld ausgeben]" as state7
     state "[Zählvariable A] inkrementieren" as state8
-    state "[Feld][[Zählvariable B]] = [Feld][[Zählvariable B - 1]]" as state9
+    state "Element [Zählvariable B] von [Feld] = Element [Zählvariable B - 1] von [Feld]" as state9
     state "[Zählvariable B] dekrementieren" as state10
 
     state if1 <<choice>>
@@ -62,7 +62,7 @@ stateDiagram-v2
         state4 --> state5
         state5 --> if2
         if2 --> state6: sonst
-        if2 --> state9: [Zählvariable B] > 0 und [Feld][[Zählvariable B - 1]] > [Temporäre Variable]
+        if2 --> state9: [Zählvariable B] > 0 und Element [Zählvariable B - 1] von [Feld] > [Temporäre Variable]
         state6 --> state7
         state7 --> state8
         state8 --> if1
@@ -77,7 +77,7 @@ stateDiagram-v2
 stateDiagram-v2
     state "Ausgabe: Durchlauf [Zähler]" as state1
     state "[Zählvariable] = 0" as state2
-    state "Ausgabe: [Feld][[Zählvariable]]" as state3
+    state "Ausgabe: Element [Zählvariable] von [Feld]" as state3
     state "[Zählvariable] inkrementieren" as state4
 
     state if1 <<choice>>
