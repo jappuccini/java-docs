@@ -11,7 +11,7 @@ Unterklassen unter anderem die Methoden `boolean equals(object: Object)`,
 `int hashCode()` und `String toString()`. Diese drei Methoden sollte jede
 Unterklasse sinnvoll überschreiben.
 
-## Die Methode _equals(object: Object)_
+## Die Methode _boolean equals(object: Object)_
 
 Die Methode `boolean equals(object: Object)` prüft zwei Objekte auf Gleichheit.
 Zwei Objekte gelten dabei in der Regel als gleich, wenn all ihre Attribute
@@ -39,7 +39,7 @@ public class Computer {
 }
 ```
 
-## Die Methode _hashCode()_
+## Die Methode _int hashCode()_
 
 Die Methode `int hashCode()` liefert den Hashcode des aktuellen Objektes zurück.
 Die Methode sollte so überschrieben werden, dass gleiche Objekte den gleichen
@@ -63,7 +63,7 @@ eine einfache Möglichkeit zur Implementierung der Methode `boolean hashCode()`.
 
 :::
 
-## Die Methode _toString()_
+## Die Methode _String toString()_
 
 Die Methode `String toString()` liefert eine eindeutige Kennung des Objektes in
 der Form _[Vollständiger Klassenname]_@_[Adresse des Objektes im Hauptspeicher
