@@ -141,12 +141,12 @@ public class Class { // 0,5
   } // 1
 
   public Lecture getLectureWithMostCreditPoints() { // 0,5
-    Lecture lecture = lectures.get(0); // 0,5
-    int creditPoints = lecture.creditPoints(); // 0,5
-    for (int i = 0; i < lectures.size(); i++) { // 1
-      if (lectures.get(i).creditPoints() > creditPoints) { // 1
-        lecture = lectures.get(i); // 0,5
-        creditPoints = lecture.creditPoints(); // 0,5
+    Lecture lecture = null; // 0,5
+    int mostCreditPoints = 0; // 0,5
+    for (Lecture l : lectures) { // 1
+      if (l.creditPoints() > mostCreditPoints) { // 1
+        lecture = l; // 0,5
+        mostCreditPoints = l.creditPoints(); // 0,5
       }
     }
     return lecture; // 0,5
@@ -165,14 +165,15 @@ public class ExamTask01 { // 0,5
 
   public static void main(String[] args) { // 0,5
 
-    Class class1 = new Class("WWIBE122", CourseOfStudies.WI); // 1
-    class1.addStudent(new Student("8271625", "Hans Maier")); // 1
-    class1.addStudent(new Student("9102934", "Peter Müller")); // 1
-    class1.addLecture(new Lecture("Mathe", 5)); // 1
-    class1.addLecture(new Lecture("Programmierung", 10)); // 1
+    Class wwibe224 = new Class("WWIBE224", CourseOfStudies.WI); // 1
+    wwibe224.addStudent(new Student("8271625", "Hans Maier")); // 1
+    wwibe224.addStudent(new Student("9102934", "Peter Müller")); // 1
+    wwibe224.addLecture(new Lecture("Mathe", 5)); // 1
+    wwibe224.addLecture(new Lecture("Programmierung", 10)); // 1
 
-    System.out.println(class1.toString()); // 1
-    System.out.println(class1.getLectureWithMostCreditPoints()); // 1
+    System.out.println(wwibe224); // 1
+    System.out.println("Vorlesung mit den meisten ECTS-Punkten: "
+     + wwibe224.getLectureWithMostCreditPoints()); // 1
 
   } // 7,5
 
@@ -330,7 +331,7 @@ PIN ist gültig
 ```java title="ExamTask02.java" showLineNumbers
 public class ExamTask02 { // 0,5
 
-  private static int[] pin; // 1
+  private static int[] pin; // 0,5
 
   public static void main(String[] args) { // 0,5
     @SuppressWarnings("resource")
@@ -350,11 +351,11 @@ public class ExamTask02 { // 0,5
 
   private static boolean checkPinLength() { // 0,5
     int length = pin.length; // 0,5
-    if (length < 4 || length > 8) { // 1,5
+    if (length < 4 || length > 8) { // 1
       return false; // 0,5
     }
     return true; // 0,5
-  } // 3,5
+  } // 3
 
   private static boolean checkPinValue() { // 0,5
     int length = pin.length; // 0,5
@@ -373,23 +374,23 @@ public class ExamTask02 { // 0,5
 
   private static void textToPin(String text) { // 0,5
     int length = text.length(); // 0,5
-    pin = new int[length]; // 0,5
+    pin = new int[length]; // 1
     int i = 0; // 0,5
     while (i < length) { // 1
-      char c = text.charAt(i); // 0,5
+      char c = text.charAt(i); // 1
       pin[i] = Integer.valueOf(c); // 1
       i++; // 0,5
     }
-  } // 5
+  } // 6
 
 } // 24
 ```
 
-## Aufgabe 3 (27 Punkte)
+## Aufgabe 3 (29 Punkte)
 
 - Erstelle die Klasse `Player` (9 Punkte) anhand des abgebildeten
   Klassendiagramms
-- Erstelle die ausführbare Klasse `ExamTask03` wie folgt (18 Punkte):
+- Erstelle die ausführbare Klasse `ExamTask03` wie folgt (20 Punkte):
   - Zu Beginn des Spiels sollen die Spieler ihre Namen eingeben können
   - Zu Beginn einer jeder Runde soll der aktuelle Punktestand ausgegeben werden
   - Anschließend sollen beide Spieler ihre Würfel werfen
@@ -519,29 +520,29 @@ public class ExamTask03 { // 0,5
     while (player1.getHealthPoints() > 0 && player2.getHealthPoints() > 0) { // 1
       System.out.println(player1.name() + " hat " + player1.getHealthPoints() + " Lebenspunkte"); // 1
       System.out.println(player2.name() + " hat " + player2.getHealthPoints() + " Lebenspunkte"); // 1
-      int value1 = player1.rollTheDice(); // 0,5
+      int value1 = player1.rollTheDice(); // 1
       System.out.println(player1.name() + " würfelt eine " + value1); // 0,5
-      int value2 = player2.rollTheDice(); // 0,5
+      int value2 = player2.rollTheDice(); // 1
       System.out.println(player2.name() + " würfelt eine " + value2); // 0,5
-      if (value1 > value2) { // 0,5
+      if (value1 > value2) { // 1
         player2.reduceHealthPoints(); // 0,5
-        System.out.println(player2.name() + " verliert einen Punkt");// 0,5
-      } else if (value2 > value1) { // 0,5
+        System.out.println(player2.name() + " verliert einen Punkt"); // 0,5
+      } else if (value2 > value1) { // 1
         player1.reduceHealthPoints(); // 0,5
-        System.out.println(player1.name() + " verliert einen Punkt");// 0,5
+        System.out.println(player1.name() + " verliert einen Punkt"); // 0,5
       }
       System.out.println();
     }
 
-    if (player1.getHealthPoints() > player2.getHealthPoints()) {// 1
-      System.out.println(player1.name() + " gewinnt");// 0,5
-    } else {// 0,5
-      System.out.println(player2.name() + " gewinnt");// 0,5
+    if (player1.getHealthPoints() > player2.getHealthPoints()) { // 1
+      System.out.println(player1.name() + " gewinnt"); // 0,5
+    } else { // 0,5
+      System.out.println(player2.name() + " gewinnt"); // 0,5
     }
 
-  } // 16
+  } // 18
 
-} // 18
+} // 20
 ```
 
 ## Aufgabe 4 (23 Punkte)
@@ -639,12 +640,11 @@ public class StuffedCookie extends Cookie { // 1
 
   public List<Ingredient> getIngredients() { // 0,5
     List<Ingredient> ingredients = super.getIngredients(); // 1
-    for (int i = 0; i < jam.ingredients().size(); i++) { // 1
-      Ingredient ingredient = jam.ingredients().get(i); // 1
-      if (ingredients.contains(ingredient)) { // 0,5
+    for (Ingredient i : jam.ingredients()) { // 1,5
+      if (ingredients.contains(i)) { // 1
         continue; // 0,5
       }
-      ingredients.add(ingredient); // 0,5
+      ingredients.add(i); // 0,5
     }
     return ingredients; // 0,5
   } // 5,5
@@ -666,14 +666,14 @@ public class CookieJar { // 0,5
   } // 1
 
   public StuffedCookie getStuffedCookie() { // 0,5
-    for (int i = 0; i < cookies.size(); i++) { // 1
-      Cookie cookie = cookies.get(i); // 0,5
-      if (cookie instanceof StuffedCookie s) { // 1,5
-        cookies.remove(s); // 0,5
-        return s; // 0,5
+    StuffedCookie stuffedCookie; // 0,5
+    for (Cookie c : cookies) { // 1
+      if (c instanceof StuffedCookie s) { // 1
+        cookies.remove(s); // 1
+        stuffedCookie = s; // 0,5
       }
     }
-    return null; // 0,5
+    return stuffedCookie; // 0,5
   } // 5
 
 } // 8
@@ -682,17 +682,17 @@ public class CookieJar { // 0,5
 ```java title="IngredientsReader.java" showLineNumbers
 public class IngredientsReader { // 0,5
 
-  public static List<Ingredient> readIngredients(File file) throws FileNotFoundException { // 1 +0,5
+  public static List<Ingredient> readIngredients(File file) throws FileNotFoundException { // 0,5
     Scanner sc = new Scanner(file); // 1
-
     List<Ingredient> ingredients = new ArrayList<>(); // 0,5
+
     while (sc.hasNextLine()) { // 1
       String line = sc.nextLine(); // 0,5
       Ingredient i = new Ingredient(line); // 0,5
       ingredients.add(i); // 0,5
     }
 
-    sc.close(); // +0,5
+    sc.close(); // 0,5
     return ingredients; // 0,5
   } // 5,5
 
