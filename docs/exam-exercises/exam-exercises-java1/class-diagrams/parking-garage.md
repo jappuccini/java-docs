@@ -22,6 +22,7 @@ classDiagram
         -heightInM: double #123;final#125;
         -isForBusesOnly: boolean #123;final#125;
         +ParkingSpot(lengthInM: double, heightInM: double, isForBusesOnly: boolean)
+        +setVehicle(vehicle: Vehicle) void
     }
 
     class Vehicle {
