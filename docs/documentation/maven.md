@@ -115,7 +115,7 @@ wesentlichen Phasen des Default Lebenszyklus:
   <TabItem value="a" label="Prettier" default>
 
 [Prettier](https://prettier.io/) ist ein weit verbreiterter
-Quellcode-Formatierung, der eine einheitliche Quellcode-Formatierung fördert.
+Quellcode-Formatierer, der eine einheitliche Quellcode-Formatierung fördert.
 Durch die Einbindung des Goals `write` in die Lebenszyklus-Phase `compile` wird
 sichergestellt, dass der Quellcode bei jedem Kompiliervorgang automatisch
 formattiert wird.
@@ -164,8 +164,8 @@ Berichtsseite.
   </TabItem>
   <TabItem value="c" label="Lombok">
 
-[Lombok](https://projectlombok.org/) ist eine beliebte Bibliothek zur
-Generierung von repetitiven Methoden (siehe auch [Lombok](lombok)).
+Lombok ist eine beliebte Bibliothek zur Generierung von repetitiven Methoden
+(siehe auch [Lombok](lombok)).
 
 ```xml title="pom.xml (Auszug)" showLineNumbers
 ...
@@ -181,11 +181,10 @@ Generierung von repetitiven Methoden (siehe auch [Lombok](lombok)).
   </TabItem>
   <TabItem value="d" label="SLF4J und Log4J">
 
-[Simple Logging Facade for Java (SLF4J)](https://www.slf4j.org/) ist eine
-beliebte Java-Protokollierungs-API, die es ermöglicht, den Quellcode um
-Protokolle zu erweitern, die anschließend an ein gewünschtes Protokoll-Framework
-(wie z.B. [Log4J](https://logging.apache.org/log4j/2.x/index.html))
-weitergeleitet werden (siehe auch
+Simple Logging Facade for Java (SLF4J) ist eine beliebte
+Java-Protokollierungs-API, die es ermöglicht, den Quellcode um Protokolle zu
+erweitern, die anschließend an ein gewünschtes Protokoll-Framework (wie z.B.
+Log4J) weitergeleitet werden (siehe auch
 [Simple Logging Facade for Java (SLF4J)](slf4j)).
 
 ```xml title="pom.xml (Auszug)" showLineNumbers
@@ -219,6 +218,25 @@ JUnit 5 ist ein weit verbreitetes Framework zur Erstellung von Komponententests
   <artifactId>junit-jupiter-api</artifactId>
   <version>5.11.3</version>
   <scope>test</scope>
+</dependency>
+...
+```
+
+  </TabItem>
+  <TabItem value="f" label="Mockito">
+
+Mockito ist ein beliebtes Framework für das Erstellen von Mock-Objekten in Java,
+das hauptsächlich für das Testen von Anwendungen verwendet wird (siehe auch
+[Mockito](mockito)).
+
+```xml title="pom.xml (Auszug)" showLineNumbers
+...
+<!-- Mockito -->
+<dependency>
+    <groupId>org.mockito</groupId>
+    <artifactId>mockito-core</artifactId>
+    <version>5.14.2</version>
+    <scope>test</scope>
 </dependency>
 ...
 ```
