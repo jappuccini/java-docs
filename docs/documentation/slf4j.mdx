@@ -1,0 +1,102 @@
+---
+title: Simple Logging Facade for Java (SLF4J)
+description: ''
+sidebar_position: 257
+tags: [slf4j]
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+[Simple Logging Facade for Java (SLF4J)](https://www.slf4j.org/) stellt eine
+externe Java-Bibliothek dar, die das Protokollieren in Java-Anwendungen
+ermöglicht. Protokollierung (Logging) ist ein wesentlicher Bestandteil der
+Softwareentwicklung und -wartung und bietet zahlreiche Vorteile wie
+Fehlerbehebung, Überwachung, Audit, Compliance, Debugging, Leistungsanalyse
+sowie Benutzerunterstützung. Durch die effektive Nutzung von Protokollierung
+kann die Zuverlässigkeit, Sicherheit und Leistung einer Anwendung erheblich
+verbessert werden.
+
+## Protokollierungs-Level
+
+SLF4J definiert verschiedene Protokollierungs-Level, die die Schwere oder
+Wichtigkeit der zu protokollierenden Nachrichten angeben.
+
+| Level | Beschreibung                                                                                                             |
+| ----- | ------------------------------------------------------------------------------------------------------------------------ |
+| TRACE | Sehr detaillierte Informationen für die Fehlersuche (z.B. Methodenname)                                                  |
+| DEBUG | Detaillierte Informationen für den Entwickler (z.B. Variablenwert)                                                       |
+| INFO  | Allgemeine Informationsmeldungen, die den normalen Betrieb der Anwendung beschreiben                                     |
+| WARN  | Warnungen, die auf potenzielle Probleme hinweisen, die jedoch nicht sofort behoben werden müssen                         |
+| ERROR | Fehler, die den normalen Betrieb der Anwendung beeinträchtigen und ggbfs. den sofortigen Abbruch der Anwendung erfordern |
+
+## Protokollierungs-Implementierungen
+
+Die Art der Speicherung von Protokollen in einer Anwendung, die SLF4J verwendet,
+hängt von der konkreten Implementierung ab. SLF4J selbst ist dabei nur eine
+Fassade und benötigt eine konkrete Implementierung, um die tatsächliche
+Protokollierung durchzuführen. Eine der am weitesten verbreiteten
+Protokollierungs-Bibliotheken für Java ist
+[Log4J](https://logging.apache.org/log4j/2.x/index.html), welches die Ausgabe
+von Protokollen auf der Konsole sowie in Protokoll-Dateien ermöglicht.
+
+## Beispiel
+
+Für die Klasse `MainClass` wird ein Logger initialisiert, mit dessen Hilfe
+verschiedene Nachrichten in der Datei _logs/app.log_ protokolliert werden.
+
+<Tabs>
+  <TabItem value="a" label="Startklasse" default>
+
+```java title="Names.java" showLineNumbers
+public class Names {
+
+  private final static Logger LOGGER = LoggerFactory.getLogger(Names.class);
+
+  public static List<String> getNames(File file) throws IOException {
+    List<String> names = new ArrayList<>();
+    LOGGER.info("Name list has been initialized successfully");
+
+    if (!file.exists()) {
+      LOGGER.error("File {} does not exist", file);
+      throw new IOException();
+    }
+
+    Scanner scanner = new Scanner(file);
+    LOGGER.info("File Scanner has been initialized successfully");
+
+    while(scanner.hasNextLine()) {
+      String name = scanner.nextLine();
+      LOGGER.debug(name);
+      names.add(name);
+    }
+    LOGGER.info("{} names have been read", names.size());
+
+    scanner.close();
+    LOGGER.info("File {} has been closed successfully", file);
+
+    return names;
+  }
+
+}
+```
+
+  </TabItem>
+  <TabItem value="b" label="Log4J-Konfigurationsdatei">
+
+```console title="log4j.properties" showLineNumbers
+log4j.rootLogger=debug, file, console
+
+log4j.appender.file=org.apache.log4j.FileAppender
+log4j.appender.file.file=logs/app.log
+log4j.appender.file.layout=org.apache.log4j.PatternLayout
+log4j.appender.file.layout.ConversionPattern=%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n
+
+log4j.appender.console=org.apache.log4j.ConsoleAppender
+log4j.appender.console.layout=org.apache.log4j.PatternLayout
+log4j.appender.console.layout.ConversionPattern=%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n
+```
+
+    </TabItem>
+
+</Tabs>

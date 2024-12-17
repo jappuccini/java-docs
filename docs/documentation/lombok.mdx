@@ -8,12 +8,30 @@ tags: [lombok]
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-[Lombok](https://projectlombok.org/) stellt eine Java-Bibliothek dar, die das
-Erstellen von Boilerplate-Code überflüssig macht. Repetitive Methoden wie
-Konstruktoren, Getter, Setter und die Objekt-Methoden müssen nicht manuell
-implementiwert werden, sondern werden beim Kompilieren generiert. Durch
-entsprechende Annotationen kann dabei gesteuert werden, welche Methoden wie
+[Lombok](https://projectlombok.org/) stellt eine externe Java-Bibliothek dar,
+die das Erstellen von Boilerplate-Code überflüssig macht. Repetitive Methoden
+wie Konstruktoren, Getter, Setter und die Objekt-Methoden müssen nicht manuell
+implementiert werden, sondern werden beim Kompilieren generiert.
+
+## Annotationen
+
+Durch entsprechende Annotationen kann gesteuert werden, welche Methoden wie
 generiert werden sollen.
+
+| Annotation                 | Beschreibung                                                                                       |
+| -------------------------- | -------------------------------------------------------------------------------------------------- |
+| `@RequiredArgsConstructor` | Generiert einen Konstruktor mit Parametern zu allen unveränderlichen Attributen                    |
+| `@AllArgsConstructor`      | Generiert einen Konstruktor mit Parametern zu allen Attributen                                     |
+| `@Getter`                  | Generiert Get-Methoden zu allen Attributen                                                         |
+| `@Setter`                  | Generiert Set-Methoden zu allen veränderlichen Attributen                                          |
+| `@EqualsAndHashCode`       | Generiert Implementierungen für die Methoden `boolean equals(object: Object)` und `int hashCode()` |
+| `@ToString`                | Generiert eine Implementierung für die Methode `String toString()`                                 |
+| `@Data`                    | `@RequiredArgsConstructor` + `@Getter` + `@Setter` + `@EqualsAndHashCode` + `@ToString`            |
+
+## Beispiel
+
+Für die Klasse `Student` werden mit Hilfe von Lombok-Annotationen Konstruktoren,
+Setter und Getter sowie die Object-Methoden generiert.
 
 <Tabs>
   <TabItem value="a" label="Fachklasse" default>
