@@ -1,0 +1,167 @@
+---
+title: Mockito
+description: ''
+sidebar_position: 325
+tags: [mockito]
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+[Mockito](https://site.mockito.org/) ist ein leistungsfähiges und einfach zu
+verwendendes Framework für das Erstellen von Mock-Objekten in Java. Mock-Objekte
+simulieren das Verhalten realer Komponenten und werden oft in Tests anstelle der
+realen Komponenten verwendet. Durch den Einsatz von Mock-Objekten werden die
+Abhängigkeiten des SUT (System under Test) minimiert und so das Testen von
+Anwendungen erheblich vereinfacht. Man spricht in diesem Zusammenhang auch von
+der sogenannten Test-Isolierung. Gründe für den Einsatz von Mock-Objekten können
+komplexe Abhängigkeiten, ungewünschte Seiteneffekte oder hohe Laufzeiten der
+realen Komponenten sein.
+
+## Arten von Mock-Objekten
+
+Man unterscheidet zwischen verschiedenen Arten von Mock-Objekten.
+
+- Ein _Stub_ ist ein Objekt, welches beim Aufruf einer Methode unabhängig der
+  Eingabe immer den selben festgelegten Wert zurückgibt
+- Ein _Mock_ ist ein Objekt, welches im Gegensatz zum Stub beim Aufruf einer
+  Methode abhängig von der Eingabe festgelegte Werte zurückgibt
+- Ein _Spy_ ist ein Objekt, welches Aufrufe und übergebene Werte protokolliert
+  und abfragbar macht
+
+## Simulieren von Objekten
+
+Mockito stellt für das Erzeugen von Mock-Objekten zum Einen die statische
+Methode `T mock(reified: T...)` der Klasse `Mockito` und zum Anderen die
+Annotation `@Mock` sowie die statische Methode
+`AutoCloseable openMocks(testClass: Object)` der Klasse `MockitoAnnotations` zur
+Verfügung. In beiden Fällen wird ein entsprechendes Objekt der angegebenen
+Klasse erstellt, allerdings ohne jegliche Methodenimplementierungen. Das
+Verhalten einzelner Methoden kann anschließend über die statische Methode
+`OngoingStubbing<T> when(methodCall: T)` der Klasse `Mockito` sowie über die
+Methode `OngoingStubbing<T> thenReturn(value: T)` bzw.
+`OngoingStubbing<T> thenThrow(throwables: Throwable...)` der Klasse
+`OngoingStubbing<T>` festgelegt werden.
+
+## Umhüllen von Objekten
+
+Für das Erzeugen von Spy-Objekten stellt Mockito zum Einen die statische Methode
+`T spy(object: T)` der Klasse `Mockito` und zum Anderen die Annotation `@Spy`
+sowie die statische Methode `AutoCloseable openMocks(testClass: Object)` der
+Klasse `MockitoAnnotations` zur Verfügung. Durch das so umhüllte Objekt kann das
+Verhalten einzelner Methoden anschließend über die statische Methode
+`Stubber doReturn(toBeReturned: Object)` bzw.
+`Stubber doThrow(toBeThrown: Throwable...)` der Klasse `Mockito` sowie über die
+Methode `T when(mock: T)` der Klasse `Stubber` überschrieben werden.
+
+## Prüfen von Methodenaufrufen
+
+Für das Prüfen, ob, wie oft und in welcher Reihenfolge eine Methode eines
+Mock-Objektes aufgerufen wurde, stellt Mockito die statische Methode
+`T verify(mock: T, mode: VerificationMode)` der Klasse `Mockito` zur Verfügung.
+Zur Angabe des Prüfungsmodus können die statischen Methoden
+`VerificationMode times(wantedNumberOfInvocations: int)`,
+`VerificationMode atLeast(minNumberOfInvocations: int)`,
+`VerificationMode atMost(maxNumberOfInvocations: int)` und
+`VerificationMode never()` der Klasse `Mockito` verwendet werden.
+
+## Argument Matcher
+
+Die Klasse `ArgumentMatchers` stellt eine Reihe statischer Methoden wie z.B.
+`String anyString()` und `List<T> anyList()` zur Verfügung, die ein flexibles
+Simulieren von Objekten und Prüfen von Methodenaufrufen ermöglichen.
+
+## Beispiel
+
+<Tabs>
+  <TabItem value="a" label="Zu testende Klasse" default>
+
+```java title="StudentClass.java" showLineNumbers
+@Data
+public class StudentClass {
+
+  private List<Student> students;
+
+  public void addStudent(Student student) {
+    students.add(student);
+  }
+
+  public Optional<Student> getStudentWithBestAverageGrade() {
+    Student studentWithBestAverageGrade = null;
+    double bestAverageGrade = Double.MAX_VALUE;
+    for (Student s : students) {
+      if (s.getAverageGrade() < bestAverageGrade) {
+        studentWithBestAverageGrade = s;
+        bestAverageGrade = s.getAverageGrade();
+      }
+    }
+    return Optional.ofNullable(studentWithBestAverageGrade);
+  }
+
+}
+```
+
+  </TabItem>
+  <TabItem value="b" label="Zu simulierende Klasse">
+
+```java title="Student.java" showLineNumbers
+@Data
+public class Student {
+
+  private final int id;
+  private final String name;
+  private final List<Double> grades;
+
+  public void addGrade(double grade) {
+    grades.add(grade);
+  }
+
+  public double getAverageGrade() {
+    double total = 0;
+    for (double grade : grades) {
+      total += grade;
+    }
+    return total / grades.size();
+  }
+
+}
+```
+
+  </TabItem>
+  <TabItem value="c" label="Testklasse">
+
+```java title="StudentClassTest.java" showLineNumbers
+public class StudentClassTest {
+
+  @Mock
+  private Student studentMock;
+  private Student studentSpy;
+  private StudentClass studentClass;
+
+  @BeforeEach
+  void setUp() {
+    MockitoAnnotations.openMocks(this);
+
+    studentSpy = spy(new Student(1, "Hans Maier", new ArrayList<>()));
+
+    studentClass = new StudentClass(new ArrayList<>());
+    studentClass.addStudent(studentMock);
+    studentClass.addStudent(studentSpy);
+  }
+
+  @Test
+  void testGetStudentWithBestAverageGrade() {
+    when(studentMock.getAverageGrade()).thenReturn(2.2);
+    doReturn(1.5).when(studentSpy).getAverageGrade();
+
+    assertEquals(Optional.of(studentSpy), studentClass.getStudentWithBestAverageGrade());
+
+    verify(studentMock, atLeast(1)).getAverageGrade();
+    verify(studentSpy, atLeast(1)).getAverageGrade();
+  }
+
+}
+```
+
+  </TabItem>
+</Tabs>
