@@ -41,7 +41,7 @@ classDiagram
         -it: Book
         -aGameOfThrones: Book
         -aClashOfKings: Book
-        +setUp void
+        +setUp() void
         +testAddAuthor() void
         +testAddBook() void
         +testGetMostDiligentAuthor1() void

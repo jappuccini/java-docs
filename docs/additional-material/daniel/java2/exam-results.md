@@ -8,9 +8,11 @@ tags: []
 import Tabs from '@theme/Tabs'; import TabItem from '@theme/TabItem';
 
 <Tabs>
-  <TabItem value="wwibe23" label="Klausur Q3 2024 (WWIBE23)" default>
+  <TabItem value="wwibe23" label="Klausur Q3 2024" default>
 
+- Kurse: WWIBE123 und WWIBE223
 - Punkteschnitt: 36 von 50
+- Notenschnitt: 2,6
 - Durchfallquote: 22%
 
 ```mermaid
@@ -22,9 +24,11 @@ xychart-beta
 ```
 
   </TabItem>
-  <TabItem value="wwibe22" label="Klausur Q2 2023 (WWIBE22)">
+  <TabItem value="wwibe22" label="Klausur Q2 2023">
 
+- Kurse: WWIBE122 und WWIBE222
 - Punkteschnitt: 29 von 50
+- Notenschnitt: 3,3
 - Durchfallquote: 38%
 
 ```mermaid
@@ -36,9 +40,11 @@ xychart-beta
 ```
 
   </TabItem>
-  <TabItem value="wwibe21" label="Klausur Q3 2022 (WWIBE21)">
+  <TabItem value="wwibe21" label="Klausur Q3 2022">
 
+- Kurse: WWIBE121 und WWIBE221
 - Punkteschnitt: 26 von 50
+- Notenschnitt: 3,6
 - Durchfallquote: 41%
 
 ```mermaid
