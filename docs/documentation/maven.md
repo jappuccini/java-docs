@@ -242,6 +242,29 @@ das hauptsächlich für das Testen von Anwendungen verwendet wird (siehe auch
 ```
 
   </TabItem>
+  <TabItem value="g" label="JavaFX und Java FXML">
+
+JavaFX stellt (vor allem in Verbindung mit Java FXML) ein State-of-the-Art
+Framework für das Erstellen von GUIs in Java dar (siehe auch [JavaFX](javafx)).
+
+```xml title="pom.xml (Auszug)" showLineNumbers
+...
+<!-- JavaFX -->
+<dependency>
+    <groupId>org.openjfx</groupId>
+    <artifactId>javafx-controls</artifactId>
+    <version>23.0.1</version>
+</dependency>
+<!-- Java FXML -->
+<dependency>
+    <groupId>org.openjfx</groupId>
+    <artifactId>javafx-fxml</artifactId>
+    <version>23.0.1</version>
+</dependency>
+...
+```
+
+  </TabItem>
 </Tabs>
 
 :::danger Hinweis

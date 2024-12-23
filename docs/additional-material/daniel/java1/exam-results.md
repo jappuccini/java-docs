@@ -8,9 +8,27 @@ tags: []
 import Tabs from '@theme/Tabs'; import TabItem from '@theme/TabItem';
 
 <Tabs>
-  <TabItem value="wwibe23" label="Klausur Q1 2024 (WWIBE23)" default>
+  <TabItem value="wwibe224" label="Klausur Q4 2024" default>
 
+- Kurs: WWIBE224
+- Punkteschnitt: 72 von 100
+- Notenschnitt: 2,6
+- Durchfallquote: 19%
+
+```mermaid
+xychart-beta
+    title "Verteilung"
+    x-axis "Punkte" ["80-100", "60-79", "40-59", "20-39", "0-19"]
+    y-axis "Studierende (%)" 0 --> 50
+    bar [39, 31, 22, 8]
+```
+
+  </TabItem>
+  <TabItem value="wwibe123" label="Klausur Q1 2024">
+
+- Kurs: WWIBE123
 - Punkteschnitt: 65 von 100
+- Notenschnitt: 3,0
 - Durchfallquote: 22%
 
 ```mermaid
@@ -22,9 +40,11 @@ xychart-beta
 ```
 
   </TabItem>
-  <TabItem value="wwibe22" label="Klausur Q4 2024 (WWIBE22)">
+  <TabItem value="wwibe122" label="Klausur Q4 2022">
 
+- Kurs: WWIBE122
 - Punkteschnitt: 62 von 100
+- Notenschnitt: 3,1
 - Durchfallquote: 30%
 
 ```mermaid
@@ -36,9 +56,11 @@ xychart-beta
 ```
 
   </TabItem>
-  <TabItem value="wwibe21" label="Klausur Q1 2022 (WWIBE21)">
+  <TabItem value="wwibe121" label="Klausur Q1 2022">
 
+- Kurs: WWIBE121
 - Punkteschnitt: 63 von 100
+- Notenschnitt: 3,1
 - Durchfallquote: 28%
 
 ```mermaid
