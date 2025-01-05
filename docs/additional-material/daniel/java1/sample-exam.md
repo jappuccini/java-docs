@@ -12,8 +12,6 @@ tags: []
 - Pakete und Klassenimporte müssen nicht angegeben werden
 - Es kann davon ausgegangen werden, dass sämtliche Klassen entsprechende
   Implementierungen der Object-Methoden besitzen
-- Der Stereotyp `enumeration` impliziert, dass die Aufzählung einen passenden
-  Konstruktor sowie gegebenenfalls passende Getter für alle Attribute besitzt
 - So nicht anders angegeben sollen Konstruktoren, Setter, Getter sowie die
   Object-Methoden wie in der Vorlesung gezeigt implementiert werden
 - Die Konsolenausgaben-Methoden der Klasse `PrintStream` dürfen sinnvoll gekürzt
@@ -154,7 +152,7 @@ public class Class { // 0,5
 
   public String toString() { // 0,5
     return "Class [description=" + description + ", courseOfStudies=" + courseOfStudies.description()
-      + ", lectures=" + lectures + ", students=" + students + "]"; // 1,5
+        + ", lectures=" + lectures + ", students=" + students + "]"; // 1,5
   } // 2
 
 }
@@ -173,7 +171,7 @@ public class ExamTask01 { // 0,5
 
     System.out.println(wwibe224); // 1
     System.out.println("Vorlesung mit den meisten ECTS-Punkten: "
-     + wwibe224.getLectureWithMostCreditPoints()); // 1
+        + wwibe224.getLectureWithMostCreditPoints()); // 1
 
   } // 7,5
 
