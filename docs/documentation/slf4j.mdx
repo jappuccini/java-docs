@@ -51,29 +51,29 @@ verschiedene Nachrichten in der Datei _logs/app.log_ protokolliert werden.
 ```java title="Names.java" showLineNumbers
 public class Names {
 
-  private final static Logger LOGGER = LoggerFactory.getLogger(Names.class);
+  private final static Logger logger = LoggerFactory.getLogger(Names.class);
 
   public static List<String> getNames(File file) throws IOException {
     List<String> names = new ArrayList<>();
-    LOGGER.info("Name list has been initialized successfully");
+    logger.info("Name list has been initialized successfully");
 
     if (!file.exists()) {
-      LOGGER.error("File {} does not exist", file);
+      logger.error("File {} does not exist", file);
       throw new IOException();
     }
 
     Scanner scanner = new Scanner(file);
-    LOGGER.info("File Scanner has been initialized successfully");
+    logger.info("File Scanner has been initialized successfully");
 
     while(scanner.hasNextLine()) {
       String name = scanner.nextLine();
-      LOGGER.debug(name);
+      logger.debug(name);
       names.add(name);
     }
-    LOGGER.info("{} names have been read", names.size());
+    logger.info("{} names have been read", names.size());
 
     scanner.close();
-    LOGGER.info("File {} has been closed successfully", file);
+    logger.info("File {} has been closed successfully", file);
 
     return names;
   }

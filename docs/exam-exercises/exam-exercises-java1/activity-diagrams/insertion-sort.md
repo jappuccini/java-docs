@@ -46,7 +46,7 @@ stateDiagram-v2
     state "Element [Zählvariable B] von [Feld] = [Temporäre Variable]" as state6
     state "Ausführen: [Feld ausgeben]" as state7
     state "[Zählvariable A] inkrementieren" as state8
-    state "Element [Zählvariable B] von [Feld] = Element [Zählvariable B - 1] von [Feld]" as state9
+    state "Element [Zählvariable B] von [Feld] = Element [Zählvariable B] - 1 von [Feld]" as state9
     state "[Zählvariable B] dekrementieren" as state10
 
     state if1 <<choice>>
@@ -62,7 +62,7 @@ stateDiagram-v2
         state4 --> state5
         state5 --> if2
         if2 --> state6: sonst
-        if2 --> state9: [Zählvariable B] > 0 und Element [Zählvariable B - 1] von [Feld] > [Temporäre Variable]
+        if2 --> state9: [Zählvariable B] > 0 und Element [Zählvariable B] - 1 von [Feld] > [Temporäre Variable]
         state6 --> state7
         state7 --> state8
         state8 --> if1
