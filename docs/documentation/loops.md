@@ -19,13 +19,13 @@ _kopfgesteuerten Schleife_.
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
-    int i = 0;
-    while (i < 10) {
-      System.out.println(i);
-      i++;
-    }
-  }
+   public static void main(String[] args) {
+      int i = 0;
+      while (i < 10) {
+         System.out.println(i);
+         i++;
+      }
+   }
 
 }
 ```
@@ -40,13 +40,13 @@ Schleife_.
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
-    int i = 0;
-    do {
-      System.out.println(i);
-      i++;
-    } while (i < 10);
-  }
+   public static void main(String[] args) {
+      int i = 0;
+      do {
+         System.out.println(i);
+         i++;
+      } while (i < 10);
+   }
 
 }
 ```
@@ -60,11 +60,11 @@ festgelegt, wie oft die Schleife durchlaufen wird.
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
-    for (int i = 0; i < 10; i++) {
-      System.out.println(i);
-    }
-  }
+   public static void main(String[] args) {
+      for (int i = 0; i < 10; i++) {
+         System.out.println(i);
+      }
+   }
 
 }
 ```
@@ -79,12 +79,12 @@ selbst.
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
-    int[] ids = {4, 8, 15, 16, 23, 42};
-    for (int i : ids) {
-      System.out.println(i);
-    }
-  }
+   public static void main(String[] args) {
+      int[] ids = {4, 8, 15, 16, 23, 42};
+      for (int i : ids) {
+         System.out.println(i);
+      }
+   }
 
 }
 ```
@@ -99,17 +99,17 @@ fortgeführt.
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
-    for (int i = 0; i < 10; i++) {
-      if (i == 6) {
-        break;
+   public static void main(String[] args) {
+      for (int i = 0; i < 10; i++) {
+         if (i == 6) {
+            break;
+         }
+         if (i % 2 == 0) {
+            continue;
+         }
+         System.out.println(i);
       }
-      if (i % 2 == 0) {
-        continue;
-      }
-      System.out.println(i);
-    }
-  }
+   }
 
 }
 ```

@@ -55,16 +55,31 @@ classDiagram
 
 ```mermaid
 flowchart LR
-	vbox[VBox\nfx:controller=Pfad.Controller]
+	vbox[VBox
+	     fx:controller=Pfad.Controller]
 	group[Group]
-	circle1[Circle\nfx:id=layer1\nradius=25]
-	circle2[Circle\nfx:id=layer2\nradius=50]
-	circle3[Circle\nfx:id=layer3\nradius=75]
-	circle4[Circle\nfx:id=layer4\nradius=100]
+	circle1[Circle
+	        fx:id=layer1
+	        radius=25]
+	circle2[Circle
+	        fx:id=layer2
+	        radius=50]
+	circle3[Circle
+	        fx:id=layer3
+	        radius=75]
+	circle4[Circle
+	        fx:id=layer4
+	        radius=100]
 	hbox[HBox]
-	button1[Button\ntext=Einschalten\nonAction=#switchOn]
-	button2[Button\ntext=Ausschalten\nonAction=#switchOff]
-	button3[Button\ntext=Farbe wechseln\nonAction=#switchColor]
+	button1[Button
+	        text=Einschalten
+	        onAction=#switchOn]
+	button2[Button
+	        text=Ausschalten
+	        onAction=#switchOff]
+	button3[Button
+	        text=Farbe wechseln
+	        onAction=#switchColor]
 
     vbox --> group
     vbox --> hbox

@@ -39,12 +39,12 @@ getrennt aufgeführt werden.
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
-    int a, b;
-    boolean error;
-    char char1;
-    String text;
-  }
+   public static void main(String[] args) {
+      int a, b;
+      boolean error;
+      char char1;
+      String text;
+   }
 
 }
 ```
@@ -68,15 +68,15 @@ zu.
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
-    int a = 42, b = a;
-    boolean error = true;
-    char char1;
-    String text;
+   public static void main(String[] args) {
+      int a = 42, b = a;
+      boolean error = true;
+      char char1;
+      String text;
 
-    char1 = 'M';
-    text = "Winter is Coming";
-  }
+      char1 = 'M';
+      text = "Winter is Coming";
+   }
 
 }
 ```
@@ -91,13 +91,13 @@ wird das Schlüsselwort `var` verwendet.
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
-    int i = 5;
-    i = "Text"; // Kompilierungsfehler
+   public static void main(String[] args) {
+      int i = 5;
+      i = "Text"; // Kompilierungsfehler
 
-    var j = 5;
-    j = "Text"; // Kompilierungsfehler
-  }
+      var j = 5;
+      j = "Text"; // Kompilierungsfehler
+   }
 
 }
 ```
@@ -116,17 +116,17 @@ innerhalb dieses Programmabschnitts auf das Datenobjekt zugreifen.
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
-    int a = 1, b;
-    b = foo(a);
-  }
+   public static void main(String[] args) {
+      int a = 1, b;
+      b = foo(a);
+   }
 
-  public static int foo(int c) {
-    int d;
-    d = a++; // Kompilierungsfehler
-    d = c++;
-    return d;
-  }
+   public static int foo(int c) {
+      int d;
+      d = a++; // Kompilierungsfehler
+      d = c++;
+      return d;
+   }
 
 }
 ```
@@ -141,19 +141,19 @@ Typumwandlung ein Genauigkeitsverlust stattfinden kann.
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
-    int a = 14;
-    int b = 3;
-    double result;
+   public static void main(String[] args) {
+      int a = 14;
+      int b = 3;
+      double result;
 
-    // implizite Typumwandlung
-    result = a / b;
-    System.out.println(result);
+      // implizite Typumwandlung
+      result = a / b;
+      System.out.println(result);
 
-    // explizite Typumwandlung
-    result = (double) a / b;
-    System.out.println(result);
-  }
+      // explizite Typumwandlung
+      result = (double) a / b;
+      System.out.println(result);
+   }
 
 }
 ```

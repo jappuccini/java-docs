@@ -17,27 +17,31 @@ Die Definition einer Aufzählung erfolgt analog zur Definition von Klassen, das
 Schlüsselwort hierfür lautet `enum`.
 
 ```java title="WeekDay.java" showLineNumbers
-public enum WeekDay {
+public enum Weekday {
 
-  MONDAY("Montag", true), TUESDAY("Dienstag", true), WEDNESDAY("Mittwoch", true), THURSDAY(
-      "Donnerstag",
-      true), FRIDAY("Freitag", true), SATURDAY("Samstag", true), SUNDAY("Sonntag", false);
+   MONDAY("Montag", true),
+   TUESDAY("Dienstag", true),
+   WEDNESDAY("Mittwoch", true),
+   THURSDAY("Donnerstag", true),
+   FRIDAY("Freitag", true),
+   SATURDAY("Samstag", true),
+   SUNDAY("Sonntag", false);
 
-  private String description;
-  private boolean isWorkingDay;
+   private final String description;
+   private final boolean isWorkingDay;
 
-  WeekDay(String description, boolean isWorkingDay) {
-    this.description = description;
-    this.isWorkingDay = isWorkingDay;
-  }
+   Weekday(String description, boolean isWorkingDay) {
+      this.description = description;
+      this.isWorkingDay = isWorkingDay;
+   }
 
-  public String getDescription() {
-    return description;
-  }
+   public String description() {
+      return description;
+   }
 
-  public boolean getWorkingDay() {
-    return isWorkingDay;
-  }
+   public boolean workingDay() {
+      return isWorkingDay;
+   }
 
 }
 ```
@@ -56,11 +60,12 @@ Aufzählungen besitzen eine Reihe hilfreicher Methoden:
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
-    for (WeekDay w : WeekDay.values()) {
-      System.out.println(w.ordinal());
-    }
-  }
+   public static void main(String[] args) {
+      Weekday monday = Weekday.valueOf("MONDAY");
+      for (Weekday w : Weekday.values()) {
+         System.out.println(w.ordinal());
+      }
+   }
 
 }
 ```

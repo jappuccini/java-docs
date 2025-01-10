@@ -24,9 +24,7 @@ flowchart TD
         hans[Hans, 18, m]
         peter[Peter, 27, m]
         lisa[Lisa, 43, w]
-        max[Max, 19, d]
         heidi[Heidi, 19, w]
-        philipp[Philipp, 22, m]
         maria[Maria, 17, w]
     end
     subgraph Strom2
@@ -61,15 +59,15 @@ Mengen sowie Einzelobjekten erzeugt werden.
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
-    int[] array = {4, 8, 15, 16, 23, 42};
-    IntStream integerStream = Arrays.stream(array);
+   public static void main(String[] args) {
+      int[] array = {4, 8, 15, 16, 23, 42};
+      IntStream integerStream = Arrays.stream(array);
 
-    List<Integer> list = List.of(4, 8, 15, 16, 23, 42);
-    Stream<Integer> integerStream2 = list.stream();
+      List<Integer> list = List.of(4, 8, 15, 16, 23, 42);
+      Stream<Integer> integerStream2 = list.stream();
 
-    Stream<Integer> integerStream3 = Stream.of(4, 8, 15, 16, 23, 42);
-  }
+      Stream<Integer> integerStream3 = Stream.of(4, 8, 15, 16, 23, 42);
+   }
 
 }
 ```
@@ -88,11 +86,11 @@ primitiver Werte.
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
-    int[] array = {4, 8, 15, 16, 23, 42};
-    IntStream integerStream = Arrays.stream(array);
-    int sum = integerStream.sum();
-  }
+   public static void main(String[] args) {
+      int[] array = {4, 8, 15, 16, 23, 42};
+      IntStream integerStream = Arrays.stream(array);
+      int sum = integerStream.sum();
+   }
 
 }
 ```
@@ -154,15 +152,15 @@ der Konsole ausgegeben.
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
-    Stream.of(4, 8, 15, 16, 23, 42).filter(i -> {
-      System.out.println(i + ": filter 1");
-      return i % 2 == 0;
-    }).filter(i -> {
-      System.out.println(i + ": filter 2");
-      return i > 15;
-    }).forEach(i -> System.out.println(i + ": forEach"));
-  }
+   public static void main(String[] args) {
+      Stream.of(4, 8, 15, 16, 23, 42).filter(i -> {
+         System.out.println(i + ": filter 1");
+         return i % 2 == 0;
+      }).filter(i -> {
+         System.out.println(i + ": filter 2");
+         return i > 15;
+      }).forEach(i -> System.out.println(i + ": forEach"));
+   }
 
 }
 ```
@@ -226,11 +224,11 @@ erzeugt.
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
-    Stream.iterate(0, i -> ++i).limit(100).forEach(System.out::println);
-    Stream.iterate(0, i -> i < 100, i -> ++i).forEach(System.out::println);
-    Stream.generate(() -> new Random().nextInt(100)).limit(100).forEach(System.out::println);
-  }
+   public static void main(String[] args) {
+      Stream.iterate(0, i -> ++i).limit(100).forEach(System.out::println);
+      Stream.iterate(0, i -> i < 100, i -> ++i).forEach(System.out::println);
+      Stream.generate(() -> new Random().nextInt(100)).limit(100).forEach(System.out::println);
+   }
 
 }
 ```

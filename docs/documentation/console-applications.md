@@ -23,11 +23,11 @@ Eingaben von der Konsole einzulesen und in entsprechende Datentypen umzuwandeln.
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
-    Scanner scanner = new Scanner(System.in);
-    int i = scanner.nextInt();
-    System.out.println(i);
-  }
+   public static void main(String[] args) {
+      Scanner scanner = new Scanner(System.in);
+      int i = scanner.nextInt();
+      System.out.println(i);
+   }
 
 }
 ```
@@ -55,11 +55,11 @@ Informationen auf der Konsole auszugeben:
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
-    System.out.print("Winter is Coming");
-    System.out.println("Winter is Coming");
-    System.out.printf("%25S", "Winter is Coming");
-  }
+   public static void main(String[] args) {
+      System.out.print("Winter is Coming");
+      System.out.println("Winter is Coming");
+      System.out.printf("%25S", "Winter is Coming");
+   }
 
 }
 ```

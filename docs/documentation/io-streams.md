@@ -35,22 +35,22 @@ Java stellt Standard-Datenströme für die Eingabe (`System.in`), die Ausgabe
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
-    byte input[] = new byte[256];
-    int noBytes = 0;
-    String output = "";
+   public static void main(String[] args) {
+      byte input[] = new byte[256];
+      int noBytes = 0;
+      String output = "";
 
-    try {
-      noBytes = System.in.read(input);
-    } catch (IOException e) {
-      System.err.println(e.getMessage());
-    }
+      try {
+         noBytes = System.in.read(input);
+      } catch (IOException e) {
+         System.err.println(e.getMessage());
+      }
 
-    if (noBytes > 0) {
-      output = new String(input, 0, noBytes);
-      System.out.println(output);
-    }
-  }
+      if (noBytes > 0) {
+         output = new String(input, 0, noBytes);
+         System.out.println(output);
+      }
+   }
 
 }
 ```
@@ -84,16 +84,16 @@ Verfügung.
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
-    File file = new File("stark.bin");
+   public static void main(String[] args) {
+      File file = new File("stark.bin");
 
-    try (FileOutputStream fileOutputStream = new FileOutputStream(file);
-        BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(fileOutputStream)) {
-      bufferedOutputStream.write("Winter is Coming".getBytes());
-    } catch (IOException e) {
-      e.printStackTrace();
-    }
-  }
+      try (FileOutputStream fos = new FileOutputStream(file);
+            BufferedOutputStream bos = new BufferedOutputStream(fos)) {
+         bos.write("Winter is Coming".getBytes());
+      } catch (IOException e) {
+         e.printStackTrace();
+      }
+   }
 
 }
 ```
@@ -108,17 +108,17 @@ public class MainClass {
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
-    File file = new File("stark.bin");
+   public static void main(String[] args) {
+      File file = new File("stark.bin");
 
-    try (FileInputStream fileInputStream = new FileInputStream(file);
-        BufferedInputStream bufferedInputStream = new BufferedInputStream(fileInputStream)) {
-      byte[] input = bufferedInputStream.readAllBytes();
-      System.out.println(new String(input));
-    } catch (IOException e) {
-      e.printStackTrace();
-    }
-  }
+      try (FileInputStream fis = new FileInputStream(file);
+            BufferedInputStream bis = new BufferedInputStream(fis)) {
+         byte[] input = bis.readAllBytes();
+         System.out.println(new String(input));
+      } catch (IOException e) {
+         e.printStackTrace();
+      }
+   }
 
 }
 ```
@@ -144,16 +144,16 @@ die abstrakten Basisklassen `Reader` und `Writer` zur Verfügung.
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
-    File file = new File("stark.txt");
+   public static void main(String[] args) {
+      File file = new File("stark.txt");
 
-    try (FileWriter fileWriter = new FileWriter(file);
-        BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)) {
-      bufferedWriter.write("Winter is Coming");
-    } catch (IOException e) {
-      e.printStackTrace();
-    }
-  }
+      try (FileWriter fileWriter = new FileWriter(file);
+            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)) {
+         bufferedWriter.write("Winter is Coming");
+      } catch (IOException e) {
+         e.printStackTrace();
+      }
+   }
 
 }
 ```
@@ -168,19 +168,19 @@ public class MainClass {
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
-    File file = new File("stark.txt");
+   public static void main(String[] args) {
+      File file = new File("stark.txt");
 
-    try (FileReader fileReader = new FileReader(file);
-        BufferedReader bufferedReader = new BufferedReader(fileReader)) {
-      String line;
-      while ((line = bufferedReader.readLine()) != null) {
-        System.out.println(line);
+      try (FileReader fileReader = new FileReader(file);
+            BufferedReader bufferedReader = new BufferedReader(fileReader)) {
+         String line;
+         while ((line = bufferedReader.readLine()) != null) {
+            System.out.println(line);
+         }
+      } catch (IOException e) {
+         e.printStackTrace();
       }
-    } catch (IOException e) {
-      e.printStackTrace();
-    }
-  }
+   }
 
 }
 ```
@@ -201,9 +201,7 @@ Klasse die Schnittstelle `Serializable` implementieren. Die Schnittstelle
 zu implementierenden Methoden.
 
 ```java title="Foo.java" showLineNumbers
-public class Foo implements Serializable {
-
-}
+public record Stark(String name) implements Serializable {}
 ```
 
 ### Schreiben serialisierter Objekte
@@ -216,22 +214,26 @@ public class Foo implements Serializable {
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
-    List<Foo> foos = new ArrayList<>();
-    foos.add(new Foo());
-    foos.add(new Foo());
+   public static void main(String[] args) {
+      List<Stark> starks = new ArrayList<>();
+      starks.add(new Stark("Eddard Stark"));
+      starks.add(new Stark("Rob Stark"));
+      starks.add(new Stark("Sansa Stark"));
+      starks.add(new Stark("Arya Stark"));
+      starks.add(new Stark("Bran Stark"));
+      starks.add(new Stark("Rickon Stark"));
 
-    File file = new File("foos.bin");
+      File file = new File("starks.bin");
 
-    try (FileOutputStream fileOutputStream = new FileOutputStream(file);
-        ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream)) {
-      for (Foo f : foos) {
-        objectOutputStream.writeObject(f);
+      try (FileOutputStream fos = new FileOutputStream(file);
+            ObjectOutputStream oos = new ObjectOutputStream(fos)) {
+         for (Stark s : starks) {
+            oos.writeObject(s);
+         }
+      } catch (IOException e) {
+         e.printStackTrace();
       }
-    } catch (IOException e) {
-      e.printStackTrace();
-    }
-  }
+   }
 
 }
 ```
@@ -247,13 +249,13 @@ public class MainClass {
 public class MainClass {
 
   public static void main(String[] args) {
-    File file = new File("foos.bin");
+    File file = new File("starks.bin");
 
-    try (FileInputStream fileInputStream = new FileInputStream(file);
-        ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream)) {
+    try (FileInputStream fis = new FileInputStream(file);
+        ObjectInputStream ois = new ObjectInputStream(fis)) {
       while (true) {
-        Foo foo = (Foo) objectInputStream.readObject();
-        System.out.println(foo);
+        Stark stark = (Stark) ois.readObject();
+        System.out.println(stark);
       }
     } catch (EOFException e) {
       /* End of File */
@@ -273,9 +275,9 @@ kann sichergestellt werden, dass Empfänger von serialisierten Objekten
 typkompatibel zum Sender sind, d.h. eine passende Klassenstruktur aufweisen.
 
 ```java title="Foo.java" showLineNumbers
-public class Foo implements Serializable {
+public record Stark(String name) implements Serializable {
 
-  public static final long serialVersionUID = 1L;
+   public static final long serialVersionUID = 1L;
 
 }
 ```
@@ -295,27 +297,27 @@ geschlossen werden, was sich als sehr aufwändig darstellt.
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
-    File file = new File("stark.txt");
-    FileWriter fileWriter = null;
-    BufferedWriter bufferedWriter = null;
+   public static void main(String[] args) {
+      File file = new File("stark.txt");
+      FileWriter fileWriter = null;
+      BufferedWriter bufferedWriter = null;
 
-    try {
-      fileWriter = new FileWriter(file);
-      bufferedWriter = new BufferedWriter(fileWriter);
-      bufferedWriter.write("Winter is Coming");
-    } catch (IOException e) {
-      e.printStackTrace();
-    } finally {
-      if (bufferedWriter != null) {
-        try {
-          bufferedWriter.close();
-        } catch (IOException e) {
-          e.printStackTrace();
-        }
+      try {
+         fileWriter = new FileWriter(file);
+         bufferedWriter = new BufferedWriter(fileWriter);
+         bufferedWriter.write("Winter is Coming");
+      } catch (IOException e) {
+         e.printStackTrace();
+      } finally {
+         if (bufferedWriter != null) {
+            try {
+               bufferedWriter.close();
+            } catch (IOException e) {
+               e.printStackTrace();
+            }
+         }
       }
-    }
-  }
+   }
 
 }
 ```
@@ -332,16 +334,16 @@ am Ende des try-Blockes automatisch geschlossen werden.
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
-    File file = new File("stark.txt");
+   public static void main(String[] args) {
+      File file = new File("stark.txt");
 
-    try (FileWriter fileWriter = new FileWriter(file);
-        BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)) {
-      bufferedWriter.write("Winter is Coming");
-    } catch (IOException e) {
-      e.printStackTrace();
-    }
-  }
+      try (FileWriter fileWriter = new FileWriter(file);
+            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)) {
+         bufferedWriter.write("Winter is Coming");
+      } catch (IOException e) {
+         e.printStackTrace();
+      }
+   }
 
 }
 ```

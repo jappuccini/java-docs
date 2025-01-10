@@ -63,10 +63,11 @@ flowchart LR
       **...**]
     subgraph Klassen
         computer(**Computer**
-                 cpu: CPU
-                 memoryInGB: int)
-        cpu(**CPU**
-            powerInGHz: double
+                 description: String
+                 cpu: Cpu
+                 memoryInGb: int)
+        cpu(**Cpu**
+            powerInGhz: double
             numberOfCores: int)
     end
     a --> Klassen

@@ -58,12 +58,31 @@ classDiagram
 
 ```mermaid
 flowchart LR
-	gridpane[GridPane\nfx:controller=Pfad.LoginController]
-	label1[Label\ntext=Benutzername\nGridPane.columnIndex=0\nGridPane.rowIndex=0]
-	label2[Label\ntext=Passwort\nGridPane.columnIndex=0\nGridPane.rowIndex=1]
-	textfield1[TextField\nfx:id=userNameTextField\nGridPane.columnIndex=1\nGridPane.rowIndex=0]
-	textfield2[TextField\nfx:id=passwordTextField\nGridPane.columnIndex=1\nGridPane.rowIndex=1]
-	button[Button\ntext=Anmelden\nonAction=#login\nGridPane.columnIndex=0\nGridPane.rowIndex=2\nGridPane.columnSpan=2\nGridPane.halignment=CENTER]
+	gridpane[GridPane
+	         fx:controller=Pfad.LoginController]
+	label1[Label
+	       text=Benutzername
+	       GridPane.columnIndex=0
+	       GridPane.rowIndex=0]
+	label2[Label
+	       text=Passwort
+	       GridPane.columnIndex=0
+	       GridPane.rowIndex=1]
+	textfield1[TextField
+	           fx:id=userNameTextField
+	           GridPane.columnIndex=1
+	           GridPane.rowIndex=0]
+	textfield2[TextField
+	           fx:id=passwordTextField
+	           GridPane.columnIndex=1
+	           GridPane.rowIndex=1]
+	button[Button
+	       text=Anmelden
+	       onAction=#login
+	       GridPane.columnIndex=0
+	       GridPane.rowIndex=2
+	       GridPane.columnSpan=2
+	       GridPane.halignment=CENTER]
 
     gridpane --> label1
     gridpane --> textfield1
@@ -76,8 +95,10 @@ flowchart LR
 
 ```mermaid
 flowchart LR
-	vbox[VBox\nfx:controller=Pfad.UserController]
-	label[Label\nfx:id=greetingsLabel]
+	vbox[VBox
+	     fx:controller=Pfad.UserController]
+	label[Label
+	      fx:id=greetingsLabel]
 
     vbox --> label
 ```
