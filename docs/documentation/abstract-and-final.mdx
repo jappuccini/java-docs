@@ -23,13 +23,13 @@ Klassen vorgegeben bzw. eingeschänkt werden:
 
 ```java title="Computer.java (Auszug)" showLineNumbers
 public abstract class Computer {
-  ...
-  public abstract ArrayList<String> getSpecification();
+   ...
+   public abstract ArrayList<String> getSpecification();
 
-  public final CPU getCpu() {
-    return cpu;
-  }
-  ...
+   public final Cpu getCpu() {
+     return cpu;
+   }
+   ...
 }
 ```
 
@@ -38,20 +38,20 @@ public abstract class Computer {
 
 ```java title="Notebook.java (Auszug)" showLineNumbers
 public final class Notebook extends Computer {
-  ...
-  @Override
-  public ArrayList<String> getSpecification() {
-    ArrayList<String> specification = new ArrayList<>();
-    specification.add("description: " + description);
-    specification.add("cpu: " + cpu);
-    specification.add("memoryInGB: " + memoryInGB);
-    specification.add("screenSizeInInches: " + screenSizeInInches);
-    return specification;
-  }
+   ...
+   @Override
+   public ArrayList<String> getSpecification() {
+      ArrayList<String> specification = new ArrayList<>();
+      specification.add("description: " + description);
+      specification.add("cpu: " + cpu);
+      specification.add("memoryInGb: " + memoryInGb);
+      specification.add("screenSizeInInches: " + screenSizeInInches);
+      return specification;
+   }
 
-  @Override
-  public CPU getCpu() {...} // Kompilierungsfehler
-  ...
+   @Override
+   public Cpu getCpu() {...} // Kompilierungsfehler
+   ...
 }
 ```
 
@@ -61,9 +61,9 @@ public final class Notebook extends Computer {
 ```java title="MainClass.java" showLineNumbers
 public class MainClass extends Notebook { // Kompilierungsfehler
 
-  public static void main(String[] args) {
-    Computer myComputer = new Computer("Mein Office PC"); // Kompilierungsfehler
-  }
+   public static void main(String[] args) {
+      Computer computer = new Computer("Mein Office PC"); // Kompilierungsfehler
+   }
 
 }
 ```

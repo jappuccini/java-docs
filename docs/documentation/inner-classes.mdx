@@ -1,0 +1,208 @@
+---
+title: Innere Klassen (Inner Classes)
+description: ''
+sidebar_position: 260
+tags: [inner-classes]
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+Java bietet die Möglichkeit, Klassen und Schnittstellen zu verschachteln. Das
+Ziel von inneren Klassen ist eine Definition von Hilfsklassen möglichst nahe an
+der Stelle, wo sie gebraucht werden. Beispiele für Hilfsklassen sind
+Ausnahmeklassen, Komparatoren und Ereignisbehandler. Alle bisherigen Klassen
+werden auch als _äußerer Klassen_ bzw. _Top-Level-Klassen_ bezeichnet.
+
+## Geschachtelte Klassen (Nested Classes)
+
+Geschachtelte Klassen sind Top-Level-Klassen, die zur Strukturierung des
+Namensraumes in anderen Top-Level-Klassen definiert sind. Ein Namensraum ist die
+vollständige Pfadangabe zur Klasse (z.B. `java.lang`). Geschachtelte Klassen
+müssen statisch definiert werden und sind daher im eigentlichen Sinne keine
+richtigen inneren Klassen.
+
+<Tabs>
+  <TabItem value="a" label="Geschachtelte Klasse" default>
+
+```java title="Computer.java (Auszug)" showLineNumbers
+public abstract class Computer {
+   ...
+   public static final class Notebook extends Computer implements Comparable<Notebook> {...}
+
+   public static final class Cpu {...}
+   ...
+}
+```
+
+  </TabItem>
+  <TabItem value="b" label="Startklasse">
+
+```java title="MainClass.java" showLineNumbers
+public class MainClass {
+
+   public static void main(String[] args) {
+      Computer.Cpu cpu = new Computer.Cpu(4.7, 8);
+      Computer.Notebook notebook = new Computer.Notebook("Mein Gaming Laptop", cpu, 32, 16);
+   }
+
+}
+```
+
+  </TabItem>
+</Tabs>
+
+## Elementklassen (Member Classes)
+
+Objekte von Elementklassen sind immer mit einem Objekt der umgebenden Klasse
+verbunden. Dies ermöglicht die Umsetzung von Kompositionen (siehe
+[Darstellung von Assoziationen](class-diagrams#darstellung-von-assoziationen)).
+Sie haben Zugriff auf alle Variablen und Methoden der sie umgebenden Klasse und
+dürfen keine statischen Elemente enthalten.
+
+<Tabs>
+  <TabItem value="a" label="Elementklasse" default>
+
+```java title="List.java (Auszug)" showLineNumbers
+public class List {
+   ...
+   public class Item {...}
+   ...
+}
+```
+
+  </TabItem>
+  <TabItem value="b" label="Startklasse">
+
+```java title="MainClass.java" showLineNumbers
+public class MainClass {
+
+  public static void main(String[] args) {
+    List list = new List();
+    List.Item item = new List.Item(); // Kompilierungsfehler
+    List.Item item = list.new Item();
+  }
+
+}
+```
+
+  </TabItem>
+</Tabs>
+
+## Lokale Klassen
+
+Lokale Klassen werden innerhalb einer Methode definiert und können auch nur dort
+verwendet werden. Sie dürfen nicht als `public`, `protected`, `private` oder
+`static` definiert werden, dürfen keine statischen Elemente enthalten und können
+nur die mit `final` markierten Variablen und Parameter der umgebenden Methode
+verwenden.
+
+<Tabs>
+  <TabItem value="a" label="Schnittstelle" default>
+
+```java title="Translator.java" showLineNumbers
+public interface Translator {
+
+   String translate(String s);
+
+}
+```
+
+  </TabItem>
+  <TabItem value="b" label="Verwenderklasse">
+
+```java title="Computers.java" showLineNumbers
+public class Computers {
+
+   public static String translateDescription(Computer computer, Translator translator) {
+      return translator.translate(computer.getDescription());
+   }
+
+}
+```
+
+  </TabItem>
+  <TabItem value="c" label="Startklasse mit lokaler Klasse">
+
+```java title="MainClass.java" showLineNumbers
+public class MainClass {
+
+   public static void main(String[] args) throws InvalidValueException {
+      class ToUpperCaseTranslator implements Translator {
+
+         @Override
+         public String translate(String s) {
+            return s.toUpperCase();
+         }
+
+      }
+
+      ToUpperCaseTranslator translator = new ToUpperCaseTranslator();
+      Computer computer = new Notebook("Mein Gaming Laptop", new Cpu(4.7, 8), 32, 16);
+      String description = Computers.translateDescription(computer, translator);
+      System.out.println(description);
+   }
+
+}
+```
+
+  </TabItem>
+</Tabs>
+
+## Anonyme Klassen
+
+Anonyme Klassen besitzen im Gegensatz zu lokalen Klassen keinen Namen und werden
+innerhalb eines Ausdrucks definiert und instanziiert; Klassendeklaration und
+Objekterzeugung sind also in einem Sprachkonstrukt vereint. Wird als Datentyp
+eine Schnittstelle benötigt, implementiert die anonyme Klasse diese
+Schnittstelle, wird als Datentyp eine Klasse benötigt, so wird die anonyme
+Klasse daraus abgeleitet.
+
+<Tabs>
+  <TabItem value="a" label="Schnittstelle" default>
+
+```java title="Translator.java" showLineNumbers
+public interface Translator {
+
+   String translate(String s);
+
+}
+```
+
+  </TabItem>
+  <TabItem value="b" label="Verwenderklasse">
+
+```java title="Computers.java" showLineNumbers
+public class Computers {
+
+   public static String translateDescription(Computer computer, Translator translator) {
+      return translator.translate(computer.getDescription());
+   }
+
+}
+```
+
+  </TabItem>
+  <TabItem value="c" label="Startklasse mit anonymer Klasse">
+
+```java title="MainClass.java" showLineNumbers
+public class MainClass {
+
+   public static void main(String[] args) throws InvalidValueException {
+      Computer computer = new Notebook("Mein Gaming Laptop", new Cpu(4.7, 8), 32, 16);
+      String description = Computers.translateDescription(computer, new Translator() {
+
+         @Override
+         public String translate(String s) {
+            return s.toUpperCase();
+         }
+
+      });
+      System.out.println(description);
+   }
+
+}
+```
+
+  </TabItem>
+</Tabs>

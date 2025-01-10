@@ -13,14 +13,24 @@ Wert vorliegt oder nicht.
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
-    String text = foo();
-    System.out.println(text.length()); // Laufzeitfehler
-  }
+   private static List<String> names;
 
-  public static String foo() {
-    return null;
-  }
+   public static void main(String[] args) {
+      names = new ArrayList<>();
+      String name = getNameByInitial('H');
+      System.out.println(name.length()); // Laufzeitfehler
+   }
+
+   public static String getNameByInitial(char initial) {
+      String name = null;
+      for (String n : names) {
+         if (n.charAt(0) == initial) {
+            name = n;
+            break;
+         }
+      }
+      return name;
+   }
 
 }
 ```
@@ -39,14 +49,24 @@ Standardwerte festgelegt werden können.
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
-    Optional<String> optionalText = foo();
-    optionalText.ifPresent(t -> System.out.println(t.length()));
-  }
+   private static List<String> names;
 
-  public static Optional<String> foo() {
-    return Optional.ofNullable(null);
-  }
+   public static void main(String[] args) {
+      names = new ArrayList<>();
+      Optional<String> name = getNameByInitial('H');
+      name.ifPresent(n -> System.out.println(n.length()));
+   }
+
+   public static Optional<String> getNameByInitial(char initial) {
+      String name = null;
+      for (String n : names) {
+         if (n.charAt(0) == initial) {
+            name = n;
+            break;
+         }
+      }
+      return Optional.ofNullable(name);
+   }
 
 }
 ```

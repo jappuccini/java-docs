@@ -56,7 +56,7 @@ nur öffentliche, abstrakte und öffentliche, statische Methoden beinhalten.
 ```java title="MobileDevice.java" showLineNumbers
 public interface MobileDevice {
 
-  int getScreenSizeInInches();
+   int getScreenSizeInInches();
 
 }
 ```
@@ -79,7 +79,7 @@ Klasse, alle Methoden der Schnittstelle zu implementieren.
 ```java title="MobileDevice.java" showLineNumbers
 public interface MobileDevice {
 
-  int getScreenSizeInInches();
+   int getScreenSizeInInches();
 
 }
 ```
@@ -89,12 +89,12 @@ public interface MobileDevice {
 
 ```java title="Notebook.java (Auszug)" showLineNumbers
 public class Notebook extends Computer implements MobileDevice {
-  ...
-  @Override
-  public int getScreenSizeInInches() {
-    return screenSizeInInches;
-  }
-  ...
+   ...
+   @Override
+   public int getScreenSizeInInches() {
+      return screenSizeInInches;
+   }
+   ...
 }
 ```
 
@@ -113,7 +113,7 @@ als _Upcast_ die Rückumwandlung als _Downcast_
 ```java title="MobileDevice.java" showLineNumbers
 public interface MobileDevice {
 
-  int getScreenSizeInInches();
+   int getScreenSizeInInches();
 
 }
 ```
@@ -123,22 +123,22 @@ public interface MobileDevice {
 
 ```java title="Notebook.java (Auszug)" showLineNumbers
 public class Notebook extends Computer implements MobileDevice {
-  ...
-  @Override
-  public int getScreenSizeInInches() {
-    return screenSizeInInches;
-  }
+   ...
+   @Override
+   public int getScreenSizeInInches() {
+      return screenSizeInInches;
+   }
 
-  @Override
-  public ArrayList<String> getSpecification() {
-    ArrayList<String> specification = new ArrayList<>();
-    specification.add("description: " + description);
-    specification.add("cpu: " + cpu);
-    specification.add("memoryInGB: " + memoryInGB);
-    specification.add("screenSizeInInches: " + screenSizeInInches);
-    return specification;
-  }
-  ...
+   @Override
+   public ArrayList<String> getSpecification() {
+      ArrayList<String> specification = new ArrayList<>();
+      specification.add("description: " + description);
+      specification.add("cpu: " + cpu);
+      specification.add("memoryInGb: " + memoryInGb);
+      specification.add("screenSizeInInches: " + screenSizeInInches);
+      return specification;
+   }
+   ...
 }
 ```
 
@@ -147,15 +147,15 @@ public class Notebook extends Computer implements MobileDevice {
 
 ```java title="Smartphone.java (Auszug)" showLineNumbers
 public class Smartphone implements MobileDevice {
-  ...
-  private double widthInInches;
-  private double heightInInches;
+   ...
+   private double widthInInches;
+   private double heightInInches;
 
-  @Override
-  public int getScreenSizeInInches() {
-    return Math.sqrt(Math.pow(widthInInches) + Math.pow(heightInInches));
-  }
-  ...
+   @Override
+   public int getScreenSizeInInches() {
+      return Math.sqrt(Math.pow(widthInInches) + Math.pow(heightInInches));
+   }
+   ...
 }
 ```
 
@@ -165,19 +165,19 @@ public class Smartphone implements MobileDevice {
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
-    ArrayList<MobileDevice> mobileDevices = new ArrayList<>();
+   public static void main(String[] args) {
+      ArrayList<MobileDevice> mobileDevices = new ArrayList<>();
 
-    mobileDevices.add(new Notebook("Mein Gaming Laptop", new CPU(4.7, 8), 32, 16)); // Upcast
-    mobileDevices.add(new Smartphone("Google Pixel 9", 2.8, 6)); // Upcast
+      mobileDevices.add(new Notebook("Mein Gaming Laptop", new Cpu(4.7, 8), 32, 16)); // Upcast
+      mobileDevices.add(new Smartphone("Google Pixel 9", 2.8, 6)); // Upcast
 
-    for (MobileDevice m : mobileDevices) {
-      System.ou.println(m.getScreenSizeInInches()); // Polymorphie
-      if (m instanceof Notebook myNotebook) { // Downcast
-        System.out.println(myNotebook.getSpecification());
+      for (MobileDevice m : mobileDevices) {
+         System.out.println(m.getScreenSizeInInches()); // Polymorphie
+         if (m instanceof Notebook n) { // Downcast
+            System.out.println(n.getSpecification());
+         }
       }
-    }
-  }
+   }
 
 }
 ```

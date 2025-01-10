@@ -51,32 +51,32 @@ verschiedene Nachrichten in der Datei _logs/app.log_ protokolliert werden.
 ```java title="Names.java" showLineNumbers
 public class Names {
 
-  private final static Logger logger = LoggerFactory.getLogger(Names.class);
+   private final static Logger logger = LoggerFactory.getLogger(Names.class);
 
-  public static List<String> getNames(File file) throws IOException {
-    List<String> names = new ArrayList<>();
-    logger.info("Name list has been initialized successfully");
+   public static List<String> getNames(File file) throws IOException {
+      List<String> names = new ArrayList<>();
+      logger.info("Name list has been initialized successfully");
 
-    if (!file.exists()) {
-      logger.error("File {} does not exist", file);
-      throw new IOException();
-    }
+      if (!file.exists()) {
+         logger.error("File {} does not exist", file);
+         throw new IOException();
+      }
 
-    Scanner scanner = new Scanner(file);
-    logger.info("File Scanner has been initialized successfully");
+      Scanner scanner = new Scanner(file);
+      logger.info("File Scanner has been initialized successfully");
 
-    while(scanner.hasNextLine()) {
-      String name = scanner.nextLine();
-      logger.debug(name);
-      names.add(name);
-    }
-    logger.info("{} names have been read", names.size());
+      while (scanner.hasNextLine()) {
+         String name = scanner.nextLine();
+         logger.debug(name);
+         names.add(name);
+      }
+      logger.info("{} names have been read", names.size());
 
-    scanner.close();
-    logger.info("File {} has been closed successfully", file);
+      scanner.close();
+      logger.info("File {} has been closed successfully", file);
 
-    return names;
-  }
+      return names;
+   }
 
 }
 ```

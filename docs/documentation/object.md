@@ -19,23 +19,23 @@ gleich sind.
 
 ```java title="Computer.java (Auszug)" showLineNumbers
 public class Computer {
-  ...
-  @Override
-  public boolean equals(Object object) {
-    if (this == object) {
-      return true;
-    }
-    if (object == null) {
-      return false;
-    }
-    if (getClass() != object.getClass()) {
-      return false;
-    }
-    Computer other = (Computer) object;
-    return Objects.equals(description, other.description)
-      && Objects.equals(cpu, other.cpu) && memoryInGB == other.memoryInGB;
-  }
-  ...
+   ...
+   @Override
+   public boolean equals(Object object) {
+      if (this == object) {
+         return true;
+      }
+      if (object == null) {
+         return false;
+      }
+      if (getClass() != object.getClass()) {
+         return false;
+      }
+      Computer other = (Computer) object;
+      return Objects.equals(description, other.description) && Objects.equals(cpu, other.cpu)
+            && memoryInGb == other.memoryInGb;
+   }
+   ...
 }
 ```
 
@@ -48,12 +48,14 @@ Datensammlungen wie z.B. der Klasse `HashMap<K, V>` notwendig.
 
 ```java title="Computer.java (Auszug)" showLineNumbers
 public class Computer {
-  ...  @Override
-  public int hashCode() {
-    return Objects.hash(description, cpu, memoryInGB);
-  }
-  ...
+   ...
+   @Override
+   public int hashCode() {
+      return Objects.hash(description, cpu, memoryInGb);
+   }
+   ...
 }
+
 ```
 
 :::note Hinweis
@@ -74,13 +76,13 @@ werden. In der Regel geschieht dies in der Form _[Klassenname]
 
 ```java title="Computer.java" showLineNumbers
 public class Computer {
-  ...
-  @Override
-  public String toString(t) {
-    return "Computer [description=" + description + ", cpu=" + cpu
-      + ", memoryInGB=" + memoryInGB + "]");
-  }
-  ...
+   ...
+   @Override
+   public String toString() {
+      return "Computer [description=" + description + ", cpu=" + cpu + ", memoryInGb=" + memoryInGb
+            + "]";
+   }
+   ...
 }
 ```
 

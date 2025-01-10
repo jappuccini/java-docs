@@ -12,8 +12,6 @@ ausführbare Klasse und/oder eine Testklasse.
 ```mermaid
 classDiagram
 
-    Player ..> CardNotFoundException: throws
-    Player ..> NotEnoughActionPointsException: throws
     Player o-- Card
 
     class Card {
@@ -36,14 +34,6 @@ classDiagram
         +getMostPowerfulCardByRow(row: int) Optional~Card~
         +playCard(card: Card, row: int) void
         +setActionPoints(int: actionPoints) void
-    }
-
-    class NotEnoughActionPointsException {
-        <<exception>>
-    }
-
-    class CardNotFoundException {
-        <<exception>>
     }
 ```
 

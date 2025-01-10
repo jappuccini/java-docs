@@ -20,11 +20,11 @@ tags: []
 - Methoden- und Attributsbezeichner dürfen sinnvoll gekürzt geschrieben werden
   (zum Beispiel _getLWMCP()_ statt _getLectureWithMostCreditPoints()_)
 
-## Aufgabe 1 (26 Punkte)
+## Aufgabe 1 (25 Punkte)
 
 - Erstelle die Klasse `Class` anhand des abgebildeten Klassendiagramms (18
   Punkte)
-- Erstelle die ausführbare Klasse `ExamTask01` wie folgt (8 Punkte): Erstelle
+- Erstelle die ausführbare Klasse `ExamTask01` wie folgt (7 Punkte): Erstelle
   einen Kurs mit 2 Studierenden und 2 Vorlesungen und gib anschließend den Kurs
   sowie die Vorlesung mit den meisten Creditpoints auf der Konsole aus
 
@@ -102,58 +102,59 @@ classDiagram
 ```java title="Class.java" showLineNumbers
 public class Class { // 0,5
 
-  private final String description; // 0,5
-  private final CourseOfStudies courseOfStudies; // 0,5
-  private final List<Lecture> lectures; // 0,5
-  private final List<Student> students; // 0,5
+   private final String description; // 0,5
+   private final CourseOfStudies courseOfStudies; // 0,5
+   private final List<Lecture> lectures; // 0,5
+   private final List<Student> students; // 0,5
 
-  public Class(String description, CourseOfStudies courseOfStudies) { // 0,5
-    this.description = description; // 0,5
-    this.courseOfStudies = courseOfStudies; // 0,5
-    lectures = new ArrayList<>(); // 0,5
-    students = new ArrayList<>(); // 0,5
-  } // 2,5
+   public Class(String description, CourseOfStudies courseOfStudies) { // 0,5
+      this.description = description; // 0,5
+      this.courseOfStudies = courseOfStudies; // 0,5
+      lectures = new ArrayList<>(); // 0,5
+      students = new ArrayList<>(); // 0,5
+   } // 2,5
 
-  public String description() { // 0,5
-    return description; // 0,5
-  } // 1
+   public String description() { // 0,5
+      return description; // 0,5
+   } // 1
 
-  public CourseOfStudies courseOfStudies() { // 0,5
-    return courseOfStudies; // 0,5
-  } // 1
+   public CourseOfStudies courseOfStudies() { // 0,5
+      return courseOfStudies; // 0,5
+   } // 1
 
-  public List<Lecture> lectures() { // 0,5
-    return lectures; // 0,5
-  } // 1
+   public List<Lecture> lectures() { // 0,5
+      return lectures; // 0,5
+   } // 1
 
-  public List<Student> students() { // 0,5
-    return students; // 0,5
-  } // 1
+   public List<Student> students() { // 0,5
+      return students; // 0,5
+   } // 1
 
-  public void addLecture(Lecture lecture) { // 0,5
-    lectures.add(lecture); // 0,5
-  } // 1
+   public void addLecture(Lecture lecture) { // 0,5
+      lectures.add(lecture); // 0,5
+   } // 1
 
-  public void addStudent(Student student) { // 0,5
-    students.add(student); // 0,5
-  } // 1
+   public void addStudent(Student student) { // 0,5
+      students.add(student); // 0,5
+   } // 1
 
-  public Lecture getLectureWithMostCreditPoints() { // 0,5
-    Lecture lecture = null; // 0,5
-    int mostCreditPoints = 0; // 0,5
-    for (Lecture l : lectures) { // 1
-      if (l.creditPoints() > mostCreditPoints) { // 1
-        lecture = l; // 0,5
-        mostCreditPoints = l.creditPoints(); // 0,5
+   public Lecture getLectureWithMostCreditPoints() { // 0,5
+      Lecture lecture = null; // 0,5
+      int mostCreditPoints = 0; // 0,5
+      for (Lecture l : lectures) { // 1
+         if (l.creditPoints() > mostCreditPoints) { // 1
+            lecture = l; // 0,5
+            mostCreditPoints = l.creditPoints(); // 0,5
+         }
       }
-    }
-    return lecture; // 0,5
-  } // 5
+      return lecture; // 0,5
+   } // 5
 
-  public String toString() { // 0,5
-    return "Class [description=" + description + ", courseOfStudies=" + courseOfStudies.description()
-        + ", lectures=" + lectures + ", students=" + students + "]"; // 1,5
-  } // 2
+   public String toString() { // 0,5
+      return "Class [description=" + description + ", courseOfStudies="
+            + courseOfStudies.description() + ", lectures=" + lectures + ", students=" + students
+            + "]"; // 1,5
+   } // 2
 
 }
 ```
@@ -161,21 +162,18 @@ public class Class { // 0,5
 ```java title="ExamTask01.java" showLineNumbers
 public class ExamTask01 { // 0,5
 
-  public static void main(String[] args) { // 0,5
+   public static void main(String[] args) { // 0,5
+      Class wwibe224 = new Class("WWIBE224", CourseOfStudies.WI); // 1
+      wwibe224.addStudent(new Student("8271625", "Hans Maier")); // 1
+      wwibe224.addStudent(new Student("9102934", "Peter Müller")); // 1
+      wwibe224.addLecture(new Lecture("Mathe", 5)); // 1
+      wwibe224.addLecture(new Lecture("Programmierung", 10)); // 1
 
-    Class wwibe224 = new Class("WWIBE224", CourseOfStudies.WI); // 1
-    wwibe224.addStudent(new Student("8271625", "Hans Maier")); // 1
-    wwibe224.addStudent(new Student("9102934", "Peter Müller")); // 1
-    wwibe224.addLecture(new Lecture("Mathe", 5)); // 1
-    wwibe224.addLecture(new Lecture("Programmierung", 10)); // 1
+      System.out.println(wwibe224); // 0,5
+      System.out.println(wwibe224.getLectureWithMostCreditPoints()); // 0,5
+   } // 6,5
 
-    System.out.println(wwibe224); // 1
-    System.out.println("Vorlesung mit den meisten ECTS-Punkten: "
-        + wwibe224.getLectureWithMostCreditPoints()); // 1
-
-  } // 7,5
-
-} // 8
+} // 7
 ```
 
 ## Aufgabe 2 (24 Punkte)
@@ -187,48 +185,48 @@ anhand der abgebildeten Aktivitätsdiagramme.
 
 ```mermaid
 classDiagram
-    class ExamTask02 {
-        -pin: int[]$
-        +main(args: String[]) void$
-        +textToPin(text: String) void$
-        +checkPinLength() boolean$
-        +checkPinValue() boolean$
-    }
+   class ExamTask02 {
+      -pin: int[]$
+      +main(args: String[]) void$
+      +textToPin(text: String) void$
+      +checkPinLength() boolean$
+      +checkPinValue() boolean$
+   }
 ```
 
 ### Aktivitätsdiagramm zur Methode _void main(args: String[])_
 
 ```mermaid
 stateDiagram-v2
-    state "Ausgabe: Bitte PIN eingeben" as state1
-    state "Eingabe: [Zeichenkette]" as state2
-    state "Ausführen: [Zeichenkette in Zahlenfeld umwandeln] mit [Zeichenkette]" as state3
-    state "Ausführen: [Länge des Zahlenfeldes prüfen]" as state4
-    state "Ausgabe: Länge der PIN ist ungültig" as state5
-    state "Ausführen: [Zahlenwert des Zahlenfeldes prüfen]" as state6
-    state "Ausgabe: Zahlenwert der PIN ist ungültig" as state7
-    state "Ausgabe: PIN ist gültig" as state8
+   state "Ausgabe: Bitte PIN eingeben" as state1
+   state "Eingabe: [Zeichenkette]" as state2
+   state "Ausführen: [Zeichenkette in Zahlenfeld umwandeln] mit [Zeichenkette]" as state3
+   state "Ausführen: [Länge des Zahlenfeldes prüfen]" as state4
+   state "Ausgabe: Länge der PIN ist ungültig" as state5
+   state "Ausführen: [Zahlenwert des Zahlenfeldes prüfen]" as state6
+   state "Ausgabe: Zahlenwert der PIN ist ungültig" as state7
+   state "Ausgabe: PIN ist gültig" as state8
 
-    state if1 <<choice>>
-    state if2 <<choice>>
-    state fork1 <<fork>>
+   state if1 <<choice>>
+   state if2 <<choice>>
+   state fork1 <<fork>>
 
-    state "PIN-Test" as main {
-        [*] --> state1
-        state1 --> state2
-        state2 --> state3
-        state3 --> state4
-        state4 --> if1
-        if1 --> state6: Rückgabe = true
-        if1 --> state5: sonst
-        state6 --> if2
-        if2 --> state7: sonst
-        if2 --> state8: Rückgabe = true
-        state5 --> fork1
-        state7 --> fork1
-        state8 --> fork1
-        fork1 --> [*]
-    }
+   state "PIN-Test" as main {
+      [*] --> state1
+      state1 --> state2
+      state2 --> state3
+      state3 --> state4
+      state4 --> if1
+      if1 --> state6: Rückgabe = true
+      if1 --> state5: sonst
+      state6 --> if2
+      if2 --> state7: sonst
+      if2 --> state8: Rückgabe = true
+      state5 --> fork1
+      state7 --> fork1
+      state8 --> fork1
+      fork1 --> [*]
+   }
 ```
 
 ### Aktivitätsdiagramm zur Methode _void textToPin(text: String)_
@@ -329,57 +327,56 @@ PIN ist gültig
 ```java title="ExamTask02.java" showLineNumbers
 public class ExamTask02 { // 0,5
 
-  private static int[] pin; // 0,5
+   private static int[] pin; // 0,5
 
-  public static void main(String[] args) { // 0,5
-    @SuppressWarnings("resource")
-    Scanner sc = new Scanner(System.in); // 1
+   public static void main(String[] args) { // 0,5
+      Scanner sc = new Scanner(System.in); // 1
 
-    System.out.print("Bitte PIN eingeben: "); // 0,5
-    String text = sc.next(); // 1
-    textToPin(text); // 0,5
-    if (!checkPinLength()) { // 1
-      System.out.println("Länge der PIN ist ungültig"); // 0,5
-    } else if (!checkPinValue()) { // 1
-      System.out.println("Zahlenwert der PIN ist ungültig"); // 0,5
-    } else { // 0,5
-      System.out.println("PIN ist gültig"); // 0,5
-    }
-  } // 7,5
+      System.out.print("Bitte PIN eingeben: "); // 0,5
+      String text = sc.next(); // 1
+      textToPin(text); // 0,5
+      if (!checkPinLength()) { // 1
+         System.out.println("Länge der PIN ist ungültig"); // 0,5
+      } else if (!checkPinValue()) { // 1
+         System.out.println("Zahlenwert der PIN ist ungültig"); // 0,5
+      } else { // 0,5
+         System.out.println("PIN ist gültig"); // 0,5
+      }
+   } // 7,5
 
-  private static boolean checkPinLength() { // 0,5
-    int length = pin.length; // 0,5
-    if (length < 4 || length > 8) { // 1
-      return false; // 0,5
-    }
-    return true; // 0,5
-  } // 3
+   private static boolean checkPinLength() { // 0,5
+      int length = pin.length; // 0,5
+      if (length < 4 || length > 8) { // 1
+         return false; // 0,5
+      }
+      return true; // 0,5
+   } // 3
 
-  private static boolean checkPinValue() { // 0,5
-    int length = pin.length; // 0,5
-    int total = 0; // 0,5
-    int i = 0; // 0,5
-    while (i < length) { // 1
-      int value = pin[i]; // 0,5
-      total += value; // 0,5
-      i++; // 0,5
-    }
-    if (total % 2 != 0) { // 1
-      return false; // 0,5
-    }
-    return true; // 0,5
-  } // 6,5
+   private static boolean checkPinValue() { // 0,5
+      int length = pin.length; // 0,5
+      int total = 0; // 0,5
+      int i = 0; // 0,5
+      while (i < length) { // 1
+         int value = pin[i]; // 0,5
+         total += value; // 0,5
+         i++; // 0,5
+      }
+      if (total % 2 != 0) { // 1
+         return false; // 0,5
+      }
+      return true; // 0,5
+   } // 6,5
 
-  private static void textToPin(String text) { // 0,5
-    int length = text.length(); // 0,5
-    pin = new int[length]; // 1
-    int i = 0; // 0,5
-    while (i < length) { // 1
-      char c = text.charAt(i); // 1
-      pin[i] = Integer.valueOf(c); // 1
-      i++; // 0,5
-    }
-  } // 6
+   private static void textToPin(String text) { // 0,5
+      int length = text.length(); // 0,5
+      pin = new int[length]; // 1
+      int i = 0; // 0,5
+      while (i < length) { // 1
+         char c = text.charAt(i); // 1
+         pin[i] = Integer.valueOf(c); // 1
+         i++; // 0,5
+      }
+   } // 6
 
 } // 24
 ```
@@ -464,32 +461,32 @@ Hans gewinnt
 ```java title="Player.java" showLineNumbers
 public class Player { // 0,5
 
-  private final String name; // 0,5
-  private int healthPoints; // 0,5
-  private final Dice dice; // 0,5
+   private final String name; // 0,5
+   private int healthPoints; // 0,5
+   private final Dice dice; // 0,5
 
-  public Player(String name) { // 0,5
-    this.name = name; // 0,5
-    healthPoints = 10; // 0,5
-    dice = new Dice(); // 0,5
-  } // 2
+   public Player(String name) { // 0,5
+      this.name = name; // 0,5
+      healthPoints = 10; // 0,5
+      dice = new Dice(); // 0,5
+   } // 2
 
-  public String name() { // 0,5
-    return name; // 0,5
-  } // 1
+   public String name() { // 0,5
+      return name; // 0,5
+   } // 1
 
-  public int getHealthPoints() { // 0,5
-    return healthPoints; // 0,5
-  } // 1
+   public int getHealthPoints() { // 0,5
+      return healthPoints; // 0,5
+   } // 1
 
-  public int rollTheDice() { // 0,5
-    dice.rollTheDice(); // 0,5
-    return dice.getValue(); // 1
-  } // 2
+   public int rollTheDice() { // 0,5
+      dice.rollTheDice(); // 0,5
+      return dice.getValue(); // 1
+   } // 2
 
-  public void reduceHealthPoints() { // 0,5
-    healthPoints--; // 0,5
-  } // 1
+   public void reduceHealthPoints() { // 0,5
+      healthPoints--; // 0,5
+   } // 1
 
 } // 9
 ```
@@ -497,48 +494,46 @@ public class Player { // 0,5
 ```java title="ExamTask04.java" showLineNumbers
 public class ExamTask03 { // 0,5
 
-  private static Player player1; // 0,5
-  private static Player player2; // 0,5
-  private static Scanner scanner; // 0,5
+   private static Player player1; // 0,5
+   private static Player player2; // 0,5
+   private static Scanner scanner; // 0,5
 
-  public static void main(String[] args) { // 0,5
+   public static void main(String[] args) { // 0,5
+      scanner = new Scanner(System.in); // 1
 
-    scanner = new Scanner(System.in); // 1
+      System.out.print("Spieler 1, gib bitte Deinen Namen ein: "); // 0,5
+      String name1 = scanner.nextLine(); // 1
+      player1 = new Player(name1); // 0,5
 
-    System.out.print("Spieler 1, gib bitte Deinen Namen ein: "); // 0,5
-    String name1 = scanner.nextLine(); // 1
-    player1 = new Player(name1); // 0,5
+      System.out.print("Spieler 2, gib bitte Deinen Namen ein: "); // 0,5
+      String name2 = scanner.nextLine(); // 1
+      player2 = new Player(name2); // 0,5
 
-    System.out.print("Spieler 2, gib bitte Deinen Namen ein: "); // 0,5
-    String name2 = scanner.nextLine(); // 1
-    player2 = new Player(name2); // 0,5
-
-    System.out.println();
-
-    while (player1.getHealthPoints() > 0 && player2.getHealthPoints() > 0) { // 1
-      System.out.println(player1.name() + " hat " + player1.getHealthPoints() + " Lebenspunkte"); // 1
-      System.out.println(player2.name() + " hat " + player2.getHealthPoints() + " Lebenspunkte"); // 1
-      int value1 = player1.rollTheDice(); // 1
-      System.out.println(player1.name() + " würfelt eine " + value1); // 0,5
-      int value2 = player2.rollTheDice(); // 1
-      System.out.println(player2.name() + " würfelt eine " + value2); // 0,5
-      if (value1 > value2) { // 1
-        player2.reduceHealthPoints(); // 0,5
-        System.out.println(player2.name() + " verliert einen Punkt"); // 0,5
-      } else if (value2 > value1) { // 1
-        player1.reduceHealthPoints(); // 0,5
-        System.out.println(player1.name() + " verliert einen Punkt"); // 0,5
-      }
       System.out.println();
-    }
 
-    if (player1.getHealthPoints() > player2.getHealthPoints()) { // 1
-      System.out.println(player1.name() + " gewinnt"); // 0,5
-    } else { // 0,5
-      System.out.println(player2.name() + " gewinnt"); // 0,5
-    }
+      while (player1.getHealthPoints() > 0 && player2.getHealthPoints() > 0) { // 1
+         System.out.println(player1.name() + " hat " + player1.getHealthPoints() + " Lebenspunkte"); // 1
+         System.out.println(player2.name() + " hat " + player2.getHealthPoints() + " Lebenspunkte"); // 1
+         int value1 = player1.rollTheDice(); // 1
+         System.out.println(player1.name() + " würfelt eine " + value1); // 0,5
+         int value2 = player2.rollTheDice(); // 1
+         System.out.println(player2.name() + " würfelt eine " + value2); // 0,5
+         if (value1 > value2) { // 1
+            player2.reduceHealthPoints(); // 0,5
+            System.out.println(player2.name() + " verliert einen Punkt"); // 0,5
+         } else if (value2 > value1) { // 1
+            player1.reduceHealthPoints(); // 0,5
+            System.out.println(player1.name() + " verliert einen Punkt"); // 0,5
+         }
+         System.out.println();
+      }
 
-  } // 18
+      if (player1.getHealthPoints() > player2.getHealthPoints()) { // 1
+         System.out.println(player1.name() + " gewinnt"); // 0,5
+      } else { // 0,5
+         System.out.println(player2.name() + " gewinnt"); // 0,5
+      }
+   } // 18
 
 } // 20
 ```
@@ -629,23 +624,23 @@ Zucker
 ```java title="StuffedCookie.java" showLineNumbers
 public class StuffedCookie extends Cookie { // 1
 
-  private final Recipe jam; // 0,5
+   private final Recipe jam; // 0,5
 
-  public StuffedCookie(String name, Recipe dough, Recipe jam) { // 0,5
-    super(name, dough); // 1
-    this.jam = jam; // 0,5
-  } // 2
+   public StuffedCookie(String name, Recipe dough, Recipe jam) { // 0,5
+      super(name, dough); // 1
+      this.jam = jam; // 0,5
+   } // 2
 
-  public List<Ingredient> getIngredients() { // 0,5
-    List<Ingredient> ingredients = super.getIngredients(); // 1
-    for (Ingredient i : jam.ingredients()) { // 1,5
-      if (ingredients.contains(i)) { // 1
-        continue; // 0,5
+   public List<Ingredient> getIngredients() { // 0,5
+      List<Ingredient> ingredients = super.getIngredients(); // 1
+      for (Ingredient i : jam.ingredients()) { // 1,5
+         if (ingredients.contains(i)) { // 1
+            continue; // 0,5
+         }
+         ingredients.add(i); // 0,5
       }
-      ingredients.add(i); // 0,5
-    }
-    return ingredients; // 0,5
-  } // 5,5
+      return ingredients; // 0,5
+   } // 5,5
 
 } // 9
 ```
@@ -653,26 +648,26 @@ public class StuffedCookie extends Cookie { // 1
 ```java title="CookieJar.java" showLineNumbers
 public class CookieJar { // 0,5
 
-  private final List<Cookie> cookies; // 0,5
+   private final List<Cookie> cookies; // 0,5
 
-  public CookieJar() { // 0,5
-    cookies = new ArrayList<>(); // 0,5
-  } // 1
+   public CookieJar() { // 0,5
+      cookies = new ArrayList<>(); // 0,5
+   } // 1
 
-  public void addCookie(Cookie cookie) { // 0,5
-    cookies.add(cookie); // 0,5
-  } // 1
+   public void addCookie(Cookie cookie) { // 0,5
+      cookies.add(cookie); // 0,5
+   } // 1
 
-  public StuffedCookie getStuffedCookie() { // 0,5
-    StuffedCookie stuffedCookie; // 0,5
-    for (Cookie c : cookies) { // 1
-      if (c instanceof StuffedCookie s) { // 1
-        cookies.remove(s); // 1
-        stuffedCookie = s; // 0,5
+   public StuffedCookie getStuffedCookie() { // 0,5
+      StuffedCookie stuffedCookie; // 0,5
+      for (Cookie c : cookies) { // 1
+         if (c instanceof StuffedCookie s) { // 1
+            cookies.remove(s); // 1
+            stuffedCookie = s; // 0,5
+         }
       }
-    }
-    return stuffedCookie; // 0,5
-  } // 5
+      return stuffedCookie; // 0,5
+   } // 5
 
 } // 8
 ```
@@ -680,19 +675,19 @@ public class CookieJar { // 0,5
 ```java title="IngredientsReader.java" showLineNumbers
 public class IngredientsReader { // 0,5
 
-  public static List<Ingredient> readIngredients(File file) throws FileNotFoundException { // 0,5
-    Scanner sc = new Scanner(file); // 1
-    List<Ingredient> ingredients = new ArrayList<>(); // 0,5
+   public static List<Ingredient> readIngredients(File file) throws FileNotFoundException { // 0,5
+      Scanner sc = new Scanner(file); // 1
+      List<Ingredient> ingredients = new ArrayList<>(); // 0,5
 
-    while (sc.hasNextLine()) { // 1
-      String line = sc.nextLine(); // 0,5
-      Ingredient i = new Ingredient(line); // 0,5
-      ingredients.add(i); // 0,5
-    }
+      while (sc.hasNextLine()) { // 1
+         String line = sc.nextLine(); // 0,5
+         Ingredient i = new Ingredient(line); // 0,5
+         ingredients.add(i); // 0,5
+      }
 
-    sc.close(); // 0,5
-    return ingredients; // 0,5
-  } // 5,5
+      sc.close(); // 0,5
+      return ingredients; // 0,5
+   } // 5,5
 
 } // 6
 ```

@@ -13,18 +13,18 @@ Größe auf Basis eines Feldes dar und bietet hilfreiche Methoden zum Hinzufüge
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
-    List<String> list = new ArrayList<>();
-    list.add("Hans");
-    list.add("Peter");
-    list.add("Lisa");
+   public static void main(String[] args) {
+      ArrayList<String> names = new ArrayList<>();
+      names.add("Hans");
+      names.add("Peter");
+      names.add("Lisa");
 
-    System.out.println(list.size());
-    System.out.println(list.get(0));
-    list.set(0, "Max");
-    list.add("Heidi");
-    list.remove(0);
-  }
+      System.out.println(names.size());
+      System.out.println(names.get(0));
+      names.set(0, "Max");
+      names.add("Heidi");
+      names.remove(0);
+   }
 
 }
 ```

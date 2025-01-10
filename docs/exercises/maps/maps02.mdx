@@ -5,8 +5,9 @@ description: ''
 
 import Exercise from '@site/src/components/Exercise';
 
-- Erstelle die Klassen `Author`, `Book`, `BookCollection` und
-  `DuplicateKeyException` anhand des abgebildeten Klassendiagramms
+- Erstelle die Ausnahmenklasse `DuplicateKeyException`
+- Erstelle die Klassen `Author`, `Book` und `BookCollection` anhand des
+  abgebildeten Klassendiagramms
 - Erstelle eine ausführbare Klasse, welche eine Büchersammlung mit mehreren
   Autoren und Büchern erzeugt und den fleißigsten Autoren auf der Konsole
   ausgibt
@@ -17,7 +18,6 @@ import Exercise from '@site/src/components/Exercise';
 classDiagram
     BookCollection o-- Author
     BookCollection o-- Book
-    DuplicateKeyException <.. BookCollection : throws
 
     class Author {
         <<record>>
@@ -36,10 +36,6 @@ classDiagram
         +addBook(author: Author, book: Book) void
         +getMostDiligentAuthor() Author
         +getBookByTitle(title: String) Book
-    }
-
-    class DuplicateKeyException {
-    	<<exception>>
     }
 ```
 

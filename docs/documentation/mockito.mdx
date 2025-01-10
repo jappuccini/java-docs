@@ -80,23 +80,23 @@ Simulieren von Objekten und Prüfen von Methodenaufrufen ermöglichen.
 @Data
 public class StudentClass {
 
-  private List<Student> students;
+   private List<Student> students;
 
-  public void addStudent(Student student) {
-    students.add(student);
-  }
+   public void addStudent(Student student) {
+      students.add(student);
+   }
 
-  public Optional<Student> getStudentWithBestAverageGrade() {
-    Student studentWithBestAverageGrade = null;
-    double bestAverageGrade = Double.MAX_VALUE;
-    for (Student s : students) {
-      if (s.getAverageGrade() < bestAverageGrade) {
-        studentWithBestAverageGrade = s;
-        bestAverageGrade = s.getAverageGrade();
+   public Optional<Student> getStudentWithBestAverageGrade() {
+      Student studentWithBestAverageGrade = null;
+      double bestAverageGrade = Double.MAX_VALUE;
+      for (Student s : students) {
+         if (s.getAverageGrade() < bestAverageGrade) {
+            studentWithBestAverageGrade = s;
+            bestAverageGrade = s.getAverageGrade();
+         }
       }
-    }
-    return Optional.ofNullable(studentWithBestAverageGrade);
-  }
+      return Optional.ofNullable(studentWithBestAverageGrade);
+   }
 
 }
 ```
@@ -108,21 +108,21 @@ public class StudentClass {
 @Data
 public class Student {
 
-  private final int id;
-  private final String name;
-  private final List<Double> grades;
+   private final int id;
+   private final String name;
+   private final List<Double> grades;
 
-  public void addGrade(double grade) {
-    grades.add(grade);
-  }
+   public void addGrade(double grade) {
+      grades.add(grade);
+   }
 
-  public double getAverageGrade() {
-    double total = 0;
-    for (double grade : grades) {
-      total += grade;
-    }
-    return total / grades.size();
-  }
+   public double getAverageGrade() {
+      double total = 0;
+      for (double grade : grades) {
+         total += grade;
+      }
+      return total / grades.size();
+   }
 
 }
 ```
@@ -133,32 +133,32 @@ public class Student {
 ```java title="StudentClassTest.java" showLineNumbers
 public class StudentClassTest {
 
-  @Mock
-  private Student studentMock;
-  private Student studentSpy;
-  private StudentClass studentClass;
+   @Mock
+   private Student studentMock;
+   private Student studentSpy;
+   private StudentClass studentClass;
 
-  @BeforeEach
-  void setUp() {
-    MockitoAnnotations.openMocks(this);
+   @BeforeEach
+   void setUp() {
+      MockitoAnnotations.openMocks(this);
 
-    studentSpy = spy(new Student(1, "Hans Maier", new ArrayList<>()));
+      studentSpy = spy(new Student(1, "Hans Maier", new ArrayList<>()));
 
-    studentClass = new StudentClass(new ArrayList<>());
-    studentClass.addStudent(studentMock);
-    studentClass.addStudent(studentSpy);
-  }
+      studentClass = new StudentClass(new ArrayList<>());
+      studentClass.addStudent(studentMock);
+      studentClass.addStudent(studentSpy);
+   }
 
-  @Test
-  void testGetStudentWithBestAverageGrade() {
-    when(studentMock.getAverageGrade()).thenReturn(2.2);
-    doReturn(1.5).when(studentSpy).getAverageGrade();
+   @Test
+   void testGetStudentWithBestAverageGrade() {
+      when(studentMock.getAverageGrade()).thenReturn(2.2);
+      doReturn(1.5).when(studentSpy).getAverageGrade();
 
-    assertEquals(Optional.of(studentSpy), studentClass.getStudentWithBestAverageGrade());
+      assertEquals(Optional.of(studentSpy), studentClass.getStudentWithBestAverageGrade());
 
-    verify(studentMock, atLeast(1)).getAverageGrade();
-    verify(studentSpy, atLeast(1)).getAverageGrade();
-  }
+      verify(studentMock, atLeast(1)).getAverageGrade();
+      verify(studentSpy, atLeast(1)).getAverageGrade();
+   }
 
 }
 ```

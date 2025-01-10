@@ -19,17 +19,17 @@ Anweisungsblock nach `else` ausgeführt.
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
-    int a = 3, b = 4, c;
+   public static void main(String[] args) {
+      int a = 3, b = 4, c;
 
-    if (a > b) {
-      c = a - b;
-    } else {
-      c = b - a;
-    }
+      if (a > b) {
+         c = a - b;
+      } else {
+         c = b - a;
+      }
 
-    System.out.println(c);
-  }
+      System.out.println(c);
+   }
 
 }
 ```
@@ -49,21 +49,21 @@ sogenannten kaskadierten Verzweigung.
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
-    int amount = 6;
+   public static void main(String[] args) {
+      int amount = 6;
 
-    if (amount >= 10) {
-      System.out.println("viel");
-    } else if (amount == 0) {
-      System.out.println("nichts");
-    } else if (amount > 0 && amount <= 5) {
-      System.out.println("wenig");
-    } else if (amount < 0) {
-      System.out.println("nicht definiert");
-    } else {
-      System.out.println("irgendwas zwischen wenig und viel");
-    }
-  }
+      if (amount >= 10) {
+         System.out.println("viel");
+      } else if (amount == 0) {
+         System.out.println("nichts");
+      } else if (amount > 0 && amount <= 5) {
+         System.out.println("wenig");
+      } else if (amount < 0) {
+         System.out.println("nicht definiert");
+      } else {
+         System.out.println("irgendwas zwischen wenig und viel");
+      }
+   }
 
 }
 ```
@@ -77,23 +77,23 @@ bedingte Zuweisungen auch eine Kurzschreibweise.
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
-    int x = 1;
-    int y = 2;
-    int z;
+   public static void main(String[] args) {
+      int x = 1;
+      int y = 2;
+      int z;
 
-    /* ausführliche Schreibweise */
-    if (x > y) {
-      z = 3;
-    } else {
-      z = 4;
-    }
-    System.out.println(z);
+      /* ausführliche Schreibweise */
+      if (x > y) {
+         z = 3;
+      } else {
+         z = 4;
+      }
+      System.out.println(z);
 
-    /* Kurzschreibweise */
-    z = (x > y) ? 3 : 4;
-    System.out.println(z);
-  }
+      /* Kurzschreibweise */
+      z = (x > y) ? 3 : 4;
+      System.out.println(z);
+   }
 
 }
 ```
@@ -116,25 +116,25 @@ wird immer dann ausgeführt, wenn keiner der aufgeführten Fälle eintritt.
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
-    String color = "r";
-    switch (color) {
-      case "r":
-      case "R":
-        System.out.println("rot");
-        break;
-      case "g":
-      case "G":
-        System.out.println("grün");
-        break;
-      case "b":
-      case "B":
-        System.out.println("blau");
-        break;
-      default:
-        break;
-    }
-  }
+   public static void main(String[] args) {
+      String color = "r";
+      switch (color) {
+         case "r":
+         case "R":
+            System.out.println("rot");
+            break;
+         case "g":
+         case "G":
+            System.out.println("grün");
+            break;
+         case "b":
+         case "B":
+            System.out.println("blau");
+            break;
+         default:
+            break;
+      }
+   }
 
 }
 ```
@@ -145,18 +145,18 @@ switch-case-Anweisung und ermöglichen eine elegantere Syntax.
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
-    String color = "r";
+   public static void main(String[] args) {
+      String color = "r";
 
-    String colorText = switch (color) {
-      case "r", "R" -> "rot";
-      case "g", "G" -> "grün";
-      case "b", "B" -> "blau";
-      default -> "";
-    };
+      String colorText = switch (color) {
+         case "r", "R" -> "rot";
+         case "g", "G" -> "grün";
+         case "b", "B" -> "blau";
+         default       -> "";
+      };
 
-    System.out.println(colorText);
-  }
+      System.out.println(colorText);
+   }
 
 }
 ```

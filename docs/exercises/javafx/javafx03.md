@@ -40,16 +40,47 @@ classDiagram
 
 ```mermaid
 flowchart LR
-	gridpane[GridPane\nfx:controller=Pfad.Controller]
-	label1[Label\ntext=Anfangskapital\nGridPane.columnIndex=0\nGridPane.rowIndex=0]
-	label2[Label\ntext=Zinssatz\nGridPane.columnIndex=0\nGridPane.rowIndex=1]
-	label3[Label\ntext=Laufzeit\nGridPane.columnIndex=0\nGridPane.rowIndex=2]
-	label4[Label\ntext=Zinsen\nGridPane.columnIndex=0\nGridPane.rowIndex=3]
-	label5[Label\nfx:id=interestLabel\nGridPane.columnIndex=1\nGridPane.rowIndex=3]
-	textfield1[TextField\nfx:id=initialCapitalTextField\nGridPane.columnIndex=1\nGridPane.rowIndex=0]
-	textfield2[TextField\nfx:id=interestRateTextField\nGridPane.columnIndex=1\nGridPane.rowIndex=1]
-	textfield3[TextField\nfx:id=runningTimeTextField\nGridPane.columnIndex=1\nGridPane.rowIndex=2]
-	button[Button\ntext=Zinsen berechnen\nonAction=#calculateInterest\nGridPane.columnIndex=0\nGridPane.rowIndex=4\nGridPane.columnSpan=2\nGridPane.halignment=CENTER]
+	gridpane[GridPane
+	         fx:controller=Pfad.Controller]
+	label1[Label
+	       text=Anfangskapital
+	       GridPane.columnIndex=0
+	       GridPane.rowIndex=0]
+	label2[Label
+	       text=Zinssatz
+	       GridPane.columnIndex=0
+	       GridPane.rowIndex=1]
+	label3[Label
+	       text=Laufzeit
+	       GridPane.columnIndex=0
+	       GridPane.rowIndex=2]
+	label4[Label
+	       text=Zinsen
+	       GridPane.columnIndex=0
+	       GridPane.rowIndex=3]
+	label5[Label
+	       fx:id=interestLabel
+	       GridPane.columnIndex=1
+	       GridPane.rowIndex=3]
+	textfield1[TextField
+	           fx:id=initialCapitalTextField
+	           GridPane.columnIndex=1
+	           GridPane.rowIndex=0]
+	textfield2[TextField
+	           fx:id=interestRateTextField
+	           GridPane.columnIndex=1
+	           GridPane.rowIndex=1]
+	textfield3[TextField
+	           fx:id=runningTimeTextField
+	           GridPane.columnIndex=1
+	           GridPane.rowIndex=2]
+	button[Button
+	           text=Zinsen berechnen
+	           onAction=#calculateInterest
+	           GridPane.columnIndex=0
+	           GridPane.rowIndex=4
+	           GridPane.columnSpan=2
+	           GridPane.halignment=CENTER]
 
     gridpane --> label1
     gridpane --> textfield1

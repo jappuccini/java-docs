@@ -77,12 +77,12 @@ Ausnahmenklasse definiert. Ausnahmenklassen sollten dabei immer von der Klasse
 `Exception` oder einer ihrer Unterklassen abgeleitet werden, nicht von der
 Klasse `Error`.
 
-```java title="QuxException.java" showLineNumbers
-public class QuxException extends Exception {
+```java title="InvalidValueException.java" showLineNumbers
+public class InvalidValueException extends Exception {
 
-  public QuxException() {}
+   public InvalidValueException() {}
 
-  public QuxException(String message) {}
+   public InvalidValueException(String message) {}
 
 }
 ```
@@ -93,13 +93,18 @@ Mit dem Schlüsselwort `throw` kann innerhalb einer Methode eine Ausnahme
 ausgelöst werden. Die Methode, in der die Ausnahme ausgelöst wird, muss mit dem
 Schlüsselwort `throws` die Ausnahmenklasse angeben, die ausgelöst werden kann.
 
-```java title="Foo.java" showLineNumbers
-public class Foo {
-
-  public void bar() throws QuxException {
-    throw new QuxException();
-  }
-
+```java title="Computer.java (Auszug)" showLineNumbers
+public abstract class Computer {
+   ...
+   public Computer(String description, Cpu cpu, int memoryInGb) throws InvalidValueException {
+      if (memoryInGb <= 0) {
+         throw new InvalidValueException();
+      }
+      this.description = description;
+      this.cpu = cpu;
+      this.memoryInGb = memoryInGb;
+   }
+   ...
 }
 ```
 
@@ -110,17 +115,15 @@ nächsthöhere Ebene weitergegeben. Um eine Ausnahme weiterzuleiten, muss in der
 weiterleitenden Methode mit `throws` die Ausnahme angegeben werden, die
 ausgelöst werden kann.
 
-```java title="Foo.java" showLineNumbers
-public class Foo {
-
-  public void bar() throws QuxException {
-    throw new QuxException();
-  }
-
-  public void baz() throws QuxException {
-    bar();
-  }
-
+```java title="Notebook.java (Auszug)" showLineNumbers
+public final class Notebook extends Computer implements Comparable<Notebook> {
+   ...
+   public Notebook(String description, Cpu cpu, int memoryInGb, double screenSizeInInches)
+         throws InvalidValueException {
+      super(description, cpu, memoryInGb);
+      this.screenSizeInInches = screenSizeInInches;
+   }
+   ...
 }
 ```
 
@@ -135,14 +138,13 @@ muss angegeben werden, welche Ausnahme(n) abgefangen werden soll(en).
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
-    try {
-      Foo foo = new Foo();
-      foo.bar();
-    } catch (QuxException e) {
-      /* Fehlerbehandlung */
-    }
-  }
+   public static void main(String[] args) {
+      try {
+         Notebook notebook = new Notebook("Mein Gaming Laptop", new Cpu(4.7, 8), 32, 16);
+      } catch (InvalidValueException e) {
+         System.err.println(e.getMessage());
+      }
+   }
 
 }
 ```

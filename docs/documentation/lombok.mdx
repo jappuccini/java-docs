@@ -45,9 +45,9 @@ Setter und Getter sowie die Object-Methoden generiert.
 @ToString
 public class Student {
 
-  public final int id;
-  public final String name;
-  public double averageGrade;
+   public final int id;
+   public final String name;
+   public double averageGrade;
 
 }
 ```
@@ -58,16 +58,16 @@ public class Student {
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
+   public static void main(String[] args) {
 
-    Student student1 = new Student("8172534", "Hans Maier");
-    student1.setAverageGrade(2.2);
-    System.out.println(student1.getName());
+      Student student1 = new Student("8172534", "Hans Maier");
+      student1.setAverageGrade(2.2);
+      System.out.println(student1.getName());
 
-    Student student2 = new Student("9167121", "Lisa Müller", 1.8);
-    System.out.println(student2);
+      Student student2 = new Student("9167121", "Lisa Müller", 1.8);
+      System.out.println(student2);
 
-  }
+   }
 
 }
 ```

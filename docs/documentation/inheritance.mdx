@@ -31,16 +31,16 @@ Attribute und Methoden der Oberklasse zugreifen.
 
 ```java title="Computer.java (Auszug)" showLineNumbers
 public class Computer {
-  ...
-  protected CPU cpu;
-  protected int memoryInGB;
+   ...
+   protected Cpu cpu;
+   protected int memoryInGb;
 
-  public Computer(String description, CPU cpu, int memoryInGB) {
-    this.description = description;
-    this.cpu = cpu;
-    this.memoryInGB = memoryInGB;
-  }
-  ...
+   public Computer(String description, Cpu cpu, int memoryInGb) {
+      this.description = description;
+      this.cpu = cpu;
+      this.memoryInGb = memoryInGb;
+   }
+   ...
 }
 ```
 
@@ -50,16 +50,16 @@ public class Computer {
 ```java title="Notebook.java" showLineNumbers
 public class Notebook extends Computer {
 
-  private final double screenSizeInInches;
+   private final double screenSizeInInches;
 
-  public Notebook(String description, CPU cpu, int memoryInGB, double screenSizeInInches) {
-    super(description, cpu, mainMemoryInGB);
-    this.screenSizeInInches = screenSizeInInches;
-  }
+   public Notebook(String description, Cpu cpu, int memoryInGb, double screenSizeInInches) {
+      super(description, cpu, memoryInGb);
+      this.screenSizeInInches = screenSizeInInches;
+   }
 
-  public double getScreenSizeInInches() {
-    return screenSizeInInches;
-  }
+   public double getScreenSizeInInches() {
+      return screenSizeInInches;
+   }
 
 }
 ```
@@ -87,16 +87,17 @@ aufgerufen werden.
 
 ```java title="Computer.java (Auszug)" showLineNumbers
 public class Computer {
-  ...
-  public ArrayList<String> getSpecification() {
-    ArrayList<String> specification = new ArrayList<>();
-    specification.add("description: " + description);
-    specification.add("cpu: " + cpu);
-    specification.add("memoryInGB: " + memoryInGB);
-    return specification;
-  }
-  ...
+   ...
+   public ArrayList<String> getSpecification() {
+      ArrayList<String> specification = new ArrayList<>();
+      specification.add("description: " + description);
+      specification.add("cpu: " + cpu);
+      specification.add("memoryInGb: " + memoryInGb);
+      return specification;
+   }
+   ...
 }
+
 ```
 
   </TabItem>
@@ -104,14 +105,14 @@ public class Computer {
 
 ```java title="Notebook.java (Auszug)" showLineNumbers
 public class Notebook extends Computer {
-  ...
-  @Override
-  public ArrayList<String> getSpecification() {
-    ArrayList<String> specification = super.getSpecification();
-    specification.add("screenSizeInInches: " + screenSizeInInches);
-    return specification;
-  }
-  ...
+   ...
+   @Override
+   public ArrayList<String> getSpecification() {
+      ArrayList<String> specification = super.getSpecification();
+      specification.add("screenSizeInInches: " + screenSizeInInches);
+      return specification;
+   }
+   ...
 }
 ```
 

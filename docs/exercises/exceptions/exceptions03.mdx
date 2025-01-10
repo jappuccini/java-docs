@@ -5,8 +5,8 @@ description: ''
 
 import Exercise from '@site/src/components/Exercise';
 
-- Erstelle die Ausnhamenklassen `SalaryIncreaseTooHighException` sowie
-  `SalaryDecreaseException` anhand des abgebildeten Klassendiagramms
+- Erstelle die Ausnhamenklassen `SalaryIncreaseTooHighException` und
+  `SalaryDecreaseException`
 - Passe die Klasse `Employee` anhand der Hinweise an
 - Passe die ausführbare Klasse aus Übungsaufgabe
   [ClassDiagrams04](../class-diagrams/class-diagrams04) so an, dass ein oder
@@ -17,8 +17,6 @@ import Exercise from '@site/src/components/Exercise';
 classDiagram
     Employee --o Company
     Employee o-- Person
-    SalaryIncreaseTooHighException <.. Employee : throws
-    SalaryDecreaseException <.. Employee : throws
 
     class Company {
         -name: String #123;final#125;
@@ -48,14 +46,6 @@ classDiagram
         +setSalaryInEuro(salaryInEuro: int) void
         +getSalaryInEuro() int
         +toString() String
-    }
-
-    class SalaryIncreaseTooHighException {
-    	<<exception>>
-    }
-
-    class SalaryDecreaseException {
-    	<<exception>>
     }
 ```
 

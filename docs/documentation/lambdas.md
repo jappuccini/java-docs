@@ -16,15 +16,15 @@ getrennt vom Pfeiloperator `->` notiert.
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
-    List<String> names = new ArrayList<>();
-    names.add("Hans");
-    names.add("Peter");
-    names.add("Lisa");
+   public static void main(String[] args) {
+      List<String> names = new ArrayList<>();
+      names.add("Hans");
+      names.add("Peter");
+      names.add("Lisa");
 
-    Collections.sort(names, (n1, n2) -> n2.compareTo(n1));
-    names.forEach(n -> System.out.println(n));
-  }
+      Collections.sort(names, (n1, n2) -> n2.compareTo(n1));
+      names.forEach(n -> System.out.println(n));
+   }
 
 }
 ```
@@ -58,15 +58,15 @@ Methodennamen auf der recht Seite getrennt.
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
-    List<Integer> numbers = new ArrayList<>();
-    numbers.add(256);
-    numbers.add(314);
-    numbers.add(127);
+   public static void main(String[] args) {
+      List<Integer> numbers = new ArrayList<>();
+      numbers.add(256);
+      numbers.add(314);
+      numbers.add(127);
 
-    numbers.stream().map(n -> n.byteValue()).forEach(b -> System.out.println(b)); // Lambda-Ausdruck
-    numbers.stream().map(Integer::byteValue).forEach(System.out::println); // Methodenreferenz
-  }
+      numbers.stream().map(n -> n.byteValue()).forEach(b -> System.out.println(b));
+      numbers.stream().map(Integer::byteValue).forEach(System.out::println);
+   }
 
 }
 ```

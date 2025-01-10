@@ -50,9 +50,13 @@ classDiagram
 
 ```mermaid
 flowchart LR
-	vbox[VBox\nfx:controller=Pfad.Controller]
-	imageview[ImageView\nfx:id=diceImageView]
-	button[Button\ntext=Würfeln\nonAction=#rollTheDice]
+	vbox[VBox
+	     fx:controller=Pfad.Controller]
+	imageview[ImageView
+	          fx:id=diceImageView]
+	button[Button
+	       text=Würfeln
+	       onAction=#rollTheDice]
 
     vbox --> imageview
     vbox --> button
