@@ -52,10 +52,15 @@ classDiagram
 
 ```mermaid
 flowchart LR
-	vbox[VBox\nfx:controller=Pfad.Controller]
-	textfield[TextField\nfx:id=inputTextField]
-	button[Button\ntext=Berechnen\nonAction=#calculate]
-	label[Label\nfx:id=outputLabel]
+	vbox[VBox
+	     fx:controller=Pfad.Controller]
+	textfield[TextField
+	          fx:id=inputTextField]
+	button[Button
+	       text=Berechnen
+	       onAction=#calculate]
+	label[Label
+	      fx:id=outputLabel]
 
     vbox --> textfield
     vbox --> button

@@ -31,11 +31,11 @@ erfolgt durch [Konstruktoren](classes#definition-von-konstruktoren).
 
 ```java title="Computer.java (Auszug)" showLineNumbers
 public class Computer {
-  ...
-  private final String description;
-  private CPU cpu;
-  private int memoryInGB;
-  ...
+   ...
+   private final String description;
+   private Cpu cpu;
+   private int memoryInGb;
+   ...
 }
 ```
 
@@ -62,27 +62,27 @@ Schlüsselwort `void` kenntlich machen.
 
 ```java title="Computer.java (Auszug)" showLineNumbers
 public class Computer {
-  ...
-  public CPU getCpu() {
-    return cpu;
-  }
+   ...
+   public Cpu getCpu() {
+      return cpu;
+   }
 
-  public String getDescription() {
-    return description;
-  }
+   public String getDescription() {
+      return description;
+   }
 
-  public int getMemoryInGB() {
-    return memoryInGB;
-  }
+   public int getMemoryInGb() {
+      return memoryInGb;
+   }
 
-  public void setCpu(CPU cpu) {
-    this.cpu = cpu;
-  }
+   public void setCpu(Cpu cpu) {
+      this.cpu = cpu;
+   }
 
-  public void setMemoryInGB(int memoryInGB) {
-    this.memoryInGB = memoryInGB;
-  }
-  ...
+   public void setMemoryInGb(int memoryInGb) {
+      this.memoryInGb = memoryInGb;
+   }
+   ...
 }
 ```
 
@@ -95,15 +95,15 @@ Ergebnisse liefern kann.
 
 ```java title="Computer.java (Auszug)" showLineNumbers
 public class Computer {
-  ...
-  public void setCpu(CPU cpu) {
-    this.cpu = cpu;
-  }
+   ...
+   public void setCpu(Cpu cpu) {
+      this.cpu = cpu;
+   }
 
-  public void setCpu(double powerInGHz, int numberOfCores) {
-    cpu = new CPU(powerInGHz, numberOfCores);
-  }
-  ...
+   public void setCpu(double powerInGhz, int numberOfCores) {
+      cpu = new Cpu(powerInGhz, numberOfCores);
+   }
+   ...
 }
 ```
 
@@ -129,17 +129,17 @@ löscht.
 
 ```java title="Computer.java (Auszug)" showLineNumbers
 public class Computer {
-  ...
-  public Computer(String description) {
-    this.description = description;
-  }
+   ...
+   public Computer(String description) {
+      this.description = description;
+   }
 
-  public Computer(String description, CPU cpu, int memoryInGB) {
-    this(description);
-    this.cpu = cpu;
-    this.memoryInGB = memoryInGB;
-  }
-  ...
+   public Computer(String description, Cpu cpu, int memoryInGb) {
+      this(description);
+      this.cpu = cpu;
+      this.memoryInGb = memoryInGb;
+   }
+   ...
 }
 ```
 
@@ -166,18 +166,18 @@ d.h. der der Zugriff bzw. Aufruf erfolgt über den Klassennamen.
 
 ```java title="Computer.java (Auszug)" showLineNumbers
 public class Computer {
-  ...
-  private static int numberOfComputers;
+   ...
+   private static int numberOfComputers;
 
-  public Computer(String description) {
-    this.description = description;
-    numberOfComputers++;
-  }
+   public Computer(String description) {
+      this.description = description;
+      numberOfComputers++;
+   }
 
-  public static int getNumberOfComputers() {
-    return numberOfComputers;
-  }
-  ...
+   public static int getNumberOfComputers() {
+      return numberOfComputers;
+   }
+   ...
 }
 ```
 

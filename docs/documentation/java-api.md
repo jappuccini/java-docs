@@ -54,30 +54,30 @@ Dokumentation.
  *
  */
 public class Computer {
-  ...
-  /**
-   * Central Processing Unit
-   */
-  private CPU cpu;
+   ...
+   /**
+    * Central Processing Unit
+    */
+   private Cpu cpu;
 
-  /**
-   * Returns the Central Processing Unit (CPU) of this Computer
-   *
-   * @return the Central Processing Unit
-   */
-  public CPU getCpu() {
-    return cpu;
-  }
+   /**
+    * Returns the Central Processing Unit (CPU) of this Computer
+    *
+    * @return the Central Processing Unit
+    */
+   public Cpu getCpu() {
+      return cpu;
+   }
 
-  /**
-   * Sets the Central Processing Unit of this Computer with the incoming data
-   *
-   * @param powerInGHz Power of the CPU in GHz
-   * @param numberOfCores Number of Cores
-   */
-  public void setCpu(double powerInGHz, int numberOfCores) {
-    cpu = new CPU(powerInGHz, numberOfCores);
-  }
-  ...
+   /**
+    * Sets the Central Processing Unit of this Computer with the incoming data
+    *
+    * @param powerInGhz Power of the CPU in GHz
+    * @param numberOfCores Number of Cores
+    */
+   public void setCpu(double powerInGhz, int numberOfCores) {
+      cpu = new Cpu(powerInGhz, numberOfCores);
+   }
+   ...
 }
 ```

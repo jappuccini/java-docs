@@ -37,8 +37,8 @@ classDiagram
         brand: Brand
         conncetionType: ConnectionType
         numberOfCameras: int
-        batteryCapacityInMAh: int
-        cpuPowerInGHz: double
+        batteryCapacityInMah: int
+        cpuPowerInGhz: double
         priceInEuro: double
     }
 

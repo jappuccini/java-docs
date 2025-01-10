@@ -14,51 +14,52 @@ beider Methoden gibt die Ordnung der zu vergleichenden Objekte an:
 - Rückgabewert gleich Null: beide Objekte sind gleich groß
 - Rückgabewert größer Null: das Vergleichsobjekt ist kleiner
 
-Objekte der Klasse `Foo` können durch die Implementierung der Methode
+Objekte der Klasse `Notebook` können durch die Implementierung der Methode
 `int compareTo(o: T)` der Schnittstelle `Comparable<T>` miteinander verglichen
 werden.
 
-```java title="Container.java" showLineNumbers
-public class Container implements Comparable<Container> {
+```java title="Notebook.java (Auszug)" showLineNumbers
+public final class Notebook extends Computer implements Comparable<Notebook> {
+   ...
+   @Override
+   public int compareTo(Notebook o) {
+      return Integer.compare(o.memoryInGb, memoryInGb);
+   }
+   ...
+}
+```
 
-  private String value;
+Die Klasse `NotebookByPowerInGhzComparator` ermöglicht das Vergleichen von
+Objekten der Klasse `Notebook` anhand der Prozessorleistung.
 
-  public Container(String value) {
-    this.value = value;
-  }
-
-  public void setValue(String value) {
-    this.value = value;
-  }
-
-  public String getValue() {
-    return value;
-  }
-
-  @Override
-  public int compareTo(Container o) {
-    return value.compareTo(o.value);
-  }
-
+```java title="NotebookByPowerInGhzComparator.java" showLineNumbers
+public class NotebookByPowerInGhzComparator implements Comparator<Notebook> {
+   ...
+   @Override
+   public int compare(Notebook o1, Notebook o2) {
+      return Integer.compare(o1.cpu().powerInGhz(), o2.cpu.powerInGhz());
+   }
+   ...
 }
 ```
 
 In der main-Methode der Startklasse wird mit Hilfe der statischen Methode
 `void sort(list: List<T>)` der Klasse `Collections` eine Liste mit Objekten der
-Klasse `Foo` sortiert. Aufgrund der Implementierung der compareTo-Methode wird
-die Liste aufsteigend nach dem Attribut `bar` sortiert.
+Klasse `Notebook` sortiert. Aufgrund der Implementierung der compareTo-Methode
+wird die Liste zunächst absteigend nach dem Attribut `memoryInGb` sortiert.
+Anschließend wird die Liste aufsteigend nach der Prozessorleistung sortiert.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
-    List<Container> containers = new ArrayList<>();
-    containers.add(new Container("Winter"));
-    containers.add(new Container("is"));
-    containers.add(new Container("Coming"));
+   public static void main(String[] args) {
+      List<Notebook> notebooks = new ArrayList<>();
+      notebooks.add(new Notebook("Mein Office Laptop", new Cpu(3.5, 8), 16, 14));
+      notebooks.add(new Notebook("Mein Gaming Laptop", new Cpu(4.7, 8), 32, 16));
 
-    Collections.sort(containers);
-  }
+      Collections.sort(notebooks);
+      Collections.sort(notebooks, new NotebookByPowerInGhzComparator());
+   }
 
 }
 ```

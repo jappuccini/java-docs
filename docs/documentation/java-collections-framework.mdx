@@ -101,17 +101,17 @@ definiert; diese bietet die Methoden `boolean hasNext()`, `E next()` und
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
+   public static void main(String[] args) {
 
-    List<String> names = List.of("Hans", "Peter", "Lisa");
+      List<String> names = List.of("Hans", "Peter", "Lisa");
 
-    Iterator<String> iterator = names.iterator();
-    while (iterator.hasNext()) {
-      String name = iterator.next();
-      System.out.println(name);
-    }
+      Iterator<String> iterator = names.iterator();
+      while (iterator.hasNext()) {
+         String name = iterator.next();
+         System.out.println(name);
+      }
 
-  }
+   }
 
 }
 ```
@@ -123,21 +123,21 @@ bezeichnet. Beim Kompilieren werden for-each-Schleifen um Iteratoren ergänzt.
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
+   public static void main(String[] args) {
 
-    List<String> names = List.of("Hans", "Peter", "Lisa");
+      List<String> names = List.of("Hans", "Peter", "Lisa");
 
-    for (Iterator<String> iterator = names.iterator(); iterator.hasNext();) {
-      String name = iterator.next();
-      System.out.println(name);
-    }
+      for (Iterator<String> iterator = names.iterator(); iterator.hasNext();) {
+         String name = iterator.next();
+         System.out.println(name);
+      }
 
-    /* Kurzschreibweise */
-    for (String name: names) {
-      System.out.println(name);
-    }
+      /* Kurzschreibweise */
+      for (String name : names) {
+         System.out.println(name);
+      }
 
-  }
+   }
 
 }
 ```

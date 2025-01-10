@@ -30,27 +30,27 @@ zur Verfügung.
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
+   public static void main(String[] args) {
 
-    Map<Integer, String> foos = new HashMap<>();
-    foos.put(834, "Hans");
-    foos.put(269, "Peter");
-    foos.put(771, "Lisa");
+      Map<Integer, String> persons = new HashMap<>();
+      persons.put(829134, "Hans");
+      persons.put(209769, "Peter");
+      persons.put(723871, "Lisa");
 
-    for (Entry<Integer, String> entry : foos.entrySet()) {
-      System.out.println(entry.getKey());
-      System.out.println(entry.getValue());
-    }
+      for (Entry<Integer, String> entry : persons.entrySet()) {
+         System.out.println(entry.getKey());
+         System.out.println(entry.getValue());
+      }
 
-    for (Integer i : foos.keySet()) {
-      System.out.println(i);
-    }
+      for (Integer id : persons.keySet()) {
+         System.out.println(id);
+      }
 
-    for (String s : foos.values()) {
-      System.out.println(s);
-    }
+      for (String name : persons.values()) {
+         System.out.println(name);
+      }
 
-  }
+   }
 
 }
 ```

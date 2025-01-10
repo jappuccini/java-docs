@@ -26,15 +26,15 @@ Information.
 ```java title="Box.java" showLineNumbers
 public class Box {
 
-  private Object content;
+   private Object content;
 
-  public void set(Object content) {
-    this.content = content;
-  }
+   public void set(Object content) {
+      this.content = content;
+   }
 
-  public Object get() {
-    return content;
-  }
+   public Object get() {
+      return content;
+   }
 
 }
 ```
@@ -46,12 +46,12 @@ in eine Zeichenkette führt erst zur Laufzeit zu einem Fehler.
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
-    Box box = new Box();
-    box.set(5);
-    String i = (String) box.get(); // Laufzeitfehler
-    System.out.println(i);
-  }
+   public static void main(String[] args) {
+      Box box = new Box();
+      box.set(5);
+      String i = (String) box.get(); // Laufzeitfehler
+      System.out.println(i);
+   }
 
 }
 ```
@@ -71,15 +71,15 @@ typisierten Information mit Hilfe des Typparameters `T`.
 ```java title="Box.java" showLineNumbers
 public class Box<T> {
 
-  private T content;
+   private T content;
 
-  public void set(T content) {
-    this.content = content;
-  }
+   public void set(T content) {
+      this.content = content;
+   }
 
-  public T get() {
-    return content;
-  }
+   public T get() {
+      return content;
+   }
 
 }
 ```
@@ -92,12 +92,12 @@ Kompilierungsfehler.
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
-    Box<Integer> box = new Box<>();
-    box.set(5);
-    String i = box.get(); // Kompilierungsfehler
-    System.out.println(i);
-  }
+   public static void main(String[] args) {
+      Box<Integer> box = new Box<>();
+      box.set(5);
+      String i = box.get(); // Kompilierungsfehler
+      System.out.println(i);
+   }
 
 }
 ```
@@ -128,18 +128,18 @@ Feldes zurück.
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
-    System.out.println(getIndex(5, new Integer[] {3, 5, 2, 4, 1}));
-  }
+   public static void main(String[] args) {
+      System.out.println(getIndex(5, new Integer[] {3, 5, 2, 4, 1}));
+   }
 
-  public static <T> int getIndex(T value, T[] values) {
-    for (int i = 0; i < values.length; i++) {
-      if (values[i].equals(value)) {
-        return i;
+   public static <T> int getIndex(T value, T[] values) {
+      for (int i = 0; i < values.length; i++) {
+         if (values[i].equals(value)) {
+            return i;
+         }
       }
-    }
-    return -1;
-  }
+      return -1;
+   }
 
 }
 ```
@@ -169,15 +169,15 @@ typisierten Information.
 ```java title="Box.java" showLineNumbers
 public class Box<T> {
 
-  private T content;
+   private T content;
 
-  public void set(T content) {
-    this.content = content;
-  }
+   public void set(T content) {
+      this.content = content;
+   }
 
-  public T get() {
-    return content;
-  }
+   public T get() {
+      return content;
+   }
 
 }
 ```
@@ -190,31 +190,31 @@ Klasse `Number` und diese eine Unterklasse der Klasse `Object`.
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
-    Box<?> bivariantBox;
-    bivariantBox = new GenericBox<Object>();
-    bivariantBox = new GenericBox<Number>();
-    bivariantBox = new GenericBox<Integer>();
-    bivariantBox = new GenericBox<String>();
+   public static void main(String[] args) {
+      Box<?> bivariantBox;
+      bivariantBox = new Box<Object>();
+      bivariantBox = new Box<Number>();
+      bivariantBox = new Box<Integer>();
+      bivariantBox = new Box<String>();
 
-    Box<? extends Number> covariantBox;
-    covariantBox = new GenericBox<Object>(); // Kompilierungsfehler
-    covariantBox = new GenericBox<Number>();
-    covariantBox = new GenericBox<Integer>();
-    covariantBox = new GenericBox<Integer>(); // Kompilierungsfehler
+      Box<? extends Number> covariantBox;
+      covariantBox = new Box<Object>(); // Kompilierungsfehler
+      covariantBox = new Box<Number>();
+      covariantBox = new Box<Integer>();
+      covariantBox = new Box<Integer>(); // Kompilierungsfehler
 
-    Box<? super Number> contravariantBox;
-    contravariantBox = new GenericBox<Object>();
-    contravariantBox = new GenericBox<Number>();
-    contravariantBox = new GenericBox<Integer>(); // Kompilierungsfehler
-    covariantBox = new GenericBox<Integer>(); // Kompilierungsfehler
+      Box<? super Number> contravariantBox;
+      contravariantBox = new Box<Object>();
+      contravariantBox = new Box<Number>();
+      contravariantBox = new Box<Integer>(); // Kompilierungsfehler
+      covariantBox = new Box<Integer>(); // Kompilierungsfehler
 
-    Box<Number> invariantBox;
-    invariantBox = new GenericBox<Object>(); // Kompilierungsfehler
-    invariantBox = new GenericBox<Number>();
-    invariantBox = new GenericBox<Integer>(); // Kompilierungsfehler
-    covariantBox = new GenericBox<String>(); // Kompilierungsfehler
-  }
+      Box<Number> invariantBox;
+      invariantBox = new Box<Object>(); // Kompilierungsfehler
+      invariantBox = new Box<Number>();
+      invariantBox = new Box<Integer>(); // Kompilierungsfehler
+      covariantBox = new Box<String>(); // Kompilierungsfehler
+   }
 
 }
 ```

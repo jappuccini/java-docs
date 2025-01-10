@@ -2,7 +2,7 @@
 title: Listen
 description: ''
 sidebar_position: 215
-tags: [collections, lists]
+tags: [collections, namess]
 ---
 
 import Tabs from '@theme/Tabs';
@@ -24,15 +24,15 @@ ihre Elemente geändert werden können.
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
-    List<String> list = List.of("Hans", "Peter", "Lisa");
+   public static void main(String[] args) {
+      List<String> names = List.of("Hans", "Peter", "Lisa");
 
-    System.out.println(list.size());
-    System.out.println(list.get(0));
-    list.set(0, "Max"); // Laufzeitfehler
-    list.add("Heidi"); // Laufzeitfehler
-    list.remove(0); // Laufzeitfehler
-  }
+      System.out.println(names.size());
+      System.out.println(names.get(0));
+      names.set(0, "Max"); // Laufzeitfehler
+      names.add("Heidi"); // Laufzeitfehler
+      names.remove(0); // Laufzeitfehler
+   }
 
 }
 ```
@@ -53,15 +53,15 @@ Verfügung.
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
-    List<String> list = Arrays.asList("Hans", "Peter", "Lisa");
+   public static void main(String[] args) {
+      List<String> names = Arrays.asList("Hans", "Peter", "Lisa");
 
-    System.out.println(list.size());
-    System.out.println(list.get(0));
-    list.set(0, "Max");
-    list.add("Heidi"); // Laufzeitfehler
-    list.remove(0); // Laufzeitfehler
-  }
+      System.out.println(names.size());
+      System.out.println(names.get(0));
+      names.set(0, "Max");
+      names.add("Heidi"); // Laufzeitfehler
+      names.remove(0); // Laufzeitfehler
+   }
 
 }
 ```
@@ -76,18 +76,18 @@ dynamischer Größe auf Basis doppelt verketteter Elemente.
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
-    List<String> list = new ArrayList<>(); // = new LinkedList<>();
-    list.add("Hans");
-    list.add("Peter");
-    list.add("Lisa");
+   public static void main(String[] args) {
+      List<String> names = new ArrayList<>(); // = new LinkedList<>();
+      names.add("Hans");
+      names.add("Peter");
+      names.add("Lisa");
 
-    System.out.println(list.size());
-    System.out.println(list.get(0));
-    list.set(0, "Max");
-    list.add("Heidi");
-    list.remove(0);
-  }
+      System.out.println(names.size());
+      System.out.println(names.get(0));
+      names.set(0, "Max");
+      names.add("Heidi");
+      names.remove(0);
+   }
 
 }
 ```

@@ -5,8 +5,7 @@ description: ''
 
 import Exercise from '@site/src/components/Exercise';
 
-- Erstelle die Ausnahmenklasse `InvalidValueException` anhand des abgebildeten
-  Klassendiagramms
+- Erstelle die Ausnahmenklasse `InvalidValueException`
 - Passe die Klasse `Vehicle` anhand der Hinweise an
 - Passe die ausführbare Klasse aus Übungsaufgabe
   [Interfaces01](../interfaces/interfaces01) so an, dass ein Auto mit einem
@@ -18,7 +17,6 @@ classDiagram
     Vehicle <|-- Car : extends
     Vehicle <|-- Truck : extends
     Engine --o Vehicle
-    InvalidValueException <.. Vehicle : throws
     Rental o-- Vehicle
     Partner <|.. Rental : implements
     TravelAgency o-- Partner
@@ -95,10 +93,6 @@ classDiagram
         +TravelAgency(name: String)
         +addPartner(partner: Partner) void
         +toString() String
-    }
-
-    class InvalidValueException {
-    	<<exception>>
     }
 ```
 

@@ -20,11 +20,11 @@ auf das eigene Objekt.
 ```mermaid
 flowchart LR
     subgraph Progamm
-    computer(Bezeichner: myComputer
+    computer(Bezeichner: computer
              Datentyp: Computer
              Wert: 13FEE20C)
-    cpu(Bezeichner: myCpu
-        Datentyp: CPU
+    cpu(Bezeichner: cpu
+        Datentyp: Cpu
         Wert: 88D45A01)
 
     end
@@ -32,11 +32,12 @@ flowchart LR
     subgraph Hauptspeicher
     o1((Klasse: Computer
        hashCode: 13FEE20C
+       description: Mein Office PC
        cpu: 88D45A01
-       memoryInGB: 32))
-    o2((Klasse: CPU
+       memoryInGb: 32))
+    o2((Klasse: Cpu
        hashCode: 88D45A01
-       powerInGHZ: 3.5
+       powerInGhz: 3.5
        numberOfCores: 8))
     end
 
@@ -59,10 +60,10 @@ Deklaration reservierte Speicherplatz durch das Objekt belegt.
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
-    CPU myCpu = new CPU(3.5, 8);
-    Computer myComputer = new Computer("Mein Office PC");
-  }
+   public static void main(String[] args) {
+      Cpu cpu = new Cpu(3.5, 8);
+      Computer computer = new Computer("Mein Office PC");
+   }
 
 }
 ```
@@ -85,13 +86,13 @@ den Klassennamen sowie einem nachgestellten Punkt.
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
-    CPU myCpu = new CPU(3.5, 8);
-    Computer myComputer = new Computer("Mein Office PC");
-    myComputer.setCpu(myCpu);
-    myComputer.setMemoryInGB(32);
-    System.out.println(Computer.getNumberOfComputers());
-  }
+   public static void main(String[] args) {
+      Cpu cpu = new Cpu(3.5, 8);
+      Computer computer = new Computer("Mein Office PC");
+      computer.setCpu(cpu);
+      computer.setMemoryInGb(32);
+     System.out.println(Computer.getNumberOfComputers());
+   }
 
 }
 ```

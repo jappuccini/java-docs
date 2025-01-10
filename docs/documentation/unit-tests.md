@@ -62,19 +62,19 @@ sollen.
 ```java title="Calculator.java" showLineNumbers
 public class Calculator {
 
-  public Calculator() {}
+   public Calculator() {}
 
-  public int abs(int a) {
-    return a >= 0 ? a : a * -1;
-  }
+   public int abs(int a) {
+      return a >= 0 ? a : a * -1;
+   }
 
-  public int divide(int a, int b) {
-    return a / b;
-  }
+   public int divide(int a, int b) {
+      return a / b;
+   }
 
-  public int multiply(int a, int b) {
-    return a * b;
-  }
+   public int multiply(int a, int b) {
+      return a * b;
+   }
 
 }
 ```
@@ -87,32 +87,32 @@ Null getestet.
 ```java title="MainClass.java" showLineNumbers
 public class CalculatorTest {
 
-  private static Calculator calculator;
+   private static Calculator calculator;
 
-  @BeforeAll
-  static void setUp() {
-    calculator = new Calculator();
-  }
+   @BeforeAll
+   static void setUp() {
+      calculator = new Calculator();
+   }
 
-  @Test
-  @DisplayName("Multiplication with Zero")
-  void multiply_withZero_Zero() {
-    assertEquals(0, calculator.multiply(0, 5));
-    assertEquals(0, calculator.multiply(5, 0));
-  }
+   @Test
+   @DisplayName("Multiplication with Zero")
+   void multiply_withZero_Zero() {
+      assertEquals(0, calculator.multiply(0, 5));
+      assertEquals(0, calculator.multiply(5, 0));
+   }
 
-  @ParameterizedTest
-  @DisplayName("Absolute Values of positive and negative Values")
-  @ValueSource(ints = {-1, 0, 1})
-  void abs_positiveAndNegativeValues_AbsoluteValues(int a) {
-    assertTrue(calculator.abs(a) >= 0);
-  }
+   @ParameterizedTest
+   @DisplayName("Absolute Values of positive and negative Values")
+   @ValueSource(ints = {-1, 0, 1})
+   void abs_positiveAndNegativeValues_AbsoluteValues(int a) {
+      assertTrue(calculator.abs(a) >= 0);
+   }
 
-  @Test
-  @DisplayName("Division by Zero")
-  void divide_byZero_ArithmeticException() {
-    assertThrows(ArithmeticException.class, () -> calculator.divide(5, 0));
-  }
+   @Test
+   @DisplayName("Division by Zero")
+   void divide_byZero_ArithmeticException() {
+      assertThrows(ArithmeticException.class, () -> calculator.divide(5, 0));
+   }
 
 }
 ```

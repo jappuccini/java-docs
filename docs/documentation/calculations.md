@@ -12,17 +12,17 @@ Verfügung.
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
-    int a = 5;
-    int b = 3;
-    double result;
+   public static void main(String[] args) {
+      int a = 5;
+      int b = 3;
+      double result;
 
-    result = Math.pow(a, b);
-    System.out.println(result);
+      result = Math.pow(a, b);
+      System.out.println(result);
 
-    result = Math.sqrt(a);
-    System.out.println(result);
-  }
+      result = Math.sqrt(a);
+      System.out.println(result);
+   }
 
 }
 ```

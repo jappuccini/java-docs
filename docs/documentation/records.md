@@ -13,46 +13,46 @@ oder weniger identisch verwendet werden.
 ```java title="Student.java" showLineNumbers
 public final class Student {
 
-  public final int id;
-  public final String name;
+   public final int id;
+   public final String name;
 
-  public Student(int id, String name) {
-    this.id = id;
-    this.name = name;
-  }
+   public Student(int id, String name) {
+      this.id = id;
+      this.name = name;
+   }
 
-  public int id() {
-    return id;
-  }
+   public int id() {
+      return id;
+   }
 
-  public String name() {
-    return name;
-  }
+   public String name() {
+      return name;
+   }
 
-  @Override
-  public final int hashCode() {
-    return Objects.hash(id, name);
-  }
+   @Override
+   public final int hashCode() {
+      return Objects.hash(id, name);
+   }
 
-  @Override
-  public final boolean equals(Object obj) {
-    if (this == obj) {
-      return true;
-    }
-    if (obj == null) {
-      return false;
-    }
-    if (getClass() != obj.getClass()) {
-      return false;
-    }
-    Student other = (Student) obj;
-    return id == other.id && Objects.equals(name, other.name);
-  }
+   @Override
+   public final boolean equals(Object obj) {
+      if (this == obj) {
+         return true;
+      }
+      if (obj == null) {
+         return false;
+      }
+      if (getClass() != obj.getClass()) {
+         return false;
+      }
+      Student other = (Student) obj;
+      return id == other.id && Objects.equals(name, other.name);
+   }
 
-  @Override
-  public final String toString() {
-    return "Student [id=" + id + ", name=" + name + "]";
-  }
+   @Override
+   public final String toString() {
+      return "Student [id=" + id + ", name=" + name + "]";
+   }
 
 }
 ```
@@ -64,8 +64,7 @@ entsprechende Konstruktoren, Getter sowie Implementierungen für die Methoden
 erzeugen. Das Schlüsselwort für Records lautet `record`.
 
 ```java title="Student.java" showLineNumbers
-public record Student(int id, String name) {
-}
+public record Student(int id, String name) {}
 ```
 
 :::danger Hinweis

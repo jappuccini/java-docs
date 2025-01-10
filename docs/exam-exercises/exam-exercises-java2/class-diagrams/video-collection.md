@@ -13,7 +13,7 @@ ausführbare Klasse und/oder eine Testklasse.
 classDiagram
     VideoCollection o-- Video
     Video <|-- BluRay : extends
-    Video <|-- VHS : extends
+    Video <|-- Vhs : extends
     Movie --o Video
     Movie o-- Genre
 
@@ -31,9 +31,9 @@ classDiagram
         +Video(movie: Movie)
     }
 
-    class VHS {
+    class Vhs {
         -isRewritable: boolean #123;final#125;
-        +VHS(movie: Movie, isRewritable: boolean)
+        +Vhs(movie: Movie, isRewritable: boolean)
     }
 
     class BluRay {

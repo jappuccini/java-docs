@@ -30,9 +30,15 @@ classDiagram
 
 ```mermaid
 flowchart LR
-	vbox[VBox\nfx:controller=Pfad.Controller]
-	canvas[Canvas\nfx:id=canvas\nwidth=500.0\nheight=500.0]
-	button[Button\ntext=Kreis zeichnen\nonAction=#drawCircle]
+	vbox[VBox
+	     fx:controller=Pfad.Controller]
+	canvas[Canvas
+	       fx:id=canvas
+	       width=500.0
+	       height=500.0]
+	button[Button
+	       text=Kreis zeichnen
+	       onAction=#drawCircle]
 
     vbox --> canvas
     vbox --> button

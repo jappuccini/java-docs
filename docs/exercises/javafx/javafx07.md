@@ -57,8 +57,12 @@ classDiagram
 
 ```mermaid
 flowchart LR
-	vbox[VBox\nfx:controller=Pfad.Controller]
-	canvas[Canvas\nfx:id=canvas\nwidth=1000.0\nheight=1000.0]
+	vbox[VBox
+	     fx:controller=Pfad.Controller]
+	canvas[Canvas
+	       fx:id=canvas
+	       width=1000.0
+	       height=1000.0]
 
     vbox --> canvas
 ```

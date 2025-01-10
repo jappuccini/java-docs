@@ -78,14 +78,14 @@ Szene und der Ereignisbehandler-Klasse hergestellt:
 <?import javafx.scene.layout.VBox?>
 
 <VBox alignment="CENTER" spacing="5.0" xmlns:fx="http://javafx.com/fxml/1"
-    fx:controller="InputController">
-  <children>
-    <TextField fx:id="valueTextField" promptText="Wert" />
-    <Button text="Zur Ausgabe" onAction="#goToOutput"/>
-  </children>
-  <padding>
-    <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
-  </padding>
+      fx:controller="InputController">
+   <children>
+      <TextField fx:id="valueTextField" promptText="Wert" />
+      <Button text="Zur Ausgabe" onAction="#goToOutput"/>
+   </children>
+   <padding>
+      <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+   </padding>
 </VBox>
 ```
 
@@ -100,13 +100,13 @@ Szene und der Ereignisbehandler-Klasse hergestellt:
 <?import javafx.scene.layout.VBox?>
 
 <VBox alignment="CENTER" spacing="5.0" xmlns:fx="http://javafx.com/fxml/1"
-    fx:controller="OutputController">
-  <children>
-    <Label fx:id="valueLabel" />
-  </children>
-  <padding>
-    <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
-  </padding>
+      fx:controller="OutputController">
+   <children>
+      <Label fx:id="valueLabel" />
+   </children>
+   <padding>
+      <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+   </padding>
 </VBox>
 ```
 
@@ -127,18 +127,18 @@ Ereignisbehandler-Klasse auf.
 ```java title="MainClass.java" showLineNumbers
 public class MainClass extends Application {
 
-  public static void main(String[] args) {
-    launch(args);
-  }
+   public static void main(String[] args) {
+      launch(args);
+   }
 
-  @Override
-  public void start(Stage primaryStage) throws Exception {
-    Parent root = FXMLLoader.load(getClass().getResource("InputView.fxml"));
-    Scene scene = new Scene(root);
-    primaryStage.setTitle("JavaFX");
-    primaryStage.setScene(scene);
-    primaryStage.show();
-  }
+   @Override
+   public void start(Stage primaryStage) throws Exception {
+      Parent root = FXMLLoader.load(getClass().getResource("InputView.fxml"));
+      Scene scene = new Scene(root);
+      primaryStage.setTitle("JavaFX");
+      primaryStage.setScene(scene);
+      primaryStage.show();
+   }
 
 }
 ```
@@ -166,27 +166,27 @@ Szene aufgeführt wird.
 ```java title="InputController.java" showLineNumbers
 public class InputController implements Initializable {
 
-  @FXML
-  private TextField valueTextField;
-  private Model model;
+   @FXML
+   private TextField valueTextField;
+   private Model model;
 
-  @Override
-  public void initialize(URL location, ResourceBundle resources) {
-    model = Model.getInstance();
-  }
+   @Override
+   public void initialize(URL location, ResourceBundle resources) {
+      model = Model.getInstance();
+   }
 
-  @FXML
-  public void goToOutput(ActionEvent actionEvent) throws IOException {
-    String value = valueTextField.getText();
-    model.setValue(value);
+   @FXML
+   public void goToOutput(ActionEvent actionEvent) throws IOException {
+      String value = valueTextField.getText();
+      model.setValue(value);
 
-    Parent root = FXMLLoader.load(getClass().getResource("OutputView.fxml"));
-    Scene scene = new Scene(root);
-    Node node = (Node) actionEvent.getSource();
-    Stage stage = (Stage) node.getScene().getWindow();
-    stage.setScene(scene);
-    stage.show();
-  }
+      Parent root = FXMLLoader.load(getClass().getResource("OutputView.fxml"));
+      Scene scene = new Scene(root);
+      Node node = (Node) actionEvent.getSource();
+      Stage stage = (Stage) node.getScene().getWindow();
+      stage.setScene(scene);
+      stage.show();
+   }
 
 }
 ```
@@ -197,17 +197,17 @@ public class InputController implements Initializable {
 ```java title="OutputController.java" showLineNumbers
 public class OutputController implements Initializable {
 
-  @FXML
-  private Label valueLabel;
-  private Model model;
+   @FXML
+   private Label valueLabel;
+   private Model model;
 
-  @Override
-  public void initialize(URL location, ResourceBundle resources) {
-    model = Model.getInstance();
+   @Override
+   public void initialize(URL location, ResourceBundle resources) {
+      model = Model.getInstance();
 
-    String value = model.getValue();
-    outputLabel.setText(value);
-  }
+      String value = model.getValue();
+      outputLabel.setText(value);
+   }
 
 }
 ```
@@ -233,25 +233,25 @@ Model-Klasse genau ein Objekt, das sogenannte Singleton, zur Laufzeit existiert.
 ```java title="Model.java" showLineNumbers
 public class Model {
 
-  private static Model instance;
-  private String value;
+   private static Model instance;
+   private String value;
 
-  private Model() {}
+   private Model() {}
 
-  public static Model getInstance() {
-    if (instance == null) {
-      instance = new Model();
-    }
-    return instance;
-  }
+   public static Model getInstance() {
+      if (instance == null) {
+         instance = new Model();
+      }
+      return instance;
+   }
 
-  public String getValue() {
-    return value;
-  }
+   public String getValue() {
+      return value;
+   }
 
-  public void setValue(String value) {
-    this.value = value;
-  }
+   public void setValue(String value) {
+      this.value = value;
+   }
 
 }
 ```

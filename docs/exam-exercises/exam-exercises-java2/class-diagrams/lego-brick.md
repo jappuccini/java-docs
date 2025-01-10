@@ -11,7 +11,7 @@ ausführbare Klasse und/oder eine Testklasse.
 
 ```mermaid
 classDiagram
-    Lego <|-- LegoBrick
+    Lego <|-- LegoBrick : extends
     LegoBrick <|-- LegoBrick2x2x2 : extends
     LegoBrick <|-- LegoBrick4x2x1 : extends
     Comparator~LegoBrick~ <|.. LegoBrickVolumeComparator : implements

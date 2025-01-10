@@ -25,15 +25,15 @@ _Downcast_.
 
 ```java title="Computer.java (Auszug)" showLineNumbers
 public class Computer {
-  ...
-  public ArrayList<String> getSpecification() {
-    ArrayList<String> specification = new ArrayList<>();
-    specification.add("description: " + description);
-    specification.add("cpu: " + cpu);
-    specification.add("memoryInGB: " + memoryInGB);
-    return specification;
-  }
-  ...
+   ...
+   public ArrayList<String> getSpecification() {
+      ArrayList<String> specification = new ArrayList<>();
+      specification.add("description: " + description);
+      specification.add("cpu: " + cpu);
+      specification.add("memoryInGb: " + memoryInGb);
+      return specification;
+   }
+   ...
 }
 ```
 
@@ -42,23 +42,23 @@ public class Computer {
 
 ```java title="Notebook.java (Auszug)" showLineNumbers
 public class Notebook extends Computer {
-  ...
-  public Notebook(String description, CPU cpu, int memoryInGB, double screenSizeInInches) {
-    super(description, cpu, mainMemoryInGB);
-    this.screenSizeInInches = screenSizeInInches;
-  }
+   ...
+   public Notebook(String description, Cpu cpu, int memoryInGb, double screenSizeInInches) {
+      super(description, cpu, mainMemoryInGb);
+      this.screenSizeInInches = screenSizeInInches;
+   }
 
-  public double getScreenSizeInInches() {
-    return screenSizeInInches;
-  }
+   public double getScreenSizeInInches() {
+      return screenSizeInInches;
+   }
 
-  @Override
-  public ArrayList<String> getSpecification() {
-    ArrayList<String> specification = super.getSpecification();
-    specification.add("screenSizeInInches: " + screenSizeInInches);
-    return specification;
-  }
-  ...
+   @Override
+   public ArrayList<String> getSpecification() {
+      ArrayList<String> specification = super.getSpecification();
+      specification.add("screenSizeInInches: " + screenSizeInInches);
+      return specification;
+   }
+   ...
 }
 ```
 
@@ -68,27 +68,27 @@ public class Notebook extends Computer {
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
-    CPU myCpu1 = new CPU(3.5, 8);
-    CPU myCpu2 = new CPU(4.7, 8);
+   public static void main(String[] args) {
+      Cpu cpu1 = new Cpu(3.5, 8);
+      Cpu cpu2 = new Cpu(4.7, 8);
 
-    Notebook myNotebook1 = new Notebook("Mein Office Laptop", myCpu1, 16, 14);
-    Notebook myNotebook2 = new Notebook("Mein Gaming Laptop", myCpu2, 32, 16);
+      Notebook notebook1 = new Notebook("Mein Office Laptop", cpu1, 16, 14);
+      Notebook notebook2 = new Notebook("Mein Gaming Laptop", cpu2, 32, 16);
 
-    Computer myComputer;
-    ArrayList<Computer> computers = new ArrayList<>();
+      Computer computer;
+      ArrayList<Computer> computers = new ArrayList<>();
 
-    myComputer = myNotebook1; // Upcast
-    computers.add(myComputer);
-    myComputer = myNotebook2; // Upcast
-    computers.add(myComputer);
+      computer = notebook1; // Upcast
+      computers.add(computer);
+      computer = notebook2; // Upcast
+      computers.add(computer);
 
-    for(Computer c : computers) {
-      System.out.println(c.getSpecification()); // Polymorphie
-      Notebook myNotebook = (Notebook) c; // Downcast
-      System.out.println(myNotebook.getScreenSizeInInches());
-    }
-  }
+      for (Computer c : computers) {
+         System.out.println(c.getSpecification()); // Polymorphie
+         Notebook notebook = (Notebook) c; // Downcast
+         System.out.println(notebook.getScreenSizeInInches());
+      }
+   }
 
 }
 ```
@@ -116,21 +116,21 @@ und sorgt gleichzeitig für eine sicherere Programmierung.
 ```java title="MainClass.java (Auszug)" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
-    ...
-    for(Computer c : computers) {
-      /* bis Java 16 */
-      if (c instanceof Notebook) {
-        Notebook myNotebook = (Notebook) c; // Downcast
-        System.out.println(myNotebook.getScreenSizeInInches());
+   public static void main(String[] args) {
+      ...
+      for (Computer c : computers) {
+         /* bis Java 16 */
+         if (c instanceof Notebook) {
+            Notebook notebook = (Notebook) c; // Downcast
+            System.out.println(notebook.getScreenSizeInInches());
+         }
+         /* seit Java 16 */
+         if (c instanceof Notebook notebook) { // Downcast
+            System.out.println(notebook.getScreenSizeInInches());
+         }
       }
-      /* seit Java 16 */
-      if (c instanceof Notebook myNotebook) { // Downcast
-        System.out.println(myNotebook.getScreenSizeInInches());
-      }
-    }
-    ...
-  }
+      ...
+   }
 
 }
 ```

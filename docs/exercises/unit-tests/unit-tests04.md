@@ -37,7 +37,7 @@ classDiagram
         <<test>>
         -bookCollection: BookCollection
         -stephenKing: Author
-        -georgeRRMartin: Author
+        -georgeRrMartin: Author
         -it: Book
         -aGameOfThrones: Book
         -aClashOfKings: Book

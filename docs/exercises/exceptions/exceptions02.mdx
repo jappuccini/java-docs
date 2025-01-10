@@ -5,8 +5,8 @@ description: ''
 
 import Exercise from '@site/src/components/Exercise';
 
-- Erstelle die Ausnahmenklasse `BarrelOverflowException` sowie die Klasse
-  `Barrel` anhand des abgebildeten Klassendiagramms
+- Erstelle die Ausnahmenklasse `BarrelOverflowException`
+- Erstelle die Klasse `Barrel` anhand des abgebildeten Klassendiagramms
 - Erstelle eine ausführbare Klasse, welche es dem Anwender ermöglicht, ein Fass
   zu erzeugen und zu befüllen
 
@@ -14,8 +14,6 @@ import Exercise from '@site/src/components/Exercise';
 
 ```mermaid
 classDiagram
-
-    BarrelOverflowException <.. Barrel : throws
 
     class Barrel {
         -capacity: int
@@ -26,16 +24,7 @@ classDiagram
         +addFluid(value: int) void
         +toString() String
     }
-
-    class BarrelOverflowException {
-        <<exception>>
-        +BarrelOverflowException()
-    }
 ```
-
-## Hinweis zur Klasse _BarrelOverflowException_
-
-Der Konstruktor soll das Attribut `detailMessage` initialisieren.
 
 ## Hinweise zur Klasse _Barrel_
 

@@ -1,18 +1,9 @@
 ---
-title: WWIBE224
+title: Kill Team
 description: ''
-sidebar_position: 40
+sidebar_position: 20
 tags: []
 ---
-
-## Links
-
-- [GitHub Repository Demos](https://github.com/appenmaier/java_wwibe224)
-- [GitHub Repository Musterlösungen Übungsaufgaben](https://github.com/appenmaier/java_exercises)
-- [GitHub Repository Musterlösungen Klausuraufgaben](https://github.com/appenmaier/java_exam_exercises)
-- [Abbildungen](https://app.mural.co/t/programmierungwwibe2248240/m/programmierungwwibe2248240/1729834706630/301020393cfaff8bb3d89e41e78d79d332f429aa)
-
-## Kill Team
 
 Im Rahmen der Vorlesungswiederholung soll Schritt für Schritt eine abgespeckte
 Variante des Tabletop-Spiels
@@ -21,16 +12,16 @@ entwickelt werden. Bei diesem Strategiespiel für zwei Spieler kämpfen zwei
 sogenannten Kill Teams mit dem Ziel gegeneinander, entsprechende Missionsziele
 zu erfüllen bzw. das gegnerische Team auszulöschen.
 
-### Version 1 (Vorlesung 1 bis 3)
+### Version 1
 
 Erstelle eine ausführbare Klasse wie folgt:
 
-- es sollen Datenobjekte für alle Eigenschaften des abgebildeten ER-Modells für
+- Es sollen Datenobjekte für alle Eigenschaften des abgebildeten ER-Modells für
   2 Spieler, 2 Kämpfer (je einer pro Spieler) und 8 W6-Würfel (je 4 pro Spieler)
   deklariert werden
-- es soll möglich sein, den Datenobjekten für die Eigenschaften der Spieler und
+- Es soll möglich sein, den Datenobjekten für die Eigenschaften der Spieler und
   Kämpfer Werte über die Konsole zuzuweisen
-- es soll genau eine Runde umgesetzt werden
+- Es soll genau eine Runde umgesetzt werden
 
 **ER-Modell**
 
@@ -113,19 +104,19 @@ Gregor erzielt 11 Blocks.
 Gregor erleidet -1 Schaden und hat noch 9 LP.
 ```
 
-### Version 2 (Vorlesung 4 und 5)
+### Version 2
 
 Passe die ausführbare Klasse wie folgt an:
 
-- es sollen zusätzliche Datenobjekte für alle zusätzlichen Eigenschaften des
+- Es sollen zusätzliche Datenobjekte für alle zusätzlichen Eigenschaften des
   abgebildeten ER-Modells für 2 Spieler, 2 Kämpfer (je einer pro Spieler), 2
   Waffen (je eine pro Kämpfer) und 10 W6-Würfel (je 5 pro Spieler) deklariert
   werden
-- es soll möglich sein, den neuen Datenobjekten Werte über die Konsole
+- Es soll möglich sein, den neuen Datenobjekten Werte über die Konsole
   zuzuweisen (alternativ können den Datenobjekten auch statisch Werte zugewiesen
   werden)
-- es sollen mehrere Runden umgesetzt werden
-- das Spiel soll enden, sobald die Lebenspunkte eines der beiden Kämpfer auf 0
+- Es sollen mehrere Runden umgesetzt werden
+- Das Spiel soll enden, sobald die Lebenspunkte eines der beiden Kämpfer auf 0
   oder unter 0 gesunken sind
 
 **ER-Modell**
@@ -256,7 +247,7 @@ Gregor erzielt 0 Blocks.
 Gregor erleidet 9 Schaden und stirbt.
 ```
 
-### Version 3 (Vorlesung 5 und 6)
+### Version 3
 
 Überführe den bisherigen imperativen Programmentwurf in einen objektorientierten
 Programmentwurf. Erweitere zudem den objektorientierten Programmentwurf so, dass
