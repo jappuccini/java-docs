@@ -33,7 +33,7 @@ export default function Intro(): JSX.Element {
         <section>
           <h2>Hobbies</h2>
           <p className="fragment">🏄🌊🪁</p>
-          <p className="fragment">🚴🏼‍♂️  🚴🏼‍♀️ ⛰️</p>
+          <p className="fragment">🚴🏼‍♂️ 🚴🏼‍♀️ ⛰️</p>
           <p className="fragment">🥾🎒🌄</p>
         </section>
         <section>
@@ -87,7 +87,7 @@ export default function Intro(): JSX.Element {
         <section>
           <h2>Wo findet ihr was?</h2>
           <p className="fragment">
-            <Link to="https://jappuccini.github.io/java-docs/">
+            <Link to="https://jappuccini.github.io/java-docs/production">
               Dokumentation, Aufgaben, Folien
             </Link>
           </p>
