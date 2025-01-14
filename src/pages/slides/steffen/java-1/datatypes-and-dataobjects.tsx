@@ -21,7 +21,11 @@ export default function DataTypesAndDataObjects(): JSX.Element {
       </section>
       <section>
         <section>
-          <h2>Besprechung Aufgabe</h2>
+          <h2>Demo Hello World</h2>
+          <ul>
+            <li className="fragment">Konsolenausgabe</li>
+            <li className="fragment">kompilieren und ausführen</li>
+          </ul>
         </section>
         <section>
           <h2>Hello World</h2>
