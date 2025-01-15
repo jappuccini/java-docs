@@ -109,14 +109,12 @@ export default function DataTypesAndDataObjects(): JSX.Element {
         </section>
         <section>
           <h2>Beispiel Registrierung</h2>
-          <aside className="notes">
-            <ul>
-              <li>Vorname, Nachname</li>
-              <li>Hausnummer, PLZ</li>
-              <li>AGB akzeptiert, Newsletter abonniert</li>
-              <li>Geburtsdatum</li>
-            </ul>
-          </aside>
+          <ul>
+            <li className="fragment">Vorname, Nachname</li>
+            <li className="fragment">Hausnummer, PLZ</li>
+            <li className="fragment">AGB akzeptiert, Newsletter abonniert</li>
+            <li className="fragment">Geburtsdatum</li>
+          </ul>
         </section>
         <section>
           <h2>Wahrheitswerte</h2>
@@ -276,7 +274,18 @@ export default function DataTypesAndDataObjects(): JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Demo Deklaration & Initialisierung</h2>
+          <h2>
+            <Link to="https://github.com/jappuccini/java-demos/blob/steffen/java1/dataobjects/Example.java">
+              Demo - Datenobjekte
+            </Link>
+          </h2>
+          <ul>
+            <li className="fragment">AGB akzeptieren</li>
+            <li className="fragment">Alter</li>
+            <li className="fragment">Größe</li>
+            <li className="fragment">Geschlecht</li>
+            <li className="fragment">Name</li>
+          </ul>
         </section>
       </section>
       <section>
@@ -320,15 +329,15 @@ export default function DataTypesAndDataObjects(): JSX.Element {
         <h2>Zusammenfassung</h2>
         <ul>
           <li className="fragment">
-            <Link to={'/documentation/class-structure#die-main-methode'}>
+            <Link to="/documentation/class-structure#die-main-methode">
               Die main Methode
             </Link>
           </li>
           <li className="fragment">
-            <Link to={'/documentation/data-types'}>Datentypen</Link>
+            <Link to="/documentation/data-types">Datentypen</Link>
           </li>
           <li className="fragment">
-            <Link to={'/documentation/data-objects'}>Datenobjekte</Link>
+            <Link to="/documentation/data-objects">Datenobjekte</Link>
           </li>
         </ul>
       </section>
