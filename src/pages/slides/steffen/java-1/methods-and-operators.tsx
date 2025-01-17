@@ -12,7 +12,7 @@ export default function MethodsAndOperators(): JSX.Element {
           <ul>
             <li className="fragment">Wiederholung</li>
             <li className="fragment">Was sind Methoden?</li>
-            <li className="fragment">Was sind Programme?</li>
+            <li className="fragment">Was sind Operatoren?</li>
             <li className="fragment">Zusammenfassung</li>
           </ul>
         </section>
