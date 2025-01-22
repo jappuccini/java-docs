@@ -300,8 +300,10 @@ export default function MethodsAndOperators(): JSX.Element {
               Demo - Ternary Operator
             </Link>
           </h2>
-          <li className="fragment">getTitleIf()</li>
-          <li className="fragment">getTitleTernaryOperator()</li>
+          <ul>
+            <li className="fragment">getTitle - If implementierung</li>
+            <li className="fragment">getTitle - TernaryOperator()</li>
+          </ul>
         </section>
         <section>
           <h2>Warum braucht man Schleifen?</h2>
