@@ -301,8 +301,8 @@ export default function MethodsAndOperators(): JSX.Element {
             </Link>
           </h2>
           <ul>
-            <li className="fragment">getTitle - If implementierung</li>
-            <li className="fragment">getTitle - TernaryOperator()</li>
+            <li className="fragment">getTitle - mit If-Else</li>
+            <li className="fragment">getTitle - mit TernaryOperator</li>
           </ul>
         </section>
         <section>
