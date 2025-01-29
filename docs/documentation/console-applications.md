@@ -11,8 +11,8 @@ textuelle Anweisungen.
 
 ```mermaid
 flowchart
-    konsole[Konsole] -.->|System.in| klasse[Klasse]
-    klasse -.->|System.out| konsole
+   konsole[Konsole] -.->|System.in| klasse[Klasse]
+   klasse -.->|System.out| konsole
 ```
 
 ## Konsoleneingaben

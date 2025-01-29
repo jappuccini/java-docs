@@ -18,15 +18,15 @@ können Sie im Programm nicht angesprochen werden.
 
 ```mermaid
 flowchart
-    name(Bezeichner: name
-         Datentyp: String
-         Wert: Hans)
-    i(Bezeichner: i
-      Datentyp: int
-      Wert: 5)
-    isAvailable(Bezeichner: isAvailable
-                Datentyp: boolean
-                Wert: true)
+   name(Bezeichner: name
+        Datentyp: String
+        Wert: Hans)
+   i(Bezeichner: i
+     Datentyp: int
+     Wert: 5)
+   isAvailable(Bezeichner: isAvailable
+               Datentyp: boolean
+               Wert: true)
 ```
 
 ## Deklaration von Datenobjekten
@@ -163,12 +163,12 @@ möglich sind.
 
 ```mermaid
 flowchart
-    byte(byte) -.-> short(short)
-    short -.-> int(int)
-    char(char) -.-> int
-    int -.-> long(long)
-    long -.-> float(float)
-    float -.-> double(double)
+   byte(byte) -.-> short(short)
+   short -.-> int(int)
+   char(char) -.-> int
+   int -.-> long(long)
+   long -.-> float(float)
+   float -.-> double(double)
 ```
 
 :::note Hinweis

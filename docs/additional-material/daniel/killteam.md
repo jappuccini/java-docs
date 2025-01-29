@@ -27,21 +27,18 @@ Erstelle eine ausführbare Klasse wie folgt:
 
 ```mermaid
 erDiagram
-    Spieler ||--o{ "Kämpfer" : hat
-    Spieler ||--|{ "W6-Würfel" : hat
-
-    Spieler {
-        String Name
-    }
-
-    "Kämpfer" {
-        String Name
-        int LP
-    }
-
-    "W6-Würfel" {
-        int Wurfwert
-    }
+   Spieler ||--o{ "Kämpfer" : hat
+   Spieler ||--|{ "W6-Würfel" : hat
+   Spieler {
+      String Name
+   }
+   "Kämpfer" {
+      String Name
+      int LP
+   }
+   "W6-Würfel" {
+      int Wurfwert
+   }
 ```
 
 LP = Lebenspunkte
@@ -123,31 +120,27 @@ Passe die ausführbare Klasse wie folgt an:
 
 ```mermaid
 erDiagram
-    Spieler ||--o{ "Kämpfer" : hat
-    "Kämpfer" ||--|{ Waffe : hat
-    Spieler ||--|{ "W6-Würfel" : hat
-
-    Spieler {
-        String Name
-    }
-
-    "Kämpfer" {
-        String Name
-        int LP
-        int VW
-        int RW
-    }
-
-    Waffe {
-        String Name
-        int AW
-        int BF_KG
-        int SW
-    }
-
-    "W6-Würfel" {
-        int Wurfwert
-    }
+   Spieler ||--o{ "Kämpfer" : hat
+   "Kämpfer" ||--|{ Waffe : hat
+   Spieler ||--|{ "W6-Würfel" : hat
+   Spieler {
+      String Name
+   }
+   "Kämpfer" {
+      String Name
+      int LP
+      int VW
+      int RW
+   }
+   Waffe {
+      String Name
+      int AW
+      int BF_KG
+      int SW
+   }
+   "W6-Würfel" {
+      int Wurfwert
+   }
 ```
 
 LP = Lebenspunkte, VW = Verteidigungswert, RW = Rüstungswurf, AW = Attackenwert,

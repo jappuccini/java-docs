@@ -19,12 +19,12 @@ realisiert werden.
 
 ```mermaid
 flowchart LR
-    subgraph Datenstrom
-        direction LR
-        data1((4.2)) -.- data2((2.3)) -.- data3((1.6)) -.- data4((3.7))
-    end
-    write[Schreiben] ---> Datenstrom
-    Datenstrom ---> read[Lesen]
+   subgraph Datenstrom
+      direction LR
+      data1((4.2)) -.- data2((2.3)) -.- data3((1.6)) -.- data4((3.7))
+   end
+   data0((2.8)) -.Schreiben.- data1
+   data4 -.Lesen.- data5((1.6))
 ```
 
 ## Standard-Datenströme zur Ein- und Ausgabe

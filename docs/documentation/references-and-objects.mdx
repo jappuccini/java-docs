@@ -19,31 +19,28 @@ auf das eigene Objekt.
 
 ```mermaid
 flowchart LR
-    subgraph Progamm
-    computer(Bezeichner: computer
-             Datentyp: Computer
-             Wert: 13FEE20C)
-    cpu(Bezeichner: cpu
-        Datentyp: Cpu
-        Wert: 88D45A01)
-
-    end
-
-    subgraph Hauptspeicher
-    o1((Klasse: Computer
-       hashCode: 13FEE20C
-       description: Mein Office PC
-       cpu: 88D45A01
-       memoryInGb: 32))
-    o2((Klasse: Cpu
-       hashCode: 88D45A01
-       powerInGhz: 3.5
-       numberOfCores: 8))
-    end
-
-    computer --> o1
-    cpu --> o2
-    o1 --> o2
+   subgraph Progamm
+   computer(Bezeichner: computer
+            Datentyp: Computer
+            Wert: 13FEE20C)
+   cpu(Bezeichner: cpu
+       Datentyp: Cpu
+       Wert: 88D45A01)
+   end
+   subgraph Hauptspeicher
+   o1(Klasse: Computer
+      hashCode: 13FEE20C
+      description: Mein Office PC
+      cpu: 88D45A01
+      memoryInGb: 32)
+   o2(Klasse: Cpu
+      hashCode: 88D45A01
+      powerInGhz: 3.5
+      numberOfCores: 8)
+   end
+   computer --> o1
+   cpu --> o2
+   o1 --> o2
 ```
 
 :::note Hinweis

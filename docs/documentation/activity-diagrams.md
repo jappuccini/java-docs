@@ -26,22 +26,20 @@ Kanten (Kontrollflüsse und Datenflüsse) verfügt:
 
 ```mermaid
 stateDiagram-v2
-    state "Ausgabe: Zahl 1 eingeben" as state1
-    state "Eingabe: [Zahl 1]" as state2
-    state "Ausgabe: Zahl 2 eingeben" as state3
-    state "Eingabe: [Zahl 2]" as state4
-    state "Rückgabe: [Zahl 1] / [Zahl 2]" as state5
-
-    state if <<choice>>
-
-    state "Division zweier Zahlen" as main {
-        [*] --> state1
-        state1 --> state2
-        state2 --> state3
-        state3 --> state4
-        state4 --> if
-        if --> state3: [Zahl 2] = 0
-        if --> state5: sonst
-        state5 --> [*]
-    }
+   state "Ausgabe: Zahl 1 eingeben" as state1
+   state "Eingabe: [Zahl 1]" as state2
+   state "Ausgabe: Zahl 2 eingeben" as state3
+   state "Eingabe: [Zahl 2]" as state4
+   state "Rückgabe: [Zahl 1] / [Zahl 2]" as state5
+   state if <<choice>>
+   state "Division zweier Zahlen" as main {
+      [*] --> state1
+      state1 --> state2
+      state2 --> state3
+      state3 --> state4
+      state4 --> if
+      if --> state3: [Zahl 2] = 0
+      if --> state5: sonst
+      state5 --> [*]
+   }
 ```
