@@ -25,12 +25,12 @@ den Index oder sequentiell.
 
 ```mermaid
 flowchart
-    subgraph names
-        name1(Lisa)
-        name2(Peter)
-        name3(Lisa)
-        name4(Hans)
-    end
+   subgraph names
+      name1(Lisa)
+      name2(Peter)
+      name3(Lisa)
+      name4(Hans)
+   end
 ```
 
 Konkrete Implementierungen der Schnittstelle `List<E>` stellen die Klassen
@@ -46,11 +46,11 @@ Mengenoperationen.
 
 ```mermaid
 flowchart LR
-    subgraph names
-        name1(Lisa)
-        name2(Peter)
-        name3(Hans)
-    end
+   subgraph names
+      name1(Lisa)
+      name2(Peter)
+      name3(Hans)
+   end
 ```
 
 Konkrete Implementierungen der Schnittstelle `Set<E>` stellen die Klassen
@@ -69,16 +69,15 @@ gelöscht werden. Warteschlangen können doppelte Elemente enthalten.
 
 ```mermaid
 flowchart LR
-    name1 --> name2 --> name3 --> name4 --> name5
-
-    name1(Lisa)
-    subgraph names
-        direction LR
-        name2(Peter)
-        name3(Lisa)
-        name4(Hans)
-    end
-    name5(Max)
+   name1 --> name2 --> name3 --> name4 --> name5
+   name1(Lisa)
+   subgraph names
+      direction LR
+      name2(Peter)
+      name3(Lisa)
+      name4(Hans)
+   end
+   name5(Max)
 ```
 
 Konkrete Implementierungen der Schnittstelle `Queue<E>` stellen die Klassen

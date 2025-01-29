@@ -32,55 +32,50 @@ tags: []
 
 ```mermaid
 classDiagram
-    Class o-- Lecture
-    Class o-- Student
-    CourseOfStudies --o Class
-
-    class Class {
-        -description: String #123;final#125;
-        -courseOfStudies: CourseOfStudies #123;final#125;
-        -lectures: List~Lecture~ #123;final#125;
-        -students: List~Student~ #123;final#125;
-        +Class(description: String, courseOfStudies: CourseOfStudies)
-        +description() String
-        +courseOfStudies() CourseOfStudies
-        +lectures() List~Lecture~
-        +students() List~Student~
-        +addLecture(lecture: Lecture) void
-        +addStudent(student: Student) void
-        +getLectureWithMostCreditPoints() Lecture
-        +toString() String
-    }
-
-    class Student {
-        -matriculationNumber: String #123;final#125;
-        -name: String #123;final#125;
-        +Student(matriculationNumber: String, name: String)
-        +matriculationNumber() String
-        +name() String
-        +toString() String
-    }
-
-    class Lecture {
-        -description: String #123;final#125;
-        -creditPoints: int #123;final#125;
-        +Lecture(description: String, creditPoints: int)
-        +description() String
-        +creditPoints() int
-        +toString() String
-    }
-
-    class CourseOfStudies {
-        <<enumeration>>
-        WI = Wirtschaftsinformatik
-        INF = Informatik
-        BWL = Betriebswirtschaftslehre
-        -description: String #123;final#125;
-    }
-
-    class ExamTask01 {
-        +main(args: String[])$ void
-    }
+   Class o-- Lecture
+   Class o-- Student
+   CourseOfStudies --o Class
+   class Class {
+      -description: String #123;final#125;
+      -courseOfStudies: CourseOfStudies #123;final#125;
+      -lectures: List~Lecture~ #123;final#125;
+      -students: List~Student~ #123;final#125;
+      +Class(description: String, courseOfStudies: CourseOfStudies)
+      +description() String
+      +courseOfStudies() CourseOfStudies
+      +lectures() List~Lecture~
+      +students() List~Student~
+      +addLecture(lecture: Lecture) void
+      +addStudent(student: Student) void
+      +getLectureWithMostCreditPoints() Lecture
+      +toString() String
+   }
+   class Student {
+      -matriculationNumber: String #123;final#125;
+      -name: String #123;final#125;
+      +Student(matriculationNumber: String, name: String)
+      +matriculationNumber() String
+      +name() String
+      +toString() String
+   }
+   class Lecture {
+      -description: String #123;final#125;
+      -creditPoints: int #123;final#125;
+      +Lecture(description: String, creditPoints: int)
+      +description() String
+      +creditPoints() int
+      +toString() String
+   }
+   class CourseOfStudies {
+      <<enumeration>>
+      WI = Wirtschaftsinformatik
+      INF = Informatik
+      BWL = Betriebswirtschaftslehre
+      -description: String #123;final#125;
+   }
+   class ExamTask01 {
+      +main(args: String[])$ void
+   }
 ```
 
 ### Hinweise zur Klasse _Class_
@@ -206,11 +201,9 @@ stateDiagram-v2
    state "Ausführen: [Zahlenwert des Zahlenfeldes prüfen]" as state6
    state "Ausgabe: Zahlenwert der PIN ist ungültig" as state7
    state "Ausgabe: PIN ist gültig" as state8
-
    state if1 <<choice>>
    state if2 <<choice>>
    state fork1 <<fork>>
-
    state "PIN-Test" as main {
       [*] --> state1
       state1 --> state2
@@ -233,82 +226,77 @@ stateDiagram-v2
 
 ```mermaid
 stateDiagram-v2
-    state "[Länge der Zeichenkette] ermitteln" as state1
-    state "[Länge des Zahlenfeldes] = [Länge der Zeichenkette]" as state2
-    state "[Zählvariable] = 0" as state3
-    state "[Aktuelles Zeichen der Zeichenkette] ermitteln" as state4
-    state "[Zahlenwert] von [Aktuelles Zeichen der Zeichenkette] ermitteln" as state5
-    state "[Zahlenwert] dem [Zahlenfeld] hinzufügen" as state6
-    state "[Zählvariable] inkrementieren" as state7
-    state stateif <<choice>>
-
-    state "Zeichenkette in Zahlenfeld umwandeln" as textToPin {
-        [*] --> state1
-        state1 --> state2
-        state2 --> state3
-        state3 --> stateif
-        stateif --> state4: [Zählvariable] < [Länge des Zahlenfeldes]
-        stateif --> [*]: sonst
-        state4 --> state5
-        state5 --> state6
-        state6 --> state7
-        state7 --> stateif
-    }
+   state "[Länge der Zeichenkette] ermitteln" as state1
+   state "[Länge des Zahlenfeldes] = [Länge der Zeichenkette]" as state2
+   state "[Zählvariable] = 0" as state3
+   state "[Aktuelles Zeichen der Zeichenkette] ermitteln" as state4
+   state "[Zahlenwert] von [Aktuelles Zeichen der Zeichenkette] ermitteln" as state5
+   state "[Zahlenwert] dem [Zahlenfeld] hinzufügen" as state6
+   state "[Zählvariable] inkrementieren" as state7
+   state stateif <<choice>>
+   state "Zeichenkette in Zahlenfeld umwandeln" as textToPin {
+      [*] --> state1
+      state1 --> state2
+      state2 --> state3
+      state3 --> stateif
+      stateif --> state4: [Zählvariable] < [Länge des Zahlenfeldes]
+      stateif --> [*]: sonst
+      state4 --> state5
+      state5 --> state6
+      state6 --> state7
+      state7 --> stateif
+   }
 ```
 
 ### Aktivitätsdiagramm zur Methode _boolean checkPinLength()_
 
 ```mermaid
 stateDiagram-v2
-    state "[Länge des Zahlenfeldes] ermitteln" as state1
-    state "Rückgabe: true" as state2
-    state "Rückgabe: false" as state3
-
-    state if1 <<choice>>
-    state fork1 <<fork>>
-
-    state "Länge des Zahlenfeldes prüfen" as checkPinLength {
-        [*] --> state1
-        state1 --> if1
-        if1 --> state2: sonst
-        if1 --> state3: [Länge des Zahlenfeldes] < 4 oder > 8
-        state3 --> fork1
-        state2 --> fork1
-        fork1 --> [*]
-    }
+   state "[Länge des Zahlenfeldes] ermitteln" as state1
+   state "Rückgabe: true" as state2
+   state "Rückgabe: false" as state3
+   state if1 <<choice>>
+   state fork1 <<fork>>
+   state "Länge des Zahlenfeldes prüfen" as checkPinLength {
+      [*] --> state1
+      state1 --> if1
+      if1 --> state2: sonst
+      if1 --> state3: [Länge des Zahlenfeldes] < 4 oder > 8
+      state3 --> fork1
+      state2 --> fork1
+      fork1 --> [*]
+   }
 ```
 
 ### Aktivitätsdiagramm zur Methode _boolean checkPinValue()_
 
 ```mermaid
 stateDiagram-v2
-    state "[Länge des Zahlenfeldes] ermitteln" as state1
-    state "[Zahlenwert] = 0" as state2
-    state "[Zählvariable] = 0" as state3
-    state "[Zahlenwert] = [Zahlenwert] + [Aktuelle Ziffer]" as state4
-    state "[Zählvariable] inkrementieren" as state5
-    state "Rückgabe: false" as state6
-    state "Rückgabe: true" as state7
-
-    state if1 <<choice>>
-    state if2 <<choice>>
-    state fork <<fork>>
-
-    state "Zahlenwert des Zahlenfeldes prüfen" as checkPinValue {
-        [*] --> state1
-        state1 --> state2
-        state2 --> state3
-        state3 --> if1
-        if1 --> state4: [Zählvariable] < [Länge des Zahlenfeldes]
-        state4 --> state5
-        state5 --> if1
-        if1 --> if2: sonst
-        if2 --> state6: [Zahlenwert] ungerade
-        if2 --> state7: sonst
-        state6 --> fork
-        state7 --> fork
-        fork --> [*]
-    }
+   state "[Länge des Zahlenfeldes] ermitteln" as state1
+   state "[Zahlenwert] = 0" as state2
+   state "[Zählvariable] = 0" as state3
+   state "[Zahlenwert] = [Zahlenwert] + [Aktuelle Ziffer]" as state4
+   state "[Zählvariable] inkrementieren" as state5
+   state "Rückgabe: false" as state6
+   state "Rückgabe: true" as state7
+   state if1 <<choice>>
+   state if2 <<choice>>
+   state fork <<fork>>
+   state "Zahlenwert des Zahlenfeldes prüfen" as checkPinValue {
+      [*] --> state1
+      state1 --> state2
+      state2 --> state3
+      state3 --> if1
+      if1 --> state4: [Zählvariable] < [Länge des Zahlenfeldes]
+      state4 --> state5
+      state5 --> if1
+      if1 --> if2: sonst
+      if2 --> state6: [Zahlenwert] ungerade
+      if2 --> state7: sonst
+      state6 --> fork
+      state7 --> fork
+      fork --> [*]
+   }
 ```
 
 ### Beispielhafte Konsolenausgabe
@@ -398,32 +386,29 @@ public class ExamTask02 { // 0,5
 
 ```mermaid
 classDiagram
-    ExamTask03 o-- Player
-    Player o-- Dice
-
-    class ExamTask03 {
-        -player1: Player$
-        -player2: Player$
-        -scanner: Scanner$
-        +main(args: String[])$ void
-    }
-
-    class Player {
-        -name: String #123;final#125;
-        -healthPoints: int
-        -dice: Dice #123;final#125;
-        +Player(name: String)
-        +name() String
-        +getHealthPoints() int
-        +reduceHealthPoints() void
-        +rollTheDice() int
-    }
-
-    class Dice {
-        -value: int
-        +getValue() int
-        +rollTheDice() void
-    }
+   ExamTask03 o-- Player
+   Player o-- Dice
+   class ExamTask03 {
+      -player1: Player$
+      -player2: Player$
+      -scanner: Scanner$
+      +main(args: String[])$ void
+   }
+   class Player {
+      -name: String #123;final#125;
+      -healthPoints: int
+      -dice: Dice #123;final#125;
+      +Player(name: String)
+      +name() String
+      +getHealthPoints() int
+      +reduceHealthPoints() void
+      +rollTheDice() int
+   }
+   class Dice {
+      -value: int
+      +getValue() int
+      +rollTheDice() void
+   }
 ```
 
 ### Hinweise zur Klasse _Player_
@@ -547,47 +532,41 @@ Erstelle die Klassen `StuffedCookie` (9 Punkte), `CookieJar` (8 Punkte) und
 
 ```mermaid
 classDiagram
-    CookieJar o-- Cookie
-    Cookie <|-- StuffedCookie : extends
-    Cookie o-- Recipe
-    StuffedCookie o-- Recipe
-    Recipe o-- Ingredient
-
-    class CookieJar {
-        -cookies: List~Cookie~ #123;final#125;
-        +CookieJar()
-        +addCookie(cookie: Cookie) void
-        +getStuffedCookie() StuffedCookie
-    }
-
-    class Cookie {
-        -name: String #123;final#125;
-        -dough: Recipe #123;final#125;
-        +Cookie(name: String, dough: Recipe)
-        +getIngredients() List~Ingredient~
-    }
-
-    class StuffedCookie {
-        -jam: Recipe #123;final#125;
-        +StuffedCookie(name: String, dough: Recipe, jam: Recipe)
-        +getIngredients() List~Ingredient~
-    }
-
-    class Recipe {
-        -name: String #123;final#125;
-        -ingredients: List~Ingredient~ #123;final#125;
-        +Recipe(name: String)
-        +addIngredient(ingredient: Ingredient) void
-    }
-
-    class Ingredient {
-        -name: String #123;final#125;
-        +Ingredient(name: String)
-    }
-
-    class IngredientsReader {
-        +readIngredients(file: File)$ List~Ingredient~
-    }
+   CookieJar o-- Cookie
+   Cookie <|-- StuffedCookie : extends
+   Cookie o-- Recipe
+   StuffedCookie o-- Recipe
+   Recipe o-- Ingredient
+   class CookieJar {
+      -cookies: List~Cookie~ #123;final#125;
+      +CookieJar()
+      +addCookie(cookie: Cookie) void
+      +getStuffedCookie() StuffedCookie
+   }
+   class Cookie {
+      -name: String #123;final#125;
+      -dough: Recipe #123;final#125;
+      +Cookie(name: String, dough: Recipe)
+      +getIngredients() List~Ingredient~
+   }
+   class StuffedCookie {
+      -jam: Recipe #123;final#125;
+      +StuffedCookie(name: String, dough: Recipe, jam: Recipe)
+      +getIngredients() List~Ingredient~
+   }
+   class Recipe {
+      -name: String #123;final#125;
+      -ingredients: List~Ingredient~ #123;final#125;
+      +Recipe(name: String)
+      +addIngredient(ingredient: Ingredient) void
+   }
+   class Ingredient {
+      -name: String #123;final#125;
+      +Ingredient(name: String)
+   }
+   class IngredientsReader {
+      +readIngredients(file: File)$ List~Ingredient~
+   }
 ```
 
 ### Hinweise zur Klasse _StuffedCookie_

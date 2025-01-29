@@ -17,11 +17,10 @@ Rezepte, Spielanleitungen und Beipackzettel.
 
 ```mermaid
 flowchart LR
-    input --> algorithm --> output
-
-    input(Eingabe)
-    algorithm{Algorithmus}
-    output(Ausgabe)
+   input --> algorithm --> output
+   input[Eingabe]@{ shape: lean-l }
+   algorithm[Algorithmus]
+   output[Ausgabe]@{ shape: lean-r }
 ```
 
 Das nachfolgende Rezept beschreibt die Zubereitung von Pankcakes:
@@ -322,52 +321,49 @@ werden.
 
 ```mermaid
 flowchart
-    split0 --> split1
-    split0 --> split2
-    split1 --> split11
-    split1 --> split12
-    split11 --> split111
-    split11 --> split112
-    split2 --> split21
-    split2 --> split22
-
-    split111 --> merge1
-    split112 --> merge12
-    merge1 --> merge2
-    merge12 --> merge2
-    merge2 --> merge3
-    split12 --> merge0
-    merge0 --> merge3
-    split21 --> merge4
-    split22 --> merge5
-    merge4 --> merge6
-    merge5 --> merge6
-    merge3 --> merge7
-    merge6 --> merge7
-
-    subgraph split
-        split0(12, 99, 50, 68, 36, 49, 76, 70, 16)
-        split1(12, 99, 50, 68, 36)
-        split2(49, 76, 70, 16)
-        split11(12, 99, 50)
-        split111(12, 99)
-        split112(50)
-        split12(68, 36)
-        split21(49, 76)
-        split22(70, 16)
-    end
-
-    subgraph merge
-        merge1(12, 99)
-        merge12(50)
-        merge2(12, 50, 99)
-        merge0(36, 68)
-        merge3(12, 36, 50, 68, 99)
-        merge4(49, 76)
-        merge5(16, 70)
-        merge6(16, 49, 70, 76)
-        merge7(12, 16, 36, 49, 50, 68, 70, 76, 99)
-    end
+   split0 --> split1
+   split0 --> split2
+   split1 --> split11
+   split1 --> split12
+   split11 --> split111
+   split11 --> split112
+   split2 --> split21
+   split2 --> split22
+   split111 --> merge1
+   split112 --> merge12
+   merge1 --> merge2
+   merge12 --> merge2
+   merge2 --> merge3
+   split12 --> merge0
+   merge0 --> merge3
+   split21 --> merge4
+   split22 --> merge5
+   merge4 --> merge6
+   merge5 --> merge6
+   merge3 --> merge7
+   merge6 --> merge7
+   subgraph split
+      split0(12, 99, 50, 68, 36, 49, 76, 70, 16)
+      split1(12, 99, 50, 68, 36)
+      split2(49, 76, 70, 16)
+      split11(12, 99, 50)
+      split111(12, 99)
+      split112(50)
+      split12(68, 36)
+      split21(49, 76)
+      split22(70, 16)
+   end
+   subgraph merge
+      merge1(12, 99)
+      merge12(50)
+      merge2(12, 50, 99)
+      merge0(36, 68)
+      merge3(12, 36, 50, 68, 99)
+      merge4(49, 76)
+      merge5(16, 70)
+      merge6(16, 49, 70, 76)
+      merge7(12, 16, 36, 49, 50, 68, 70, 76, 99)
+   end
 ```
 
   </TabItem>
@@ -382,146 +378,138 @@ Schritt wird als Heapify oder Versickern bezeichnet.
 
 ```mermaid
 flowchart TD
-    1(99)
-    2(70)
-    3(76)
-    4(68)
-    5(36)
-    6(49)
-    7(50)
-    8(12)
-    9(16)
-
-	subgraph "Build-Max-Heap"
-		array(16, 12, 50, 49, 36, 68, 76, 70, 99)
-    	1 --> 2
-    	1 --> 3
-    	2 --> 4
-    	2 --> 5
-    	3 --> 6
-    	3 --> 7
-    	4 --> 8
-    	4 --> 9
-    end
+   1(99)
+   2(70)
+   3(76)
+   4(68)
+   5(36)
+   6(49)
+   7(50)
+   8(12)
+   9(16)
+   subgraph "Build-Max-Heap"
+      array(16, 12, 50, 49, 36, 68, 76, 70, 99)
+      1 --> 2
+      1 --> 3
+      2 --> 4
+      2 --> 5
+      3 --> 6
+      3 --> 7
+      4 --> 8
+      4 --> 9
+   end
 ```
 
 ```mermaid
 flowchart TD
-    1(76)
-    2(70)
-    3(50)
-    4(68)
-    5(36)
-    6(49)
-    7(16)
-    8(12)
-
-    subgraph "Heapify 1"
-    	array(12, 16, 49, 36, 68, 50, 70, 76, 99)
-    	1 --> 2
-    	1 --> 3
-    	2 --> 4
-    	2 --> 5
-    	3 --> 6
-    	3 --> 7
-    	4 --> 8
-    end
+   1(76)
+   2(70)
+   3(50)
+   4(68)
+   5(36)
+   6(49)
+   7(16)
+   8(12)
+   subgraph "Heapify 1"
+      array(12, 16, 49, 36, 68, 50, 70, 76, 99)
+      1 --> 2
+      1 --> 3
+      2 --> 4
+      2 --> 5
+      3 --> 6
+      3 --> 7
+      4 --> 8
+   end
 ```
 
 ```mermaid
 flowchart TD
-    1(70)
-    2(68)
-    3(50)
-    4(12)
-    5(36)
-    6(49)
-    7(16)
-
-    subgraph "Heapify 2"
-    	array(16, 49, 36, 12, 68, 50, 70, 76, 99)
-    	1 --> 2
-    	1 --> 3
-    	2 --> 4
-    	2 --> 5
-    	3 --> 6
-    	3 --> 7
-    end
+   1(70)
+   2(68)
+   3(50)
+   4(12)
+   5(36)
+   6(49)
+   7(16)
+   subgraph "Heapify 2"
+      array(16, 49, 36, 12, 68, 50, 70, 76, 99)
+      1 --> 2
+      1 --> 3
+      2 --> 4
+      2 --> 5
+      3 --> 6
+      3 --> 7
+   end
 ```
 
 ```mermaid
 flowchart TD
-    1(68)
-    2(36)
-    3(50)
-    4(12)
-    5(16)
-    6(49)
-
-	subgraph "Heapify 3"
-		array(16, 12, 50, 36, 49, 68, 70, 76, 99)
-    	1 --> 2
-    	1 --> 3
-    	2 --> 4
-    	2 --> 5
-    	3 --> 6
-    end
+   1(68)
+   2(36)
+   3(50)
+   4(12)
+   5(16)
+   6(49)
+   subgraph "Heapify 3"
+      array(16, 12, 50, 36, 49, 68, 70, 76, 99)
+      1 --> 2
+      1 --> 3
+      2 --> 4
+      2 --> 5
+      3 --> 6
+   end
 ```
 
 ```mermaid
 flowchart TD
-    1(50)
-    2(36)
-    3(49)
-    4(12)
-    5(16)
-
-	subgraph "Heapify 4"
-		array(12, 49, 36, 16, 50, 68, 70, 76, 99)
-    	1 --> 2
-    	1 --> 3
-    	2 --> 4
-    	2 --> 5
-    end
+   1(50)
+   2(36)
+   3(49)
+   4(12)
+   5(16)
+   subgraph "Heapify 4"
+      array(12, 49, 36, 16, 50, 68, 70, 76, 99)
+      1 --> 2
+      1 --> 3
+      2 --> 4
+      2 --> 5
+   end
 ```
 
 ```mermaid
 flowchart TD
-    1(49)
-    2(36)
-    3(16)
-    4(12)
-
-	subgraph "Heapify 5"
-		array(16, 36, 12, 49, 50, 68, 70, 76, 99)
-    	1 --> 2
-    	1 --> 3
-    	2 --> 4
-    end
+   1(49)
+   2(36)
+   3(16)
+   4(12)
+   subgraph "Heapify 5"
+      array(16, 36, 12, 49, 50, 68, 70, 76, 99)
+      1 --> 2
+      1 --> 3
+      2 --> 4
+   end
 ```
 
 ```mermaid
 flowchart TD
-    1(36)
-    2(12)
-    3(16)
-
-	subgraph "Heapify 6"
-		array(12, 16, 36, 49, 50, 68, 70, 76, 99)
-    	1 --> 2
-    	1 --> 3
-    end
+   1(36)
+   2(12)
+   3(16)
+   subgraph "Heapify 6"
+      array(12, 16, 36, 49, 50, 68, 70, 76, 99)
+      1 --> 2
+      1 --> 3
+   end
 ```
 
 ```mermaid
 flowchart TD
-    1(16)
-    2(12)
-
-	subgraph "Heapify 7"
-		array(12, 16, 36, 49, 50, 68, 70, 76, 99)
-    	1 --> 2
-    end
+   1(16)
+   2(12)
+   subgraph "Heapify 7"
+      array(12, 16, 36, 49, 50, 68, 70, 76, 99)
+      1 --> 2
+   end
 ```
 
   </TabItem>

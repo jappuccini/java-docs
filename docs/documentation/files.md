@@ -59,12 +59,12 @@ des Benutzers (Systemeigenschaft `user.dir`).
 
 ```mermaid
 flowchart LR
-    c[C:] --> workspace
-    c --> temp[Temp]
-    workspace[workspace] --> project
-    temp --> documentA[/DocumentA.txt/]
-    project[Project] --> documents
-    documents[documents] --> documentB[/DocumentB.txt/]
+   c[C:] --> workspace
+   c --> temp[Temp]
+   workspace[workspace] --> project
+   temp --> documentA[DocumentA.txt]@{ shape: doc}
+   project[Project] --> documents
+   documents[documents] --> documentB[DocumentB.txt]@{ shape: doc}
 ```
 
 Die Datei `DocumentA.txt` kann entweder über den absoluten Pfad
