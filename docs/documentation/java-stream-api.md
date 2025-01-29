@@ -16,32 +16,31 @@ Stream API auch Methoden zum Erzeugen unendlicher Ströme bereit.
 
 ```mermaid
 flowchart TD
-    Strom1 -->|Filtern| Strom2
-    Strom2 -->|Abbilden| Strom3
-    Strom3 -->|Sortieren| Strom4
-
-    subgraph Strom1
-        hans[Hans, 18, m]
-        peter[Peter, 27, m]
-        lisa[Lisa, 43, w]
-        heidi[Heidi, 19, w]
-        maria[Maria, 17, w]
-    end
-    subgraph Strom2
-        peter2[Peter, 27, m]
-        heidi2[Heidi, 19, w]
-        maria2[Maria, 17, w]
-    end
-    subgraph Strom3
-        peter3[PETER]
-        heidi3[HEIDI]
-        maria3[MARIA]
-    end
-    subgraph Strom4
-        heidi4[HEIDI]
-        maria4[MARIA]
-        peter4[PETER]
-    end
+   Strom1 -->|Filtern| Strom2
+   Strom2 -->|Abbilden| Strom3
+   Strom3 -->|Sortieren| Strom4
+   subgraph Strom1
+      hans[Hans, 18, m]
+      peter[Peter, 27, m]
+      lisa[Lisa, 43, w]
+      heidi[Heidi, 19, w]
+      maria[Maria, 17, w]
+   end
+   subgraph Strom2
+      peter2[Peter, 27, m]
+      heidi2[Heidi, 19, w]
+      maria2[Maria, 17, w]
+   end
+   subgraph Strom3
+      peter3[PETER]
+      heidi3[HEIDI]
+      maria3[MARIA]
+   end
+   subgraph Strom4
+      heidi4[HEIDI]
+      maria4[MARIA]
+      peter4[PETER]
+   end
 ```
 
 :::note Hinweis

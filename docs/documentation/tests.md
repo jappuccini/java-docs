@@ -29,7 +29,7 @@ verbessert).
 
 ```mermaid
 flowchart LR
-    Red --> Green --> Refactor --> Red
+   Red --> Green --> Refactor --> Red
 ```
 
 :::note Hinweis

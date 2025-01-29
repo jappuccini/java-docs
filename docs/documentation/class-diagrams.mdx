@@ -52,17 +52,17 @@ Klassen werden im Klassendiagramm als Rechteck mit verschiedenen Bereichen
 
 ```mermaid
 classDiagram
-    class Person {
-        -name: String #123;final#125;
-        -age: int #123;final#125;
-        -gender: char #123;final#125;
-        -numberOfPersons: int$
-        +Person(name: String, age: int, gender: char)
-        +name() String
-        +age() int
-        +gender() char
-        +getNumberOfPersons()$ int
-    }
+   class Person {
+      -name: String #123;final#125;
+      -age: int #123;final#125;
+      -gender: char #123;final#125;
+      -numberOfPersons: int$
+      +Person(name: String, age: int, gender: char)
+      +name() String
+      +age() int
+      +gender() char
+      +getNumberOfPersons()$ int
+   }
 ```
 
 ## Darstellung spezieller Klassen
@@ -77,17 +77,17 @@ Konstruktor sowie ggbfs. passende Setter und Getter besitzt.
 
 ```mermaid
 classDiagram
-    class WeekDay {
-        <<enumeration>>
-        MONDAY = Monday
-        TUESDAY = Tuesday
-        WEDNESDAY = Wednesday
-        THURSDAY = Thursday
-        FRIDAY = Friday
-        SATURDAY = Saturday
-       SUNDAY = Sunday
-        -description: String #123;final#125;
-    }
+   class WeekDay {
+      <<enumeration>>
+      MONDAY = Monday
+      TUESDAY = Tuesday
+      WEDNESDAY = Wednesday
+      THURSDAY = Thursday
+      FRIDAY = Friday
+      SATURDAY = Saturday
+     SUNDAY = Sunday
+      -description: String #123;final#125;
+   }
 ```
 
   </TabItem>
@@ -98,13 +98,13 @@ Abstrakte und finale Klassen werden durch die Stereotypen `abstract` bzw.
 
 ```mermaid
 classDiagram
-    AbstractList~E~ <|-- MyIntegerList
-    class AbstractList~E~ {
-        <<abstract>>
-    }
-    class MyIntegerList {
-        <<final>>
-    }
+   AbstractList~E~ <|-- MyIntegerList
+   class AbstractList~E~ {
+      <<abstract>>
+   }
+   class MyIntegerList {
+      <<final>>
+   }
 ```
 
   </TabItem>
@@ -116,10 +116,10 @@ abstrakt sind.
 
 ```mermaid
 classDiagram
-    class Comparable~T~ {
-        <<interface>>
-        +compareTo(o: T) int
-    }
+   class Comparable~T~ {
+      <<interface>>
+      +compareTo(o: T) int
+   }
 ```
 
   </TabItem>
@@ -133,12 +133,12 @@ unveränderlich sind und dass die Klasse selbst unveränderlich ist.
 
 ```mermaid
 classDiagram
-    class Person {
-        <<record>>
-        name: String
-        age: int
-        gender: char
-    }
+   class Person {
+      <<record>>
+      name: String
+      age: int
+      gender: char
+   }
 ```
 
   </TabItem>
@@ -149,11 +149,11 @@ Rechteck dargestellt.
 
 ```mermaid
 classDiagram
-    class Box~T~ {
-        -content: T
-        +setContent(content: T) void
-        +getContent() T
-    }
+   class Box~T~ {
+      -content: T
+      +setContent(content: T) void
+      +getContent() T
+   }
 ```
 
   </TabItem>
@@ -179,10 +179,10 @@ dargestellt.
 
 ```mermaid
 classDiagram
-    Persons --> Person
-    class Persons {
-        +getPersons() List~Person~
-    }
+   Persons --> Person
+   class Persons {
+      +getPersons() List~Person~
+   }
 ```
 
   </TabItem>
@@ -193,10 +193,10 @@ Klasse dargestellt.
 
 ```mermaid
 classDiagram
-    Person --o Team
-    class Team {
-        +members: List~Person~
-    }
+   Person --o Team
+   class Team {
+      +members: List~Person~
+   }
 ```
 
   </TabItem>
@@ -207,10 +207,10 @@ dargestellt.
 
 ```mermaid
 classDiagram
-    OrderItem --* Order
-    class Order {
-        +items: List~OrderItem~
-    }
+   OrderItem --* Order
+   class Order {
+      +items: List~OrderItem~
+   }
 ```
 
   </TabItem>
@@ -230,10 +230,10 @@ einem geschlossenen Pfeil hin zur Schnittstelle sowie einer gestrichelten Linie.
 
 ```mermaid
 classDiagram
-    Person <|-- Student : extends
-    Person <|-- Lecturer : extends
-    Comparable~T~ <|.. Person : implements
-    Serializable <|.. Person : implements
+   Person <|-- Student : extends
+   Person <|-- Lecturer : extends
+   Comparable~T~ <|.. Person : implements
+   Serializable <|.. Person : implements
 ```
 
 ## Darstellung von Multiplizitäten
@@ -247,5 +247,5 @@ nach oben unbeschränkte Schranke wird mit **\*** angegeben.
 
 ```mermaid
 classDiagram
-    Student "0..*" -- "1..1" Course
+   Student "0..*" -- "1..1" Course
 ```

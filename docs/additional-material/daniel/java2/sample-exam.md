@@ -31,45 +31,40 @@ Klassendiagrams.
 
 ```mermaid
 classDiagram
-    SuperHuman <|-- Villain : extends
-    SuperHuman <|-- Hero : extends
-    Universe --o SuperHuman
-    SuperLeague~T extends SuperHuman~ o-- Universe
-
-    class SuperHuman {
-        <<abstract>>
-        -name: String #123;final#125;
-        -universe: Universe #123;final#125;
-        -power: int #123;final#125;
-        +SuperHuman(name: String, universe: Universe, power: int)
-        +name() String
-        +universe() Universe
-        +power() int
-    }
-
-    class Villain {
-        +Villain(name: String, universe: Universe, power: int)
-    }
-
-    class Hero {
-        +Hero(name: String, universe: Universe, power: int)
-    }
-
-    class Universe {
-        <<enumeration>>
-        MARVEL
-        DC
-    }
-
-    class SuperLeague~T extends SuperHuman~ {
-        <<record>>
-        name: String
-        universe: Universe
-        members: Map~T, Boolean~
-        +addSuperHuman(t: T) void
-        +getAllAvailableSuperHumans() List~T~
-        +getMostPowerfulSuperHuman() Optional~T~
-    }
+   SuperHuman <|-- Villain : extends
+   SuperHuman <|-- Hero : extends
+   Universe --o SuperHuman
+   SuperLeague~T extends SuperHuman~ o-- Universe
+   class SuperHuman {
+      <<abstract>>
+      -name: String #123;final#125;
+      -universe: Universe #123;final#125;
+      -power: int #123;final#125;
+      +SuperHuman(name: String, universe: Universe, power: int)
+      +name() String
+      +universe() Universe
+      +power() int
+   }
+   class Villain {
+      +Villain(name: String, universe: Universe, power: int)
+   }
+   class Hero {
+      +Hero(name: String, universe: Universe, power: int)
+   }
+   class Universe {
+      <<enumeration>>
+      MARVEL
+      DC
+   }
+   class SuperLeague~T extends SuperHuman~ {
+      <<record>>
+      name: String
+      universe: Universe
+      members: Map~T, Boolean~
+      +addSuperHuman(t: T) void
+      +getAllAvailableSuperHumans() List~T~
+      +getMostPowerfulSuperHuman() Optional~T~
+   }
 ```
 
 ### Hinweise zur Klasse _SuperLeague_
@@ -133,59 +128,53 @@ Klassendiagramms.
 
 ```mermaid
 classDiagram
-    SuperLeagueTest o-- Hero
-    SuperLeagueTest o-- SuperLeague
-    SuperHuman <|-- Villain : extends
-    SuperHuman <|-- Hero : extends
-    Universe --o SuperHuman
-    SuperLeague~T extends SuperHuman~ o-- Universe
-
-    class SuperHuman {
-        <<abstract>>
-        -name: String #123;final#125;
-        -universe: Universe #123;final#125;
-        -power: int #123;final#125;
-        +SuperHuman(name: String, universe: Universe, power: int)
-        +name() String
-        +universe() Universe
-        +power() int
-    }
-
-    class Villain {
-        +Villain(name: String, universe: Universe, power: int)
-    }
-
-    class Hero {
-        +Hero(name: String, universe: Universe, power: int)
-    }
-
-    class Universe {
-        <<enumeration>>
-        MARVEL
-        DC
-    }
-
-    class SuperLeague~T extends SuperHuman~ {
-        <<record>>
-        name: String
-        universe: Universe
-        members: Map~T, Boolean~
-        +addSuperHuman(t: T) void
-        +getAllAvailableSuperHumans() List~T~
-        +getMostPowerfulSuperHuman() Optional~T~
-    }
-
-    class SuperLeagueTest {
-        <<test>>
-        -avengers: SuperLeague~Hero~
-        -superman: Hero #123;Mock#125;
-        -ironman: Hero #123;Mock#125;
-        -spiderman: Hero #123;Mock#125;
-        +setUp() void
-        +testAddSuperHuman() void
-        +testGetAllAvailableSuperHumans() void
-        +testGetMostPowerfulSuperHuman() void
-    }
+   SuperLeagueTest o-- Hero
+   SuperLeagueTest o-- SuperLeague
+   SuperHuman <|-- Villain : extends
+   SuperHuman <|-- Hero : extends
+   Universe --o SuperHuman
+   SuperLeague~T extends SuperHuman~ o-- Universe
+   class SuperHuman {
+      <<abstract>>
+      -name: String #123;final#125;
+      -universe: Universe #123;final#125;
+      -power: int #123;final#125;
+      +SuperHuman(name: String, universe: Universe, power: int)
+      +name() String
+      +universe() Universe
+      +power() int
+   }
+   class Villain {
+      +Villain(name: String, universe: Universe, power: int)
+   }
+   class Hero {
+      +Hero(name: String, universe: Universe, power: int)
+   }
+   class Universe {
+      <<enumeration>>
+      MARVEL
+      DC
+   }
+   class SuperLeague~T extends SuperHuman~ {
+      <<record>>
+      name: String
+      universe: Universe
+      members: Map~T, Boolean~
+      +addSuperHuman(t: T) void
+      +getAllAvailableSuperHumans() List~T~
+      +getMostPowerfulSuperHuman() Optional~T~
+   }
+   class SuperLeagueTest {
+      <<test>>
+      -avengers: SuperLeague~Hero~
+      -superman: Hero #123;Mock#125;
+      -ironman: Hero #123;Mock#125;
+      -spiderman: Hero #123;Mock#125;
+      +setUp() void
+      +testAddSuperHuman() void
+      +testGetAllAvailableSuperHumans() void
+      +testGetMostPowerfulSuperHuman() void
+   }
 ```
 
 ### Hinweise zur Klasse _SuperLeagueTest_
@@ -260,45 +249,41 @@ Erstelle die Klasse `SingleQueries` anhand des abgebildeten Klassendiagramms.
 
 ```mermaid
 classDiagram
-    Single o-- Artist
-    Artist o-- Country
-    SingleQueries o-- Single
-
-    class Single {
-        <<record>>
-        name: String
-        artist: Artist
-        salesInMillions: int
-        publishingYear: String
-    }
-
-    class Artist {
-        <<record>>
-        name: String
-        country: Country
-        birthdate: LocalDate
-        isAlive: boolean
-    }
-
-    class Country {
-        <<enumeration>>
-        BRB
-        CHN
-        FRA
-        GBR
-        ITA
-        PRI
-        USA
-    }
-
-    class SingleQueries {
-        <<record>>
-        singles: List~Single~
-        +printAllSinglesWithMoreThan25MillionSalesPerCountry() void
-        +printAverageBirthYearOfAllDeceasedArtists() void
-        +isAnySingleFromChinaWithMoreThan10MillionSales() boolean
-        +getAllSinglesFromEdSheeran() List~Single~
-    }
+   Single o-- Artist
+   Artist o-- Country
+   SingleQueries o-- Single
+   class Single {
+      <<record>>
+      name: String
+      artist: Artist
+      salesInMillions: int
+      publishingYear: String
+   }
+   class Artist {
+      <<record>>
+      name: String
+      country: Country
+      birthdate: LocalDate
+      isAlive: boolean
+   }
+   class Country {
+      <<enumeration>>
+      BRB
+      CHN
+      FRA
+      GBR
+      ITA
+      PRI
+      USA
+  }
+   class SingleQueries {
+      <<record>>
+      singles: List~Single~
+      +printAllSinglesWithMoreThan25MillionSalesPerCountry() void
+      +printAverageBirthYearOfAllDeceasedArtists() void
+      +isAnySingleFromChinaWithMoreThan10MillionSales() boolean
+      +getAllSinglesFromEdSheeran() List~Single~
+   }
 ```
 
 ### Hinweise zur Klasse _SingleQueries_

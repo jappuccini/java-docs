@@ -13,13 +13,13 @@ Assoziativspeicher auch als Wörterbücher bezeichnet.
 
 ```mermaid
 flowchart LR
-    subgraph Noten
-        direction LR
-        hans(Hans) -.-> g1((2.3))
-        peter(Peter) -.-> g2((1.7))
-        lisa(Lisa) -.-> g3((1.8))
-        max(Max) -.-> g4((4.2))
-    end
+   subgraph Noten
+      direction LR
+      hans(Hans) -.-> g1((2.3))
+      peter(Peter) -.-> g2((1.7))
+      lisa(Lisa) -.-> g3((1.8))
+      max(Max) -.-> g4((4.2))
+   end
 ```
 
 Um auf die Einträge, Schlüssel und Werte eines Assoziativspeichers zugreifen
@@ -80,12 +80,11 @@ den Schlüssel mitgegeben werden.
 
 ```mermaid
 flowchart TD
-    max --> lisa
-    lisa --> hans
-    max --> peter
-
-    hans(Hans) -.-> g1((2.3))
-    peter(Peter) -.-> g2((1.7))
-    lisa(Lisa) -.-> g3((1.8))
-    max(Max) -.-> g4((4.2))
+   max --> lisa
+   lisa --> hans
+   max --> peter
+   hans(Hans) -.-> g1((2.3))
+   peter(Peter) -.-> g2((1.7))
+   lisa(Lisa) -.-> g3((1.8))
+   max(Max) -.-> g4((4.2))
 ```
