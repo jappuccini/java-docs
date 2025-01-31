@@ -1,3 +1,4 @@
+import Link from '@docusaurus/Link';
 import Slides from '../../../../components/Slides';
 import { defaultInitSlides } from '../../../../components/Slides/initSlides';
 
@@ -121,9 +122,14 @@ export default function ConstructorAndStatic(): JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Demo Konstruktor</h2>
+          <h2>
+            <Link to="https://github.com/jappuccini/java-demos/tree/steffen/java1/classes/contructor">
+              Demo - Konstruktor
+            </Link>
+          </h2>
           <ul>
-            <li className="fragment">Human</li>
+            <li className="fragment">Human Klasse</li>
+            <li className="fragment">voller Name</li>
           </ul>
         </section>
       </section>
@@ -160,9 +166,14 @@ export default function ConstructorAndStatic(): JSX.Element {
           </ul>
         </section>
         <section>
-          <h2>Demo static mit private & public</h2>
+          <h2>
+            <Link to="https://github.com/jappuccini/java-demos/tree/steffen/java1/classes/staticmodifier">
+              Demo - static
+            </Link>
+          </h2>
           <ul>
-            <li className="fragment">Humans</li>
+            <li className="fragment">private</li>
+            <li className="fragment">public</li>
           </ul>
         </section>
         <section data-background-iframe="https://giphy.com/embed/lMVNl6XxTvXgs"></section>
@@ -189,8 +200,14 @@ export default function ConstructorAndStatic(): JSX.Element {
         <section>
           <h2>Rest of the day</h2>
           <ul>
-            <li className="fragment">Aufgabe Objects 02 - 07</li>
-            <li className="fragment">Tutego</li>
+            <li className="fragment">
+              <Link to="/exercises/oo">Aufgabe Objects 02 - 07</Link>
+            </li>
+            <li className="fragment">
+              <Link to="/exercises/oo#%C3%BCbungsaufgaben-von-tutegode">
+                Tutego
+              </Link>
+            </li>
           </ul>
         </section>
       </section>

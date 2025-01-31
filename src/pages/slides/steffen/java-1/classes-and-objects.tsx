@@ -1,6 +1,7 @@
+import Link from '@docusaurus/Link';
 import Slides from '../../../../components/Slides';
-import { NKR } from '../../../../components/Slides/nkr';
 import { defaultInitSlides } from '../../../../components/Slides/initSlides';
+import { NKR } from '../../../../components/Slides/nkr';
 
 export default function ClassesAndObjects(): JSX.Element {
   return (
@@ -166,10 +167,18 @@ export default function ClassesAndObjects(): JSX.Element {
           </ul>
         </section>
         <section>
-          <h2>Demo Klasse</h2>
+          <h2>Demo - Klassen</h2>
           <ul>
-            <li className="fragment">Mensch</li>
-            <li className="fragment">Auto</li>
+            <li className="fragment">
+              <Link to="https://github.com/jappuccini/java-demos/tree/steffen/java1/classes/human/Human.java">
+                Mensch
+              </Link>
+            </li>
+            <li className="fragment">
+              <Link to="https://github.com/jappuccini/java-demos/tree/steffen/java1/classes/car/Car.java">
+                Auto
+              </Link>
+            </li>
           </ul>
         </section>
         <section>
@@ -202,10 +211,18 @@ export default function ClassesAndObjects(): JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Demo Objekte</h2>
+          <h2>Demo - Objekte</h2>
           <ul>
-            <li className="fragment">Steffen, Marianna, Mirco</li>
-            <li className="fragment">Audi A3, Fiat 500, BMW 335i</li>
+            <li className="fragment">
+              <Link to="https://github.com/jappuccini/java-demos/blob/steffen/java1/classes/human/Exercise.java">
+                Steffen, Marianna, Mirco
+              </Link>
+            </li>
+            <li className="fragment">
+              <Link to="https://github.com/jappuccini/java-demos/blob/steffen/java1/classes/car/Exercise.java">
+                Audi A3, Fiat 500, BMW 335i
+              </Link>
+            </li>
           </ul>
         </section>
         <section>
@@ -237,11 +254,15 @@ export default function ClassesAndObjects(): JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Demo Objekt</h2>
+          <h2>
+            <Link to="https://github.com/jappuccini/java-demos/blob/steffen/java1/classes/human/Exercise.java">
+              Demo - Referenzvariable (Human)
+            </Link>
+          </h2>
           <ul>
             <li className="fragment">Lesen und Schreiben von Attributen</li>
             <li className="fragment">
-              Unterschied Referenzvariable und Variable
+              Unterschied Referenzvariable und Variable (Kopie)
             </li>
             <li className="fragment">Was ist null?</li>
           </ul>
@@ -305,14 +326,25 @@ export default function ClassesAndObjects(): JSX.Element {
           </ul>
         </section>
         <section>
-          <h2>Demo Modifiers</h2>
+          <h2>
+            <Link to="https://github.com/jappuccini/java-demos/tree/steffen/java1/classes/modifier">
+              Demo - Modifiers
+            </Link>
+          </h2>
           <ul>
-            <li className="fragment">public & private</li>
-            <li className="fragment">Getter & Setter</li>
             <li className="fragment">
-              Schlüsselwort <strong>this</strong>
+              set and print age <strong>Exercise</strong>
             </li>
-            <li className="fragment">Überladen von Methoden</li>
+            <li className="fragment">age: public --&gt; private</li>
+            <li className="fragment">age: getter</li>
+            <li className="fragment">
+              age: setter <strong>this</strong>
+            </li>
+            <li className="fragment">
+              <Link to="https://github.com/jappuccini/java-demos/tree/steffen/java1/classes/overload">
+                Überladen von Methoden (calculator)
+              </Link>
+            </li>
           </ul>
         </section>
       </section>
@@ -348,7 +380,9 @@ export default function ClassesAndObjects(): JSX.Element {
         <section>
           <h2>Rest of the day</h2>
           <ul>
-            <li className="fragment">Aufgabe Objects 01</li>
+            <li className="fragment">
+              <Link to="/exercises/oo/oo01">Aufgabe Objects 01</Link>
+            </li>
           </ul>
         </section>
       </section>
