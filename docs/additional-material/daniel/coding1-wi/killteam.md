@@ -1,7 +1,7 @@
 ---
 title: Kill Team
 description: ''
-sidebar_position: 20
+sidebar_position: 10
 tags: []
 ---
 
