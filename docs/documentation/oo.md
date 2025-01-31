@@ -27,21 +27,19 @@ Setter (auch Set- und Get-Methoden bzw. Accessors genannt).
 
 ```mermaid
 flowchart LR
-    subgraph Klasse
-        direction LR
-        subgraph privater Bereich
-            attribut1((Attribut 1))
-            attribut2((Attribut 2))
-        end
-        subgraph öffentlicher Bereich
-            setter1(Setter für Attribut 1) -.-> attribut1
-            setter2(Setter für Attribut 2) -.-> attribut2
-        end
-        subgraph öffentlicher Bereich
-            attribut1 -.-> getter1(Getter für Attribut 1)
-            attribut2 -.-> getter2(Getter für Attribut 2)
-        end
-    end
+   subgraph Klasse
+      direction LR
+      subgraph privater Bereich
+         attribut1(Attribut 1)
+         attribut2(Attribut 2)
+      end
+      subgraph öffentlicher Bereich
+         setter1(Setter für Attribut 1) -.-> attribut1
+         setter2(Setter für Attribut 2) -.-> attribut2
+         getter1(Getter für Attribut 1) -.-> attribut1
+         getter2(Getter für Attribut 2) -.-> attribut2
+      end
+   end
 ```
 
 ## Abstraktion
@@ -56,19 +54,22 @@ Klassen bzw. Schnittstellen (Interfaces).
 
 ```mermaid
 flowchart LR
-    a[**Mainboard**: Hersteller, Modell, UPE, Format, Chipsatz,...
-      **CPU**: Hersteller, Modell, Sockel, UPE, Kerne, L1-Cache,...
-      **Arbeitsspeicher**: Hersteller, Modell, UPE, Speichergröße, Speichergeschwindigkeit,...
-      **Gehäuse**: Hersteller, Modell, UPE,...
-      **...**]
-    subgraph Klassen
-        computer(**Computer**
-                 description: String
-                 cpu: Cpu
-                 memoryInGb: int)
-        cpu(**Cpu**
-            powerInGhz: double
-            numberOfCores: int)
-    end
-    a --> Klassen
+   subgraph Realität
+      computer["**PC**
+               _Mainboard_ (Hersteller, Modell, UPE, Format,...)
+               _CPU_ (Hersteller, Modell, UPE, Sockel, L1-Cache,...)
+               _Arbeitsspeicher_ (Hersteller, Modell, UPE, Speichergröße,...)
+               _Grafikkarte_ (Hersteller, Modell, UPE, Chipsatz,...)
+               ..."]
+   end
+   subgraph Java
+      computer2[**Computer**
+               description: String
+               cpu: Cpu
+               memoryInGb: int]
+      cpu[**Cpu**
+          powerInGhz: double
+          numberOfCores: int]
+   end
+   Realität --> Java
 ```

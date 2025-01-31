@@ -17,10 +17,10 @@ import Tabs from '@theme/Tabs'; import TabItem from '@theme/TabItem';
 
 ```mermaid
 xychart-beta
-    title "Verteilung"
-    x-axis "Punkte" ["40-50", "30-49", "20-29", "10-19", "0-9"]
-    y-axis "Studierende (%)" 0 --> 50
-    bar [52, 14, 17, 13, 3]
+   title "Verteilung"
+   x-axis "Punkte" ["40-50", "30-49", "20-29", "10-19", "0-9"]
+   y-axis "Studierende (%)" 0 --> 50
+   bar [52, 14, 17, 13, 3]
 ```
 
   </TabItem>
@@ -33,10 +33,10 @@ xychart-beta
 
 ```mermaid
 xychart-beta
-    title "Verteilung"
-    x-axis "Punkte" ["40-50", "30-49", "20-29", "10-19", "0-9"]
-    y-axis "Studierende (%)" 0 --> 50
-    bar [35, 16, 19, 16, 14]
+   title "Verteilung"
+   x-axis "Punkte" ["40-50", "30-49", "20-29", "10-19", "0-9"]
+   y-axis "Studierende (%)" 0 --> 50
+   bar [35, 16, 19, 16, 14]
 ```
 
   </TabItem>
@@ -49,10 +49,10 @@ xychart-beta
 
 ```mermaid
 xychart-beta
-    title "Verteilung"
-    x-axis "Punkte" ["40-50", "30-49", "20-29", "10-19", "0-9"]
-    y-axis "Studierende (%)" 0 --> 50
-    bar [24, 16, 27, 13, 19]
+   title "Verteilung"
+   x-axis "Punkte" ["40-50", "30-49", "20-29", "10-19", "0-9"]
+   y-axis "Studierende (%)" 0 --> 50
+   bar [24, 16, 27, 13, 19]
 ```
 
   </TabItem>

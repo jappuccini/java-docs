@@ -1,4 +1,3 @@
-import Link from '@docusaurus/Link';
 import Slides from '../../../../components/Slides';
 import { defaultInitSlides } from '../../../../components/Slides/initSlides';
 import { NKR } from '../../../../components/Slides/nkr';
@@ -12,7 +11,7 @@ export default function MethodsAndOperators(): JSX.Element {
           <ul>
             <li className="fragment">Wiederholung</li>
             <li className="fragment">Was sind Methoden?</li>
-            <li className="fragment">Was sind Operatoren?</li>
+            <li className="fragment">Was sind Programme?</li>
             <li className="fragment">Zusammenfassung</li>
           </ul>
         </section>
@@ -67,11 +66,7 @@ export default function MethodsAndOperators(): JSX.Element {
           </ul>
         </section>
         <section>
-          <h2>
-            <Link to="https://github.com/jappuccini/java-demos/blob/steffen/java1/methods/Example.java">
-              Demo - Methoden
-            </Link>
-          </h2>
+          <h2>Demo - Methoden</h2>
           <ul>
             <li className="fragment">Addieren von zwei Zahlen</li>
             <li className="fragment">
@@ -281,29 +276,11 @@ export default function MethodsAndOperators(): JSX.Element {
         <section>
           <h2>Rest of the day</h2>
           <ul>
-            <li>
-              <Link to="/exercises/data-objects/data-objects01">
-                DataObjects 01
-              </Link>
-            </li>
-            <li>
-              <Link to="/exercises/data-objects/data-objects02">
-                DataObjects 02 (optional)
-              </Link>
-            </li>
-            <li>
-              <Link to="/exercises/operators/operators01">Operators 01</Link>
-            </li>
-            <li>
-              <Link to="/exercises/operators/operators02">
-                Operators 02 (optional)
-              </Link>
-            </li>
-            <li>
-              <Link to="/exercises/operators/operators03">
-                Operators 03 (optional)
-              </Link>
-            </li>
+            <li>DataObjects 01</li>
+            <li>DataObjects 02 (optional)</li>
+            <li>Operators 01</li>
+            <li>Operators 02 (optional)</li>
+            <li>Operators 03 (optional)</li>
           </ul>
         </section>
       </section>
