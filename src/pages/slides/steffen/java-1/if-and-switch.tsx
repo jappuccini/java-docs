@@ -1,3 +1,4 @@
+import Link from '@docusaurus/Link';
 import Slides from '../../../../components/Slides';
 import { defaultInitSlides } from '../../../../components/Slides/initSlides';
 import { NKR } from '../../../../components/Slides/nkr';
@@ -78,10 +79,18 @@ export default function MethodsAndOperators(): JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Demo If-Anweisung</h2>
+          <h2>
+            <Link to="https://github.com/jappuccini/java-demos/blob/steffen/java1/controlflow/If.java">
+              Demo - If-Anweisungen
+            </Link>
+          </h2>
           <ul>
-            <li>wenn unter 16 Jahre alt, dann kein Alkohol</li>
-            <li>wenn weiblich, dann ist die Anrede "Frau"</li>
+            <li className="fragment">
+              wenn unter 16 Jahre alt, dann kein Alkohol
+            </li>
+            <li className="fragment">
+              wenn weiblich, dann ist die Anrede "Frau"
+            </li>
           </ul>
         </section>
         <section>
@@ -103,12 +112,18 @@ export default function MethodsAndOperators(): JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Demo If-Else-Anweisung</h2>
+          <h2>
+            <Link to="https://github.com/jappuccini/java-demos/blob/steffen/java1/controlflow/If.java">
+              Demo - If-Else-Anweisung
+            </Link>
+          </h2>
           <ul>
-            <li>
+            <li className="fragment">
               wenn unter 16 Jahre alt, dann kein Alkohol, ansonsten Alkohol
             </li>
-            <li>wenn weiblich, dann ist die Anrede "Frau", ansonsten "Mann"</li>
+            <li className="fragment">
+              wenn weiblich, dann ist die Anrede "Frau", ansonsten "Mann"
+            </li>
           </ul>
         </section>
         <section>
@@ -135,13 +150,17 @@ export default function MethodsAndOperators(): JSX.Element {
           </p>
         </section>
         <section>
-          <h2>Demo If-Else-Anweisung</h2>
+          <h2>
+            <Link to="https://github.com/jappuccini/java-demos/blob/steffen/java1/controlflow/If.java">
+              Demo - If-Elseif-Anweisung
+            </Link>
+          </h2>
           <ul>
-            <li>
+            <li className="fragment">
               wenn unter 16 Jahre alt, dann kein Alkohol, wenn unter 18 Jahre
               alt, dann Bier, ansonsten jeden Alkohol
             </li>
-            <li>
+            <li className="fragment">
               wenn weiblich, dann ist die Anrede "Frau", wenn männlich, dann ist
               die Anrede "Herr", ansonsten Vor- und Nachname
             </li>
@@ -213,13 +232,17 @@ export default function MethodsAndOperators(): JSX.Element {
           </div>
         </section>
         <section>
-          <h2>Demo Switch-Anweisung</h2>
+          <h2>
+            <Link to="https://github.com/jappuccini/java-demos/blob/steffen/java1/controlflow/Switch.java">
+              Demo - Switch-Anweisung
+            </Link>
+          </h2>
           <ul>
-            <li>
+            <li className="fragment">
               wenn unter 16 Jahre alt, dann kein Alkohol, wenn unter 18 Jahre
               alt, dann Bier, ansonsten jeden Alkohol
             </li>
-            <li>
+            <li className="fragment">
               wenn "w", "W", "f", "F", dann ist die Anrede "Frau", wenn "m",
               "M", dann ist die Anrede "Herr", ansonsten Vor- und Nachname
             </li>
@@ -272,7 +295,15 @@ export default function MethodsAndOperators(): JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Demo Ternary Operator</h2>
+          <h2>
+            <Link to="https://github.com/jappuccini/java-demos/blob/steffen/java1/controlflow/TernaryOperator.java">
+              Demo - Ternary Operator
+            </Link>
+          </h2>
+          <ul>
+            <li className="fragment">getTitle - mit If-Else</li>
+            <li className="fragment">getTitle - mit TernaryOperator</li>
+          </ul>
         </section>
         <section>
           <h2>Warum braucht man Schleifen?</h2>
@@ -325,7 +356,11 @@ export default function MethodsAndOperators(): JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Demo while-Schleife</h2>
+          <h2>
+            <Link to="https://github.com/jappuccini/java-demos/blob/steffen/java1/controlflow/Loops.java">
+              Demo - while-Schleife
+            </Link>
+          </h2>
           <ul>
             <li>Zahlen von 0 bis 4 ausgeben.</li>
           </ul>
@@ -358,7 +393,11 @@ export default function MethodsAndOperators(): JSX.Element {
           </p>
         </section>
         <section>
-          <h2>Demo do-while-Schleife</h2>
+          <h2>
+            <Link to="https://github.com/jappuccini/java-demos/blob/steffen/java1/controlflow/Loops.java">
+              Demo - do-while-Schleife
+            </Link>
+          </h2>
           <ul>
             <li>Zahlen von 0 bis 4 ausgeben.</li>
           </ul>
@@ -388,7 +427,11 @@ export default function MethodsAndOperators(): JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Demo for-Schleife</h2>
+          <h2>
+            <Link to="https://github.com/jappuccini/java-demos/blob/steffen/java1/controlflow/Loops.java">
+              Demo - for-Schleife
+            </Link>
+          </h2>
           <ul>
             <li>Zahlen von 0 bis 4 ausgeben.</li>
           </ul>
@@ -421,7 +464,11 @@ export default function MethodsAndOperators(): JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Demo for-each-Schleife</h2>
+          <h2>
+            <Link to="https://github.com/jappuccini/java-demos/blob/steffen/java1/controlflow/Loops.java">
+              Demo - for-each-Schleife
+            </Link>
+          </h2>
           <ul>
             <li>Zahlen von 0 bis 4 ausgeben.</li>
           </ul>
@@ -433,7 +480,11 @@ export default function MethodsAndOperators(): JSX.Element {
           </p>
         </section>
         <section>
-          <h2>Demo break</h2>
+          <h2>
+            <Link to="https://github.com/jappuccini/java-demos/blob/steffen/java1/controlflow/Loops.java">
+              Demo - break in while(true) schleife
+            </Link>
+          </h2>
           <ul>
             <li>Beende Schleife, wenn durch 2 teilbar.</li>
           </ul>
@@ -445,7 +496,11 @@ export default function MethodsAndOperators(): JSX.Element {
           </p>
         </section>
         <section>
-          <h2>Demo continue</h2>
+          <h2>
+            <Link to="https://github.com/jappuccini/java-demos/blob/steffen/java1/controlflow/Loops.java">
+              Demo - continue in for-each Schleife
+            </Link>
+          </h2>
           <ul>
             <li>Überspringe alle ungeraden Zahlen</li>
           </ul>
@@ -494,7 +549,7 @@ export default function MethodsAndOperators(): JSX.Element {
             <code
               className="java"
               dangerouslySetInnerHTML={{
-                __html: 'int[] numbers = { 0, 1, 2, 3, 4 }',
+                __html: 'int[] numbers = { 0, 1, 2, 3, 4 };',
               }}
             ></code>
           </pre>
@@ -507,7 +562,7 @@ export default function MethodsAndOperators(): JSX.Element {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  'int[] numbers = { 0, 1, 2, 3, 4 } \n' +
+                  'int[] numbers = { 0, 1, 2, 3, 4 }; \n' +
                   'int dasVierteElement = numbers[3];',
               }}
             ></code>
@@ -523,7 +578,7 @@ export default function MethodsAndOperators(): JSX.Element {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  'int[] numbers = { 0, 1, 2, 3, 4 } \n' + 'numbers[3] = 9;',
+                  'int[] numbers = { 0, 1, 2, 3, 4 }; \n' + 'numbers[3] = 9;',
               }}
             ></code>
           </pre>
@@ -550,7 +605,7 @@ export default function MethodsAndOperators(): JSX.Element {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  'int[] numbers = { 0, 1, 2, 3, 4 } \n' +
+                  'int[] numbers = { 0, 1, 2, 3, 4 }; \n' +
                   'int size = numbers.length; // size ist 5\n',
               }}
             ></code>
@@ -672,12 +727,22 @@ export default function MethodsAndOperators(): JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Demo Array und ArrayList</h2>
-          <p>for-Schleife mit Array und ArrayList</p>
+          <h2>
+            <Link to="https://github.com/jappuccini/java-demos/tree/steffen/java1/arrays">
+              Demo - Array und ArrayList
+            </Link>
+          </h2>
+          <ul>
+            <li className="fragment">3 Namen (literal)</li>
+            <li className="fragment">Länge ausgeben</li>
+            <li className="fragment">Marianna überschreiben</li>
+            <li className="fragment">Alle Namen ausgeben</li>
+            <li className="fragment">3 Noten Array erstellen (new)</li>
+          </ul>
         </section>
         <section>
           <h2>Was sind jetzt die args in der main Methode?</h2>
-          <p className="fragment">Demo</p>
+          <p className="fragment">Demo - Kommandozeilen Action</p>
         </section>
       </section>
       <section>
