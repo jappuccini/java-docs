@@ -28,35 +28,31 @@ Teams die gleichen Git Workflows verwenden.
 
 ```mermaid
 sequenceDiagram
-    participant Arbeitsbereich
-    participant Staging Area
-    participant Lokales Repository
-    participant Remote Repository
-
-    note over Arbeitsbereich,Remote Repository: Lokales Repository erstellen
-    Remote Repository ->> Arbeitsbereich: git clone
-    Lokales Repository ->> Arbeitsbereich: git init
-
-    note over Arbeitsbereich,Remote Repository: Änderungen vornehmen
-    Arbeitsbereich ->> Staging Area: git add
-    activate Staging Area
-    Staging Area ->> Lokales Repository: git commit
-    activate Lokales Repository
-    Staging Area --> Arbeitsbereich: git diff
-    Staging Area ->> Arbeitsbereich: git reset
-    deactivate Staging Area
-    Lokales Repository --> Arbeitsbereich: git diff
-    Lokales Repository ->> Arbeitsbereich: git reset
-    deactivate Lokales Repository
-
-    note over Arbeitsbereich,Remote Repository: Änderungen synchronisieren
-    Remote Repository ->> Lokales Repository: git fetch
-    activate Lokales Repository
-    Lokales Repository ->> Arbeitsbereich: git merge
-    deactivate Lokales Repository
-
-    Remote Repository ->> Arbeitsbereich: git pull
-    Lokales Repository ->> Remote Repository: git push
+   participant Arbeitsbereich
+   participant Staging Area
+   participant Lokales Repository
+   participant Remote Repository
+   note over Arbeitsbereich,Remote Repository: Lokales Repository erstellen
+   Remote Repository ->> Arbeitsbereich: git clone
+   Lokales Repository ->> Arbeitsbereich: git init
+   note over Arbeitsbereich,Remote Repository: Änderungen vornehmen
+   Arbeitsbereich ->> Staging Area: git add
+   activate Staging Area
+   Staging Area ->> Lokales Repository: git commit
+   activate Lokales Repository
+   Staging Area --> Arbeitsbereich: git diff
+   Staging Area ->> Arbeitsbereich: git reset
+   deactivate Staging Area
+   Lokales Repository --> Arbeitsbereich: git diff
+   Lokales Repository ->> Arbeitsbereich: git reset
+   deactivate Lokales Repository
+   note over Arbeitsbereich,Remote Repository: Änderungen synchronisieren
+   Remote Repository ->> Lokales Repository: git fetch
+   activate Lokales Repository
+   Lokales Repository ->> Arbeitsbereich: git merge
+   deactivate Lokales Repository
+   Remote Repository ->> Arbeitsbereich: git pull
+   Lokales Repository ->> Remote Repository: git push
 ```
 
 ## Git Befehle

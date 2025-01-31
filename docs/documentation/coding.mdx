@@ -15,7 +15,7 @@ Computer-Programme.
 
 ```mermaid
 flowchart LR
-    Analyse --> Entwurf --> Umsetzung --> Auslieferung --> Wartung --> Analyse
+   Analyse --> Entwurf --> Umsetzung --> Auslieferung --> Wartung --> Analyse
 ```
 
 :::note Hinweis
@@ -40,19 +40,18 @@ wiederholenden Folgen von Anweisungen, die den Programmablauf steuern.
 
 ```mermaid
 stateDiagram-v2
-    state "Ausgabe: Zahl größer Null eingeben" as activity1
-    state "Eingabe: Zahl" as activity2
-    state "Ausgabe: Zahl ist nicht größer Null" as activity3
-    state "Ausgabe: Zahl ist größer Null" as activity4
-    state if <<choice>>
-
-    [*] --> activity1
-    activity1--> activity2
-    activity2 --> if
-    if --> activity3 : Zahl kleiner gleich Null
-    if --> activity4 : Zahl größer Null
-    activity3 --> activity1
-    activity4 --> [*]
+   state "Ausgabe: Zahl größer Null eingeben" as activity1
+   state "Eingabe: Zahl" as activity2
+   state "Ausgabe: Zahl ist nicht größer Null" as activity3
+   state "Ausgabe: Zahl ist größer Null" as activity4
+   state if <<choice>>
+   [*] --> activity1
+   activity1--> activity2
+   activity2 --> if
+   if --> activity3 : Zahl kleiner gleich Null
+   if --> activity4 : Zahl größer Null
+   activity3 --> activity1
+   activity4 --> [*]
 ```
 
   </TabItem>
@@ -64,21 +63,21 @@ steht.
 
 ```mermaid
 flowchart TD
-    subgraph Ausgangsmenge
-        direction LR
-        p1 -.- p2 -.- p3 -.- p4
-        p1(Hans, 42, m, Stuttgart)
-        p2(Peter, 17, m, Freiburg)
-        p3(Lisa, 19, w, Berlin)
-        p4(Maria, 33, w, Freiburg)
-    end
-    subgraph Ergebnismenge
-        direction LR
-        p5 -.- p6
-        p5(Maria, 33)
-        p6(Peter, 17)
-    end
-    Ausgangsmenge -->|"SELECT Name, Age FROM Person WHERE City = 'Freiburg' ORDER BY Name"| Ergebnismenge
+   subgraph Ausgangsmenge
+      direction LR
+      p1 -.- p2 -.- p3 -.- p4
+      p1(Hans, 42, m, Stuttgart)
+      p2(Peter, 17, m, Freiburg)
+      p3(Lisa, 19, w, Berlin)
+      p4(Maria, 33, w, Freiburg)
+   end
+   subgraph Ergebnismenge
+      direction LR
+      p5 -.- p6
+      p5(Maria, 33)
+      p6(Peter, 17)
+   end
+   Ausgangsmenge -->|"SELECT Name, Age FROM Person WHERE City = 'Freiburg' ORDER BY Name"| Ergebnismenge
 ```
 
   </TabItem>
@@ -90,17 +89,17 @@ Routinen.
 
 ```mermaid
 classDiagram
-    Person --o Team
-    class Person {
-        -name String
-        +Person(name String)
-        +name() String
-    }
-    class Team {
-        -members List~Person~
-        +addMember(person Person) void
-        +members() List~Person~
-    }
+   Person --o Team
+   class Person {
+     -name String
+      +Person(name String)
+      +name() String
+   }
+   class Team {
+      -members List~Person~
+      +addMember(person Person) void
+      +members() List~Person~
+   }
 ```
 
   </TabItem>
@@ -130,17 +129,17 @@ In Java wird der Interpreter als _Java Virtual Machine_ bezeichnet.
 
 ```mermaid
 flowchart LR
-    sourcecode[/Quellcode/]
-    machinecode[/Maschinencode/]
-    compiler(Compiler)
-    cpu(CPU)
-    subgraph Entwicklungszeit
-        sourcecode -.-> compiler -.-> machinecode
-    end
-    subgraph Laufzeit
-        cpu
-    end
-    machinecode -.-> cpu
+   sourcecode[Quellcode]@{ shape: doc }
+   machinecode[Maschinencode]@{ shape: doc }
+   compiler[Compiler]
+   cpu[CPU]
+   subgraph Entwicklungszeit
+      sourcecode -.-> compiler -.-> machinecode
+   end
+   subgraph Laufzeit
+      cpu
+   end
+   machinecode -.-> cpu
 ```
 
   </TabItem>
@@ -148,16 +147,16 @@ flowchart LR
 
 ```mermaid
 flowchart LR
-    sourcecode[/Quellcode/]
-    interpreter(Interpreter)
-    cpu(CPU)
-    subgraph Entwicklungszeit
-        sourcecode
-    end
-    subgraph Laufzeit
-        interpreter -.-> cpu
-    end
-    sourcecode -.-> interpreter
+   sourcecode[Quellcode]@{ shape: doc }
+   interpreter[Interpreter]
+   cpu[CPU]
+   subgraph Entwicklungszeit
+      sourcecode
+   end
+   subgraph Laufzeit
+      interpreter -.-> cpu
+   end
+   sourcecode -.-> interpreter
 ```
 
   </TabItem>
@@ -165,18 +164,18 @@ flowchart LR
 
 ```mermaid
 flowchart LR
-    sourcecode[/Quellcode/]
-    bytecode[/Bytecode/]
-    compiler(Compiler)
-    interpreter(Interpreter)
-    cpu(CPU)
-    subgraph Entwicklungszeit
-        sourcecode -.-> compiler -.-> bytecode
-    end
-    subgraph Laufzeit
-        interpreter -.-> cpu
-    end
-    bytecode -.-> interpreter
+   sourcecode[Quellcode]@{ shape: doc }
+   bytecode[Bytecode]@{ shape: doc }
+   compiler[Compiler]
+   interpreter[Interpreter]
+   cpu[CPU]
+   subgraph Entwicklungszeit
+      sourcecode -.-> compiler -.-> bytecode
+   end
+   subgraph Laufzeit
+      interpreter -.-> cpu
+   end
+   bytecode -.-> interpreter
 ```
 
   </TabItem>

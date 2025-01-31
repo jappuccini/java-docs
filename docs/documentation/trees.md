@@ -16,23 +16,21 @@ Nachfolger besitzen.
 
 ```mermaid
 flowchart
-    node1 --Kante---> node2
-    node1 --Kante---> node3
-    node3 --Kante---> node4
-    node3 --Kante---> node5
-
-    size[Höhe: 2]
-
-    node1(Wurzelknoten
-          Tiefe: 0, Grad: 2)
-    node2(Blattknoten
-          Tiefe: 1, Grad: 0)
-    node3(Kindknoten/Elternknoten
-          Tiefe: 1, Grad: 2)
-    node4(Blattknoten
-          Tiefe: 2, Grad: 0)
-    node5(Blattknoten
-          Tiefe: 2, Grad: 0)
+   node1 --Kante---> node2
+   node1 --Kante---> node3
+   node3 --Kante---> node4
+   node3 --Kante---> node5
+   size[Höhe: 2]
+   node1(Wurzelknoten
+         Tiefe: 0, Grad: 2)
+   node2(Blattknoten
+         Tiefe: 1, Grad: 0)
+   node3(Kindknoten/Elternknoten
+         Tiefe: 1, Grad: 2)
+   node4(Blattknoten
+         Tiefe: 2, Grad: 0)
+   node5(Blattknoten
+         Tiefe: 2, Grad: 0)
 ```
 
 :::note Hinweis
@@ -52,46 +50,41 @@ spricht man von einem _vollständigen Binärbaum_.
 
 ```mermaid
 flowchart TD
-    node1 --> node2
-    node1 --> node3
-    node2 --> node4
-    node2 --> node5
-    node3 --> node6
-    node3 --> node7
-
-    subgraph vollständiger Binärbaum
-        node1( )
-        node2( )
-        node3( )
-        node4( )
-        node5( )
-        node6( )
-        node7( )
-    end
-
-    node8 --> node9
-    node8 --> node10
-    node10 --> node11
-    node10 --> node12
-
-    subgraph voller Binärbaum
-        node8( )
-        node9( )
-        node10( )
-        node11( )
-        node12( )
-    end
-
-    node13 --> node14
-    node13 --> node15
-    node15 --> node16
-
-    subgraph Binärbaum
-        node13( )
-        node14( )
-        node15( )
-        node16( )
-    end
+   node1 --> node2
+   node1 --> node3
+   node2 --> node4
+   node2 --> node5
+   node3 --> node6
+   node3 --> node7
+   subgraph vollständiger Binärbaum
+      node1( )
+      node2( )
+      node3( )
+      node4( )
+      node5( )
+      node6( )
+      node7( )
+   end
+   node8 --> node9
+   node8 --> node10
+   node10 --> node11
+   node10 --> node12
+   subgraph voller Binärbaum
+      node8( )
+      node9( )
+      node10( )
+      node11( )
+      node12( )
+   end
+   node13 --> node14
+   node13 --> node15
+   node15 --> node16
+   subgraph Binärbaum
+      node13( )
+      node14( )
+      node15( )
+      node16( )
+   end
 ```
 
 ## Traversierung von Bäumen
@@ -108,25 +101,23 @@ mehrere sinnvolle Reihenfolgen:
 
 ```mermaid
 flowchart TD
-    node1 --> node2
-    node1 --> node3
-    node2 --> node4
-    node2 --> node5
-    node3 --> node6
-    node3 --> node7
-    node5 --> node8
-    node5 --> node9
-
-    node1(6)
-    node2(2)
-    node3(8)
-    node4(1)
-    node5(4)
-    node6(7)
-    node7(9)
-    node8(3)
-    node9(5)
-
-    depth[Tiefendurchlauf: 6, 2, 1, 4, 3, 5, 8, 7, 9
-    Breitendurchlauf: 6, 2, 8, 1, 4, 7, 9, 3, 5]
+   node1 --> node2
+   node1 --> node3
+   node2 --> node4
+   node2 --> node5
+   node3 --> node6
+   node3 --> node7
+   node5 --> node8
+   node5 --> node9
+   node1(6)
+   node2(2)
+   node3(8)
+   node4(1)
+   node5(4)
+   node6(7)
+   node7(9)
+   node8(3)
+   node9(5)
+   depth[Tiefendurchlauf: 6, 2, 1, 4, 3, 5, 8, 7, 9
+   Breitendurchlauf: 6, 2, 8, 1, 4, 7, 9, 3, 5]
 ```

@@ -34,11 +34,10 @@ Benutzeroberfläche in drei Bereiche unterteilt wird:
 
 ```mermaid
 flowchart LR
-
-    Model --Notify--> Controller
-    Controller --Update--> Model
-    View --User Action--> Controller
-    Controller --Update--> View
+   Model --Notify--> Controller
+   Controller --Update--> Model
+   View --User Action--> Controller
+   Controller --Update--> View
 ```
 
 :::note Hinweis

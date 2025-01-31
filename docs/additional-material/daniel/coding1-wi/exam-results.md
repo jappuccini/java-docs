@@ -1,7 +1,7 @@
 ---
 title: Klausurergebnisse
 description: ''
-sidebar_position: 20
+sidebar_position: 30
 tags: []
 ---
 
@@ -17,10 +17,10 @@ import Tabs from '@theme/Tabs'; import TabItem from '@theme/TabItem';
 
 ```mermaid
 xychart-beta
-    title "Verteilung"
-    x-axis "Punkte" ["80-100", "60-79", "40-59", "20-39", "0-19"]
-    y-axis "Studierende (%)" 0 --> 50
-    bar [39, 31, 22, 8]
+   title "Verteilung"
+   x-axis "Punkte" ["80-100", "60-79", "40-59", "20-39", "0-19"]
+   y-axis "Studierende (%)" 0 --> 50
+   bar [39, 31, 22, 8]
 ```
 
   </TabItem>
@@ -33,10 +33,10 @@ xychart-beta
 
 ```mermaid
 xychart-beta
-    title "Verteilung"
-    x-axis "Punkte" ["80-100", "60-79", "40-59", "20-39", "0-19"]
-    y-axis "Studierende (%)" 0 --> 50
-    bar [22, 36, 28, 11, 3]
+   title "Verteilung"
+   x-axis "Punkte" ["80-100", "60-79", "40-59", "20-39", "0-19"]
+   y-axis "Studierende (%)" 0 --> 50
+   bar [22, 36, 28, 11, 3]
 ```
 
   </TabItem>
@@ -49,10 +49,10 @@ xychart-beta
 
 ```mermaid
 xychart-beta
-    title "Verteilung"
-    x-axis "Punkte" ["80-100", "60-79", "40-59", "20-39", "0-19"]
-    y-axis "Studierende (%)" 0 --> 50
-    bar [33, 24, 21, 18, 3]
+   title "Verteilung"
+   x-axis "Punkte" ["80-100", "60-79", "40-59", "20-39", "0-19"]
+   y-axis "Studierende (%)" 0 --> 50
+   bar [33, 24, 21, 18, 3]
 ```
 
   </TabItem>
@@ -65,10 +65,10 @@ xychart-beta
 
 ```mermaid
 xychart-beta
-    title "Verteilung"
-    x-axis "Punkte" ["80-100", "60-79", "40-59", "20-39", "0-19"]
-    y-axis "Studierende (%)" 0 --> 50
-    bar [31, 28, 19, 17, 6]
+   title "Verteilung"
+   x-axis "Punkte" ["80-100", "60-79", "40-59", "20-39", "0-19"]
+   y-axis "Studierende (%)" 0 --> 50
+   bar [31, 28, 19, 17, 6]
 ```
 
   </TabItem>
