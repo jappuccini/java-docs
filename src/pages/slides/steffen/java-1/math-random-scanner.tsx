@@ -1,3 +1,4 @@
+import Link from '@docusaurus/Link';
 import Slides from '../../../../components/Slides';
 import { defaultInitSlides } from '../../../../components/Slides/initSlides';
 
@@ -115,10 +116,22 @@ export default function MethodsAndOperators(): JSX.Element {
         <section>
           <h2>Aufgaben</h2>
           <ul>
-            <li className="fragment">Konsolenanwendungen</li>
-            <li className="fragment">Verzweigungen - Cases 05 wichtig</li>
-            <li className="fragment">Schleifen</li>
-            <li className="fragment">Felder (Arrays) - Arrays 04 optional</li>
+            <li>
+              <Link to="/exercises/console-applications/">
+                Console Applications (Alle)
+              </Link>
+            </li>
+            <li>
+              <Link to="/exercises/cases">Cases (Alle) - Cases 05 wichtig</Link>
+            </li>
+            <li>
+              <Link to="/exercises/loops">Loops (Alle)</Link>
+            </li>
+            <li>
+              <Link to="/exercises/arrays">
+                Felder (Arrays) (Alle) - Arrays 04 optional
+              </Link>
+            </li>
           </ul>
         </section>
       </section>
