@@ -59,4 +59,7 @@ erfolgt dann über die Kommandozeile (Command Line Interface, kurz CLI).
 Alternativ kann auch eine Entwicklungsumgebung (Integrated Development
 Environment, kurz IDE) verwendet werden. Diese bieten in der Regel zusätzliche
 Komfortfunktionen wie Syntaxhighlighting, Autovervollständigung,
-Vorschlagslisten etc. und vereinfachen so die Entwicklung von Programmen.
+Vorschlagslisten etc. und vereinfachen so die Entwicklung von Programmen. Die am
+weitesten verbreiteten Entwicklungsumgebungen im Java-Umfeld sind dabei
+[IntelliJ IDEA](https://www.jetbrains.com/idea/) und
+[Eclipse IDE](https://www.eclipse.org/).
