@@ -26,21 +26,20 @@ export default function Intro(): JSX.Element {
         </section>
         <section>
           <h2>Lebenslauf</h2>
-          <p className="fragment">Systemadministrator @Framo Morat</p>
-          <p className="fragment">Wirtschaftsinformatik DHBW Ravensburg @SAP</p>
-          <p className="fragment">
-            Software Developer @SAP, @remberg & @Airbus
-          </p>
+          <p className="fragment">Sysadmin @Framo Morat</p>
+          <p className="fragment">WI DHBW Ravensburg @SAP</p>
+          <p className="fragment">Developer @SAP, @remberg & @Airbus</p>
+        </section>
+        <section>
+          <h2>Hobbies</h2>
+          <p className="fragment">🏄🌊🪁</p>
+          <p className="fragment">🚴🏼‍♂️ 🚴🏼‍♀️ ⛰️</p>
+          <p className="fragment">🥾🎒🌄</p>
         </section>
         <section>
           <h2>Techstack</h2>
           <p className="fragment">Angular + NgRx</p>
           <p className="fragment">NodeJS + NestJS</p>
-        </section>
-        <section>
-          <h2>Top Focus Topics</h2>
-          <p className="fragment">Algorithmen und Datenstrukturen</p>
-          <p className="fragment">Gradle</p>
         </section>
         <section data-background-iframe="https://giphy.com/embed/8dgmMbeCA8jeg"></section>
         <section>
@@ -88,7 +87,7 @@ export default function Intro(): JSX.Element {
         <section>
           <h2>Wo findet ihr was?</h2>
           <p className="fragment">
-            <Link to="https://jappuccini.github.io/java-docs/">
+            <Link to="https://jappuccini.github.io/java-docs/production">
               Dokumentation, Aufgaben, Folien
             </Link>
           </p>
