@@ -63,3 +63,35 @@ Vorschlagslisten etc. und vereinfachen so die Entwicklung von Programmen. Die am
 weitesten verbreiteten Entwicklungsumgebungen im Java-Umfeld sind dabei
 [IntelliJ IDEA](https://www.jetbrains.com/idea/) und
 [Eclipse IDE](https://www.eclipse.org/).
+
+## Programmierstil (Code Style)
+
+Als Programmierstil (Code Style) bezeichnet man alle Regeln und Richtlinien, die
+Entwickler befolgen sollten, um sicherzustellen, dass ihr Quellcode konsistent,
+gut lesbar und leicht wartbar ist. Ein einheitlicher Programmierstil erleichtert
+so auch die Zusammenarbeit in Teams, da er die Verständlichkeit und Wartbarkeit
+des Codes verbessert.
+
+Ein Programmierstil legt unter anderem Regeln und Richtlinien für nachfolgende
+Aspekte fest:
+
+- Namenskonventionen
+- Klammersetzung
+- Leerzeichen
+- Leerzeilen
+- Einrückung
+- Zeilenlänge und Zeilenumbrüche
+- Kommentare und Dokumentation
+
+Zu den bekanntesten Programmierstilen in Java gehören die offiziellen
+[Code Conventions for the Java Programming Language](https://www.oracle.com/java/technologies/javase/codeconventions-introduction.html)
+von Oracle sowie der
+[Google Java Style](https://google.github.io/styleguide/javaguide.html) von
+Google. Zudem existiert mit
+[Prettier Java](https://github.com/jhipster/prettier-java) eine Erweiterung für
+den weit verbreiteten Code Formatierer [Prettier](https://prettier.io/). Neben
+vielen Gemeinsamkeiten wie dem Verzicht auf Tabulatorspürunge zur Einrückung,
+den Regeln zu Leerzeichen sowie zur Klammersetzung unterscheiden sich die
+genannten Programmierstile aber auch in Regeln wie der Anzahl der Leerzeichen
+zur Einrückung, der festgelegten Zeilenlänge sowie dem Umgang mit
+Zeilenumbrüchen bei funktionalen Aufrufen.
