@@ -163,7 +163,7 @@ export default function SearchAlgo(): JSX.Element {
               zweiter Hälfte weitersuchen
             </li>
             <li className="fragment">
-              Wenn kein Element im Suchraum gefunden wurde &rarr; -1 zurückgeben{' '}
+              Wenn kein Element im Suchraum gefunden wurde &rarr; -1 zurückgeben
             </li>
           </ol>
         </section>
