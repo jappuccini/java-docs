@@ -130,8 +130,8 @@ export default function KlassdiagramJavaAPIEnum(): JSX.Element {
         <section>
           <h2>Was bewirkt der final modifier?</h2>
           <ul>
-            <li className="fragment">initialisierung nur einmal möglich</li>
-            <li className="fragment">bei Klassen auch im Konstruktor</li>
+            <li className="fragment">Zuweisung nur einmal möglich</li>
+            <li className="fragment">bei Attributen nur im Konstruktor</li>
           </ul>
         </section>
         <section>
@@ -162,12 +162,12 @@ export default function KlassdiagramJavaAPIEnum(): JSX.Element {
           </ul>
         </section>
         <section>
-          <h2>Wie kann man das realisieren?</h2>
+          <h2>Enumeration implementieren</h2>
           <ul>
-            <li className="fragment">Anzahl an Geschlechtern?</li>
-            <li className="fragment">Welche Attribute sind interessant?</li>
+            <li className="fragment">Welche Geschlechter?</li>
+            <li className="fragment">Welche Attribute?</li>
             <li className="fragment">
-              Wie kann eine andere Klasse ein Geschlecht verwenden?
+              Wie kann immer das <b>eine</b> Geschlecht verwendet werden?
             </li>
             <li className="fragment">
               Wie keine weiteren Geschlechtinstanzen zulassen?
@@ -187,9 +187,14 @@ export default function KlassdiagramJavaAPIEnum(): JSX.Element {
           </ul>
         </section>
         <section>
-          <h2>Demo Enumeration</h2>
+          <h2>
+            <Link to="https://github.com/jappuccini/java-demos/blob/steffen/java1/enums">
+              Demo - Enumeration
+            </Link>
+          </h2>
           <ul>
-            <li className="fragment">switch</li>
+            <li className="fragment">Human with Gender property</li>
+            <li className="fragment">switch - printGender</li>
             <li className="fragment">isBinary</li>
             <li className="fragment">values & ordinal</li>
           </ul>
@@ -323,10 +328,18 @@ export default function KlassdiagramJavaAPIEnum(): JSX.Element {
         <section>
           <h2>Rest of the day</h2>
           <ul>
-            <li className="fragment">Java API</li>
-            <li className="fragment">Enumerations</li>
-            <li className="fragment">Activity Diagrams</li>
-            <li className="fragment">Class Diagrams</li>
+            <li className="fragment">
+              <Link to="/exercises/java-api">Java API</Link>
+            </li>
+            <li className="fragment">
+              <Link to="/exercises/enumerations">Enumerations</Link>
+            </li>
+            <li className="fragment">
+              <Link to="/exercises/activity-diagrams">Activity Diagrams</Link>
+            </li>
+            <li className="fragment">
+              <Link to="/exercises/class-diagrams">Class Diagrams</Link>
+            </li>
           </ul>
         </section>
       </section>
