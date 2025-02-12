@@ -1,3 +1,4 @@
+import Link from '@docusaurus/Link';
 import Slides from '../../../../components/Slides';
 import { NKR } from '../../../../components/Slides/nkr';
 import { defaultInitSlides } from '../../../../components/Slides/initSlides';
@@ -134,10 +135,15 @@ export default function KlassdiagramJavaAPIEnum(): JSX.Element {
           </ul>
         </section>
         <section>
-          <h2>Demo final Modifier</h2>
+          <h2>
+            <Link to="https://github.com/jappuccini/java-demos/blob/steffen/java1/finalmodifier">
+              Demo - final Modifier
+            </Link>
+          </h2>
           <ul>
             <li className="fragment">char gender</li>
             <li className="fragment">String firstName</li>
+            <li className="fragment">Reference variable Human</li>
           </ul>
         </section>
       </section>
