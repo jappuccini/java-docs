@@ -23,7 +23,6 @@ classDiagram
         +Game(creature1: Creature, creature2: Creature)
         +simulateFight() void
         -move(creature1: Creature, creature2: Creature) boolean
-        -toString() String
     }
 
     class Creature {
@@ -45,6 +44,11 @@ classDiagram
 - Passe die Methode `boolean attack(creature: Creature)` so an, dass der
   Rückgabewert `true` ist, wenn die Lebenspunkte der angegriffenen Kreatur
   kleiner gleich Null sind, bzw. `false`, wenn nicht
+- Die Methode `String toString()` soll die Daten der Kreatur in folgendem Format zurückgeben:
+  Name (ATTACKVALUE - TREFFERPUNKTE)
+  Bsp:
+  Vampir (5 - 80)
+  
 
 ## Hinweise zur Klasse _CreatureGame_
 
