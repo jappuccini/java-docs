@@ -1,6 +1,7 @@
 import Slides from '../../../../components/Slides';
 import { NKR } from '../../../../components/Slides/nkr';
 import { defaultInitSlides } from '../../../../components/Slides/initSlides';
+import Link from '@docusaurus/Link';
 
 export default function Inheritance(): JSX.Element {
   return (
@@ -113,7 +114,11 @@ export default function Inheritance(): JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Demo Vererbung</h2>
+          <h2>
+            <Link to="https://github.com/jappuccini/java-demos/tree/steffen/java1/inheritance">
+              Demo - Vererbung
+            </Link>
+          </h2>
           <ul>
             <li className="fragment">Generalisierung von Dog und Cat</li>
             <li className="fragment">Vererbung an Dog und Cat</li>
@@ -156,7 +161,11 @@ export default function Inheritance(): JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Demo super</h2>
+          <h2>
+            <Link to="https://github.com/jappuccini/java-demos/tree/steffen/java1/inheritance">
+              Demo - super
+            </Link>
+          </h2>
           <ul>
             <li className="fragment">super call mit Animal</li>
           </ul>
@@ -187,7 +196,11 @@ export default function Inheritance(): JSX.Element {
           </div>
         </section>
         <section>
-          <h2>Demo protected</h2>
+          <h2>
+            <Link to="https://github.com/jappuccini/java-demos/tree/steffen/java1/inheritance">
+              Demo - protected
+            </Link>
+          </h2>
           <ul>
             <li className="fragment">public name</li>
             <li className="fragment">private name</li>
@@ -284,7 +297,7 @@ export default function Inheritance(): JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Demo</h2>
+          <h2>Demo - Konstruktoren II</h2>
           <ul>
             <li className="fragment">Attribut age in Dog (default 0)</li>
             <li className="fragment">Attribut age in Animal</li>
@@ -305,7 +318,9 @@ export default function Inheritance(): JSX.Element {
         <section>
           <h2>Rest of the day</h2>
           <ul>
-            <li className="fragment">Polymorphy 01 & 02</li>
+            <li className="fragment">
+              <Link to="/exercises/polymorphy">Polymorphy 01 & 02</Link>
+            </li>
           </ul>
         </section>
       </section>
