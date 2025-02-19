@@ -1,3 +1,4 @@
+import Link from '@docusaurus/Link';
 import Slides from '../../../../components/Slides';
 import { defaultInitSlides } from '../../../../components/Slides/initSlides';
 
@@ -50,7 +51,11 @@ export default function Polymorphy(): JSX.Element {
           </ul>
         </section>
         <section>
-          <h2>Demo Polymorphie</h2>
+          <h2>
+            <Link to="https://github.com/jappuccini/java-demos/tree/steffen/java1/polymorphy">
+              Demo - Polymorphie
+            </Link>
+          </h2>
           <ul>
             <li className="fragment">Oberklassenmethode makeSound</li>
             <li className="fragment">ArrayList mit Dog und Cat</li>
@@ -96,7 +101,9 @@ export default function Polymorphy(): JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Demo Downcast</h2>
+          <Link to="https://github.com/jappuccini/java-demos/tree/steffen/java1/polymorphy">
+            Demo - Downcast
+          </Link>
           <ul>
             <li className="fragment">Animal zu Dog</li>
           </ul>
@@ -126,7 +133,11 @@ export default function Polymorphy(): JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Demo</h2>
+          <h2>
+            <Link to="https://github.com/jappuccini/java-demos/tree/steffen/java1/polymorphy">
+              Demo - instanceof
+            </Link>
+          </h2>
           <ul>
             <li className="fragment">Dog und Cat spezifische Methoden</li>
             <li className="fragment">instanceof mit Downcast in ArrayList</li>
@@ -146,7 +157,9 @@ export default function Polymorphy(): JSX.Element {
         <section>
           <h2>Rest of the day</h2>
           <ul>
-            <li className="fragment">Polymorphy 03 & 04</li>
+            <li className="fragment">
+              <Link to="/exercises/polymorphy">Polymorphy 03 & 04</Link>
+            </li>
           </ul>
         </section>
       </section>
