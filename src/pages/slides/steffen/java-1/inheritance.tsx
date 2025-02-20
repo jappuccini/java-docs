@@ -184,7 +184,7 @@ export default function Inheritance(): JSX.Element {
         <section>
           <h2>Auswirkung von protected</h2>
           <p>
-            Methoden, Attribute und Konstructoren die mit protected markiert
+            Methoden, Attribute und Konstruktoren die mit protected markiert
             sind können ausgeführt werden von:
           </p>
           <ul>
