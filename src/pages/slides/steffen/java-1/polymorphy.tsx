@@ -101,9 +101,11 @@ export default function Polymorphy(): JSX.Element {
           </pre>
         </section>
         <section>
-          <Link to="https://github.com/jappuccini/java-demos/tree/steffen/java1/polymorphy">
-            Demo - Downcast
-          </Link>
+          <h2>
+            <Link to="https://github.com/jappuccini/java-demos/tree/steffen/java1/polymorphy">
+              Demo - Downcast
+            </Link>
+          </h2>
           <ul>
             <li className="fragment">Animal zu Dog</li>
           </ul>
