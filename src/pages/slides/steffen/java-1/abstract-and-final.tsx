@@ -1,3 +1,4 @@
+import Link from '@docusaurus/Link';
 import Slides from '../../../../components/Slides';
 import { defaultInitSlides } from '../../../../components/Slides/initSlides';
 
@@ -59,7 +60,11 @@ export default function AbstractAndFinal(): JSX.Element {
           </ul>
         </section>
         <section>
-          <h2>Demo abstrakte Klasse</h2>
+          <h2>
+            <Link to="https://github.com/jappuccini/java-demos/tree/steffen/java1/abstraction">
+              Demo - abstract class
+            </Link>
+          </h2>
           <ul>
             <li className="fragment">Animal Klasse abstrakt machen</li>
           </ul>
@@ -83,7 +88,11 @@ export default function AbstractAndFinal(): JSX.Element {
           </ul>
         </section>
         <section>
-          <h2>Demo abstrakte Methode</h2>
+          <h2>
+            <Link to="https://github.com/jappuccini/java-demos/tree/steffen/java1/abstraction">
+              Demo - abstract method
+            </Link>
+          </h2>
           <ul>
             <li className="fragment">abstrakte Methode makeSound</li>
           </ul>
@@ -118,9 +127,14 @@ export default function AbstractAndFinal(): JSX.Element {
           </ul>
         </section>
         <section>
-          <h2>Demo finale Klasse</h2>
+          <h2>
+            <Link to="https://github.com/jappuccini/java-demos/tree/steffen/java1/abstraction">
+              Demo - final class
+            </Link>
+          </h2>
           <ul>
-            <li className="fragment">Dog Klasse final machen</li>
+            <li className="fragment">SuperCat Klasse extends Cat</li>
+            <li className="fragment">Cat Klasse final machen</li>
           </ul>
         </section>
         <section>
@@ -136,9 +150,14 @@ export default function AbstractAndFinal(): JSX.Element {
           </ul>
         </section>
         <section>
-          <h2>Demo finale Methode</h2>
+          <h2>
+            <Link to="https://github.com/jappuccini/java-demos/tree/steffen/java1/abstraction">
+              Demo - final method
+            </Link>
+          </h2>
           <ul>
-            <li className="fragment">finale Methode bark</li>
+            <li className="fragment">Dackel Klasse extends Dog</li>
+            <li className="fragment">bark methode final machen</li>
           </ul>
         </section>
       </section>
@@ -155,7 +174,11 @@ export default function AbstractAndFinal(): JSX.Element {
         <section>
           <h2>Rest of the day</h2>
           <ul>
-            <li className="fragment">Abstract and Final 01</li>
+            <li className="fragment">
+              <Link to="/exercises/abstract-and-final/abstract-and-final01">
+                Abstract and Final 01
+              </Link>
+            </li>
           </ul>
         </section>
       </section>
