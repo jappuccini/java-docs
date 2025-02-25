@@ -11,27 +11,24 @@ Konsolenausgabe am abgebildeten Beispiel.
 
 ```mermaid
 classDiagram
-    MainClass o-- Dice
-
-    class MainClass {
-        -scanner: Scanner$
-        -dices: List~Dice~$
-        -points: int$
-        -rounds: int$
-        +main(args: String[]) void$
-    }
-
-    class Dice {
-        +rollTheDice() ShapeSymbol
-    }
-
-    class ShapeSymbol {
-        <<enumeration>>
-        CIRCLE = 0
-        SQUARE = 4
-        TRIANGLE = 3
-        -corners: int #123;final#125;
-    }
+   MainClass o-- ShapeDice
+   class MainClass {
+      -scanner: Scanner$
+      -dices: List~ShapeDice~$
+      -points: int$
+      -rounds: int$
+      +main(args: String[]) void$
+   }
+   class ShapeDice {
+      +rollTheDice() ShapeSymbol
+   }
+   class ShapeSymbol {
+      <<enumeration>>
+      CIRCLE = 0
+      SQUARE = 4
+      TRIANGLE = 3
+      -corners: int #123;final#125;
+   }
 ```
 
 ## Allgemeine Hinweise
@@ -41,7 +38,7 @@ classDiagram
 - So nicht anders angegeben, sollen Konstruktoren, Setter, Getter sowie die
   Object-Methoden wie gewohnt implementiert werden
 
-## Hinweis zur Klasse _Dice_
+## Hinweis zur Klasse _ShapeDice_
 
 Die Methode `ShapeSymbol rollTheDice()` soll mit einer gleichverteilten
 Wahrscheinlichkeit ein Formensymbol zurückgeben.
