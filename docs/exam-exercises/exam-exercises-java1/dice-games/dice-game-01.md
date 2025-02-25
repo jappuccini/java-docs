@@ -11,39 +11,36 @@ Konsolenausgabe am abgebildeten Beispiel.
 
 ```mermaid
 classDiagram
-    WeaponDice o-- Weapon
-    MainClass o-- Player
-    MainClass o-- WeaponDice
-
-    class MainClass {
-        -player1: Player$
-        -player2: Player$
-        -scanner: Scanner$
-        -weaponDice: WeaponDice$
-        +main(args: String[]) void$
-    }
-
-    class Player {
-        -name: String #123;final#125;
-        -points: int
-        +Player(name: String, points: int)
-        +reducePoints(value: int) void
-    }
-
-    class WeaponDice {
-        -weapon: Weapon
-        +rollTheDice() void
-    }
-
-    class Weapon {
-        <<enumeration>>
-        SWORD = Schwert, 4
-        SPEAR = Speer, 2
-        AXE = Axt, 3
-        CLUB = Keule, 1
-        -description: String #123;final#125;
-        -power: int #123;final#125;
-    }
+   WeaponDice o-- Weapon
+   MainClass o-- Player
+   MainClass o-- WeaponDice
+   class MainClass {
+      -player1: Player$
+      -player2: Player$
+      -scanner: Scanner$
+      -weaponDice: WeaponDice$
+      +main(args: String[]) void$
+   }
+   class Player {
+      -name: String #123;final#125;
+      -points: int
+      +Player(name: String, points: int)
+      +reducePoints(value: int) void
+   }
+   class WeaponDice {
+      -weapon: Weapon
+      +WeaponDice()
+      +rollTheDice() void
+   }
+   class Weapon {
+      <<enumeration>>
+      SWORD = Schwert, 4
+      SPEAR = Speer, 2
+      AXE = Axt, 3
+      CLUB = Keule, 1
+      -description: String #123;final#125;
+      -power: int #123;final#125;
+   }
 ```
 
 ## Allgemeine Hinweise
@@ -53,15 +50,16 @@ classDiagram
 - So nicht anders angegeben, sollen Konstruktoren, Setter, Getter sowie die
   Object-Methoden wie gewohnt implementiert werden
 
-## Hinweis zur Klasse _WeaponDice_
+## Hinweise zur Klasse _WeaponDice_
 
-Die Methode `void rollTheDice()` soll mit einer gleichverteilten
-Wahrscheinlichkeit dem Waffensymbol (`weapon`) einen Wert zuweisen.
+- Der Konstruktor soll den Würfel werfen
+- Die Methode `void rollTheDice()` soll mit einer gleichverteilten
+  Wahrscheinlichkeit dem Waffen-Symbol einen Wert zuweisen
 
 ## Hinweis zur Klasse _Player_
 
-Die Methode `void reducePoints(points: int)` soll die Punkte des Spielers
-(`points`) um die eingehenden Punkte reduzieren.
+Die Methode `void reducePoints(points: int)` soll die Punkte des Spielers um die
+eingehenden Punkte reduzieren.
 
 ## Spielablauf
 
