@@ -11,28 +11,25 @@ Konsolenausgabe am abgebildeten Beispiel.
 
 ```mermaid
 classDiagram
-    MainClass o-- Player
-    Player o-- Dice
-
-    class MainClass {
-        -player1: Player$
-        -player2: Player$
-        -scanner: Scanner$
-        +main(args: String[]) void$
-    }
-
-    class Player {
-        -name: String #123;final#125;
-        -dice: Dice #123;final#125;
-        -healthPoints: int
-        +Player(name: String)
-        +rollTheDice() int
-        +reduceHealthPoints(points: int) void
-    }
-
-    class Dice {
-        +rollTheDice() int
-    }
+   MainClass o-- Player
+   Player o-- Dice
+   class MainClass {
+      -player1: Player$
+      -player2: Player$
+      -scanner: Scanner$
+      +main(args: String[]) void$
+   }
+   class Player {
+      -name: String #123;final#125;
+      -dice: Dice #123;final#125;
+      -healthPoints: int
+      +Player(name: String)
+      +rollTheDice() int
+      +reduceHealthPoints(points: int) void
+   }
+   class Dice {
+      +rollTheDice() int
+   }
 ```
 
 ## Allgemeine Hinweise

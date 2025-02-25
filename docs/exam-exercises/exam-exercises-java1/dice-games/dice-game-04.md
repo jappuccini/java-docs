@@ -11,51 +11,46 @@ Konsolenausgabe am abgebildeten Beispiel.
 
 ```mermaid
 classDiagram
-    MainClass o-- Player
-    MainClass o-- AmountDice
-    MainClass o-- FoodCategoryDice
-
-    class MainClass {
-        -player1: Player$
-        -player2: Player$
-        -scanner: Scanner$
-        -amountDice: AmountDice$
-        -foodCategoryDice: FoodCategoryDice$
-        -rounds: int$
-        +main(args: String[]) void$
-    }
-
-    class Player {
-        -name: String #123;final#125;
-        -points: int
-        +Player(name: String)
-        +setPoints(points: int) void
-    }
-
-    class AmountDice {
-        +rollTheDice() int
-    }
-
-    class FoodCategoryDice {
-        +rollTheDice() FoodCategory
-    }
-
-    class FoodCategory {
-        <<enumeration>>
-        BEVERAGES = Getränke, 1
-        VEGETABLES = Gemüse, 2
-        FRUITS = Obst, 2
-        GRAIN_PRODUCTS = Getreideprodukte, 3
-        POTATOES = Kartoffeln, 3
-        DAIRY_PRODUCTS = Milchprodukte, 4
-        MEAT = Fleisch, 4
-        FISH = Fisch, 4
-        EGGS = Eier, 4
-        FATS_AND_OILS = Fette und Öle, 5
-        SWEETS = Süßigkeiten, 6
-        -description: String #123;final#125;
-        -points: int #123;final#125;
-    }
+   MainClass o-- Player
+   MainClass o-- AmountDice
+   MainClass o-- FoodCategoryDice
+   class MainClass {
+      -player1: Player$
+      -player2: Player$
+      -scanner: Scanner$
+      -amountDice: AmountDice$
+      -foodCategoryDice: FoodCategoryDice$
+      -rounds: int$
+      +main(args: String[]) void$
+   }
+   class Player {
+      -name: String #123;final#125;
+      -points: int
+      +Player(name: String)
+      +setPoints(points: int) void
+   }
+   class AmountDice {
+      +rollTheDice() int
+   }
+   class FoodCategoryDice {
+      +rollTheDice() FoodCategory
+   }
+   class FoodCategory {
+      <<enumeration>>
+      BEVERAGES = Getränke, 1
+      VEGETABLES = Gemüse, 2
+      FRUITS = Obst, 2
+      GRAIN_PRODUCTS = Getreideprodukte, 3
+      POTATOES = Kartoffeln, 3
+      DAIRY_PRODUCTS = Milchprodukte, 4
+      MEAT = Fleisch, 4
+      FISH = Fisch, 4
+      EGGS = Eier, 4
+      FATS_AND_OILS = Fette und Öle, 5
+      SWEETS = Süßigkeiten, 6
+      -description: String #123;final#125;
+      -points: int #123;final#125;
+   }
 ```
 
 ## Allgemeine Hinweise
@@ -77,17 +72,18 @@ Wahrscheinlichkeit eine Lebensmittelkategorie zurückgeben.
 
 ## Hinweis zur Klasse _Player_
 
-Der Konstruktor soll den Spielernamen (`name`) initialisieren.
+Der Konstruktor soll den Spielernamen initialisieren.
 
 ## Spielablauf
 
 - Zwei Spieler sollen abwechselnd solange zwei Würfel (einen
   Lebensmittelkategorie-Würfel und einen Zahlenwürfel) werfen, bis einer der
   beiden Spieler keine Punkte mehr hat
-- In jeder Runde verliert der Spieler mit dem schlechteren Wurfwert Punkte,
-  wobei diesem Spieler die Differenz der beiden Wurfwerte abgezogen wird
-- Der Wurfwert berechnet sich nach der Formel
-  `Zahlenwert des Zahlenwürfels * Punktwert der gewürfelten Lebensmittelkategorie`
+- In jeder Runde soll der Spieler mit dem schlechteren Wurfwert Punkte
+  verlieren, wobei diesem Spieler die Differenz der beiden Wurfwerte abgezogen
+  werden soll
+- Der Wurfwert soll nach der Formel _Zahlenwert des Zahlenwürfels \* Punktwert
+  der gewürfelten Lebensmittelkategorie_ berechnet werden
 - Beide Spieler sollen zu Beginn des Spiels ihre Namen eingeben können und
   sollen das Spiel mit 100 Punkte beginnen
 
