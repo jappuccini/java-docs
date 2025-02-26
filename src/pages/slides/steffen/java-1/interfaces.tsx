@@ -1,3 +1,4 @@
+import Link from '@docusaurus/Link';
 import Slides from '../../../../components/Slides';
 import { defaultInitSlides } from '../../../../components/Slides/initSlides';
 import { NKR } from '../../../../components/Slides/nkr';
@@ -10,7 +11,6 @@ export default function Interfaces(): JSX.Element {
           <h2>Agenda</h2>
           <ul>
             <li className="fragment">Wiederholung</li>
-            <li className="fragment">variable Argumentlisten</li>
             <li className="fragment">Interface</li>
             <li className="fragment">Komparator</li>
             <li className="fragment">Zusammenfassung</li>
@@ -91,12 +91,18 @@ export default function Interfaces(): JSX.Element {
           </ul>
         </section>
         <section>
-          <h2>Demo Interface</h2>
+          <h2>
+            <Link to="https://github.com/jappuccini/java-demos/tree/steffen/java1/interfaces">
+              Demo - Interface
+            </Link>
+          </h2>
           <ul>
-            <li className="fragment">ShoppingCart</li>
+            <li className="fragment">ShoppingCart (description & price)</li>
             <li className="fragment">Dog und Cat implementieren Interface</li>
-            <li className="fragment">ToDo Liste</li>
+            <li className="fragment">ShoppingCart Example</li>
+            <li className="fragment">ToDo Liste (done, title)</li>
             <li className="fragment">Dog und Cat implementieren Interface</li>
+            <li className="fragment">ToDo Liste Example</li>
           </ul>
         </section>
         <section>
@@ -168,10 +174,14 @@ export default function Interfaces(): JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Demo Komparatoren</h2>
+          <h2>
+            <Link to="https://github.com/jappuccini/java-demos/tree/steffen/java1/comparator">
+              Demo - Komparatoren
+            </Link>
+          </h2>
           <ul>
-            <li className="fragment">Human Comparable</li>
-            <li className="fragment">AgeComparator</li>
+            <li className="fragment">Human Comparable (name)</li>
+            <li className="fragment">AgeComparator (age)</li>
           </ul>
         </section>
       </section>
@@ -179,7 +189,6 @@ export default function Interfaces(): JSX.Element {
         <section>
           <h2>Zusammenfassung</h2>
           <ul>
-            <li className="fragment">variable Argumentlisten</li>
             <li className="fragment">Interfaces</li>
             <li className="fragment">Komparatoren</li>
           </ul>
@@ -187,8 +196,12 @@ export default function Interfaces(): JSX.Element {
         <section>
           <h2>Rest of the day</h2>
           <ul>
-            <li className="fragment">Interfaces 01</li>
-            <li className="fragment">Comparators 01 - 02</li>
+            <li className="fragment">
+              <Link to="/exercises/interfaces">Interfaces 01</Link>
+            </li>
+            <li className="fragment">
+              <Link to="/exercises/comparators">Comparators 01 - 02</Link>
+            </li>
           </ul>
         </section>
       </section>

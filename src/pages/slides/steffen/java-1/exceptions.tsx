@@ -1,3 +1,4 @@
+import Link from '@docusaurus/Link';
 import Slides from '../../../../components/Slides';
 import { defaultInitSlides } from '../../../../components/Slides/initSlides';
 
@@ -91,7 +92,11 @@ export default function Exceptions(): JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Demo Exceptions</h2>
+          <h2>
+            <Link to="https://github.com/jappuccini/java-demos/tree/steffen/java1/exceptions">
+              Demo - Exceptions
+            </Link>
+          </h2>
           <ul>
             <li className="fragment">PasswordTooShortException</li>
             <li className="fragment">super call</li>
@@ -117,7 +122,9 @@ export default function Exceptions(): JSX.Element {
         <section>
           <h2>Rest of the day</h2>
           <ul>
-            <li className="fragment">Exceptions 01 - 03</li>
+            <li className="fragment">
+              <Link to="/exercises/exceptions">Exceptions 01 - 03</Link>
+            </li>
           </ul>
         </section>
       </section>
