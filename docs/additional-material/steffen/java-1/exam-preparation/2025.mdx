@@ -14,3 +14,131 @@ tags: []
 - [Klassendiagramm Aufgabe 2](/pdf/steffen/2025/task-2-diagram.pdf)
 - [Aufgabe 3](/pdf/steffen/2025/task-3.pdf)
 - [Java Api](/pdf/steffen/2025/java-api.pdf)
+
+## Lösung Aufgabe 2
+
+### ExamTask02
+
+```java
+public class ExamTask02 {
+  public static void main(String[] args) {
+    new Phone(OperatingSystem.ANDROID, false);
+    new Phone(OperatingSystem.IOS, false);
+    new Laptop(OperatingSystem.LINUX, 11);
+    new Laptop(OperatingSystem.WINDOWS, 11);
+    int securePhones = 0;
+    int secureLaptops = 0;
+    for (Device device : Device.getAllDevices()) {
+      if (device.isSecure()) {
+        if (device instanceof Laptop) {
+          secureLaptops++;
+        } else {
+          securePhones++;
+        }
+      }
+    }
+    System.out.println("Laptops: " + secureLaptops + "Phones: " + securePhones);
+  }
+}
+
+```
+
+### OperatingSystem
+
+```java
+public enum OperatingSystem {
+  WINDOWS('W'),
+  ANDROID('A'),
+  MACOS('M'),
+  IOS('I'),
+  LINUX('L');
+
+  private char name;
+
+  OperatingSystem(char name) {
+    this.name = name;
+  }
+
+  public char getName() {
+    return name;
+  }
+
+  public boolean isMobile() {
+    return this == OperatingSystem.ANDROID || this == OperatingSystem.IOS;
+  }
+}
+```
+
+### Device
+
+```java
+public abstract class Device {
+
+  private static final ArrayList<Device> allDevices = new ArrayList<>();
+  protected final OperatingSystem os;
+
+  public Device(OperatingSystem os) {
+    this.os = os;
+    Device.allDevices.add(this);
+  }
+
+  public abstract boolean isSecure();
+
+  public abstract String toString();
+
+  public static ArrayList<Device> getAllDevices() {
+    return Device.allDevices;
+  }
+}
+```
+
+### Phone
+
+```java
+public abstract class Device {
+
+  private static final ArrayList<Device> allDevices = new ArrayList<>();
+  protected final OperatingSystem os;
+
+  public Device(OperatingSystem os) {
+    this.os = os;
+    Device.allDevices.add(this);
+  }
+
+  public abstract boolean isSecure();
+
+  public abstract String toString();
+
+  public static ArrayList<Device> getAllDevices() {
+    return Device.allDevices;
+  }
+}
+```
+
+### Laptop
+
+```java
+public class Laptop extends Device {
+  private static int MINIMUM_VERSION = 22;
+  private int version;
+
+  public Laptop(OperatingSystem os, int version) {
+    super(os);
+    this.version = version;
+  }
+
+  public boolean isSecure() {
+    return os != OperatingSystem.WINDOWS || version > Laptop.MINIMUM_VERSION;
+  }
+
+  public String toString() {
+    return "Laptop [version="
+        + version
+        + "] [isSecure="
+        + isSecure()
+        + "] [os="
+        + os.getName()
+        + "]";
+  }
+}
+```
