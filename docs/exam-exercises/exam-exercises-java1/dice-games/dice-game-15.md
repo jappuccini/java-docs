@@ -23,7 +23,7 @@ classDiagram
    }
    class Dice {
       -value: int
-      +ColorDice()
+      +Dice()
       +rollTheDice() void
    }
    class Player {

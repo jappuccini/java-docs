@@ -13,6 +13,7 @@ Vorlesungen _Programmierung I (WI)_, _Programmierung II (WI)_ und _Programmieren
 - [Musterlösungen Übungsaufgaben](https://github.com/appenmaier/java_exercises)
 - [Musterlösungen Klausuraufgaben](https://github.com/appenmaier/java_exam_exercises)
 - [Musterlösungen Apps](https://github.com/appenmaier/java_apps)
+- [Demos WWIBE124](https://github.com/appenmaier/java_wwibe124)
 - [Demos WWIBE224](https://github.com/appenmaier/java_wwibe224)
 - [Demos WWIBE123](https://github.com/appenmaier/java_wwibe123)
 - [Demos WWIBE223](https://github.com/appenmaier/java_wwibe223)
