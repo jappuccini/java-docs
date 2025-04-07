@@ -8,10 +8,15 @@ export default function Recap(): JSX.Element {
         <section>
           <h2>Agenda</h2>
           <ul>
+            <li className="fragment">Klausurnachbesprechung</li>
             <li className="fragment">Wiederholung</li>
-            <li className="fragment">Klausurbesprechung</li>
             <li className="fragment">Fortgeschrittene Programmierung</li>
           </ul>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h2>Klausurnachbesprechung</h2>
         </section>
       </section>
       <section>
@@ -236,7 +241,7 @@ export default function Recap(): JSX.Element {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  '  public static void greet(String gender) {\n' +
+                  '  public static void greet(char gender) {\n' +
                   '    switch(gender) {\n' +
                   "      case 'm':\n" +
                   "      case 'M':\n" +
@@ -262,7 +267,7 @@ export default function Recap(): JSX.Element {
               dangerouslySetInnerHTML={{
                 __html:
                   '  public static boolean exists(String brand) {\n' +
-                  "    String[] cars = { 'BMW', 'Audi', 'Benz' }; \n" +
+                  '    String[] cars = { "BMW", "Audi", "Benz" }; \n' +
                   '    boolean found = false; \n' +
                   '    int i = 0; \n' +
                   '    while(!found && i &lt; cars.length) {\n' +
@@ -287,7 +292,7 @@ export default function Recap(): JSX.Element {
               dangerouslySetInnerHTML={{
                 __html:
                   '  public static boolean exists(String brand) {\n' +
-                  "    String[] cars = { 'BMW', 'Audi', 'Benz' }; \n" +
+                  '    String[] cars = { "BMW", "Audi", "Benz" }; \n' +
                   '    boolean found = false; \n' +
                   '    int i = 0; \n' +
                   '    do {\n' +
@@ -313,7 +318,7 @@ export default function Recap(): JSX.Element {
               dangerouslySetInnerHTML={{
                 __html:
                   '  public static boolean exists(String brand) {\n' +
-                  "    String[] cars = { 'BMW', 'Audi', 'Benz' } \n" +
+                  '    String[] cars = { "BMW", "Audi", "Benz" } \n' +
                   '    for (int i = 0; i &lt; cars.length; i++) {\n' +
                   '      String car = cars[i];\n' +
                   '      if(car.equals(brand)) {\n' +
@@ -334,7 +339,7 @@ export default function Recap(): JSX.Element {
               dangerouslySetInnerHTML={{
                 __html:
                   '  public static boolean exists(String brand) {\n' +
-                  "    String[] cars = { 'BMW', 'Audi', 'Benz' } \n" +
+                  '    String[] cars = { "BMW", "Audi", "Benz" } \n' +
                   '    for (String car : cars) {\n' +
                   '      if(car.equals(brand)) {\n' +
                   '        return true;\n' +
@@ -366,7 +371,7 @@ export default function Recap(): JSX.Element {
               dangerouslySetInnerHTML={{
                 __html:
                   '  public static void example() {\n' +
-                  "    String[] cars = { 'BMW', 'Audi', 'Benz' };\n" +
+                  '    String[] cars = { "BMW", "Audi", "Benz" };\n' +
                   '    String car;\n' +
                   '    car = cars[0]; // lesen aus dem Array\n' +
                   "    cars[2] = 'Alfa'; // speichern in ein Array\n" +
@@ -1447,11 +1452,6 @@ export default function Recap(): JSX.Element {
       </section>
       <section>
         <section>
-          <h2>Klausurbesprechung</h2>
-        </section>
-      </section>
-      <section>
-        <section>
           <h2>Organisatorsiches</h2>
         </section>
         <section>
@@ -1470,14 +1470,10 @@ export default function Recap(): JSX.Element {
           </ul>
         </section>
         <section>
-          <h2>Projektbericht - Termine</h2>
+          <h2>Abgabetermine in Moodle</h2>
           <ul>
-            <li className="fragment">
-              30.04.2024 - Problem und Daten in Moodle
-            </li>
-            <li className="fragment">
-              30.05.2025 - Abgabe Projektbericht (Moodle/Papier)
-            </li>
+            <li className="fragment">30.04.2025 - Problemstellung und Daten</li>
+            <li className="fragment">30.05.2025 - Projektbericht</li>
           </ul>
         </section>
         <section>
@@ -1492,27 +1488,25 @@ export default function Recap(): JSX.Element {
           </ul>
         </section>
         <section>
-          <h2>Projektbericht - Ergebnis am 30.04</h2>
+          <h2>Projektbericht - Abgabe I</h2>
           <ul>
-            <li className="fragment">Problembeschreibung (Textdatei)</li>
-            <li className="fragment">
-              Tabelle mit mindestens 20 Datensätzen (CSV-Datei)
-            </li>
-            <li className="fragment">Hochladen in Moodle</li>
+            <li className="fragment">Problembeschreibung (.txt)</li>
+            <li className="fragment">20 Datensätze mit Überschrift (.csv)</li>
+            <li className="fragment">Abgabe in Moodle 30.04 23:59</li>
           </ul>
         </section>
         <section>
-          <h2>Projektbericht - Ergebnis am 31.05</h2>
+          <h2>Projektbericht - Abgabe II</h2>
           <ul>
-            <li className="fragment">Erklärung am 30.04</li>
+            <li className="fragment">Erklärung am 28.04</li>
+            <li className="fragment">Abgabe in Moodle 30.05 23:59</li>
           </ul>
         </section>
         <section>
           <h2>Klausur am PC</h2>
           <ul>
-            <li className="fragment">Ablauf wie Test/Klausur</li>
+            <li className="fragment">Ablauf wie Klausur</li>
             <li className="fragment">VSCode anstatt Notepad++</li>
-            <li className="fragment">Keine Fragenbeschreibung in Moodle</li>
           </ul>
         </section>
       </section>
@@ -1522,6 +1516,7 @@ export default function Recap(): JSX.Element {
           <ul>
             <li className="fragment">Wiederholung</li>
             <li className="fragment">Entwicklungsumgebung einrichten</li>
+            <li className="fragment">Individuelle Klausureinsicht</li>
           </ul>
         </section>
       </section>
