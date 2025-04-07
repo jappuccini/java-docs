@@ -14,7 +14,8 @@ tags: []
 - 24.04.2025 [Sortieralgorithmen](/slides/steffen/java-2/04-sort-algo)
 - 25.04.2025 [Stack, Queue, List](/slides/steffen/java-2/05-stack-queue-list)
 - 28.04.2025 [Trees](/slides/steffen/java-2/06-trees)
-- 12.05.2025 [Generics und Optional](/slides/steffen/java-2/07-generics-optional)
+- 12.05.2025
+  [Generics und Optional](/slides/steffen/java-2/07-generics-optional)
 - 15.05.2025 & 19.05.2025
   [Set, Map, Hashes & Records](/slides/steffen/java-2/08-sets-maps-hashes-records)
 - 22.05.2025
