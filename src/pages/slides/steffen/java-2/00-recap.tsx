@@ -1472,7 +1472,7 @@ export default function Recap(): JSX.Element {
         <section>
           <h2>Abgabetermine in Moodle</h2>
           <ul>
-            <li className="fragment">30.04.2024 - Problemstellung und Daten</li>
+            <li className="fragment">30.04.2025 - Problemstellung und Daten</li>
             <li className="fragment">30.05.2025 - Projektbericht</li>
           </ul>
         </section>
