@@ -21,7 +21,8 @@ abgesprochen werden. Weiter müssen **Daten** zu der Problemstellung gefunden
 werden, welche miteinander **verknüpft** sind.
 
 Folgende Problemstellungen sind nicht möglich:
- - Kohlenhydrate in einer Mahlzeit (Mahlzeit &rarr; Produkte)
+
+- Kohlenhydrate in einer Mahlzeit (Mahlzeit &rarr; Produkte)
 
 Folgende Inhalte müssen am 30.04.2025 abgegeben werden:
 
