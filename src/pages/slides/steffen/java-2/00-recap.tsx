@@ -241,7 +241,7 @@ export default function Recap(): JSX.Element {
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
-                  '  public static void greet(String gender) {\n' +
+                  '  public static void greet(char gender) {\n' +
                   '    switch(gender) {\n' +
                   "      case 'm':\n" +
                   "      case 'M':\n" +
@@ -267,7 +267,7 @@ export default function Recap(): JSX.Element {
               dangerouslySetInnerHTML={{
                 __html:
                   '  public static boolean exists(String brand) {\n' +
-                  "    String[] cars = { 'BMW', 'Audi', 'Benz' }; \n" +
+                  '    String[] cars = { "BMW", "Audi", "Benz" }; \n' +
                   '    boolean found = false; \n' +
                   '    int i = 0; \n' +
                   '    while(!found && i &lt; cars.length) {\n' +
@@ -292,7 +292,7 @@ export default function Recap(): JSX.Element {
               dangerouslySetInnerHTML={{
                 __html:
                   '  public static boolean exists(String brand) {\n' +
-                  "    String[] cars = { 'BMW', 'Audi', 'Benz' }; \n" +
+                  '    String[] cars = { "BMW", "Audi", "Benz" }; \n' +
                   '    boolean found = false; \n' +
                   '    int i = 0; \n' +
                   '    do {\n' +
@@ -318,7 +318,7 @@ export default function Recap(): JSX.Element {
               dangerouslySetInnerHTML={{
                 __html:
                   '  public static boolean exists(String brand) {\n' +
-                  "    String[] cars = { 'BMW', 'Audi', 'Benz' } \n" +
+                  '    String[] cars = { "BMW", "Audi", "Benz" } \n' +
                   '    for (int i = 0; i &lt; cars.length; i++) {\n' +
                   '      String car = cars[i];\n' +
                   '      if(car.equals(brand)) {\n' +
@@ -339,7 +339,7 @@ export default function Recap(): JSX.Element {
               dangerouslySetInnerHTML={{
                 __html:
                   '  public static boolean exists(String brand) {\n' +
-                  "    String[] cars = { 'BMW', 'Audi', 'Benz' } \n" +
+                  '    String[] cars = { "BMW", "Audi", "Benz" } \n' +
                   '    for (String car : cars) {\n' +
                   '      if(car.equals(brand)) {\n' +
                   '        return true;\n' +
@@ -371,7 +371,7 @@ export default function Recap(): JSX.Element {
               dangerouslySetInnerHTML={{
                 __html:
                   '  public static void example() {\n' +
-                  "    String[] cars = { 'BMW', 'Audi', 'Benz' };\n" +
+                  '    String[] cars = { "BMW", "Audi", "Benz" };\n' +
                   '    String car;\n' +
                   '    car = cars[0]; // lesen aus dem Array\n' +
                   "    cars[2] = 'Alfa'; // speichern in ein Array\n" +
