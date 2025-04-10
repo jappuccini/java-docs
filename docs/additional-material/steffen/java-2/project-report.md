@@ -31,6 +31,22 @@ Folgende Inhalte müssen am 30.04.2025 abgegeben werden:
 - CSV Datei mit mindestens 20 Datensätzen. Die erste Zeile soll die
   Überschriften enthalten.
 
+  #### Beispieldaten zur Beispielproblemstellung
+
+| Marke        | Produkt             | KH pro 100 | Mahlzeitenart | Menge |
+| ------------ | ------------------- | ---------- | ------------- | ----- |
+| Hamma        | Körnerkante         | 28         | Frühstück     | 180gr |
+| dm Bio       | Auberginenaufstrich | 17         | Frühstück     | 20gr  |
+| Milbona      | H Milch             | 9          | Frühstück     | 20ml  |
+| Ritter Sport | Nougat              | 38         | Frühstück     | 25gr  |
+| De Cecco     | Linguine No. 7      | 60         | Mittagessen   | 250gr |
+| Barilla      | Pesto Genovese      | 41         | Mittagessen   | 45gr  |
+| Milbona      | Burrata             | 5          | Mittagessen   | 100gr |
+| Ritter Sport | Nougat              | 38         | Mittagessen   | 100gr |
+| Hamma        | Körnerkante         | 28         | Abendessen    | 220gr |
+| Ferrero      | Nutella             | 55         | Abendessen    | 150gr |
+| Ritter Sport | Nougat              | 38         | Abendessen    | 50gr  |
+
 ### Projektbericht
 
 Der Projektbericht ist eine fünfseitige Ausarbeitung zu einem Problem, welche
