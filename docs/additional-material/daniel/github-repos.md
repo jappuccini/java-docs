@@ -18,6 +18,8 @@ tags: []
 - [Demos WWIBE224](https://github.com/appenmaier/java_wwibe224)
 - [Demos WWIBE123](https://github.com/appenmaier/java_wwibe123)
 - [Demos WWIBE223](https://github.com/appenmaier/java_wwibe223)
+- [Demos TIM24 & TIS24](https://github.com/appenmaier/java_timtis24)
+- [Demos TIT24 & TIK24](https://github.com/appenmaier/java_tittik24)
 - [Demos TIM23 & TIS23](https://github.com/appenmaier/java_timtis23)
 - [Demos TIT23 & TIK23](https://github.com/appenmaier/java_tittik23)
 
@@ -37,13 +39,15 @@ tags: []
 - Starte die Kommandozeile (z.B. Windows PowerShell)
 - Führe den Befehl
   `git clone https://github.com/appenmaier/[Der Name des remote Repositorys] "[Pfad zu Deinem lokalen Repository]"`
-  aus, um das remote Repository zu klonen
+  aus, um das remote Repository zu klonen (z.B.
+  `git clone https://github.com/appenmaier/java_exercises "C:\Users\Jappuccini\git\java_exercises"`)
 - Starte Eclipse
 - Führe die Funktion
   `File - Import... - General - Projects from Folder or Archive` aus und
   betätige die Drucktaste `Next >`
-- Gib nachfolgende Informationen ein und betätige die Drucktaste `Finish`
-  - Import source: `[Pfad zu Deinem lokalen Repository]`
+- Gib die nachfolgenden Informationen ein und betätige die Drucktaste `Finish`
+  - Import source: `[Pfad zu Deinem lokalen Repository]` (z.B.
+    `C:\Users/Jappuccini\git\java_exercises`)
 
 ## Anleitung: Aktualisieren eines lokalen Repositorys
 
@@ -51,7 +55,8 @@ tags: []
 
 - Starte die Kommandozeile (z.B. Windows PowerShell)
 - Führe den Befehl `cd "[Pfad zu Deinem lokalen Repository]"` aus, um zum
-  Arbeitsbereich Deines lokalen Repositorys zu wechseln
+  Arbeitsbereich Deines lokalen Repositorys zu wechseln (z.B.
+  `cd "C:\Users\Jappuccini\git\java_exercises"`)
 - Führe den Befehl `git pull` aus, um den Arbeitsbereich zu aktualisieren
 
 **Variante B: Via Eclipse**
@@ -62,13 +67,34 @@ tags: []
   `Team - Pull` aus
 - Betätige die Drucktaste `Close`
 
+## Anleitung: Anlegen eines Maven-Projects
+
+- Starte Eclipse
+- Führe die Funktion `File - New - Maven Project` aus
+- Markiere die Option `Create a simple project (skip archetype selection)`,
+  entmarkiere die Option `Use default Workspace location`, gib die nachfolgenden
+  Informationen ein und betätige die Drucktaste `Next >`
+  - Location: `[Pfad zu Deinem Projektordner]` (z.B.
+    `C:\Users\Jappuccini\eclipse-workspace\java_demos`)
+- Gib die nachfolgenden Informationen ein und betätige die Drucktaste `Finish`
+  - Group Id:
+    `[Eine Domain].[Dein Name bzw. Deine Organisation in Kleinbuchstaben]` (z.B.
+    `edu.jappuccini`)
+  - Artifact Id:
+    `[Der Name Deines Projekts in Kleinbuchstaben und ohne Leerzeichen]` (z.B.
+    `java-demos`)
+  - Version: `0.0.1-SNAPSHOT`
+  - Packaging: `jar`
+  - Name: `[Der Name Deines Projekts]` (z.B. `Java Demos`)
+  - Description: `[Die Beschreibung Deines Projekts` (z.B. `Java Demos`)
+
 ## Anleitung: Scene Builder mit Eclipse verbinden
 
 - Starte Eclipse
 - Navigiere zu `Window – Preferences – JavaFX`
 - Gib beim Feld `SceneBuilder executable` den Wert
   `[Pfad zur SceneBuilder.exe]\SceneBuilder.exe` ein und betätige die Drucktaste
-  `Apply and Close`
+  `Apply and Close` (z.B. `C:\Programme\Scene Builder\SceneBuilder.exe`)
 
 ## Anleitung: Ausführen von JavaFX-Anwendungen
 
