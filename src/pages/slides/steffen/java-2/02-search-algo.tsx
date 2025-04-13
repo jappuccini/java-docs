@@ -103,7 +103,7 @@ export default function SearchAlgo(): JSX.Element {
         </section>
         <section>
           <h2>
-            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/dsa/search/LinearSearch.java">
+            <Link to="https://github.com/jappuccini/java-demos/blob/steffen/java2/dsa/search/examples/LinearSearch.java">
               Demo - Linear Search
             </Link>
           </h2>
@@ -188,10 +188,27 @@ export default function SearchAlgo(): JSX.Element {
         </section>
         <section>
           <h2>
-            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/dsa/search/BinarySearch.java">
+            <Link to="https://github.com/jappuccini/java-demos/blob/steffen/java2/dsa/search/examples/BinarySearch.java">
               Demo - Binary Search
             </Link>
           </h2>
+          <ul>
+            <li
+              className="fragment"
+              tabIndex={0}
+              data-tooltip="Was muss man bei 70 beachten?"
+            >
+              low/high/middle
+            </li>
+            <li className="fragment">gefunden/größer/kleiner</li>
+            <li
+              className="fragment"
+              tabIndex={0}
+              data-tooltip="Wann ist die Suche vorbei?"
+            >
+              while bedingung/nicht gefunden
+            </li>
+          </ul>
         </section>
       </section>
       <section>
@@ -206,11 +223,11 @@ export default function SearchAlgo(): JSX.Element {
           </p>
           <p
             className="fragment"
-            data-tooltip="Beispiel Telefonbuch"
+            data-tooltip="Beispiel Telefonbuch A-Z"
             tabIndex={0}
           >
-            Sind Daten nicht gleich verteilt, kann mit der linearen
-            Interpolation der Suchraum besser eingeschränkt werden.
+            Handelt es sich um eine gleichverteilung der Daten, kann mit der
+            linearen Interpolation der Suchraum besser eingeschränkt werden.
           </p>
         </section>
         <section>
@@ -225,13 +242,13 @@ export default function SearchAlgo(): JSX.Element {
         <section>
           <h2>Lineare Interpolation</h2>
           <ul>
-            <li className="fragment">Beispiel Interpolation</li>
-            <li
-              data-tooltip="w = target; A[l] = value at low index; A[r] =  value at high index; r = high; l = low; A = searchRoom"
-              tabIndex={0}
-              className="fragment"
-            >
-              <InterpolationSearchFormula />
+            <li className="fragment">
+              Formel Interpolation
+              <div>
+                <InterpolationSearchFormula
+                  style={{ width: '800px', height: '200px' }}
+                />
+              </div>
             </li>
             <li className="fragment">
               <Link href="https://www.youtube.com/watch?v=KYiIGZYrb9M&list=PLLTAHuUj-zHi-ozmbFAl461N1eOUyjrlS">
@@ -242,10 +259,26 @@ export default function SearchAlgo(): JSX.Element {
         </section>
         <section>
           <h2>
-            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/dsa/search/BinarySearch.java">
-              Demo - Interpolation Search
+            <Link to="https://github.com/jappuccini/java-demos/blob/steffen/java2/dsa/search/examples/InterpolationSearch.java">
+              Demo - Interpolationssuche
             </Link>
           </h2>
+          <ul>
+            <li
+              className="fragment"
+              tabIndex={0}
+              data-tooltip="Wie in der Formel"
+            >
+              middle Index anpassen
+            </li>
+            <li
+              className="fragment"
+              tabIndex={0}
+              data-tooltip="Was passiert außerhalb der Grenzen?"
+            >
+              while Bedingung anpassen
+            </li>
+          </ul>
         </section>
       </section>
       <section>
