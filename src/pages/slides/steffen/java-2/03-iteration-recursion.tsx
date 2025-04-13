@@ -48,7 +48,7 @@ export default function IterationAndRecursion(): JSX.Element {
         </section>
         <section>
           <h2>
-            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/dsa/recursion">
+            <Link to="https://github.com/jappuccini/java-demos/tree/steffen/java2/dsa/recursion/sum">
               Demo - Zahlen summieren
             </Link>
           </h2>
@@ -187,10 +187,15 @@ export default function IterationAndRecursion(): JSX.Element {
         </section>
         <section>
           <h2>
-            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/dsa/recursion/search">
+            <Link to="https://github.com/jappuccini/java-demos/blob/steffen/java2/dsa/recursion/search/BinarySearch.java">
               Demo - Binary Search Recursion
             </Link>
           </h2>
+          <ul>
+            <li className="fragment">Base Cases</li>
+            <li className="fragment">recursion to inner</li>
+            <li className="fragment">Recurse Steps</li>
+          </ul>
         </section>
       </section>
       <section>
