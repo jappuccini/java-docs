@@ -49,7 +49,7 @@ export default function StackQueueList(): JSX.Element {
         </section>
         <section>
           <h2>
-            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/dsa/stack">
+            <Link to="https://github.com/jappuccini/java-demos/blob/steffen/java2/dsa/stack/Stack.java">
               Demo - Stack
             </Link>
           </h2>
@@ -100,7 +100,7 @@ export default function StackQueueList(): JSX.Element {
         </section>
         <section>
           <h2>
-            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/dsa/queue">
+            <Link to="https://github.com/jappuccini/java-demos/blob/steffen/java2/dsa/queue/Queue.java">
               Demo - Queue
             </Link>
           </h2>
@@ -153,7 +153,7 @@ export default function StackQueueList(): JSX.Element {
         </section>
         <section>
           <h2>
-            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/dsa/lists">
+            <Link to="https://github.com/jappuccini/java-demos/blob/steffen/java2/dsa/lists/DoublyLinkedList.java">
               Demo - List
             </Link>
           </h2>

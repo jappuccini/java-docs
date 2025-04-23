@@ -150,7 +150,7 @@ export default function SortAlgo(): JSX.Element {
         </section>
         <section>
           <h2>
-            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/dsa/sort/SelectionSort.java">
+            <Link to="https://github.com/jappuccini/java-demos/blob/steffen/java2/dsa/sort/SelectionSort.java">
               Demo - Selection Sort
             </Link>
           </h2>
@@ -208,7 +208,7 @@ export default function SortAlgo(): JSX.Element {
         </section>
         <section>
           <h2>
-            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/dsa/sort/BubbleSort.java">
+            <Link to="https://github.com/jappuccini/java-demos/blob/steffen/java2/dsa/sort/BubbleSort.java">
               Demo - Bubble Sort
             </Link>
           </h2>
@@ -272,7 +272,7 @@ export default function SortAlgo(): JSX.Element {
         </section>
         <section>
           <h2>
-            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/dsa/sort/InsertionSort.java">
+            <Link to="https://github.com/jappuccini/java-demos/blob/steffen/java2/dsa/sort/InsertionSort.java">
               Demo - Insertion Sort
             </Link>
           </h2>
@@ -341,7 +341,7 @@ export default function SortAlgo(): JSX.Element {
         </section>
         <section>
           <h2>
-            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/dsa/sort/QuickSort.java">
+            <Link to="https://github.com/jappuccini/java-demos/blob/steffen/java2/dsa/sort/QuickSort.java">
               Demo - Quick Sort
             </Link>
           </h2>
@@ -417,7 +417,7 @@ export default function SortAlgo(): JSX.Element {
         </section>
         <section>
           <h2>
-            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/dsa/sort/MergeSort.java">
+            <Link to="https://github.com/jappuccini/java-demos/blob/steffen/java2/dsa/sort/MergeSort.java">
               Demo - Merge Sort
             </Link>
           </h2>
