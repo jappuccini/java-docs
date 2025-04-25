@@ -5,7 +5,7 @@ sidebar_position: 10
 tags: []
 ---
 
-Ihr seid ein 4-5-köpfiges Entwicklerteam, welches ein Advance-Wars-ähnliches
+Ihr seid ein 4-6-köpfiges Entwicklerteam, welches ein Advance-Wars-ähnliches
 Spiel in Form einer JavaFX-Anwendung entwickeln soll. Bei
 _[Advance Wars](https://www.warsworldnews.com/wp/category/aw/game-aw/)_ handelt
 es sich um ein rundenbasiertes Strategiespiel, welches 2001 für den GameBoy
@@ -24,7 +24,7 @@ FXML-Dateien, Grafiken etc.) beinhalten muss.
 
 ## Anforderungen
 
-- Die JavaFX-Anwendung soll alle Regeln des 2001 erschienen Spiels _Advance
+- Die JavaFX-Anwendung soll alle Regeln des 2001 erschienenen Spiels _Advance
   Wars_ für den GameBoy Advance umsetzen
 - Das Setting kann verändert werden (z.B. Fantasy oder Science-Fiction statt
   Military)
@@ -32,6 +32,7 @@ FXML-Dateien, Grafiken etc.) beinhalten muss.
 - Die JavaFX-Anwendung soll leicht wart-, änder- und erweiterbar sein
 - Die JavaFX-Anwendung soll stabil und zuverlässig sein
 - Die Entwicklungssprache der JavaFX-Anwendung soll Englisch sein
+- Die Dokumentationssprache kann Deutsch oder Englisch sein
 - Die Darstellungsprache der JavaFX-Anwendung kann Deutsch oder Englisch sein
 
 ## Vereinfachungen
