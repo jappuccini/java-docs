@@ -12,10 +12,24 @@ export default function Trees(): JSX.Element {
         <section>
           <h2>Agenda</h2>
           <ul>
+            <li className="fragment">Projektbericht</li>
             <li className="fragment">Intro</li>
             <li className="fragment">Binary Tree</li>
             <li className="fragment">Binary Search Tree</li>
             <li className="fragment">Heap (Optional)</li>
+          </ul>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h2>Projektbericht</h2>
+        </section>
+        <section>
+          <h2>Status</h2>
+          <ul>
+            <li className="fragment">Letzter Termin vor Abgabe</li>
+            <li className="fragment">Inhalte Teil I</li>
+            <li className="fragment">Inhalte Teil II am 12.05.2025</li>
           </ul>
         </section>
       </section>
@@ -47,19 +61,35 @@ export default function Trees(): JSX.Element {
         <section>
           <h2>Begriffe I</h2>
           <ul>
-            <li tabIndex={0} data-tooltip="Wurzelknoten" className="fragment">
+            <li
+              tabIndex={0}
+              data-tooltip="Wurzelknoten (A)"
+              className="fragment"
+            >
               Root Node
             </li>
-            <li tabIndex={0} data-tooltip="Kindknoten" className="fragment">
+            <li
+              tabIndex={0}
+              data-tooltip="Kindknoten (B, C von A)"
+              className="fragment"
+            >
               Child Node
             </li>
-            <li tabIndex={0} data-tooltip="Elternknoten" className="fragment">
+            <li
+              tabIndex={0}
+              data-tooltip="Elternknoten (C von F)"
+              className="fragment"
+            >
               Parent Node
             </li>
-            <li tabIndex={0} data-tooltip="Blatt" className="fragment">
+            <li
+              tabIndex={0}
+              data-tooltip="Blatt (I, K, J, F, G, H)"
+              className="fragment"
+            >
               Leaf Node
             </li>
-            <li tabIndex={0} data-tooltip="Tiefe" className="fragment">
+            <li tabIndex={0} data-tooltip="Tiefe (4)" className="fragment">
               Level
             </li>
           </ul>
@@ -67,19 +97,39 @@ export default function Trees(): JSX.Element {
         <section>
           <h2>Begriffe II</h2>
           <ul>
-            <li tabIndex={0} data-tooltip="Vorgänger" className="fragment">
+            <li
+              tabIndex={0}
+              data-tooltip="Vorgänger (C, A von F)"
+              className="fragment"
+            >
               Ancestor Node
             </li>
-            <li tabIndex={0} data-tooltip="Nachfolger" className="fragment">
+            <li
+              tabIndex={0}
+              data-tooltip="Nachfolger (D, E, I, K, J von B)"
+              className="fragment"
+            >
               Descendant Node
             </li>
-            <li tabIndex={0} data-tooltip="Geschwister" className="fragment">
+            <li
+              tabIndex={0}
+              data-tooltip="Geschwister (F, G, H)"
+              className="fragment"
+            >
               Sibling
             </li>
-            <li tabIndex={0} data-tooltip="Nachbar" className="fragment">
+            <li
+              tabIndex={0}
+              data-tooltip="Nachbar (A, D, E von B)"
+              className="fragment"
+            >
               Neighbor
             </li>
-            <li tabIndex={0} data-tooltip="Teilbaum" className="fragment">
+            <li
+              tabIndex={0}
+              data-tooltip="Teilbaum (Alle Nachfolger von B)"
+              className="fragment"
+            >
               Subtree
             </li>
           </ul>
@@ -192,7 +242,7 @@ export default function Trees(): JSX.Element {
         </section>
         <section>
           <h2>
-            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/dsa/trees/bt/dfs">
+            <Link to="https://github.com/jappuccini/java-demos/tree/steffen/java2/dsa/trees/bt/dfs">
               Demo - Binary Tree DFS
             </Link>
           </h2>
@@ -212,7 +262,7 @@ export default function Trees(): JSX.Element {
         </section>
         <section>
           <h2>
-            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/dsa/trees/bt/bfs">
+            <Link to="https://github.com/jappuccini/java-demos/tree/steffen/java2/dsa/trees/bt/bfs">
               Demo - Binary Tree BFS
             </Link>
           </h2>
@@ -232,7 +282,7 @@ export default function Trees(): JSX.Element {
         </section>
         <section>
           <h2>
-            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/dsa/trees/bt/compare">
+            <Link to="https://github.com/jappuccini/java-demos/tree/steffen/java2/dsa/trees/bt/compare">
               Demo - Binary Tree Compare DFS
             </Link>
           </h2>
@@ -263,7 +313,7 @@ export default function Trees(): JSX.Element {
         </section>
         <section>
           <h2>
-            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/dsa/trees/bst">
+            <Link to="https://github.com/jappuccini/java-demos/tree/steffen/java2/dsa/trees/bst">
               Demo - Binary Search Tree
             </Link>
           </h2>
@@ -327,7 +377,7 @@ export default function Trees(): JSX.Element {
         </section>
         <section>
           <h2>
-            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/dsa/trees/heap">
+            <Link to="https://github.com/jappuccini/java-demos/tree/steffen/java2/dsa/trees/heap">
               Demo - Heap
             </Link>
           </h2>
@@ -336,8 +386,8 @@ export default function Trees(): JSX.Element {
       <section>
         <h2>Rest of the day</h2>
         <ul>
-          <li className="fragment">Heute Abgabe!</li>
-          <li className="fragment">Nachschreiber Fragen!</li>
+          <li className="fragment">Letzte Vorlesung vor Abgabe!</li>
+          <li className="fragment">Besprechung Projekt</li>
         </ul>
       </section>
     </Slides>
