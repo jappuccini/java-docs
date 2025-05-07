@@ -30,9 +30,7 @@ classDiagram
 
     class Type {
         <<enumeration>>
-        GAS_PLANET
-        TERRESTRIAL_PLANET
-        DWARF_PLANET
+        GAS_PLANET, TERRESTRIAL_PLANET, DWARF_PLANET,...
     }
 ```
 

@@ -26,9 +26,7 @@ classDiagram
 
     class Brand {
         <<enumeration>>
-        SAMSUNG
-        APPLE
-        HUAWEI
+        SAMSUNG, APPLE, HUAWEI,...
     }
 
     class Phone {
