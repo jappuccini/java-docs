@@ -35,10 +35,7 @@ classDiagram
 
     class Position {
         <<enumeration>>
-        DEFENDER
-        GOALKEEPER
-        MIDFIELDER
-        STRIKER
+        DEFENDER, GOALKEEPER, MIDFIELDER, STRIKER
     }
 
     class Sportsman {

@@ -29,9 +29,7 @@ classDiagram
    }
    class Color {
       <<enumeration>>
-      RED
-      GREEN
-      BLUE
+      RED, GREEN, BLUE
    }
 ```
 

@@ -27,10 +27,7 @@ classDiagram
 
     class Type {
         <<enumeration>>
-        MONSTER
-        SKELETON
-        VAMPIRE
-        ZOMBIE
+        MONSTER, SKELETON, VAMPIRE, ZOMBIE
     }
 
     class Position {

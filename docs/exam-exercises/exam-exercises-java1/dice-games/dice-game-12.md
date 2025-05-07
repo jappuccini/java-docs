@@ -26,9 +26,7 @@ classDiagram
    }
    class Symbol {
       <<enumeration>>
-      SCISSORS
-      ROCK
-      PAPER
+      SCISSORS, ROCK, PAPER
    }
    class Player {
       -name: String #123;final#125;

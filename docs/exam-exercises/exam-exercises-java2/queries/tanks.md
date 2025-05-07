@@ -28,19 +28,12 @@ classDiagram
 
     class Type {
         <<enumeration>>
-        ARTILLERY_TANK
-        BATTLE_TANK
-        SHIELD_TANK
-        WORLD_WAR_II_TANK
+        ARTILLERY_TANK, BATTLE_TANK, SHIELD_TANK, WORLD_WAR_II_TANK,...
     }
 
     class Nation {
         <<enumeration>>
-        CHN
-        FRA
-        GER
-        SWE
-        USA
+        CHN, FRA, GER, SWE, USA,...
     }
 
     class TankQueries {
