@@ -289,7 +289,7 @@ export default function GenericsAndOptional(): JSX.Element {
         </section>
         <section>
           <h2>
-            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/generics">
+            <Link to="https://github.com/jappuccini/java-demos/tree/steffen/java2/generics">
               Demo - Generics
             </Link>
           </h2>
@@ -367,7 +367,7 @@ export default function GenericsAndOptional(): JSX.Element {
         </section>
         <section>
           <h2>
-            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/generics">
+            <Link to="https://github.com/jappuccini/java-demos/tree/steffen/java2/generics">
               Demo - Generics
             </Link>
           </h2>
@@ -500,7 +500,7 @@ export default function GenericsAndOptional(): JSX.Element {
         </section>
         <section>
           <h2>
-            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/optional">
+            <Link to="https://github.com/jappuccini/java-demos/tree/steffen/java2/optional">
               Demo - Optional
             </Link>
           </h2>
