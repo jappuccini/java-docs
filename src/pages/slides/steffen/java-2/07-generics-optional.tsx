@@ -461,7 +461,7 @@ export default function GenericsAndOptional(): JSX.Element {
                 __html:
                   'public class Main {\n' +
                   '  public static void main(String[] args) {\n' +
-                  '    Optional&lt;String&gt; name = Name.createName();\n' +
+                  '    Optional&lt;String&gt; name = Optional.of("Hans");\n' +
                   '    if(name.isPresent()) {\n' +
                   '      System.out.println(name.get());\n' +
                   '    }\n' +
@@ -483,7 +483,7 @@ export default function GenericsAndOptional(): JSX.Element {
                 __html:
                   'public class Main {\n' +
                   '  public static void main(String[] args) {\n' +
-                  '    Optional&lt;String&gt; name = Name.createName();\n' +
+                  '    Optional&lt;String&gt; name = Optional.of("Hans");\n' +
                   '    name.ifPresent((value) -> System.out.println(value));\n' +
                   '    name.ifPresentOrElse(\n' +
                   '      (value) -> System.out.println(value),\n' +
@@ -558,12 +558,12 @@ export default function GenericsAndOptional(): JSX.Element {
         <h2>Rest of the Day</h2>
         <ul>
           <li className="fragment">
-            <Link to="https://jappuccini.github.io/java-docs/exercises/generics/">
+            <Link to="https://jappuccini.github.io/java-docs/production/exercises/generics/">
               Generics Aufgaben
             </Link>
           </li>
           <li className="fragment">
-            <Link to="https://jappuccini.github.io/java-docs/exercises/optionals/">
+            <Link to="https://jappuccini.github.io/java-docs/production/exercises/optionals/">
               Optional Aufgaben
             </Link>
           </li>
