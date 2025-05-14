@@ -558,14 +558,10 @@ export default function GenericsAndOptional(): JSX.Element {
         <h2>Rest of the Day</h2>
         <ul>
           <li className="fragment">
-            <Link to="https://jappuccini.github.io/java-docs/production/exercises/generics/">
-              Generics Aufgaben
-            </Link>
+            <Link to="/exercises/generics/">Generics Aufgaben</Link>
           </li>
           <li className="fragment">
-            <Link to="https://jappuccini.github.io/java-docs/production/exercises/optionals/">
-              Optional Aufgaben
-            </Link>
+            <Link to="/exercises/optionals/">Optional Aufgaben</Link>
           </li>
         </ul>
       </section>

@@ -875,9 +875,7 @@ export default function StreamApi(): JSX.Element {
         <h2>Rest of the Day</h2>
         <ul>
           <li className="fragment">
-            <Link to="https://jappuccini.github.io/java-docs/exercises/java-stream-api/">
-              Stream API Aufgaben
-            </Link>
+            <Link to="/exercises/java-stream-api/">Stream API Aufgaben</Link>
           </li>
         </ul>
       </section>

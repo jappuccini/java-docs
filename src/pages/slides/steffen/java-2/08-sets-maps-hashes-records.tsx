@@ -24,7 +24,7 @@ export default function SetsMapsHashesRecords(): JSX.Element {
           <h2>Konzept</h2>
           <ul>
             <li className="fragment">
-              <Link to="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html">
+              <Link to="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Set.html">
                 Set
               </Link>{' '}
               ist ein Interface
@@ -37,7 +37,7 @@ export default function SetsMapsHashesRecords(): JSX.Element {
         </section>
         <section>
           <h2>
-            <Link to="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/HashSet.html">
+            <Link to="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/HashSet.html">
               HashSet
             </Link>
             - Klasse
@@ -47,7 +47,7 @@ export default function SetsMapsHashesRecords(): JSX.Element {
         </section>
         <section>
           <h2>
-            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/hashcollection/hashset">
+            <Link to="https://github.com/jappuccini/java-demos/blob/steffen/java2/hashcollection/hashset/Example.java">
               Demo - HashSet
             </Link>
           </h2>
@@ -91,7 +91,7 @@ export default function SetsMapsHashesRecords(): JSX.Element {
           <h2>Konzept</h2>
           <ul>
             <li className="fragment">
-              <Link to="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html">
+              <Link to="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Map.html">
                 Map
               </Link>{' '}
               ist ein Interface
@@ -117,7 +117,7 @@ export default function SetsMapsHashesRecords(): JSX.Element {
         </section>
         <section>
           <h2>
-            <Link to="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/HashMap.html">
+            <Link to="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/HashMap.html">
               HashMap
             </Link>
             - Klasse
@@ -127,7 +127,7 @@ export default function SetsMapsHashesRecords(): JSX.Element {
         </section>
         <section>
           <h2>
-            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/hashcollection/hashmap/studentgrades">
+            <Link to="https://github.com/jappuccini/java-demos/blob/steffen/java2/hashcollection/hashmap/studentgrades/Example.java">
               Demo - HashMap
             </Link>
           </h2>
@@ -300,7 +300,7 @@ export default function SetsMapsHashesRecords(): JSX.Element {
         <section>
           <h2>
             Die Klasse{' '}
-            <Link to="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html">
+            <Link to="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html">
               Object
             </Link>
           </h2>
@@ -329,7 +329,7 @@ export default function SetsMapsHashesRecords(): JSX.Element {
         </section>
         <section>
           <h2>
-            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/hashcollection/hashmap/dogowners/hashcodeandequals">
+            <Link to="https://github.com/jappuccini/java-demos/tree/steffen/java2/hashcollection/hashmap/dogowners/hashcodeandequals">
               Demo - HashCode und Equals
             </Link>
           </h2>
@@ -431,7 +431,7 @@ export default function SetsMapsHashesRecords(): JSX.Element {
         </section>
         <section>
           <h2>
-            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/hashcollection/hashmap/dogowners/records">
+            <Link to="https://github.com/jappuccini/java-demos/tree/steffen/java2/hashcollection/hashmap/dogowners/records">
               Demo - Record vs Class
             </Link>
           </h2>
@@ -448,9 +448,12 @@ export default function SetsMapsHashesRecords(): JSX.Element {
       <section>
         <h2>Rest of the Day</h2>
         <ul>
-          <li className="fragment">Generics</li>
-          <li className="fragment">Maps</li>
-          <li className="fragment">Records</li>
+          <li className="fragment">
+            <Link to="/exercises/generics/">Generics Aufgaben</Link>
+          </li>
+          <li className="fragment">
+            <Link to="/exercises/maps/">Maps Aufgaben</Link>
+          </li>
         </ul>
       </section>
     </Slides>
