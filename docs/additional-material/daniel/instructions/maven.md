@@ -115,7 +115,7 @@ tags: []
                      <shadedArtifactAttached>true</shadedArtifactAttached>
                      <transformers>
                         <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                           <mainClass>[Startklasse]]</mainClass>
+                           <mainClass>[Startklasse]</mainClass>
                         </transformer>
                      </transformers>
                   </configuration>

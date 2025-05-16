@@ -10,83 +10,76 @@ Klassendiagramms sowie des abgebildeten Szenegraphs.
 
 ```mermaid
 classDiagram
-    Initializable <|.. Controller : implements
-    Controller o-- Field
-    ImageView  <|-- ChessFigure : extends
-    ChessFigure o-- ChessColor
-    ChessFigure o-- ChessFigureType
-    ChessBoard --|> GridPane : extends
-    Field --o ChessBoard
-    Field --|> StackPane : extends
-
-    class ChessFigure {
-        -color: ChessColor #123;final#125;
-        -type: ChessFigureType #123;final#125;
-        +ChessFigure(type: ChessFigureType, color: ChessColor, image: Image)
-        +getColor() ChessColor
-        +getType() ChessFigureType
-    }
-
-    class ChessColor {
-    	<<enumeration>>
-        BLACK = schwarz
-        WHITE = weiß
-        -description: String #123;final#125;
-        +getDescription() String
-    }
-
-    class ChessFigureType {
-    	<<enumeration>>
-		BISHOP = Läufer
-		KING = König
-		KNIGHT = Springer
-		PAWN = Bauer
-		QUEEN = Dame
-		ROOK = Turm
-        -description: String #123;final#125;
-        +getDescription() String
-    }
-
-    class ChessBoard {
-    	-fields: Field[][] #123;final#125;
-    	+ChessBoard()
-    	+getFields() [][]
-    }
-
-    class Field {
-    	-row: int #123;final#125;
-    	-column: char #123;final#125;
-    	-isSelected: boolean
-    	+Field(row: int, column: char, color: Color)
-    	+setSelected(boolean: isSelected) void
-    	+isSelected() boolean
-    	+setFigure(figure: ChessFigure) void
-    	+getFigure() ChessFigure
-    	+getBackgroundLayer() Rectangle
-    	+getRow() int
-    	+getColumn() char
-	}
-
-    class Controller {
-        -board: ChessBoard #123;FXML#125;
-        -oldField: Field
-        +initialize(location: URL, resources: ResourceBundle) void
-        -setHighlight(field: Field, highlight: boolean) void
-    }
-
-    class Initializable {
-        <<interface>>
-        +initialize(location: URL, resources: ResourceBundle) void
-    }
+   Initializable <|.. Controller : implements
+   Controller o-- Field
+   javafx.scene.image.ImageView  <|-- ChessFigure : extends
+   ChessFigure o-- ChessColor
+   ChessFigure o-- ChessFigureType
+   ChessBoard --|> javafx.scene.layout.GridPane : extends
+   Field --o ChessBoard
+   Field --|> javafx.scene.layout.StackPane : extends
+   class ChessFigure {
+      -color: ChessColor #123;final#125;
+      -type: ChessFigureType #123;final#125;
+      +ChessFigure(type: ChessFigureType, color: ChessColor, image: Image)
+      +getColor() ChessColor
+      +getType() ChessFigureType
+   }
+   class ChessColor {
+      <<enumeration>>
+      BLACK = schwarz
+      WHITE = weiß
+      -description: String #123;final#125;
+      +getDescription() String
+   }
+   class ChessFigureType {
+      <<enumeration>>
+      BISHOP = Läufer
+      KING = König
+      KNIGHT = Springer
+      PAWN = Bauer
+      QUEEN = Dame
+      ROOK = Turm
+      -description: String #123;final#125;
+      +getDescription() String
+   }
+   class ChessBoard {
+      -fields: Field[][] #123;final#125;
+      +ChessBoard()
+      +getFields() Field[][]
+   }
+   class Field {
+      -row: int #123;final#125;
+      -column: char #123;final#125;
+      -isSelected: boolean
+      +Field(row: int, column: char, color: Color)
+      +setSelected(boolean: isSelected) void
+      +isSelected() boolean
+      +setFigure(figure: ChessFigure) void
+      +getFigure() ChessFigure
+      +getBackgroundLayer() Rectangle
+      +getRow() int
+      +getColumn() char
+   }
+   class Controller {
+      -board: ChessBoard #123;FXML#125;
+      -oldField: Field
+      +initialize(location: URL, resources: ResourceBundle) void
+      -setHighlight(field: Field, highlight: boolean) void
+   }
+   class Initializable {
+      <<interface>>
+      +initialize(location: URL, resources: ResourceBundle) void
+   }
 ```
 
 ## Szenegraph
 
 ```mermaid
 flowchart LR
-	board[ChessBoard
-	      fx:controller=Pfad.Controller
-	      fx:id=board]
+   board[**ChessBoard**
+  fx:controller=_Pfad_.Controller
+  fx:id=board]
 ```
 
 ## Allgemeine Hinweise

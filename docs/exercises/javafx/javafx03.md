@@ -10,87 +10,83 @@ Klassendiagramms sowie des abgebildeten Szenegraphs.
 
 ```mermaid
 classDiagram
-    Initializable <|.. Controller : implements
-    Controller o-- Model
-
-    class Model {
-        -instance: Model$
-        -Model()
-        +getInstance() Model$
-        +getInterest(initialCapital: double, interestRate: double, runningTime: int) double
-    }
-
-    class Controller {
-        -initialCapitalTextField: TextField #123;FXML#125;
-        -interestRateTexField: TextField #123;FXML#125;
-        -runningTimeTextField: TextField #123;FXML#125;
-        -interestLabel: Label #123;FXML#125;
-        -model: Model
-        +initialize(location: URL, resources: ResourceBundle) void
-        +calculateInterest(actionEvent: ActionEvent) void #123;FXML#125;
-    }
-
-    class Initializable {
-        <<interface>>
-        +initialize(location: URL, resources: ResourceBundle) void
-    }
+   Initializable <|.. Controller : implements
+   Controller o-- Model
+   class Model {
+      -instance: Model$
+      -Model()
+      +getInstance() Model$
+      +getInterest(initialCapital: double, interestRate: double, runningTime: int) double
+   }
+   class Controller {
+      -initialCapitalTextField: TextField #123;FXML#125;
+      -interestRateTexField: TextField #123;FXML#125;
+      -runningTimeTextField: TextField #123;FXML#125;
+      -interestLabel: Label #123;FXML#125;
+      -model: Model
+      +initialize(location: URL, resources: ResourceBundle) void
+      +calculateInterest(actionEvent: ActionEvent) void #123;FXML#125;
+   }
+   class Initializable {
+      <<interface>>
+      +initialize(location: URL, resources: ResourceBundle) void
+   }
 ```
 
 ## Szenegraph
 
 ```mermaid
 flowchart LR
-	gridpane[GridPane
-	         fx:controller=Pfad.Controller]
-	label1[Label
-	       text=Anfangskapital
-	       GridPane.columnIndex=0
-	       GridPane.rowIndex=0]
-	label2[Label
-	       text=Zinssatz
-	       GridPane.columnIndex=0
-	       GridPane.rowIndex=1]
-	label3[Label
-	       text=Laufzeit
-	       GridPane.columnIndex=0
-	       GridPane.rowIndex=2]
-	label4[Label
-	       text=Zinsen
-	       GridPane.columnIndex=0
-	       GridPane.rowIndex=3]
-	label5[Label
-	       fx:id=interestLabel
-	       GridPane.columnIndex=1
-	       GridPane.rowIndex=3]
-	textfield1[TextField
-	           fx:id=initialCapitalTextField
-	           GridPane.columnIndex=1
-	           GridPane.rowIndex=0]
-	textfield2[TextField
-	           fx:id=interestRateTextField
-	           GridPane.columnIndex=1
-	           GridPane.rowIndex=1]
-	textfield3[TextField
-	           fx:id=runningTimeTextField
-	           GridPane.columnIndex=1
-	           GridPane.rowIndex=2]
-	button[Button
-	           text=Zinsen berechnen
-	           onAction=#calculateInterest
-	           GridPane.columnIndex=0
-	           GridPane.rowIndex=4
-	           GridPane.columnSpan=2
-	           GridPane.halignment=CENTER]
-
-    gridpane --> label1
-    gridpane --> textfield1
-    gridpane --> label2
-    gridpane --> textfield2
-    gridpane --> label3
-    gridpane --> textfield3
-    gridpane --> label4
-    gridpane --> label5
-    gridpane --> button
+   gridpane[**GridPane**
+   fx:controller=_Pfad_.Controller]
+   label1[**Label**
+   text=Anfangskapital
+   GridPane.columnIndex=0
+   GridPane.rowIndex=0]
+   label2[**Label**
+   text=Zinssatz
+   GridPane.columnIndex=0
+   GridPane.rowIndex=1]
+   label3[**Label**
+   text=Laufzeit
+   GridPane.columnIndex=0
+   GridPane.rowIndex=2]
+   label4[**Label**
+   text=Zinsen
+   GridPane.columnIndex=0
+   GridPane.rowIndex=3]
+   label5[**Label**
+   fx:id=interestLabel
+   GridPane.columnIndex=1
+   GridPane.rowIndex=3]
+   textfield1[**TextField**
+   fx:id=initialCapitalTextField
+   GridPane.columnIndex=1
+   GridPane.rowIndex=0]
+   textfield2[**TextField**
+   fx:id=interestRateTextField
+   GridPane.columnIndex=1
+   GridPane.rowIndex=1]
+   textfield3[**TextField**
+   fx:id=runningTimeTextField
+   GridPane.columnIndex=1
+   GridPane.rowIndex=2]
+   button[**Button**
+   text=Zinsen berechnen
+   onAction=#calculateInterest
+   GridPane.columnIndex=0
+   GridPane.rowIndex=4
+   GridPane.columnSpan=2
+   GridPane.halignment=CENTER]
+   gridpane --> label1
+   gridpane --> textfield1
+   gridpane --> label2
+   gridpane --> textfield2
+   gridpane --> label3
+   gridpane --> textfield3
+   gridpane --> label4
+   gridpane --> label5
+   gridpane --> button
 ```
 
 ## Allgemeine Hinweise

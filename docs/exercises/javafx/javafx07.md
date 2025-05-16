@@ -11,60 +11,55 @@ des abgebildeten Klassendiagramms sowie des abgebildeten Szenegraphs.
 
 ```mermaid
 classDiagram
-    Initializable <|.. Controller : implements
-    Controller o-- Model
-    Model o-- Ball
-
-    class Ball {
-        -color: color
-        -r: int
-        -speedX: int
-        -speedY: int
-        -x: int
-        -y: int
-        +Ball(r: int, x: int, y: int, color: Color, speedX: int, speedY: int)
-        +getColor() Color
-        +getR() int
-        +getX() int
-        +getY() int
-        +getSpeedX() int
-        +getSpeedY() int
-        +move(minX: int, minY: int, maxX: int, maxY: int) void
-    }
-
-    class Model {
-        -instance: Model$
-        -balls: List~Ball~$
-        -Model()
-        +getInstance() Model$
-        +addBall(ball: Ball) void
-        +getBalls() List~Ball~
-    }
-
-    class Controller {
-        -canvas: Canvas #123;FXML#125;
-        -model: Model
-        +initialize(location: URL, resources: ResourceBundle) void
-    }
-
-    class Initializable {
-        <<interface>>
-        +initialize(location: URL, resources: ResourceBundle) void
-    }
+   Initializable <|.. Controller : implements
+   Controller o-- Model
+   Model o-- Ball
+   class Ball {
+      -color: color
+      -r: int
+      -speedX: int
+      -speedY: int
+      -x: int
+      -y: int
+      +Ball(r: int, x: int, y: int, color: Color, speedX: int, speedY: int)
+      +getColor() Color
+      +getR() int
+      +getX() int
+      +getY() int
+      +getSpeedX() int
+      +getSpeedY() int
+      +move(minX: int, minY: int, maxX: int, maxY: int) void
+   }
+   class Model {
+      -instance: Model$
+      -balls: List~Ball~$
+      -Model()
+      +getInstance() Model$
+      +addBall(ball: Ball) void
+      +getBalls() List~Ball~
+   }
+   class Controller {
+      -canvas: Canvas #123;FXML#125;
+      -model: Model
+      +initialize(location: URL, resources: ResourceBundle) void
+   }
+   class Initializable {
+      <<interface>>
+      +initialize(location: URL, resources: ResourceBundle) void
+   }
 ```
 
 ## Szenegraph
 
 ```mermaid
 flowchart LR
-	vbox[VBox
-	     fx:controller=Pfad.Controller]
-	canvas[Canvas
-	       fx:id=canvas
-	       width=1000.0
-	       height=1000.0]
-
-    vbox --> canvas
+   vbox[**VBox**
+   fx:controller=_Pfad_.Controller]
+   canvas[**Canvas**
+   fx:id=canvas
+   width=1000.0
+   height=1000.0]
+   vbox --> canvas
 ```
 
 ## Allgemeine Hinweise
