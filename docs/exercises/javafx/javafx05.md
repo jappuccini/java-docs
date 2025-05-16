@@ -10,61 +10,51 @@ abgebildeten Klassendiagramms sowie des abgebildeten Szenegraphs.
 
 ```mermaid
 classDiagram
-    Initializable <|.. Controller : implements
-    Controller o-- Model
-    Model o-- Calculator
-    Model ..> InvalidInputException : throws
-
-    class Calculator {
-        +add(a: double, b: double) double
-        +subtract(a: double, b: double) double
-        +multiply(a: double, b: double) double
-        +divide(a: double, b: double) double
-    }
-
-    class Model {
-        -instance: Model$
-        -calculator: Calculator
-        -Model()
-        +getInstance() Model$
-        +calculate(input: String) String
-    }
-
-    class Controller {
-        -inputTextField: TextField #123;FXML#125;
-        -outputLabel: Label #123;FXML#125;
-        -model: Model
-        +initialize(location: URL, resources: ResourceBundle) void
-        +calculate(actionEvent: ActionEvent) void #123;FXML#125;
-    }
-
-    class Initializable {
-        <<interface>>
-        +initialize(location: URL, resources: ResourceBundle) void
-    }
-
-    class InvalidInputException {
-    		<<exception>>
-    }
+   Initializable <|.. Controller : implements
+   Controller o-- Model
+   Model o-- Calculator
+   class Calculator {
+      +add(a: double, b: double) double
+      +subtract(a: double, b: double) double
+      +multiply(a: double, b: double) double
+      +divide(a: double, b: double) double
+   }
+   class Model {
+      -instance: Model$
+      -calculator: Calculator
+      -Model()
+      +getInstance() Model$
+      +calculate(input: String) String
+   }
+   class Controller {
+      -inputTextField: TextField #123;FXML#125;
+      -outputLabel: Label #123;FXML#125;
+      -model: Model
+      +initialize(location: URL, resources: ResourceBundle) void
+      +calculate(actionEvent: ActionEvent) void #123;FXML#125;
+   }
+   class Initializable {
+      <<interface>>
+      +initialize(location: URL, resources: ResourceBundle) void
+   }
 ```
 
 ## Szenegraph
 
 ```mermaid
 flowchart LR
-	vbox[VBox
-	     fx:controller=Pfad.Controller]
-	textfield[TextField
-	          fx:id=inputTextField]
-	button[Button
-	       text=Berechnen
-	       onAction=#calculate]
-	label[Label
-	      fx:id=outputLabel]
-
-    vbox --> textfield
-    vbox --> button
-    vbox --> label
+   vbox[**VBox**
+   fx:controller=_Pfad_.Controller]
+   textfield[**TextField**
+   fx:id=inputTextField]
+   button[**Button**
+   text=Berechnen
+   onAction=#calculate]
+   label[**Label**
+   fx:id=outputLabel]
+   vbox --> textfield
+   vbox --> button
+   vbox --> label
 ```
 
 ## Allgemeine Hinweise

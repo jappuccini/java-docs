@@ -10,86 +10,81 @@ anhand des abgebildeten Klassendiagramms sowie des abgebildeten Szenegraphs.
 
 ```mermaid
 classDiagram
-    Initializable <|.. Controller : implements
-    Controller o-- Model
-    Model o-- LED
-
-    class LED {
-        -color: color
-        -isShining: boolean
-        +Light()
-        +getColor() Color
-        +isShining() boolean
-        +switchOn() void
-        +switchOff() void
-        +switchColor() void
-    }
-
-    class Model {
-        -instance: Model$
-        -led: LED
-        -Model()
-        +getInstance() Model$
-        +getLED() LED
-    }
-
-    class Controller {
-        -layer1: Circle #123;FXML#125;
-        -layer2: Circle #123;FXML#125;
-        -layer3: Circle #123;FXML#125;
-        -layer4: Circle #123;FXML#125;
-        -model: Model
-        +initialize(location: URL, resources: ResourceBundle) void
-        +switchOn(actionEvent: ActionEvent) void #123;FXML#125;
-        +switchOff(actionEvent: ActionEvent) void #123;FXML#125;
-        +switchColor(actionEvent: ActionEvent) void #123;FXML#125;
-    }
-
-    class Initializable {
-        <<interface>>
-        +initialize(location: URL, resources: ResourceBundle) void
-    }
+   Initializable <|.. Controller : implements
+   Controller o-- Model
+   Model o-- LED
+   class LED {
+      -color: color
+      -isShining: boolean
+      +Light()
+      +getColor() Color
+      +isShining() boolean
+      +switchOn() void
+      +switchOff() void
+      +switchColor() void
+   }
+   class Model {
+      -instance: Model$
+      -led: LED
+      -Model()
+      +getInstance() Model$
+      +getLED() LED
+   }
+   class Controller {
+      -layer1: Circle #123;FXML#125;
+      -layer2: Circle #123;FXML#125;
+      -layer3: Circle #123;FXML#125;
+      -layer4: Circle #123;FXML#125;
+      -model: Model
+      +initialize(location: URL, resources: ResourceBundle) void
+      +switchOn(actionEvent: ActionEvent) void #123;FXML#125;
+      +switchOff(actionEvent: ActionEvent) void #123;FXML#125;
+      +switchColor(actionEvent: ActionEvent) void #123;FXML#125;
+   }
+   class Initializable {
+      <<interface>>
+      +initialize(location: URL, resources: ResourceBundle) void
+   }
 ```
 
 ## Szenegraph
 
 ```mermaid
 flowchart LR
-	vbox[VBox
-	     fx:controller=Pfad.Controller]
-	group[Group]
-	circle1[Circle
-	        fx:id=layer1
-	        radius=25]
-	circle2[Circle
-	        fx:id=layer2
-	        radius=50]
-	circle3[Circle
-	        fx:id=layer3
-	        radius=75]
-	circle4[Circle
-	        fx:id=layer4
-	        radius=100]
-	hbox[HBox]
-	button1[Button
-	        text=Einschalten
-	        onAction=#switchOn]
-	button2[Button
-	        text=Ausschalten
-	        onAction=#switchOff]
-	button3[Button
-	        text=Farbe wechseln
-	        onAction=#switchColor]
-
-    vbox --> group
-    vbox --> hbox
-    group --> circle1
-    group --> circle2
-    group --> circle3
-    group --> circle4
-    hbox --> button1
-    hbox --> button2
-    hbox --> button3
+   vbox[**VBox**
+   fx:controller=_Pfad_.Controller]
+   group[**Group**]
+   circle1[**Circle**
+   fx:id=layer1
+   radius=25]
+   circle2[**Circle**
+   fx:id=layer2
+   radius=50]
+   circle3[**Circle**
+   fx:id=layer3
+   radius=75]
+   circle4[**Circle**
+   fx:id=layer4
+   radius=100]
+   hbox[**HBox**]
+   button1[**Button**
+   text=Einschalten
+   onAction=#switchOn]
+   button2[**Button**
+   text=Ausschalten
+   onAction=#switchOff]
+   button3[**Button**
+   text=Farbe wechseln
+   onAction=#switchColor]
+   vbox --> group
+   vbox --> hbox
+   group --> circle1
+   group --> circle2
+   group --> circle3
+   group --> circle4
+   hbox --> button1
+   hbox --> button2
+   hbox --> button3
 ```
 
 ## Allgemeine Hinweise

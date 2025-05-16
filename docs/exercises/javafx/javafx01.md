@@ -11,37 +11,34 @@ Klassendiagramms sowie des abgebildeten Szenegraphs.
 
 ```mermaid
 classDiagram
-    Initializable <|.. Controller
-
-    class Controller {
-        -canvas: Canvas #123;FXML#125;
-        -model: Model
-        +initialize(location: URL, resources: ResourceBundle) void
-        +addCircle(actionEvent: ActionEvent) void #123;FXML#125;
-    }
-
-    class Initializable {
-        <<interface>>
-        +initialize(location: URL, resources: ResourceBundle) void
-    }
+   Initializable <|.. Controller
+   class Controller {
+      -canvas: Canvas #123;FXML#125;
+      -model: Model
+      +initialize(location: URL, resources: ResourceBundle) void
+      +addCircle(actionEvent: ActionEvent) void #123;FXML#125;
+   }
+   class Initializable {
+      <<interface>>
+      +initialize(location: URL, resources: ResourceBundle) void
+   }
 ```
 
 ## Szenegraph
 
 ```mermaid
 flowchart LR
-	vbox[VBox
-	     fx:controller=Pfad.Controller]
-	canvas[Canvas
-	       fx:id=canvas
-	       width=500.0
-	       height=500.0]
-	button[Button
-	       text=Kreis zeichnen
-	       onAction=#drawCircle]
-
-    vbox --> canvas
-    vbox --> button
+   vbox[**VBox**
+   fx:controller=_Pfad_.Controller]
+   canvas[**Canvas**
+   fx:id=canvas
+   width=500.0
+   height=500.0]
+   button[**Button**
+   text=Kreis zeichnen
+   onAction=#drawCircle]
+   vbox --> canvas
+   vbox --> button
 ```
 
 ## Allgemeine Hinweise

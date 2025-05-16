@@ -10,56 +10,51 @@ Klassendiagramms sowie des abgebildeten Szenegraphs.
 
 ```mermaid
 classDiagram
-    Initializable <|.. Controller : implements
-    Controller o-- Model
-    Model o-- Dice
-
-    class Dice {
-        -value: int
-        -image: Image
-        +Dice()
-        +rollTheDice() void
-        +getValue() int
-        +getImage() Image
-    }
-
-    class Model {
-        -instance: Model$
-        -dice: Dice
-        -Model()
-        +getInstance() Model$
-        +rollTheDice() void
-        +getDiceValue() int
-        +getDiceImage() Image
-    }
-
-    class Controller {
-        -diceImageView: ImageView #123;FXML#125;
-        -model: Model
-        +initialize(location: URL, resources: ResourceBundle) void
-        +rollTheDice(actionEvent: ActionEvent) void #123;FXML#125;
-    }
-
-    class Initializable {
-        <<interface>>
-        +initialize(location: URL, resources: ResourceBundle) void
-    }
+   Initializable <|.. Controller : implements
+   Controller o-- Model
+   Model o-- Dice
+   class Dice {
+      -value: int
+      -image: Image
+      +Dice()
+      +rollTheDice() void
+      +getValue() int
+      +getImage() Image
+   }
+   class Model {
+      -instance: Model$
+      -dice: Dice
+      -Model()
+      +getInstance() Model$
+      +rollTheDice() void
+      +getDiceValue() int
+      +getDiceImage() Image
+   }
+   class Controller {
+      -diceImageView: ImageView #123;FXML#125;
+      -model: Model
+      +initialize(location: URL, resources: ResourceBundle) void
+      +rollTheDice(actionEvent: ActionEvent) void #123;FXML#125;
+   }
+   class Initializable {
+      <<interface>>
+      +initialize(location: URL, resources: ResourceBundle) void
+   }
 ```
 
 ## Szenegraph
 
 ```mermaid
 flowchart LR
-	vbox[VBox
-	     fx:controller=Pfad.Controller]
-	imageview[ImageView
-	          fx:id=diceImageView]
-	button[Button
-	       text=Würfeln
-	       onAction=#rollTheDice]
-
-    vbox --> imageview
-    vbox --> button
+   vbox[**VBox**
+   fx:controller=_Pfad_.Controller]
+   imageview[**ImageView**
+   fx:id=diceImageView]
+   button[**Button**
+   text=Würfeln
+   onAction=#rollTheDice]
+   vbox --> imageview
+   vbox --> button
 ```
 
 ## Allgemeiner Hinweis
