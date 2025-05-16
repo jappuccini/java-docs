@@ -18,9 +18,7 @@ tags: []
 - Erstelle im eben erstellten Ordner eine Datei mit der Endung _.java_ (z.B.
   _HelloWorld.java_)
 - Öffne die eben erstellte Datei, füge validen Java-Quellcode ein, speichere die
-  Änderungen und schließe die Datei wieder (z.B. siehe Quellcode)
-
-**Quellcode**
+  Änderungen und schließe die Datei wieder (siehe Quellcode)
 
 ```java title="HelloWorld.java" showLineNumbers
 package main;
