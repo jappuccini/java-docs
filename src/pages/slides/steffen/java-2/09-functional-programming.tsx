@@ -72,7 +72,7 @@ export default function FunctionalProgramming(): JSX.Element {
         </section>
         <section>
           <h2>
-            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/functionalprogramming">
+            <Link to="https://github.com/jappuccini/java-demos/tree/steffen/java2/functionalprogramming">
               Demo - Lambda Funktionen
             </Link>
           </h2>
@@ -147,7 +147,7 @@ export default function FunctionalProgramming(): JSX.Element {
           <p className="fragment">
             Funktionale Interfaces werden mit @FunctionalInterface markiert,
             z.B.{' '}
-            <Link to="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Comparator.html">
+            <Link to="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Comparator.html">
               Comparator
             </Link>
           </p>
@@ -166,7 +166,7 @@ export default function FunctionalProgramming(): JSX.Element {
           <p className="fragment foot-note">
             Nicht jedes Interface mit einer einzigen abstrakten Methode ist
             funktional, z.B.{' '}
-            <Link to="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Comparable.html">
+            <Link to="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html">
               Comparable
             </Link>
           </p>
@@ -335,7 +335,7 @@ export default function FunctionalProgramming(): JSX.Element {
         </section>
         <section>
           <h2>
-            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/functionalinterfaces/owninterfaces">
+            <Link to="https://github.com/jappuccini/java-demos/tree/steffen/java2/functionalinterfaces/owninterfaces">
               Demo - Eigene Funktionale Interfaces
             </Link>
           </h2>
@@ -472,7 +472,7 @@ export default function FunctionalProgramming(): JSX.Element {
         </section>
         <section>
           <h2>
-            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/functionalinterfaces/knowninterfaces">
+            <Link to="https://github.com/jappuccini/java-demos/tree/steffen/java2/functionalinterfaces/knowninterfaces">
               Demo - Allgemeine Funktionale Interfaces
             </Link>
           </h2>
@@ -501,7 +501,7 @@ export default function FunctionalProgramming(): JSX.Element {
         <section>
           <h2>
             Beispiel ArrayList -{' '}
-            <Link to="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html#forEach(java.util.function.Consumer)">
+            <Link to="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/ArrayList.html#forEach(java.util.function.Consumer)">
               For Each
             </Link>
           </h2>
@@ -539,7 +539,7 @@ export default function FunctionalProgramming(): JSX.Element {
         </section>
         <section>
           <h2>
-            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/functionalinterfaces/methodreferences">
+            <Link to="https://github.com/jappuccini/java-demos/tree/steffen/java2/functionalinterfaces/methodreferences">
               Demo - Methodenreferenzen
             </Link>
           </h2>
