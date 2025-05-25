@@ -195,7 +195,7 @@ export default function FunctionalProgramming(): JSX.Element {
                 __html:
                   'public interface NoParamFunction {\n' +
                   ' public void do();\n' +
-                  '};\n',
+                  '}\n',
               }}
             ></code>
           </pre>
