@@ -62,7 +62,7 @@ export default function StreamApi(): JSX.Element {
         </section>
         <section>
           <h2>
-            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/streamapi/intro">
+            <Link to="https://github.com/jappuccini/java-demos/tree/steffen/java2/streamapi/intro">
               Demo - Intro Stream API
             </Link>
           </h2>
@@ -117,7 +117,7 @@ export default function StreamApi(): JSX.Element {
         </section>
         <section>
           <h2>
-            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/streamapi/pipeline">
+            <Link to="https://github.com/jappuccini/java-demos/tree/steffen/java2/streamapi/pipeline">
               Demo - Stream API
             </Link>
           </h2>
@@ -217,7 +217,7 @@ export default function StreamApi(): JSX.Element {
             sind Methoden eines Streams, die als Rückgabewert einen Stream
             zurückgeben.
           </p>
-          <Link to="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/Stream.html">
+          <Link to="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/stream/Stream.html">
             Stream Klasse
           </Link>
         </section>
@@ -234,7 +234,7 @@ export default function StreamApi(): JSX.Element {
           </pre>
           <p className="fragment">
             Der Parameter predicate muss das{' '}
-            <Link to="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Predicate.html">
+            <Link to="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/function/Predicate.html">
               Predicate Interface
             </Link>{' '}
             implementieren.
@@ -271,7 +271,7 @@ export default function StreamApi(): JSX.Element {
           </pre>
           <p className="fragment">
             Der Parameter mapper muss das{' '}
-            <Link to="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Function.html">
+            <Link to="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/function/Function.html">
               Function Interface
             </Link>{' '}
             implementieren.
@@ -379,7 +379,7 @@ export default function StreamApi(): JSX.Element {
           </pre>
           <p className="fragment">
             Der Parameter comparator muss das{' '}
-            <Link to="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Comparator.html">
+            <Link to="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Comparator.html">
               Comparator Interface
             </Link>{' '}
             implementieren.
@@ -446,7 +446,7 @@ export default function StreamApi(): JSX.Element {
         </section>
         <section>
           <h2>
-            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/streamapi/review">
+            <Link to="https://github.com/jappuccini/java-demos/tree/steffen/java2/streamapi/review">
               Demo - Lambda Funktionen Auslagern
             </Link>
           </h2>
@@ -642,13 +642,13 @@ export default function StreamApi(): JSX.Element {
         </section>
         <section>
           <h2>
-            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/streamapi/collectors">
+            <Link to="https://github.com/jappuccini/java-demos/tree/steffen/java2/streamapi/collectors">
               Demo - Collectors
             </Link>
           </h2>
           <ul>
             <li className="fragment">
-              <Link to="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/stream/Collectors.html">
+              <Link to="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/stream/Collectors.html">
                 Collectors Klasse
               </Link>
             </li>
