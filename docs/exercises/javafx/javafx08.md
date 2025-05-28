@@ -78,8 +78,8 @@ classDiagram
 ```mermaid
 flowchart LR
    board[**ChessBoard**
-  fx:controller=_Pfad_.Controller
-  fx:id=board]
+   fx:controller=_Pfad_.Controller
+   fx:id=board]
 ```
 
 ## Allgemeine Hinweise
