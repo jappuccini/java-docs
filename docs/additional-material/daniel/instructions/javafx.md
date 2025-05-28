@@ -94,3 +94,43 @@ public class MainClass {
 
 }
 ```
+
+## Ausführbare JavaFX-Anwendung debuggen
+
+- Starte Eclipse
+- Navigiere in der View _Package Explorer_ zu Deinem Maven-Projekt
+- Navigiere in Deinem Maven-Projekt zur Datei _pom.xml_ und öffne diese
+- Füge den abgebildeten Quellcode ein, um das JavaFX-Maven-Plugin einzubinden,
+  speichere die Änderungen und schließe die Datei wieder
+- Wähle die Option **Run - Run As - 3 Maven build...** aus
+- Gib die nachfolgenden Informationen ein und betätige die Drucktaste **Run**
+  - Goals: **javafx:run@debug**
+
+```xml title="pom.xml (Auszug)" showLineNumbers
+   ...
+         <plugin>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-maven-plugin</artifactId>
+            <version>[Version]</version>
+            <executions>
+               <execution>
+                  <!-- Configuration for Running (Goal javafx:run) -->
+                  <id>default-cli</id>
+                  <configuration>
+                     <mainClass>[Startklasse]</mainClass>
+                  </configuration>
+               </execution>
+               <execution>
+                  <!-- Configuration for Debugging (Goal javafx:run@debug) -->
+                  <id>debug</id>
+                  <configuration>
+                     <options>
+                        <option>-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=*:8001</option>
+                     </options>
+                     <mainClass>[Startklasse]</mainClass>
+                  </configuration>
+               </execution>
+            </executions>
+         </plugin>
+   ...
+```
