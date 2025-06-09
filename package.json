@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "^3.7.0",
-    "@docusaurus/tsconfig": "^3.7.0",
+    "@docusaurus/tsconfig": "^3.8.1",
     "@docusaurus/types": "^3.7.0",
     "@types/react": "^18.3.12",
     "prettier": "3.5.3",
