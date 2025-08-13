@@ -16,10 +16,10 @@
     "prettier:write": "npx prettier . --write"
   },
   "dependencies": {
-    "@docusaurus/core": "^3.7.0",
-    "@docusaurus/faster": "^3.7.0",
-    "@docusaurus/preset-classic": "^3.7.0",
-    "@docusaurus/theme-mermaid": "^3.7.0",
+    "@docusaurus/core": "^3.8.0",
+    "@docusaurus/faster": "^3.8.0",
+    "@docusaurus/preset-classic": "^3.8.0",
+    "@docusaurus/theme-mermaid": "^3.8.0",
     "@mdx-js/react": "^3.0.0",
     "clsx": "^2.1.1",
     "mermaid": "^11.6.0",
@@ -29,9 +29,9 @@
     "reveal.js": "^5.2.1"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "^3.7.0",
-    "@docusaurus/tsconfig": "^3.7.0",
-    "@docusaurus/types": "^3.7.0",
+    "@docusaurus/module-type-aliases": "^3.8.0",
+    "@docusaurus/tsconfig": "^3.8.0",
+    "@docusaurus/types": "^3.8.0",
     "@types/react": "^18.3.12",
     "prettier": "3.5.3",
     "typescript": "~5.8.3"
