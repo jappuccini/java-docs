@@ -13,6 +13,7 @@ const config: Config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'throw',
   future: {
+    v4: true,
     experimental_faster: true,
   },
   markdown: {
