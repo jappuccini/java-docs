@@ -19,7 +19,7 @@ const config: Config = {
     hooks: {
       onBrokenMarkdownImages: 'warn',
       onBrokenMarkdownLinks: 'throw',
-    }
+    },
   },
   themes: ['@docusaurus/theme-mermaid'],
   i18n: {
