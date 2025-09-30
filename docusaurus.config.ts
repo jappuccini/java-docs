@@ -10,14 +10,16 @@ const config: Config = {
   baseUrl: process.env.BASE_URL || '/java-docs/',
   organizationName: 'jappuccini',
   projectName: 'java-docs',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'throw',
   future: {
     v4: true,
     experimental_faster: true,
   },
   markdown: {
     mermaid: true,
+    hooks: {
+      onBrokenMarkdownImages: 'warn',
+      onBrokenMarkdownLinks: 'throw',
+    }
   },
   themes: ['@docusaurus/theme-mermaid'],
   i18n: {
