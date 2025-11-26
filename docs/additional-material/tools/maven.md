@@ -222,7 +222,7 @@ die Über-JAR bei jedem Verpacken erstellt wird.
   <TabItem value="a" label="Lombok" default>
 
 Lombok ist eine beliebte Bibliothek zur Generierung von repetitiven Methoden
-(siehe auch [Lombok](lombok)).
+(siehe auch [Lombok](../../documentation/lombok)).
 
 ```xml title="pom.xml (Auszug)" showLineNumbers
    ...
@@ -244,7 +244,7 @@ Simple Logging Facade for Java (SLF4J) ist eine beliebte
 Java-Protokollierungs-API, die es ermöglicht, den Quellcode um Protokolle zu
 erweitern, die anschließend an ein gewünschtes Protokoll-Framework (wie z.B.
 Log4J) weitergeleitet werden (siehe auch
-[Simple Logging Facade for Java (SLF4J)](slf4j)).
+[Simple Logging Facade for Java (SLF4J)](../../documentation/slf4j)).
 
 ```xml title="pom.xml (Auszug)" showLineNumbers
    ...
@@ -269,7 +269,7 @@ Log4J) weitergeleitet werden (siehe auch
   <TabItem value="c" label="JUnit 5">
 
 JUnit 5 ist ein weit verbreitetes Framework zur Erstellung von Komponententests
-(siehe auch [Komponententests (Unit Tests)](unit-tests)).
+(siehe auch [Komponententests (Unit Tests)](../../documentation/unit-tests)).
 
 ```xml title="pom.xml (Auszug)" showLineNumbers
    ...
@@ -290,7 +290,7 @@ JUnit 5 ist ein weit verbreitetes Framework zur Erstellung von Komponententests
 
 Mockito ist ein beliebtes Framework für das Erstellen von Mock-Objekten in Java,
 das hauptsächlich für das Testen von Anwendungen verwendet wird (siehe auch
-[Mockito](mockito)).
+[Mockito](../../documentation/mockito)).
 
 ```xml title="pom.xml (Auszug)" showLineNumbers
    ...
@@ -310,7 +310,8 @@ das hauptsächlich für das Testen von Anwendungen verwendet wird (siehe auch
   <TabItem value="e" label="JavaFX und Java FXML">
 
 JavaFX stellt (vor allem in Verbindung mit Java FXML) ein State-of-the-Art
-Framework für das Erstellen von GUIs in Java dar (siehe auch [JavaFX](javafx)).
+Framework für das Erstellen von GUIs in Java dar (siehe auch
+[JavaFX](../../documentation/javafx)).
 
 ```xml title="pom.xml (Auszug)" showLineNumbers
    ...

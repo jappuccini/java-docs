@@ -84,7 +84,7 @@ const config: Config = {
         },
         {
           type: 'doc',
-          docId: 'additional-material/daniel/daniel',
+          docId: 'additional-material/tools/tools',
           position: 'left',
           label: 'Zusatzmaterial',
         },
