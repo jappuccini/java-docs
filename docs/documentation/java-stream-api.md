@@ -143,8 +143,8 @@ vorhanden ist und bei verketteten Operationen werden für jedes Element die
 einzelnen Operationen nacheinander ausgeführt.
 
 In der main-Methode der Startklasse wird auf den Zahlenstrom 4-8-15-16-23-42
-zunächst der Filter _Zahl > 15_ angewendet, anschließend der Filter _Zahl =
-ganze Zahl_ und abschließend werden die verbliebenen Zahlen auf der Konsole
+zunächst der Filter _Zahl = ganze Zahl_ angewendet, anschließend der Filter 
+_Zahl > 15_  und abschließend werden die verbliebenen Zahlen auf der Konsole
 ausgegeben. Zum Nachvollziehen werden die Zahlen auch bei den beiden Filtern auf
 der Konsole ausgegeben.
 
