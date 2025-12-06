@@ -1,7 +1,7 @@
 ---
 title: Feldbasierte Listen (ArrayLists)
 description: ''
-sidebar_position: 120
+sidebar_position: 141
 tags: [collections, arrays, lists]
 ---
 

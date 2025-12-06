@@ -27,83 +27,23 @@ Ein Algorithmus ist eine Handlungsvorschrift zur Lösung eines Problems.
 ## Programmierparadigmen
 
 Unter einem Programmierparadigma versteht man die grundlegende Herangehensweise,
-Probleme mit Hilfe einer Programmiersprache zu lösen. Aber auuch wenn
+Probleme mit Hilfe einer Programmiersprache zu lösen. Aber auch wenn
 Programmiersprachen oft anhand ihrer grundlegenden Merkmale genau einem
 Programmierparadigma zugeordnet werden, unterstützen viele Programmiersprachen
-mehrere Programmierparadigmen.
+mehrere Programmierparadigmen. Generell werden die verschiedenen
+Programmierparadigmen oft in zwei große Kategorien eingeteilt: bei imperativen
+Programmierparadigmen steht die Frage _Wie soll das Ergebnis erreicht werden?_
+im Vordergrund, bei deklarativen Programmierparadigmen die Frage _Was soll das
+Ergebnis sein?_. Imperative Programmierparadigmen legen also Schritt für Schritt
+fest, wie das Ergebnis erreicht werden soll, deklarative Programmierparadigmen
+beschreiben das Ergebnis selbst.
 
-<Tabs>
-  <TabItem value="a" label="Imperative Programmierung" default>
-
-Bei der imperativen Programmierung bestehen Programme aus verzweigten und sich
-wiederholenden Folgen von Anweisungen, die den Programmablauf steuern.
-
-```mermaid
-stateDiagram-v2
-   state "Ausgabe: Zahl größer Null eingeben" as activity1
-   state "Eingabe: Zahl" as activity2
-   state "Ausgabe: Zahl ist nicht größer Null" as activity3
-   state "Ausgabe: Zahl ist größer Null" as activity4
-   state if <<choice>>
-   [*] --> activity1
-   activity1--> activity2
-   activity2 --> if
-   if --> activity3 : Zahl kleiner gleich Null
-   if --> activity4 : Zahl größer Null
-   activity3 --> activity1
-   activity4 --> [*]
-```
-
-  </TabItem>
-  <TabItem value="b" label="Deklarative Programmierung">
-
-Die deklarative Programmierung stellt einen Gegenentwurf zur imperativen
-Programmierung dar, bei der nicht das "Wie", sondern das "Was" im Vordergrund
-steht.
-
-```mermaid
-flowchart TD
-   subgraph Ausgangsmenge
-      direction LR
-      p1 -.- p2 -.- p3 -.- p4
-      p1(Hans, 42, m, Stuttgart)
-      p2(Peter, 17, m, Freiburg)
-      p3(Lisa, 19, w, Berlin)
-      p4(Maria, 33, w, Freiburg)
-   end
-   subgraph Ergebnismenge
-      direction LR
-      p5 -.- p6
-      p5(Maria, 33)
-      p6(Peter, 17)
-   end
-   Ausgangsmenge -->|"SELECT Name, Age FROM Person WHERE City = 'Freiburg' ORDER BY Name"| Ergebnismenge
-```
-
-  </TabItem>
-  <TabItem value="c" label="Objektorientierte Programmierung">
-
-Die ojektorientierte Programmierung baut auf der imperativen Programmierung auf,
-setzt den Fokus aber auf abstrakte Datentypen und die Verbindung von Daten und
-Routinen.
-
-```mermaid
-classDiagram
-   Person --o Team
-   class Person {
-     -name String
-      +Person(name String)
-      +name() String
-   }
-   class Team {
-      -members List~Person~
-      +addMember(person Person) void
-      +members() List~Person~
-   }
-```
-
-  </TabItem>
-</Tabs>
+| Programmierparadigmen            | Kategorie                  | Fokus                                                                                                                                                                                                                                                            | Beispielsprachen |
+| -------------------------------- | -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
+| Prozedurale Programmierung       | Imperative Programmierung  | Routinen werden in Prozeduren gekapselt. Es gibt eine klare Trennung zwischen Daten und Routinen. Routinen stellen dabei wiederverwendbaren Code dar, der aus verzweigten und sich wiederholenden Folgen von Anweisungen besteht, die den Programmablauf steuern | Pascal, C        |
+| Objektorientierte Programmierung | Imperative Programmierung  | Objekte verbinden sowohl Daten als auch Routinen. Zentrale Aspekte sind _[Datenkapselung](oo#datenkapselung)_, _[Abstraktion](oo#abstraktion)_, _[Vererbung](inheritance)_ und _[Polymorphie](polymorphy)_                                                       | C++, Java        |
+| Funktionale Programmierung       | Deklarative Programmierung | Berechnungen werden als die Auswertung mathematischer Funktionen betrachtet. Seiteneffekte (veränderliche Daten und Zustände) werden vermieden                                                                                                                   | Haskell, Lisp    |
+| Logische Programmierung          | Deklarative Programmierung | Fakten und Regeln werden zur logischen Deduktion verwendet. Es wird festgelegt, was bekannt ist, um daraus abzuleiten, was daraus folgt                                                                                                                          | Prolog           |
 
 ## Programmausführung
 
