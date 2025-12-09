@@ -1,0 +1,274 @@
+---
+title: Arbeiten mit Binärzahlen
+description: ''
+sidebar_position: 15
+tags: [binary-numbers]
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+## Binärzahlen in Dezimalzahlen umwandeln
+
+Zur Umwandlung einer Binärzahl in eine Dezimalzahl muss das Produkt aus
+Stellenwert und Ziffer jeder Stelle aufsummiert werden.
+
+| Potenz         | Stellenwert | Ziffer | Stellenwert \* Ziffer |
+| -------------- | ----------- | ------ | --------------------- |
+| 2<sup>4</sup>  | 16          | 1      | 16 \* 1 = 16          |
+| 2<sup>3</sup>  | 8           | 0      | 8 \* 0 = 0            |
+| 2<sup>2</sup>  | 4           | 0      | 4 \* 0 = 0            |
+| 2<sup>1</sup>  | 2           | 1      | 2 \* 1 = 2            |
+| 2<sup>0</sup>  | 1           | 0      | 1 \* 0 = 0            |
+| 2<sup>-1</sup> | 0,5         | 0      | 0,5 \* 0 = 0          |
+| 2<sup>-2</sup> | 0,25        | 1      | 0,25 \* 1 = 0,25      |
+| 2<sup>-3</sup> | 0,125       | 0      | 0,125 \* 0 = 0        |
+| 2<sup>-4</sup> | 0,0625      | 1      | 0,0625 \* 1 = 0,0625  |
+
+10010,0101<sub>2</sub> = 16 + 0 + 0 + 2 + 0 + 0 + 0,25 + 0 + 0,0625 =
+18,3125<sub>10</sub>
+
+## Natürliche Dezimalzahlen in Binärzahlen umwandeln
+
+Zur Umwandlung einer natürlichen Dezimalzahl in eine Binärzahl kann entweder
+eine Stellenwerttabelle oder das Divisions-Verfahren verwendet werden.
+
+Im Beispiel soll die Zahl 525<sub>10</sub> in eine Binärzahl umgewandelt werden.
+
+<Tabs>
+  <TabItem value="a" label="Divisions-Verfahren" default>
+
+| Ganzzahlige Division | Quotient | Divisionrest |
+| -------------------- | -------- | ------------ |
+| 525 : 2              | 262      | 1            |
+| 262 : 2              | 131      | 0            |
+| 131 : 2              | 65       | 1            |
+| 65 : 2               | 32       | 1            |
+| 32 : 2               | 16       | 0            |
+| 16 : 2               | 8        | 0            |
+| 8 : 2                | 4        | 0            |
+| 4 : 2                | 2        | 0            |
+| 2 : 2                | 1        | 0            |
+| 1 : 2                | 0        | 1            |
+
+525<sub>10</sub> = 1000001101<sub>2</sub>
+
+  </TabItem>
+  <TabItem value="b" label="Stellenwerttabelle">
+
+| Potenz        | Stellenwert | Vergleich | Restwert       | Ziffer |
+| ------------- | ----------- | --------- | -------------- | ------ |
+| 2<sup>9</sup> | 512         | 512 < 525 | 525 - 512 = 13 | 1      |
+| 2<sup>8</sup> | 256         | 256 > 13  | 13             | 0      |
+| 2<sup>7</sup> | 128         | 128 > 13  | 13             | 0      |
+| 2<sup>6</sup> | 64          | 64 > 13   | 13             | 0      |
+| 2<sup>5</sup> | 32          | 32 > 13   | 13             | 0      |
+| 2<sup>4</sup> | 16          | 16 > 13   | 13             | 0      |
+| 2<sup>3</sup> | 8           | 8 < 13    | 13 - 8 = 5     | 1      |
+| 2<sup>2</sup> | 4           | 4 < 5     | 5 - 4 = 1      | 1      |
+| 2<sup>1</sup> | 2           | 2 > 1     | 1              | 0      |
+| 2<sup>0</sup> | 1           | 1 = 1     | 1 - 1 = 0      | 1      |
+
+525<sub>10</sub> = 1000001101<sub>2</sub>
+
+  </TabItem>
+</Tabs>
+
+## Negative Dezimalzahlen in Binärzahlen umwandeln
+
+Da Binärzahlen keine Vorzeichen kennen, wird zur Darstellung von negativen
+Binärzahlen ein Bit (in der Regel das MSB) als Vorzeichen genutzt. Beim
+sogenannten Einerkomplement (auch b-1-Komplement) werden dabei einfach alle Bits
+der Binärzahl invertiert. Dies führt allerdings zu einer doppelten Darstellung
+der Null (positive Null und negative Null). Zudem bringt das Rechnen mit Zahlen
+im Einerkomplement Herausforderungen mit sich. Daher wird zu Darstellung
+negativer Dezimalzahlen das sogenannte Zweierkomplement (auch b-Komplement)
+verwendet, bei welchem nach dem Invertieren noch eine 1 hinzuaddiert wird.
+
+:::info Hinweis
+
+Beim Bilden des Zweierkomplements ist zu beachten, dass einer positiven
+Binärzahl unendlich viele Nullen vorangestellt sind.
+
+:::
+
+Im Beispiel soll die Zahl -95<sub>10</sub> im Zweierkomplement dargestellt
+werden.
+
+|                                                    | 2<sup>n</sup> | ... | 2<sup>7</sup> | 2<sup>6</sup> | 2<sup>5</sup> | 2<sup>4</sup> | 2<sup>3</sup> | 2<sup>2</sup> | 2<sup>1</sup> | 2<sup>0</sup> |
+| -------------------------------------------------- | ------------- | --- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| Dezimalzahl ohne Vorzeichen in Binärzahl umwandeln | 0             | ... | 0             | 1             | 0             | 1             | 1             | 0             | 0             | 1             |
+| Invertieren                                        | 1             | ... | 1             | 0             | 1             | 0             | 0             | 1             | 1             | 0             |
+| 1 Addieren                                         | 1             | ... | 1             | 0             | 1             | 0             | 0             | 1             | 1             | 1             |
+
+:::info Hinweis
+
+Werden Zahlen im Zweierkomplement dargestellt, kann über den Wert des
+Vorzeichenbits ermittelt werden, ob es sich um eine positive Zahl (Wert = 0)
+oder negative Zahl (Wert = 1) handelt.
+
+:::
+
+Durch die Zweierkomplement-Darstellung ergeben sich für ein vorzeichbehaftetes
+Byte folgende Wertebereiche:
+
+|                         | 2<sup>7</sup> | 2<sup>6</sup> | 2<sup>5</sup> | 2<sup>4</sup> | 2<sup>3</sup> | 2<sup>2</sup> | 2<sup>1</sup> | 2<sup>0</sup> |                   |
+| ----------------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ----------------- |
+| Untere Grenze (positiv) | 0             | 0             | 0             | 0             | 0             | 0             | 0             | 0             | 0<sub>10</sub>    |
+| Obere Grenze (positiv)  | 0             | 1             | 1             | 1             | 1             | 1             | 1             | 1             | 127<sub>10</sub>  |
+| Obere Grenze (negativ)  | 1             | 1             | 1             | 1             | 1             | 1             | 1             | 1             | -1<sub>10</sub>   |
+| Untere Grenze (negativ) | 1             | 0             | 0             | 0             | 0             | 0             | 0             | 0             | -128<sub>10</sub> |
+
+:::info Hinweis
+
+Die Umwandlung einer Binärzahl im Zweierkomplement in eine negative Dezimalzahl
+erfolgt analog.
+
+:::
+
+## Reelle Dezimalzahlen in Binärzahlen umwandeln
+
+Zur Umwandlung einer reellen Dezimalzahl in eine Binärzahl kann entweder eine
+Stellenwerttabelle oder das Multiplikations-Verfahren verwendet werden.
+
+Im Beispiel soll die Zahl 0,1<sub>10</sub> in eine Binärzahl umgewandelt werden.
+
+<Tabs>
+  <TabItem value="a" label="Multiplikations-Verfahren" default>
+
+| Multiplikation | Produkt | Vorkommazahl |
+| -------------- | ------- | ------------ |
+| 0,1 \* 2       | 0,2     | 0            |
+| 0,2 \* 2       | 0,4     | 0            |
+| 0,4 \* 2       | 0,8     | 0            |
+| 0,8 \* 2       | 1,6     | 1            |
+| 0,6 \* 2       | 1,2     | 1            |
+| 0,2 \* 2       | 0,4     | 0            |
+| ...            | ...     | ...          |
+
+0,1<sub>10</sub> = 0,000110...<sub>2</sub>
+
+  </TabItem>
+  <TabItem value="b" label="Stellenwerttabelle">
+
+| Potenz         | Stellenwert | Vergleich          | Restwert                   | Ziffer |
+| -------------- | ----------- | ------------------ | -------------------------- | ------ |
+| 2<sup>-1</sup> | 0,5         | 0,5 > 0,1          | 0,1                        | 0      |
+| 2<sup>-2</sup> | 0,25        | 0,25 > 0,1         | 0,1                        | 0      |
+| 2<sup>-3</sup> | 0,125       | 0,125 > 0,1        | 0,1                        | 0      |
+| 2<sup>-4</sup> | 0,0625      | 0,0625 < 0,1       | 0,1 - 0,0625 = 0,0375      | 1      |
+| 2<sup>-5</sup> | 0,03125     | 0,03125 < 0,0375   | 0,0375 - 0,03125 = 0,00625 | 1      |
+| 2<sup>-6</sup> | 0,015625    | 0,015625 > 0,00625 | 0,00625                    | 0      |
+| ...            | ...         | ...                | ...                        | ...    |
+
+0,1<sub>10</sub> = 0,000110...<sub>2</sub>
+
+  </TabItem>
+</Tabs>
+
+## Reeller Dezimalzahlen in Gleitkommazahlen umwandeln
+
+Die Darstellung von Gleitkommazahlen (Floating Point Numbers) ist in der Norm
+IEEE754 festgelegt.
+
+|                     | Datentyp | Größe  | Vorzeichen | Exponent | Mantisse |
+| ------------------- | -------- | ------ | ---------- | -------- | -------- |
+| einfache Genaugkeit | `float`  | 32 Bit | 1 Bit      | 8 Bit    | 23 Bit   |
+| doppelte Genaugkeit | `double` | 64 Bit | 1 Bit      | 11 Bit   | 51 Bit   |
+
+Bei der Umwandlung einer reellen Zahl in eine Gleitkommazahl müssen zunächst
+Vor- und Nachkommazahl in Binärzahlen umgewandelt werden. Anschließend wird
+durch Gleiten bzw. Verschieben des Kommas zur führenden 1, dem Runden auf das
+LSB sowie dem Entfernen der führenden 1 die Mantisse ermittelt. Nach dem
+Ermitteln der Mantisse muss zum Exponenten noch der Bias addiert sowie das
+Vorzeichen umgewandelt werden.
+
+Im Beispiel soll die Zahl -27,04<sub>10</sub> in eine Gleitkommazahl mit
+einfacher Genauigkeit umgewandelt werden.
+
+|                                       | Eingabe                                      | Ausgabe                                      |
+| ------------------------------------- | -------------------------------------------- | -------------------------------------------- |
+| Vorkommazahl in Binärzahl umwandeln   | 27                                           | 11011                                        |
+| Nachkommazahl in Binärzahl umwandeln  | 04                                           | 00001010001111010111...                      |
+| Vor- und Nachkommazahl zusammenführen | 11011 und 00001010001111010111...            | 11011,00001010001111010111...                |
+| Komma zur führenden 1 verschieben     | 11011,00001010001111010111...\*2<sup>0</sup> | 1,101100001010001111010111...\*2<sup>4</sup> |
+| Runden auf das LSB                    | 1,101100001010001111010111...\*2<sup>4</sup> | 1,10110000101000111101100\*2<sup>4</sup>     |
+| Führende 1 entfernen                  | 1,10110000101000111101100\*2<sup>4</sup>     | 10110000101000111101100\*2<sup>4</sup>       |
+| Bias zum Exponenten addieren          | 4 + 127 = 131                                | 10000011                                     |
+| Vorzeichen umwandeln                  | -                                            | 1                                            |
+
+-27,04<sub>10</sub> = 1 10000011 10110000101000111101100<sub>2</sub>
+
+## Binärzahlen addieren und subtrahieren
+
+Für die Addition von Binärzahlen gelten folgende Regeln:
+
+- Fall 1: `0 + 0 = 0`
+- Fall 2: `0 + 1 = 1`
+- Fall 3: `1 + 0 = 1`
+- Fall 4: `1 + 1 = 0 (Übertrag 1)`
+
+Die Subtraktion von Binärzahlen erfolgt durch die Addition des
+Zweierkomplements. Es gilt: `a - b = a + (-b)`.
+
+<Tabs>
+  <TabItem value="a" label="a + b" default>
+
+Im Beispiel werden die Zahlen 3 und 47 addiert.
+
+```
+  00000011 (3)
++ 00101111 (47)
+     1111
+---------------
+= 00110010 (50)
+```
+
+  </TabItem>
+  <TabItem value="b" label="(-a) + b">
+
+Im Beispiel werden die Zahlen -3 und 47 addiert.
+
+```
+   11111101 (-3)
++  00101111 (47)
+  11111111
+----------------
+=  00101100 (44)
+```
+
+  </TabItem>
+  <TabItem value="c" label="a + (-b)">
+
+Im Beispiel werden die Zahlen 3 und -47 addiert.
+
+```
+   00000011 (3)
++  11010001 (-47)
+        11
+----------------
+=  11010100 (-44)
+```
+
+  </TabItem>
+  <TabItem value="d" label="(-a) + (-b)">
+
+Im Beispiel werden die Zahlen -3 und -47 addiert.
+
+```
+   11111101 (-3)
++  11010001 (-47)
+  1111   1
+----------------
+=  11001110 (-50)
+```
+
+  </TabItem>
+</Tabs>
+
+:::info Hinweis
+
+Der bei der Addition des Zweierkomplements auftretende mögliche Stellenüberlauf
+wird ignoriert.
+
+:::

@@ -1,0 +1,127 @@
+---
+title: Das Binärsystem
+description: ''
+sidebar_position: 25
+tags: [binary-system]
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+Informationen wie Zahlen und Zeichen werden im Computer in Form von sogenannten
+_Bits_ (Binary Digits) gespeichert. Ein Bit stellt dabei die kleinstmögliche
+Informationseinheit dar und kann zwei Zustände einnehmen: 0 und 1 (bzw. "an" und
+"aus", "wahr" und "falsch", "Strom fließt" und "Strom fließt nicht"). Zahlen,
+die mit Hilfe von Bits dargestellt werden, bezeichnet man als Binärzahlen, das
+dazugehörige Zahlensystem als Binärsystem.
+
+## Zahlensysteme
+
+Zahlensysteme wie das Binärsystem oder das Dezimalsystem legen fest, wie Zahlen
+dargestellt werden. Anhand des Namens lässt sich dabei ableiten, wie viele
+Ziffern zur Darstellung einer Zahl zur Verfügung stehen. Um Unklarheiten zu
+vermeiden, können Zahlen um einen nach- und tiefgestellten Index ergänzt werden
+(2 = Binärsystem, 8 = Oktalsystem, 10 = Dezimalsystem, 16 = Hexadezimalsystem).
+
+<Tabs>
+  <TabItem value="a" label="Binärsystem" default>
+
+- Ziffern: 0, 1
+- Beispiel: 100101<sub>2</sub>
+
+| Stelle | Potenz        | Stellenwert |
+| ------ | ------------- | ----------- |
+| 8      | 2<sup>7</sup> | 128         |
+| 7      | 2<sup>6</sup> | 64          |
+| 6      | 2<sup>5</sup> | 32          |
+| 5      | 2<sup>4</sup> | 16          |
+| 4      | 2<sup>3</sup> | 8           |
+| 3      | 2<sup>2</sup> | 4           |
+| 2      | 2<sup>1</sup> | 2           |
+| 1      | 2<sup>0</sup> | 1           |
+
+:::info Hinweis
+
+Das hochwertigste Bit wird als _Most Significant Bit_ (MSB), das niederwertigste
+Bit als _Least Significant Bit_ (LSB) bezeichnet.
+
+:::
+
+  </TabItem>
+  <TabItem value="b" label="Oktalsystem">
+
+- Ziffern: 0, 1, 2, 3, 4, 5, 6, 7
+- Beispiel: 751<sub>8</sub>
+
+| Stelle | Potenz        | Stellenwert |
+| ------ | ------------- | ----------- |
+| 8      | 8<sup>7</sup> | 2.097.152   |
+| 7      | 8<sup>6</sup> | 262.144     |
+| 6      | 8<sup>5</sup> | 32.768      |
+| 5      | 8<sup>4</sup> | 4.096       |
+| 4      | 8<sup>3</sup> | 512         |
+| 3      | 8<sup>2</sup> | 64          |
+| 2      | 8<sup>1</sup> | 8           |
+| 1      | 8<sup>0</sup> | 1           |
+
+  </TabItem>
+  <TabItem value="c" label="Dezimalsystem">
+
+- Ziffern: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+- Beispiel: 2.060.128<sub>10</sub>
+
+| Stelle | Potenz         | Stellenwert |
+| ------ | -------------- | ----------- |
+| 8      | 10<sup>7</sup> | 10.000.000  |
+| 7      | 10<sup>6</sup> | 1.000.000   |
+| 6      | 10<sup>5</sup> | 100.000     |
+| 5      | 10<sup>4</sup> | 10.000      |
+| 4      | 10<sup>3</sup> | 1.000       |
+| 3      | 10<sup>2</sup> | 100         |
+| 2      | 10<sup>1</sup> | 10          |
+| 1      | 10<sup>0</sup> | 1           |
+
+:::info Hinweis
+
+Neben der Dezimaldarstellung (Beispiel: 2.060.128) können Dezimalzahlen auch in
+der Exponentialdarstellung (Beispiel: 2,060128\*10<sup>6</sup> bzw. 2,060128e6)
+dargestellt werden. Bei dieser Darstellung, die auch als wissenschaftliche
+Notation bezeichnet wird, werden Zahlen als Produkt aus Mantisse und einer
+10er-Potenz dargestellt.
+
+:::
+
+  </TabItem>
+  <TabItem value="d" label="Hexadezimalsystem">
+
+- Ziffern: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F
+- Beispiel: F4A83<sub>16</sub>
+
+| Stelle | Potenz         | Stellenwert |
+| ------ | -------------- | ----------- |
+| 8      | 16<sup>7</sup> | 268.435.456 |
+| 7      | 16<sup>6</sup> | 16.777.216  |
+| 6      | 16<sup>5</sup> | 1.048.576   |
+| 5      | 16<sup>4</sup> | 65.536      |
+| 4      | 16<sup>3</sup> | 4.096       |
+| 3      | 16<sup>2</sup> | 256         |
+| 2      | 16<sup>1</sup> | 16          |
+| 1      | 16<sup>0</sup> | 1           |
+
+  </TabItem>
+</Tabs>
+
+## Größeneinheiten
+
+Werden 8 Bits zu einer Einheit zusammengefasst, spricht man von einem _Byte_.
+Werden 1.024 Byte wiederum zusammengefasst, spricht man von einem Kilobyte (KB)
+bei 1.024 Kilobyte von einem Megabyte (MB) und so weiter.
+
+| Einheit  | Abkürzung | Größe in Byte     | Größe in Bit   |
+| -------- | --------- | ----------------- | -------------- |
+| Bit      | -         | 0                 | 1              |
+| Byte     | -         | 1                 | 8              |
+| Kilobyte | KB        | 1.024<sup>1</sup> | 2<sup>10</sup> |
+| Megabyte | MB        | 1.024<sup>2</sup> | 2<sup>20</sup> |
+| Gigabyte | GB        | 1.024<sup>3</sup> | 2<sup>30</sup> |
+| Terabyte | TB        | 1.024<sup>4</sup> | 2<sup>40</sup> |
