@@ -5,7 +5,7 @@ sidebar_position: 40
 tags: [javafx]
 ---
 
-:::danger Benötigte Tools
+:::info Benötigte Tools
 
 [JDK](https://www.oracle.com/java/technologies/downloads/),
 [Eclipse](https://www.eclipse.org/),

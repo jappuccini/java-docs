@@ -166,7 +166,7 @@ formattiert wird.
    ...
 ```
 
-:::danger Hinweis
+:::info Hinweis
 
 Aktuell kann Prettier nicht in Kombination mit Datenklassen (Records) verwendet
 werden.

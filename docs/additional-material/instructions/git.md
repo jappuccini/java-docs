@@ -5,7 +5,7 @@ sidebar_position: 30
 tags: [git]
 ---
 
-:::danger Benötigte Tools
+:::info Benötigte Tools
 
 [JDK](https://www.oracle.com/java/technologies/downloads/),
 [Eclipse](https://www.eclipse.org/) und [Git](https://git-scm.com/downloads)

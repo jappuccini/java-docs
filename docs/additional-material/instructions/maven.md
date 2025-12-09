@@ -5,7 +5,7 @@ sidebar_position: 20
 tags: [maven]
 ---
 
-:::danger Benötigte Tools
+:::info Benötigte Tools
 
 [JDK](https://www.oracle.com/java/technologies/downloads/) und
 [Eclipse](https://www.eclipse.org/)

@@ -33,7 +33,7 @@ flowchart
          Tiefe: 2, Grad: 0)
 ```
 
-:::note Hinweis
+:::info Hinweis
 
 Unter der Tiefe eines Knotens versteht man die Länge des Pfades vom Knoten bis
 zum Wurzelknoten, unter der Höhe eines Baumes die maximale Tiefe eines seiner

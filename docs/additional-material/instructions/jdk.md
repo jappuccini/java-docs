@@ -5,7 +5,7 @@ sidebar_position: 10
 tags: [jdk]
 ---
 
-:::danger Benötigte Tools
+:::info Benötigte Tools
 
 [JDK](https://www.oracle.com/java/technologies/downloads/)
 

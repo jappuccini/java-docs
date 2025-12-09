@@ -43,7 +43,7 @@ flowchart TD
    end
 ```
 
-:::note Hinweis
+:::info Hinweis
 
 Ströme (Paket `java.util.stream`) haben nichts mit
 [Datenströmen (IO-Streams)](io-streams) (Paket `java.io`) zu tun.
@@ -71,7 +71,7 @@ public class MainClass {
 }
 ```
 
-:::note Hinweis
+:::info Hinweis
 
 Die Zahlenfolge 4-8-15-16-23-42 spielt eine große Rolle in der Fernsehserie
 _Lost_.

@@ -32,7 +32,7 @@ public class MainClass {
 }
 ```
 
-:::note Hinweis
+:::info Hinweis
 
 Dem Konstruktor muss der Standard-Eingabestrom `System.in` als Wert mitgegeben
 werden.
