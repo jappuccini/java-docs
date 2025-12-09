@@ -1,13 +1,15 @@
 ---
-title: Verzweigungen
+title: Verzweigungen und Fallunterscheidungen
 description: ''
 sidebar_position: 95
 tags: [control-structures, cases]
 ---
 
-Mit Hilfe von Verzweigungen können unterschiedliche Anweisungsblöcke ausgeführt
-werden. Verzweigungen sind - genau wie Schleifen - wesentliche Bestandteile der
-Programmierung un werden auch als _Kontrollstrukturen_ bezeichnet.
+Mit Hilfe von Verzweigungen (auch _Bedingte Anweisungen_ genannt) und
+Fallunterscheidungen können unterschiedliche Anweisungsblöcke ausgeführt werden.
+Verzweigungen und Fallunterscheidungen sind - genau wie Schleifen - wesentliche
+Bestandteile der Programmierung un werden auch als _Kontrollstrukturen_
+bezeichnet.
 
 ## Einfache Verzweigungen
 
@@ -34,13 +36,13 @@ public class MainClass {
 }
 ```
 
-:::note Hinweis
+:::info Hinweis
 
 Der else-Zweig ist optional, kann also weggelassen werden.
 
 :::
 
-## Kaskadierte Verzweigungen
+## Mehrfachverzweigungen
 
 Mehrfachverzweigungen können mit Hilfe einer if-else-if-Leiter abgebildet
 werden. Die if-else-if-Leiter verschachtelt mehrere if-Anweisungen zu einer
@@ -98,16 +100,16 @@ public class MainClass {
 }
 ```
 
-:::danger Hinweis
+:::info Hinweis
 
 Die Kurzschreibweise sollte verantwortungsvoll verwendet werden, da die
 Lesbarkeit dadurch eventuell erschwert wird.
 
 :::
 
-## Mehrfachverzweigungen
+## Fallunterscheidungen
 
-Mehrfachverzweigungen können entweder mit Hilfe von if-else-if-Leitern oder mit
+Fallunterscheidungen können entweder mit Hilfe von if-else-if-Leitern oder mit
 Hilfe der switch-case-Anweisung realisiert werden. Tritt ein Fall ein, werden
 alle Anweisungen bis zum nächsten `break` ausgeführt. Durch Weglassen von
 `break` können unterschiedliche Fälle gleich behandelt werden. Der default-Block

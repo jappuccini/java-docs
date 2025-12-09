@@ -36,7 +36,7 @@ public class MainClass {
 }
 ```
 
-:::note Hinweis
+:::info Hinweis
 
 Nach der letzten Verwendung sollte die Methode `void close()` der Klasse
 `Scanner` aufgerufen werden.
@@ -50,7 +50,7 @@ und relativen Pfadangaben. Bei absoluten Pfadangaben wird der vollständige Pfad
 von der Wurzel des jeweiligen Verzeichnissystems bis zum Ziel angegeben, bei
 relativen der Weg von einem festgelegten Bezugspunkt bis zum Ziel.
 
-:::note Hinweis
+:::info Hinweis
 
 Alle Klassen im Paket `java.io` verwenden als Bezugspunkt das Arbeitsverzeichnis
 des Benutzers (Systemeigenschaft `user.dir`).

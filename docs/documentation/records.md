@@ -67,7 +67,7 @@ erzeugen. Das Schlüsselwort für Records lautet `record`.
 public record Student(int id, String name) {}
 ```
 
-:::danger Hinweis
+:::info Hinweis
 
 Da Records von der Klasse `Record` abgeleitet sind, können sie nicht von einer
 weiteren Klasse abgeleitet werden. Allerdings können Records, wie andere Klassen
