@@ -2,7 +2,7 @@
 title: Arbeiten mit Git
 description: ''
 sidebar_position: 30
-tags: []
+tags: [git]
 ---
 
 :::danger Benötigte Tools

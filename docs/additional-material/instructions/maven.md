@@ -2,7 +2,7 @@
 title: Arbeiten mit Maven
 description: ''
 sidebar_position: 20
-tags: []
+tags: [maven]
 ---
 
 :::danger Benötigte Tools

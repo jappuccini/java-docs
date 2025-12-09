@@ -2,7 +2,7 @@
 title: Arbeiten mit dem JDK
 description: ''
 sidebar_position: 10
-tags: []
+tags: [jdk]
 ---
 
 :::danger Benötigte Tools

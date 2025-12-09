@@ -2,7 +2,7 @@
 title: Arbeiten mit JavaFX
 description: ''
 sidebar_position: 40
-tags: []
+tags: [javafx]
 ---
 
 :::danger Benötigte Tools
