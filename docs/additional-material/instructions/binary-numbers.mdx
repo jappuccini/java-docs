@@ -38,18 +38,18 @@ Im Beispiel soll die Zahl 525<sub>10</sub> in eine Binärzahl umgewandelt werden
 <Tabs>
   <TabItem value="a" label="Divisions-Verfahren" default>
 
-| Ganzzahlige Division | Quotient | Divisionrest |
-| -------------------- | -------- | ------------ |
-| 525 : 2              | 262      | 1            |
-| 262 : 2              | 131      | 0            |
-| 131 : 2              | 65       | 1            |
-| 65 : 2               | 32       | 1            |
-| 32 : 2               | 16       | 0            |
-| 16 : 2               | 8        | 0            |
-| 8 : 2                | 4        | 0            |
-| 4 : 2                | 2        | 0            |
-| 2 : 2                | 1        | 0            |
-| 1 : 2                | 0        | 1            |
+| Ganzzahlige Division | Quotient | Divisionsrest |
+| -------------------- | -------- | ------------- |
+| 525 : 2              | 262      | 1             |
+| 262 : 2              | 131      | 0             |
+| 131 : 2              | 65       | 1             |
+| 65 : 2               | 32       | 1             |
+| 32 : 2               | 16       | 0             |
+| 16 : 2               | 8        | 0             |
+| 8 : 2                | 4        | 0             |
+| 4 : 2                | 2        | 0             |
+| 2 : 2                | 1        | 0             |
+| 1 : 2                | 0        | 1             |
 
 525<sub>10</sub> = 1000001101<sub>2</sub>
 
@@ -74,23 +74,12 @@ Im Beispiel soll die Zahl 525<sub>10</sub> in eine Binärzahl umgewandelt werden
   </TabItem>
 </Tabs>
 
-## Negative Dezimalzahlen in Binärzahlen umwandeln
+## Bilden des Zweierkomplements
 
-Da Binärzahlen keine Vorzeichen kennen, wird zur Darstellung von negativen
-Binärzahlen ein Bit (in der Regel das MSB) als Vorzeichen genutzt. Beim
-sogenannten Einerkomplement (auch b-1-Komplement) werden dabei einfach alle Bits
-der Binärzahl invertiert. Dies führt allerdings zu einer doppelten Darstellung
-der Null (positive Null und negative Null). Zudem bringt das Rechnen mit Zahlen
-im Einerkomplement Herausforderungen mit sich. Daher wird zu Darstellung
-negativer Dezimalzahlen das sogenannte Zweierkomplement (auch b-Komplement)
-verwendet, bei welchem nach dem Invertieren noch eine 1 hinzuaddiert wird.
-
-:::info Hinweis
-
-Beim Bilden des Zweierkomplements ist zu beachten, dass einer positiven
-Binärzahl unendlich viele Nullen vorangestellt sind.
-
-:::
+Zum Bilden des Zweierkomplements wird zunächst das Einerkomplement gebildet,
+d.h. alle Bits werden invertiert. Hierbei ist zu beachten, dass einer positiven
+Binärzahl unendlich viele Nullen vorangestellt sind. Anschließend wird noch eine
+1 hinzuaddiert.
 
 Im Beispiel soll die Zahl -95<sub>10</sub> im Zweierkomplement dargestellt
 werden.
@@ -103,26 +92,7 @@ werden.
 
 :::info Hinweis
 
-Werden Zahlen im Zweierkomplement dargestellt, kann über den Wert des
-Vorzeichenbits ermittelt werden, ob es sich um eine positive Zahl (Wert = 0)
-oder negative Zahl (Wert = 1) handelt.
-
-:::
-
-Durch die Zweierkomplement-Darstellung ergeben sich für ein vorzeichbehaftetes
-Byte folgende Wertebereiche:
-
-|                         | 2<sup>7</sup> | 2<sup>6</sup> | 2<sup>5</sup> | 2<sup>4</sup> | 2<sup>3</sup> | 2<sup>2</sup> | 2<sup>1</sup> | 2<sup>0</sup> |                   |
-| ----------------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ----------------- |
-| Untere Grenze (positiv) | 0             | 0             | 0             | 0             | 0             | 0             | 0             | 0             | 0<sub>10</sub>    |
-| Obere Grenze (positiv)  | 0             | 1             | 1             | 1             | 1             | 1             | 1             | 1             | 127<sub>10</sub>  |
-| Obere Grenze (negativ)  | 1             | 1             | 1             | 1             | 1             | 1             | 1             | 1             | -1<sub>10</sub>   |
-| Untere Grenze (negativ) | 1             | 0             | 0             | 0             | 0             | 0             | 0             | 0             | -128<sub>10</sub> |
-
-:::info Hinweis
-
-Die Umwandlung einer Binärzahl im Zweierkomplement in eine negative Dezimalzahl
-erfolgt analog.
+Die Rückumwandlung erfolgt analog.
 
 :::
 
@@ -166,22 +136,14 @@ Im Beispiel soll die Zahl 0,1<sub>10</sub> in eine Binärzahl umgewandelt werden
   </TabItem>
 </Tabs>
 
-## Reeller Dezimalzahlen in Gleitkommazahlen umwandeln
+## Reelle Dezimalzahlen in Gleitkommazahlen umwandeln
 
-Die Darstellung von Gleitkommazahlen (Floating Point Numbers) ist in der Norm
-IEEE754 festgelegt.
-
-|                     | Datentyp | Größe  | Vorzeichen | Exponent | Mantisse |
-| ------------------- | -------- | ------ | ---------- | -------- | -------- |
-| einfache Genaugkeit | `float`  | 32 Bit | 1 Bit      | 8 Bit    | 23 Bit   |
-| doppelte Genaugkeit | `double` | 64 Bit | 1 Bit      | 11 Bit   | 51 Bit   |
-
-Bei der Umwandlung einer reellen Zahl in eine Gleitkommazahl müssen zunächst
-Vor- und Nachkommazahl in Binärzahlen umgewandelt werden. Anschließend wird
-durch Gleiten bzw. Verschieben des Kommas zur führenden 1, dem Runden auf das
-LSB sowie dem Entfernen der führenden 1 die Mantisse ermittelt. Nach dem
-Ermitteln der Mantisse muss zum Exponenten noch der Bias addiert sowie das
-Vorzeichen umgewandelt werden.
+Bei der Umwandlung einer reellen Zahl in eine Gleitkommazahl werden zunächst
+Vor- und Nachkommazahl in Binärzahlen umgewandelt. Anschließend wird durch
+Gleiten bzw. Verschieben des Kommas zur führenden 1, dem Runden auf das LSB
+sowie dem Entfernen der führenden 1 die Mantisse ermittelt. Nach dem Ermitteln
+der Mantisse wird zum Exponenten noch der Bias (127 bei einfacher Genauigkeit,
+1023 bei doppelter Genauigkeit) hinzuaddiert sowie das Vorzeichen umgewandelt.
 
 Im Beispiel soll die Zahl -27,04<sub>10</sub> in eine Gleitkommazahl mit
 einfacher Genauigkeit umgewandelt werden.
