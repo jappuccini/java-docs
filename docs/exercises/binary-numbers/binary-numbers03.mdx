@@ -1,0 +1,48 @@
+---
+title: BinaryNumbers03
+description: ''
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+1. Überführe die Dezimalzahl 398,25 in eine Gleitkommazahl einfacher Genauigkeit
+2. Überführe die Gleitkommazahl 10111111010000000000000000000000 in eine
+   Dezimalzahl
+
+<Tabs>
+  <TabItem value="a" label="-" default>
+
+  </TabItem>
+  <TabItem value="b" label="1">
+
+|                                       | Eingabe                                  | Ausgabe                                  |
+| ------------------------------------- | ---------------------------------------- | ---------------------------------------- |
+| Vorkommazahl in Binärzahl umwandeln   | 398                                      | 110001110                                |
+| Nachkommazahl in Binärzahl umwandeln  | 25                                       | 01                                       |
+| Vor- und Nachkommazahl zusammenführen | 110001110 und 01                         | 110001110,01                             |
+| Komma zur führenden 1 verschieben     | 110001110,01\*2<sup>0</sup>              | 1,1000111001\*2<sup>8</sup>              |
+| Runden auf das LSB                    | 1,1000111001\*2<sup>8</sup>              | 1,10001110010000000000000\*2<sup>8</sup> |
+| Führende 1 entfernen                  | 1,10001110010000000000000\*2<sup>8</sup> | 10001110010000000000000\*2<sup>8</sup>   |
+| Bias zum Exponenten addieren          | 8 + 127 = 135                            | 10000111                                 |
+| Vorzeichen umwandeln                  | +                                        | 0                                        |
+
+398,25<sub>10</sub> = 01000011110001110010000000000000<sub>2</sub>
+
+  </TabItem>
+  <TabItem value="c" label="2">
+
+|                                       | Eingabe             | Ausgabe             |
+| ------------------------------------- | ------------------- | ------------------- |
+| Vorzeichen umwandeln                  | 0                   | +                   |
+| Bias vom Exponenten subtrahieren      | 01111110            | 126 - 127 = -1      |
+| Führende 1 hinzufügen                 | 1\*2<sup>-1</sup>   | 1,1\*2<sup>-1</sup> |
+| Komma verschieben                     | 1,1\*2<sup>-1</sup> | 0,11\*2<sup>0</sup> |
+| Vorkommazahl in Binärzahl umwandeln   | 0                   | 0                   |
+| Nachkommazahl in Binärzahl umwandeln  | 11                  | 75                  |
+| Vor- und Nachkommazahl zusammenführen | 0 und 75            | 0,75                |
+
+10111111010000000000000000000000<sub>2</sub> = -0,75<sub>10</sub>
+
+  </TabItem>
+</Tabs>
