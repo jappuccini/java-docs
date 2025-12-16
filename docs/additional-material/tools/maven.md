@@ -1,7 +1,7 @@
 ---
 title: Maven
 description: ''
-sidebar_position: 252
+sidebar_position: 20
 tags: [maven]
 ---
 
