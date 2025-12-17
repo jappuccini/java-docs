@@ -58,7 +58,7 @@ public class Computer {
 
 ```
 
-:::note Hinweis
+:::info Hinweis
 
 Die statische Methode `int hash(values: Object...)` der Klasse `Objects` liefert
 eine einfache Möglichkeit zur Implementierung der Methode `boolean hashCode()`.
@@ -86,7 +86,7 @@ public class Computer {
 }
 ```
 
-:::note Hinweis
+:::info Hinweis
 
 Wird den print-Methoden des Ausgabestroms `System.out` eine Objektreferenz
 übergeben, wird implizit die Methode `String toString()` des jeweiligen Objektes

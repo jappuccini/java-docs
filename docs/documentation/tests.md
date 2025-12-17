@@ -32,7 +32,7 @@ flowchart LR
    Red --> Green --> Refactor --> Red
 ```
 
-:::note Hinweis
+:::info Hinweis
 
 Da durch die vorangestellten Tests eine kontinuierliche Designverbesserung
 stattfindet, wird die testgetriebene Entwicklung zu den Designstrategien

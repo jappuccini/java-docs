@@ -2,10 +2,10 @@
 title: Arbeiten mit dem JDK
 description: ''
 sidebar_position: 10
-tags: []
+tags: [jdk]
 ---
 
-:::danger Benötigte Tools
+:::info Benötigte Tools
 
 [JDK](https://www.oracle.com/java/technologies/downloads/)
 
