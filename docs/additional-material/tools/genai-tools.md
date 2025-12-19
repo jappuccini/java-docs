@@ -12,18 +12,17 @@ Inhalte wie Texte, Bilder, Videos, Musik, Quellcode etc. generieren können.
 GenAI bildet damit die Grundlage für moderne Chatbots wie ChatGPT, Gemini oder
 LeChat. Im Gegensatz zu "traditionellen" KI-Systemen, deren Aufgaben i.d.R.
 darin bestehen, Muster zu erkennen, Daten zu klassifizieren oder Zusammenhänge
-zu erkennen; kann GenAI mittels statistischer Wahrscheinlichkeiten und
+zu erkennen, kann GenAI mittels statistischer Wahrscheinlichkeiten und
 tiefgreifender Mustererkennung neuartige Inhalte erzeugen, die nicht Teil der
 Trainingsdaten waren. Schlüsselmodelle sind hierbei _Large Language Models_
 (LLMs) für Texte sowie Diffunsionsmodelle und _Generative Adversarial Networks_
 (GANs) für Bilder und Videos. Moderne Chatbots simulieren menschliche
 Konversationen über Text und Sprache und nutzen dabei LLMs, um dynamisch,
-kontextabhängig und zusammenhängend zu antworten. Im Gegensatz zu reinen
-Chatbots sind KI-gestützte Assistenzsysteme (Co-Pilots) wie Microsoft 365
-Copilot und GitHub Copilot direkt in eine Anwendung (z.B.
-Textverarbeitungsprogramm, Tabellenkalkulationsprogramm, IDE) integriert und
-unterstützen den menschlichen Anwender aktiv, ohne dabei die Kontrolle zu
-übernehmen. Sie arbeiten quasi _parallel_ zum Anwender.
+kontextabhängig und zusammenhängend zu antworten. KI-gestützte Assistenzsysteme
+(Co-Pilots) wie Microsoft 365 Copilot und GitHub Copilot dagegen sind direkt in
+eine Anwendung (z.B. Textverarbeitungsprogramm, Tabellenkalkulationsprogramm,
+IDE) integriert und unterstützen den menschlichen Anwender aktiv, ohne dabei die
+Kontrolle zu übernehmen. Sie arbeiten quasi _parallel_ zum Anwender.
 
 ## Prompt Engineering
 
@@ -112,18 +111,20 @@ Wenn der Zug 20 Minuten Verspätung hat, wann kommt er in B an?
 
 Vibe Coding beschreibt eine neuartige Methode der Softwareentwicklung, bei der
 ein LLM zur Generierung des benötigten Quellcodes genutzt wird. Der Begriff
-wurde maßgeblich von OpenAI-Mitbegründer Andrej Karpathy geprägt. Im Unterschied
-zur herkömmlichen Softwareentwicklung, bei der der Softwareentwickler selbst für
-das Erzeugen des Quellcodes zuständig ist, steht beim Vibe Coding die klare
-Beschreibung der Funktionalität in natürlicher Sprache im Vordergrund. Durch
-übergeordnete Anweisungen (Vibes), wird dabei festgelegt, was die Anwendung tun
-soll. Der konkrete Quellcode dagegen wird von der LLM erzeugt. Es handelt sich
-daher im Kern um eine Anwendung des Prompt Engineerings auf die
-Softwareentwicklung. Einsatzgebiete sind unter Anderem das Rapid Prototyping,
-die Erstellung von _Minimal Viable Products_ (MVPs) sowie das automatische
-Erzeugen von Boilerplate-Code. Nachteil von Vibe Coding ist vor allem eine stark
-schwankende Softwarequalität und ein damit verbundener erhöhter Wartungsaufwand.
-Vibe Coding eignet sich daher nur bedingt für komplexe Lösungen.
+wurde maßgeblich von OpenAI-Mitbegründer Andrej Karpathy geprägt und beschreibt
+die entspannte Zusammenarbeit mit der KI, bei der sich der Softwareentwickler
+voll und ganz auf den positiven Workflow und die inspirierende Atmosphäre mit
+der KI einlässt. Im Unterschied zur herkömmlichen Softwareentwicklung, bei der
+der Softwareentwickler selbst für das Erzeugen des Quellcodes zuständig ist,
+steht beim Vibe Coding die klare Beschreibung der Funktionalität in natürlicher
+Sprache durch Prompts im Vordergrund. Der konkrete Quellcode dagegen wird von
+der LLM erzeugt. Es handelt sich daher im Kern um eine Anwendung des Prompt
+Engineerings auf die Softwareentwicklung. Einsatzgebiete sind unter Anderem das
+Rapid Prototyping, die Erstellung von _Minimal Viable Products_ (MVPs) sowie das
+automatische Erzeugen von Boilerplate-Code. Nachteil von Vibe Coding ist vor
+allem eine stark schwankende Softwarequalität und ein damit verbundener erhöhter
+Wartungsaufwand. Es eignet sich daher nur bedingt für komplexe
+Softwareanwendungen oder Softwareanwendungen mit einem hohen Qualitätsanspruch.
 
 ```mermaid
 flowchart
@@ -175,7 +176,7 @@ public class CalculatorApp extends Application {
 Füge die benötigten Elemente hinzu:
 - Zwei Eingabefelder für die Zahlen
 - Schaltflächen für die Operatoren (+, -, \*, /)
-- ein Ausgabefeld für das Ergebnis.
+- ein Ausgabefeld für das Ergebnis
 Verwende ein Raster-Layout.
 ```
 
@@ -231,10 +232,12 @@ public class CalculatorApp extends Application {
 
 ```
 Implementiere nun die Funktionalität.
-Wenn ein Operator-Button geklickt wird, sollen die beiden Zahlen aus den Eingabefeldern ausgelesen,
-die entsprechende Operation durchgeführt und das Ausgabefeld aktualisiert werden.
-Verwende für die Berechnung den Datentyp double.
-Falls die Eingabe keine Zahl ist, zeige einen Nachrichtendialog mit der Fehlermeldung "Ungültige Eingabe" an.
+Wenn ein Operator-Button geklickt wird, sollen:
+- die beiden Zahlen aus den Eingabefeldern ausgelesen werden
+- die entsprechende Operation durchgeführt werden
+- das Ausgabefeld für das Ergebnis aktualisiert werden
+Verwende für die Berechnung den Datentyp **double**.
+Falls die Eingabe keine Zahl ist, zeige einen Nachrichtendialog mit einer Fehlermeldung an.
 ```
 
 **Ausgabe**
