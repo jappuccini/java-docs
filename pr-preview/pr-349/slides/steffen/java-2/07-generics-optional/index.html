@@ -1,0 +1,137 @@
+<!doctype html><html lang=de dir=ltr data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.9.2"><title data-rh=true>Programmieren mit Java</title><meta data-rh=true property=og:title content="Programmieren mit Java"/><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://jappuccini.github.io/java-docs/pr-preview/pr-349/slides/steffen/java-2/07-generics-optional /><meta data-rh=true property=og:locale content=de /><meta data-rh=true name=docusaurus_locale content=de /><meta data-rh=true name=docusaurus_tag content=default /><meta data-rh=true name=docsearch:language content=de /><meta data-rh=true name=docsearch:docusaurus_tag content=default /><link data-rh=true rel=icon href=/java-docs/pr-preview/pr-349/img/favicon.ico /><link data-rh=true rel=canonical href=https://jappuccini.github.io/java-docs/pr-preview/pr-349/slides/steffen/java-2/07-generics-optional /><link data-rh=true rel=alternate href=https://jappuccini.github.io/java-docs/pr-preview/pr-349/slides/steffen/java-2/07-generics-optional hreflang=de /><link data-rh=true rel=alternate href=https://jappuccini.github.io/java-docs/pr-preview/pr-349/slides/steffen/java-2/07-generics-optional hreflang=x-default /><link rel=stylesheet href=/java-docs/pr-preview/pr-349/assets/css/styles.a0a37bfc.css /><script src=/java-docs/pr-preview/pr-349/assets/js/runtime~main.8951a4a6.js defer></script><script src=/java-docs/pr-preview/pr-349/assets/js/main.8f21cbf5.js defer></script></head><body class=navigation-with-keyboard><svg style="display: none;"><defs>
+<symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><div class="reveal reveal-viewport" style=width:100vw;height:100vh><div class=slides><section><section><h2>Agenda</h2><ul><li class=fragment>Generics<li class=fragment>Optional<li class=fragment>Record I</ul></section></section><section><section><h2>Generics</h2></section><section><h2>Generische Typen</h2><p class=fragment>In Java können Klassen und Interfaces generisch sein.<p class=fragment>Generisch heißt, dass Funktionalität unabhängig von einem Typ implementiert werden können.</section><section><h2>Beispiele Generische Klassen/Interfaces</h2><ul><li class=fragment>ArrayList<li class=fragment>Comparator<li class=fragment>Comparable</ul><p class=fragment>Alle Klassen stellen immer die gleiche Funktionalität bereit, egal welchen Typ wir verwenden.</section><section><h2>Beispiele ArrayList</h2><p class=fragment>Egal ob wir Objekte vom Typ Human, Dog, String oder Integer in einer ArrayList abspeichern, wir haben immer die gleichen Methoden zur verfügung.<p class=fragment>add, remove, size etc.</section><section><h2>Beispiel Comparator</h2><p class=fragment>Egal ob wir Comparator oder Comparable Klassen vom Typ Human, Dog, String oder Integer erstellen, wir haben immer die gleichen Methoden zur verfügung.<p class=fragment>Collections.sort</section><section><h2>Verwendung Generics I</h2><p class=fragment>Will man in seiner Anwendung eine Liste von Menschen abspeichern ist der <b>spezifische</b> Typ bekannt.<p class=fragment>Nach dem Klassennamen wird innerhalb von spitzen Klammern, der<!-- --> <b>spezifische</b> Typ angegeben.</section><section><h2>Verwendung Generics II</h2><pre class=fragment><code data-line-numbers=3|6 class=java>public class Main {
+  public static void main(String[] args) {
+    ArrayList&lt;Human> humans = new ArrayList&lt;>();
+  }
+}
+public class HumanComp implements Comparator&lt;Human> {
+  public int compare(Human h1, Human h2) {
+    // implementation details
+  }
+}
+</code></pre></section><section><h2>Implementierung Generics I</h2><p class=fragment>Um eine generische Klasse zu erstellen, wird nach dem Klassennamen in spitzen Klammern der Typparameter angegeben.<pre class=fragment><code class=java>public class Team&lt;T> {
+  // implementierung der Klasse
+}
+</code></pre></section><section><h2>Typparameter I</h2><pre><code class=java>public class Team&lt;T> {
+  // implementierung der Klasse
+}
+</code></pre><pre class=fragment><code class=java>public class Team&lt;A> {
+  // implementierung der Klasse
+}
+</code></pre><pre class=fragment><code class=java>public class Team&lt;HANS> {
+  // implementierung der Klasse
+}
+</code></pre><pre class=fragment><code class=java>public class Team&lt;BLIBLABLUBB> {
+  // implementierung der Klasse
+}
+</code></pre><p class=fragment>Der Bezeichner des Typparameters kann frei gewählt werden.</section><section><h2>Typparameter II</h2><pre><code class=java>public class Team&lt;T> {
+  // implementierung der Klasse
+}
+</code></pre><pre class=fragment><code class=java>public class Team&lt;T,U> {
+  // implementierung der Klasse
+}
+</code></pre><pre class=fragment><code class=java>public class Team&lt;T, U, V> {
+  // implementierung der Klasse
+}
+</code></pre><p class=fragment>Es können mehrere Typparameter kommagetrennt angegeben werden.</section><section><h2>Verwenden von Typparameter I</h2><pre><code data-line-numbers=1-15|1|3,12 class=java>public class Team&lt;T> {
+  private String teamName;
+  private ArrayList&lt;T> teamMembers = new ArrayList&lt;>();
+  public Team(String teamName) {
+    this.teamName = teamName;
+  }
+  
+  public String getTeamName() {
+    return this.teamName;
+  }
+  
+  public void addMember(T member) {
+    this.teamMembers.add(member);
+  }
+}
+</code></pre></section><section><h2>Verwenden von Typargumenten</h2><pre><code data-line-numbers=1-10|3|4|6-7|8 class=java>public class Main {
+  public static void main(String[] args) {
+    Team&lt;FootballPlayer> scf = new Team&lt;>("SC Freiburg");
+    Team&lt;HockeyPlayer> wildwings  = new Team&lt;>("Wildwings");
+    
+    scf.addMember(new FootballPlayer("Steffen");
+    scf.addMember(new HockeyPlayer("Mirco"); // fails
+    wildwings.addMember(new HockeyPlayer("Mirco");
+ }
+}
+</code></pre></section><section><h2>Unterschied Parameter und Argument</h2><pre><code data-line-numbers=1-8|2|6 class=java>public class Main {
+  public static int add(int a, int b) { // Parameter
+    return a + b;
+  }
+  public static void main(String[] args) {
+    int result = Main.add(1, 2); // Argumente
+  }
+}
+</code></pre></section><section><h2>Unterschied Typparameter und Typargument</h2><pre><code data-line-numbers=1-6|1|2|5 class=java>public class Team&lt;T> { // Typparameter
+  public ArrayList&lt;T> members; // Typargument
+}
+//...
+Team&lt;Human> humanTeam = new Team&lt;>();// Typargument
+//...
+</code></pre></section><section><h2><a href=https://github.com/jappuccini/java-demos/tree/steffen/java2/generics target=_blank rel="noopener noreferrer">Demo - Generics</a></h2><ul><li class=fragment>spezifisches Football- und Hockeyteam<li class=fragment>Generische Team Klasse<li class=fragment>Problem: Spieler eines Teams ausgeben</ul></section><section><h2>Einschränken von Typparametern I</h2><p>Um noch mehr Funktionalitäten in eine generische Klasse auszulagern ist es notwendig den Typ einzuschränken.</section><section><h2>Einschränken von Typparametern II</h2><p>Mit <b>extends</b> und <b>super</b> können die möglichen Typen eingeschränkt werden.</section><section><h2>Einschränken von Typparametern III</h2><pre><code class=java>public class Team&lt;T extends Player> {
+  // Player und Subtypen von Player erlaubt
+}
+</code></pre><pre class=fragment><code class=java>public class Team&lt;T super Player> {
+  // Player und Supertypen von Player erlaubt 
+}
+</code></pre></section><section><h2>Einschränken von Typparametern IV</h2><pre><code class=java>public class Player {}
+public class BaseballPlayer extends Player {}
+public class FootballPlayer extends Player {}
+public class ExtremeFootballPlayer extends FootballPlayer {}
+</code></pre><pre class=fragment><code class=java>public class Team&lt;T extends Player> {} //PBFE erlaubt
+public class Team&lt;T extends FootballPlayer> {} //FE erlaubt
+public class Team&lt;T super Player> {} // P erlaubt
+public class Team&lt;T super FootballPlayer> {} //PF erlaubt</code></pre></section><section><h2><a href=https://github.com/jappuccini/java-demos/tree/steffen/java2/generics target=_blank rel="noopener noreferrer">Demo - Generics</a></h2><span>Spieler eines Generischen Teams ausgeben </span><ul><li class=fragment>Vererbung<li class=fragment>Interface</ul></section></section><section><section><h2>Optional</h2></section><section><h2>Optional - Klasse</h2><p class=fragment>Mit Hilfe der Optional Klasse kann man NullPointerExceptions einfach behandeln.<p class=fragment>Was sind NullPointerExceptions?</section><section><h2>Null Pointer Exception I</h2><pre class=fragment><code class=java>public class Dog {
+ public String name;
+ public Dog(String name) {
+  this.name = name;
+ }
+}
+</code></pre></section><section><h2>Null Pointer Exception II</h2><pre class=fragment><code class=java>public class Main {
+  public static void main(String[] args) {
+    Dog doggo = new Dog(null);
+    doggo.name.equals("Bello"); // funktioniert nicht
+ }
+}
+</code></pre></section><section><h2>Optional als Lösung</h2><pre class=fragment><code class=java>public class Dog {
+ public Optional&lt;String> name;
+ public Dog(String name) {
+  this.name = Optional.ofNullable(name);
+ }
+}
+</code></pre></section><section><h2>Optional - Wrapper um den echten Wert</h2><p class=fragment>Die Optional Klasse verpackt den echten Wert hinter Methoden.<p class=fragment>Mithilfe von Methoden kann überprüft werden, ob ein Wert Null ist oder nicht.</section><section><h2>Optional - Methoden I</h2><pre class=fragment><code class=java data-line-numbers=3-9|3|4|5|7|8>public class Main {
+  public static void main(String[] args) {
+    Optional&lt;String> name = Optional.of("Hans");
+    if(name.isPresent()) {
+      System.out.println(name.get());
+    }
+    if(name.isEmpty()) {
+      System.out.println("No Name");
+    }
+ }
+}
+</code></pre></section><section><h2>Optional - Methoden II*</h2><pre class=fragment><code class=java>public class Main {
+  public static void main(String[] args) {
+    Optional&lt;String> name = Optional.of("Hans");
+    name.ifPresent((value) -> System.out.println(value));
+    name.ifPresentOrElse(
+      (value) -> System.out.println(value),
+      () -> System.out.println("No Name")
+    );
+  }
+}
+</code></pre><div class=fragment><p style=font-size:8px;position:absolute;bottom:0;right:0>*NKR</div></section><section><h2><a href=https://github.com/jappuccini/java-demos/tree/steffen/java2/optional target=_blank rel="noopener noreferrer">Demo - Optional</a></h2><ul><li class=fragment>Human Middlename<li class=fragment>University Search Student</ul></section></section><section><section><h2>Record I</h2></section><section><h2>Records</h2><p class=fragment>Ein Record ist eine Datenklasse, deren Attribute nicht verändert werden können.<p class=fragment>Eine Datenklasse hat somit finale Attribute und Getter.</section><section><h2>Beispiel Record Dog</h2><pre class=fragment><code class=java>public record Dog(String name, int age) {}
+</code></pre></section><section><h2>Verwendung Record Dog</h2><pre class=fragment><code class=java>public class Main {
+  public static void main(String[] args) {
+    Dog bello = new Dog("Bello", 12);
+    String name = bello.name();
+    int age = bello.age();
+  }
+}
+</code></pre></section></section><section><h2>Rest of the Day</h2><ul><li class=fragment><a href=/java-docs/pr-preview/pr-349/exercises/generics/>Generics Aufgaben</a><li class=fragment><a href=/java-docs/pr-preview/pr-349/exercises/optionals/>Optional Aufgaben</a></ul></section></div></div></div></body>
