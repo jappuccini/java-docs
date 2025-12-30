@@ -21,7 +21,7 @@ tags: []
 - 05.02. & 06.02.2026
   [Java API, Enum, Klassendiagramm, Aktivitätsdiagramm](/slides/steffen/java-1/class-diagram-java-api-enum)
 - 12.02.2026 [Vererbung](/slides/steffen/java-1/inheritance)
-- 12.02.2026 [Polymorphie](/slides/steffen/java-1/polymorphy)
+- 12.02.2026 [Polymorphie](/slides/steffen/java-1/polymorphism)
 - 13.02.2026
   [Abstrakte und finale Klassen](/slides/steffen/java-1/abstract-and-final)
 - 19.02.2026 [Interfaces](/slides/steffen/java-1/interfaces)
