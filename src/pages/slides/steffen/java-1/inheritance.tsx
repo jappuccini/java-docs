@@ -319,7 +319,7 @@ export default function Inheritance(): JSX.Element {
           <h2>Rest of the day</h2>
           <ul>
             <li className="fragment">
-              <Link to="/exercises/polymorphy">Polymorphy 01 & 02</Link>
+              <Link to="/exercises/polymorphism">Polymorphism 01 & 02</Link>
             </li>
           </ul>
         </section>

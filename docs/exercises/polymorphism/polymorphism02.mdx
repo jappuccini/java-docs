@@ -1,14 +1,14 @@
 ---
-title: Polymorphism03
+title: Polymorphism02
 description: ''
 ---
 
 import Exercise from '@site/src/components/Exercise';
 
-- Passe die Klasse `Rental` aus Übungsaufgabe [Polymorphism02](polymorphy02)
-  anhand des abgebildeten Klassendiagramms an
-- Passe die ausführbare Klasse aus Übungsaufgabe [Polymorphism02](polymorphy02)
-  so an, dass sich alle Lastwagen der Fahrzeugvermietung in Autobots verwandeln
+- Erstelle die Klasse `Rental` anhand des abgebildeten Klassendiagramms
+- Passe die ausführbare Klasse aus Übungsaufgabe [Polymorphism01](polymorphism01)
+  so an, dass alle erzeugten Autos und Lastwagen in einer Fahrzeugvermietung
+  abgelegt und alle Attribute der Fahrzeugvermietung ausgegeben werden
 
 ## Klassendiagramm
 
@@ -43,7 +43,7 @@ classDiagram
         GAS = Gas
         ELECTRO = Elektro
         -description: String #123;final#125;
-        Engine(description: String) String
+        Engine(description: String)
         +getDescription() String
     }
 
@@ -73,14 +73,26 @@ classDiagram
         +getVehicles() ArrayList~Vehicle~
         +addVehicle(vehicle: Vehicle) void
         +addAllVehicles(vehicles: Vehicle...) void
-        +transformAllTrucks() void
         +toString() String
     }
 ```
 
-## Hinweis zur Klasse _Rental_
+## Hinweise zur Klasse _Rental_
 
-Die Methode `void transformAllTrucks()` soll alle Lastwagen in Autobots
-verwandeln.
+- Der Konstruktor soll alle Attribute initialisieren
+- Die Methode `void addVehicle(vehicle: Vehicle)` soll der Fahrzeugvermietung
+  ein Fahrzeug hinzufügen
+- Die Methode `void addAllVehicles(vehicles: Vehicle...)` soll der
+  Fahrzeugvermietung mehrere Fahrzeug hinzufügen
 
-<Exercise pullRequest="43" branchSuffix="polymorphy/03" />
+## Konsolenausgabe
+
+```console
+Fahrzeugvermietung Müller
+Unsere Fahrzeuge:
+Porsche 911 (Elektro, 2 Sitzplätze)
+MAN TGX (Diesel, 20t)
+Opel Zafira Life (Diesel, 7 Sitzplätze)
+```
+
+<Exercise branchSuffix="polymorphism-02" />
