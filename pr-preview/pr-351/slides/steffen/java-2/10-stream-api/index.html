@@ -1,0 +1,215 @@
+<!doctype html><html lang=de dir=ltr data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.9.2"><title data-rh=true>Programmieren mit Java</title><meta data-rh=true property=og:title content="Programmieren mit Java"/><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://jappuccini.github.io/java-docs/pr-preview/pr-351/slides/steffen/java-2/10-stream-api /><meta data-rh=true property=og:locale content=de /><meta data-rh=true name=docusaurus_locale content=de /><meta data-rh=true name=docusaurus_tag content=default /><meta data-rh=true name=docsearch:language content=de /><meta data-rh=true name=docsearch:docusaurus_tag content=default /><link data-rh=true rel=icon href=/java-docs/pr-preview/pr-351/img/favicon.ico /><link data-rh=true rel=canonical href=https://jappuccini.github.io/java-docs/pr-preview/pr-351/slides/steffen/java-2/10-stream-api /><link data-rh=true rel=alternate href=https://jappuccini.github.io/java-docs/pr-preview/pr-351/slides/steffen/java-2/10-stream-api hreflang=de /><link data-rh=true rel=alternate href=https://jappuccini.github.io/java-docs/pr-preview/pr-351/slides/steffen/java-2/10-stream-api hreflang=x-default /><link rel=stylesheet href=/java-docs/pr-preview/pr-351/assets/css/styles.c8d0d76a.css /><script src=/java-docs/pr-preview/pr-351/assets/js/runtime~main.2d1e8cbd.js defer></script><script src=/java-docs/pr-preview/pr-351/assets/js/main.546862cb.js defer></script></head><body class=navigation-with-keyboard><svg style="display: none;"><defs>
+<symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><div class="reveal reveal-viewport" style=width:100vw;height:100vh><div class=slides><section><section><h2>Agenda</h2><ul><li class=fragment>Intro Collections<li class=fragment>Java Stream API<li class=fragment>Quellen<li class=fragment>Intermediate Operations<li class=fragment>Terminal Operations</ul></section></section><section><section><h2>Intro Collections</h2></section><section><h2>Collection</h2><ul><li class=fragment>ArrayList&lt;Student><li class=fragment>ArrayList&lt;Car><li class=fragment>ArrayList&lt;Animal></ul><p class=fragment>Collections bieten einen direkten Zugriff auf die Elemente um Sie zu verwalten.</section><section><h2>Collection II</h2><ul><li>Daten abfragen → Name des ältesten Studenten<li>Daten ändern → Preis eines Produkts erhöhen</ul></section><section><h2>Was ist ein Java Stream?</h2><p class=fragment>Eine Sequenz (Abfolge) von Elementen, die funktionale Operationen (Funktionale Interfaces) unterstützt, um Daten zu verarbeiten, transformieren und aggregieren</section><section><h2>Streams vs Collection</h2><ul><li class=fragment>Streams manipulieren keine Daten (immutable)<li class=fragment>Streams verarbeiten Daten nach Bedarf (lazy)<li class=fragment>Streams verarbeiten Daten parallel</ul></section><section><h2><a href=https://github.com/jappuccini/java-demos/tree/steffen/java2/streamapi/intro target=_blank rel="noopener noreferrer">Demo - Intro Stream API</a></h2><ul><li class=fragment>Anzahl Studenten<li class=fragment>& Älter als 24<li class=fragment>& Vorname mindestens 4 Zeichen<li class=fragment>& Fullname mehr als 10 Zeichen<li class=fragment>gleiches als Stream</ul></section></section><section><section><h2>Java Stream API</h2></section><section><h2>Was is eine Stream Pipeline</h2><pre><code data-line-numbers=5-9|5|6-8|9 class=java>public class Main {
+  public static void main(String[] args) {
+    ArrayList&lt;String> names = new ArrayList&lt;>();
+    
+    names.stream() // source
+      .filter(name -> name.length > 4) //inter-
+      .map(name -> name.toUpperCase()) //mediate
+      .limit(12)                      //operations
+      .forEach(System.out::println); // terminal operation
+  }
+}
+</code></pre></section><section><h4>Charakteristika einer Stream Pipeline</h4><ul><li class=fragment>Intermediate Operations sind optional<li class=fragment>Terminal Operation ist erforderlich<li class=fragment>Terminal Operation führt die Pipeline aus<li class=fragment>Pipeline kann nur einmal genutzt werden</ul></section><section><h2><a href=https://github.com/jappuccini/java-demos/tree/steffen/java2/streamapi/pipeline target=_blank rel="noopener noreferrer">Demo - Stream API</a></h2><ul><li class=fragment>Intermediate Optional<li class=fragment>Terminal erforderlich, sonst passiert nichts<li class=fragment>Pipeline nur einmal Nutzbar<li class=fragment>Intermediate Reihenfolge</ul></section><section><h2>Aufbau einer Pipeline</h2><ul><li class=fragment>Quelle<li class=fragment>Intermediate Operations<li class=fragment>Terminal Operations</ul></section></section><section><section><h2>Quellen</h2></section><section><h2>Erzeugen von Quellen I</h2><pre class=fragment><code class=java>public class Main {
+  public static void main(String[] args) {
+    // Collection.stream(); // interface
+    // → Klassen die Collection implementieren:
+    ArrayList&lt;Student> students = new ArrayList&lt;>();
+    students.stream();
+    
+    HashMap&lt;String, Student> map = new HashMap&lt;>();
+    map.keySet().stream();
+    map.entrySet().stream();
+    map.values().stream();
+  }
+}
+</code></pre></section><section><h2>Erzeugen von Quellen II</h2><pre class=fragment><code class=java>public class Main {
+  public static void main(String[] args) {
+    // Array in ein Stream konvertieren:
+    // Arrays.stream(T[])
+    Stream&lt;Integer> num1 = Arrays.stream({ 1, 2, 3, 4 });
+    
+    int[] numArray = { 1, 2, 3, 4 };
+    Stream&lt;Integer> num2 = Arrays.stream(numArray);
+  }
+}
+</code></pre></section><section><h2>Erzeugen von Quellen III</h2><pre class=fragment><code class=java>public class Main {
+  public static void main(String[] args) {
+    // Gleichartige Werte in ein Stream kovertieren:
+    // Stream.of(T...);
+    Stream&lt;Integer> num1 = Stream.of(1, 2, 3, 4);
+  }
+}
+</code></pre></section></section><section><section><h2>Intermediate Operations</h2></section><section><h2>Intermediate Operations</h2><p>sind Methoden eines Streams, die als Rückgabewert einen Stream zurückgeben.</p><a href=https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/stream/Stream.html target=_blank rel="noopener noreferrer">Stream Klasse</a></section><section><h2>filter - Methode</h2><pre class=fragment><code class=java>Stream&lt;T> filter(Predicate&lt;? super T> predicate)</code></pre><p class=fragment>Der Parameter predicate muss das<!-- --> <a href=https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/function/Predicate.html target=_blank rel="noopener noreferrer">Predicate Interface</a> <!-- -->implementieren.</section><section><h2>filter - Verwendung</h2><pre class=fragment><code class=java>public class Main {
+  public static void main(String[] args) {
+    Stream.of(1, 2, 3, 4)
+      .filter(number -> number > 3);
+      // nur 4 bleibt übrig
+  }
+}
+</code></pre></section><section><h2>map - Methode</h2><pre class=fragment><code class=java>&lt;R> Stream&lt;R> map(Function&lt;? super T,? extends R> mapper)</code></pre><p class=fragment>Der Parameter mapper muss das<!-- --> <a href=https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/function/Function.html target=_blank rel="noopener noreferrer">Function Interface</a> <!-- -->implementieren.<p class=fragment>Die Eingabe vom Typ T definiert der vorherige Stream. Der Rückgabetyp des mapper Parameters definiert den Rückgabetyp des Streams.</section><section><h2>map - Verwendung</h2><pre><code class=java>public class Main {
+  public static void main(String[] args) {
+    Stream.of(1, 2, 3, 4)
+      .map(number -> number * 2);
+    // Rückgabetyp: Stream&lt;Integer>
+    Stream.of(1, 2, 3, 4)
+      .map(number -> String.valueOf(number));
+    // Rückgabetyp: Stream&lt;String>
+  }
+}
+</code></pre></section><section><h2>limit - Methode</h2><pre class=fragment><code class=java>Stream&lt;T> limit(long maxSize)</code></pre><p class=fragment>Es werden maximal "maxSize" Elemente des vorherigen Streams weitergegeben.</section><section><h2>limit - Verwendung</h2><pre><code class=java>public class Main {
+  public static void main(String[] args) {
+    Stream.of(1, 2, 3, 4)
+      .limit(2);
+      // nur 1 & 2 werden weitergegeben
+  }
+}
+</code></pre></section><section><h2>skip - Methode</h2><pre class=fragment><code class=java>Stream&lt;T> skip(long n)</code></pre><p class=fragment>Es werden n-Elemente übersprungen.</section><section><h2>skip - Verwendung</h2><pre><code class=java>public class Main {
+  public static void main(String[] args) {
+    Stream.of(1, 2, 3, 4)
+      .skip(2);
+      // nur 3 & 4 werden weitergegeben
+  }
+}
+</code></pre></section><section><h2>sorted - Methode</h2><pre class=fragment><code class=java>Stream&lt;T> sorted(Comparator&lt;? super T> comparator)</code></pre><p class=fragment>Der Parameter comparator muss das<!-- --> <a href=https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Comparator.html target=_blank rel="noopener noreferrer">Comparator Interface</a> <!-- -->implementieren.</section><section><h2>sorted - Verwendung</h2><pre><code class=java>public class Main {
+  public static void main(String[] args) {
+    Stream.of(4, 3, 2, 1)
+      .sorted((n1, n2) -> Integer.compare(n1, n2));
+      // 1, 2, 3, 4
+      // Sagt Bye Bye zu Collections.sort()
+  }
+}
+</code></pre></section><section><h2>distinct - Methode</h2><pre class=fragment><code class=java>Stream&lt;T> distinct()</code></pre><p class=fragment>Es werden nur einzigartige Werte im Stream beibehalten. Diese werden Mithilfe von .equals identifiziert.</section><section><h2>distinct - Verwendung</h2><pre><code class=java>public class Main {
+  public static void main(String[] args) {
+    Stream.of(1, 2, 1, 4)
+      .distinct();
+      // nur 1, 2 & 4 werden weitergegeben
+  }
+}
+</code></pre></section><section><h2>Von Stream zu Stream</h2><p>Intermediate Operations werden auf einem Stream aufgerufen und geben immer einen Stream zurück.</section><section><h2><a href=https://github.com/jappuccini/java-demos/tree/steffen/java2/streamapi/review target=_blank rel="noopener noreferrer">Demo - Lambda Funktionen Auslagern</a></h2><ul><li class=fragment>Review von Stream Api Examples<li class=fragment>Attribut: minimumFirstName<li class=fragment>Attribut: olderThan24Years<li class=fragment>Attribut: toFullName<li class=fragment>Methode: olderThanYears<li class=fragment>Methode: fullNameIsLongerThan</ul></section></section><section><section><h2>Terminal Operations</h2></section><section><h2>Terminal Operations</h2><ul><li class=fragment>Matching und Suchen<li class=fragment>Transformationen<li class=fragment>Statistik<li class=fragment>Verarbeitung</ul></section><section><h2>Matching</h2><p>Mit Matching kann abgefragt werden ob bestimmte Elemente einer Bedingung entsprechen.</section><section><h2>Matching - Methoden</h2><pre><code class=java>boolean  allMatch(Predicate&lt;T> predicate) // alle
+boolean noneMatch(Predicate&lt;T> predicate) // keiner
+boolean  anyMatch(Predicate&lt;T> predicate) // mindestens einer
+</code></pre></section><section><h2>Matching - Verwendung</h2><pre><code class=java>public class Main {
+  public static void main(String[] args) {
+    Stream.of(1, 2, 3, 4)
+      .allMatch(number -> number > 3); // false
+    
+    Stream.of(1, 2, 3, 4)
+      .noneMatch(number -> number > 4); // true
+    
+    Stream.of(1, 2, 3, 4)
+      .anyMatch(number -> number > 2); // true
+  }
+}
+</code></pre></section><section><h2>Suchen</h2><p>Mit findAny und findFirst wird das erste Element in einem Stream zurückgegeben.</section><section><h2>Suchen - Methoden</h2><pre><code class=java>Optional&lt;T> findAny() // nicht deterministisch
+Optional&lt;T> findFirst() // deterministisch
+</code></pre><p>Hauptsächlich wichtig bei parallelen Streams</section><section><h2>Suchen - Verwendung</h2><pre><code class=java>public class Main {
+  public static void main(String[] args) {
+    Stream.of(1, 2, 3, 4)
+      .filter(number -> number > 1)
+      .findAny() // 2, 3 oder 4
+    
+    Stream.of(1, 2, 3, 4)
+      .filter(number -> number > 1)
+      .findFirst() // immer 2
+  }
+}
+</code></pre></section><section><h2>Transformationen</h2><p>Die Ergebnismenge wird gesammelt.</section><section><h2>Transformationen - Methoden</h2><pre><code class=java>List&lt;T> toList()
+T[] toArray()
+
+T reduce(T identity, BinaryOperator&lt;T> accumulator)
+
+R collect(Collector&lt;T,A,R> collector)
+</code></pre></section><section><h2>Transformationen - Verwendung I </h2><pre><code class=java>public class Main {
+  public static void main(String[] args) {
+    List&lt;Integer> nums = Stream.of(1, 2, 3, 4)
+      .filter(number -> number > 1)
+      .toList() // List&lt;Integer>
+    
+    Object[] nums2 = Stream.of(1, 2, 3, 4)
+      .filter(number -> number > 1)
+      .toArray() // Object[]
+  }
+}
+</code></pre></section><section><h2>Transformationen - Verwendung II </h2><pre><code class=java>public class Main {
+  public static void main(String[] args) {
+    Stream.of(1, 2, 3, 4)
+      .reduce(0, (a, b) -> a + b);  // int *NKR
+  }
+}
+</code></pre></section><section><h2>Transformationen - Verwendung III </h2><pre><code class=java>public class Main {
+  public static void main(String[] args) {
+    ArrayList&lt;Student> students = getManyStudents()
+      .stream()
+      .collect(Collectors.toList());
+      // Collectors.toMap ist Klausurrelevant
+      // Collectors.groupingBy ist Klausurrelevant
+  }
+}
+</code></pre></section><section><h2><a href=https://github.com/jappuccini/java-demos/tree/steffen/java2/streamapi/collectors target=_blank rel="noopener noreferrer">Demo - Collectors</a></h2><ul><li class=fragment><a href=https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/stream/Collectors.html target=_blank rel="noopener noreferrer">Collectors Klasse</a><li class=fragment>toMap<li class=fragment>groupingBy</ul></section><section><h2>Statistik</h2><p>Mit Statistik Operationen lassen sich Anzahl, Minimum, Maximum, Summe und Durchschnitt berechnen.</section><section><h2>Statistik - Methoden</h2><pre><code class=java>long count()
+
+Optional&lt;T> min(Comparator&lt;? super T> comparator)
+Optional&lt;T> max(Comparator&lt;? super T> comparator)
+</code></pre></section><section><h2>Statistik - Verwendung I</h2><pre><code class=java>public class Main {
+  public static void main(String[] args) {
+    Stream.of(1, 2, 3, 4)
+      .count(); // 4
+  }
+}
+</code></pre></section><section><h2>Statistik - Verwendung II</h2><pre><code class=java>public class Main {
+  public static void main(String[] args) {
+    Optional&lt;Integer> min = Stream.of(1, 2, 3, 4)
+      .min((n1, n2) -> Integer.compare(n1, n2));
+    
+    min.ifPresent(System.out::println); // 1
+  }
+}
+</code></pre></section><section><h2>Statistik - Verwendung III</h2><pre><code class=java>public class Main {
+  public static void main(String[] args) {
+    Optional&lt;Integer> max = Stream.of(1, 2, 3, 4)
+      .max((n1, n2) -> Integer.compare(n1, n2));
+    
+    max.ifPresent(System.out::println); // 4
+  }
+}
+</code></pre></section><section><h2>Statistik Streams Erzeugen</h2><p>Für die Methoden Durchschnitt und Summe werden spezifische Streams benötigt:<ul><li class=fragment>IntStream<li class=fragment>LongStream<li class=fragment>DoubleStream</ul></section><section><h2>Statistik Streams Erzeugen - Methoden</h2><p>Um einen Statistik Stream zu erzeugen gibt es Intermediate Operations<pre><code class=java>DoubleStream mapToDouble(ToDoubleFunction&lt;T> mapper)
+IntStream    mapToInt(ToIntFunction&lt;T> mapper)
+LongStream   mapToLong(ToLongFunction&lt;T> mapper)
+</code></pre></section><section><h2>Statistik Streams Erzeugen - Verwenden</h2><pre><code class=java>public class Main {
+  public static void main(String[] args) {
+    ArrayList&lt;Student> students = getManyStudents();
+    IntStream studentAges = students.stream()
+      .mapToInt(student -> student.age());
+  }
+}
+</code></pre></section><section><h2>Statistik Streams - Methoden</h2><pre><code class=java>long sum()
+                           
+OptionalDouble average()
+</code></pre></section><section><h2>Statistik Streams - Verwendung I</h2><pre><code class=java>public class Main {
+  public static void main(String[] args) {
+    IntStream manyNumbers = getManyNumbers();
+    long sum = manyNumbers.sum();
+  }
+}
+</code></pre></section><section><h2>Statistik - Verwendung II</h2><pre><code class=java>public class Main {
+  public static void main(String[] args) {
+    IntStream manyNumbers = getManyNumbers();
+    manyNumbers.average()
+      .ifPresent(System.out::println);
+  }
+}
+</code></pre></section><section><h2>Verarbeitung</h2><p>Mit forEach kann jedes einzelne Element nacheinander weiterverarbeitet werden.</section><section><h2>Verarbeitung - Methoden</h2><pre><code class=java>void forEach(Consumer&lt;T> consumer)
+</code></pre></section><section><h2>Verarbeitung - Verwendung</h2><pre><code class=java>public class Main {
+  public static void main(String[] args) {
+    Stream.of(1, 2, 3, 4)
+      .filter(number -> number > 1)
+      .forEach(System.out::println)
+ 
+    Stream.of(1, 2, 3, 4)
+      .filter(number -> number > 1)
+      .forEach(n -> System.out.println(n));
+  }
+}
+</code></pre></section></section><section><h2>Rest of the Day</h2><ul><li class=fragment><a href=/java-docs/pr-preview/pr-351/exercises/java-stream-api/>Stream API Aufgaben</a></ul></section></div></div></div></body>
