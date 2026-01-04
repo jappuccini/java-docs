@@ -1,0 +1,97 @@
+<!doctype html><html lang=de dir=ltr data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.9.2"><title data-rh=true>Programmieren mit Java</title><meta data-rh=true property=og:title content="Programmieren mit Java"/><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://jappuccini.github.io/java-docs/pr-preview/pr-352/slides/steffen/java-2/09-functional-programming /><meta data-rh=true property=og:locale content=de /><meta data-rh=true name=docusaurus_locale content=de /><meta data-rh=true name=docusaurus_tag content=default /><meta data-rh=true name=docsearch:language content=de /><meta data-rh=true name=docsearch:docusaurus_tag content=default /><link data-rh=true rel=icon href=/java-docs/pr-preview/pr-352/img/favicon.ico /><link data-rh=true rel=canonical href=https://jappuccini.github.io/java-docs/pr-preview/pr-352/slides/steffen/java-2/09-functional-programming /><link data-rh=true rel=alternate href=https://jappuccini.github.io/java-docs/pr-preview/pr-352/slides/steffen/java-2/09-functional-programming hreflang=de /><link data-rh=true rel=alternate href=https://jappuccini.github.io/java-docs/pr-preview/pr-352/slides/steffen/java-2/09-functional-programming hreflang=x-default /><link rel=stylesheet href=/java-docs/pr-preview/pr-352/assets/css/styles.f4b43588.css /><script src=/java-docs/pr-preview/pr-352/assets/js/runtime~main.b7586697.js defer></script><script src=/java-docs/pr-preview/pr-352/assets/js/main.20fb2d6c.js defer></script></head><body class=navigation-with-keyboard><svg style="display: none;"><defs>
+<symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><div class="reveal reveal-viewport" style=width:100vw;height:100vh><div class=slides><section><section><h2>Agenda</h2><ul><li class=fragment>Funktionale Programmierung<li class=fragment>Lambdafunktionen<li class=fragment>Allgemeine Funktionale Interfaces<li class=fragment>Methodenreferenzen</ul></section></section><section><section><h2>Funktionale Programmierung</h2></section><section><p>Funktionale Programmierung ist ein <b>Programmierparadigma</b>, bei dem Funktionen als Werte behandelt werden und auf Seiteneffekte verzichtet wird.</section><section><h2>Funktionen als Werte</h2>Funktionen...<ul><li class=fragment>sind Methoden<li class=fragment>können als Parameter definiert werden<li class=fragment>können als Argument definiert werden<li class=fragment>können als Variable definiert werden</ul></section><section><h2>Seiteneffekt</h2><p class=fragment>Ein Seiteneffekt beschreibt eine Zustandsänderung</section><section><h2>Beispiele Seiteneffekte</h2><pre class=fragment><code data-line-numbers=true class=java>public class Human {
+  private int age;
+  
+  public void setAge(age) {
+    this.age = age;
+    /*Seiteneffekt, da Wert außerhalb
+     der Funktion verändert wird */ 
+  }
+  public int getAge() {
+    return age;
+    /*Kein Seiteneffekt, da Wert nicht außerhalb
+     der Funktion verändert wird */ 
+  }
+}
+</code></pre></section><section><h2><a href=https://github.com/jappuccini/java-demos/tree/steffen/java2/functionalprogramming target=_blank rel="noopener noreferrer">Demo - Lambda Funktionen</a></h2><ul><li class=fragment>Age Comparator<li class=fragment><a href=/java-docs/pr-preview/pr-352/documentation/inner-classes>Anonyme Klasse*</a><li class=fragment>Anonyme Funktion</ul><p style=font-size:8px;position:absolute;bottom:0;right:0>*NKR</section></section><section><section><h2>Lambdafunktionen</h2></section><section><h2>Lambdafunktion</h2><p class=fragment>Eine Lambdafunktion ist eine Methode ohne Name, die wie eine Referenzvariable verwendet werden kann.<pre class=fragment><code data-line-numbers=4 class=java>public class Main {
+  public static void main(String[] args) {
+    Comparator&lt;Human> sortAge;
+    sortAge = (h1, h2) -> h1.age() > h2.age() ? 1 : -1;
+  }
+}
+</code></pre><span class="fragment foot-note">Lambdafunktionen werden auch anonyme Funktion, anonymous function oder arrow function genannt.</span></section><section><h2>Typisierung</h2><p class=fragment>Ein funkionales Interface wird für die Typisierung einer Lambdafunktion verwendet.<pre class=fragment><code data-line-numbers=3 class=java>public class Main {
+  public static void main(String[] args) {
+    Comparator&lt;Human> sortAge;
+    sortAge = (h1, h2) -> h1.age() > h2.age() ? 1 : -1;
+  }
+}
+</code></pre><p class="fragment foot-note">Ein funktionales Interface ist ein Interface mit genau einer abstrakten Methode und einer speziellen Annotation.</section><section><h2>Funktionales Interface</h2><p class=fragment>Funktionale Interfaces werden mit @FunctionalInterface markiert, z.B.<!-- --> <a href=https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Comparator.html target=_blank rel="noopener noreferrer">Comparator</a><pre class=fragment><code class=java>@FunctionalInterface
+public interface Comparator&lt;T> {
+  public int compare(T o1, T o2);
+}
+</code></pre><p class="fragment foot-note">Nicht jedes Interface mit einer einzigen abstrakten Methode ist funktional, z.B.<!-- --> <a href=https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html target=_blank rel="noopener noreferrer">Comparable</a></section><section><h2>Syntax Lambdafunktion</h2><ul><li class=fragment>Kein Parameter<li class=fragment>Ein Parameter<li class=fragment>Mehrere Parameter<li class=fragment>Eine Anweisung<li class=fragment>Mehrere Anweisungen<li class=fragment>Return Anweisung</ul></section><section><h2>Kein Parameter</h2><p class=fragment>Hat das funktionale Interface keinen Parameter, werden runde Klammern benötigt.<pre class=fragment><code class=java>public interface NoParamFunction {
+ public void do();
+}
+</code></pre><pre class=fragment><code class=java>NoParamFunction function = () -> {
+  System.out.println("Kein Parameter");
+};
+</code></pre></section><section><h2>Ein Parameter</h2><p class=fragment>Hat das funktionale Interface einen Parameter, werden keine runden Klammern benötigt.<pre class=fragment><code class=java>public interface OneParamFunction {
+ public void do(String one);
+}
+</code></pre><pre class=fragment><code class=java>OneParamFunction function = one -> {
+  System.out.println("Ein Parameter: " + one);
+};
+</code></pre></section><section><h2>Mehrere Parameter</h2><p class=fragment>Hat das funktionale Interface mehrere Parameter, werden runden Klammern benötigt.<pre class=fragment><code class=java>public interface MultiParamFunction {
+ public void do(String one, String two);
+}
+</code></pre><pre class=fragment><code class=java>MultiParamFunction function = (one, two) -> {
+  System.out.println("Zwei Parameter: " + one + two);
+};
+</code></pre></section><section><h2>Eine Anweisung</h2><p class=fragment>Besteht die Lambdafunktion aus einer Anweisung sind keine geschweifte Klammern notwendig.<pre class=fragment><code class=java>MultiParamFunction function = (one, two) -> 
+  System.out.println("Zwei Parameter: " + one + two);
+</code></pre></section><section><h2>Mehrere Anweisungen</h2><p class=fragment>Besteht die Lambdafunktion aus mehrern Anweisungen sind geschweifte Klammern notwendig.<pre class=fragment><code class=java>MultiParamFunction function = (one, two) -> {
+  System.out.println("Parameter Eins: " + one);
+  System.out.println("Parameter Zwei: " + two);
+};
+</code></pre></section><section><h2>return-Anweisung</h2><p class=fragment>Besteht die Lambdafunktion aus einer einzelnen return Anweisung, sind keine geschweifte Klammern notwendig und das return Statement kann weggelassen werden.<pre class=fragment><code class=java>public interface OneParamReturnFunction {
+ public boolean validate(Human human);
+}
+</code></pre><pre class=fragment><code class=java>OneParamReturnFunction function = h -> h.age() > 10;
+</code></pre></section><section><h2><a href=https://github.com/jappuccini/java-demos/tree/steffen/java2/functionalinterfaces/owninterfaces target=_blank rel="noopener noreferrer">Demo - Eigene Funktionale Interfaces</a></h2><ul><li class=fragment>Intro Shopping List Example<li class=fragment>Problem 1<li class=fragment>Problem 2</ul></section></section><section><section><h2>Allgemeine Funktionale Interfaces</h2></section><section><h2>Grundkategorien von Funktionalen Interfaces</h2><ul><li class=fragment>Consumer<li class=fragment>Function<li class=fragment>Predicate<li class=fragment>Supplier</ul></section><section><h2>Consumer</h2><pre class=fragment><code class=java>public interface Consumer&lt;T> {
+  public void accept(T t);
+}
+</code></pre><pre class=fragment><code class=java>public interface BiConsumer&lt;T, U> {
+  public void accept(T t, U u);
+}
+</code></pre><p class=fragment>Code ausführen ohne Daten weiterzugeben.</section><section><h2>Function</h2><pre class=fragment><code class=java>public interface Function&lt;T, R> {
+  public R apply(T t);
+}
+</code></pre><pre class=fragment><code class=java>public interface BiFunction&lt;T, U, R> {
+  public R apply(T t, U u);
+}
+</code></pre><pre class=fragment><code class=java>public interface UnaryOperator&lt;T> {
+  public T apply(T t);
+}
+</code></pre><pre class=fragment><code class=java>public interface BinaryOperator&lt;T> {
+  public T apply(T t1, T t2);
+}
+</code></pre><p class=fragment>Code ausführen, der Daten zurückgibt.</section><section><h2>Predicate</h2><pre class=fragment><code class=java>public interface Predicate&lt;T> {
+  public boolean test(T t);
+}
+</code></pre><p class=fragment>Code ausführen, der true oder false zurückgibt.</section><section><h2>Supplier*</h2><pre class=fragment><code class=java>public interface Supplier&lt;T> {
+  public T get();
+}
+</code></pre><p class=fragment>Code ausführen, der Daten vom Typ T zurückgibt.<div class=fragment><p style=font-size:8px;position:absolute;bottom:0;right:0>*NKR</div></section><section><h2><a href=https://github.com/jappuccini/java-demos/tree/steffen/java2/functionalinterfaces/knowninterfaces target=_blank rel="noopener noreferrer">Demo - Allgemeine Funktionale Interfaces</a></h2><ul><li class=fragment>Consumer anstatt ProductsChangedConsumer<li class=fragment>Predicate anstatt AddAllowedChecker</ul></section></section><section><section><h2>Methodenreferenzen</h2></section><section><h2>Warum Methodenreferenzen?</h2><p class=fragment>Mit Methodenreferenzen kann man noch weniger Code schreiben.<p class=fragment>Hat ein Parameter die gleiche Signatur, wie eine statische Methode, kann diese Methode als Methodenreferenz übergeben werden.</section><section><h2>Beispiel ArrayList -<!-- --> <a href=https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/ArrayList.html#forEach(java.util.function.Consumer) target=_blank rel="noopener noreferrer">For Each</a></h2><pre><code class=java>public class Main {
+  public static void main(String[] args) {
+    ArrayList&lt;String> names = new ArrayList&lt;>()
+    
+    // lambda funktion
+    names.forEach((name) -> System.out.println(name));
+    
+    // methodenreferenz
+    names.forEach(System.out::println);
+ }
+}
+</code></pre></section><section><h2>Verwenden von Methodenreferenzen?</h2><p class=fragment>Anstatt die Methode über einen Punkt aufzurufen, wird ein zweifacher Doppelpunkt verwendet.<p class=fragment>Mit dem "new" nach dem zweifachen Doppelpunkt kann auch der Konstruktor einer Klasse referenziert werden.<p style=font-size:8px;position:absolute;bottom:0;right:0>*NKR</section><section><h2><a href=https://github.com/jappuccini/java-demos/tree/steffen/java2/functionalinterfaces/methodreferences target=_blank rel="noopener noreferrer">Demo - Methodenreferenzen</a></h2><ul><li class=fragment>Methodensignatur System.out.println<li class=fragment>OneTimePrinter</ul></section></section><section><h2>Rest of the Day</h2><ul><li class=fragment><a href=/java-docs/pr-preview/pr-352/exercises/lambdas/>Lambdas</a></ul><p class="fragment font-medium">Bei Lambdas 01 kann die Teilaufgabe mit anonymer Klasse ignoriert werden.</section></div></div></div></body>
