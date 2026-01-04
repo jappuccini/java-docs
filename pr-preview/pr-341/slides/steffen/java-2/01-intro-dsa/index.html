@@ -1,0 +1,64 @@
+<!doctype html><html lang=de dir=ltr data-has-hydrated=false><head><meta charset=UTF-8><meta name=generator content="Docusaurus v3.9.2"><title data-rh=true>Programmieren mit Java</title><meta data-rh=true property=og:title content="Programmieren mit Java"/><meta data-rh=true name=viewport content="width=device-width, initial-scale=1.0"/><meta data-rh=true name=twitter:card content=summary_large_image /><meta data-rh=true property=og:url content=https://jappuccini.github.io/java-docs/pr-preview/pr-341/slides/steffen/java-2/01-intro-dsa /><meta data-rh=true property=og:locale content=de /><meta data-rh=true name=docusaurus_locale content=de /><meta data-rh=true name=docusaurus_tag content=default /><meta data-rh=true name=docsearch:language content=de /><meta data-rh=true name=docsearch:docusaurus_tag content=default /><link data-rh=true rel=icon href=/java-docs/pr-preview/pr-341/img/favicon.ico /><link data-rh=true rel=canonical href=https://jappuccini.github.io/java-docs/pr-preview/pr-341/slides/steffen/java-2/01-intro-dsa /><link data-rh=true rel=alternate href=https://jappuccini.github.io/java-docs/pr-preview/pr-341/slides/steffen/java-2/01-intro-dsa hreflang=de /><link data-rh=true rel=alternate href=https://jappuccini.github.io/java-docs/pr-preview/pr-341/slides/steffen/java-2/01-intro-dsa hreflang=x-default /><link rel=stylesheet href=/java-docs/pr-preview/pr-341/assets/css/styles.d7414368.css /><script src=/java-docs/pr-preview/pr-341/assets/js/runtime~main.18181520.js defer></script><script src=/java-docs/pr-preview/pr-341/assets/js/main.32ce282e.js defer></script></head><body class=navigation-with-keyboard><svg style="display: none;"><defs>
+<symbol id=theme-svg-external-link viewBox="0 0 24 24"><path fill=currentColor d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{for(var[t,e]of new URLSearchParams(window.location.search).entries())if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id=__docusaurus><div class="reveal reveal-viewport" style=width:100vw;height:100vh><div class=slides><section><section><h2>Agenda</h2><ul><li class=fragment>Intro<li class=fragment>Problemfelder<li class=fragment>Erwartungen an DSA<li class=fragment>Landau-Notation<li class=fragment>Fallbeispiel Problem</ul></section></section><section><section><h2>Intro</h2></section><section><h2>Was ist ein Algorithmus?</h2><p class=fragment>systematische Vorgehensweise zur Lösung eines Problems</section><section><h2>Charakteristika</h2><ul><li tabindex=0 data-tooltip="Das Verfahren muss in einem endlichen Text eindeutig beschreibbar sein.">Finitheit<li tabindex=0 data-tooltip="Jeder Schritt des Verfahrens muss tatsächlich ausführbar sein.">Ausführbarkeit<li tabindex=0 data-tooltip="Das Verfahren darf zu jedem Zeitpunkt nur endlich viel Speicherplatz benötigen. (Space Complexity)">Dynamische Finitheit<li tabindex=0 data-tooltip="Das Verfahren darf nur endlich viele Schritte benötigen. (Time Complexity)">Terminierung<li tabindex=0 data-tooltip="Der Algorithmus muss bei denselben Voraussetzungen das gleiche Ergebnis liefern.">Determiniertheit<li tabindex=0 data-tooltip="Die nächste anzuwendende Regel im Verfahren ist zu jedem Zeitpunkt eindeutig definiert.">Determinismus</ul></section><section><h2>Was ist eine Datenstruktur?</h2><p class=fragment>spezifische Anordung von Daten zur effizienten Verwaltung eines Problems</section><section><h2>Charakteristika</h2><ul><li tabindex=0 data-tooltip="Die Größe wird zu Beginn einmalig festgelegt.">statisch<li tabindex=0 data-tooltip="Die Größe ist veränderbar.">dynamisch</ul></section><section><h2>Kann man Datenstrukturen und Algorithmen trennen?</h2><p class=fragment>Nein nur die Kombination bringt etwas.<p class=fragment>Was bringt ein Array ohne (über)schreiben und lesen?<p class=fragment>Was bringt eine for-Schleife ohne Array?</section><section><h2>Unsere Definition von DSA</h2><p class=fragment>Ein Algorithmus (A) erzeugt, manipuliert und entfernt eine oder mehrere Datenstrukturen(DS) um ein spezifisches Problem effizient zu lösen.</section></section><section><section><h2>Problemfelder</h2></section><section><h2>Prozessprobleme</h2><ul><li class=fragment>Suche<li class=fragment>Sortierung<li class=fragment>Verarbeitung</ul></section><section><h2>Technische Probleme</h2><ul><li class=fragment>Zeitkomplexität<li class=fragment>Speicherkomplexität</ul></section><section><h2>Optimum</h2><p class=fragment>Das Optimum kann nur für ein Problemfeld für ein technisches Problem gefunden werden.<p class=fragment>Es existiert kein Allgemeiner Algorithmus, der jedes Problem in der kürzesten Zeit mit der geringsten Speichermenge löst.</section><section><h2><a href=https://github.com/jappuccini/java-demos/tree/steffen/java2/dsa/intro/examples target=_blank rel="noopener noreferrer">Demo - Performance von Suche und Verarbeitung</a></h2><ul><li class=fragment>Erstellen einer HashMap & ArrayList<li class=fragment>Suchen in einer HashMap & ArrayList<li class=fragment>Löschen in einer HashMap & ArrayList</ul></section></section><section><section><h2>Erwartungen an DSA</h2></section><section><h2>Inhalte</h2><ul><li class=fragment>Grundlegende Praktikable Datenstrukturen<li class=fragment>Worst Case Szenario<li class=fragment>keine Beweise<li data-tooltip=IMHO! tabindex=0 class=fragment>kaum Coding (von euch, da Projektbericht)<li class=fragment>Einstieg in das Themengebiet</ul></section></section><section><section><h2>Landaunotation</h2><p class=foot-note>wird auch Big-O Notation genannt</section><section><h2>Landaunotation (Big-O)</h2><p class=fragment>wird verwendet um Algorithmen in Bezug auf Speicher- und Zeitanforderungen zu kategorisieren.<p class=fragment>ist keine exakte Messung, sondern soll das Wachstum des Algorithmus generalisieren.</section><section><h2>Warum Big-O nutzen?</h2><p>Wenn wir wissen, welche Stärken und Schwächen ein Algorithmus hat, können wie den besten Algorithmus für unser Problem nutzen.<p class=foot-note>Ich benutz immer Big-O zum erklären</section><section><h2>Was ist Big-O?</h2><p>gibt an in welchem Verhältnis ein Algorithmus abhängig vom<!-- --> <b>input</b> in Bezug auf Laufzeit und Speicher wächst</section><section><h2>Beispiel für Big-O</h2><p>O(N)<ul><li class=fragment>10 Elemente entspricht 10 Zeiteinheiten<li class=fragment>20 Elemente entspricht 20 Zeiteinheiten</ul></section><section><h2>Beispiel für Big-O</h2><pre><code class=java>public class BigO {
+  // O(N)
+  public static void method(int[] n) {
+    int sum = 0;
+    for(int i = 0; i &lt; n.length; i++) {
+      sum += n[i];
+    }
+    return sum;
+  }
+}
+</code></pre><p class=fragment>Jahresgehalt eines Mitarbeiters</section><section data-background-size=contain data-background-image=/java-docs/pr-preview/pr-341/assets/images/big-o-complexity-4503eb9ed207279ffce06d4edeebcd51.png></section><section><h2>Beispiel für Big-O</h2><pre><code class=java>public class BigO {
+  // O(N²)
+  public static void method(int[] n) {
+    int sum = 0;
+    for(int i = 0; i &lt; n.length; i++) {
+      for(int j = 0; j &lt; n.length; j++) {
+        sum += n[j];
+      }
+    }
+    return sum;
+  }
+}
+</code></pre><p class=fragment>Jahresgehalt jedes Mitarbeiters einer Abteilung</section><section><h2>Beispiel für Big-O</h2><pre><code class=java>public class BigO {
+  // O(N³)
+  public static void method(int[] n) {
+    int sum = 0;
+    for(int i = 0; i &lt; n.length; i++) {
+      for(int j = 0; j &lt; n.length; j++) {
+        for(int k = 0; k &lt; n.length; k++) {
+          sum += n[k];
+        }
+      }
+    }
+    return sum;
+  }
+}
+</code></pre><p class=fragment>Jahresgehalt jedes Mitarbeiters jeder Abteilung</section><section><h2>Big-O von diesem Code?</h2><pre><code class=java>public class BigO {
+  public static void method(int[] n) {
+    int sum = 0;
+    for(int i = 0; i &lt; n.length; i++) {
+      sum += n[i];
+    }
+    for(int i = 0; i &lt; n.length; i++) {
+      sum += n[i];
+    }
+    return sum;
+  }
+}
+</code></pre><p class=fragment>praktisch: O(2N) → O(N)</section><section><h2>Warum O(N) anstatt O(2N)</h2><table><thead><tr><th>N<th>O(10N)<th>O(N²)<tbody><tr class=fragment><td>1<td>10<td>1<tr class=fragment><td>5<td>50<td>25<tr class=fragment><td>100<td>1000<td>10.000<tr class=fragment><td>1000<td>10.000<td>1.000.000<tr class=fragment><td>10.000<td>100.000<td>100.000.000</table><p class=fragment>Konstanten können ignoriert werden.</section><section><h2>Big-O von diesem Code?</h2><pre><code class=java>public class BigO {
+  public static void method(int[] n) {
+    int sum = 0;
+    for(int i = 0; i > n.length; i++) {
+      if(sum > 9876) {
+        return sum;
+      }
+      sum += n[i];
+    }
+    return sum;
+  }
+}
+</code></pre><p class=fragment>O(N) → Worst-Case-Szenario</section><section><h2>Unsere Regeln</h2><ul><li>Wachstum ist abhängig vom Input<li>Konstanten werden ignoriert<li>Worst-Case ist unser default</ul></section></section><section><h2>Fallbeispiel Problem</h2></section></div></div></div></body>
