@@ -15,14 +15,35 @@ Computer-Programme.
 
 ```mermaid
 flowchart LR
-   Analyse --> Entwurf --> Umsetzung --> Auslieferung --> Wartung --> Analyse
+   Analyse --> Entwurf --> Umsetzung --> Test --> Auslieferung --> Analyse
 ```
 
-:::note Hinweis
+:::info Hinweis
 
 Ein Algorithmus ist eine Handlungsvorschrift zur Lösung eines Problems.
 
 :::
+
+## Abstraktionsniveau
+
+Maschinen sind im Vergleich zu menschlichen Gehirnen sehr primitive Gebilde. Die
+Diskrepanz zwischen der menschlichen Denkweise und der Arbeitsweise von
+Maschinen bezeichnet mal als _Semantische Lücke_. Programmiersprachen
+ermöglichen es, Problemstellungen der realen Welt abstrahiert und
+maschinengerecht abzubilden und damit die Semantische Lücke zu verringern. Je
+höher die Abstraktion einer Programmiersprache dabei ist, desto mehr kann die
+Semantische Lücke verringert werden: Maschinenorientierte Programmiersprachen
+(z.B. X86-Assembler) abstrahieren kaum und sind daher für den Menschen schwerer
+verständlich, problemorientierte Programmiersprachen (z.B. Java) abstrahieren
+stark und sind daher für den Menschen leichter verständlich.
+
+|                  | Generation                     | Merkmale                                   | Sprachen                                    |
+| ---------------- | ------------------------------ | ------------------------------------------ | ------------------------------------------- |
+| Höhere Sprachen  | 5: Sprachen der KI             | Logik- und Regelbasiert                    | Lisp, Prolog                                |
+| Höhere Sprachen  | 4: Anwendungsbezogene Sprachen | Domänenspezifisch                          | SQL                                         |
+| Höhere Sprachen  | 3: Problemorientierte Sprachen | Datenobjekte, Routinen, Kontrollstrukturen | C, C++, C#, Java, JavaScript, Python        |
+| Niedere Sprachen | 2: Assemblersprachen           | Symbolische Befehle                        | X86-Assembler, MIPS-Asembler, ARM-Assembler |
+| Niedere Sprachen | 1: Maschinensprache            | Binärcode                                  | -                                           |
 
 ## Programmierparadigmen
 
@@ -41,7 +62,7 @@ beschreiben das Ergebnis selbst.
 | Programmierparadigmen            | Kategorie                  | Fokus                                                                                                                                                                                                                                                            | Beispielsprachen |
 | -------------------------------- | -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
 | Prozedurale Programmierung       | Imperative Programmierung  | Routinen werden in Prozeduren gekapselt. Es gibt eine klare Trennung zwischen Daten und Routinen. Routinen stellen dabei wiederverwendbaren Code dar, der aus verzweigten und sich wiederholenden Folgen von Anweisungen besteht, die den Programmablauf steuern | Pascal, C        |
-| Objektorientierte Programmierung | Imperative Programmierung  | Objekte verbinden sowohl Daten als auch Routinen. Zentrale Aspekte sind _[Datenkapselung](oo#datenkapselung)_, _[Abstraktion](oo#abstraktion)_, _[Vererbung](inheritance)_ und _[Polymorphie](polymorphy)_                                                       | C++, Java        |
+| Objektorientierte Programmierung | Imperative Programmierung  | Objekte verbinden sowohl Daten als auch Routinen. Zentrale Aspekte sind _[Datenkapselung](oo#datenkapselung)_, _[Abstraktion](oo#abstraktion)_, _[Vererbung](inheritance)_ und _[Polymorphie](polymorphism)_                                                     | C++, Java        |
 | Funktionale Programmierung       | Deklarative Programmierung | Berechnungen werden als die Auswertung mathematischer Funktionen betrachtet. Seiteneffekte (veränderliche Daten und Zustände) werden vermieden                                                                                                                   | Haskell, Lisp    |
 | Logische Programmierung          | Deklarative Programmierung | Fakten und Regeln werden zur logischen Deduktion verwendet. Es wird festgelegt, was bekannt ist, um daraus abzuleiten, was daraus folgt                                                                                                                          | Prolog           |
 
@@ -53,16 +74,11 @@ jeweiligen Betriebssystem ausgeführt werden kann, Interpretersprachen übersetz
 den Quellcode direkt in den Arbeitsspeicher und führen das Programm sofort aus
 und Just-In-Time Compilersprachen (JIT) übersetzen den Quellcode mit Hilfe eines
 Compilers zunächst in den sogenannten Bytecode und übersetzen diesen bei der
-Ausführung in den Arbeitsspeicher. Compilersprachen wie z.B. C++ sind dabei
+Ausführung in den Arbeitsspeicher. Compilersprachen wie C und C++ sind dabei
 deutlich performanter und ermöglichen eine sicherere Entwicklung,
-Interpretersprachen wie z.B. PHP sind dagegen plattformunabhängig und
-Just-In-Time Compliersprachen vereinen die Vorteile von beiden.
-
-:::note Hinweis
-
-In Java wird der Interpreter als _Java Virtual Machine_ bezeichnet.
-
-:::
+Interpretersprachen wie JavaScript und Python sind dagegen plattformunabhängig
+und Just-In-Time Compliersprachen wie C# und Java vereinen die Vorteile beider
+Welten.
 
 <Tabs>
   <TabItem value="a" label="Compilersprachen" default>
@@ -121,33 +137,8 @@ flowchart LR
   </TabItem>
 </Tabs>
 
-## Programmiersprachen
+:::info Hinweis
 
-Maschinen sind im Vergleich zu menschlichen Gehirnen sehr primitive Gebilde. Die
-Diskrepanz zwischen der menschlichen Denkweise und der Arbeitsweise von
-Maschinen bezeichnet mal als _Semantische Lücke_. Programmiersprachen
-ermöglichen es, Problemstellungen der realen Welt abstrahiert und
-maschinengerecht abzubilden und damit die Semantische Lücke zu verringern. Je
-höher die Abstraktion einer Programmiersprache dabei ist, desto mehr kann die
-Semantische Lücke verringert werden: Maschinenorientierte Programmiersprachen
-(wie z.B. Assembler) abstrahieren kaum und sind daher für den Menschen schwerer
-verständlich, problemorientierte Programmiersprachen (wie z.B. Java)
-abstrahieren stark und sind daher für den Menschen leichter verständlich.
-
-Die Programmiersprachen Java, Python und JavaScript gehören zu den am weitesten
-verbreiteten bzw. beliebtesten Programmiersprachen.
-
-| TIOBE  | RedMonk    | PYPL       |
-| ------ | ---------- | ---------- |
-| Python | JavaScript | Python     |
-| C      | Python     | Java       |
-| C++    | Java       | JavaScript |
-| Java   | PHP        | C/C++      |
-| C#     | C++        | C#         |
-
-:::note Quellen
-
-Tiobe Programming Community Index Januar 2024, RedMonk Programming Language
-Rankings Januar 2023, PopularitY of Programming Language Januar 2024
+In Java wird der Interpreter als _Java Virtual Machine_ bezeichnet.
 
 :::

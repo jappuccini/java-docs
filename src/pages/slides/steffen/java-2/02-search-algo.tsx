@@ -1,9 +1,10 @@
 import Link from '@docusaurus/Link';
 import InterpolationSearchFormula from '@site/static/img/interpolation-search-formula.svg';
+import React from 'react';
 import Slides from '../../../../components/Slides';
 import { defaultInitSlides } from '../../../../components/Slides/initSlides';
 
-export default function SearchAlgo(): JSX.Element {
+export default function SearchAlgo(): React.JSX.Element {
   return (
     <Slides initSlides={defaultInitSlides}>
       <section>

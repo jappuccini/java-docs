@@ -1,8 +1,9 @@
 import Link from '@docusaurus/Link';
+import React from 'react';
 import Slides from '../../../../components/Slides';
 import { defaultInitSlides } from '../../../../components/Slides/initSlides';
 
-export default function Trees(): JSX.Element {
+export default function Trees(): React.JSX.Element {
   return (
     <Slides initSlides={defaultInitSlides}>
       <section>

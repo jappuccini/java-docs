@@ -39,7 +39,7 @@ public class Computer {
 }
 ```
 
-:::note Hinweis
+:::info Hinweis
 
 Die Selbstreferenz `this` verweist innerhalb einer Klasse auf das eigene Objekt
 (siehe auch [Referenzen und Objekte](references-and-objects)).
@@ -107,7 +107,7 @@ public class Computer {
 }
 ```
 
-:::danger Hinweis
+:::info Hinweis
 
 Überladene Methoden können keine unterschiedlichen Rückgabewerte besitzen.
 
@@ -143,7 +143,7 @@ public class Computer {
 }
 ```
 
-:::note Hinweis
+:::info Hinweis
 
 Auch Konstruktoren können überladen werden, das heißt eine Klasse kann über
 mehrere Konstruktoren verfügen. Der Aufruf eines Konstruktors innerhalb eines
@@ -181,7 +181,7 @@ public class Computer {
 }
 ```
 
-:::note Hinweis
+:::info Hinweis
 
 "Normale" Attribute und Methoden werden auch als Instanzattribute bzw.
 Instanzmethoden bezeichnet, statische Attribute und Methoden auch

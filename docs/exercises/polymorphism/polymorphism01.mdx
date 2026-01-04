@@ -1,14 +1,16 @@
 ---
-title: Polymorphism02
+title: Polymorphism01
 description: ''
 ---
 
 import Exercise from '@site/src/components/Exercise';
 
-- Erstelle die Klasse `Rental` anhand des abgebildeten Klassendiagramms
-- Passe die ausführbare Klasse aus Übungsaufgabe [Polymorphism01](polymorphy01)
-  so an, dass alle erzeugten Autos und Lastwagen in einer Fahrzeugvermietung
-  abgelegt und alle Attribute der Fahrzeugvermietung ausgegeben werden
+- Passe die Klasse `Vehicle` aus Übungsaufgabe
+  [Enumerations01](../enumerations/enumerations01) anhand des abgebildeten
+  Klassendiagramms an und erstelle die Klassen `Car` und `Truck`
+- Passe die ausführbare Klasse aus Übungsaufgabe
+  [Enumerations01](../enumerations/enumerations01) so an, dass keine Fahrzeuge,
+  sondern Autos und Lastwagen erzeugt und ausgegeben werden
 
 ## Klassendiagramm
 
@@ -17,7 +19,6 @@ classDiagram
     Vehicle <|-- Car : extends
     Vehicle <|-- Truck : extends
     Engine --o Vehicle
-    Rental o-- Vehicle
 
     class Vehicle {
         -make: String #123;final#125;
@@ -64,35 +65,36 @@ classDiagram
         +transform() void
         +toString() String
     }
-
-    class Rental {
-        -name: String #123;final#125;
-        -vehicles: ArrayList~Vehicle~ #123;final#125;
-        +Rental(name: String)
-        +getName() String
-        +getVehicles() ArrayList~Vehicle~
-        +addVehicle(vehicle: Vehicle) void
-        +addAllVehicles(vehicles: Vehicle...) void
-        +toString() String
-    }
 ```
 
-## Hinweise zur Klasse _Rental_
+## Hinweise zur Klasse _Car_
 
 - Der Konstruktor soll alle Attribute initialisieren
-- Die Methode `void addVehicle(vehicle: Vehicle)` soll der Fahrzeugvermietung
-  ein Fahrzeug hinzufügen
-- Die Methode `void addAllVehicles(vehicles: Vehicle...)` soll der
-  Fahrzeugvermietung mehrere Fahrzeug hinzufügen
+- Die Methode `void doATurboBoost()` soll die Geschwindigkeit verdoppeln und die
+  Geschwindigkeit in der Konsole ausgeben.
+- Die Methode `String toString()` soll alle Attribute von Car ausgeben:
+  `Opel Zafira Life (Diesel, 7 Sitzplätze)`.
+
+## Hinweise zur Klasse _Truck_
+
+- Der Konstruktor soll alle Attribute initialisieren
+- Die Methode `void transform()` soll das Attribut isTransformed invertieren und
+  den aktuellen Status in der Konsole ausgeben.
+- Die Methode `String toString()` soll alle Attribute von Truck ausgeben:
+  `MAN TGX (Diesel, 20t)`.
 
 ## Konsolenausgabe
 
 ```console
-Fahrzeugvermietung Müller
-Unsere Fahrzeuge:
+Anzahl Fahrzeuge: 0
+Anzahl Fahrzeuge: 3
 Porsche 911 (Elektro, 2 Sitzplätze)
 MAN TGX (Diesel, 20t)
 Opel Zafira Life (Diesel, 7 Sitzplätze)
+Porsche 911 beschleunigt auf 50 km/h
+MAN TGX verwandelt sich in einen Autobot
+Porsche 911 macht einen TurboBoost und beschleunigt auf 100 km/h
+MAN TGX verwandelt sich in einen Lastwagen zurück
 ```
 
-<Exercise pullRequest="87" branchSuffix="polymorphy/02" />
+<Exercise branchSuffix="polymorphism-01" />

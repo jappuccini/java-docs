@@ -1,0 +1,148 @@
+---
+title: Binärzahlen
+description: ''
+sidebar_position: 25
+tags: [binary-numbers]
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+Informationen wie Zahlen und Zeichen werden im Computer in Form von sogenannten
+_Bits_ (Binary Digits) gespeichert. Ein Bit stellt dabei die kleinstmögliche
+Informationseinheit dar und kann zwei Zustände einnehmen: 0 und 1 (bzw. "an" und
+"aus", "wahr" und "falsch", "Strom fließt" und "Strom fließt nicht"). Zahlen,
+die mit Hilfe von Bits dargestellt werden, bezeichnet man als Binärzahlen, das
+dazugehörige Zahlensystem als Binärsystem. Zahlensysteme wie das Binärsystem
+oder das Dezimalsystem legen fest, wie Zahlen dargestellt werden. Anhand des
+Namens lässt sich dabei ableiten, wie viele Ziffern zur Darstellung einer Zahl
+zur Verfügung stehen. Um Unklarheiten zu vermeiden, können Zahlen um einen nach-
+und tiefgestellten Index ergänzt werden (2 = Binärsystem, 8 = Oktalsystem, 10 =
+Dezimalsystem, 16 = Hexadezimalsystem).
+
+<Tabs>
+  <TabItem value="a" label="Binärsystem" default>
+
+- Ziffern: 0, 1
+- Beispiel: 100101<sub>2</sub>
+
+| Stelle      | 8             | 7             | 6             | 5             | 4             | 3             | 2             | 1             |
+| ----------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| Potenz      | 2<sup>7</sup> | 2<sup>6</sup> | 2<sup>5</sup> | 2<sup>4</sup> | 2<sup>3</sup> | 2<sup>2</sup> | 2<sup>1</sup> | 2<sup>0</sup> |
+| Stellenwert | 128           | 64            | 32            | 16            | 8             | 4             | 2             | 1             |
+
+:::info Hinweis
+
+Das höchstwertige Bit wird als _Most Significant Bit_ (MSB), das niedrigstwertie
+Bit als _Least Significant Bit_ (LSB) bezeichnet.
+
+:::
+
+  </TabItem>
+  <TabItem value="b" label="Oktalsystem">
+
+- Ziffern: 0, 1, 2, 3, 4, 5, 6, 7
+- Beispiel: 751<sub>8</sub>
+
+| Stelle      | 8             | 7             | 6             | 5             | 4             | 3             | 2             | 1             |
+| ----------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| Potenz      | 8<sup>7</sup> | 8<sup>6</sup> | 8<sup>5</sup> | 8<sup>4</sup> | 8<sup>3</sup> | 8<sup>2</sup> | 8<sup>1</sup> | 8<sup>0</sup> |
+| Stellenwert | 2.097.152     | 262.144       | 32.768        | 4.096         | 512           | 64            | 8             | 1             |
+
+  </TabItem>
+  <TabItem value="c" label="Dezimalsystem">
+
+- Ziffern: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+- Beispiel: 2.060.128<sub>10</sub>
+
+| Stelle      | 8              | 7              | 6              | 5              | 4              | 3              | 2              | 1              |
+| ----------- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- |
+| Potenz      | 10<sup>7</sup> | 10<sup>6</sup> | 10<sup>5</sup> | 10<sup>4</sup> | 10<sup>3</sup> | 10<sup>2</sup> | 10<sup>1</sup> | 10<sup>0</sup> |
+| Stellenwert | 10.000.000     | 1.000.000      | 100.000        | 10.000         | 1.000          | 100            | 10             | 1              |
+
+:::info Hinweis
+
+Neben der Dezimaldarstellung (Beispiel: 2.060.128) können Dezimalzahlen auch in
+der Exponentialdarstellung (Beispiel: 2,060128\*10<sup>6</sup> bzw. 2,060128e6)
+dargestellt werden. Bei dieser Darstellung, die auch als wissenschaftliche
+Notation bezeichnet wird, werden Zahlen als Produkt aus Mantisse und einer
+10er-Potenz dargestellt.
+
+:::
+
+  </TabItem>
+  <TabItem value="d" label="Hexadezimalsystem">
+
+- Ziffern: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F
+- Beispiel: F4A83<sub>16</sub>
+
+| Stelle      | 8              | 7              | 6              | 5              | 4              | 3              | 2              | 1              |
+| ----------- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- |
+| Potenz      | 16<sup>7</sup> | 16<sup>6</sup> | 16<sup>5</sup> | 16<sup>4</sup> | 16<sup>3</sup> | 16<sup>2</sup> | 16<sup>1</sup> | 16<sup>0</sup> |
+| Stellenwert | 268.435.456    | 16.777.216     | 1.048.576      | 65.536         | 4.096          | 256            | 16             | 1              |
+
+  </TabItem>
+</Tabs>
+
+## Größeneinheiten
+
+Werden 8 Bits zu einer Einheit zusammengefasst, spricht man von einem _Byte_.
+Werden 1.024 Byte wiederum zusammengefasst, spricht man von einem Kilobyte (KB)
+bei 1.024 Kilobyte von einem Megabyte (MB) und so weiter.
+
+| Einheit  | Abkürzung | Größe in Byte     | Größe in Bit   |
+| -------- | --------- | ----------------- | -------------- |
+| Bit      | -         | 0                 | 1              |
+| Byte     | -         | 1                 | 8              |
+| Kilobyte | KB        | 1.024<sup>1</sup> | 2<sup>10</sup> |
+| Megabyte | MB        | 1.024<sup>2</sup> | 2<sup>20</sup> |
+| Gigabyte | GB        | 1.024<sup>3</sup> | 2<sup>30</sup> |
+| Terabyte | TB        | 1.024<sup>4</sup> | 2<sup>40</sup> |
+
+## Negative Binärzahlen
+
+Da Binärzahlen keine Vorzeichen kennen, wird zur Darstellung von negativen
+Binärzahlen ein Bit (in der Regel das MSB) als Vorzeichen genutzt, wobei die 0
+für eine positive Zahl, die 1 für eine negative Zahl steht. Verwendet man für
+die Darstellung negativer Binärzahlen lediglich das Vorzeichenbit ergeben sich
+allerdings Probleme wie eine doppelte Null sowie komplexe und ineffiziente
+Rechenoperationen. Auch beim Einerkomplement (auch b-1-Komplement), bei dem alle
+Bits der Binärzahl invertiert werden, bleiben diese Probleme (teils) bestehen.
+Daher wird zu Darstellung negativer Dezimalzahlen das sogenannte
+Zweierkomplement (auch b-Komplement) verwendet, bei welchem nach dem Invertieren
+noch eine 1 hinzuaddiert wird.
+
+Im Beispiel wird die Zahl -59<sub>10</sub> als negative Binärzahl dargestellt.
+
+|                        | 2<sup>7</sup> | 2<sup>6</sup> | 2<sup>5</sup> | 2<sup>4</sup> | 2<sup>3</sup> | 2<sup>2</sup> | 2<sup>1</sup> | 2<sup>0</sup> |
+| ---------------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| 59                     | 0             | 0             | 1             | 1             | 1             | 0             | 1             | 1             |
+| -59 (Vorzeichenbit)    | 1             | 0             | 1             | 1             | 1             | 0             | 1             | 1             |
+| -59 (Einerkomplement)  | 1             | 1             | 0             | 0             | 0             | 1             | 0             | 0             |
+| -59 (Zweierkomplement) | 1             | 1             | 0             | 0             | 0             | 1             | 0             | 1             |
+
+## Reelle Binärzahlen
+
+Die Darstellung reeller Binärzahlen erfolgt in Form von Gleitkommazahlen
+(Floating Point Numbers). Diese ist in der Norm IEEE754 festgelegt.
+
+|                      | Datentyp | Größe  | Vorzeichen | Exponent | Mantisse | Bias |
+| -------------------- | -------- | ------ | ---------- | -------- | -------- | ---- |
+| einfache Genauigkeit | `float`  | 32 Bit | 1 Bit      | 8 Bit    | 23 Bit   | 127  |
+| doppelte Genauigkeit | `double` | 64 Bit | 1 Bit      | 11 Bit   | 51 Bit   | 1023 |
+
+Gleitkommazahlen können dabei spezielle Werte annehmen:
+
+- Null: Werte, die zu klein sind, um dargestellt zu werden, werden als positive
+  oder negative Null dargestellt
+- Unendlich: Werte, die zu groß sind, um dargestellt zu werden, werden als
+  positives oder negatives Unendlich dargestellt
+- NaN (Not a Number): ungültige Werte (z.B. _Unendlich - Unendlich_) werden als
+  NaN dargestellt
+
+Im Beispiel wir die Zahl -156,39<sub>10</sub> als Gleitkommazahl dargestellt.
+
+|                      | Vorzeichen | Exponent    | Mantisse                                             |
+| -------------------- | ---------- | ----------- | ---------------------------------------------------- |
+| einfache Genauigkeit | 1          | 10000110    | 00111000110001111010111                              |
+| doppelte Genauigkeit | 1          | 10000000110 | 0011100011000111101011100001010001111010111000010100 |

@@ -1,0 +1,44 @@
+---
+title: BinaryNumbers02
+description: ''
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+1. Überführe die Dezimalzahl -482 ins Zweierkomplement
+2. Überführe die Binärzahl 101101 in eine nicht vorzeichenbehaftete Dezimalzahl
+3. Überführe die Binärzahl 101101 in eine vorzeichenbehaftete Dezimalzahl
+
+<Tabs>
+  <TabItem value="a" label="-" default>
+
+  </TabItem>
+  <TabItem value="b" label="1">
+
+|                  | 2<sup>9</sup> | 2<sup>8</sup> | 2<sup>7</sup> | 2<sup>6</sup> | 2<sup>5</sup> | 2<sup>4</sup> | 2<sup>3</sup> | 2<sup>2</sup> | 2<sup>1</sup> | 2<sup>0</sup> |                        |
+| ---------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ---------------------- |
+| 482<sub>10</sub> | 0             | 1             | 1             | 1             | 1             | 0             | 0             | 0             | 1             | 0             |                        |
+| Invertieren      | 1             | 0             | 0             | 0             | 0             | 1             | 1             | 1             | 0             | 1             |                        |
+| 1 Addieren       | 1             | 0             | 0             | 0             | 0             | 1             | 1             | 1             | 1             | 0             | 1000011110<sub>2</sub> |
+
+-482<sub>10</sub> = 1000011110<sub>2</sub>
+
+  </TabItem>
+  <TabItem value="c" label="2">
+
+101101<sub>2</sub> = 32 \* 1 + 8 \* 1 + 4 \* 1 + 1 \* 1 = 45<sub>10</sub>
+
+  </TabItem>
+  <TabItem value="d" label="3">
+
+|                    | 2<sup>5</sup> | 2<sup>4</sup> | 2<sup>3</sup> | 2<sup>2</sup> | 2<sup>1</sup> | 2<sup>0</sup> |                 |
+| ------------------ | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | --------------- |
+| 101101<sub>2</sub> | 1             | 0             | 1             | 1             | 0             | 1             |                 |
+| Invertieren        | 0             | 1             | 0             | 0             | 1             | 0             |                 |
+| 1 Addieren         | 0             | 1             | 0             | 0             | 1             | 1             | 19<sub>10</sub> |
+
+101101<sub>2</sub> = -19<sub>10</sub>
+
+  </TabItem>
+</Tabs>

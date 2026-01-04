@@ -1,0 +1,66 @@
+---
+title: BinaryNumbers01
+description: ''
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+1. Überführe die Dezimalzahl 84 in eine Binär-, eine Oktal- sowie eine
+   Hexadezimalzahl
+2. Überführe die Binärzahl 10111000001 in eine Dezimalzahl
+3. Überführe die Oktalzahl 666 in eine Dezimalzahl
+4. Überführe die Hexadezimalzahl F0A3C in eine Dezimalzahl
+
+<Tabs>
+  <TabItem value="a" label="-" default>
+
+  </TabItem>
+  <TabItem value="b" label="1">
+
+| Ganzzahlige Division | Quotient | Divisionsrest |
+| -------------------- | -------- | ------------- |
+| 84 : 2               | 42       | 0             |
+| 42 : 2               | 21       | 0             |
+| 21 : 2               | 10       | 1             |
+| 10 : 2               | 5        | 0             |
+| 5 : 2                | 2        | 1             |
+| 2 : 2                | 1        | 0             |
+| 1 : 2                | 0        | 1             |
+
+84<sub>10</sub> = 1010100<sub>2</sub>
+
+| Ganzzahlige Division | Quotient | Divisionsrest |
+| -------------------- | -------- | ------------- |
+| 84 : 8               | 10       | 4             |
+| 10 : 8               | 1        | 2             |
+| 1 : 8                | 0        | 1             |
+
+84<sub>10</sub> = 124<sub>8</sub>
+
+| Ganzzahlige Division | Quotient | Divisionsrest |
+| -------------------- | -------- | ------------- |
+| 84 : 16              | 5        | 4             |
+| 5 : 16               | 0        | 5             |
+
+84<sub>10</sub> = 54<sub>16</sub>
+
+  </TabItem>
+  <TabItem value="c" label="2">
+
+10111000001<sub>2</sub> = 1.024 \* 1 + 256 \* 1 + 128 \* 1 + 64 \* 1 + 1 \* 1 =
+1473<sub>10</sub>
+
+  </TabItem>
+  <TabItem value="d" label="3">
+
+666<sub>8</sub> = 64 \* 6 + 8 \* 6 + 1 \* 6 = 438<sub>10</sub>
+
+  </TabItem>
+  <TabItem value="e" label="4">
+
+F0A3C<sub>16</sub> = 65.536 \* 15 + 256 \* 10 + 16 \* 3 + 1 \* 12 =
+985.660<sub>10</sub>
+
+  </TabItem>
+</Tabs>

@@ -102,14 +102,14 @@ public class MainClass {
 }
 ```
 
-:::note Hinweis
+:::info Hinweis
 
 Die Typisierung kann entweder explizit oder implizit über den Diamantenoperator
 `<>` erfolgen.
 
 :::
 
-:::note Hinweis
+:::info Hinweis
 
 Typparameter können auf die Unterklassen einer bestimmten Klasse eingeschränkt
 werden. Dadurch kann in der generischen Klasse auf Attribute und Methoden der

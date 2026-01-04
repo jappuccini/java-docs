@@ -1,7 +1,7 @@
 ---
 title: Maven
 description: ''
-sidebar_position: 252
+sidebar_position: 20
 tags: [maven]
 ---
 
@@ -166,7 +166,7 @@ formattiert wird.
    ...
 ```
 
-:::danger Hinweis
+:::info Hinweis
 
 Aktuell kann Prettier nicht in Kombination mit Datenklassen (Records) verwendet
 werden.

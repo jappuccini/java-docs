@@ -29,7 +29,7 @@ Browser Netscape Navigator 2.0 ermöglichte. Weitere wichtige Meilensteine in de
 Geschichte von Java waren die Veröffentlichungen der Google-Entwicklungsumgebung
 Android 2008 sowie des Computerspiels Minecraft 2009.
 
-:::note Hinweis
+:::info Hinweis
 
 Java war der Name der beliebtesten Kaffeesorte der Entwickler.
 
