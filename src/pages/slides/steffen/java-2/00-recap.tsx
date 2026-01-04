@@ -1,7 +1,8 @@
+import React from 'react';
 import Slides from '../../../../components/Slides';
 import { defaultInitSlides } from '../../../../components/Slides/initSlides';
 
-export default function Recap(): JSX.Element {
+export default function Recap(): React.JSX.Element {
   return (
     <Slides initSlides={defaultInitSlides}>
       <section>
