@@ -40,9 +40,7 @@ const config: Config = {
           customCss: [
             require.resolve('./node_modules/reveal.js/dist/reveal.css'),
             require.resolve('./node_modules/reveal.js/dist/theme/black.css'),
-            require.resolve(
-              './node_modules/reveal.js/plugin/highlight/monokai.css',
-            ),
+            require.resolve('./node_modules/reveal.js/plugin/highlight/monokai.css'),
             require.resolve('./src/css/custom.css'),
           ],
         },
