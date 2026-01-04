@@ -41,6 +41,7 @@ export default function Intro(): React.JSX.Element {
           <h2>Techstack</h2>
           <p className="fragment">Angular + NgRx</p>
           <p className="fragment">NodeJS + NestJS</p>
+          <p className="fragment">Java + Vert.X</p>
         </section>
         <section data-background-iframe="https://giphy.com/embed/8dgmMbeCA8jeg"></section>
         <section>
@@ -79,7 +80,7 @@ export default function Intro(): React.JSX.Element {
             <li className="fragment">Hand heben</li>
             <li className="fragment">
               Anonym auf{' '}
-              <Link to="https://frag.jetzt/participant/room/jappuccini">
+              <Link to="https://frag.jetzt/participant/room/12501321">
                 Frag jetzt
               </Link>
             </li>
@@ -113,32 +114,22 @@ export default function Intro(): React.JSX.Element {
           </ul>
         </section>
         <section>
-          <h2>Für was die Laptops?</h2>
-          <ul>
-            <li className="fragment">Alles vorinstalliert für die Vorlesung</li>
-            <li className="fragment">Alles vorinstalliert für die Prüfungen</li>
-            <li className="fragment">Was macht ihr daheim?</li>
-          </ul>
-        </section>
-        <section>
           <h2>Empfehlung Neulinge</h2>
+          <p>Macht alles mit VS Code und Dev Containers</p>
           <ul>
             <li className="fragment">
-              Macht alles mit
-              <Link style={{ marginLeft: '0.5rem' }} to="https://gitpod.io">
-                GitPod
+              <Link to="https://code.visualstudio.com/">
+                VS Code installieren
               </Link>
             </li>
             <li className="fragment">
-              <Link style={{ marginRight: '0.5rem' }} to="https://github.com">
-                GitHub
-              </Link>
-              Account erstellen
+              <Link to="https://git-scm.com/">Git installieren</Link>
             </li>
             <li className="fragment">
-              Registrieren mit GitHub Account bei GitPod
+              <Link to="https://www.docker.com/products/docker-desktop/">
+                Docker installieren
+              </Link>
             </li>
-            <li className="fragment">Kostet nach 50 Stunden pro Monat</li>
           </ul>
         </section>
         <section>
@@ -149,9 +140,6 @@ export default function Intro(): React.JSX.Element {
             </li>
             <li className="fragment">Installiert JDK und JRE</li>
             <li className="fragment">Installiert und konfiguriert eure IDE</li>
-            <li className="fragment">
-              Entwickelt alles lokal an eurem Rechner
-            </li>
           </ul>
         </section>
         <section>
@@ -231,9 +219,7 @@ export default function Intro(): React.JSX.Element {
         </section>
         <section>
           <h2>Rest of the day</h2>
-          <p className="fragment">
-            Development Environment einrichten (GitPod oder lokal)
-          </p>
+          <p className="fragment">Development Environment einrichten</p>
           <p className="fragment">
             <Link to="/exercises/class-structure/class-structure01">
               Hello-World-Aufgabe machen

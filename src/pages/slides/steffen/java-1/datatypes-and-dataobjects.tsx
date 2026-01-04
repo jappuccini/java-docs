@@ -66,6 +66,34 @@ export default function DataTypesAndDataObjects(): React.JSX.Element {
           <h2>Einführung Git</h2>
         </section>
         <section>
+          <h2>git clone</h2>
+          <p>Kopieren eines Repositories</p>
+          <pre>
+            <code
+              className="bash"
+              dangerouslySetInnerHTML={{
+                __html:
+                  '# Syntax: git clone &lt;url&gt;\n' +
+                  'git clone https://github.com/jappuccini/java-exercises.git\n',
+              }}
+            ></code>
+          </pre>
+          <NKR />
+        </section>
+        <section>
+          <h2>git branch</h2>
+          <p>Name des aktuellen Branches anzeigen</p>
+          <pre>
+            <code
+              className="bash"
+              dangerouslySetInnerHTML={{
+                __html: 'git branch',
+              }}
+            ></code>
+          </pre>
+          <NKR />
+        </section>
+        <section>
           <h2>git switch</h2>
           <p>Wechseln zwischen Branches</p>
           <pre>
@@ -74,8 +102,8 @@ export default function DataTypesAndDataObjects(): React.JSX.Element {
               dangerouslySetInnerHTML={{
                 __html:
                   '# Syntax: git switch &lt;branchname&gt;\n' +
-                  'git switch exercises/class-structure/01\n' +
-                  'git switch solutions/class-structure/01\n',
+                  'git switch exe/class-structure-01\n' +
+                  'git switch sol/class-structure-01\n',
               }}
             ></code>
           </pre>
@@ -102,6 +130,15 @@ export default function DataTypesAndDataObjects(): React.JSX.Element {
         </section>
         <section>
           <h2>Demo Git stash</h2>
+        </section>
+        <section>
+          <h2>Vorgehensweise Aufgaben</h2>
+          <ul>
+            <li className="fragment">git switch EXERCISE</li>
+            <li className="fragment">Aufgabe bearbeiten</li>
+            <li className="fragment">git add .</li>
+            <li className="fragment">git stash</li>
+          </ul>
         </section>
       </section>
       <section>
