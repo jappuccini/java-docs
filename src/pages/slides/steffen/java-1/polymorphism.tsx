@@ -1,8 +1,9 @@
 import Link from '@docusaurus/Link';
+import React from 'react';
 import Slides from '../../../../components/Slides';
 import { defaultInitSlides } from '../../../../components/Slides/initSlides';
 
-export default function Polymorphy(): JSX.Element {
+export default function Polymorphism(): React.JSX.Element {
   return (
     <Slides initSlides={defaultInitSlides}>
       <section>
@@ -160,7 +161,7 @@ export default function Polymorphy(): JSX.Element {
           <h2>Rest of the day</h2>
           <ul>
             <li className="fragment">
-              <Link to="/exercises/polymorphy">Polymorphy 03 & 04</Link>
+              <Link to="/exercises/polymorphism">Polymorphism 03 & 04</Link>
             </li>
           </ul>
         </section>
