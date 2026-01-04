@@ -5,7 +5,7 @@ export default function Slides({
   initSlides,
   width = null,
   height = null,
-}): JSX.Element {
+}): React.JSX.Element {
   useEffect(() => {
     initSlides();
   });

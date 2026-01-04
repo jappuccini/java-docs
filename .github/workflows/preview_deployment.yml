@@ -25,11 +25,14 @@ jobs:
       - name: setup nodejs
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
 
       - name: install dependencies
         run: npm ci
+
+      - name: check formatting
+        run: npm run prettier:check
 
       - name: build website
         run: npm run build

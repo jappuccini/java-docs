@@ -1,32 +1,28 @@
-import React from 'react';
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 import Link from '@docusaurus/Link';
 import CodeBlock from '@theme/CodeBlock';
+import TabItem from '@theme/TabItem';
+import Tabs from '@theme/Tabs';
+import React from 'react';
 
-export default function Exercise({
-  pullRequest,
-  branchSuffix,
-}): React.JSX.Element {
+export default function Exercise({ branchSuffix }): React.JSX.Element {
   return (
     <Tabs>
       <TabItem value="exercise" label="Exercise" default>
         <CodeBlock language="console">
-          {`git switch exercises/${branchSuffix}`}
+          {`git switch exe/${branchSuffix}`}
         </CodeBlock>
       </TabItem>
       <TabItem value="solution" label="Solution">
         <CodeBlock language="console">
-          {`git switch solutions/${branchSuffix}`}
+          {`git switch sol/${branchSuffix}`}
         </CodeBlock>
       </TabItem>
-      <TabItem value="pullrequest" label="Pull Request">
-        Alle  Änderungen zwischen der Aufgabe und der Lösung findest du im Pull
-        Request{' '}
+      <TabItem value="pullrequest" label="Diff">
+        Alle  Änderungen zwischen der Aufgabe und der Lösung findest du{' '}
         <Link
-          to={`https://github.com/jappuccini/java-exercises/pull/${pullRequest}/files?diff=split`}
+          to={`https://github.com/jappuccini/java-exercises/compare/exe/${branchSuffix}...sol/${branchSuffix}?diff=split&w`}
         >
-          PR#{pullRequest}
+          hier
         </Link>
       </TabItem>
     </Tabs>

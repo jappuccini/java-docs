@@ -1,3 +1,5 @@
-export default function Tbd(): JSX.Element {
+import React from 'react';
+
+export default function Tbd(): React.JSX.Element {
   return <h1>Wird noch erstellt.</h1>;
 }
