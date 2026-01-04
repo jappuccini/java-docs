@@ -31,6 +31,9 @@ jobs:
       - name: install dependencies
         run: npm ci
 
+      - name: check formatting
+        run: npm run prettier:check
+
       - name: build website
         run: npm run build
         env:
