@@ -123,6 +123,16 @@ export default function Intro(): React.JSX.Element {
               </Link>
             </li>
             <li className="fragment">
+              <Link to="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers">
+                VS Code Plugin Dev Containers installieren
+              </Link>
+            </li>
+            <li className="fragment">
+              <Link to="https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack">
+                VS Code Plugin Java installieren
+              </Link>
+            </li>
+            <li className="fragment">
               <Link to="https://git-scm.com/">Git installieren</Link>
             </li>
             <li className="fragment">
@@ -138,7 +148,7 @@ export default function Intro(): React.JSX.Element {
             <li className="fragment">
               Installiert Git und checkt die Repos aus
             </li>
-            <li className="fragment">Installiert JDK und JRE</li>
+            <li className="fragment">Installiert JDK und JRE (21)</li>
             <li className="fragment">Installiert und konfiguriert eure IDE</li>
           </ul>
         </section>
