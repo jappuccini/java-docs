@@ -28,3 +28,5 @@ tags: []
 - 20.02.2026 [Exceptions](/slides/steffen/java-1/exceptions)
 - 27.02.2026 & 06.03.2026 Klausurvorbereitung
 - 10.03.2026 Klausur
+
+Links: [Frag jetzt](https://frag.jetzt/participant/room/12501321)

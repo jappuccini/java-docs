@@ -61,7 +61,7 @@ export default function MethodsAndOperators(): React.JSX.Element {
         <section>
           <h2>Aufbau einer Methode</h2>
           <ul>
-            <li className="fragment">Rückgabewert</li>
+            <li className="fragment">Rückgabetyp</li>
             <li className="fragment">Bezeichner</li>
             <li className="fragment">Parameter</li>
             <li className="fragment">Methodenrumpf</li>
@@ -290,6 +290,11 @@ export default function MethodsAndOperators(): React.JSX.Element {
             <li>
               <Link to="/exercises/data-objects/data-objects02">
                 DataObjects 02 (optional)
+              </Link>
+            </li>
+            <li>
+              <Link to="/exercises/data-objects/data-objects03">
+                DataObjects 03
               </Link>
             </li>
             <li>
