@@ -130,7 +130,7 @@ export default function MethodsAndOperators(): React.JSX.Element {
             </li>
             <li>
               <Link to="/exercises/arrays">
-                Felder (Arrays) (Alle) - Arrays 04 optional
+                Felder (Arrays) (Alle) - Arrays 04/06 optional
               </Link>
             </li>
           </ul>

@@ -22,12 +22,51 @@ export default function MethodsAndOperators(): React.JSX.Element {
           <h2>Wiederholung</h2>
         </section>
         <section>
+          <h2>Datentypen</h2>
+          <ul className="fragment">
+            <li>Wahrheitswerte (boolean)</li>
+            <li>Zeichen (char, String)</li>
+            <li>Ganzzahlen (byte, short, int, long)</li>
+            <li>Gleitkommazahlen (float, double)</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Datenobjekte</h2>
+          <ul>
+            <li className="fragment">
+              Platzhalter, um Werte zwischenzuspeichern
+            </li>
+            <li className="fragment">Datentyp Bezeichner = Wert;</li>
+            <pre className="fragment">
+              <code
+                className="java"
+                dangerouslySetInnerHTML={{
+                  __html: 'String myName = "Steffen";',
+                }}
+              ></code>
+            </pre>
+            <li className="fragment">auch Variable genannt</li>
+          </ul>
+        </section>
+        <section>
           <h2>Methoden</h2>
           <ul>
             <li className="fragment">Rückgabetyp (primitiv, komplex, void)</li>
             <li className="fragment">Bezeichner</li>
             <li className="fragment">Parameter</li>
             <li className="fragment">Methodenrumpf</li>
+            <pre className="fragment">
+              <code
+                className="java"
+                dangerouslySetInnerHTML={{
+                  __html:
+                    'public static int add(int a, int b) {\n' +
+                    '    return a + b;\n' +
+                    '}\n',
+                }}
+              ></code>
+            </pre>
+            <li className="fragment">Warum?</li>
           </ul>
         </section>
         <section>
@@ -262,7 +301,23 @@ export default function MethodsAndOperators(): React.JSX.Element {
             <li className="fragment">
               Mehrfachbehandlung deutlich lesbarer mit switch
             </li>
+            <li className="fragment">
+              Mehrfachbehandlung deutlich lesbarer mit switch
+            </li>
           </ul>
+        </section>
+        <section>
+          <h2>Switch Expression*</h2>
+          <ul>
+            <li className="fragment">Java spezifisch</li>
+            <li className="fragment">gibt immer Wert zurück</li>
+            <li className="fragment">
+              <Link to="https://docs.oracle.com/en/java/javase/21/language/switch-expressions-and-statements.html">
+                Dokumentation Switch Expression
+              </Link>
+            </li>
+          </ul>
+          <NKR />
         </section>
         <section>
           <h2>Ternary Operator*</h2>
