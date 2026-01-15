@@ -301,9 +301,6 @@ export default function MethodsAndOperators(): React.JSX.Element {
             <li className="fragment">
               Mehrfachbehandlung deutlich lesbarer mit switch
             </li>
-            <li className="fragment">
-              Mehrfachbehandlung deutlich lesbarer mit switch
-            </li>
           </ul>
         </section>
         <section>
