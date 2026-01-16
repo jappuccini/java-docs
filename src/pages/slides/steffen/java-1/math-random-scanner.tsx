@@ -129,7 +129,7 @@ export default function MethodsAndOperators(): React.JSX.Element {
               <Link to="/exercises/cases">Cases (Alle) - Cases 05 wichtig</Link>
             </li>
             <li>
-              <Link to="/exercises/loops">Loops (Alle)</Link>
+              <Link to="/exercises/loops">Loops (Alle) - (07/08 optional)</Link>
             </li>
             <li>
               <Link to="/exercises/arrays">
