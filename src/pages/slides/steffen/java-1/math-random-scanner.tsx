@@ -2,6 +2,7 @@ import Link from '@docusaurus/Link';
 import React from 'react';
 import Slides from '../../../../components/Slides';
 import { defaultInitSlides } from '../../../../components/Slides/initSlides';
+import { NKR } from '../../../../components/Slides/nkr';
 
 export default function MethodsAndOperators(): React.JSX.Element {
   return (
@@ -85,6 +86,7 @@ export default function MethodsAndOperators(): React.JSX.Element {
               }}
             ></code>
           </pre>
+          <NKR />
         </section>
         <section>
           <h2>Konsoleneingaben verarbeiten</h2>
@@ -105,6 +107,7 @@ export default function MethodsAndOperators(): React.JSX.Element {
               }}
             ></code>
           </pre>
+          <NKR />
         </section>
         <section
           data-background-image={
