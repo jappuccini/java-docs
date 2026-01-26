@@ -34,7 +34,7 @@
     "@docusaurus/tsconfig": "^3.9.2",
     "@docusaurus/types": "^3.9.2",
     "@types/react": "^19.2.8",
-    "prettier": "3.7.4",
+    "prettier": "3.8.1",
     "typescript": "~5.9.3"
   },
   "browserslist": {
