@@ -167,12 +167,11 @@ export default function KlassdiagramJavaAPIEnum(): React.JSX.Element {
           <ul>
             <li className="fragment">Welche Geschlechter?</li>
             <li className="fragment">Welche Attribute?</li>
+            <li className="fragment">Konstruktor? Manipulierbar?</li>
             <li className="fragment">
-              Wie kann immer das <b>eine</b> Geschlecht verwendet werden?
+              Wie kann eine <b>Instanz</b> wiederververwendet werden?
             </li>
-            <li className="fragment">
-              Wie keine weiteren Geschlechtinstanzen zulassen?
-            </li>
+            <li className="fragment">Wie keine weiteren Instanzen zulassen?</li>
             <li className="fragment">
               Wie die Manipulation existierender Geschlechtsinstanzen
               verhindern?
