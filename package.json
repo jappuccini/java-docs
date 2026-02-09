@@ -33,7 +33,7 @@
     "@docusaurus/module-type-aliases": "^3.9.2",
     "@docusaurus/tsconfig": "^3.9.2",
     "@docusaurus/types": "^3.9.2",
-    "@types/react": "^19.2.8",
+    "@types/react": "^19.2.13",
     "prettier": "3.8.1",
     "typescript": "~5.9.3"
   },
