@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkjava_docs=self.webpackChunkjava_docs||[]).push([["730"],{42632:function(e,c,n){n.r(c),n.d(c,{default:()=>a});var s=n(74848);function a(){return(0,s.jsx)("h1",{children:"Wird noch erstellt."})}n(96540)}}]);
