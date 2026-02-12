@@ -137,6 +137,9 @@ export default function Inheritance(): React.JSX.Element {
             <li className="fragment">
               muss als erste Methode im Konstruktor ausgeführt werden
             </li>
+            <li className="fragment">
+              kann verwendet werden um Methoden der geerbten Klasse aufzurufen
+            </li>
           </ul>
         </section>
         <section>
