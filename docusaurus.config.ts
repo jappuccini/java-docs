@@ -103,6 +103,36 @@ const config: Config = {
       additionalLanguages: ['java'],
     },
   } satisfies Preset.ThemeConfig,
+  plugins: [
+    [
+      '@docusaurus/plugin-pwa',
+      {
+        debug: true,
+        offlineModeActivationStrategies: [
+          'appInstalled',
+          'standalone',
+          'queryString',
+        ],
+        pwaHead: [
+          {
+            tagName: 'link',
+            rel: 'icon',
+            href: '/img/logo.png',
+          },
+          {
+            tagName: 'link',
+            rel: 'manifest',
+            href: '/manifest.json', // your PWA manifest
+          },
+          {
+            tagName: 'meta',
+            name: 'theme-color',
+            content: 'rgb(92, 70, 24)',
+          },
+        ],
+      },
+    ],
+  ],
 };
 
 export default config;
