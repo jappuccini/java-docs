@@ -21,7 +21,10 @@
       "description": "Show all exercises",
       "url": "/java-docs/production/exercises/coding/",
       "icons": [
-        { "src": "/java-docs/production/pwa/exercises_shortcut.png", "sizes": "192x192" }
+        {
+          "src": "/java-docs/production/pwa/exercises_shortcut.png",
+          "sizes": "192x192"
+        }
       ]
     }
   ],
