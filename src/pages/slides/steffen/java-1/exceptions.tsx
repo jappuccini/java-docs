@@ -2,6 +2,7 @@ import Link from '@docusaurus/Link';
 import React from 'react';
 import Slides from '../../../../components/Slides';
 import { defaultInitSlides } from '../../../../components/Slides/initSlides';
+import { NKR } from '@site/src/components/Slides/nkr';
 
 export default function Exceptions(): React.JSX.Element {
   return (
@@ -117,6 +118,16 @@ export default function Exceptions(): React.JSX.Element {
             <li className="fragment">catch &rarr; falls Error </li>
             <li className="fragment">finally &rarr; immer </li>
           </ul>
+        </section>
+        <section>
+          <h2>Unchecked Exceptions*</h2>
+          <ul>
+            <li className="fragment">extends Runtime Exception</li>
+            <li className="fragment">benötigt kein throws</li>
+            <li className="fragment">kein Compiler check</li>
+            <li className="fragment">Beispiel: ClassCastException</li>
+          </ul>
+          <NKR />
         </section>
       </section>
       <section>
