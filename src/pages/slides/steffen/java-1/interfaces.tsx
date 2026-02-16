@@ -78,10 +78,19 @@ export default function Interfaces(): React.JSX.Element {
           </ul>
         </section>
         <section>
-          <h2>Ersteller des Warenkorbs</h2>
+          <h2>Fallbeispiel: Amazend</h2>
           <ul>
-            <li className="fragment">Beschreibung anzeigen</li>
-            <li className="fragment">Einzelpreis ermitteln</li>
+            <li className="fragment">Online Versandhändler</li>
+            <li className="fragment">Warenkorbabteilung</li>
+            <li className="fragment">Produktabteilung</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Fallbeispiel: Amazend Warenkorb</h2>
+          <ul>
+            <li className="fragment">Liste von Produkten</li>
+            <li className="fragment">Einzelpreis von Produkten</li>
+            <li className="fragment">Summe aller Produkte</li>
           </ul>
         </section>
         <section>
