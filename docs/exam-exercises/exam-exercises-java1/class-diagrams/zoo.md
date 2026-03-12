@@ -37,7 +37,8 @@ classDiagram
     }
 
     class Fish {
-        +Fish(description: String, sizeInM: double, weigthInKg: double)
+        -color: String #123;final#125;
+        +Fish(description: String, sizeInM: double, weigthInKg: double, color: String)
         +swim() void
     }
 ```
