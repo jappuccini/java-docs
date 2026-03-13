@@ -23,7 +23,7 @@ classDiagram
       -name: String #123;final#125;
       -dice: Dice #123;final#125;
       -healthPoints: int
-      +Player(name: String)
+      +Player(name: String, healthPoints: int)
       +rollTheDice() int
       +reduceHealthPoints(points: int) void
    }
@@ -43,11 +43,6 @@ classDiagram
 
 Die Methode `int rollTheDice()` soll mit einer gleichverteilten
 Wahrscheinlichkeit einen Wert zwischen 1 und 6 zurückgeben.
-
-## Hinweis zur Klasse _Player_
-
-Der Konstruktor soll alle Attribute initialisieren und die Lebenspunkte auf den
-Wert 10 setzen.
 
 ## Spielablauf
 

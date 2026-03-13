@@ -47,7 +47,9 @@ classDiagram
 
     class Ingredient {
         -name: String #123;final#125;
-        +Ingredient(name: String)
+        -amount: double #123;final#125;
+        -unit: String #123;final#125;
+        +Ingredient(name: String, amount: double, unit: String)
     }
 
     class IngredientsReader {
@@ -61,7 +63,6 @@ classDiagram
   Object-Methoden dargestellt
 - So nicht anders angegeben, sollen Konstruktoren, Setter, Getter sowie die
   Object-Methoden wie gewohnt implementiert werden
--
 
 ## Hinweis zur Klasse _Cookie_
 
@@ -95,11 +96,11 @@ eingehenden Datei auslesen und zurückgeben.
 ## Beispielhafter Aufbau der Zutatendatei
 
 ```
-200g Butter
-300g Mehl
-1 Prise Salz
-100g gemahlene Mandeln
-150g Zucker
-1 Pck. Vanillezucker
-2 Eier
+200;g;Butter
+300;g;Mehl
+1;Prise;Salz
+100;g;gemahlene Mandeln
+150;g;Zucker
+1;Pck.;Vanillezucker
+2;Stück;Eier
 ```
