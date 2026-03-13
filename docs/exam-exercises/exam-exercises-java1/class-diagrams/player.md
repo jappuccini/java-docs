@@ -17,7 +17,7 @@ classDiagram
    class Player {
       -name: String #123;final#125;
       -gameTokens: List~GameToken~ #123;final#125;
-      +GameToken(name: String, gameTokens: List~GameToken~)
+      +Player(name: String, gameTokens: List~GameToken~)
       +addGameToken(gameToken: GameToken) void
    }
    class GameToken {
