@@ -44,7 +44,7 @@ export default function IterationAndRecursion(): React.JSX.Element {
           <h2>Was ist Rekursiv?</h2>
           <p className="fragment">mehrmaliges selbstausführen einer Aktion</p>
           <p className="fragment">
-            die Aktion definiert selber, wann Sie sich nicht mehr selbst aufruft
+            die Aktion definiert selber, wann sie sich nicht mehr selbst aufruft
           </p>
         </section>
         <section>
@@ -201,17 +201,8 @@ export default function IterationAndRecursion(): React.JSX.Element {
       </section>
       <section>
         <section>
-          <h2>Fun with Mazes</h2>
+          <h2>Fun with Mazes (Optional)</h2>
         </section>
-      </section>
-      <section>
-        <h2>Rest of the day</h2>
-        <ul>
-          <li className="fragment">Problem und Datensatz</li>
-          <li className="fragment">
-            Search mit eigenem Problem Recursiv(Optional)
-          </li>
-        </ul>
       </section>
     </Slides>
   );

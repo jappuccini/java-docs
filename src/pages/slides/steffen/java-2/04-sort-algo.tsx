@@ -199,7 +199,7 @@ export default function SortAlgo(): React.JSX.Element {
             </li>
             <li className="fragment">
               Ist das aktuelle Element am Index größer als das nächste Element,
-              werden Sie getauscht.
+              werden sie getauscht.
             </li>
             <li className="fragment">
               High dekrementieren und wiederholen solange, bis alle Elemente
@@ -263,7 +263,7 @@ export default function SortAlgo(): React.JSX.Element {
             </li>
             <li className="fragment">
               Ist das aktuelle Element am Index kleiner als das vorherige
-              Element, werden Sie getauscht.
+              Element, werden sie getauscht.
             </li>
             <li className="fragment">
               sortedHigh dekrementieren und wiederholen solange, bis Element an
@@ -452,7 +452,7 @@ export default function SortAlgo(): React.JSX.Element {
               data-tooltip="Es wird immer temporär ein Kopie der Subarrays erstellt"
               tabIndex={0}
             >
-              Speicherbedarf is Hoch
+              Speicherbedarf ist Hoch
             </li>
             <li
               className="fragment"

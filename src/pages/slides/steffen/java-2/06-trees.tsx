@@ -13,24 +13,10 @@ export default function Trees(): React.JSX.Element {
         <section>
           <h2>Agenda</h2>
           <ul>
-            <li className="fragment">Projektbericht</li>
             <li className="fragment">Intro</li>
             <li className="fragment">Binary Tree</li>
             <li className="fragment">Binary Search Tree</li>
             <li className="fragment">Heap (Optional)</li>
-          </ul>
-        </section>
-      </section>
-      <section>
-        <section>
-          <h2>Projektbericht</h2>
-        </section>
-        <section>
-          <h2>Status</h2>
-          <ul>
-            <li className="fragment">Letzter Termin vor Abgabe</li>
-            <li className="fragment">Inhalte Teil I</li>
-            <li className="fragment">Inhalte Teil II am 12.05.2025</li>
           </ul>
         </section>
       </section>
@@ -175,7 +161,7 @@ export default function Trees(): React.JSX.Element {
           <h2>Was ist ein Binary Tree?</h2>
           <p className="fragment">
             Bei einem Binary Tree kann jeder Node maximal zwei Child Nodes
-            haben. Sie werden als left und right bezeichnet.
+            haben, welche als left und right bezeichnet werden.
           </p>
         </section>
         <section>
@@ -338,7 +324,7 @@ export default function Trees(): React.JSX.Element {
         <section>
           <h2>Heap Eigenschaften</h2>
           <ul>
-            <li className="fragment">Nennt man auch Priotity Queue</li>
+            <li className="fragment">Nennt man auch Priority Queue</li>
             <li className="fragment">Kein Traversieren</li>
             <li className="fragment">Root ist immer Max/Min</li>
           </ul>
@@ -372,7 +358,7 @@ export default function Trees(): React.JSX.Element {
           <ul>
             <li className="fragment">Wie kommen wir an das Ende?</li>
             <li className="fragment">Wie bekommen wir Parent?</li>
-            <li className="fragment">Wie bekommen wir Childs?</li>
+            <li className="fragment">Wie bekommen wir Children?</li>
           </ul>
           <p className="foot-note fragment">Array to the rescue!</p>
         </section>
@@ -383,13 +369,6 @@ export default function Trees(): React.JSX.Element {
             </Link>
           </h2>
         </section>
-      </section>
-      <section>
-        <h2>Rest of the day</h2>
-        <ul>
-          <li className="fragment">Letzte Vorlesung vor Abgabe!</li>
-          <li className="fragment">Besprechung Projekt</li>
-        </ul>
       </section>
     </Slides>
   );

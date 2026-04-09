@@ -48,7 +48,7 @@ export default function GenericsAndOptional(): React.JSX.Element {
           <p className="fragment">
             Egal ob wir Objekte vom Typ Human, Dog, String oder Integer in einer
             ArrayList abspeichern, wir haben immer die gleichen Methoden zur
-            verfügung.
+            Verfügung.
           </p>
           <p className="fragment">add, remove, size etc.</p>
         </section>
@@ -57,7 +57,7 @@ export default function GenericsAndOptional(): React.JSX.Element {
           <p className="fragment">
             Egal ob wir Comparator oder Comparable Klassen vom Typ Human, Dog,
             String oder Integer erstellen, wir haben immer die gleichen Methoden
-            zur verfügung.
+            zur Verfügung.
           </p>
           <p className="fragment">Collections.sort</p>
         </section>
@@ -241,9 +241,9 @@ export default function GenericsAndOptional(): React.JSX.Element {
                   '    Team&lt;FootballPlayer&gt; scf = new Team&lt;&gt;("SC Freiburg");\n' +
                   '    Team&lt;HockeyPlayer&gt; wildwings  = new Team&lt;&gt;("Wildwings");\n' +
                   '    \n' +
-                  '    scf.addMember(new FootballPlayer("Steffen");\n' +
-                  '    scf.addMember(new HockeyPlayer("Mirco"); // fails\n' +
-                  '    wildwings.addMember(new HockeyPlayer("Mirco");\n' +
+                  '    scf.addMember(new FootballPlayer("Steffen"));\n' +
+                  '    scf.addMember(new HockeyPlayer("Mirco")); // fails\n' +
+                  '    wildwings.addMember(new HockeyPlayer("Mirco"));\n' +
                   ' }\n' +
                   '}\n',
               }}

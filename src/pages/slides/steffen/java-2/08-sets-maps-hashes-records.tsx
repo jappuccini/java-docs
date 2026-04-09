@@ -74,10 +74,10 @@ export default function SetsMapsHashesRecords(): React.JSX.Element {
                   '  numbers.remove(4545); // remove entry\n' +
                   '  numbers.clear(); // remove all entries\n' +
                   '  numbers.size(); // number of entries\n' +
-                  '  students.contains(4545); // entry exists\n' +
-                  '  students.addAll(otherNumbers); // union\n' +
-                  '  students.retainAll(otherNumbers); // intersection\n' +
-                  '  students.removeAll(otherNumbers); // difference\n' +
+                  '  numbers.contains(4545); // entry exists\n' +
+                  '  numbers.addAll(otherNumbers); // union\n' +
+                  '  numbers.retainAll(otherNumbers); // intersection\n' +
+                  '  numbers.removeAll(otherNumbers); // difference\n' +
                   '// ...\n',
               }}
             ></code>
@@ -170,12 +170,12 @@ export default function SetsMapsHashesRecords(): React.JSX.Element {
         </section>
         <section>
           <h2>
-            <Link to="https://github.com/jappuccini/java-exercises/tree/demos/steffen/demo/java2/hashcollection/hashmap/dogowners/bug">
+            <Link to="https://github.com/jappuccini/java-demos/tree/steffen/java2/hashcollection/hashmap/dogowners/bug">
               Demo - Hashmap Dog Inventory
             </Link>
           </h2>
           <ul>
-            <li className="fragment">ein Hund und deren Besitzer</li>
+            <li className="fragment">ein Hund und dessen Besitzer</li>
             <li className="fragment">Besitzer des Hundes ändern</li>
           </ul>
         </section>
@@ -273,7 +273,7 @@ export default function SetsMapsHashesRecords(): React.JSX.Element {
           </ul>
         </section>
         <section>
-          <h2>funktionsweise der put-Methode einer HashMap</h2>
+          <h2>Funktionsweise der put-Methode einer HashMap</h2>
           <ol>
             <li className="fragment">
               Hashwert des Schlüssels berechnen &rarr; Index

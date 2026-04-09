@@ -56,7 +56,7 @@ export default function FunctionalProgramming(): React.JSX.Element {
                   'public class Human {\n' +
                   '  private int age;\n' +
                   '  \n' +
-                  '  public void setAge(age) {\n' +
+                  '  public void setAge(int age) {\n' +
                   '    this.age = age;\n' +
                   '    /*Seiteneffekt, da Wert außerhalb\n' +
                   '     der Funktion verändert wird */ \n' +
@@ -120,7 +120,7 @@ export default function FunctionalProgramming(): React.JSX.Element {
         <section>
           <h2>Typisierung</h2>
           <p className="fragment">
-            Ein funkionales Interface wird für die Typisierung einer
+            Ein funktionales Interface wird für die Typisierung einer
             Lambdafunktion verwendet.
           </p>
           <pre className="fragment">
@@ -290,7 +290,7 @@ export default function FunctionalProgramming(): React.JSX.Element {
         <section>
           <h2>Mehrere Anweisungen</h2>
           <p className="fragment">
-            Besteht die Lambdafunktion aus mehrern Anweisungen sind geschweifte
+            Besteht die Lambdafunktion aus mehreren Anweisungen sind geschweifte
             Klammern notwendig.
           </p>
           <pre className="fragment">

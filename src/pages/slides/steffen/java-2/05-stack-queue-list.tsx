@@ -175,10 +175,6 @@ export default function StackQueueList(): React.JSX.Element {
           </p>
         </section>
       </section>
-      <section>
-        <h2>Rest of the day</h2>
-        <p>Firobed: &#x1F37A;</p>
-      </section>
     </Slides>
   );
 }

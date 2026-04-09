@@ -30,7 +30,7 @@ export default function StreamApi(): React.JSX.Element {
             <li className="fragment">ArrayList&lt;Animal&gt;</li>
           </ul>
           <p className="fragment">
-            Collections bieten einen direkten Zugriff auf die Elemente um Sie zu
+            Collections bieten einen direkten Zugriff auf die Elemente um sie zu
             verwalten.
           </p>
         </section>
@@ -81,7 +81,7 @@ export default function StreamApi(): React.JSX.Element {
           <h2>Java Stream API</h2>
         </section>
         <section>
-          <h2>Was is eine Stream Pipeline</h2>
+          <h2>Was ist eine Stream Pipeline</h2>
           <pre>
             <code
               data-line-numbers="5-9|5|6-8|9"
@@ -198,7 +198,7 @@ export default function StreamApi(): React.JSX.Element {
                 __html:
                   'public class Main {\n' +
                   '  public static void main(String[] args) {\n' +
-                  '    // Gleichartige Werte in ein Stream kovertieren:\n' +
+                  '    // Gleichartige Werte in ein Stream konvertieren:\n' +
                   '    // Stream.of(T...);\n' +
                   '    Stream&lt;Integer&gt; num1 = Stream.of(1, 2, 3, 4);\n' +
                   '  }\n' +

@@ -18,7 +18,7 @@ export default function SearchAlgo(): React.JSX.Element {
             <li className="fragment">Lineare Suche</li>
             <li className="fragment">Binärsuche</li>
             <li className="fragment">Interpolationssuche</li>
-            <li className="fragment">Two Chrystal Balls Problem</li>
+            <li className="fragment">Two Crystal Balls Problem</li>
           </ul>
         </section>
       </section>
@@ -37,7 +37,7 @@ export default function SearchAlgo(): React.JSX.Element {
           <ul>
             <li
               tabIndex={0}
-              data-tooltip="Element das innerhalbe einer Datensammlung gesucht wird, z.B. Wert, Eintrag etc."
+              data-tooltip="Element das innerhalb einer Datensammlung gesucht wird, z.B. Wert, Eintrag etc."
             >
               Zielelement
             </li>
@@ -120,7 +120,7 @@ export default function SearchAlgo(): React.JSX.Element {
           <h2>Zusammenfassung</h2>
           <ul>
             <li className="fragment">
-              Kann unabhänging von Sortierung benutzt werden
+              Kann unabhängig von Sortierung benutzt werden
             </li>
             <li className="fragment">Kein weiterer Speicherbedarf</li>
             <li className="fragment">Geeignet für kleine Datenmengen</li>
@@ -143,7 +143,7 @@ export default function SearchAlgo(): React.JSX.Element {
             tabIndex={0}
           >
             Wird ein Element innerhalb des Suchraumes mit dem Zielelement
-            verglichen, kann abgeleited werden, ob das Zielelement vor oder nach
+            verglichen, kann abgeleitet werden, ob das Zielelement vor oder nach
             dem Element sein muss.
           </p>
         </section>
@@ -194,21 +194,9 @@ export default function SearchAlgo(): React.JSX.Element {
             </Link>
           </h2>
           <ul>
-            <li
-              className="fragment"
-              tabIndex={0}
-              data-tooltip="Was muss man bei 70 beachten?"
-            >
-              low/high/middle
-            </li>
+            <li className="fragment">low/high/middle</li>
             <li className="fragment">gefunden/größer/kleiner</li>
-            <li
-              className="fragment"
-              tabIndex={0}
-              data-tooltip="Wann ist die Suche vorbei?"
-            >
-              while bedingung/nicht gefunden
-            </li>
+            <li className="fragment">while bedingung/nicht gefunden</li>
           </ul>
         </section>
       </section>
@@ -311,13 +299,6 @@ export default function SearchAlgo(): React.JSX.Element {
           </table>
           <p className="fragment foot-note"> abhängig von Anwendungsfall</p>
         </section>
-      </section>
-      <section>
-        <h2>Rest of the day</h2>
-        <ul>
-          <li className="fragment">Problem und Datensatz</li>
-          <li className="fragment">Search mit eigenem Problem (Optional)</li>
-        </ul>
       </section>
     </Slides>
   );

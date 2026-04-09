@@ -14,7 +14,6 @@ export default function IntroDsa(): React.JSX.Element {
             <li className="fragment">Problemfelder</li>
             <li className="fragment">Erwartungen an DSA</li>
             <li className="fragment">Landau-Notation</li>
-            <li className="fragment">Fallbeispiel Problem</li>
           </ul>
         </section>
       </section>
@@ -72,7 +71,7 @@ export default function IntroDsa(): React.JSX.Element {
         <section>
           <h2>Was ist eine Datenstruktur?</h2>
           <p className="fragment">
-            spezifische Anordung von Daten zur effizienten Verwaltung eines
+            spezifische Anordnung von Daten zur effizienten Verwaltung eines
             Problems
           </p>
         </section>
@@ -158,13 +157,10 @@ export default function IntroDsa(): React.JSX.Element {
           <h2>Inhalte</h2>
           <ul>
             <li className="fragment">
-              Grundlegende Praktikable Datenstrukturen
+              Grundlegende praktische Datenstrukturen
             </li>
             <li className="fragment">Worst Case Szenario</li>
             <li className="fragment">keine Beweise</li>
-            <li data-tooltip="IMHO!" tabIndex={0} className="fragment">
-              kaum Coding (von euch, da Projektbericht)
-            </li>
             <li className="fragment">Einstieg in das Themengebiet</li>
           </ul>
         </section>
@@ -189,7 +185,7 @@ export default function IntroDsa(): React.JSX.Element {
           <h2>Warum Big-O nutzen?</h2>
           <p>
             Wenn wir wissen, welche Stärken und Schwächen ein Algorithmus hat,
-            können wie den besten Algorithmus für unser Problem nutzen.
+            können wir den besten Algorithmus für unser Problem nutzen.
           </p>
           <p className="foot-note">Ich benutz immer Big-O zum erklären</p>
         </section>
@@ -368,7 +364,7 @@ export default function IntroDsa(): React.JSX.Element {
                   'public class BigO {\n' +
                   '  public static void method(int[] n) {\n' +
                   '    int sum = 0;\n' +
-                  '    for(int i = 0; i &gt; n.length; i++) {\n' +
+                  '    for(int i = 0; i &lt; n.length; i++) {\n' +
                   '      if(sum > 9876) {\n' +
                   '        return sum;\n' +
                   '      }\n' +
@@ -390,9 +386,6 @@ export default function IntroDsa(): React.JSX.Element {
             <li>Worst-Case ist unser default</li>
           </ul>
         </section>
-      </section>
-      <section>
-        <h2>Fallbeispiel Problem</h2>
       </section>
     </Slides>
   );

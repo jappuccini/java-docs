@@ -1,6 +1,7 @@
 import React from 'react';
 import Slides from '../../../../components/Slides';
 import { defaultInitSlides } from '../../../../components/Slides/initSlides';
+import Link from '@docusaurus/Link';
 
 export default function Recap(): React.JSX.Element {
   return (
@@ -10,14 +11,41 @@ export default function Recap(): React.JSX.Element {
           <h2>Agenda</h2>
           <ul>
             <li className="fragment">Klausurnachbesprechung</li>
+            <li className="fragment">Organisatorisches</li>
             <li className="fragment">Wiederholung</li>
-            <li className="fragment">Fortgeschrittene Programmierung</li>
           </ul>
         </section>
       </section>
       <section>
         <section>
           <h2>Klausurnachbesprechung</h2>
+        </section>
+      </section>
+      <section>
+        <section>
+          <h2>Organisatorisches</h2>
+        </section>
+        <section>
+          <h2>Fortgeschrittene Programmierung</h2>
+          <ul>
+            <li className="fragment">Algorithmen und Datenstrukturen</li>
+            <li className="fragment">Generische Programmierung</li>
+            <li className="fragment">Funktionale Programmierung</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Prüfungsleistung</h2>
+          <ul>
+            <li className="fragment">Klausur am PC (60 Minuten / 50 Punkte)</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Klausur am PC</h2>
+          <ul>
+            <li className="fragment">Ablauf wie Klausur</li>
+            <li className="fragment">VSCode anstatt Notepad++</li>
+            <li className="fragment">Java installiert</li>
+          </ul>
         </section>
       </section>
       <section>
@@ -1098,8 +1126,8 @@ export default function Recap(): React.JSX.Element {
               dangerouslySetInnerHTML={{
                 __html:
                   'public class Dog {\n' +
-                  '  public static hasHat = true;\n' +
-                  '  public static isCool = true;\n' +
+                  '  public static boolean hasHat = true;\n' +
+                  '  public static boolean isCool = true;\n' +
                   '  public static boolean isCoolAndHasHat() {\n' +
                   '    return Dog.isCool && Dog.hasHat;\n' +
                   '  }\n' +
@@ -1217,7 +1245,7 @@ export default function Recap(): React.JSX.Element {
                   ' public Human(Gender gender) {\n' +
                   '   this.gender = gender;\n' +
                   ' }\n' +
-                  ' public doSomethingBinaryRelated() {\n' +
+                  ' public void doSomethingBinaryRelated() {\n' +
                   '   if(this.gender.isBinary())\n' +
                   '   //...\n' +
                   ' }\n' +
@@ -1267,7 +1295,7 @@ export default function Recap(): React.JSX.Element {
                   '  }\n' +
                   '  public void print() {\n' +
                   '    for(Item item : items) {\n' +
-                  '      System.out.println(item.getName();\n' +
+                  '      System.out.println(item.getName());\n' +
                   '    }\n' +
                   '  }\n' +
                   '}\n',
@@ -1412,7 +1440,7 @@ export default function Recap(): React.JSX.Element {
                   'public class ShoppingList {\n' +
                   '  Human buyer;\n' +
                   '  //...\n' +
-                  '  public addItem(Item item) throws TooYoungException {\n' +
+                  '  public void add(Item item) throws TooYoungException {\n' +
                   '    if(item.isAlcohol() && this.buyer.getAge() &lt; 21) {\n' +
                   '      throw new TooYoungException(21 - buyer.getAge());\n' +
                   '    }\n' +
@@ -1437,7 +1465,7 @@ export default function Recap(): React.JSX.Element {
                   '    try {\n' +
                   '      sl.add(corona);\n' +
                   '    } catch (TooYoungException e) {\n' +
-                  '      System.out.println("Du bist" + e.yearsTillAllowed + "zu jung");\n' +
+                  '      System.out.println("Du bist" + e.yearsTillAllowed + " zu jung");\n' +
                   '    } finally {\n' +
                   '      System.out.println("Einkauf beendet. (Immer)");\n' +
                   '    }\n' +
@@ -1448,67 +1476,11 @@ export default function Recap(): React.JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Klassendiagramme (Doku)</h2>
-        </section>
-      </section>
-      <section>
-        <section>
-          <h2>Organisatorsiches</h2>
-        </section>
-        <section>
-          <h2>Fortgeschrittene Programmierung</h2>
-          <ul>
-            <li className="fragment">Algorithmen und Datenstrukturen</li>
-            <li className="fragment">Generische Programmierung</li>
-            <li className="fragment">Funktionale Programmierung</li>
-          </ul>
-        </section>
-        <section>
-          <h2>Prüfungsleistungen</h2>
-          <ul>
-            <li className="fragment">Projektbericht (50 Punkte)</li>
-            <li className="fragment">Klausur am PC (50 Punkte)</li>
-          </ul>
-        </section>
-        <section>
-          <h2>Abgabetermine in Moodle</h2>
-          <ul>
-            <li className="fragment">30.04.2025 - Problemstellung und Daten</li>
-            <li className="fragment">30.05.2025 - Projektbericht</li>
-          </ul>
-        </section>
-        <section>
-          <h2>Projektbericht - Problem</h2>
-          <ul>
-            <li className="fragment">findet ein Problem (im Unternehmen)</li>
-            <li className="fragment">(er)findet dazu Daten</li>
-            <li className="fragment">mindestens eine Verknüpfung</li>
-            <li className="fragment">
-              keine doppelten Themen (Selbstorganisiert)
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h2>Projektbericht - Abgabe I</h2>
-          <ul>
-            <li className="fragment">Problembeschreibung (.txt)</li>
-            <li className="fragment">20 Datensätze mit Überschrift (.csv)</li>
-            <li className="fragment">Abgabe in Moodle 30.04 23:59</li>
-          </ul>
-        </section>
-        <section>
-          <h2>Projektbericht - Abgabe II</h2>
-          <ul>
-            <li className="fragment">Erklärung am 28.04</li>
-            <li className="fragment">Abgabe in Moodle 30.05 23:59</li>
-          </ul>
-        </section>
-        <section>
-          <h2>Klausur am PC</h2>
-          <ul>
-            <li className="fragment">Ablauf wie Klausur</li>
-            <li className="fragment">VSCode anstatt Notepad++</li>
-          </ul>
+          <h2>
+            <Link to="/documentation/class-diagrams">
+              Klassendiagramme (Doku)
+            </Link>
+          </h2>
         </section>
       </section>
       <section>
