@@ -22,7 +22,7 @@
     "@docusaurus/preset-classic": "^3.10.0",
     "@docusaurus/theme-mermaid": "^3.10.0",
     "@mdx-js/react": "^3.0.0",
-    "@mermaid-js/layout-elk": "^0.1.9",
+    "@mermaid-js/layout-elk": "^0.2.1",
     "clsx": "^2.1.1",
     "mermaid": "^11.14.0",
     "prism-react-renderer": "^2.1.0",
