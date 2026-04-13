@@ -12,7 +12,7 @@ const config: Config = {
   projectName: 'java-docs',
   future: {
     v4: true,
-    experimental_faster: true,
+    faster: true,
   },
   markdown: {
     mermaid: true,
