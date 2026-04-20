@@ -28,7 +28,7 @@
     "prism-react-renderer": "^2.1.0",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
-    "reveal.js": "^5.2.1"
+    "reveal.js": "^6.0.1"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "^3.10.0",
