@@ -172,6 +172,7 @@ export default function StreamApi(): React.JSX.Element {
           <h2>Erzeugen von Quellen II</h2>
           <pre className="fragment">
             <code
+              data-line-numbers="3-6|8-10|12-13"
               className="java"
               dangerouslySetInnerHTML={{
                 __html:
@@ -179,10 +180,15 @@ export default function StreamApi(): React.JSX.Element {
                   '  public static void main(String[] args) {\n' +
                   '    // Array in ein Stream konvertieren:\n' +
                   '    // Arrays.stream(T[])\n' +
-                  '    Stream&lt;Integer&gt; num1 = Arrays.stream({ 1, 2, 3, 4 });\n' +
+                  '    Stream&lt;Integer&gt; num1 =\n' +
+                  '      Arrays.stream(new Integer[] { 1, 2, 3, 4 });\n' +
                   '    \n' +
+                  '    // Mit .boxed() von int (primitiv) -> Integer (Wrapper)\n' +
                   '    int[] numArray = { 1, 2, 3, 4 };\n' +
-                  '    Stream&lt;Integer&gt; num2 = Arrays.stream(numArray);\n' +
+                  '    Stream&lt;Integer&gt; num2 = Arrays.stream(numArray).boxed();\n' +
+                  '    \n' +
+                  '    // Oder sonst einen IntStream mit int (primitiv)\n' +
+                  '    IntStream num3 = Arrays.stream(new int[] { 1, 2, 3, 4 });\n' +
                   '  }\n' +
                   '}\n',
               }}
