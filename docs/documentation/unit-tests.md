@@ -117,7 +117,7 @@ public class CalculatorTest {
 }
 ```
 
-:::info Hinweis
+:::info
 
 Für die Benennungen von Testmethoden wird in der Regel versucht, die
 wesentlichen Informationen eines Tests (Name der zu testenden Methode,

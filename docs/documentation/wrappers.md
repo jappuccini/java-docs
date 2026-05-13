@@ -25,7 +25,7 @@ public class MainClass {
 }
 ```
 
-:::info Hinweis
+:::info
 
 Wrapper-Klassen basieren auf dem Entwurfsmuster _Adapter_, welches die
 Kommunikation zwischen Klassen mit zueinander inkompatiblen Schnittstellen
