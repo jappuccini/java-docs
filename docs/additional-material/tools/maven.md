@@ -166,7 +166,7 @@ formattiert wird.
    ...
 ```
 
-:::info Hinweis
+:::info
 
 Aktuell kann Prettier nicht in Kombination mit Datenklassen (Records) verwendet
 werden.
@@ -335,7 +335,7 @@ Framework für das Erstellen von GUIs in Java dar (siehe auch
   </TabItem>
 </Tabs>
 
-:::info Hinweis
+:::info
 
 Verfügbare Versionen können dem
 [Maven Central Repository](https://central.sonatype.com/) entnommen werden.

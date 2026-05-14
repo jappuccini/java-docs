@@ -49,7 +49,7 @@ public class MainClass {
 }
 ```
 
-:::info Hinweis
+:::info
 
 Java ist case-sensitiv, unterscheidet also zwischen Groß- und Kleinschreibung.
 Um die Lesbarkeit zu erhöhen, sollten Variablen mit einem Kleinbuchstaben
@@ -102,7 +102,7 @@ public class MainClass {
 }
 ```
 
-:::info Hinweis
+:::info
 
 Mit `var` deklarierte Datenobjekte sind weiterhin statisch typisiert.
 
@@ -171,7 +171,7 @@ flowchart
    float -.-> double(double)
 ```
 
-:::info Hinweis
+:::info
 
 Für den Datentyp `boolean` ist keine Typumwandlung möglich.
 

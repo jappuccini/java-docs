@@ -34,7 +34,7 @@ public class MainClass {
 }
 ```
 
-:::info Hinweis
+:::info
 
 Felder werden zwar mit Hilfe des new-Operators erzeugt, besitzen aber keinen
 Konstruktor.
@@ -60,7 +60,7 @@ public class MainClass {
 }
 ```
 
-:::info Hinweis
+:::info
 
 Der Index beginnt bei Java bei 0.
 
@@ -107,7 +107,7 @@ public class MainClass {
 }
 ```
 
-:::info Hinweis
+:::info
 
 Technisch gesehen handelt es sich bei einer variablen Argumentliste um ein Feld.
 
