@@ -37,7 +37,7 @@ public class MainClass {
 }
 ```
 
-:::info Hinweis
+:::info
 
 Der festgelegte Nullpunkt ist der 1. Januar 1970, 0 Uhr.
 

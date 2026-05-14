@@ -36,7 +36,7 @@ public class MainClass {
 }
 ```
 
-:::info Hinweis
+:::info
 
 Der else-Zweig ist optional, kann also weggelassen werden.
 
@@ -100,7 +100,7 @@ public class MainClass {
 }
 ```
 
-:::info Hinweis
+:::info
 
 Die Kurzschreibweise sollte verantwortungsvoll verwendet werden, da die
 Lesbarkeit dadurch eventuell erschwert wird.

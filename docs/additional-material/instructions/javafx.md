@@ -5,9 +5,9 @@ sidebar_position: 40
 tags: [javafx]
 ---
 
-:::info Benötigte Tools
+:::info
 
-[JDK](https://www.oracle.com/java/technologies/downloads/),
+Benötigte Tools: [JDK](https://www.oracle.com/java/technologies/downloads/),
 [Eclipse](https://www.eclipse.org/),
 [Scene Builder](https://gluonhq.com/products/scene-builder/) und Eclipse-Plugin
 [e(fx)clipse](http://download.eclipse.org/efxclipse/updates-released/)

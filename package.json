@@ -16,15 +16,15 @@
     "prettier:write": "npx prettier . --write"
   },
   "dependencies": {
-    "@docusaurus/core": "^3.10.0",
-    "@docusaurus/faster": "^3.10.0",
-    "@docusaurus/plugin-pwa": "^3.10.0",
-    "@docusaurus/preset-classic": "^3.10.0",
-    "@docusaurus/theme-mermaid": "^3.10.0",
+    "@docusaurus/core": "^3.10.1",
+    "@docusaurus/faster": "^3.10.1",
+    "@docusaurus/plugin-pwa": "^3.10.1",
+    "@docusaurus/preset-classic": "^3.10.1",
+    "@docusaurus/theme-mermaid": "^3.10.1",
     "@mdx-js/react": "^3.0.0",
     "@mermaid-js/layout-elk": "^0.2.1",
     "clsx": "^2.1.1",
-    "mermaid": "^11.14.0",
+    "mermaid": "^11.15.0",
     "prism-react-renderer": "^2.1.0",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
@@ -35,8 +35,8 @@
     "@docusaurus/tsconfig": "^3.10.0",
     "@docusaurus/types": "^3.10.0",
     "@types/react": "^19.2.14",
-    "prettier": "3.8.2",
-    "typescript": "~6.0.2"
+    "prettier": "3.8.3",
+    "typescript": "~6.0.3"
   },
   "browserslist": {
     "production": [

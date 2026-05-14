@@ -40,7 +40,7 @@ flowchart LR
    Controller --Update--> View
 ```
 
-:::info Hinweis
+:::info
 
 Der Begriff MVC wird oft auch als Synonym für MVC-ähnliche Varianten wie z.B.
 MVP (_Model-View-Presenter_) oder MVVM (_Model-View-ViewModel_) verwendet.
@@ -63,7 +63,7 @@ Die Behandlung dieser Ereignisse wird durch das Delegationsmodell festgelegt:
 3. Die Empfänger nehmen das Ereignis-Objekt entgegen und haben dadurch die
    Möglichkeit, auf das Ereignis zu reagieren
 
-:::info Hinweis
+:::info
 
 Die Empfänger werden je nach Bibliothek bzw. Framework als _Handler_ oder
 _Listener_ bezeichnet.
