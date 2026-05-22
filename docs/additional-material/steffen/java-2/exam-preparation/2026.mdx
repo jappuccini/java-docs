@@ -13,6 +13,21 @@ tags: []
 - [Aufgabe 2 und 3](/pdf/steffen/2026/java-2-exam-preparation/task-02-and-03.pdf)
 - [Java Api](/pdf/steffen/2026/java-2-exam-preparation/java-api.pdf)
 
+
+```java
+import java.util.List;
+
+public enum Color {
+  RED,
+  GREEN,
+  BLUE;
+
+  public static List<Color> getAwesomeColors() {
+    return List.of(RED, BLUE);
+  }
+}
+```
+
 ```bash
 git switch exe/exams/wds125-java-2
 ```
