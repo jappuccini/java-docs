@@ -25,7 +25,11 @@ export default function Slides({
 }): React.JSX.Element {
   return (
     <BrowserOnly fallback={<div>Loading...</div>}>
-      {() => <SlidesInner width={width} height={height}>{children}</SlidesInner>}
+      {() => (
+        <SlidesInner width={width} height={height}>
+          {children}
+        </SlidesInner>
+      )}
     </BrowserOnly>
   );
 }
