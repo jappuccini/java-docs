@@ -1,14 +1,12 @@
+import BrowserOnly from '@docusaurus/BrowserOnly';
 import React, { useEffect } from 'react';
 
-export default function Slides({
-  children,
-  initSlides,
-  width = null,
-  height = null,
-}): React.JSX.Element {
+function SlidesInner({ children, width, height }): React.JSX.Element {
   useEffect(() => {
-    initSlides();
-  });
+    import('./initSlides').then(({ defaultInitSlides }) => {
+      defaultInitSlides();
+    });
+  }, []);
 
   return (
     <div
@@ -17,5 +15,17 @@ export default function Slides({
     >
       <div className="slides">{children}</div>
     </div>
+  );
+}
+
+export default function Slides({
+  children,
+  width = null,
+  height = null,
+}): React.JSX.Element {
+  return (
+    <BrowserOnly fallback={<div>Loading...</div>}>
+      {() => <SlidesInner width={width} height={height}>{children}</SlidesInner>}
+    </BrowserOnly>
   );
 }

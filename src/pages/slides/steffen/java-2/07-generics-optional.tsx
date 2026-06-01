@@ -1,12 +1,10 @@
 import Link from '@docusaurus/Link';
-import { NKR } from '@site/src/components/Slides/nkr';
-import React from 'react';
 import Slides from '../../../../components/Slides';
-import { defaultInitSlides } from '../../../../components/Slides/initSlides';
+import { NKR } from '@site/src/components/Slides/nkr';
 
-export default function GenericsAndOptional(): React.JSX.Element {
+export default function GenericsOptional(): React.JSX.Element {
   return (
-    <Slides initSlides={defaultInitSlides}>
+    <Slides>
       <section>
         <section>
           <h2>Agenda</h2>

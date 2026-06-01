@@ -1,11 +1,9 @@
-import React from 'react';
 import Slides from '../../../../components/Slides';
-import { defaultInitSlides } from '../../../../components/Slides/initSlides';
 import Link from '@docusaurus/Link';
 
 export default function Recap(): React.JSX.Element {
   return (
-    <Slides initSlides={defaultInitSlides}>
+    <Slides>
       <section>
         <section>
           <h2>Agenda</h2>

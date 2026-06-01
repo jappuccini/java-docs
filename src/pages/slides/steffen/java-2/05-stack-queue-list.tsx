@@ -1,11 +1,9 @@
 import Link from '@docusaurus/Link';
 import Slides from '../../../../components/Slides';
-import { defaultInitSlides } from '../../../../components/Slides/initSlides';
-import React from 'react';
 
 export default function StackQueueList(): React.JSX.Element {
   return (
-    <Slides initSlides={defaultInitSlides}>
+    <Slides>
       <section>
         <section>
           <h2>Stack, Queue & List</h2>
