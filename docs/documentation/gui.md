@@ -5,26 +5,22 @@ sidebar_position: 360
 tags: [gui]
 ---
 
-Eine grafische Benutzeroberfläche oder auch _GUI_ (Graphical User Interface) hat
-die Aufgabe, Programme mittels grafischer Bildschirmelemente bedienbar zu
-machen. So ermöglichen _Controls_ wie Eingabefelder, Drucktasten und
-Ausgabefelder die Interaktion mit der Anwendung und _Container_ die
-strukturierte Darstellung und Verwaltung anderer Bildschirmelemente. _Dialoge_
-wie Nachrichtendialoge und Dateiauswahl-Dialoge widerum stellen vordefinierte
-Oberflächen dar, mit deren Hilfe wiederkehrende Anwendungsfälle abgedeckt werden
-können.
+Eine grafische Benutzeroberfläche (_GUI_, Graphical User Interface) macht
+Programme durch grafische Bildschirmelemente bedienbar. _Controls_ wie
+Eingabefelder, Schaltflächen und Beschriftungen ermöglichen die Interaktion.
+_Container_ ordnen und verwalten andere Bildschirmelemente. _Dialoge_ wie
+Meldungsfenster und Dateiauswahl-Dialoge decken wiederkehrende Anwendungsfälle
+ab.
 
 ## Aufbau grafischer Benutzeroberflächen
 
-Da es sich bei grafischen Benutzeroberflächen um komplexe Anwendungen handelt,
-werden diese in der Regel in verschiedene Bereiche wie Aufbau, Aussehen und
-Verhalten aufgeteilt (_Separation of Concerns_). Als Beispiel sei hier der
-Aufbau einer klassischen Webseite aufgeführt: HTML bestimmt den Aufbau, CSS das
-Aussehen und JavaScript das Verhalten der Webseite.
+Da grafische Benutzeroberflächen komplex sind, werden sie nach dem Prinzip der
+_Separation of Concerns_ in Bereiche wie Aufbau, Aussehen und Verhalten
+aufgeteilt. Ein bekanntes Beispiel ist eine klassische Webseite: HTML definiert
+den Aufbau, CSS das Aussehen und JavaScript das Verhalten.
 
-Das Entwurfmuster MVC (_Model-View-Controller_) stellt einen gängigen Ansatz zur
-Entwicklung von grafischen Benutzeroberflächen dar, bei dem die grafische
-Benutzeroberfläche in drei Bereiche unterteilt wird:
+Das Entwurfsmuster MVC (_Model-View-Controller_) ist ein gängiger Ansatz für
+GUI-Entwicklung und teilt die Oberfläche in drei Bereiche auf:
 
 - Das _Model_ ist für die Datenhaltung und -verwaltung zuständig
 - Die _View_ ist für die Darstellung der Oberfläche zuständig, welche wiederum
@@ -49,13 +45,10 @@ MVP (_Model-View-Presenter_) oder MVVM (_Model-View-ViewModel_) verwendet.
 
 ## Ereignisse (Events)
 
-Ereignisse (Events) sind Nachrichten, die über das System weitergeleitet werden.
-Auf grafischen Benutzeroberflächen werden Ereignisse z.B. durch das Betätigen
-einer Drucktaste ausgelöst. Weitere typische Ergeignisse sind das Betätigen
-einer Maustaste, Tastatureingaben oder das Vergrößern bzw. Verkleinern eines
-Fensters.
-
-Die Behandlung dieser Ereignisse wird durch das Delegationsmodell festgelegt:
+Ereignisse (Events) sind Nachrichten, die durch Benutzerinteraktionen ausgelöst
+werden — z.B. durch das Klicken einer Schaltfläche, eine Tastatureingabe oder
+das Vergrößern eines Fensters. Das Delegationsmodell legt fest, wie Ereignisse
+behandelt werden:
 
 1. Empfänger können sich beim Sender für ein Ereignis registrieren
 2. Der Sender löst das Ereignis aus und übergibt das erzeugte Ereignis-Objekt an

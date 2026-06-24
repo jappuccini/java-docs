@@ -8,15 +8,14 @@ tags: [abstract, final]
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Mit Hilfe der Schlüsselwörter `abstract` und `final` kann die Verwendung von
-Klassen vorgegeben bzw. eingeschänkt werden:
+Mit den Schlüsselwörtern `abstract` und `final` lässt sich die Verwendung von
+Klassen und Methoden einschränken oder vorschreiben:
 
 - Abstrakte Klassen können nicht instanziiert werden
-- Abstrakte Methoden werden in abstrakten Klassen definiert, besitzen dort
-  keinen Methodenrumpf und müssen in den abgeleiteten Klassen der abstrakten
-  Klasse überschrieben werden
-- Finale Klassen können nicht abgeleitet werden
-- Finale Methoden können nicht überschrieben werden
+- Abstrakte Methoden werden in abstrakten Klassen deklariert, besitzen keinen
+  Methodenrumpf und müssen in allen abgeleiteten Klassen überschrieben werden
+- Finale Klassen können nicht von anderen Klassen abgeleitet werden
+- Finale Methoden können von Unterklassen nicht überschrieben werden
 
 <Tabs>
   <TabItem value="a" label="Abstrakte Klasse mit abstrakter und finaler Methode" default>
@@ -50,7 +49,7 @@ public final class Notebook extends Computer {
    }
 
    @Override
-   public Cpu getCpu() {...} // Kompilierungsfehler
+   public Cpu getCpu() {...} // Kompilierungsfehler: finale Methode kann nicht überschrieben werden
    ...
 }
 ```
@@ -59,10 +58,10 @@ public final class Notebook extends Computer {
   <TabItem value="c" label="Startklasse">
 
 ```java title="MainClass.java" showLineNumbers
-public class MainClass extends Notebook { // Kompilierungsfehler
+public class MainClass extends Notebook { // Kompilierungsfehler: finale Klasse kann nicht erweitert werden
 
    public static void main(String[] args) {
-      Computer computer = new Computer("Mein Office PC"); // Kompilierungsfehler
+      Computer computer = new Computer("Mein Office PC"); // Kompilierungsfehler: abstrakte Klasse kann nicht instanziiert werden
    }
 
 }

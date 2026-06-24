@@ -7,35 +7,33 @@ tags: [maven]
 
 import Tabs from '@theme/Tabs'; import TabItem from '@theme/TabItem';
 
-[Apache Maven (kurz Maven)](https://maven.apache.org/) ist ein sogenanntes
-Build-Automatisierungstool, welches hauptsächlich für Java-Projekte verwendet
-wird. Es hilft Entwicklern, den Build-Prozess eines Programmes zu vereinfachen
-und zu standardisieren. Maven verwendet hierzu eine Konfigurationsdatei namens
-_pom.xml_ (Project Object Model).
+[Apache Maven (kurz Maven)](https://maven.apache.org/) ist ein
+Build-Automatisierungstool für Java-Projekte. Es vereinfacht und standardisiert
+den Build-Prozess über eine zentrale Konfigurationsdatei namens _pom.xml_
+(Project Object Model).
 
 ## Merkmale
 
-- Automatisierung des Build-Prozesses: Maven automatisiert den Build-Prozess
-  (Kompilieren, Testen, Verpacken und Bereitstellen)
-- Abhängigkeitsmanagement: Maven verwaltet Projekt-Abhängigkeiten wie externe
-  Bibliotheken und Frameworks automatisch
-- Standardisierte Projektstruktur: Maven fördert eine standardisierte
-  Projektstruktur, die es einfacher macht, Projekte zu verstehen und zu
-  navigieren
-- Plugins: Maven unterstützt eine Vielzahl von Plugins, die zusätzliche
-  Funktionalitäten bieten (z.B. Code-Analyse, Berichterstellung und
-  Dokumentation)
-- Lebenszyklus-Management: Maven definiert einen standardisierten Lebenszyklus
-  für den Build-Prozess
+Maven zeichnet sich durch folgende Eigenschaften aus:
+
+- Automatisierung des Build-Prozesses: Kompilieren, Testen, Verpacken und
+  Bereitstellen
+- Abhängigkeitsmanagement: externe Bibliotheken und Frameworks werden
+  automatisch verwaltet
+- Standardisierte Projektstruktur: erleichtert das Verstehen und Navigieren in
+  Projekten
+- Plugins: erweitern Maven um zusätzliche Funktionen wie Code-Analyse,
+  Berichterstellung und Dokumentation
+- Lebenszyklus-Management: definierter, standardisierter Ablauf des
+  Build-Prozesses
 
 ## Lebenszyklus-Phasen
 
-Maven kennt die drei Lebenszyklen `clean` zum Löschen aller Artefakte
-vergangener Builds, `default` zum Erstellen des Projekts sowie `site` zum
-Erstellen einer Dokumentationsseite. Jeder Lebenszyklus durchläuft hierbei
-verschiedene Phasen. Durch Plugins können diese um zusätzliche
-Verarbeitungsschritte erweitert werden. Nachfolgend dargestellt sind die
-wesentlichen Phasen des Default Lebenszyklus:
+Maven kennt drei Lebenszyklen: `clean` löscht alle Artefakte vergangener Builds,
+`default` erstellt das Projekt, und `site` generiert eine Dokumentationsseite.
+Jeder Lebenszyklus durchläuft dabei mehrere Phasen, die sich durch Plugins um
+zusätzliche Schritte erweitern lassen. Die folgende Tabelle zeigt die
+wesentlichen Phasen des Default-Lebenszyklus.
 
 | Phase      | Beschreibung                                                                         |
 | ---------- | ------------------------------------------------------------------------------------ |
@@ -49,11 +47,10 @@ wesentlichen Phasen des Default Lebenszyklus:
 
 ## Das Projektmodell
 
-Das Projektmodel umfasst neben allgemeinen Projekt-Angaben wie der `groupId`,
-der `artifactId` sowie der `version` auch sämtliche Abhängigkeiten zu externen
-Bibliotheken, die dadurch automatisch von Maven verwaltet werden. Zudem kann
-hier unter anderem der Build-Prozess konfiguriert und durch Plugins erweitert
-werden.
+Das Projektmodell enthält neben allgemeinen Projekt-Angaben wie `groupId`,
+`artifactId` und `version` auch alle Abhängigkeiten zu externen Bibliotheken.
+Zusätzlich lässt sich hier der Build-Prozess konfigurieren und durch Plugins
+erweitern.
 
 ```xml title="pom.xml" showLineNumbers
 <project xmlns="http://maven.apache.org/POM/4.0.0"
@@ -77,6 +74,9 @@ werden.
 ```
 
 ## Hilfreiche Plugins
+
+Maven-Plugins erweitern den Build-Prozess um zusätzliche Funktionen. Die
+folgenden Plugins sind für Java-Projekte besonders nützlich.
 
 <Tabs>
   <TabItem value="a" label="JavaDoc" default>
@@ -137,11 +137,11 @@ Berichtsseite.
   </TabItem>
   <TabItem value="c" label="Prettier">
 
-[Prettier](https://prettier.io/) ist ein weit verbreiterter
-Quellcode-Formatierer, der eine einheitliche Quellcode-Formatierung fördert.
-Durch die Einbindung des Goals `write` in die Lebenszyklus-Phase `compile` wird
+[Prettier](https://prettier.io/) ist ein weit verbreiteter
+Quellcode-Formatierer, der eine einheitliche Formatierung fördert. Durch die
+Einbindung des Goals `write` in die Lebenszyklus-Phase `compile` wird
 sichergestellt, dass der Quellcode bei jedem Kompiliervorgang automatisch
-formattiert wird.
+formatiert wird.
 
 ```xml title="pom.xml (Auszug)" showLineNumbers
    ...
@@ -218,11 +218,16 @@ die Über-JAR bei jedem Verpacken erstellt wird.
 
 ## Hilfreiche Bibliotheken und Frameworks
 
+Die folgende Auswahl an Bibliotheken und Frameworks wird häufig in
+Java-Projekten eingesetzt und lässt sich einfach als Maven-Abhängigkeit
+einbinden.
+
 <Tabs>
   <TabItem value="a" label="Lombok" default>
 
-Lombok ist eine beliebte Bibliothek zur Generierung von repetitiven Methoden
-(siehe auch [Lombok](../../documentation/lombok)).
+Lombok ist eine beliebte Bibliothek zur automatischen Generierung von
+Boilerplate-Code wie Getter, Setter und Konstruktoren (siehe auch
+[Lombok](../../documentation/lombok)).
 
 ```xml title="pom.xml (Auszug)" showLineNumbers
    ...
@@ -240,11 +245,10 @@ Lombok ist eine beliebte Bibliothek zur Generierung von repetitiven Methoden
   </TabItem>
   <TabItem value="b" label="SLF4J und Log4J">
 
-Simple Logging Facade for Java (SLF4J) ist eine beliebte
-Java-Protokollierungs-API, die es ermöglicht, den Quellcode um Protokolle zu
-erweitern, die anschließend an ein gewünschtes Protokoll-Framework (wie z.B.
-Log4J) weitergeleitet werden (siehe auch
-[Simple Logging Facade for Java (SLF4J)](../../documentation/slf4j)).
+SLF4J (Simple Logging Facade for Java) ist eine Protokollierungs-API, die den
+Quellcode von der konkreten Protokoll-Implementierung entkoppelt. Die
+eigentlichen Protokollmeldungen werden an ein Framework wie Log4J weitergeleitet
+(siehe auch [SLF4J](../../documentation/slf4j)).
 
 ```xml title="pom.xml (Auszug)" showLineNumbers
    ...
@@ -309,8 +313,8 @@ das hauptsächlich für das Testen von Anwendungen verwendet wird (siehe auch
   </TabItem>
   <TabItem value="e" label="JavaFX und Java FXML">
 
-JavaFX stellt (vor allem in Verbindung mit Java FXML) ein State-of-the-Art
-Framework für das Erstellen von GUIs in Java dar (siehe auch
+JavaFX ist ein Framework für grafische Benutzeroberflächen in Java. In
+Verbindung mit Java FXML lassen sich Layout und Logik sauber trennen (siehe auch
 [JavaFX](../../documentation/javafx)).
 
 ```xml title="pom.xml (Auszug)" showLineNumbers

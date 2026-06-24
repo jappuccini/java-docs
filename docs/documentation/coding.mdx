@@ -9,9 +9,9 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 Als ein Teilbereich der Softwareentwicklung umfasst das Programmieren vor allem
-die Umsetzung eines Softwareentwurfes in Quellcode. Generell versteht man unter
+die Umsetzung eines Softwareentwurfs in Quellcode. Allgemein versteht man unter
 Programmieren die Umsetzung von [Algorithmen](algorithms) in lauffähige
-Computer-Programme.
+Programme.
 
 ```mermaid
 flowchart LR
@@ -26,38 +26,36 @@ Ein Algorithmus ist eine Handlungsvorschrift zur Lösung eines Problems.
 
 ## Abstraktionsniveau
 
-Maschinen sind im Vergleich zu menschlichen Gehirnen sehr primitive Gebilde. Die
+Maschinen sind im Vergleich zum menschlichen Gehirn sehr primitive Gebilde. Die
 Diskrepanz zwischen der menschlichen Denkweise und der Arbeitsweise von
-Maschinen bezeichnet mal als _Semantische Lücke_. Programmiersprachen
+Maschinen bezeichnet man als _Semantische Lücke_. Programmiersprachen
 ermöglichen es, Problemstellungen der realen Welt abstrahiert und
-maschinengerecht abzubilden und damit die Semantische Lücke zu verringern. Je
-höher die Abstraktion einer Programmiersprache dabei ist, desto mehr kann die
-Semantische Lücke verringert werden: Maschinenorientierte Programmiersprachen
-(z.B. X86-Assembler) abstrahieren kaum und sind daher für den Menschen schwerer
-verständlich, problemorientierte Programmiersprachen (z.B. Java) abstrahieren
-stark und sind daher für den Menschen leichter verständlich.
+maschinengerecht abzubilden und damit diese Lücke zu verringern. Je höher die
+Abstraktion einer Programmiersprache ist, desto mehr lässt sich die Semantische
+Lücke verringern: Maschinenorientierte Sprachen (z.B. x86-Assembler)
+abstrahieren kaum und sind daher für den Menschen schwerer verständlich,
+problemorientierte Sprachen (z.B. Java) abstrahieren stark und sind daher
+deutlich leichter verständlich.
 
-|                  | Generation                     | Merkmale                                   | Sprachen                                    |
-| ---------------- | ------------------------------ | ------------------------------------------ | ------------------------------------------- |
-| Höhere Sprachen  | 5: Sprachen der KI             | Logik- und Regelbasiert                    | Lisp, Prolog                                |
-| Höhere Sprachen  | 4: Anwendungsbezogene Sprachen | Domänenspezifisch                          | SQL                                         |
-| Höhere Sprachen  | 3: Problemorientierte Sprachen | Datenobjekte, Routinen, Kontrollstrukturen | C, C++, C#, Java, JavaScript, Python        |
-| Niedere Sprachen | 2: Assemblersprachen           | Symbolische Befehle                        | X86-Assembler, MIPS-Asembler, ARM-Assembler |
-| Niedere Sprachen | 1: Maschinensprache            | Binärcode                                  | -                                           |
+|                  | Generation                     | Merkmale                                   | Sprachen                                     |
+| ---------------- | ------------------------------ | ------------------------------------------ | -------------------------------------------- |
+| Höhere Sprachen  | 5: Sprachen der KI             | Logik- und Regelbasiert                    | Lisp, Prolog                                 |
+| Höhere Sprachen  | 4: Anwendungsbezogene Sprachen | Domänenspezifisch                          | SQL                                          |
+| Höhere Sprachen  | 3: Problemorientierte Sprachen | Datenobjekte, Routinen, Kontrollstrukturen | C, C++, C#, Java, JavaScript, Python         |
+| Niedere Sprachen | 2: Assemblersprachen           | Symbolische Befehle                        | X86-Assembler, MIPS-Assembler, ARM-Assembler |
+| Niedere Sprachen | 1: Maschinensprache            | Binärcode                                  | -                                            |
 
 ## Programmierparadigmen
 
 Unter einem Programmierparadigma versteht man die grundlegende Herangehensweise,
-Probleme mit Hilfe einer Programmiersprache zu lösen. Aber auch wenn
-Programmiersprachen oft anhand ihrer grundlegenden Merkmale genau einem
-Programmierparadigma zugeordnet werden, unterstützen viele Programmiersprachen
-mehrere Programmierparadigmen. Generell werden die verschiedenen
-Programmierparadigmen oft in zwei große Kategorien eingeteilt: bei imperativen
-Programmierparadigmen steht die Frage _Wie soll das Ergebnis erreicht werden?_
-im Vordergrund, bei deklarativen Programmierparadigmen die Frage _Was soll das
-Ergebnis sein?_. Imperative Programmierparadigmen legen also Schritt für Schritt
-fest, wie das Ergebnis erreicht werden soll, deklarative Programmierparadigmen
-beschreiben das Ergebnis selbst.
+Probleme mit Hilfe einer Programmiersprache zu lösen. Viele Programmiersprachen
+unterstützen dabei mehrere Paradigmen gleichzeitig, auch wenn sie oft einem
+bestimmten Paradigma zugeordnet werden. Generell werden Programmierparadigmen in
+zwei große Kategorien eingeteilt: Bei _imperativen_ Paradigmen steht die Frage
+_Wie soll das Ergebnis erreicht werden?_ im Vordergrund, bei _deklarativen_
+Paradigmen die Frage _Was soll das Ergebnis sein?_ Imperative Paradigmen legen
+also Schritt für Schritt fest, wie ein Ergebnis erreicht wird; deklarative
+Paradigmen beschreiben stattdessen das gewünschte Ergebnis.
 
 | Programmierparadigmen            | Kategorie                  | Fokus                                                                                                                                                                                                                                                            | Beispielsprachen |
 | -------------------------------- | -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
@@ -68,17 +66,16 @@ beschreiben das Ergebnis selbst.
 
 ## Programmausführung
 
-Programme auf einem Computer können auf unterschiedliche Arten ausgeführt
-werden: Compilersprachen übersetzen den Quellcode in eine Datei, die vom
-jeweiligen Betriebssystem ausgeführt werden kann, Interpretersprachen übersetzen
-den Quellcode direkt in den Arbeitsspeicher und führen das Programm sofort aus
-und Just-In-Time Compilersprachen (JIT) übersetzen den Quellcode mit Hilfe eines
-Compilers zunächst in den sogenannten Bytecode und übersetzen diesen bei der
-Ausführung in den Arbeitsspeicher. Compilersprachen wie C und C++ sind dabei
-deutlich performanter und ermöglichen eine sicherere Entwicklung,
-Interpretersprachen wie JavaScript und Python sind dagegen plattformunabhängig
-und Just-In-Time Compliersprachen wie C# und Java vereinen die Vorteile beider
-Welten.
+Programme können auf einem Computer auf unterschiedliche Arten ausgeführt
+werden. Bei _Compilersprachen_ wird der Quellcode vor der Ausführung vollständig
+in eine ausführbare Datei übersetzt. Bei _Interpretersprachen_ wird der
+Quellcode zur Laufzeit direkt ausgeführt, ohne vorherige Übersetzung.
+_Just-In-Time- Compilersprachen_ (JIT) kombinieren beide Ansätze: Der Quellcode
+wird zunächst in einen plattformunabhängigen Bytecode kompiliert, der dann zur
+Laufzeit ausgeführt wird. Compilersprachen wie C und C++ sind dabei besonders
+performant, Interpretersprachen wie JavaScript und Python sind
+plattformunabhängig und JIT-Sprachen wie C# und Java vereinen die Vorteile
+beider Ansätze.
 
 <Tabs>
   <TabItem value="a" label="Compilersprachen" default>

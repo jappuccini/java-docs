@@ -5,16 +5,15 @@ sidebar_position: 150
 tags: [enumerations]
 ---
 
-Bei einer Aufzählung (Enumeration) handelt es sich um eine spezielle Klasse, von
-der nur eine vorgegebene, endliche Anzahl an Instanzen existiert. Diese
-Instanzen werden als _Aufzählungskonstanten_ bezeichnet. Technisch gesehen
-handelt es sich bei Aufzählungskonstanten um öffentliche, statische Konstanten
-vom Typ der Aufzählung.
+Eine Aufzählung (Enumeration) ist eine spezielle Klasse, von der nur eine
+vorgegebene, endliche Anzahl an Instanzen existiert. Diese Instanzen heißen
+_Aufzählungskonstanten_ und sind technisch gesehen öffentliche, statische
+Konstanten vom Typ der Aufzählung selbst.
 
 ## Implementieren von Aufzählungen
 
-Die Definition einer Aufzählung erfolgt analog zur Definition von Klassen, das
-Schlüsselwort hierfür lautet `enum`.
+Eine Aufzählung wird ähnlich wie eine Klasse definiert. Das Schlüsselwort lautet
+`enum`.
 
 ```java title="WeekDay.java" showLineNumbers
 public enum Weekday {
@@ -48,14 +47,12 @@ public enum Weekday {
 
 ## Verwenden von Aufzählungen
 
-Aufzählungen besitzen eine Reihe hilfreicher Methoden:
+Aufzählungen stellen eine Reihe hilfreicher Methoden bereit:
 
-- Die statische Methode `T[] values()` gibt alle Aufzählunskonstanten als Feld
-  zurück
-- Die statische Methode `T valueOf(name: String)` gibt zu einer eingehenden
-  Zeichenkette die dazugehörige Aufzählungskonstante zurück
-- Die Methode `int ordinal()` gibt die Ordnungszahl der Aufzählungskonstanten
-  zurück
+- `T[] values()` — statisch; gibt alle Aufzählungskonstanten als Feld zurück
+- `T valueOf(name: String)` — statisch; gibt die Aufzählungskonstante zur
+  angegebenen Zeichenkette zurück
+- `int ordinal()` — gibt die nullbasierte Ordnungszahl der Konstante zurück
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {

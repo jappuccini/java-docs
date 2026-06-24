@@ -5,14 +5,13 @@ sidebar_position: 131
 tags: [oo]
 ---
 
-Klassen legen die Eigenschafen (Attribute) sowie das Verhalten (Methoden) von
-Objekten fest und stellen damit quasi Baupläne für Objekte dar.
+Klassen legen die Eigenschaften (Attribute) sowie das Verhalten (Methoden) von
+Objekten fest und stellen damit Baupläne für Objekte dar.
 
 ## Sichtbarkeit von Klassen, Attributen und Methoden
 
-Um die Sichtbarkeit von Klassen, Attributen und Methoden zu definieren,
-existieren verschiedene Zugriffsrechte. Die Sichtbarkeit bestimmt, von welchem
-Ort aus Klassen, Attribute und Methoden verwendet bzw. aufgerufen werden dürfen.
+Über _Zugriffsrechte_ wird festgelegt, von welchem Ort aus auf Klassen,
+Attribute und Methoden zugegriffen werden darf.
 
 | Zugriffsrecht | Zugriff aus gleicher Klasse | Zugriff von einer Klasse aus dem gleichen Paket | Zugriff von einer Unterklasse | Zugriff von einer beliebigen Klasse |
 | ------------- | --------------------------- | ----------------------------------------------- | ----------------------------- | ----------------------------------- |
@@ -23,11 +22,11 @@ Ort aus Klassen, Attribute und Methoden verwendet bzw. aufgerufen werden dürfen
 
 ## Definition von Attributen
 
-Die Attribute einer Klasse sind Datenobjekte und werdern daher analog zu
-Variablen und Konstanten definiert. Das Schlüsselwort `final` erlaubt die
-Definition von unveränderlichen Attributen, also Attributen, deren Wert nicht
-geändert werden kann. Die Initialisierung dieser unveränderlichen Attribute
-erfolgt durch [Konstruktoren](classes#definition-von-konstruktoren).
+Die Attribute einer Klasse sind Datenobjekte und werden daher analog zu
+Variablen und Konstanten definiert. Mit dem Schlüsselwort `final` lassen sich
+unveränderliche Attribute definieren, deren Wert nach der Initialisierung nicht
+mehr geändert werden kann. Die Initialisierung dieser Attribute erfolgt im
+[Konstruktor](classes#definition-von-konstruktoren).
 
 ```java title="Computer.java (Auszug)" showLineNumbers
 public class Computer {
@@ -48,17 +47,16 @@ Die Selbstreferenz `this` verweist innerhalb einer Klasse auf das eigene Objekt
 
 ## Definition und Implementierung von Methoden
 
-Methoden sind in der Programmierung eine Verallgemeinerung von mathematischen
-Funktionen. Eine Methode besteht aus einem Methodennamen, einer Liste von
-Eingabeparameter (optional), einem Rückgabewert (optional) sowie dem
-Methodenrumpf. Die Kombination aus Methodenname und den Datentypen der
-Parameterliste bezeichent man als _Signatur einer Methode_.
+Methoden sind in der Programmierung eine Verallgemeinerung mathematischer
+Funktionen. Eine Methode besteht aus einem Namen, einer (optionalen) Liste von
+Eingabeparametern, einem (optionalen) Rückgabewert sowie dem Methodenrumpf. Die
+Kombination aus Methodenname und den Datentypen der Parameterliste bezeichnet
+man als _Signatur_.
 
-Methoden können entweder genau einen Rückgabewert oder keinen Rückgabewert
-besitzen. Methoden mit genau einem Rückgabewert müssen vor dem Methodennamen den
-Datentyp des Rückgabewerts angeben und am Ende des Methodenrumpfes immer die
-Anweisung `return` besitzen, Methoden ohne Rückgabewert müssen dies mit dem
-Schlüsselwort `void` kenntlich machen.
+Methoden können entweder genau einen Rückgabewert oder keinen besitzen. Methoden
+mit einem Rückgabewert müssen vor dem Methodennamen den Rückgabetyp angeben und
+im Methodenrumpf eine `return`-Anweisung enthalten. Methoden ohne Rückgabewert
+werden mit `void` gekennzeichnet.
 
 ```java title="Computer.java (Auszug)" showLineNumbers
 public class Computer {
@@ -88,10 +86,10 @@ public class Computer {
 
 ## Definition überladener Methoden
 
-Gleichnamige Methoden mit unterschiedlichen Parameterlisten einer Klasse werden
-als überladene Methoden bezeichnet. Man spricht in diesem Zusammenhang auch von
-statischer Polymorphie, da der Aufruf gleichnamiger Methoden unterschiedliche
-Ergebnisse liefern kann.
+Gleichnamige Methoden mit unterschiedlichen Parameterlisten in einer Klasse
+werden als _überladene Methoden_ bezeichnet. Dieses Konzept nennt man auch
+_statische Polymorphie_, da der Aufruf gleichnamiger Methoden je nach Parametern
+zu unterschiedlichen Ergebnissen führt.
 
 ```java title="Computer.java (Auszug)" showLineNumbers
 public class Computer {
@@ -115,17 +113,14 @@ public class Computer {
 
 ## Definition von Konstruktoren
 
-Bei Konstruktoren handelt es sich um spezielle Methoden, die zur Initialisierung
-eines Objekts verwendet werden. Konstruktoren heißen wie ihre Klasse und können
-eine beliebige Anzahl an Parametern haben. Allerdings kann für Konstruktoren
-kein Rückgabewert festgelegt werden, da diese implizit die Referenz auf das
-Objekt zurückgeben.
+Konstruktoren sind spezielle Methoden, die zur Initialisierung eines Objekts
+dienen. Sie tragen denselben Namen wie ihre Klasse und können beliebig viele
+Parameter haben. Ein Rückgabetyp wird nicht angegeben, da Konstruktoren implizit
+eine Referenz auf das neue Objekt zurückgeben.
 
-Im Gegensatz zu z.B. C++ existieren in Java keine Destruktoren, die nicht mehr
-benötigte Objekte aus dem Speicher entfernen. Stattdessen läuft im Hintergrund
-der sogenannte Garbage Collector, der nicht mehr benötigte Objekte (also
-Objekte, die nicht mehr über eine Referenzvariable angesprochen werden können)
-löscht.
+Im Gegensatz zu z.B. C++ gibt es in Java keine Destruktoren. Stattdessen
+übernimmt der _Garbage Collector_ im Hintergrund das Aufräumen: Er entfernt
+Objekte aus dem Speicher, auf die keine Referenzvariable mehr zeigt.
 
 ```java title="Computer.java (Auszug)" showLineNumbers
 public class Computer {
@@ -145,24 +140,22 @@ public class Computer {
 
 :::info
 
-Auch Konstruktoren können überladen werden, das heißt eine Klasse kann über
-mehrere Konstruktoren verfügen. Der Aufruf eines Konstruktors innerhalb eines
-anderen Konstruktors erfolgt dabei über die Selbstreferenz `this`.
+Auch Konstruktoren können überladen werden, d.h. eine Klasse kann über mehrere
+Konstruktoren verfügen. Ein Konstruktor kann dabei einen anderen Konstruktor
+derselben Klasse mit `this(...)` aufrufen.
 
 :::
 
 ## Definition statischer Attribute und Methoden
 
-Neben "normalen" Attributen und Methoden kann eine Klasse auch statische
-Attribute und statische Methoden besitzen. Im Gegensatz zu "normalen" Attributen
-existieren statische Attribute nur einmal pro Klasse und besitzen daher für alle
-Objekte dieser Klasse dieselben Werte. Innerhalb einer statischen Methode kann
-nur auf die statischen Attribute der Klasse zugegriffen werden.
+Neben Instanzattributen und -methoden kann eine Klasse auch statische Attribute
+und Methoden besitzen. Statische Attribute existieren nur einmal pro Klasse und
+haben für alle Objekte dieser Klasse denselben Wert. Innerhalb einer statischen
+Methode kann nur auf statische Attribute zugegriffen werden.
 
-Bei der Deklaration von statischen Attributen und statischen Methoden kommt das
-Schlüsselwort `static` zum Einsatz. Für den Zugriff auf ein statisches Attribut
-bzw. den Aufruf einer statischen Methode wird keine Instanziierung benötigt,
-d.h. der der Zugriff bzw. Aufruf erfolgt über den Klassennamen.
+Statische Attribute und Methoden werden mit dem Schlüsselwort `static`
+deklariert. Für den Zugriff ist keine Instanziierung nötig — er erfolgt direkt
+über den Klassennamen.
 
 ```java title="Computer.java (Auszug)" showLineNumbers
 public class Computer {
@@ -183,8 +176,7 @@ public class Computer {
 
 :::info
 
-"Normale" Attribute und Methoden werden auch als Instanzattribute bzw.
-Instanzmethoden bezeichnet, statische Attribute und Methoden auch
-Klassenattribute bzw. Klassenmethoden.
+Instanzattribute und -methoden werden auch als Klassenattribute und
+Klassenmethoden bezeichnet, wenn sie statisch sind.
 
 :::

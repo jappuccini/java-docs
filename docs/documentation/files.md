@@ -5,18 +5,15 @@ sidebar_position: 143
 tags: [java-api, files]
 ---
 
-Die Klasse `File` ermöglicht die Arbeit mit Dateien und Verzeichnissen. Mit
-Hilfe der Methode `boolean exists()` kann beispielsweise geprüft werden, ob ein
-entsprechendes Verzeichnis bzw. eine entsprechende Datei existiert oder nicht.
-Die Klasse bietet zudem M ethoden zum Erstellen und Löschen von Verzeichnissen
-bzw. Dateien. Zum Erzeugen eines File-Objekts wird entweder ein Pfad zu einem
-Verzeichnis bzw. zu einer Datei oder ein _URI_ (Unified Resource Identifier)
-benötigt.
+Die Klasse `File` ermöglicht die Arbeit mit Dateien und Verzeichnissen im
+Dateisystem. Sie bietet Methoden zum Prüfen, Erstellen und Löschen von Dateien
+und Verzeichnissen. Zum Erstellen eines `File`-Objekts wird ein Pfad oder ein
+_URI_ (Uniform Resource Identifier) angegeben.
 
-## Lesen von Dateien mit Hilfe der Klasse _Scanner_
+## Lesen von Dateien mit der Klasse _Scanner_
 
-Zum Lesen einer Datei können entweder [Datenstromklassen](io-streams) oder die
-Klasse `Scanner` verwendet werden.
+Zum zeilenweisen Lesen einer Datei kann neben den
+[Datenstromklassen](io-streams) auch die Klasse `Scanner` verwendet werden.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
@@ -45,10 +42,10 @@ Nach der letzten Verwendung sollte die Methode `void close()` der Klasse
 
 ## Absolute und relative Pfadangaben
 
-Beim Zugriff auf Verzeichnisse bzw. Dateien unterscheidet man zwischen absoluten
-und relativen Pfadangaben. Bei absoluten Pfadangaben wird der vollständige Pfad
-von der Wurzel des jeweiligen Verzeichnissystems bis zum Ziel angegeben, bei
-relativen der Weg von einem festgelegten Bezugspunkt bis zum Ziel.
+Bei Pfadangaben unterscheidet man zwischen absoluten und relativen Pfaden. Ein
+absoluter Pfad beschreibt den vollständigen Weg vom Wurzelverzeichnis bis zur
+Zieldatei. Ein relativer Pfad gibt den Weg ausgehend von einem festgelegten
+Bezugspunkt an.
 
 :::info
 
@@ -67,8 +64,8 @@ flowchart LR
    documents[documents] --> documentB[DocumentB.txt]@{ shape: doc}
 ```
 
-Die Datei `DocumentA.txt` kann entweder über den absoluten Pfad
-`C:\Temp\DocumentA.txt` oder über den relativen Pfad `documents/DocumentA.txt`
-(Bezugspunkt ist das Verzeichnis `Project`); die Datei `DocumentB.txt` über den
-absoluten Pfad `C:\workspace\Project\documents\documentB.txt` oder über den
-relativen Pfad `../../Temp/documentA.txt` angesprochen werden.
+Die Datei `DocumentA.txt` kann über den absoluten Pfad `C:\Temp\DocumentA.txt`
+oder den relativen Pfad `../../Temp/DocumentA.txt` (Bezugspunkt: `Project`)
+angesprochen werden. Die Datei `DocumentB.txt` über den absoluten Pfad
+`C:\workspace\Project\documents\DocumentB.txt` oder den relativen Pfad
+`documents/DocumentB.txt`.

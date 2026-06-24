@@ -8,18 +8,13 @@ tags: [gui, javafx]
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Java stellt mit dem _AWT_ (Abstract Window Toolkit) und _Swing_ zwei
-Bibliotheken zur Entwicklung grafischer Benutzeroberflächen zur Verfügung. Swing
-baut dabei auf dem älteren AWT auf und verwendet teilweise Klasse daraus. Der
-Nachfolger von Swing heißt JavaFX und stellt im Gegensatz zu AWT und Swing keine
-Bibliothek, sondern ein Framework zur Entwicklung plattformübergreifender
-grafischer Benutzeroberflächen dar. Unter einem Framework versteht man ein
-Programmiergerüst, welches die Architektur für die Anwendung vorgibt und den
-Kontrollfluss der Anwendung steuert. So werden die Funktionen einer Anwendung
-beim Framework registriert, welches die Funktionen zu einem späteren Zeitpunkt
-aufruft, d.h. die Steuerung des Kontrollfluss obliegt nicht der Anwendung,
-sondern dem Framework. Diese Umkehr der Steuerung kann auch als Anwendung des
-Hollywood-Prinzips (_Don´t call us, we´ll call you_) verstanden werden.
+Java bietet mit _AWT_ (Abstract Window Toolkit) und _Swing_ zwei ältere
+Bibliotheken für grafische Benutzeroberflächen. Der Nachfolger beider ist
+_JavaFX_ — ein Framework für plattformübergreifende GUIs. Als Framework gibt
+JavaFX die Architektur vor und steuert den Kontrollfluss nach dem Prinzip der
+_Inversion of Control_: Statt dass die Anwendung JavaFX aufruft, registriert sie
+ihre Funktionen beim Framework, das sie dann aufruft — das sogenannte
+Hollywood-Prinzip: _Don't call us, we'll call you_.
 
 :::info
 
@@ -30,11 +25,10 @@ eigenständiges SDK (Software Development Kit) dar.
 
 ## Aufbau und Lebenszyklus von JavaFX-Anwendungen
 
-JavaFX-Anwendungen bestehen aus einer oder mehreren Bühnen (Stages), die
-beliebig vielen Szenen (Scenes) enthalten können, wobei jede Szene wiederum
-beliebig viele Bildschirmelemente (Nodes) enthalten kann. Jede JavaFX-Anwendung
-ist eine Unterklasse der Klasse `Application`. Diese stellt die verschiedenen
-Lebenszyklus-Methoden der JavaFX-Anwendung bereit.
+Eine JavaFX-Anwendung besteht aus Bühnen (Stages), die Szenen (Scenes)
+enthalten, die wiederum Bildschirmelemente (Nodes) beinhalten. Jede
+JavaFX-Anwendung erbt von der Klasse `Application`, die den Lebenszyklus
+verwaltet:
 
 - Die Methode `void launch(args: String[])` speichert die Aufrufparameter,
   erzeugt ein Objekt der eigenen Klasse und ruft die weiteren
@@ -48,14 +42,12 @@ Lebenszyklus-Methoden der JavaFX-Anwendung bereit.
 
 ## Definition von Szenen
 
-Die Definition einer Szene (View) kann entweder objektorientiert oder deklarativ
-mit Hilfe von FXML-Dokumenten erfolgen. FXML stellt eine auf XML-basierende
-Sprache dar und ermöglicht eine klare Trennung zwischen Layout und Code. XML
-(Extensible Markup Language) wiederum stellt eine Auszeichnungssprache zur
-Beschreibung strukturierter Daten dar.
+Eine Szene (View) kann objektorientiert im Code oder deklarativ mit
+FXML-Dokumenten definiert werden. FXML ist eine XML-basierte
+Beschreibungssprache, die eine klare Trennung zwischen Layout und Code
+ermöglicht.
 
-Mit Hilfe spezifischer JavaFX-Eigenschaften wird eine Verbindung zwischen der
-Szene und der Ereignisbehandler-Klasse hergestellt:
+JavaFX-spezifische Eigenschaften verknüpfen Szene und Controller:
 
 - Bildschirmelementen können über die Eigenschaft `fx:id` IDs zugewiesen werden,
   über die die Ereignisbehandler-Klasse auf die jeweiligen Elemente zugreifen
@@ -115,14 +107,10 @@ Szene und der Ereignisbehandler-Klasse hergestellt:
 
 ## Aufruf von Szenen
 
-Die statische Methode `Parent load(location: URL)` der Klasse `FXMLLoader`
-überführt das angegebene FXML-Dokument in einen Szenegraphen und gibt den
-dazugehörigen Wurzelknoten vom Typ `Parent` zurück, mit dessen Hilfe
-anschließend die Szene erstellt und angezeigt werden kann. Zusätzlich
-instanziiert der FXML-Loader den Controller und ruft bei der Anzeige der Szene
-die (optionale) Methode
-`void initialize(location: URL, resources: ResourceBundle)` der entsprechenden
-Ereignisbehandler-Klasse auf.
+Die Methode `Parent load(location: URL)` der Klasse `FXMLLoader` lädt ein
+FXML-Dokument, erstellt den Szenegraphen und gibt den Wurzelknoten zurück. Der
+FXML-Loader instanziiert dabei automatisch den Controller und ruft bei Anzeige
+der Szene dessen `initialize()`-Methode auf.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass extends Application {
@@ -145,20 +133,14 @@ public class MainClass extends Application {
 
 ## Implementierung von Ereignisbehandler-Klassen
 
-In den Ereignisbehandler-Klassen (Controller) werden die Behandlermethoden
-implementiert. Diese müssen zwingend einen Parameter vom Typ des Ereignisses
-besitzen (z.B. `ActionEvent`), mit dessen Hilfe auf das ausgelöste Ereignis
-zugegriffen werden kann. Das Verknüpfen von Attributen der
-Ereignisbehandler-Klasse mit den Elementen des FXML-Dokuments erfolgt über die
-Annotation `@FXML` und der Namensgleichheit zwischen den Attributen der
-Ereignisbehandler-Klasse sowie den festgelegten Ids der entsprechenden Elemente
-des FXML-Dokuments.
+In den Controller-Klassen werden die Behandlermethoden implementiert. Jede
+Behandlermethode muss einen Parameter vom Typ des Ereignisses besitzen (z.B.
+`ActionEvent`). Die Verknüpfung von Attributen der Controller-Klasse mit
+FXML-Elementen erfolgt über die Annotation `@FXML` und übereinstimmende Namen
+zwischen Attributen und `fx:id`-Werten im FXML-Dokument.
 
-Der Wechsel von Szenen erfolgt über die Methode `void setScene(value: Scene)`
-der Klasse `Window`. Die Methode `Object getSource()` der Klasse `ActionEvent`
-gibt das Bildschirmelement zurück, welches das Ereignis ausgelöst hat; die
-Methode `Window getWindow()` der Klasse `Scene` die Bühne, auf der die aktuelle
-Szene aufgeführt wird.
+Der Szenenwechsel erfolgt über `void setScene(value: Scene)` der Klasse
+`Window`.
 
 <Tabs>
   <TabItem value="a" label="InputController" default>
@@ -225,10 +207,9 @@ Szene aufgerufen und ermöglicht es, die Szene dynamisch anzupassen.
 
 ## Implementierung von Model-Klassen
 
-Model-Klassen sind für die zentrale Verwaltung der Daten zuständig. Da die
-verschiedenen Klassen einer JavaFX-Anwendung nur lose miteiander gekoppelt sind,
-kann über das Entwurfsmuster _Singleton_ sichergestellt werden, dass zur
-Model-Klasse genau ein Objekt, das sogenannte Singleton, zur Laufzeit existiert.
+Model-Klassen verwalten die Anwendungsdaten zentral. Da die Klassen einer
+JavaFX-Anwendung nur lose gekoppelt sind, sorgt das Entwurfsmuster _Singleton_
+dafür, dass zur Laufzeit genau ein Model-Objekt existiert.
 
 ```java title="Model.java" showLineNumbers
 public class Model {

@@ -2,24 +2,23 @@
 title: Listen
 description: ''
 sidebar_position: 215
-tags: [collections, namess]
+tags: [collections, lists]
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Die Java API stellt unter Anderem die Schnittstelle `List<E>` sowie die Klassen
-`ArrayList<E>`, `LinkedList<E>` und `Arrays` zur Verfügung, mit deren Hilfe
-Listen realisiert werden. Unter einer Liste versteht man eine geordnete Folge
-von Elementen, die auch doppelt enthalten sein können. Der Zugriff auf die
-Elemente erfolgt über den Index oder sequentiell.
+Eine Liste ist eine geordnete Folge von Elementen, die auch doppelte Einträge
+enthalten kann. Der Zugriff erfolgt über den Index oder sequentiell. Die Java
+API stellt dafür die Schnittstelle `List<E>` sowie die Klassen `ArrayList<E>`,
+`LinkedList<E>` und `Arrays` bereit.
 
 <Tabs>
   <TabItem value="a" label="Unveränderbare Listen" default>
 
-Die Schnittstelle `List<E>` bietet verschiedene Fabrikmethoden zum Erzeugen
-unveränderbarer Listen. Unveränderbar bedeutet, dass weder die Liste selbst noch
-ihre Elemente geändert werden können.
+Die Schnittstelle `List<E>` bietet Fabrikmethoden zum Erzeugen unveränderlicher
+Listen. Unveränderbar bedeutet, dass weder Elemente hinzugefügt, entfernt noch
+ersetzt werden können.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
@@ -29,9 +28,9 @@ public class MainClass {
 
       System.out.println(names.size());
       System.out.println(names.get(0));
-      names.set(0, "Max"); // Laufzeitfehler
-      names.add("Heidi"); // Laufzeitfehler
-      names.remove(0); // Laufzeitfehler
+      names.set(0, "Max"); // Laufzeitfehler: Liste ist unveränderbar
+      names.add("Heidi"); // Laufzeitfehler: Liste ist unveränderbar
+      names.remove(0); // Laufzeitfehler: Liste ist unveränderbar
    }
 
 }
@@ -46,9 +45,10 @@ Fabrikmethoden sind Methoden, die Objekte erzeugen.
   </TabItem>
   <TabItem value="b" label="Veränderbare Listen fixer Größe">
 
-Die Klasse `Arrays` stellt neben Methoden zum Sortieren und Durchsuchen von
-Feldern auch eine Methode zum Erzeugen veränderbarer Listen fixer Größe zur
-Verfügung.
+Die Klasse `Arrays` bietet neben Methoden zum Sortieren und Durchsuchen von
+Feldern auch eine Methode zum Erzeugen veränderbarer Listen fixer Größe. Die
+Anzahl der Elemente ist dabei festgelegt; einzelne Elemente lassen sich jedoch
+ersetzen.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
@@ -58,9 +58,9 @@ public class MainClass {
 
       System.out.println(names.size());
       System.out.println(names.get(0));
-      names.set(0, "Max");
-      names.add("Heidi"); // Laufzeitfehler
-      names.remove(0); // Laufzeitfehler
+      names.set(0, "Max"); // Element ersetzen ist erlaubt
+      names.add("Heidi"); // Laufzeitfehler: Größe ist fest
+      names.remove(0); // Laufzeitfehler: Größe ist fest
    }
 
 }
@@ -69,15 +69,16 @@ public class MainClass {
   </TabItem>
   <TabItem value="c" label="Veränderbare Listen dynamischer Größe">
 
-Die Klasse `ArrayList<E>` stellt eine veränderbare Liste dynamischer Größe auf
-Basis eine Feldes dar, die Klasse `LinkedList<E>` eine veränderbare Liste
-dynamischer Größe auf Basis doppelt verketteter Elemente.
+Die Klasse `ArrayList<E>` implementiert eine veränderbare Liste auf Basis eines
+Feldes, die Klasse `LinkedList<E>` auf Basis doppelt verketteter Knoten. Beide
+unterstützen das Hinzufügen, Ersetzen und Entfernen von Elementen sowie eine
+dynamische Größe.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
    public static void main(String[] args) {
-      List<String> names = new ArrayList<>(); // = new LinkedList<>();
+      List<String> names = new ArrayList<>(); // alternativ: new LinkedList<>()
       names.add("Hans");
       names.add("Peter");
       names.add("Lisa");
@@ -94,9 +95,10 @@ public class MainClass {
 
 :::info
 
-Eine feldbasierte Liste ist bei wahlfreiem Zugriff schneller als eine verkettete
-Liste; eine verkettete Liste ist bei Anfüge- und Löschoperationen (insbesondere
-bei großen Elementzahlen) schneller als eine feldbasierte Liste.
+Eine feldbasierte Liste (`ArrayList`) ist bei wahlfreiem Zugriff über den Index
+schneller. Eine verkettete Liste (`LinkedList`) ist bei Einfüge- und
+Löschoperationen in der Mitte der Liste schneller, da keine Elemente verschoben
+werden müssen.
 
 :::
 

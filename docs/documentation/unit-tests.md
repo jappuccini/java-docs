@@ -5,23 +5,17 @@ sidebar_position: 320
 tags: [unit-tests]
 ---
 
-Komponententests (Unit Tests) werden zum Testen einzelner, abgeschlossener
-Softwarebausteine verwendet. JUnit ist ein weit verbreitetes Framework zur
-Erstellung dieser Komponententests bzw. zum automatisierten Testen von Klassen
-und Methoden in Java. Die aktuelle Version _JUnit 5_ stellt eine Kombination
-verschiedener Module der Projekte _JUnit Platform_, _JUnit Jupiter_ sowie _JUnit
-Vintage_ dar. Unter einem Framework versteht man ein Programmiergerüst, welches
-die Architektur für die Anwendung vorgibt und den Kontrollfluss der Anwendung
-steuert. Die Arbeitsweise von Frameworks wird als _Inversion of Control_
-bezeichnet: Die Funktionen einer Anwendung werden beim Framework registriert,
-welches die Funktionen zu einem späteren Zeitpunkt aufruft, d.h. die Steuerung
-des Kontrollfluss obliegt nicht der Anwendung, sondern dem Framework. Die Umkehr
-der Steuerung kann auch als Anwendung des Hollywood-Prinzips (_Don´t call us,
-we´ll call you_) verstanden werden.
+Komponententests (Unit Tests) testen einzelne, abgeschlossene Softwarebausteine
+isoliert. JUnit ist das am weitesten verbreitete Framework für Unit Tests in
+Java. Die aktuelle Version _JUnit 5_ setzt sich aus den Modulen _JUnit
+Platform_, _JUnit Jupiter_ und _JUnit Vintage_ zusammen. Als Framework gibt
+JUnit die Architektur und den Kontrollfluss der Tests vor (_Inversion of
+Control_): Die Testmethoden werden beim Framework registriert, und JUnit ruft
+sie auf — nach dem Hollywood-Prinzip: _Don't call us, we'll call you_.
 
 ## Implementieren einer Testklasse
 
-JUnit-Testklassen werden mit Hilfe entsprechender Annotationen implementiert:
+JUnit-Testklassen werden durch spezielle Annotationen gesteuert:
 
 - Die Annotationen `@Test` und `@ParameterizedTest` definieren einfache bzw.
   parametrisierte Testmethoden
@@ -37,10 +31,10 @@ JUnit-Testklassen werden mit Hilfe entsprechender Annotationen implementiert:
 
 ## Zusicherungen (Assertions)
 
-Die Klasse `Assertions` stellt verschiedene Methoden bereit, die immer dann eine
-Ausnahme vom Typ `AssertionError` auslösen, wenn das Ergebnis eines
-Methodenaufrufs nicht wie erwartet ausgefallen ist. Eine Ausnahme vom Typ
-`AssertionError` führt dazu, dass der Test als nicht erfolgreich gewertet wird.
+Die Klasse `Assertions` stellt Methoden bereit, die einen `AssertionError`
+auslösen, wenn das tatsächliche Ergebnis nicht dem erwarteten Ergebnis
+entspricht. Schlägt eine Zusicherung fehl, wird der Test als nicht erfolgreich
+gewertet.
 
 | Assert-Methode                                                   | Bedeutung                                   |
 | ---------------------------------------------------------------- | ------------------------------------------- |
@@ -56,8 +50,8 @@ Methodenaufrufs nicht wie erwartet ausgefallen ist. Eine Ausnahme vom Typ
 
 ## Beispiel
 
-Die Klasse `Calculator` stellt mehrere Methoden bereit, die getestet werden
-sollen.
+Die Klasse `Calculator` stellt einfache mathematische Operationen bereit, die
+mit JUnit getestet werden sollen.
 
 ```java title="Calculator.java" showLineNumbers
 public class Calculator {
@@ -79,10 +73,10 @@ public class Calculator {
 }
 ```
 
-Die statische Methode `setUp()` der Testklasse `CalculatorTest` stellt sicher,
-dass vor der Ausführung der Testmethoden ein Taschenrechner-Objekt erzeugt wird.
-In den Testmethoden werden verschiedene Testfälle wie z.B. die Division durch
-Null getestet.
+Die Methode `setUp()` der Testklasse `CalculatorTest` initialisiert das
+Taschenrechner-Objekt vor allen Tests. Die Testmethoden decken verschiedene
+Szenarien ab, darunter die Multiplikation mit null, Absolutwerte und die
+Division durch null.
 
 ```java title="MainClass.java" showLineNumbers
 public class CalculatorTest {
@@ -119,10 +113,9 @@ public class CalculatorTest {
 
 :::info
 
-Für die Benennungen von Testmethoden wird in der Regel versucht, die
-wesentlichen Informationen eines Tests (Name der zu testenden Methode,
-vorgegebener Zustand, zu erwartendes Verhalten) in den Methodennamen zu
-integrieren. Zusätzlich können Schlüsselwörter wie _Should_, _When_, oder _Then_
-verwendet werden.
+Für die Benennung von Testmethoden hat sich das Muster
+`methodName_zustand_erwartung` bewährt (z.B.
+`divide_byZero_ArithmeticException`). Zusätzlich können Schlüsselwörter wie
+_should_, _when_ oder _then_ eingesetzt werden.
 
 :::

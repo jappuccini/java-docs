@@ -8,15 +8,14 @@ tags: [lombok]
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-[Lombok](https://projectlombok.org/) stellt eine externe Java-Bibliothek dar,
-die das Erstellen von Boilerplate-Code überflüssig macht. Repetitive Methoden
-wie Konstruktoren, Getter, Setter und die Objekt-Methoden müssen nicht manuell
-implementiert werden, sondern werden beim Kompilieren generiert.
+[Lombok](https://projectlombok.org/) ist eine externe Java-Bibliothek, die
+wiederkehrenden Boilerplate-Code automatisch generiert. Konstruktoren, Getter,
+Setter und die `Object`-Methoden werden nicht manuell geschrieben, sondern beim
+Kompilieren durch Annotationen erzeugt.
 
 ## Annotationen
 
-Durch entsprechende Annotationen kann gesteuert werden, welche Methoden wie
-generiert werden sollen.
+Über Annotationen wird gesteuert, welche Methoden Lombok generieren soll.
 
 | Annotation                 | Beschreibung                                                                                       |
 | -------------------------- | -------------------------------------------------------------------------------------------------- |
@@ -30,8 +29,9 @@ generiert werden sollen.
 
 ## Beispiel
 
-Für die Klasse `Student` werden mit Hilfe von Lombok-Annotationen Konstruktoren,
-Setter und Getter sowie die Object-Methoden generiert.
+Die Klasse `Student` wird mit Lombok-Annotationen versehen, sodass
+Konstruktoren, Getter, Setter und die `Object`-Methoden automatisch generiert
+werden.
 
 <Tabs>
   <TabItem value="a" label="Fachklasse" default>

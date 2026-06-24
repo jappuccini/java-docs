@@ -5,17 +5,17 @@ sidebar_position: 190
 tags: [object]
 ---
 
-Alle Klassen in Java sind letztlich Unterklassen der Klasse `Object`. Daher wird
-diese auch als die Mutter aller Klassen bezeichnet. Die Klasse vererbt ihren
+Alle Klassen in Java sind letztlich Unterklassen der Klasse `Object`, die daher
+auch als die _Mutter aller Klassen_ bezeichnet wird. Sie vererbt ihren
 Unterklassen unter anderem die Methoden `boolean equals(object: Object)`,
-`int hashCode()` und `String toString()`. Diese drei Methoden sollte jede
-Unterklasse sinnvoll überschreiben.
+`int hashCode()` und `String toString()`. Diese drei Methoden sollte jede eigene
+Klasse sinnvoll überschreiben.
 
 ## Die Methode _boolean equals(object: Object)_
 
-Die Methode `boolean equals(object: Object)` prüft zwei Objekte auf Gleichheit.
-Zwei Objekte gelten dabei in der Regel als gleich, wenn all ihre Attribute
-gleich sind.
+Die Methode `boolean equals(object: Object)` prüft zwei Objekte auf inhaltliche
+Gleichheit. Zwei Objekte gelten in der Regel als gleich, wenn alle ihre
+Attribute übereinstimmen.
 
 ```java title="Computer.java (Auszug)" showLineNumbers
 public class Computer {
@@ -41,10 +41,10 @@ public class Computer {
 
 ## Die Methode _int hashCode()_
 
-Die Methode `int hashCode()` liefert den Hashcode des aktuellen Objektes zurück.
-Die Methode sollte so überschrieben werden, dass gleiche Objekte den gleichen
-Hashwert zurückgeben. Dies ist vor allem beim Arbeiten mit Hash-basierten
-Datensammlungen wie z.B. der Klasse `HashMap<K, V>` notwendig.
+Die Methode `int hashCode()` liefert den Hashcode des aktuellen Objekts zurück.
+Sie sollte so überschrieben werden, dass inhaltlich gleiche Objekte denselben
+Hashwert liefern. Das ist insbesondere beim Arbeiten mit Hash-basierten
+Datensammlungen wie `HashMap<K, V>` notwendig.
 
 ```java title="Computer.java (Auszug)" showLineNumbers
 public class Computer {
@@ -60,19 +60,18 @@ public class Computer {
 
 :::info
 
-Die statische Methode `int hash(values: Object...)` der Klasse `Objects` liefert
-eine einfache Möglichkeit zur Implementierung der Methode `boolean hashCode()`.
+Die statische Methode `int hash(values: Object...)` der Klasse `Objects` bietet
+eine einfache Möglichkeit zur Implementierung von `hashCode()`.
 
 :::
 
 ## Die Methode _String toString()_
 
-Die Methode `String toString()` liefert eine eindeutige Kennung des Objektes in
-der Form _[Vollständiger Klassenname]_@_[Adresse des Objektes im Hauptspeicher
-in hexadezimaler Notation]_ zurück. Die Methode sollte so überschrieben werden,
-dass alle relevanten Attribute des Objektes als Zeichenkette zurückgegeben
-werden. In der Regel geschieht dies in der Form _[Klassenname]
-[[Attribut]=[Attributswert], ...]_.
+Die Methode `String toString()` liefert eine eindeutige Kennung des Objekts in
+der Form _[vollständiger Klassenname]_@_[Adresse im Hauptspeicher in
+hexadezimaler Notation]_ zurück. Üblicherweise wird sie so überschrieben, dass
+alle relevanten Attribute als Zeichenkette zurückgegeben werden — typischerweise
+in der Form _[Klassenname][Attribut]=[Wert], ...]_.
 
 ```java title="Computer.java" showLineNumbers
 public class Computer {

@@ -5,14 +5,12 @@ sidebar_position: 347
 tags: [trees]
 ---
 
-Bäume sind abstrakte Datenstrukturen zum Darstellen von hierarchischen
-Strukturen. Sie bestehen i.d.R. aus beliebig vielen Elementen (Knoten), sowie
-Verbindungen zwischen den Elementen (Kanten). Den Ursprungsknoten bezeichnet man
-als _Wurzelknoten_, untergeordnete Knoten als _Kindknoten_, übergeordnete Knoten
-als _Elternknoten_ und Kinder ohne weitere untergeordnete Knoten als
-_Blattknoten_. Bäume sind im Prinzip Erweiterungen von Listen: in einer Liste
-hat ein Knoten maximal einen Nachfolger, in einem Baum kann ein Knoten mehrere
-Nachfolger besitzen.
+Bäume sind abstrakte Datenstrukturen zur Darstellung hierarchischer Beziehungen.
+Sie bestehen aus Knoten und Kanten zwischen den Knoten. Der oberste Knoten heißt
+_Wurzelknoten_, Knoten ohne Kindknoten heißen _Blattknoten_, dazwischenliegende
+Knoten sind gleichzeitig _Kind-_ und _Elternknoten_. Bäume erweitern das Konzept
+der Liste: Während ein Listenknoten maximal einen Nachfolger hat, kann ein
+Baumknoten mehrere Nachfolger besitzen.
 
 ```mermaid
 flowchart
@@ -43,10 +41,9 @@ Knoten und unter dem Grad eines Knotens die Anzahl seiner Kindknoten.
 
 ## Binärbäume
 
-Bei Binärbäumen darf jeder Knoten maximal zwei Nachfolger besitzen. Besitzen
-alle inneren Knoten eines Binärbaumes den Grad 2, spricht man von einem _vollen
-Binärbaum_, besitzen alle Blätter eines vollen Binärbaum die gleiche Tiefe,
-spricht man von einem _vollständigen Binärbaum_.
+Bei Binärbäumen hat jeder Knoten maximal zwei Nachfolger. Hat jeder innere
+Knoten genau zwei Kinder, spricht man von einem _vollen Binärbaum_. Haben dabei
+alle Blattknoten dieselbe Tiefe, heißt er _vollständiger Binärbaum_.
 
 ```mermaid
 flowchart TD
@@ -89,15 +86,14 @@ flowchart TD
 
 ## Traversierung von Bäumen
 
-Unter der Traversierung eines Baumes versteht man das Durchlaufen aller Elemente
-eines Baumes. Im Gegensatz zu Listen, wo es genau eine natürliche Ordnung für
-den Durchlauf der Elemente gibt (von vorne nach hinten), existieren bei Bäumen
-mehrere sinnvolle Reihenfolgen:
+Unter Traversierung versteht man das systematische Durchlaufen aller Knoten
+eines Baumes. Anders als bei Listen, wo die Reihenfolge eindeutig ist, gibt es
+bei Bäumen mehrere sinnvolle Durchlaufreihenfolgen:
 
-- Beim Tiefendurchlauf wird ausgehend vom Wurzelknoten zunächst der linke
-  Teilbaum mit Tiefendurchlauf besucht, anschließend der rechte Teilbaum
-- Beim Breitendurchlauf werden die Knoten nach der Breite des Baumes geordnet
-  besucht
+- Beim Tiefendurchlauf wird ausgehend vom Wurzelknoten zuerst der linke, dann
+  der rechte Teilbaum rekursiv besucht.
+- Beim Breitendurchlauf werden alle Knoten ebenenweise von oben nach unten
+  besucht.
 
 ```mermaid
 flowchart TD

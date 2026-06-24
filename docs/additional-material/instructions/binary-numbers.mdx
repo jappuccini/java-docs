@@ -10,8 +10,8 @@ import TabItem from '@theme/TabItem';
 
 ## Binärzahlen in Dezimalzahlen umwandeln
 
-Zur Umwandlung einer Binärzahl in eine Dezimalzahl muss das Produkt aus
-Stellenwert und Ziffer jeder Stelle aufsummiert werden.
+Um eine Binärzahl in eine Dezimalzahl umzuwandeln, wird das Produkt aus
+Stellenwert und Ziffer jeder Stelle aufsummiert.
 
 | Potenz         | Stellenwert | Ziffer | Stellenwert \* Ziffer |
 | -------------- | ----------- | ------ | --------------------- |
@@ -30,8 +30,8 @@ Stellenwert und Ziffer jeder Stelle aufsummiert werden.
 
 ## Natürliche Dezimalzahlen in Binärzahlen umwandeln
 
-Zur Umwandlung einer natürlichen Dezimalzahl in eine Binärzahl kann entweder
-eine Stellenwerttabelle oder das Divisions-Verfahren verwendet werden.
+Eine natürliche Dezimalzahl lässt sich entweder mit einer Stellenwerttabelle
+oder dem Divisions-Verfahren in eine Binärzahl umwandeln.
 
 Im Beispiel soll die Zahl 525<sub>10</sub> in eine Binärzahl umgewandelt werden.
 
@@ -76,10 +76,9 @@ Im Beispiel soll die Zahl 525<sub>10</sub> in eine Binärzahl umgewandelt werden
 
 ## Bilden des Zweierkomplements
 
-Zum Bilden des Zweierkomplements wird zunächst das Einerkomplement gebildet,
-d.h. alle Bits werden invertiert. Hierbei ist zu beachten, dass einer positiven
-Binärzahl unendlich viele Nullen vorangestellt sind. Anschließend wird noch eine
-1 hinzuaddiert.
+Das Zweierkomplement entsteht, indem zunächst das Einerkomplement gebildet wird
+(alle Bits werden invertiert) und anschließend eine 1 hinzuaddiert wird. Einer
+positiven Binärzahl sind dabei unendlich viele Nullen vorangestellt.
 
 Im Beispiel soll die Zahl -95<sub>10</sub> im Zweierkomplement dargestellt
 werden.
@@ -90,7 +89,7 @@ werden.
 | Invertieren                                        | 1             | ... | 1             | 0             | 1             | 0             | 0             | 1             | 1             | 0             |
 | 1 Addieren                                         | 1             | ... | 1             | 0             | 1             | 0             | 0             | 1             | 1             | 1             |
 
-:::info
+:::note
 
 Die Rückumwandlung erfolgt analog.
 
@@ -98,8 +97,8 @@ Die Rückumwandlung erfolgt analog.
 
 ## Reelle Dezimalzahlen in Binärzahlen umwandeln
 
-Zur Umwandlung einer reellen Dezimalzahl in eine Binärzahl kann entweder eine
-Stellenwerttabelle oder das Multiplikations-Verfahren verwendet werden.
+Eine reelle Dezimalzahl lässt sich entweder mit einer Stellenwerttabelle oder
+dem Multiplikations-Verfahren in eine Binärzahl umwandeln.
 
 Im Beispiel soll die Zahl 0,1<sub>10</sub> in eine Binärzahl umgewandelt werden.
 
@@ -138,12 +137,12 @@ Im Beispiel soll die Zahl 0,1<sub>10</sub> in eine Binärzahl umgewandelt werden
 
 ## Reelle Dezimalzahlen in Gleitkommazahlen umwandeln
 
-Bei der Umwandlung einer reellen Zahl in eine Gleitkommazahl werden zunächst
-Vor- und Nachkommazahl in Binärzahlen umgewandelt. Anschließend wird durch
-Gleiten bzw. Verschieben des Kommas zur führenden 1, dem Runden auf das LSB
-sowie dem Entfernen der führenden 1 die Mantisse ermittelt. Nach dem Ermitteln
-der Mantisse wird zum Exponenten noch der Bias (127 bei einfacher Genauigkeit,
-1023 bei doppelter Genauigkeit) hinzuaddiert sowie das Vorzeichen umgewandelt.
+Bei der Umwandlung einer reellen Zahl in eine Gleitkommazahl werden Vor- und
+Nachkommazahl zunächst in Binärzahlen umgewandelt. Durch Verschieben des Kommas
+zur führenden 1, Runden auf das LSB und Entfernen der führenden 1 entsteht die
+Mantisse. Zum Exponenten wird anschließend der Bias addiert (127 bei einfacher,
+1023 bei doppelter Genauigkeit), und das Vorzeichen wird als einzelnes Bit
+gespeichert.
 
 Im Beispiel soll die Zahl -27,04<sub>10</sub> in eine Gleitkommazahl mit
 einfacher Genauigkeit umgewandelt werden.
@@ -163,15 +162,13 @@ einfacher Genauigkeit umgewandelt werden.
 
 ## Binärzahlen addieren und subtrahieren
 
-Für die Addition von Binärzahlen gelten folgende Regeln:
+Für die Addition von Binärzahlen gelten vier Regeln. Die Subtraktion erfolgt
+durch Addition des Zweierkomplements: `a - b = a + (-b)`.
 
 - Fall 1: `0 + 0 = 0`
 - Fall 2: `0 + 1 = 1`
 - Fall 3: `1 + 0 = 1`
 - Fall 4: `1 + 1 = 0 (Übertrag 1)`
-
-Die Subtraktion von Binärzahlen erfolgt durch die Addition des
-Zweierkomplements. Es gilt: `a - b = a + (-b)`.
 
 <Tabs>
   <TabItem value="a" label="a + b" default>
@@ -228,9 +225,9 @@ Im Beispiel werden die Zahlen -3 und -47 addiert.
   </TabItem>
 </Tabs>
 
-:::info
+:::note
 
-Der bei der Addition des Zweierkomplements auftretende mögliche Stellenüberlauf
-wird ignoriert.
+Der bei der Addition des Zweierkomplements möglicherweise auftretende
+Stellenüberlauf wird ignoriert.
 
 :::

@@ -5,11 +5,12 @@ sidebar_position: 140
 tags: [java-api]
 ---
 
-Die _Java API_ (Java Application Programming Interface) stellt eine umfangreiche
-Bibliothek wichtiger Java-Klassen dar. Neben dem eigentlichen Quellcode stellt
-die Java API auch detaillierte Informationen zu den Klassen (Paketzugehörigkeit,
-Attribute, Methoden,…) als Javadoc bereit. Entwicklungsumgebungen wie Eclipse
-bieten meist eine vollständige Integration der Java API an.
+Die _Java API_ (Application Programming Interface) ist eine umfangreiche
+Standardbibliothek, die fertige Klassen und Schnittstellen für häufige
+Programmieraufgaben bereitstellt. Zusätzlich zum Quellcode enthält die Java API
+eine Javadoc-Dokumentation mit Informationen zu Paketen, Klassen, Attributen und
+Methoden. Entwicklungsumgebungen wie Eclipse oder IntelliJ IDEA integrieren die
+Java API direkt in die Code-Vervollständigung.
 
 ## Wichtige Klassen und Schnittstellen der Java API
 
@@ -36,14 +37,13 @@ bieten meist eine vollständige Integration der Java API an.
 
 ## Die Javadoc
 
-Die Javadoc ist ein Werkzeug zur Software-Dokumentation und erstellt aus den
+Die Javadoc ist ein Werkzeug zur Software-Dokumentation. Es erstellt aus den
 öffentlichen Deklarationen von Klassen, Schnittstellen, Attributen und Methoden
-sowie eventuell vorhandenen
+sowie optionalen
 [Dokumentationskommentaren](class-structure#kommentare-und-dokumentation)
-HTML-Seiten. Um die Navigation innerhalb der Dokumentationsdateien zu
-erleichtern, werden zusätzlich verschiedene Index- und Hilfsdateien generiert.
-HTML-Tags in den Dokumentationskommentaren ermöglichen die Formatierung der
-Dokumentation.
+HTML-Seiten. Zur einfacheren Navigation werden zusätzlich Index- und
+Hilfsdateien generiert. HTML-Tags in den Kommentaren ermöglichen die
+Formatierung der Dokumentation.
 
 ```java title="Computer.java (Auszug)" showLineNumbers
 /**

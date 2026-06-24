@@ -8,23 +8,20 @@ tags: [git]
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Git stellt eine Software zur Verwaltung von Dateien mit integrierter
-Versionskontrolle dar, dessen Entwicklung unter Anderem von Linus Torvald (dem
-Erfinder von Linux) initiiert wurde. Die Versionskontrolle von Git ermöglicht
-den Zugriff auf ältere Entwicklungsstände, ohne dabei den aktuellen Stand zu
-verlieren. Zudem unterstützt Git die Verwaltung von verteilten Dateien an
-verschiedenen Aufbewahrungsorten. Diese Aufbewahrungsorte werden als
-_Repositorys_ bezeichnet. Man unterscheidet dabei zwischen lokalen Repositorys
-und remote Repositorys. Onlinedienste wie GitHub basieren auf Git und stellen
-dem Anwender Speicherplatz für remote Repositorys zur Verfügung.
+Git ist eine Software zur verteilten Versionskontrolle von Dateien. Entwickelt
+wurde Git unter anderem von Linus Torvalds, dem Erfinder von Linux. Die
+Versionskontrolle ermöglicht den Zugriff auf ältere Entwicklungsstände, ohne
+dabei den aktuellen Stand zu verlieren. Dateien werden an sogenannten
+_Repositorys_ abgelegt — entweder lokal auf dem eigenen Rechner oder auf einem
+Remote-Server. Onlinedienste wie GitHub basieren auf Git und stellen
+Speicherplatz für Remote-Repositorys bereit.
 
 ## Git Workflows
 
-Aufgrund der Flexibilität von Git gibt es keine standardisierten Prozesse für
-das Arbeiten mit Git. Ein Git Workflow stellt eine Anleitung zur Verwendung von
-Git dar, die eine konsistente und produktive Arbeitsweise ermöglichen soll. Für
-eine effiziente und fehlerfreie Arbeitsweise sollten daher alle Mitgleider eines
-Teams die gleichen Git Workflows verwenden.
+Ein Git Workflow ist eine Vereinbarung im Team darüber, wie Git genutzt wird. Er
+legt fest, wann Commits erstellt, welche Branch-Strategien eingesetzt und wie
+Änderungen synchronisiert werden. Einheitliche Workflows sind Voraussetzung für
+eine effiziente und fehlerarme Zusammenarbeit.
 
 ```mermaid
 sequenceDiagram
@@ -57,12 +54,10 @@ sequenceDiagram
 
 ## Git Befehle
 
-Git bietet einen Vielzahl an verschiedenen Kommandozeilen-Befehlen um mit Git zu
-arbeiten. Eine ausführliche Dokumentation der einzelnen Befehle samt der
-dazugehörigen Optionen können auf der offiziellen
-[Git-Homepage](https://git-scm.com/docs) gefunden werden. Zudem kann mit dem
-Befehl `git --help` direkt in der Kommandozeile eine Kurzversion der
-Dokumentation ausgegeben werden.
+Git wird über Kommandozeilen-Befehle gesteuert. Die vollständige Dokumentation
+aller Befehle und Optionen ist auf der offiziellen
+[Git-Homepage](https://git-scm.com/docs) verfügbar. Mit `git --help` lässt sich
+eine Kurzübersicht direkt in der Kommandozeile ausgeben.
 
 <Tabs>
   <TabItem value="a" label="Git einrichten" default>

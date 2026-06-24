@@ -5,11 +5,9 @@ sidebar_position: 280
 tags: [maps]
 ---
 
-Unter einem Assoziativspeicher (Map) versteht man eine Menge zusammengehöriger
-Paare von Objekten. Das erste Objekt stellt dabei den Schlüssel (Key), das
-zweite Objekt den Wert (Value) dar. Jeder Schlüssel kann dabei nur einmal in
-einem Assoziativspeicher vorhanden sein. Aufgrund dieses Aufbaus werden
-Assoziativspeicher auch als Wörterbücher bezeichnet.
+Ein Assoziativspeicher (Map) ist eine Sammlung von Schlüssel-Wert-Paaren. Jeder
+Schlüssel (Key) ist eindeutig und verweist auf genau einen Wert (Value). Wegen
+dieser Struktur werden Assoziativspeicher auch als _Wörterbücher_ bezeichnet.
 
 ```mermaid
 flowchart LR
@@ -22,10 +20,9 @@ flowchart LR
    end
 ```
 
-Um auf die Einträge, Schlüssel und Werte eines Assoziativspeichers zugreifen
-können, stellt die Schnittstelle `Map` die Methoden
-`Set<Entry<K, V>> entrySet()`, `Set<K> keySet()` und `Collection<V> values()`
-zur Verfügung.
+Für den Zugriff auf Einträge, Schlüssel und Werte eines Assoziativspeichers
+stellt die Schnittstelle `Map` die Methoden `Set<Entry<K, V>> entrySet()`,
+`Set<K> keySet()` und `Collection<V> values()` bereit.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
@@ -55,12 +52,10 @@ public class MainClass {
 }
 ```
 
-Die Klasse `HashMap<K, V>` implementiert den Assoziativspeicher in Form einer
-Hashtabelle. Für den Einsatz einer Hashtabelle ist es zwingend erforderlich,
-dass die Klasse, die den Schlüssel bildet, die Methoden `int hashCode()` und
-`boolean equals(object: Object)` gemäß den entsprechenden
-Dokumentationskommentaren überschrieben hat. Im Gegensatz zu einem Binärbaum
-liegen die Paare in einer Hashtabelle unsortiert vor.
+Die Klasse `HashMap<K, V>` implementiert den Assoziativspeicher als Hashtabelle.
+Voraussetzung ist, dass die Schlüsselklasse die Methoden `int hashCode()` und
+`boolean equals(object: Object)` korrekt überschrieben hat. Die Einträge liegen
+in einer Hashtabelle unsortiert vor.
 
 | Index | Schlüssel | Wert |
 | ----- | --------- | ---- |
@@ -69,14 +64,12 @@ liegen die Paare in einer Hashtabelle unsortiert vor.
 | 13    | Lisa      | 1.8  |
 | 14    | Max       | 4.2  |
 
-Die Klasse `TreeMap<K, V>` implementiert den Assoziativspeicher in Form eines
-Binärbaumes. Als Datenstruktur wird dabei ein balancierter Baum verwendet, d.h.
-spezielle Einfüge- und Löschoperationen stellen sicher, dass der Baum nicht zu
-einer linearen Liste entartet. Da die Paare in einem Binärbaum sortiert
-vorliegen, ist es für den Einsatz zwingend erforderlich, dass die Klasse, die
-den Schlüssel bildet, die Schnittstelle `Comparable<T>` implementiert hat.
-Alternativ kann dem Konstruktor der Klasse `TreeMap<K, V>` ein Komparator für
-den Schlüssel mitgegeben werden.
+Die Klasse `TreeMap<K, V>` implementiert den Assoziativspeicher als Binärbaum.
+Dabei wird ein balancierter Baum verwendet, sodass spezielle Einfüge- und
+Löschoperationen sicherstellen, dass der Baum nicht zu einer linearen Liste
+entartet. Die Einträge liegen sortiert vor, weshalb die Schlüsselklasse die
+Schnittstelle `Comparable<T>` implementieren oder dem Konstruktor ein
+`Comparator` übergeben werden muss.
 
 ```mermaid
 flowchart TD

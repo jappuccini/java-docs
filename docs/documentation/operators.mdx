@@ -9,17 +9,16 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 Operatoren sind Zeichen, mit denen Daten manipuliert werden können. Mit Hilfe
-von Operanden und Operatoren können beliebig komplexe Ausdrücke abgebildet
-werden. Operatoren mit einem, zwei oder drei Operanden werden als _unäre
-Operatoren_ _binäre Operatoren_ und _ternäre Operatoren_ bezeichnet. Man
-unterscheidet zudem zwischen arithmetischen, bitweisen und logischen Operatoren
-sowie Vergleichsoperatoren.
+von Operanden und Operatoren lassen sich beliebig komplexe Ausdrücke aufbauen.
+Operatoren mit einem, zwei oder drei Operanden werden als _unäre_, _binäre_ bzw.
+_ternäre_ Operatoren bezeichnet. Man unterscheidet zwischen arithmetischen,
+bitweisen und logischen Operatoren sowie Vergleichsoperatoren.
 
 <Tabs>
   <TabItem value="a" label="Arithmetische Operatoren" default>
 
-Für die arithmetischen Grundrechenarten stehen verschiedene arithmetische
-Operatoren zur Verfügung.
+Für die arithmetischen Grundrechenarten stehen folgende Operatoren zur
+Verfügung.
 
 | Ausdruck mit Operator | Bedeutung                                                     |
 | --------------------- | ------------------------------------------------------------- |
@@ -36,8 +35,8 @@ Operatoren zur Verfügung.
   </TabItem>
   <TabItem value="b" label="Bitweise Operatoren">
 
-Bitweise Operatoren können dazu verwendet werden, Binäroperationen auf Operanden
-durchzuführen.
+Bitweise Operatoren führen Operationen direkt auf den einzelnen Bits der
+Operanden durch.
 
 | Ausdruck mit Operator | Bedeutung                |
 | --------------------- | ------------------------ |
@@ -49,8 +48,8 @@ durchzuführen.
   </TabItem>
   <TabItem value="c" label="Logische Operatoren">
 
-Logische Operatoren können dazu verwendet werden, logische Aussagen miteinander
-zu verknüpfen.
+Logische Operatoren verknüpfen logische Aussagen miteinander und liefern einen
+booleschen Wert zurück.
 
 | Ausdruck mit Operator | Bedeutung                |
 | --------------------- | ------------------------ |
@@ -61,8 +60,8 @@ zu verknüpfen.
   </TabItem>
   <TabItem value="d" label="Vergleichsoperatoren">
 
-Logische Bedingungen für zwei Werte eines elementaren Datentyps können durch
-Vergleichsoperatoren realisiert werden.
+Vergleichsoperatoren prüfen logische Bedingungen für zwei Werte eines
+elementaren Datentyps und liefern einen booleschen Wert zurück.
 
 | Ausdruck mit Operator | Bedeutung              |
 | --------------------- | ---------------------- |
@@ -76,8 +75,8 @@ Vergleichsoperatoren realisiert werden.
 :::info
 
 Da der Vergleichsoperator `==` auf referenzielle Gleichheit prüft, sollte zum
-Vergleich von zwei Objekten die Methode `boolean equals(object: Object)`
-verwendet werden.
+inhaltlichen Vergleich von zwei Objekten die Methode
+`boolean equals(object: Object)` verwendet werden.
 
 :::
 
@@ -86,7 +85,8 @@ verwendet werden.
 
 ## Priorität von Operatoren
 
-Die Verarbeitung von Operatoren erfolgt gemäß ihrer Priorität.
+Die Auswertung von Ausdrücken mit mehreren Operatoren erfolgt gemäß ihrer
+Priorität. Operatoren mit höherer Priorität werden zuerst ausgewertet.
 
 | Priorität | Operator                                                     |
 | --------- | ------------------------------------------------------------ |

@@ -5,10 +5,9 @@ sidebar_position: 290
 tags: [optionals]
 ---
 
-Der Umgang mit null-Werten stellt in vielen Programmiersprachen eine große
-Herausforderung dar. Zur Vermeidung von Laufzeitfehlern (`NullPointerException`)
-müsste vor jedem Methodenaufruf eigentlich überprüft werden, ob ein gültiger
-Wert vorliegt oder nicht.
+Der Umgang mit `null`-Werten ist in vielen Programmen eine häufige Fehlerquelle.
+Ohne explizite Prüfungen kann der Zugriff auf ein `null`-Objekt eine
+`NullPointerException` auslösen.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
@@ -18,7 +17,7 @@ public class MainClass {
    public static void main(String[] args) {
       names = new ArrayList<>();
       String name = getNameByInitial('H');
-      System.out.println(name.length()); // Laufzeitfehler
+      System.out.println(name.length()); // Laufzeitfehler: name ist null
    }
 
    public static String getNameByInitial(char initial) {
@@ -35,16 +34,14 @@ public class MainClass {
 }
 ```
 
-Die Klasse `Optional` ermöglicht in Java eine komfortable Möglichkeit, mit
-null-Werten umzugehen. Das eigentliche Objekt wird dabei in einem Objekt der
-Klasse `Optional` verpackt; der Zugriff auf das verpackte Objekt erfolgt über
-entsprechende Methoden. Dies stellt sicher, dass sich der Entwickler mit
-null-Werten auseinander setzen muss.
+Die Klasse `Optional` bietet eine komfortable Möglichkeit, mit `null`-Werten
+umzugehen. Das eigentliche Objekt wird in einem `Optional`-Objekt verpackt; der
+Zugriff erfolgt über entsprechende Methoden. So wird sichergestellt, dass der
+`null`-Fall explizit behandelt werden muss.
 
-Für den Umgang mit null-Werten stellt die Klasse `Optional` Methoden wie
-`T get()`, `boolean isPresent()` und `void ifPresent(consumer: Consumer<T>)` zur
-Verfügung. Zudem existieren Methoden wie `void orElse(other: T)`, mit denen
-Standardwerte festgelegt werden können.
+Die Klasse `Optional` stellt u.a. folgende Methoden bereit: `T get()`,
+`boolean isPresent()`, `void ifPresent(consumer: Consumer<T>)` und
+`T orElse(other: T)` zum Festlegen eines Standardwerts.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {

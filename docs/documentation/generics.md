@@ -5,20 +5,17 @@ sidebar_position: 270
 tags: [generics]
 ---
 
-Quellcode sollte generell so allgemein bzw. generisch geschrieben werden, dass
-er für unterschiedliche Datenstrukturen und Datentypen verwendet werden kann.
-Das Ziel der generischen Programmierung ist die Entwicklung von
-wiederverwendbarem Code. In Java verwendet man das Konzept der generischen
-Datentypen, also Klassen, die mit verschiedene Datentypen verwendet werden
-können.
+Quellcode sollte so allgemein wie möglich geschrieben werden, damit er für
+unterschiedliche Datentypen und Datenstrukturen wiederverwendet werden kann. In
+Java wird dieses Ziel mit _generischen Datentypen_ erreicht — also Klassen, die
+mit verschiedenen Typen parametrisiert werden können.
 
 ## Generische Klassen ohne Java Generics
 
-Auch ohne Java Generics kann in Java mit Hilfe der Klasse `Object` generisch
-programmiert werden. Der Nachteil besteht darin, dass durch den Upcast einer
-beliebigen Klasse auf die Klasse `Object` die spezifischen Methoden der Klasse
-nicht mehr verwendet werden können und der dadurch notwendige Downcast zu
-Laufzeitfehlern führen kann.
+Auch ohne Java Generics lässt sich in Java mit der Klasse `Object` generisch
+programmieren. Der Nachteil: Durch den Upcast auf `Object` gehen die
+spezifischen Methoden der Originalklasse verloren, und der notwendige Downcast
+beim Auslesen kann zu Laufzeitfehlern führen.
 
 Die Klasse `Box` ermöglicht das Speichern einer beliebig typisierten
 Information.
@@ -49,7 +46,7 @@ public class MainClass {
    public static void main(String[] args) {
       Box box = new Box();
       box.set(5);
-      String i = (String) box.get(); // Laufzeitfehler
+      String i = (String) box.get(); // Laufzeitfehler: int ist kein String
       System.out.println(i);
    }
 
@@ -58,12 +55,11 @@ public class MainClass {
 
 ## Generische Klassen mit Java Generics
 
-Klassen und Methoden können in Java mit Typen parametrisiert werden. Diese
-werden durch spitze Klammern `<>` gekennzeichnet und stellen Platzhalter für
-konkrete Datentypen dar. Beim Kompilieren werden alle generischen Informationen
-vollständig entfernt und durch die konkreten Datentypen ersetzt. Durch die
-dadurch vorhandene statische Typsicherheit können Laufzeitfehler verhindert und
-Fehler bereits beim Kompilieren entdeckt werden.
+Klassen und Methoden können in Java mit Typparametern versehen werden. Diese
+werden in spitzen Klammern `<>` notiert und stellen Platzhalter für konkrete
+Datentypen dar. Beim Kompilieren ersetzt der Compiler alle generischen
+Informationen durch die konkreten Typen. Dadurch entsteht statische
+Typsicherheit, die viele Fehler bereits zur Kompilierzeit aufdeckt.
 
 Die generische Klasse `Box<T>` ermöglicht das Speichern einer beliebig
 typisierten Information mit Hilfe des Typparameters `T`.
@@ -95,7 +91,7 @@ public class MainClass {
    public static void main(String[] args) {
       Box<Integer> box = new Box<>();
       box.set(5);
-      String i = box.get(); // Kompilierungsfehler
+      String i = box.get(); // Kompilierungsfehler: Integer ist kein String
       System.out.println(i);
    }
 
@@ -146,8 +142,8 @@ public class MainClass {
 
 ## Namensrichtlinien für Typparameter
 
-Um den Einsatzbereich von Typparametern in generischen Klassen und Methoden
-kenntlich zu machen, sollte man festgelegte Zeichen verwenden.
+Um den Einsatzbereich von Typparametern in generischen Klassen und Methoden zu
+kennzeichnen, sollten die folgenden etablierten Kürzel verwendet werden.
 
 | Typparameter  | Einsatzbereich                            |
 | ------------- | ----------------------------------------- |
@@ -158,10 +154,10 @@ kenntlich zu machen, sollte man festgelegte Zeichen verwenden.
 
 ## Varianz
 
-Bei der Deklaration einer generischen Klasse ermöglicht der Wildcard-Typ `?` die
-Angabe eines unbestimmten Typs. Dieser kann gar nicht (**Bivarianz**), nach oben
-(**Kovarianz**), nach unten (**Kontravarianz**), oder sowohl nach oben als auch
-nach unten (**Invarianz**) eingeschränkt werden.
+Mit dem Wildcard-Typ `?` kann bei der Deklaration einer generischen Klasse ein
+unbestimmter Typ angegeben werden. Dieser kann gar nicht (_Bivarianz_), nach
+oben (_Kovarianz_), nach unten (_Kontravarianz_) oder in beide Richtungen
+(_Invarianz_) eingeschränkt werden.
 
 Die generische Klasse `Box<T>` ermöglicht das Speichern einer beliebig
 typisierten Information.
@@ -182,10 +178,9 @@ public class Box<T> {
 }
 ```
 
-In der main-methode der Startklasse werden verschiedene Boxen unterschiedlich
-deklariert und anschließend initialisiert. Dabei ist die Klasse `String` eine
-Unterklasse der Klasse `Object`, die Klasse `Integer` eine Unterklasse der
-Klasse `Number` und diese eine Unterklasse der Klasse `Object`.
+In der main-Methode der Startklasse werden verschiedene Boxen unterschiedlich
+deklariert und initialisiert. Dabei gilt: `String` und `Integer` sind
+Unterklassen von `Object`, `Integer` ist außerdem eine Unterklasse von `Number`.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {

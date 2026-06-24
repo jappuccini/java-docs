@@ -5,17 +5,13 @@ sidebar_position: 340
 tags: [io-streams]
 ---
 
-Datenströme (IO-Streams) sind unidirektionale Pipelines, die Schnittstellen
-eines Java-Programms nach außen darstellen. Daten können unabhängig von der Art
-der Quelle bzw. des Ziels vorne in einen Datenstrom geschrieben und hinten
-wieder ausgelesen werden. Ein Datenstrom kann dabei immer nur in eine Richtung
-verwendet werden (also entweder zur Ein- oder Ausgabe). Neben den
-Standard-Datenströmen zur Ein- und Ausgabe existieren verschiedene Klassen zum
-Schreiben und Lesen zeichenorientierter Daten, zum Schreiben und Lesen
-byteorientierter Daten und zum Schreiben und Lesen serialisierter Objekte. Das
-Arbeiten mit Datenstrom-Klassen kann dabei aufwändig über "normale"
-try-catch-Anweisungen oder mit Hilfe von try-with-resources-Anweisungen
-realisiert werden.
+Datenströme (IO-Streams) sind unidirektionale Pipelines zwischen einem
+Java-Programm und einer Datenquelle oder einem Datenziel. Daten werden vorne in
+den Strom geschrieben und hinten wieder ausgelesen. Ein Datenstrom kann dabei
+immer nur in eine Richtung verwendet werden — entweder zur Eingabe oder zur
+Ausgabe. Java bietet Klassen für zeichenorientierte Daten (z.B. Textdateien),
+byteorientierte Daten (z.B. Bilddateien) und serialisierte Objekte. Für das
+korrekte Schließen der Ströme empfiehlt sich die `try-with-resources`-Anweisung.
 
 ```mermaid
 flowchart LR
@@ -29,8 +25,9 @@ flowchart LR
 
 ## Standard-Datenströme zur Ein- und Ausgabe
 
-Java stellt Standard-Datenströme für die Eingabe (`System.in`), die Ausgabe
-(`System.out`), sowie die Fehlerausgabe (`System.err`) zur Verfügung.
+Java stellt drei Standard-Datenströme bereit: `System.in` für die
+Standardeingabe (Tastatur), `System.out` für die Standardausgabe (Konsole) und
+`System.err` für die Fehlerausgabe.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
@@ -64,9 +61,8 @@ ermöglicht eine einfache Möglichkeit der Eingabe.
 
 ## Schreiben und Lesen byteorientierter Daten
 
-Für die Verarbeitung von byteorientierten Daten (z.B. Bild- und Video-Dateien)
-stehen die abstrakten Basisklassen `InputStream` und `OutputStream` zur
-Verfügung.
+Für die Verarbeitung byteorientierter Daten wie Bild- oder Videodateien stehen
+die abstrakten Basisklassen `InputStream` und `OutputStream` zur Verfügung.
 
 | Datenstromklasse                                 | Ein- und Ausgabe in... |
 | ------------------------------------------------ | ---------------------- |
@@ -125,8 +121,8 @@ public class MainClass {
 
 ## Schreiben und Lesen zeichenorientierter Daten
 
-Für die Verarbeitung von zeichenorientierten Daten (z.B. Textdokumente) stehen
-die abstrakten Basisklassen `Reader` und `Writer` zur Verfügung.
+Für die Verarbeitung zeichenorientierter Daten wie Textdateien stehen die
+abstrakten Basisklassen `Reader` und `Writer` zur Verfügung.
 
 | Datenstromklasse                      | Ein- und Ausgabe in... |
 | ------------------------------------- | ---------------------- |
@@ -187,18 +183,15 @@ public class MainClass {
 
 ## Schreiben und Lesen serialisierter Objekte
 
-Um ein Objekt persistent zu machen (also zu sichern) und um ein Objekt durch das
-Netzwerk zu schicken (also für entfernte Methodenaufrufe) ist es notwendig, das
-Objekt in einen Byte-Strom umzuwandeln. Die Umwandlung eines Objektes in einen
-Byte-Strom bezeichnet man als _Serialisierung_ die Rückumwandlung als
-_Deserialisierung_ Die Serialisierung erfolgt über die writeObject-Methode der
-Klasse `ObjectOutputStream`, die Deserialisierung über die readObject-Methode
-der Klasse `ObjectInputStream`.
+Serialisierung bezeichnet die Umwandlung eines Objekts in einen Byte-Strom, z.B.
+zum Speichern in einer Datei oder zum Versenden über ein Netzwerk. Der
+umgekehrte Vorgang wird als _Deserialisierung_ bezeichnet. Die Serialisierung
+erfolgt mit der Methode `writeObject()` der Klasse `ObjectOutputStream`, die
+Deserialisierung mit `readObject()` der Klasse `ObjectInputStream`.
 
-Damit Objekte einer Klasse serialisiert werden können, muss die entsprechende
-Klasse die Schnittstelle `Serializable` implementieren. Die Schnittstelle
-`Serializable` ist eine sogenannte Marker-Schnittstelle, d.h. sie besitzt keine
-zu implementierenden Methoden.
+Damit Objekte einer Klasse serialisiert werden können, muss die Klasse die
+Schnittstelle `Serializable` implementieren. Diese sogenannte
+Marker-Schnittstelle besitzt keine zu implementierenden Methoden.
 
 ```java title="Foo.java" showLineNumbers
 public record Stark(String name) implements Serializable {}
@@ -248,31 +241,31 @@ public class MainClass {
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
 
-  public static void main(String[] args) {
-    File file = new File("starks.bin");
+   public static void main(String[] args) {
+      File file = new File("starks.bin");
 
-    try (FileInputStream fis = new FileInputStream(file);
-        ObjectInputStream ois = new ObjectInputStream(fis)) {
-      while (true) {
-        Stark stark = (Stark) ois.readObject();
-        System.out.println(stark);
+      try (FileInputStream fis = new FileInputStream(file);
+            ObjectInputStream ois = new ObjectInputStream(fis)) {
+         while (true) {
+            Stark stark = (Stark) ois.readObject();
+            System.out.println(stark);
+         }
+      } catch (EOFException e) {
+         // Dateiende erreicht
+      } catch (IOException | ClassNotFoundException e) {
+         e.printStackTrace();
       }
-    } catch (EOFException e) {
-      /* End of File */
-    } catch (IOException | ClassNotFoundException e) {
-      e.printStackTrace();
-    }
-  }
+   }
 
 }
 ```
 
 ### Versionierung bei der Serialisierung
 
-Die Konstante `serialVersionUID` vom Datentyp `long` dient zur eindeutigen
-Identifikation der Version einer serialisierbaren Klasse. Durch die Konstante
-kann sichergestellt werden, dass Empfänger von serialisierten Objekten
-typkompatibel zum Sender sind, d.h. eine passende Klassenstruktur aufweisen.
+Die Konstante `serialVersionUID` vom Typ `long` identifiziert eindeutig die
+Version einer serialisierbaren Klasse. Sie stellt sicher, dass eine
+deserialisierte Klasse dieselbe Struktur besitzt wie die ursprünglich
+serialisierte Klasse.
 
 ```java title="Foo.java" showLineNumbers
 public record Stark(String name) implements Serializable {
@@ -291,8 +284,8 @@ Zuweisung dringend empfohlen.
 
 ## Die try-with-resources-Anweisung
 
-Bei einer "normalen" try-catch-Anweisung müssen die Datenstrom-Klassen manuell
-geschlossen werden, was sich als sehr aufwändig darstellt.
+Bei einer gewöhnlichen `try-catch`-Anweisung müssen Datenstrom-Objekte manuell
+im `finally`-Block geschlossen werden, was schnell unübersichtlich wird.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
@@ -328,8 +321,8 @@ Der finally-Block einer try-Anweisung wird in jedem Fall durchlaufen.
 
 :::
 
-Die try-with-resources-Anweisung ermöglicht die Deklaration von Ressourcen, die
-am Ende des try-Blockes automatisch geschlossen werden.
+Die `try-with-resources`-Anweisung deklariert Ressourcen direkt im `try`-Kopf
+und schließt sie automatisch am Ende des Blocks.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
@@ -350,7 +343,7 @@ public class MainClass {
 
 :::info
 
-Voraussetzung für den Einsatz der try-with-resources-Anweisung ist, dass die
-Ressourcen-Klassen die Schnittstelle `AutoCloseable` implementiert haben.
+Voraussetzung für den Einsatz der `try-with-resources`-Anweisung ist, dass die
+verwendeten Klassen die Schnittstelle `AutoCloseable` implementieren.
 
 :::
