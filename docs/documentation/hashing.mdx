@@ -130,3 +130,49 @@ einer Suche wird zuerst der Bucket bestimmt, dann der Bucket durchsucht.
 
   </TabItem>
 </Tabs>
+
+## Hashing in Java
+
+Java verwendet Hashing intern in den Klassen [`HashMap<K, V>`](maps) und
+[`HashSet<E>`](java-collections-framework). Der Schlüssel eines Eintrags
+bestimmt über seinen Hashcode den Bucket, in dem der Eintrag abgelegt wird. Bei
+einer Suche wird zunächst der Bucket über den Hashcode gefunden, anschließend
+wird innerhalb des Buckets mit `equals()` verglichen.
+
+Damit diese Mechanismen korrekt funktionieren, müssen die Methoden `hashCode()`
+und `equals()` der [Klasse `Object`](object) konsistent überschrieben werden:
+
+- Zwei inhaltlich gleiche Objekte (`equals()` gibt `true` zurück) müssen
+  **denselben Hashcode** liefern.
+- Zwei Objekte mit demselben Hashcode müssen **nicht** inhaltlich gleich sein
+  (eine Kollision ist erlaubt, aber ineffizient).
+
+```java title="Person.java (Auszug)" showLineNumbers
+public class Person {
+
+   private String name;
+   private int age;
+
+   @Override
+   public boolean equals(Object object) {
+      if (this == object) return true;
+      if (object == null || getClass() != object.getClass()) return false;
+      Person other = (Person) object;
+      return age == other.age && Objects.equals(name, other.name);
+   }
+
+   @Override
+   public int hashCode() {
+      return Objects.hash(name, age);
+   }
+
+}
+```
+
+:::warning
+
+Wird `equals()` überschrieben, ohne `hashCode()` anzupassen, verhält sich die
+Klasse in `HashMap` und `HashSet` falsch: Zwei inhaltlich gleiche Objekte landen
+in unterschiedlichen Buckets und werden nicht als gleich erkannt.
+
+:::

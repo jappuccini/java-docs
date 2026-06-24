@@ -147,7 +147,7 @@ public class Smartphone implements MobileDevice {
 
    @Override
    public int getScreenSizeInInches() {
-      return Math.sqrt(Math.pow(widthInInches) + Math.pow(heightInInches));
+      return (int) Math.sqrt(Math.pow(widthInInches, 2) + Math.pow(heightInInches, 2));
    }
    ...
 }
@@ -178,3 +178,11 @@ public class MainClass {
 
   </TabItem>
 </Tabs>
+
+:::tip
+
+Eine Schnittstelle eignet sich, wenn mehrere, voneinander unabhängige Klassen
+dasselbe Verhalten teilen sollen. Eine [abstrakte Klasse](abstract-and-final)
+eignet sich, wenn gemeinsame Implementierungen geerbt werden sollen.
+
+:::

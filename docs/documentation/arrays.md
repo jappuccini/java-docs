@@ -61,16 +61,10 @@ public class MainClass {
 }
 ```
 
-:::info
-
-Der Index beginnt in Java bei 0.
-
-:::
-
 ## Der Parameter _String[] args_
 
 Der Parameter `String[] args` der main-Methode ermöglicht es, der Anwendung beim
-Aufruf über die Kommandozeile Argumente zu übergeben.
+Aufruf über die [Kommandozeile](java) Argumente zu übergeben.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
@@ -113,3 +107,32 @@ public class MainClass {
 Technisch gesehen handelt es sich bei einer variablen Argumentliste um ein Feld.
 
 :::
+
+## Mehrdimensionale Felder
+
+Mehrdimensionale Felder sind Felder, deren Elemente selbst wieder Felder sind.
+Der häufigste Anwendungsfall ist das zweidimensionale Feld, das sich als Matrix
+mit Zeilen und Spalten vorstellen lässt. Der Zugriff auf ein Element erfolgt
+über zwei Indizes: zuerst die Zeile, dann die Spalte.
+
+```java title="MainClass.java" showLineNumbers
+public class MainClass {
+
+   public static void main(String[] args) {
+      int[][] matrix = {
+         {1, 2, 3},
+         {4, 5, 6},
+         {7, 8, 9}
+      };
+
+      // alle Elemente zeilenweise ausgeben
+      for (int row = 0; row < matrix.length; row++) {
+         for (int col = 0; col < matrix[row].length; col++) {
+            System.out.print(matrix[row][col] + " ");
+         }
+         System.out.println();
+      }
+   }
+
+}
+```

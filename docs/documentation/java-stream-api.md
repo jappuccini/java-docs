@@ -100,7 +100,7 @@ intermediäre Operationen sind Filtern, Abbilden und Sortieren.
 | Operation     | Methode                                                    | Schnittstellen-Methode           |
 | ------------- | ---------------------------------------------------------- | -------------------------------- |
 | Filtern       | `Stream<T> filter(predicate: Predicate<T>)`                | `boolean test(t: T)`             |
-| Abbilden      | `Stream<T> map(mapper: Function<T, R>)`                    | `R apply(t: T)`                  |
+| Abbilden      | `Stream<R> map(mapper: Function<T, R>)`                    | `R apply(t: T)`                  |
 | Abbilden      | `DoubleStream mapToDouble(mapper: ToDoubleFunction<T, R>)` | `double applyAsDouble(value: T)` |
 | Abbilden      | `IntStream mapToInt(mapper: ToIntFunction<T, R>)`          | `int applyAsInt(value: T)`       |
 | Abbilden      | `LongStream mapToLong(mapper: ToLongFunction<T, R>)`       | `long applyAsLong(value: T)`     |

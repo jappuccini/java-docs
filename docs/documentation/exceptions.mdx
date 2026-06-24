@@ -59,6 +59,9 @@ classDiagram
    RunTimeException <|-- ArithmeticException
 ```
 
+Eine Übersicht wichtiger Ausnahmenklassen findet sich in der
+[Java API](java-api).
+
 ## Definition von Ausnahmenklassen
 
 Eigene Ausnahmenklassen werden durch Ableitung von einer bestehenden
@@ -127,6 +130,48 @@ public class MainClass {
       try {
          Notebook notebook = new Notebook("Mein Gaming Laptop", new Cpu(4.7, 8), 32, 16);
       } catch (InvalidValueException e) {
+         System.err.println(e.getMessage());
+      }
+   }
+
+}
+```
+
+## Der finally-Block
+
+Der optionale `finally`-Block wird nach dem `try`- und allen `catch`-Blöcken
+immer ausgeführt — unabhängig davon, ob eine Ausnahme aufgetreten ist oder
+nicht. Er eignet sich daher für Aufräumarbeiten wie das Schließen von
+Ressourcen.
+
+```java title="MainClass.java" showLineNumbers
+public class MainClass {
+
+   public static void main(String[] args) {
+      try {
+         Notebook notebook = new Notebook("Mein Gaming Laptop", new Cpu(4.7, 8), 32, 16);
+      } catch (InvalidValueException e) {
+         System.err.println(e.getMessage());
+      } finally {
+         System.out.println("wird immer ausgeführt");
+      }
+   }
+
+}
+```
+
+Werden Ressourcen wie Dateiströme geöffnet, empfiehlt sich statt `finally` die
+_Try-with-Resources_-Anweisung. Klassen, die `AutoCloseable` implementieren,
+werden dabei am Ende des `try`-Blocks automatisch geschlossen — auch im
+Fehlerfall.
+
+```java title="MainClass.java" showLineNumbers
+public class MainClass {
+
+   public static void main(String[] args) {
+      try (FileReader reader = new FileReader("data.txt")) {
+         // Datei lesen
+      } catch (IOException e) {
          System.err.println(e.getMessage());
       }
    }
