@@ -8,19 +8,18 @@ tags: [inner-classes]
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Java bietet die Möglichkeit, Klassen und Schnittstellen zu verschachteln. Das
-Ziel von inneren Klassen ist eine Definition von Hilfsklassen möglichst nahe an
-der Stelle, wo sie gebraucht werden. Beispiele für Hilfsklassen sind
-Ausnahmeklassen, Komparatoren und Ereignisbehandler. Alle bisherigen Klassen
-werden auch als _äußerer Klassen_ bzw. _Top-Level-Klassen_ bezeichnet.
+Java erlaubt es, Klassen und Schnittstellen zu verschachteln. Ziel innerer
+Klassen ist es, Hilfsklassen möglichst nah an der Stelle zu definieren, wo sie
+benötigt werden — z.B. Ausnahmeklassen, Komparatoren oder Ereignisbehandler.
+Alle bisher bekannten Klassen, die auf der obersten Ebene definiert sind, nennt
+man auch _äußere Klassen_ oder _Top-Level-Klassen_.
 
 ## Geschachtelte Klassen (Nested Classes)
 
-Geschachtelte Klassen sind Top-Level-Klassen, die zur Strukturierung des
-Namensraumes in anderen Top-Level-Klassen definiert sind. Ein Namensraum ist die
-vollständige Pfadangabe zur Klasse (z.B. `java.lang`). Geschachtelte Klassen
-müssen statisch definiert werden und sind daher im eigentlichen Sinne keine
-richtigen inneren Klassen.
+Geschachtelte Klassen sind statische Top-Level-Klassen, die innerhalb einer
+anderen Top-Level-Klasse zur Strukturierung des Namensraums definiert werden. Da
+sie statisch sein müssen, sind sie im eigentlichen Sinne keine echten inneren
+Klassen.
 
 <Tabs>
   <TabItem value="a" label="Geschachtelte Klasse" default>
@@ -54,11 +53,11 @@ public class MainClass {
 
 ## Elementklassen (Member Classes)
 
-Objekte von Elementklassen sind immer mit einem Objekt der umgebenden Klasse
-verbunden. Dies ermöglicht die Umsetzung von Kompositionen (siehe
+Objekte von Elementklassen sind immer an ein Objekt der umgebenden Klasse
+gebunden. Das ermöglicht die Umsetzung von Kompositionen (siehe
 [Darstellung von Assoziationen](class-diagrams#darstellung-von-assoziationen)).
-Sie haben Zugriff auf alle Variablen und Methoden der sie umgebenden Klasse und
-dürfen keine statischen Elemente enthalten.
+Elementklassen haben Zugriff auf alle Variablen und Methoden der umgebenden
+Klasse, dürfen aber keine statischen Elemente enthalten.
 
 <Tabs>
   <TabItem value="a" label="Elementklasse" default>
@@ -79,8 +78,8 @@ public class MainClass {
 
   public static void main(String[] args) {
     List list = new List();
-    List.Item item = new List.Item(); // Kompilierungsfehler
-    List.Item item = list.new Item();
+    List.Item item = new List.Item(); // Kompilierungsfehler: Elementklasse benötigt umgebendes Objekt
+    List.Item item = list.new Item(); // korrekt
   }
 
 }
@@ -91,11 +90,10 @@ public class MainClass {
 
 ## Lokale Klassen
 
-Lokale Klassen werden innerhalb einer Methode definiert und können auch nur dort
-verwendet werden. Sie dürfen nicht als `public`, `protected`, `private` oder
-`static` definiert werden, dürfen keine statischen Elemente enthalten und können
-nur die mit `final` markierten Variablen und Parameter der umgebenden Methode
-verwenden.
+Lokale Klassen werden innerhalb einer Methode definiert und sind auch nur dort
+verwendbar. Sie dürfen nicht als `public`, `protected`, `private` oder `static`
+deklariert werden, dürfen keine statischen Elemente enthalten und können nur auf
+`final`-markierte Variablen und Parameter der umgebenden Methode zugreifen.
 
 <Tabs>
   <TabItem value="a" label="Schnittstelle" default>
@@ -151,12 +149,11 @@ public class MainClass {
 
 ## Anonyme Klassen
 
-Anonyme Klassen besitzen im Gegensatz zu lokalen Klassen keinen Namen und werden
-innerhalb eines Ausdrucks definiert und instanziiert; Klassendeklaration und
-Objekterzeugung sind also in einem Sprachkonstrukt vereint. Wird als Datentyp
-eine Schnittstelle benötigt, implementiert die anonyme Klasse diese
-Schnittstelle, wird als Datentyp eine Klasse benötigt, so wird die anonyme
-Klasse daraus abgeleitet.
+Anonyme Klassen haben im Gegensatz zu lokalen Klassen keinen Namen. Sie werden
+direkt innerhalb eines Ausdrucks definiert und instanziiert — Klassendeklaration
+und Objekterzeugung sind also in einem Konstrukt vereint. Ist der erwartete
+Datentyp eine Schnittstelle, implementiert die anonyme Klasse diese; ist es eine
+Klasse, wird daraus abgeleitet.
 
 <Tabs>
   <TabItem value="a" label="Schnittstelle" default>

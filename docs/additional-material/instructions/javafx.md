@@ -5,7 +5,7 @@ sidebar_position: 40
 tags: [javafx]
 ---
 
-:::info
+:::tip
 
 Benötigte Tools: [JDK](https://www.oracle.com/java/technologies/downloads/),
 [Eclipse](https://www.eclipse.org/),
@@ -16,6 +16,9 @@ Benötigte Tools: [JDK](https://www.oracle.com/java/technologies/downloads/),
 
 ## Scene Builder mit Eclipse verbinden
 
+Damit Eclipse den Scene Builder öffnen kann, muss der Pfad zur ausführbaren
+Datei einmalig konfiguriert werden.
+
 - Starte Eclipse
 - Navigiere zu **Window – Preferences – JavaFX**
 - Gib beim Feld **SceneBuilder executable** den Wert **[Der Pfad zur
@@ -23,6 +26,10 @@ Benötigte Tools: [JDK](https://www.oracle.com/java/technologies/downloads/),
   and Close** (z.B. _C:\Programme\Scene Builder\SceneBuilder.exe_)
 
 ## JavaFX-Anwendung ausführen
+
+Eine JavaFX-Anwendung kann entweder als ausführbare JavaFX-Anwendung über das
+Maven-Plugin (Variante A) oder über eine separate Startklasse (Variante B)
+gestartet werden.
 
 **Variante A: Via ausführbarer JavaFX-Anwendung**
 
@@ -96,6 +103,10 @@ public class MainClass {
 ```
 
 ## Ausführbare JavaFX-Anwendung debuggen
+
+Um eine ausführbare JavaFX-Anwendung im Debug-Modus zu starten, wird das
+JavaFX-Maven-Plugin um eine Debug-Konfiguration erweitert und anschließend mit
+dem Goal `javafx:run@debug` ausgeführt.
 
 - Starte Eclipse
 - Navigiere in der View _Package Explorer_ zu Deinem Maven-Projekt

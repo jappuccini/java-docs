@@ -6,24 +6,22 @@ tags: [oo]
 ---
 
 Die reale Welt besteht aus Objekten mit individuellen Eigenschaften und
-individuellem Verhalten. Für ein einfacheres Verständnis werden Objekte
-kategorisiert, also zu sinnhaften Einheiten verbunden. In der objektorientierten
-Programmierung werden Beobachtungen aus der realen Welt zum Konzept der
-Objektorientierung zusammengefasst:
+individuellem Verhalten. Um diese Komplexität handhabbar zu machen, werden
+Objekte kategorisiert und zu sinnvollen Einheiten zusammengefasst. Die
+objektorientierte Programmierung überträgt dieses Prinzip auf Software:
 
-- Eine Kategorie von ähnlichen Objekten bezeichnet man als _Klasse_
-- Konkrete Ausprägungen bzw. Instanzen einer Klasse werden wiederum als
-  _Objekte_ bezeichnet
-- Die Eigenschaften von Objekten werden als _Attribute_ das Verhalten als
+- Eine Kategorie ähnlicher Objekte bezeichnet man als _Klasse_
+- Konkrete Ausprägungen einer Klasse nennt man _Objekte_ (auch _Instanzen_)
+- Die Eigenschaften von Objekten werden als _Attribute_, ihr Verhalten als
   _Methoden_ bezeichnet
 
 ## Datenkapselung
 
 Ein wesentlicher Grundsatz der Objektorientierung ist, dass Attribute durch
-Methoden gekapselt werden. Datenkapselung bedeutet, dass auf Attribute nicht
+Methoden gekapselt werden. _Datenkapselung_ bedeutet, dass auf Attribute nicht
 direkt zugegriffen werden kann, sondern nur indirekt über Methoden. Typische
-Methoden zum Lesen und Schreiben von Attributen sind die sogenannten Getter bzw.
-Setter (auch Set- und Get-Methoden bzw. Accessors genannt).
+Methoden zum Lesen und Schreiben von Attributen sind Getter bzw. Setter (auch
+Accessors und Mutators genannt).
 
 ```mermaid
 flowchart LR
@@ -44,13 +42,12 @@ flowchart LR
 
 ## Abstraktion
 
-Abstraktion bedeutet das Zerlegen von komplexen Systeme in kleinere,
-überschaubare Einheiten, indem der Fokus auf die wesentlichen Eigenschaften und
-das wesentliche Verhalten gesetzt und unwichtige Details ausgeblendet werden.
-Dies bringt einige Vorteile wie bessere Wiederverwendbarkeit, bessere
-Wartbarkeit sowie bessere Lesbarkeit mit sich. In der Objektorientierten
-Programmierung erfolgt die Abstraktion durch den Einsatz von (abstrakten)
-Klassen bzw. Schnittstellen (Interfaces).
+_Abstraktion_ bedeutet, komplexe Systeme in kleinere, überschaubare Einheiten zu
+zerlegen — indem der Fokus auf die wesentlichen Eigenschaften und das
+wesentliche Verhalten gelegt und unwichtige Details ausgeblendet werden. Das
+bringt Vorteile wie bessere Wiederverwendbarkeit, Wartbarkeit und Lesbarkeit. In
+Java wird Abstraktion durch den Einsatz von (abstrakten) Klassen und
+Schnittstellen (Interfaces) realisiert.
 
 ```mermaid
 flowchart LR

@@ -7,32 +7,25 @@ tags: [genai]
 
 import Tabs from '@theme/Tabs'; import TabItem from '@theme/TabItem';
 
-Generative KI (GenAI) bezeichnet KI-Systeme, die auf Grundlage neuronaler Netze
-Inhalte wie Texte, Bilder, Videos, Musik, Quellcode etc. generieren können.
-GenAI bildet damit die Grundlage für moderne Chatbots wie ChatGPT, Gemini oder
-LeChat. Im Gegensatz zu "traditionellen" KI-Systemen, deren Aufgaben i.d.R.
-darin bestehen, Muster zu erkennen, Daten zu klassifizieren oder Zusammenhänge
-zu erkennen, kann GenAI mittels statistischer Wahrscheinlichkeiten und
-tiefgreifender Mustererkennung neuartige Inhalte erzeugen, die nicht Teil der
-Trainingsdaten waren. Schlüsselmodelle sind hierbei _Large Language Models_
-(LLMs) für Texte sowie Diffunsionsmodelle und _Generative Adversarial Networks_
-(GANs) für Bilder und Videos. Moderne Chatbots simulieren menschliche
-Konversationen über Text und Sprache und nutzen dabei LLMs, um dynamisch,
-kontextabhängig und zusammenhängend zu antworten. KI-gestützte Assistenzsysteme
-(Co-Pilots) wie Microsoft 365 Copilot und GitHub Copilot dagegen sind direkt in
-eine Anwendung (z.B. Textverarbeitungsprogramm, Tabellenkalkulationsprogramm,
-IDE) integriert und unterstützen den menschlichen Anwender aktiv, ohne dabei die
-Kontrolle zu übernehmen. Sie arbeiten quasi _parallel_ zum Anwender.
+Generative KI (GenAI) bezeichnet KI-Systeme, die auf Basis neuronaler Netze
+Inhalte wie Texte, Bilder, Videos, Musik oder Quellcode erzeugen. Im Unterschied
+zu "traditionellen" KI-Systemen, die Muster erkennen oder Daten klassifizieren,
+kann GenAI mittels statistischer Wahrscheinlichkeiten neuartige Inhalte
+generieren, die nicht Teil der Trainingsdaten waren. Schlüsseltechnologien sind
+_Large Language Models_ (LLMs) für Texte sowie Diffusionsmodelle und _Generative
+Adversarial Networks_ (GANs) für Bilder und Videos. Moderne Chatbots wie
+ChatGPT, Gemini oder LeChat nutzen LLMs, um kontextabhängig und zusammenhängend
+zu antworten. KI-gestützte Assistenzsysteme (Co-Pilots) wie Microsoft 365
+Copilot oder GitHub Copilot sind dagegen direkt in eine Anwendung integriert und
+unterstützen den Anwender aktiv, ohne die Kontrolle zu übernehmen.
 
 ## Prompt Engineering
 
-Prompt Engineering ist die Disziplin der Entwicklung und Optimierung von
-Eingaben (Prompts) mit dem Ziel, vorhersagbare, präzise und qualitativ
-hochwertige Ausgaben von generativen Modellen zu bekommen, die den spezifischen
-Anforderungen entsprechen. Die Grundprinzipien eines guten Prompts sind
-Klarheit, Kontext und Struktur. Um die Qualität von Prompts zu erhöhen und damit
-bessere, präzisere und zuverlässigere Ausgaben zu erhalten, können
-unterschiedliche Techniken verwendet werden.
+Prompt Engineering ist die Disziplin der gezielten Formulierung von Eingaben
+(Prompts), um von einem generativen Modell vorhersagbare, präzise und
+hochwertige Ausgaben zu erhalten. Ein guter Prompt zeichnet sich durch Klarheit,
+Kontext und Struktur aus. Die folgenden Techniken helfen dabei, die Qualität von
+Prompts zu verbessern.
 
 <Tabs>
   <TabItem value="a" label="Delimiter-Prompting" default>
@@ -109,22 +102,17 @@ Wenn der Zug 20 Minuten Verspätung hat, wann kommt er in B an?
 
 ## Vibe Coding
 
-Vibe Coding beschreibt eine neuartige Methode der Softwareentwicklung, bei der
-ein LLM zur Generierung des benötigten Quellcodes genutzt wird. Der Begriff
-wurde maßgeblich von OpenAI-Mitbegründer Andrej Karpathy geprägt und beschreibt
-die entspannte Zusammenarbeit mit der KI, bei der sich der Softwareentwickler
-voll und ganz auf den positiven Workflow und die inspirierende Atmosphäre mit
-der KI einlässt. Im Unterschied zur herkömmlichen Softwareentwicklung, bei der
-der Softwareentwickler selbst für das Erzeugen des Quellcodes zuständig ist,
-steht beim Vibe Coding die klare Beschreibung der Funktionalität in natürlicher
-Sprache durch Prompts im Vordergrund. Der konkrete Quellcode dagegen wird von
-der LLM erzeugt. Es handelt sich daher im Kern um eine Anwendung des Prompt
-Engineerings auf die Softwareentwicklung. Einsatzgebiete sind unter Anderem das
-Rapid Prototyping, die Erstellung von _Minimal Viable Products_ (MVPs) sowie das
-automatische Erzeugen von Boilerplate-Code. Nachteil von Vibe Coding ist vor
-allem eine stark schwankende Softwarequalität und ein damit verbundener erhöhter
-Wartungsaufwand. Es eignet sich daher nur bedingt für komplexe
-Softwareanwendungen oder Softwareanwendungen mit einem hohen Qualitätsanspruch.
+Vibe Coding ist eine Methode der Softwareentwicklung, bei der ein LLM den
+Quellcode auf Basis natürlichsprachlicher Beschreibungen generiert. Der Begriff
+wurde von OpenAI-Mitbegründer Andrej Karpathy geprägt. Im Unterschied zur
+herkömmlichen Softwareentwicklung steht nicht das Schreiben von Code im
+Vordergrund, sondern die klare Beschreibung der gewünschten Funktionalität durch
+Prompts — das LLM übernimmt die Implementierung. Vibe Coding ist damit im Kern
+eine Anwendung des Prompt Engineerings auf die Softwareentwicklung.
+Einsatzgebiete sind unter anderem Rapid Prototyping, die Erstellung von _Minimal
+Viable Products_ (MVPs) und das Erzeugen von Boilerplate-Code. Nachteil ist eine
+oft schwankende Softwarequalität und ein erhöhter Wartungsaufwand — Vibe Coding
+eignet sich daher nur bedingt für komplexe oder qualitätskritische Anwendungen.
 
 ```mermaid
 flowchart
@@ -136,8 +124,7 @@ flowchart
    a --> b --> c --> d --> b
 ```
 
-Im Beispiel soll ein einfacher Taschenrechner mit Hilfe von JavaFX entwickelt
-werden.
+Im Beispiel soll ein einfacher Taschenrechner mit JavaFX entwickelt werden.
 
 <Tabs>
   <TabItem value="a" label="Iteration 1" default>

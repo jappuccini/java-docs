@@ -5,11 +5,10 @@ sidebar_position: 310
 tags: [tests]
 ---
 
-Softwaretests sollen sicherstellen, dass bei der Entwicklung oder Änderung einer
-Software der Quellcode in allen festgelegten Anwendungsfällen korrekt
-funktioniert. Mit Hilfe von Softwaretests können Softwareentwickler im Idealfall
-schon während des Entwicklungsprozesses mögliche Fehler identifizieren und
-beheben. Man unterscheidet dabei zwischen verschiedenen Testarten:
+Softwaretests stellen sicher, dass eine Anwendung in allen vorgesehenen
+Anwendungsfällen korrekt funktioniert. Durch frühzeitiges Testen können Fehler
+bereits während der Entwicklung erkannt und behoben werden. Man unterscheidet
+vier Testebenen:
 
 - Akzeptanztests: Testen des gesamten Systems unter realitätsgetreuen
   Bedingungen
@@ -17,15 +16,13 @@ beheben. Man unterscheidet dabei zwischen verschiedenen Testarten:
 - Integrationstests: Testen mehrerer, voneinander abhängiger Komponenten
 - Komponententests: Testen einzelner, abgeschlossener Softwarebausteine
 
-Komponententests (Unit Tests) sowie Integrationstests spielen vor allem bei
-agilen Vorgehensweisen wie z.B. der testgetriebenen Entwicklung (Test Driven
-Development) eine große Rolle. Hierbei werden Anwendungen Schritt für Schritt
-(also inkrementell) um neue Funktionen erweitert (z.B. nach der
-Red-Green-Refactor-Methode): Zuerst wird ein Test geschrieben, der zunächst
-fehlschlägt (Red), anschließend wird genau soviel Produktivcode geschrieben,
-damit der Test erfolgreich durchläuft (Green). Schließlich werden beim
-Refactoring Testcode und Produktivcode aufgeräumt (also vereinfacht und
-verbessert).
+Komponententests (Unit Tests) sowie Integrationstests spielen besonders bei
+agilen Vorgehensweisen wie der testgetriebenen Entwicklung (Test Driven
+Development) eine wichtige Rolle. Beim TDD wird eine Anwendung inkrementell nach
+der Red-Green-Refactor-Methode entwickelt: Zunächst wird ein Test geschrieben,
+der fehlschlägt (Red). Dann wird gerade so viel Produktivcode geschrieben, dass
+der Test besteht (Green). Anschließend wird der Code aufgeräumt und vereinfacht
+(Refactor).
 
 ```mermaid
 flowchart LR

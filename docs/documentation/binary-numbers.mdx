@@ -9,15 +9,14 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 Informationen wie Zahlen und Zeichen werden im Computer in Form von sogenannten
-_Bits_ (Binary Digits) gespeichert. Ein Bit stellt dabei die kleinstmögliche
-Informationseinheit dar und kann zwei Zustände einnehmen: 0 und 1 (bzw. "an" und
-"aus", "wahr" und "falsch", "Strom fließt" und "Strom fließt nicht"). Zahlen,
-die mit Hilfe von Bits dargestellt werden, bezeichnet man als Binärzahlen, das
-dazugehörige Zahlensystem als Binärsystem. Zahlensysteme wie das Binärsystem
-oder das Dezimalsystem legen fest, wie Zahlen dargestellt werden. Anhand des
-Namens lässt sich dabei ableiten, wie viele Ziffern zur Darstellung einer Zahl
-zur Verfügung stehen. Um Unklarheiten zu vermeiden, können Zahlen um einen nach-
-und tiefgestellten Index ergänzt werden (2 = Binärsystem, 8 = Oktalsystem, 10 =
+_Bits_ (Binary Digits) gespeichert. Ein Bit ist die kleinstmögliche
+Informationseinheit und kann zwei Zustände annehmen: 0 und 1 (bzw. „an" und
+„aus", „wahr" und „falsch", „Strom fließt" und „Strom fließt nicht"). Zahlen,
+die mit Hilfe von Bits dargestellt werden, nennt man _Binärzahlen_, das
+dazugehörige Zahlensystem _Binärsystem_. Zahlensysteme legen fest, wie Zahlen
+dargestellt werden — der Name verrät dabei jeweils, wie viele Ziffern zur
+Verfügung stehen. Um Verwechslungen zu vermeiden, können Zahlen mit einem nach-
+und tiefgestellten Index versehen werden (2 = Binärsystem, 8 = Oktalsystem, 10 =
 Dezimalsystem, 16 = Hexadezimalsystem).
 
 <Tabs>
@@ -33,8 +32,8 @@ Dezimalsystem, 16 = Hexadezimalsystem).
 
 :::info
 
-Das höchstwertige Bit wird als _Most Significant Bit_ (MSB), das niedrigstwertie
-Bit als _Least Significant Bit_ (LSB) bezeichnet.
+Das höchstwertige Bit wird als _Most Significant Bit_ (MSB), das
+niedrigstwertige Bit als _Least Significant Bit_ (LSB) bezeichnet.
 
 :::
 
@@ -86,9 +85,9 @@ Notation bezeichnet wird, werden Zahlen als Produkt aus Mantisse und einer
 
 ## Größeneinheiten
 
-Werden 8 Bits zu einer Einheit zusammengefasst, spricht man von einem _Byte_.
-Werden 1.024 Byte wiederum zusammengefasst, spricht man von einem Kilobyte (KB)
-bei 1.024 Kilobyte von einem Megabyte (MB) und so weiter.
+Werden 8 Bits zu einer Einheit zusammengefasst, spricht man von einem _Byte_. Je
+1.024 Bytes werden wiederum zu einem Kilobyte (KB) zusammengefasst, 1.024
+Kilobyte ergeben ein Megabyte (MB) und so weiter.
 
 | Einheit  | Abkürzung | Größe in Byte     | Größe in Bit   |
 | -------- | --------- | ----------------- | -------------- |
@@ -101,16 +100,15 @@ bei 1.024 Kilobyte von einem Megabyte (MB) und so weiter.
 
 ## Negative Binärzahlen
 
-Da Binärzahlen keine Vorzeichen kennen, wird zur Darstellung von negativen
-Binärzahlen ein Bit (in der Regel das MSB) als Vorzeichen genutzt, wobei die 0
-für eine positive Zahl, die 1 für eine negative Zahl steht. Verwendet man für
-die Darstellung negativer Binärzahlen lediglich das Vorzeichenbit ergeben sich
-allerdings Probleme wie eine doppelte Null sowie komplexe und ineffiziente
-Rechenoperationen. Auch beim Einerkomplement (auch b-1-Komplement), bei dem alle
-Bits der Binärzahl invertiert werden, bleiben diese Probleme (teils) bestehen.
-Daher wird zu Darstellung negativer Dezimalzahlen das sogenannte
-Zweierkomplement (auch b-Komplement) verwendet, bei welchem nach dem Invertieren
-noch eine 1 hinzuaddiert wird.
+Da Binärzahlen keine Vorzeichen kennen, wird zur Darstellung negativer Zahlen
+ein Bit (in der Regel das MSB) als Vorzeichenbit genutzt: Die 0 steht für eine
+positive, die 1 für eine negative Zahl. Verwendet man ausschließlich das
+Vorzeichenbit, entstehen jedoch Probleme wie eine doppelte Null sowie komplexe
+und ineffiziente Rechenoperationen. Auch beim _Einerkomplement_
+(b-1-Komplement), bei dem alle Bits invertiert werden, bleiben diese Probleme
+teilweise bestehen. Daher wird in der Praxis das _Zweierkomplement_
+(b-Komplement) verwendet: Nach dem Invertieren aller Bits wird zusätzlich eine 1
+addiert.
 
 Im Beispiel wird die Zahl -59<sub>10</sub> als negative Binärzahl dargestellt.
 
@@ -123,8 +121,8 @@ Im Beispiel wird die Zahl -59<sub>10</sub> als negative Binärzahl dargestellt.
 
 ## Reelle Binärzahlen
 
-Die Darstellung reeller Binärzahlen erfolgt in Form von Gleitkommazahlen
-(Floating Point Numbers). Diese ist in der Norm IEEE754 festgelegt.
+Die Darstellung reeller Binärzahlen erfolgt als Gleitkommazahlen
+(Floating-Point-Zahlen) gemäß der Norm IEEE 754.
 
 |                      | Datentyp | Größe  | Vorzeichen | Exponent | Mantisse | Bias |
 | -------------------- | -------- | ------ | ---------- | -------- | -------- | ---- |
@@ -140,7 +138,7 @@ Gleitkommazahlen können dabei spezielle Werte annehmen:
 - NaN (Not a Number): ungültige Werte (z.B. _Unendlich - Unendlich_) werden als
   NaN dargestellt
 
-Im Beispiel wir die Zahl -156,39<sub>10</sub> als Gleitkommazahl dargestellt.
+Im Beispiel wird die Zahl -156,39<sub>10</sub> als Gleitkommazahl dargestellt.
 
 |                      | Vorzeichen | Exponent    | Mantisse                                             |
 | -------------------- | ---------- | ----------- | ---------------------------------------------------- |

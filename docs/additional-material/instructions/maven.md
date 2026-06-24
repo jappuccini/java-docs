@@ -5,7 +5,7 @@ sidebar_position: 20
 tags: [maven]
 ---
 
-:::info
+:::tip
 
 Benötigte Tools: [JDK](https://www.oracle.com/java/technologies/downloads/) und
 [Eclipse](https://www.eclipse.org/)
@@ -13,6 +13,9 @@ Benötigte Tools: [JDK](https://www.oracle.com/java/technologies/downloads/) und
 :::
 
 ## Maven-Projekt anlegen
+
+Ein neues Maven-Projekt wird direkt in Eclipse angelegt. Der Projektordner
+sollte im Git-Arbeitsbereich liegen, damit er versioniert werden kann.
 
 - Starte Eclipse
 - Führe die Funktion **File - New - Maven Project** aus
@@ -33,6 +36,9 @@ Benötigte Tools: [JDK](https://www.oracle.com/java/technologies/downloads/) und
 
 ## Java-Version und Codierung festlegen
 
+Die Java-Version und die Zeichenkodierung werden in der _pom.xml_ über
+Properties konfiguriert.
+
 - Starte Eclipse
 - Navigiere in der View _Package Explorer_ zu Deinem Maven-Projekt
 - Navigiere in Deinem Maven-Projekt zur Datei _pom.xml_ und öffne diese
@@ -52,6 +58,9 @@ Benötigte Tools: [JDK](https://www.oracle.com/java/technologies/downloads/) und
 ```
 
 ## JavaDoc erstellen
+
+Das JavaDoc-Maven-Plugin generiert eine HTML-Dokumentation aus den
+Javadoc-Kommentaren im Quellcode.
 
 - Starte Eclipse
 - Navigiere in der View _Package Explorer_ zu Deinem Maven-Projekt
@@ -87,6 +96,9 @@ Benötigte Tools: [JDK](https://www.oracle.com/java/technologies/downloads/) und
 
 ## Ausführbare JAR-Datei erstellen
 
+Das Shade-Plugin verpackt das Projekt samt aller Abhängigkeiten in eine
+ausführbare Über-JAR.
+
 - Starte Eclipse
 - Navigiere in der View _Package Explorer_ zu Deinem Maven-Projekt
 - Navigiere in Deinem Maven-Projekt zur Datei _pom.xml_ und öffne diese
@@ -104,7 +116,7 @@ Benötigte Tools: [JDK](https://www.oracle.com/java/technologies/downloads/) und
          <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-shade-plugin</artifactId>
-            <version>[Version]]</version>
+            <version>[Version]</version>
             <executions>
                <execution>
                   <phase>package</phase>

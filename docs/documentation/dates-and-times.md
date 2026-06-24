@@ -5,8 +5,9 @@ sidebar_position: 142
 tags: [java-api, dates-and-times]
 ---
 
-Die Klasse `LocalDateTime` liefert alle relevanten Informationen zum fast
-weltweit verwendeten Kalendersystem ISO-8601 (gregorianischer Kalender).
+Die Klasse `LocalDateTime` stellt Informationen zum gregorianischen Kalender
+(ISO-8601) bereit und gibt Zugriff auf Jahr, Monat, Tag, Stunde, Minute und
+Sekunde der aktuellen Systemzeit.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
@@ -22,9 +23,9 @@ public class MainClass {
 }
 ```
 
-Neben den print-Methoden des Standard-Ausgabestroms `System.out` besitzt die
-Klasse `System` auch die Methode `long currentTimeMillis()`, die die Differenz
-in Millisekunden zwischen der aktuellen Systemzeit und dem Nullpunkt zurückgibt.
+Neben `LocalDateTime` bietet die Klasse `System` die Methode
+`long currentTimeMillis()`, die die Differenz in Millisekunden zwischen der
+aktuellen Systemzeit und dem Nullpunkt (1. Januar 1970, 0 Uhr) zurückgibt.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
@@ -39,6 +40,6 @@ public class MainClass {
 
 :::info
 
-Der festgelegte Nullpunkt ist der 1. Januar 1970, 0 Uhr.
+Der Nullpunkt (Unix-Epoch) ist der 1. Januar 1970 um 0:00 Uhr UTC.
 
 :::

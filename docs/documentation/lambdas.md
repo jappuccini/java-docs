@@ -5,13 +5,13 @@ sidebar_position: 265
 tags: [inner-classes, lambdas]
 ---
 
-Lambda-Ausdrücke sind anonyme Funktionen, die nur über ihre Referenz
-angesprochen werden können.
+Lambda-Ausdrücke sind anonyme Funktionen, die einer Variablen zugewiesen oder
+direkt als Parameter übergeben werden können.
 
 ## Implementierung von Lambda-Ausdrücken
 
-Die Methodenparameter sowie der Methodenkörper werden bei einem Lambda-Ausdruck
-getrennt vom Pfeiloperator `->` notiert.
+Die Parameterliste und der Methodenkörper eines Lambda-Ausdrucks werden durch
+den Pfeiloperator `->` getrennt.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
@@ -31,29 +31,28 @@ public class MainClass {
 
 :::info
 
-Voraussetzung für den Einsatz eines Lambda-Ausdrucks ist eine funktionale
-Schnittstelle, also eine Schnittstelle, die über genau eine Methode verfügt.
+Voraussetzung für Lambda-Ausdrücke ist eine _funktionale Schnittstelle_ — eine
+Schnittstelle mit genau einer abstrakten Methode.
 
 :::
 
 ## Syntaxvarianten
 
-- Bei keinem oder mehreren Methodenparametern müssen diese in runden Klammern
-  angegeben werden, bei genau einem Methodenparameter können die runden Klammern
-  weggelassen werden
-- Besteht der Methodenkörper aus mehreren Anweisungen, müssen diese in
-  geschweiften Klammern angegeben werden, bei genau einer Anweisung können die
-  geschweiften Klammern weggelassen werden
-- Besteht der Methodenkörper aus genau einer Anweisung, kann das Semikolon am
-  Anweisungsende weggelassen werden, ist die Anweisung eine return-Anweisung,
-  kann auch das `return` weggelassen werden
+Die Syntax von Lambda-Ausdrücken erlaubt verschiedene Kurzformen:
+
+- Enthält die Parameterliste genau einen Parameter, können die runden Klammern
+  weggelassen werden; bei keinem oder mehreren Parametern sind sie verpflichtend
+- Besteht der Methodenkörper aus genau einer Anweisung, können die geschweiften
+  Klammern und das abschließende Semikolon weggelassen werden
+- Besteht diese eine Anweisung aus einer `return`-Anweisung, kann auch das
+  Schlüsselwort `return` weggelassen werden
 
 ## Methodenreferenzen
 
-Lambda-Ausdrücke, die nur aus dem Aufruf einer Methode bestehen, können als
-Methodenreferenz dargestellt werden. Bei einer Methodenreferenz wird die Klasse
-bzw. die Referenz auf der linken Seite mit Hilfe zweier Doppelpunkte vom
-Methodennamen auf der recht Seite getrennt.
+Besteht ein Lambda-Ausdruck ausschließlich aus dem Aufruf einer Methode, kann er
+als _Methodenreferenz_ geschrieben werden. Die Klasse oder Referenz auf der
+linken Seite wird dabei durch `::` vom Methodennamen auf der rechten Seite
+getrennt.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {

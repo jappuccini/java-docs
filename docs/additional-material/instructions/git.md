@@ -5,7 +5,7 @@ sidebar_position: 30
 tags: [git]
 ---
 
-:::info
+:::tip
 
 Benötigte Tools: [JDK](https://www.oracle.com/java/technologies/downloads/),
 [Eclipse](https://www.eclipse.org/) und [Git](https://git-scm.com/downloads)
@@ -13,6 +13,10 @@ Benötigte Tools: [JDK](https://www.oracle.com/java/technologies/downloads/),
 :::
 
 ## Remote Repository anlegen
+
+Ein Remote Repository auf GitHub dient als zentraler Ablageort für den
+Quellcode. Zusätzlich wird ein Personal Access Token benötigt, um sich von der
+Kommandozeile aus zu authentifizieren.
 
 - Registriere Dich bei [GitHub](https://github.com/)
 - Melde Dich bei [GitHub](https://github.com/) an
@@ -32,6 +36,9 @@ Benötigte Tools: [JDK](https://www.oracle.com/java/technologies/downloads/),
 
 ## Git konfigurieren
 
+Vor der ersten Nutzung muss Git mit dem eigenen Namen und der E-Mail-Adresse
+konfiguriert werden. Diese Angaben erscheinen in jedem Commit.
+
 - Starte die Kommandozeile (z.B. Windows PowerShell)
 - Führe den Befehl `git config --global user.name "[Dein Name]"` aus, um den
   Benutzernamen festzulegen (z.B.
@@ -41,6 +48,9 @@ Benötigte Tools: [JDK](https://www.oracle.com/java/technologies/downloads/),
   `git config --global user.email "daniel.appenmaier@gmail.com"`)
 
 ## Lokales Repository anlegen
+
+Ein lokales Repository kann entweder neu initialisiert (Variante A) oder direkt
+vom Remote Repository geklont werden (Variante B).
 
 **Variante A: Via Git Init**
 
@@ -70,6 +80,8 @@ Benötigte Tools: [JDK](https://www.oracle.com/java/technologies/downloads/),
 
 ## Lokales Repository in Eclipse einbinden
 
+Nach dem Anlegen des lokalen Repositorys wird es als Eclipse-Projekt importiert.
+
 - Starte Eclipse
 - Führe die Funktion **File - Import... - General - Projects from Folder or
   Archive** aus und betätige die Drucktaste **Next >**
@@ -78,6 +90,10 @@ Benötigte Tools: [JDK](https://www.oracle.com/java/technologies/downloads/),
     _C:\Users\Daniel Appenmaier\git\Java_)
 
 ## Remote Repository aktualisieren (bei Änderungen im lokalen Repository)
+
+Lokale Änderungen werden indiziert, als Commit versioniert und anschließend ins
+Remote Repository übertragen. Das ist entweder über die Kommandozeile oder
+direkt in Eclipse möglich.
 
 **Variante A: Via Kommandozeile**
 
@@ -103,6 +119,10 @@ Benötigte Tools: [JDK](https://www.oracle.com/java/technologies/downloads/),
   - Commit Message: **[Deine Commit-Message]** (z.B. _Add HelloWorld.java_)
 
 ## Lokales Repository aktualisieren (bei Änderungen im remote Repository)
+
+Änderungen aus dem Remote Repository werden in den lokalen Arbeitsbereich
+übertragen. Das ist entweder über die Kommandozeile oder direkt in Eclipse
+möglich.
 
 **Variante A: Via Kommandozeile**
 

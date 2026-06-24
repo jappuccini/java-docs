@@ -8,14 +8,13 @@ tags: [oo]
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Technisch gesehen handelt es sich bei einer Klasse um einen komplexen Datentyp.
-Analog zu den primitiven Datentypen können auch für Klassen Variablen –
-sogenannte _Referenzvariablen_ – definiert werden.
+Technisch gesehen ist eine Klasse ein komplexer Datentyp. Analog zu primitiven
+Datentypen können für Klassen Variablen — sogenannte _Referenzvariablen_ —
+deklariert werden.
 
-Im Gegensatz zu "normalen" Variablen werden bei Referenzvariablen nicht die
-eigentlichen Werte in den Variablen gespeichert, sondern die Speicheradressen
-der erzeugten Objekte. Die Selbstreferenz `this` verweist innerhalb einer Klasse
-auf das eigene Objekt.
+Im Gegensatz zu einfachen Variablen speichern Referenzvariablen nicht den Wert
+direkt, sondern die Speicheradresse des erzeugten Objekts. Die Selbstreferenz
+`this` verweist innerhalb einer Klasse auf das eigene Objekt.
 
 ```mermaid
 flowchart LR
@@ -45,14 +44,15 @@ flowchart LR
 
 :::info
 
-Der Standarwert von Referenzvariablen ist `null` (auch Nullreferenz genannt).
+Der Standardwert von Referenzvariablen ist `null` (auch _Nullreferenz_ genannt).
 
 :::
 
 ## Erzeugen von Objekten
 
-Beim Erzeugen eines Objekts mit Hilfe des Operators `new` wird der bei der
-Deklaration reservierte Speicherplatz durch das Objekt belegt.
+Mit dem `new`-Operator wird ein neues Objekt erzeugt und der zugehörige
+Speicherplatz belegt. Nach `new` muss immer ein
+[Konstruktor](classes#definition-von-konstruktoren) der Klasse angegeben werden.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
@@ -65,20 +65,11 @@ public class MainClass {
 }
 ```
 
-:::info
-
-Nach dem new-Operator muss immer ein
-[Konstruktor](classes#definition-von-konstruktoren) der Klasse stehen.
-
-:::
-
 ## Zugriff auf Attribute und Aufruf von Methoden
 
-Erlauben die Zugriffsrechte den Zugriff auf ein Attribut bzw. den Aufruf einer
-Methode, kann über die deklarierte Referenzvariable und einem nachgestellten
-Punkt auf das Attribut zugegriffen bzw. die Methode aufgerufen werden. Der
-Zugriff auf statische Attribute bzw. der Aufruf statischer Methoden erfolgt über
-den Klassennamen sowie einem nachgestellten Punkt.
+Sofern die Zugriffsrechte es erlauben, erfolgt der Zugriff auf ein Attribut oder
+der Aufruf einer Methode über die Referenzvariable gefolgt von einem Punkt.
+Statische Attribute und Methoden werden über den Klassennamen angesprochen.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
@@ -88,7 +79,7 @@ public class MainClass {
       Computer computer = new Computer("Mein Office PC");
       computer.setCpu(cpu);
       computer.setMemoryInGb(32);
-     System.out.println(Computer.getNumberOfComputers());
+      System.out.println(Computer.getNumberOfComputers());
    }
 
 }
@@ -97,7 +88,6 @@ public class MainClass {
 :::info
 
 Beim Aufruf einer Methode müssen alle Parameter in der richtigen Reihenfolge
-versorgt werden. Parameter, die diesem Prinzip folgen, bezeichnet man als
-_Positionsparameter_
+übergeben werden. Solche Parameter bezeichnet man als _Positionsparameter_.
 
 :::

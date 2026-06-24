@@ -5,10 +5,10 @@ sidebar_position: 110
 tags: [arrays]
 ---
 
-Wenn eine große Menge an Daten verarbeitet werden soll, kann man auf spezielle
-Datenstruktur-Variablen, sogenannte _Felder_ (Arrays), zurückgreifen. Die
-einzelnen Speicherplätze in einem Feld werden als Elemente bezeichnet, die über
-einen Index angesprochen werden können.
+Wenn eine größere Menge gleichartiger Daten verarbeitet werden soll, bieten sich
+_Felder_ (Arrays) an. Ein Feld ist eine Datenstruktur, die eine feste Anzahl von
+Elementen desselben Typs zusammenfasst. Die einzelnen Elemente werden über einen
+nullbasierten Index angesprochen.
 
 | 0    | 1     | 2    | 3   | 4     |
 | ---- | ----- | ---- | --- | ----- |
@@ -16,10 +16,10 @@ einen Index angesprochen werden können.
 
 ## Erzeugen von Feldern
 
-Da es sich bei Feldern um Objekte handelt, müssen diese vor Verwendung erzeugt
-werden. Bei der Erzeugung muss immer die Länge des Feldes (d.h. die Anzahl der
-Elemente) angegeben werden. Jedes Feld verfügt über das Attribut `length`,
-welches die Länge des Feldes enthält.
+Da Felder Objekte sind, müssen sie vor der Verwendung mit dem `new`-Operator
+erzeugt werden. Bei der Erzeugung muss die Länge des Feldes (Anzahl der
+Elemente) angegeben werden. Jedes Feld besitzt das Attribut `length`, das die
+Länge enthält.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
@@ -36,15 +36,15 @@ public class MainClass {
 
 :::info
 
-Felder werden zwar mit Hilfe des new-Operators erzeugt, besitzen aber keinen
+Felder werden zwar mit dem `new`-Operator erzeugt, besitzen aber keinen
 Konstruktor.
 
 :::
 
 ## Zugriff auf Feldelemente
 
-Der Zugriff auf die Elemente eines Feldes erfolgt über die Angabe des
-entsprechenden Index.
+Der Zugriff auf ein Element erfolgt über den zugehörigen Index in eckigen
+Klammern. Der Index beginnt in Java bei 0.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
@@ -52,6 +52,7 @@ public class MainClass {
    public static void main(String[] args) {
       int[] ids = {4, 8, 15, 16, 23, 42};
 
+      // alle Elemente über den Index ausgeben
       for (int i = 0; i < ids.length; i++) {
          System.out.println(ids[i]);
       }
@@ -62,14 +63,14 @@ public class MainClass {
 
 :::info
 
-Der Index beginnt bei Java bei 0.
+Der Index beginnt in Java bei 0.
 
 :::
 
 ## Der Parameter _String[] args_
 
-Der Parameter `String[] args` der main-Methode ermöglicht es dem Anwender, der
-ausführbaren Klasse beim Aufruf Informationen mitzugeben.
+Der Parameter `String[] args` der main-Methode ermöglicht es, der Anwendung beim
+Aufruf über die Kommandozeile Argumente zu übergeben.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
@@ -86,9 +87,9 @@ public class MainClass {
 ## Variable Argumentlisten (VarArgs)
 
 Variable Argumentlisten (VarArgs) ermöglichen die Definition von Methoden, denen
-beliebig viele Werte eines Datentyps mitgegeben werden können. Die
-Parameterliste einer Methode kann allerdings nur eine variable Argumentliste
-beinhalten und diese muss immer am Ende der Parameterliste stehen.
+eine beliebige Anzahl von Werten desselben Datentyps übergeben werden kann. Eine
+Parameterliste darf nur eine VarArgs-Liste enthalten, und diese muss stets am
+Ende der Parameterliste stehen.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {

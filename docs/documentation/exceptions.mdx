@@ -9,56 +9,45 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 Programmfehler (Bugs) führen dazu, dass Programme unerwartete Ergebnisse liefern
-oder abstürzen. Je komplexer das Programm, desto wichtiger wird eine durchdachte
-und konsequente Fehlerbehandlung. Man unterscheidt dabei zwischen verschiedenen
-Fehlerarten: Kompilierungsfehler, Logikfehler und Laufzeitfehler.
+oder abstürzen. Je komplexer das Programm, desto wichtiger ist eine
+strukturierte Fehlerbehandlung. Es gibt drei grundlegende Fehlerarten:
+Kompilierungsfehler, Logikfehler und Laufzeitfehler.
 
 <Tabs>
   <TabItem value="a" label="Kompilierungsfehler" default>
 
-Kompilierungsfehler sind Programmfehler, die verhindern, dass das Programm
-ausgeführt werden kann. Sie können relativ einfach behoben werden, da sie schon
-zur Designzeit auftreten und von den meisten Entwicklungsumgebungen direkt
-angezeigt werden.
+Kompilierungsfehler verhindern, dass das Programm übersetzt und ausgeführt
+werden kann. Da sie bereits beim Schreiben des Codes auftreten und von
+Entwicklungsumgebungen direkt angezeigt werden, lassen sie sich in der Regel
+leicht beheben.
 
   </TabItem>
   <TabItem value="b" label="Logikfehler">
 
 Verhält sich das Programm nicht wie beabsichtigt, spricht man von Logikfehlern.
-Sie sind mit am schwersten zu entdecken und zu beheben. Zur Unterstüzung bei der
-Fehlersuche und -behandlung kann unter Anderem der Debugger verwendet werden.
-Der Debugger ermöglicht es, Programme zur Laufzeit zu analysieren und zu
-steuern. Durch das Setzen von Haltepunkten (Breakpoints) kann die Ausführung des
-Programms an beliebiger Stelle angehalten werden. Dadurch lassen sich z.B. die
-Inhalte von Datenobjekten überprüfen. Zudem bietet der Debugger die Möglichkeit,
-die weitere Ausführung des Programms in der gewünschten Schrittweite
-forzuführen.
+Sie sind schwer zu entdecken, da das Programm ausgeführt wird, aber falsche
+Ergebnisse liefert. Der Debugger kann dabei helfen: Er ermöglicht die
+schrittweise Ausführung und das Überprüfen von Variablenwerten zur Laufzeit.
 
   </TabItem>
   <TabItem value="c" label="Laufzeitfehler">
 
-Laufzeitfehler treten erst beim Ausführen des Programms auf. Sie entstehen meist
-dann, wenn das Programm versucht, eine Operation auszuführen, die nicht
-ausgeführt werden kann (z.B. die Division durch Null). Diese Situationen werden
-auch als Ausnahmen (Exceptions) bezeichnet. Ausnahmen gewährleisten eine klare
-Trennung zwischen funktionalem Code und Code zur Fehlerbehandlung. Die
-Fehlerbehandlung erfolgt dabei gemäß dem Ausnahmenbehandlungsprozess: nachdem
-eine Ausnahme ausgelöst wurde, kann bzw. muss diese je nach Ausnahmenart vom
-Empfänger der Ausnahme entweder behandelt oder weitergeleitet werden
-_Catch-or-Throw-Regel_ Man unterscheidet zwischen _geprüften_ (checked) und
-_ungeprüften_ (unchecked) Ausnahmen. Geprüfte Ausnahmen müssen, ungeprüfte
-Ausnahmen können behandelt bzw. weitergeleitet werden.
+Laufzeitfehler treten erst beim Ausführen des Programms auf, wenn das Programm
+eine Operation versucht, die nicht möglich ist (z.B. Division durch null oder
+Zugriff auf ein null-Objekt). Solche Situationen werden als Ausnahmen
+(Exceptions) bezeichnet. Die Fehlerbehandlung folgt der _Catch-or-Throw-Regel_:
+Eine Ausnahme muss entweder abgefangen (catch) oder weitergeleitet (throw)
+werden. Geprüfte (checked) Ausnahmen müssen behandelt werden; ungeprüfte
+(unchecked) Ausnahmen können es.
 
   </TabItem>
 </Tabs>
 
 ## Die Klassenhierarchie der Laufzeitfehler
 
-Die Klasse `Throwable` stellt die Oberklasse aller Laufzeitfehler dar.
-Schwerwiegende Fehler (hauptsächlich Probleme in der JVM (Java Virtual Machine))
-werden durch Unterklassen der Klasse `Error` abgebildet, geprüfte Ausnahmen
-durch Unterklassen der Klasse `Exception` und ungeprüfte Ausnahmen durch
-Unterklassen der Klasse `RuntimeException`.
+`Throwable` ist die Oberklasse aller Laufzeitfehler. Schwerwiegende JVM-Fehler
+sind Unterklassen von `Error`. Geprüfte Ausnahmen sind Unterklassen von
+`Exception`, ungeprüfte Ausnahmen Unterklassen von `RuntimeException`.
 
 ```mermaid
 classDiagram
@@ -72,10 +61,9 @@ classDiagram
 
 ## Definition von Ausnahmenklassen
 
-Eigene Ausnahmenklassen werden durch einfaches Ableiten von einer bestehenden
-Ausnahmenklasse definiert. Ausnahmenklassen sollten dabei immer von der Klasse
-`Exception` oder einer ihrer Unterklassen abgeleitet werden, nicht von der
-Klasse `Error`.
+Eigene Ausnahmenklassen werden durch Ableitung von einer bestehenden
+Ausnahmenklasse definiert. Es sollte immer von `Exception` oder einer ihrer
+Unterklassen abgeleitet werden — nicht von `Error`.
 
 ```java title="InvalidValueException.java" showLineNumbers
 public class InvalidValueException extends Exception {
@@ -89,9 +77,9 @@ public class InvalidValueException extends Exception {
 
 ## Auslösen von Ausnahmen
 
-Mit dem Schlüsselwort `throw` kann innerhalb einer Methode eine Ausnahme
-ausgelöst werden. Die Methode, in der die Ausnahme ausgelöst wird, muss mit dem
-Schlüsselwort `throws` die Ausnahmenklasse angeben, die ausgelöst werden kann.
+Mit dem Schlüsselwort `throw` wird eine Ausnahme ausgelöst. Die auslösende
+Methode muss mit `throws` deklarieren, welche geprüften Ausnahmen sie werfen
+kann.
 
 ```java title="Computer.java (Auszug)" showLineNumbers
 public abstract class Computer {
@@ -110,10 +98,9 @@ public abstract class Computer {
 
 ## Weiterleiten von Ausnahmen
 
-Ausnahmen können weitergeleitet werden. Hierbei wird die Fehlerbehandlung an die
-nächsthöhere Ebene weitergegeben. Um eine Ausnahme weiterzuleiten, muss in der
-weiterleitenden Methode mit `throws` die Ausnahme angegeben werden, die
-ausgelöst werden kann.
+Ausnahmen können an den Aufrufer weitergeleitet werden, anstatt sie direkt zu
+behandeln. Die weiterleitende Methode deklariert dafür ebenfalls `throws` mit
+der entsprechenden Ausnahmenklasse.
 
 ```java title="Notebook.java (Auszug)" showLineNumbers
 public final class Notebook extends Computer implements Comparable<Notebook> {
@@ -129,11 +116,9 @@ public final class Notebook extends Computer implements Comparable<Notebook> {
 
 ## Abfangen von Ausnahmen
 
-Mit Hilfe der try-catch-Anweisung können Methoden, die eine Ausnahme auslösen
-können, überwacht werden; d.h. die Ausnahmen werden gegebenenfalls abgefangen.
-Der try-Block enthält die Anweisungen, die überwacht werden sollen, der
-catch-Block enthält die eigentliche Fehlerbehandlung. Als Parameter von `catch`
-muss angegeben werden, welche Ausnahme(n) abgefangen werden soll(en).
+Die `try-catch`-Anweisung überwacht einen Codeblock auf Ausnahmen. Der
+`try`-Block enthält den zu überwachenden Code, der `catch`-Block die
+Fehlerbehandlung für eine bestimmte Ausnahmenklasse.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {

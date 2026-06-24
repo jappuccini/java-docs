@@ -8,12 +8,10 @@ tags: [algorithms]
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Ein Algorithmus stellt ein Verfahren zur Lösung eines Problems mit einer
-endlichen Anzahl von Schritten dar. In der Prpgrammierung ist ein Algorithmus
-eine Reihe von Anweisungen, die festlegen, was und wie etwas getan werden muss.
-Zielsetzung ist dabei, aus einer gegebenen Eingabe eine entsprechende Ausgabe zu
-erhalten. Beispiele aus der realen Welt für Algorithmen sind Aufbauanleitungen,
-Rezepte, Spielanleitungen und Beipackzettel.
+Ein Algorithmus ist ein schrittweises Verfahren zur Lösung eines Problems mit
+einer endlichen Anzahl klar definierter Anweisungen. Er nimmt eine Eingabe
+entgegen und liefert eine entsprechende Ausgabe. Alltagsbeispiele für
+Algorithmen sind Kochrezepte, Aufbauanleitungen oder Beipackzettel.
 
 ```mermaid
 flowchart LR
@@ -23,11 +21,11 @@ flowchart LR
    output[Ausgabe]@{ shape: lean-r }
 ```
 
-Das nachfolgende Rezept beschreibt die Zubereitung von Pankcakes:
+Das nachfolgende Rezept beschreibt die Zubereitung von Pancakes:
 
-1. 3 Eiweiss zu festem Eischnee verarbeiten
-2. 3 Eigelb und 50g Zucker schaumig rühren
-3. 300g Mehl, 300g Milch, 1 TL Backpulver und etwas Salz unter die
+1. 3 Eiweiß zu festem Eischnee verarbeiten
+2. 3 Eigelb und 50 g Zucker schaumig rühren
+3. 300 g Mehl, 300 g Milch, 1 TL Backpulver und etwas Salz unter die
    Eigelb-Zuckermasse rühren
 4. Sollte der Teig zu fest sein, zusätzlich Milch unterrühren
 5. Den Eischnee unter den Teig heben
@@ -44,34 +42,31 @@ ausführbares Programm bezeichnet man als Programmierung.
 
 ## Eigenschaften von Algorithmen
 
-Damit ein Verfahren als Algorithmus angesehen werden kann, muss es verschiedene
-Eigenschaften erfüllen:
+Damit ein Verfahren als Algorithmus gilt, muss es die folgenden Eigenschaften
+erfüllen:
 
-- Determiniertheit: Ein Verfahren ist deterministisch, wenn es bei beliebig
-  häufiger Wiederholung für gleiche Eingabewerte und gleichen Rahmenbedingungen
-  immer zum gleichen Ergebnis führt.
-- Eindeutigkeit (Determinismus): Ein Verfahren ist determiniert, wenn die
-  Schrittfolge immer gleich ist und immer zu einem eindeutigen Ergebnis führt.
-- Endlichkeit (Terminiertheit): Ein Verfahren ist terministisch, wenn die Anzahl
-  der Schritte endlich ist, also wenn das Verfahren nach endlichen Schritten ein
-  Ergebnis liefert.
-- Korrektheit: Ein Verfahren ist korrekt, wenn es immer zu einem richtigen
-  Ergebnis führt.
+- Determiniertheit: Bei gleicher Eingabe und gleichen Rahmenbedingungen führt
+  der Algorithmus immer zum gleichen Ergebnis.
+- Determinismus (Eindeutigkeit): Die Schrittfolge ist eindeutig festgelegt und
+  führt immer zu einem eindeutigen Ergebnis.
+- Terminiertheit (Endlichkeit): Der Algorithmus endet nach einer endlichen
+  Anzahl von Schritten.
+- Korrektheit: Der Algorithmus liefert für alle gültigen Eingaben das richtige
+  Ergebnis.
 
 ## Komplexität von Algorithmen
 
-Da der Zeitaufwand von Algorithmen aufgrund unterschiedlicher Faktoren
-(Hardware, parallele Verarbeitung, Eingabereihenfolge,…) nicht genau ermittelt
-werden kann, wird diese mit Hilfe der Landau-Notation 𝒪 (_Ordnung von_)
-dargestellt. Diese teilt Algorithmen in unterschiedliche Komplexitätsklassen
-(logarithmisch, linear, polynomial,…) ein. Die Komplexität einer Klasse ergibt
-sich dabei aus der Anzahl der Schritte, die abhängig von der Größe der
-Eingangsvariablen ausgeführt werden müssen.
+Da die Laufzeit eines Algorithmus von Faktoren wie Hardware, paralleler
+Verarbeitung oder der Eingabereihenfolge abhängt, wird sie nicht absolut
+gemessen, sondern mit der Landau-Notation 𝒪 (_Ordnung von_) beschrieben. Diese
+teilt Algorithmen in Komplexitätsklassen ein (z.B. logarithmisch, linear,
+polynomial) und gibt an, wie viele Schritte der Algorithmus in Abhängigkeit von
+der Eingabegröße benötigt.
 
 ## Suchalgorithmen
 
-Suchalgorithmen sollen innerhalb einer Datensammlung einen oder mehrere
-Datensätze mit bestimmten Eigenschaften finden.
+Suchalgorithmen finden innerhalb einer Datensammlung einen oder mehrere Einträge
+mit bestimmten Eigenschaften.
 
 | Algorithmus         | Komplexität Best Case | Komplexität Average Case | Komplexität Worst Case |
 | ------------------- | --------------------- | ------------------------ | ---------------------- |
@@ -82,10 +77,10 @@ Datensätze mit bestimmten Eigenschaften finden.
 <Tabs>
   <TabItem value="a" label="Linearsuche" default>
 
-Bei der Linearsuche werden alle Einträge einer Datensammlung nacheinander
-durchlaufen, d.h. eine Suche kann im besten Fall beim ersten Eintrag und im
-schlechtesten Fall beim letzten Eintrag beendet sein. Bei einer erfolglosen
-Suche müssen alle Einträge durchlaufen werden.
+Bei der Linearsuche werden alle Einträge der Datensammlung nacheinander
+durchlaufen. Im besten Fall wird das gesuchte Element beim ersten Zugriff
+gefunden, im schlechtesten Fall erst beim letzten. Bei einer erfolglosen Suche
+werden alle Einträge durchlaufen.
 
 Im nachfolgenden Beispiel wird die Zahlenfolge
 `12, 16, 36, 49, 50, 68, 70, 76, 99` nach dem Wert 70 durchsucht.
@@ -112,10 +107,10 @@ verbessert werden.
   </TabItem>
   <TabItem value="b" label="Binärsuche">
 
-Bei der Binärsuche wird die sortierte Sammlung schrittweise halbiert.
-Anschließend wird nur noch in der jeweils passenden Hälfte weitergesucht. Die
-Binärsuche folgt damit dem Teile-und-Herrsche-Prinzip und ist i.d.R. schneller
-als die Linearsuche, setzt aber eine sortierte Sammlung voraus.
+Bei der Binärsuche wird die sortierte Sammlung schrittweise halbiert, und die
+Suche wird nur in der passenden Hälfte fortgesetzt. Dieses Teile-und-Herrsche-
+Prinzip macht die Binärsuche deutlich schneller als die Linearsuche, setzt aber
+eine sortierte Sammlung voraus.
 
 Im nachfolgenden Beispiel wird die Zahlenfolge
 `12, 16, 36, 49, 50, 68, 70, 76, 99` nach dem Wert 70 durchsucht.
@@ -154,10 +149,10 @@ Zahl ist, verwendet.
   </TabItem>
   <TabItem value="c" label="Interpolationsuche">
 
-Die Interpolationssuche basiert auf der Binärsuche, halbiert die Sammlung aber
-nicht, sondern versucht, durch Interpolation, einen geeigneteren Teiler zu
-ermitteln. Dieser wird mit Hilfe der Formel
-`t = ⌊𝑙 + ((𝑠 − 𝑑[𝑙]) / (𝑑[𝑟] − 𝑑[𝑙])) ∗ (𝑟 − 𝑙)⌋` ermittelt.
+Die Interpolationssuche basiert auf der Binärsuche, berechnet den Teilungspunkt
+jedoch nicht als Mitte, sondern durch Interpolation mit der Formel
+`t = ⌊𝑙 + ((𝑠 − 𝑑[𝑙]) / (𝑑[𝑟] − 𝑑[𝑙])) ∗ (𝑟 − 𝑙)⌋`. Dadurch kann sie bei
+gleichmäßig verteilten Daten schneller konvergieren.
 
 Im nachfolgenden Beispiel wird die Zahlenfolge
 `12, 16, 36, 49, 50, 68, 70, 76, 99` nach dem Wert 70 durchsucht.
@@ -191,14 +186,12 @@ Teiler, ⌊ ⌋ = untere Gaußklammer
 
 ## Sortieralgorithmen
 
-Sortieralgorithmen sollen eine möglichst effiziente Speicherung von Daten und
-deren Auswertung ermöglichen. Man unterscheidet dabei zwischen einfachen und
-rekursiven Sortieralgorithmen. Zusätzlich wird bei Sortierverfahren zwischen
-stabilen und nichtstabilen Verfahren unterschieden. Bei stabilen
-Sortierverfahren bleibt die Reihenfolge von gleich großen Datensätzen bei der
-Sortierung erhalten. Die Platzkomplexität eines Sortierverfahrens schließlich
-gibt an, ob zusätzlicher Speicherplatz für Zwischenergebnisse unabhängig von der
-Anzahl Daten ist (_in-place_) oder nicht (_out-of-place_).
+Sortieralgorithmen bringen eine Datensammlung in eine definierte Reihenfolge.
+Man unterscheidet zwischen einfachen und rekursiven Verfahren sowie zwischen
+stabilen (gleichwertige Elemente behalten ihre ursprüngliche Reihenfolge) und
+nicht-stabilen Verfahren. Arbeitet ein Algorithmus ohne zusätzlichen
+Speicherplatz aus, bezeichnet man ihn als _in-place_, andernfalls als
+_out-of-place_.
 
 | Algorithmus   | Komplexität Best Case | Komplexität Average Case | Komplexität Worst Case | Stabil | In-Place |
 | ------------- | --------------------- | ------------------------ | ---------------------- | ------ | -------- |
@@ -212,10 +205,9 @@ Anzahl Daten ist (_in-place_) oder nicht (_out-of-place_).
 <Tabs>
   <TabItem value="a" label="Bubblesort" default>
 
-Der Bubblesort verfolgt die Idee, das größere Blasen schneller aufsteigen als
-kleinere. Dementsprechend werden beim Bubblesort Nachbarelemente miteinander
-verglichen und gegebenenfalls vertauscht, so dass am Ende eines Durchlaufs das
-jeweils größte Element am Ende des noch unsortierten Teils steht.
+Beim Bubblesort werden benachbarte Elemente miteinander verglichen und bei
+falscher Reihenfolge getauscht. Nach jedem Durchlauf steht das größte Element am
+Ende des noch unsortierten Bereichs — ähnlich einer aufsteigenden Blase.
 
 | Index | 0   | 1      | 2      | 3      | 4      | 5      | 6      | 7      | 8      | 9      |
 | ----- | --- | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
@@ -232,10 +224,9 @@ jeweils größte Element am Ende des noch unsortierten Teils steht.
   </TabItem>
   <TabItem value="b" label="Insertionsort">
 
-Beim Insertionsort wird dem unsortierten Teil der Ausgangsdaten ein beliebiges
-Element entnommen (z.B. das jeweils erste) und an der richtigen Stelle im
-sortierten Teil wieder eingefügt. Beim Einfügen wird das entnommene Element mit
-den bereits sortierten Elementen verglichen.
+Beim Insertionsort wird jeweils ein Element aus dem unsortierten Bereich
+entnommen und an der richtigen Position im sortierten Bereich eingefügt. Das
+Verfahren entspricht dem Sortieren von Spielkarten in der Hand.
 
 | Index | 0   | 1      | 2      | 3      | 4      | 5      | 6      | 7      | 8      | 9      |
 | ----- | --- | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
@@ -252,8 +243,8 @@ den bereits sortierten Elementen verglichen.
   </TabItem>
   <TabItem value="c" label="Selectionsort">
 
-Beim Selectionsort wird dem unsortierten Teil der Ausgangsdaten das jeweils
-kleinste Element entnommen und dem sortierten Teil angehängt.
+Beim Selectionsort wird in jedem Durchlauf das kleinste Element aus dem
+unsortierten Bereich gesucht und an das Ende des sortierten Bereichs angefügt.
 
 | Index | 0   | 1      | 2      | 3      | 4      | 5      | 6      | 7      | 8      | 9      |
 | ----- | --- | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
@@ -270,11 +261,10 @@ kleinste Element entnommen und dem sortierten Teil angehängt.
   </TabItem>
   <TabItem value="d" label="Quicksort">
 
-Beim Quicksort wird die jeweilige Sammlung anhand eines beliebigen Elements
-(i.d.R. das mittlere Element) in zwei Hälften aufgeteilt: eine Hälfte mit
-Elementen kleiner oder gleich dem Teiler-Element und eine Hälfte mit Elementen
-größer dem Teiler-Element. Der Quicksort setzt folglich auf das
-Teile-und-Herrsche-Prinzip.
+Beim Quicksort wird ein Pivot-Element gewählt (in der Regel das mittlere
+Element), und die Sammlung wird in zwei Teile aufgeteilt: Elemente kleiner oder
+gleich dem Pivot und Elemente größer als das Pivot. Das Verfahren wird rekursiv
+auf beide Teile angewendet (Teile-und-Herrsche-Prinzip).
 
 | Index | 0    | 1    | 2      | 3      | 4      | 5      | 6      |
 | ----- | ---- | ---- | ------ | ------ | ------ | ------ | ------ |
@@ -315,9 +305,9 @@ Zahl ist, verwendet.
   </TabItem>
   <TabItem value="e" label="Mergesort">
 
-Beim Mergesort wird die Ausgangsliste zunächst in kleinere Listen zerlegt, die
-anschließend im Reißverschlussverfahren wieder zusammengefügt bzw. verschmolzen
-werden.
+Beim Mergesort wird die Liste zunächst rekursiv in Einzelelemente zerlegt.
+Anschließend werden die Teillisten im Reißverschlussverfahren sortiert
+zusammengeführt (gemergt).
 
 ```mermaid
 flowchart
@@ -369,12 +359,11 @@ flowchart
   </TabItem>
   <TabItem value="f" label="Heapsort">
 
-Beim Heapsort werden die Daten zunächst in einen binären Max-Heap überführt,
-d.h. in einen Binärbaum, bei dem jeder Elternknoten größer ist als seine
-Kindknoten. Anschließend wird in jedem Durchlauf das jeweils letzte Element mit
-dem Wurzelknoten ausgetauscht und anschließend durch Vergleichen und Austauschen
-sichergestellt, dass weiterhin alle Knoten die Heap-Bedingung erfüllen. Dieser
-Schritt wird als Heapify oder Versickern bezeichnet.
+Beim Heapsort werden die Daten zunächst in einen binären Max-Heap überführt —
+einen Binärbaum, in dem jeder Elternknoten größer ist als seine Kindknoten.
+Anschließend wird in jedem Durchlauf das größte Element (die Wurzel) entnommen
+und durch das letzte Element ersetzt, woraufhin die Heap-Eigenschaft
+wiederhergestellt wird (Heapify / Versickern).
 
 ```mermaid
 flowchart TD

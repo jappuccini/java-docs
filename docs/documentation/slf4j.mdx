@@ -8,19 +8,18 @@ tags: [slf4j]
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-[Simple Logging Facade for Java (SLF4J)](https://www.slf4j.org/) stellt eine
-externe Java-Bibliothek dar, die das Protokollieren in Java-Anwendungen
-ermöglicht. Protokollierung (Logging) ist ein wesentlicher Bestandteil der
-Softwareentwicklung und -wartung und bietet zahlreiche Vorteile wie
-Fehlerbehebung, Überwachung, Audit, Compliance, Debugging, Leistungsanalyse
-sowie Benutzerunterstützung. Durch die effektive Nutzung von Protokollierung
-kann die Zuverlässigkeit, Sicherheit und Leistung einer Anwendung erheblich
-verbessert werden.
+[Simple Logging Facade for Java (SLF4J)](https://www.slf4j.org/) ist eine
+externe Java-Bibliothek für strukturiertes Logging. Logging ist ein zentraler
+Bestandteil professioneller Softwareentwicklung und unterstützt bei
+Fehlerbehebung, Überwachung, Debugging und Leistungsanalyse. SLF4J ist eine
+Abstraktionsschicht (Fassade) und benötigt eine konkrete
+Logging-Implementierung, z.B.
+[Log4J](https://logging.apache.org/log4j/2.x/index.html).
 
 ## Protokollierungs-Level
 
-SLF4J definiert verschiedene Protokollierungs-Level, die die Schwere oder
-Wichtigkeit der zu protokollierenden Nachrichten angeben.
+SLF4J definiert fünf Protokollierungs-Level, die die Schwere oder Wichtigkeit
+einer Nachricht angeben.
 
 | Level | Beschreibung                                                                                                             |
 | ----- | ------------------------------------------------------------------------------------------------------------------------ |
@@ -32,18 +31,15 @@ Wichtigkeit der zu protokollierenden Nachrichten angeben.
 
 ## Protokollierungs-Implementierungen
 
-Die Art der Speicherung von Protokollen in einer Anwendung, die SLF4J verwendet,
-hängt von der konkreten Implementierung ab. SLF4J selbst ist dabei nur eine
-Fassade und benötigt eine konkrete Implementierung, um die tatsächliche
-Protokollierung durchzuführen. Eine der am weitesten verbreiteten
-Protokollierungs-Bibliotheken für Java ist
-[Log4J](https://logging.apache.org/log4j/2.x/index.html), welches die Ausgabe
-von Protokollen auf der Konsole sowie in Protokoll-Dateien ermöglicht.
+SLF4J selbst ist nur eine Fassade und führt keine Protokollierung durch. Für die
+tatsächliche Ausgabe ist eine konkrete Implementierung nötig. Eine der
+gebräuchlichsten ist Log4J, das Protokolle sowohl auf der Konsole als auch in
+Dateien ausgeben kann.
 
 ## Beispiel
 
-Für die Klasse `MainClass` wird ein Logger initialisiert, mit dessen Hilfe
-verschiedene Nachrichten in der Datei _logs/app.log_ protokolliert werden.
+Die Klasse `Names` liest Namen aus einer Datei. Ein Logger protokolliert dabei
+die wichtigsten Schritte und schreibt die Ausgaben in die Datei _logs/app.log_.
 
 <Tabs>
   <TabItem value="a" label="Startklasse" default>

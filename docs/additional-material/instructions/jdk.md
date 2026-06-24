@@ -5,13 +5,17 @@ sidebar_position: 10
 tags: [jdk]
 ---
 
-:::info
+:::tip
 
 Benötigte Tools: [JDK](https://www.oracle.com/java/technologies/downloads/)
 
 :::
 
 ## Quellcode-Datei erstellen
+
+Eine Java-Quellcode-Datei enthält genau eine öffentliche Klasse, deren Name dem
+Dateinamen entsprechen muss. Die Datei liegt in einem Paketordner und trägt die
+Endung _.java_.
 
 - Erstelle ein Arbeitsverzeichnis (z.B. _C:\Users\Daniel Appenmaier\Java_)
 - Erstelle im eben erstellten Arbeitsverzeichnis einen Ordner (z.B. _main_)
@@ -34,6 +38,9 @@ public class HelloWorld {
 
 ## Quellcode-Datei kompilieren
 
+Der Java-Compiler `javac` übersetzt die Quellcode-Datei in eine Bytecode-Datei
+(_.class_).
+
 - Starte die Kommandozeile (z.B. Windows PowerShell)
 - Führe den Befehl `cd "[Der Pfad zu Deinem Arbeitsverzeichnis]"` aus, um zum
   Arbeitsbereich zu wechseln (z.B. `cd "C:\Users\Daniel Appenmaier\Java"`)
@@ -41,6 +48,8 @@ public class HelloWorld {
   aus, um die Quellcode-Datei zu kompilieren (z.B. `javac main/HelloWorld.java`)
 
 ## Bytecode-Datei ausführen
+
+Die Java Virtual Machine `java` führt die kompilierte Bytecode-Datei aus.
 
 - Starte die Kommandozeile (z.B. Windows PowerShell)
 - Führe den Befehl `cd "[Der Pfad zu Deinem Arbeitsverzeichnis]"` aus, um zum

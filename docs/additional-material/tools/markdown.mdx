@@ -8,16 +8,17 @@ tags: [markdown]
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Markdown stellt eine einfache Auszeichnungssprache dar, mit der man Text leicht
-formatieren kann. Sie wird häufig für Dokumentationen, README-Dateien und Blogs
-verwendet, weil sie leicht zu schreiben ist und sich mit Hilfe einer
-Konvertierungssoftware gut in HTML umwandeln lässt. Plattformen wie GitHub
-erweitern dabei oftmals die Standard-Syntax um hilfreiche Funktionen wie z.B.
-Tabellen, Nachrichtenblöcke und Code-Highlighting. Auch der Webseiten-Generator
+Markdown ist eine einfache Auszeichnungssprache zum Formatieren von Text. Sie
+wird häufig für Dokumentationen, README-Dateien und Blogs eingesetzt, da sie
+leicht zu schreiben ist und sich gut in HTML umwandeln lässt. Plattformen wie
+GitHub erweitern die Standardsyntax um Funktionen wie Tabellen,
+Nachrichtenblöcke und Code-Highlighting. Auch
 [Docusaurus](https://docusaurus.io), mit dem diese Webseite erstellt wurde,
 sowie die meisten GenAI-Chatbots verwenden Markdown.
 
 ## Hilfreiche Links
+
+Die folgenden Tools erleichtern das Arbeiten mit Markdown.
 
 - [Tabellengenerator](https://www.tablesgenerator.com/)
 - [Emoji-Cheat-Sheet](https://github.com/ikatyang/emoji-cheat-sheet/)
@@ -25,6 +26,8 @@ sowie die meisten GenAI-Chatbots verwenden Markdown.
 - [Mermaid](https://mermaid.js.org)
 
 ## Textformatierungen
+
+Text lässt sich in Markdown mit wenigen Sonderzeichen formatieren.
 
 | Syntax                         | Ergebnis        |
 | ------------------------------ | --------------- |
@@ -39,6 +42,9 @@ sowie die meisten GenAI-Chatbots verwenden Markdown.
 | `:heart:`                      | :heart:         |
 
 ## Überschriften
+
+Überschriften werden mit Rauten (`#`) eingeleitet. Die Anzahl der Rauten
+bestimmt die Hierarchieebene.
 
 <Tabs>
   <TabItem value="a" label="Syntax" default>
@@ -63,6 +69,9 @@ sowie die meisten GenAI-Chatbots verwenden Markdown.
 
 ## Links und Abbildungen
 
+Links werden mit `[Anzeigetext](URL)` erstellt, Abbildungen mit
+`![Alternativtext](URL)`.
+
 <Tabs>
   <TabItem value="a" label="Syntax" default>
 
@@ -83,6 +92,8 @@ sowie die meisten GenAI-Chatbots verwenden Markdown.
 </Tabs>
 
 ## Listen
+
+Markdown unterstützt ungeordnete Listen, geordnete Listen und Aufgabenlisten.
 
 <Tabs>
   <TabItem value="a" label="Syntax" default>
@@ -130,6 +141,9 @@ sowie die meisten GenAI-Chatbots verwenden Markdown.
 
 ## Tabellen
 
+Tabellen werden mit senkrechten Strichen (`|`) und Trennzeilen aus Bindestrichen
+aufgebaut.
+
 <Tabs>
   <TabItem value="a" label="Syntax" default>
 
@@ -154,6 +168,9 @@ sowie die meisten GenAI-Chatbots verwenden Markdown.
 </Tabs>
 
 ## Codeblöcke
+
+Codeblöcke werden mit drei Gravis (` ``` `) eingeleitet und abgeschlossen.
+Optional kann die Programmiersprache für Syntax-Highlighting angegeben werden.
 
 <Tabs>
   <TabItem value="a" label="Syntax" default>
@@ -184,6 +201,8 @@ public class MainClass {
 
 ## Zitatblöcke
 
+Zitatblöcke werden mit einem vorangestellten `>` eingeleitet.
+
 <Tabs>
   <TabItem value="a" label="Syntax" default>
 
@@ -203,6 +222,9 @@ public class MainClass {
 </Tabs>
 
 ## Nachrichtenblöcke
+
+Nachrichtenblöcke heben wichtige Informationen visuell hervor. GitHub und
+Docusaurus unterstützen unterschiedliche Syntaxvarianten.
 
 <Tabs>
   <TabItem value="a" label="Syntax" default>
@@ -300,11 +322,14 @@ Eine deutliche Warnung
 
 ## Mermaid-Diagramme
 
+Mit Mermaid lassen sich Diagramme direkt im Markdown-Code beschreiben und
+rendern. GitHub und Docusaurus unterstützen Mermaid nativ.
+
 <Tabs>
   <TabItem value="a" label="Syntax" default>
 
 ````
-**Klassendiagram**
+**Klassendiagramm**
 ```mermaid
 classDiagram
    Gender --o Person
@@ -322,7 +347,7 @@ classDiagram
 ````
 
 ````
-**Flussdiagram**
+**Flussdiagramm**
 ```mermaid
 flowchart LR
     a[a]
@@ -348,7 +373,7 @@ pie
   </TabItem>
   <TabItem value="b" label="Ergebnis">
 
-**Klassendiagram**
+**Klassendiagramm**
 
 ```mermaid
 classDiagram
@@ -365,7 +390,7 @@ classDiagram
    }
 ```
 
-**Flussdiagram**
+**Flussdiagramm**
 
 ```mermaid
 flowchart LR
@@ -400,13 +425,16 @@ erstellen.
 
 ## Fußnoten
 
+Fußnoten ermöglichen es, Quellenangaben oder ergänzende Hinweise ans Ende des
+Dokuments auszulagern.
+
 <Tabs>
   <TabItem value="a" label="Syntax" default>
 
 ```
 Markdown [^1]
 
-[^1]: Eine einfache Auszeichnungssprache (vg. https://de.wikipedia.org/wiki/Markdown)
+[^1]: Eine einfache Auszeichnungssprache (vgl. https://de.wikipedia.org/wiki/Markdown)
 ```
 
   </TabItem>
@@ -422,6 +450,9 @@ Markdown [^1]
 </Tabs>
 
 ## Horizontale Linien
+
+Eine horizontale Linie wird durch drei aufeinanderfolgende Bindestriche (`---`)
+erzeugt.
 
 <Tabs>
   <TabItem value="a" label="Syntax" default>

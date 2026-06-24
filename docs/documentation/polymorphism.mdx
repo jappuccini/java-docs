@@ -8,17 +8,15 @@ tags: [oo, polymorphism]
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Unter (dynamischer) Polymorphie (griechisch für Vielgestaltigkeit) versteht man,
-dass eine Referenzvariable zur Laufzeit durch Typumwandlung Referenzen auf
-Objekte unterschiedlicher Klassen besitzen kann und dass dadurch
-unterschiedliche Methodenimplementierungen aufgerufen werden können. Man spricht
-in diesem Zusammenhang auch vom _statischen Datentyp einer Referenzvariablen_
-(der zur Designzeit festgelegt wird) und vom _dynamischen Datentyp einer
-Referenzvariablen_ (der zur Laufzeit zugewiesen wird). Der statische Typ legt
-fest, welche Methoden aufgerufen werden können, der dynamische, welche
-Methodenimplementierung aufgerufen wird. Die Typumwandlung von der abgeleiteten
-Unterklasse zur Oberklasse bezeichnet man als _Upcast_, die Rückumwandlung als
-_Downcast_.
+Unter _(dynamischer) Polymorphie_ (griechisch für „Vielgestaltigkeit") versteht
+man, dass eine Referenzvariable zur Laufzeit Referenzen auf Objekte
+unterschiedlicher Klassen halten kann und dadurch unterschiedliche
+Methodenimplementierungen aufgerufen werden. Man unterscheidet dabei zwischen
+dem _statischen Datentyp_ (zur Designzeit festgelegt) und dem _dynamischen
+Datentyp_ (zur Laufzeit zugewiesen). Der statische Typ bestimmt, welche Methoden
+aufrufbar sind; der dynamische Typ bestimmt, welche Implementierung tatsächlich
+ausgeführt wird. Die Typumwandlung von der Unterklasse zur Oberklasse nennt man
+_Upcast_, die Rückumwandlung _Downcast_.
 
 <Tabs>
   <TabItem value="a" label="Oberklasse" default>
@@ -106,12 +104,10 @@ werden. Der Downcast einer nicht zuweisungskompatiblen Referenz führt zu einer
 
 ## Der instanceof-Operator
 
-Mit dem Operator `instanceof` kann zur Laufzeit geprüft werden, ob eine
-Objektreferenz zuweisungskompatibel zu einer Klasse ist. Eine Objektreferenz ist
-dann zuweisungskompatibel zu einer Klasse, wenn die Klasse des referenzierten
-Objektes in einer Vererbungsbeziehung zur Klasse steht. Seit Java 16 ermöglicht
-der Mustervergleich bei `instanceof` das Vermeiden notwendiger Typumwandlungen
-und sorgt gleichzeitig für eine sicherere Programmierung.
+Mit dem Operator `instanceof` lässt sich zur Laufzeit prüfen, ob eine
+Objektreferenz mit einer bestimmten Klasse zuweisungskompatibel ist. Seit Java
+16 ermöglicht der Mustervergleich (_Pattern Matching_) bei `instanceof` das
+direkte Binden in eine neue Variable ohne expliziten Downcast.
 
 ```java title="MainClass.java (Auszug)" showLineNumbers
 public class MainClass {
@@ -119,13 +115,13 @@ public class MainClass {
    public static void main(String[] args) {
       ...
       for (Computer c : computers) {
-         /* bis Java 16 */
+         // bis Java 16: expliziter Downcast erforderlich
          if (c instanceof Notebook) {
-            Notebook notebook = (Notebook) c; // Downcast
+            Notebook notebook = (Notebook) c;
             System.out.println(notebook.getScreenSizeInInches());
          }
-         /* seit Java 16 */
-         if (c instanceof Notebook notebook) { // Downcast
+         // seit Java 16: Pattern Matching
+         if (c instanceof Notebook notebook) {
             System.out.println(notebook.getScreenSizeInInches());
          }
       }

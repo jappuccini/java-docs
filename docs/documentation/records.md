@@ -5,10 +5,10 @@ sidebar_position: 250
 tags: [records]
 ---
 
-Datenklassen sind Klassen die lediglich der Kapselung unveränderlicher Daten
-dienen. Daher bestehen Datenklassen häufig aus Boilerplate-Code. Unter
-Boilerplate-Code versteht man Anweisungblöcke, die an verschiedenen Stellen mehr
-oder weniger identisch verwendet werden.
+Datenklassen sind Klassen, die ausschließlich der Kapselung unveränderlicher
+Daten dienen. Sie bestehen häufig aus viel _Boilerplate-Code_ — also
+Codeabschnitten, die an verschiedenen Stellen nahezu identisch wiederkehren
+(Konstruktor, Getter, `equals`, `hashCode`, `toString`).
 
 ```java title="Student.java" showLineNumbers
 public final class Student {
@@ -57,11 +57,10 @@ public final class Student {
 }
 ```
 
-Seit Java 16 bieten Records die Möglichkeiten, Datenklassen einfach umzusetzen.
-Records sind spezielle Klassen, die anhand der festgelegten Parameter
-entsprechende Konstruktoren, Getter sowie Implementierungen für die Methoden
-`boolean equals(object: Object)`, `int hashCode()` und `String toString()`
-erzeugen. Das Schlüsselwort für Records lautet `record`.
+Seit Java 16 bieten _Records_ eine kompakte Möglichkeit, Datenklassen zu
+definieren. Ein Record erzeugt anhand der deklarierten Parameter automatisch
+einen Konstruktor, Getter sowie Implementierungen für `equals`, `hashCode` und
+`toString`. Das Schlüsselwort dafür lautet `record`.
 
 ```java title="Student.java" showLineNumbers
 public record Student(int id, String name) {}

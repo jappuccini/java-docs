@@ -8,11 +8,9 @@ tags: [hashing]
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Unter Schlüsseltransformationen (Hashing) versteht man die Transformation einer
-großen Datenmenge in eine kleinere. Die größere Datenmenge wird dabei als
-Schlüssel, die kleinere als Hashcode bezeichnet. Die Transformation erfolgt über
-eine sogenannte Hashfunktion (auch Streuwertfunktion). Wichtig dabei ist, dass
-der Hashcode nur vom Zustand des Schlüssels abhängen darf.
+Schlüsseltransformation (Hashing) bezeichnet die Abbildung einer großen
+Datenmenge (Schlüssel) auf eine kleinere Datenmenge (Hashcode) mittels einer
+Hashfunktion. Der Hashcode darf dabei nur vom Zustand des Schlüssels abhängen.
 
 ```mermaid
 flowchart
@@ -24,11 +22,10 @@ flowchart
 
 ## Hashtabellen
 
-Hashtabellen sind spezielle Datenstrukturen, die für den schnellen Zugriff
-konzipiert wurden. Mit Hilfe einer Hashfunktion wird der Index berechnet, an der
-ein Schlüssel gespeichert wird. Bei Hashtabellen soll durch das Hashing eine
-gleichmäßige Streuung der Einträge in der Tabelle erreicht werden. Aus diesem
-Grund werden Hashtabellen auch als Streuwerttabellen bezeichnet.
+Hashtabellen sind Datenstrukturen für schnellen Zugriff. Der Index eines
+Eintrags wird über eine Hashfunktion berechnet, sodass Einträge gleichmäßig in
+der Tabelle gestreut sind. Daher werden Hashtabellen auch Streuwerttabellen
+genannt.
 
 | Index | Schlüssel | Hashcode |
 | ----- | --------- | -------- |
@@ -40,11 +37,15 @@ Grund werden Hashtabellen auch als Streuwerttabellen bezeichnet.
 
 ## Hashfunktionen
 
+Eine Hashfunktion berechnet aus einem Schlüssel (Hashcode) einen Tabellenindex.
+Die beiden gebräuchlichsten Verfahren sind die Divisionsrestmethode und die
+multiplikative Methode.
+
 <Tabs>
   <TabItem value="a" label="Divisionsrestmethode" default>
 
-Die Divisionsrest-Methode stellt eine einfache und schnelle Hashfunktion dar.
-Die Berechnung des Index erfolgt dabei gemäß der Formel `ℎ(𝑘) = 𝑘 𝑚𝑜𝑑 𝑚`.
+Die Divisionsrestmethode ist eine einfache und schnelle Hashfunktion. Der Index
+wird nach der Formel `ℎ(𝑘) = 𝑘 𝑚𝑜𝑑 𝑚` berechnet.
 
 | Schlüssel | Hashcode | Index         |
 | --------- | -------- | ------------- |
@@ -62,9 +63,8 @@ Die Berechnung des Index erfolgt dabei gemäß der Formel `ℎ(𝑘) = 𝑘 𝑚
   </TabItem>
   <TabItem value="b" label="Multiplikative Methode">
 
-Die Multiplikative Methode stellt eine Hashfunktion dar, die man als
-Verallgemeinerung der Divisionsrest-Methode sehen kann. Die Berechnung des Index
-erfolgt dabei gemäß der Formel `ℎ(𝑘) = ⌊𝑚 ∗ (𝑘 ∗ 𝐴 𝑚𝑜𝑑 1)⌋`.
+Die multiplikative Methode ist eine Verallgemeinerung der Divisionsrestmethode.
+Der Index wird nach der Formel `ℎ(𝑘) = ⌊𝑚 ∗ (𝑘 ∗ 𝐴 𝑚𝑜𝑑 1)⌋` berechnet.
 
 | Schlüssel | Hashcode | Index                        |
 | --------- | -------- | ---------------------------- |
@@ -91,20 +91,19 @@ Als Wert für die Konstante 𝐴 wird gerne der Goldene Schnitt (~0,62) verwende
 
 ## Kollisionen
 
-Werden zu unterschiedlichen Schlüsseln dieselben Indizes ermittelt, entstehen
-dadurch sogenannte Kollisionen. Um Kollisionen bestmöglichen zu vermeiden, muss
-eine geeignete Tabellengröße sowie eine geeignete Hashfunktion gewählt werden.
-Zur Auflösung von Kollisionen gibt es verschiedene Möglichkeiten.
+Ergibt die Hashfunktion für zwei unterschiedliche Schlüssel denselben Index,
+spricht man von einer Kollision. Um Kollisionen zu minimieren, müssen
+Tabellengröße und Hashfunktion sorgfältig gewählt werden. Für unvermeidliche
+Kollisionen gibt es zwei grundlegende Auflösungsstrategien.
 
 <Tabs>
   <TabItem value="a" label="Geschlossenes Hashing mit offener Adressierung" default>
 
-Beim geschlossenen Hashing mit offener Adressierung wird bei einer Kollision
-über unterschiedliche Verfahren eine freie Stelle in der Hashtabelle gesucht:
-Beim linearen Sondieren wird mit festen Intervallschritten nach einer freien
-Stelle gesucht, beim quadratischen Sondieren wird der Intervallschritt nach
-jedem erfolglosen Versuch quadriert und beim doppelten Hashing wird der
-Intervallschritt mit Hilfe einer zusätzlichen Hashfunktion berechnet.
+Beim geschlossenen Hashing wird bei einer Kollision eine freie Stelle in der
+Hashtabelle gesucht. Beim linearen Sondieren geschieht dies mit festen
+Intervallschritten, beim quadratischen Sondieren wächst der Schritt quadratisch,
+und beim doppelten Hashing wird der Schritt über eine zweite Hashfunktion
+berechnet.
 
 | Index | Schlüssel |
 | ----- | --------- |
@@ -117,11 +116,9 @@ Intervallschritt mit Hilfe einer zusätzlichen Hashfunktion berechnet.
   </TabItem>
   <TabItem value="b" label="Offenes Hashing mit geschlossener Adressierung">
 
-Beim offenen Hashing mit geschlossener Adressierung werden alle Schlüssel mit
-demselben Index in einem Behälter (Bucket) gespeichert. Diese Behälter werden
-oft mit Hilfe linearer Listen realisiert. Bei der Suche nach einem Schlüssel
-muss also zunächst der richtige Behälter ermittelt und anschließend der Behälter
-durchsucht werden.
+Beim offenen Hashing werden alle Schlüssel mit demselben Index in einem Behälter
+(Bucket) gespeichert, der in der Regel als verkettete Liste realisiert wird. Bei
+einer Suche wird zuerst der Bucket bestimmt, dann der Bucket durchsucht.
 
 | Index | Schlüssel     |
 | ----- | ------------- |
