@@ -55,6 +55,6 @@ classDiagram
   Fall, dass die Karte nicht Teil der Handkarten ist, soll die Ausnahme
   `CardNotFoundException` ausgelöst werden und für den Fall, dass die
   Aktionspunkte des Spielers nicht ausreichen, die Ausnahme
-  `NotEnoughActionPointsException`
+  `NotEnoughActionPointsException` ausgelöst werden.
 - Die Methode `Optional<Card> getMostPowerfulCardByRow(row: int)` soll die
   stärkste ausgespielte Karte der eingehenden Reihe zurückgeben

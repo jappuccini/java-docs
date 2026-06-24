@@ -61,7 +61,7 @@ classDiagram
 - So nicht anders angegeben, sollen Konstruktoren, Setter, Getter sowie die
   Object-Methoden wie gewohnt implementiert werden
 
-## Hinweis zur Klasse _StudentCourse_
+## Hinweis zur Klasse _StudyCourse_
 
 Die Methode `Lecture getLectureWithMostCreditPoints()` soll die Vorlesung mit
 den meisten ECTS-Punkten zurückgeben.

@@ -64,9 +64,8 @@ Wert 10 initialisieren.
 
 ## Hinweise zur Klasse _Game_
 
-- Der Konstruktor soll die Spieler mit Hilfe der eingehenden Namen
-  initialisieren und die Würfelliste mit Hilfe der eingehenden Anzahl Würfel
-  initialisieren
+- Der Konstruktor soll die Spieler mithilfe der eingehenden Namen initialisieren
+  und die Würfelliste mithilfe der eingehenden Anzahl Würfel initialisieren
 - Die Methode `void play()` soll den Spielablauf abbilden
 - Die Methode `void move(attacker: Player, defender: Player)` soll einen
   Spielzug abbilden
@@ -83,7 +82,7 @@ Wert 10 initialisieren.
 
 ## Ablauf eines Spielzugs
 
-- Zu Beginn eines Spielzugs sollen beide Spieler abwechselnd alle Würfen werfen
+- Zu Beginn eines Spielzugs sollen beide Spieler abwechselnd alle Würfel werfen
 - Anschließend sollen für den angreifenden Spieler die Anzahl geworfener
   Schwerter und für der verteidigende Spieler die Anzahl geworfener Schilde
   ermittelt werden

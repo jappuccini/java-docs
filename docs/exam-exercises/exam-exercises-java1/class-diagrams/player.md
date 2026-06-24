@@ -35,7 +35,7 @@ classDiagram
       KNIGHT, PIRATE, VIKING,...
    }
    class GameTokens {
-      +getGameTokens(file: File) List~gameToken~$
+      +getGameTokens(file: File) List~GameToken~$
    }
 ```
 
@@ -48,8 +48,8 @@ classDiagram
 
 ## Hinweis zur Klasse _Player_
 
-Die Methode `void addGameToken(gameToken: gameToken)` soll den Spielfiguren die
-eingehene Spielfigur hinzufügen.
+Die Methode `void addGameToken(gameToken: GameToken)` soll den Spielfiguren die
+eingehende Spielfigur hinzufügen.
 
 ## Hinweis zur Klasse _GameTokens_
 

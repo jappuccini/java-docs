@@ -61,8 +61,8 @@ Buchungsdatum auf das aktuelle Datum setzen.
 
 ## Hinweise zur Klasse _Travel_
 
-- Die Methode `void booking: Booking)` soll den Buchungen die eingehende Buchung
-  hinzufügen
+- Die Methode `boolean addBooking(booking: Booking)` soll den Buchungen die
+  eingehende Buchung hinzufügen
 - Die Methode `double getTotalTravelCostsInEuro()` soll die Gesamtkosten aller
   Buchungen der Reise in Euro zurückgeben
 - Die Methode `List<Flight> getFlights()` soll alle Flüge der Reise zurückgeben

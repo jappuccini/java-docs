@@ -61,13 +61,13 @@ classDiagram
 
 - Die Methode `String parkIn(car: Car, parkingSpotNumber: int)` soll das
   eingehende Fahrzeug dem Parkplatz mit der eingehenden Parkplatznummer zuweisen
-  und eine enstprechende Erfolgsmeldung zurückgegeben. Für den Fall, dass der
+  und eine entsprechende Erfolgsmeldung zurückgegeben. Für den Fall, dass der
   Parkplatz bereits besetzt ist, oder dass es sich bei dem eingehenden Fahrzeug
   um ein Auto handelt, der Parkplatz aber nur für Busse ist, oder dass der
   Parkplatz zu klein ist, soll eine entsprechende Fehlermeldung zurückgegeben
   werden
 - Die Methode `String parkOut(car: Car)` soll das eingehende Fahrzeug
-  "ausparken" und eine enstsprechende Erfolgsmeldung zurückgeben. Für den Fall,
+  "ausparken" und eine entsprechende Erfolgsmeldung zurückgeben. Für den Fall,
   dass das Fahrzeug in der Tiefgarage nicht vorhanden ist, soll eine
   entsprechende Fehlermeldung zurückgegeben werden
 - Die Methode `int getNextFreeParkingSpotNumber()` soll die Nummer des nächsten

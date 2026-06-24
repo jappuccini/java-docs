@@ -57,7 +57,7 @@ classDiagram
 - Die Methode `void moveUp()` soll den Y-Wert der Position inkrementieren
 - Die Methode `void moveDown()` soll den Y-Wert der Position dekrementieren
 - Die Methode `void moveLeft()` soll den X-Wert der Position dekrementieren
-- Die Methode `void moveRigth()` soll den X-Wert der Position inkrementieren
+- Die Methode `void moveRight()` soll den X-Wert der Position inkrementieren
 
 ## Hinweis zur Klasse _CreaturesReader_
 
