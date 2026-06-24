@@ -65,6 +65,15 @@ eine einfache Möglichkeit zur Implementierung von `hashCode()`.
 
 :::
 
+:::warning
+
+`equals()` und `hashCode()` müssen immer gemeinsam überschrieben werden. Gilt
+für zwei Objekte `a.equals(b) == true`, muss auch `a.hashCode() == b.hashCode()`
+gelten. Andernfalls verhalten sich hash-basierte Datenstrukturen wie `HashMap`
+und `HashSet` falsch (siehe [Schlüsseltransformationen](hashing)).
+
+:::
+
 ## Die Methode _String toString()_
 
 Die Methode `String toString()` liefert eine eindeutige Kennung des Objekts in

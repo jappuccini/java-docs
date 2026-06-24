@@ -117,3 +117,33 @@ flowchart TD
    depth[Tiefendurchlauf: 6, 2, 1, 4, 3, 5, 8, 7, 9
    Breitendurchlauf: 6, 2, 8, 1, 4, 7, 9, 3, 5]
 ```
+
+## Binäre Suchbäume in Java
+
+Java verwendet binäre Suchbäume intern in den Klassen
+[`TreeSet<E>`](java-collections-framework) und [`TreeMap<K, V>`](maps). Ein
+binärer Suchbaum hält seine Elemente stets sortiert: Jeder Knoten ist größer als
+alle Knoten im linken Teilbaum und kleiner als alle Knoten im rechten Teilbaum.
+Dadurch ist die Suche, das Einfügen und das Löschen in 𝒪(log 𝑛) möglich.
+
+Damit `TreeSet` und `TreeMap` Elemente vergleichen können, muss die gespeicherte
+Klasse entweder `Comparable<T>` implementieren oder beim Erzeugen der Sammlung
+ein `Comparator<T>` übergeben werden (siehe [Komparatoren](comparators)).
+
+```java title="MainClass.java" showLineNumbers
+public class MainClass {
+
+   public static void main(String[] args) {
+      TreeSet<Integer> numbers = new TreeSet<>();
+      numbers.add(6);
+      numbers.add(2);
+      numbers.add(8);
+      numbers.add(1);
+      numbers.add(4);
+
+      // Ausgabe erfolgt aufsteigend sortiert: 1 2 4 6 8
+      numbers.forEach(System.out::println);
+   }
+
+}
+```

@@ -135,8 +135,8 @@ public class MainClass {
 
 Der Cast-Operator `()` erlaubt die explizite Umwandlung eines Datentyps in einen
 anderen. Bei Wertzuweisungen findet außerdem eine implizite Typumwandlung vom
-niederwertigen zum höherwertigen Datentyp statt. Zu beachten ist, dass bei einer
-Typumwandlung ein Genauigkeitsverlust auftreten kann.
+niederwertigen zum höherwertigen Datentyp statt. Bei einer Typumwandlung kann
+ein Genauigkeitsverlust auftreten.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {

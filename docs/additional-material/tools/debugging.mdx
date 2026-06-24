@@ -18,17 +18,15 @@ Laufzeit- und logische Fehler den Einsatz eines _Debuggers_.
 
 Ein Debugger ermöglicht es, ein Programm kontrolliert auszuführen, an beliebigen
 Stellen anzuhalten und den Zustand von Variablen sowie den Programmfluss zu
-inspizieren. Moderne IDEs wie [Eclipse](https://eclipseide.org/) oder
-[IntelliJ IDEA](https://www.jetbrains.com/idea/) verfügen über einen
-integrierten Debugger.
+inspizieren. [Eclipse](https://eclipseide.org/) verfügt über einen integrierten
+Debugger.
 
 ## Weiterführende Links
 
 Die folgenden Ressourcen bieten eine vertiefte Einführung in das Debugging mit
-den gängigsten Java-IDEs.
+Eclipse.
 
 - [Eclipse Debugging Guide](https://www.eclipse.org/community/eclipse_newsletter/2017/june/article1.php)
-- [IntelliJ IDEA – Debug Code](https://www.jetbrains.com/help/idea/debugging-code.html)
 - [Visualizing Execution with Java Visualizer](https://pythontutor.com/java.html)
 
 ## Breakpoints
@@ -74,10 +72,10 @@ zu verfolgen.
 <Tabs>
   <TabItem value="a" label="Step Over" default>
 
-**Step Over** (`F6` in Eclipse / `F8` in IntelliJ) führt die aktuelle Zeile
-vollständig aus und hält in der nächsten Zeile derselben Methode an.
-Methodenaufrufe werden dabei als ein Schritt behandelt – der Debugger springt
-nicht in die aufgerufene Methode hinein.
+**Step Over** (`F6`) führt die aktuelle Zeile vollständig aus und hält in der
+nächsten Zeile derselben Methode an. Methodenaufrufe werden dabei als ein
+Schritt behandelt – der Debugger springt nicht in die aufgerufene Methode
+hinein.
 
 ```java title="Beispiel" showLineNumbers
 int a = 5;       // <- Debugger hält hier an
@@ -88,9 +86,8 @@ int c = b * 2;   // <- Debugger hält hier an nach Step Over
   </TabItem>
   <TabItem value="b" label="Step Into">
 
-**Step Into** (`F5` in Eclipse / `F7` in IntelliJ) springt in den Rumpf des
-Methodenaufrufs in der aktuellen Zeile hinein, sodass dessen Ausführung Schritt
-für Schritt verfolgt werden kann.
+**Step Into** (`F5`) springt in den Rumpf des Methodenaufrufs in der aktuellen
+Zeile hinein, sodass dessen Ausführung Schritt für Schritt verfolgt werden kann.
 
 ```java title="Beispiel" showLineNumbers
 int a = 5;       // <- Debugger hält hier an
@@ -101,16 +98,16 @@ int c = b * 2;
   </TabItem>
   <TabItem value="c" label="Step Return">
 
-**Step Return** (`F7` in Eclipse / `Shift+F8` in IntelliJ) führt die restliche
-aktuelle Methode vollständig aus und hält nach der Rückkehr in der aufrufenden
-Methode an. Dieser Befehl wird typischerweise eingesetzt, wenn man versehentlich
-in eine Methode hineingesprungen ist.
+**Step Return** (`F7`) führt die restliche aktuelle Methode vollständig aus und
+hält nach der Rückkehr in der aufrufenden Methode an. Dieser Befehl wird
+typischerweise eingesetzt, wenn man versehentlich in eine Methode
+hineingesprungen ist.
 
   </TabItem>
   <TabItem value="d" label="Resume">
 
-**Resume** (`F8` in Eclipse / `F9` in IntelliJ) setzt die Programmausführung
-fort, bis der nächste Breakpoint erreicht wird oder das Programm regulär endet.
+**Resume** (`F8`) setzt die Programmausführung fort, bis der nächste Breakpoint
+erreicht wird oder das Programm regulär endet.
 
   </TabItem>
 </Tabs>
@@ -122,15 +119,14 @@ angegebene Bedingung wahr ist. Das ist besonders nützlich, wenn ein Fehler nur
 unter bestimmten Umständen auftritt – etwa bei einem konkreten
 Schleifendurchlauf oder einem bestimmten Parameterwert.
 
-```java title="Example: Fehler tritt nur bei i == 42 auf" showLineNumbers
+```java title="Beispiel: Fehler tritt nur bei i == 42 auf" showLineNumbers
 for (int i = 0; i < 100; i++) {
    process(i); // <- bedingter Breakpoint: i == 42
 }
 ```
 
 In Eclipse wird ein bedingter Breakpoint über **Rechtsklick auf den Breakpoint →
-Breakpoint Properties → Enable Condition** gesetzt. In IntelliJ IDEA über
-**Rechtsklick auf den Breakpoint → More → Condition**.
+Breakpoint Properties → Enable Condition** gesetzt.
 
 ## Häufige Fehler und deren Ursachen
 
