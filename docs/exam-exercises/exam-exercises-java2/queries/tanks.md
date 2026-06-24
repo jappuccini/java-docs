@@ -60,11 +60,11 @@ classDiagram
   mit einem Gewicht von mehr als 25 Tonnen gruppiert nach dem Typ in der Form
   _Typ: [Panzer, Panzer,...]_ ausgeben
 - Die Methode `OptionalDouble getAveragePerformanceInHorsePower()` soll die
-  durchschnittliche Leistung in Pfer- destärken aller Panzer zurückgeben
+  durchschnittliche Leistung in Pferdestärken aller Panzer zurückgeben
 - Die Methode `List<Nation> getAllNations()` soll die Nationen aller Panzer
   zurückgeben
-- Die Methode `boolean isAllTanksMaxSpeedBE50KMH()` soll zurückgeben, ob alle
+- Die Methode `boolean isAllTanksMaxSpeedBE50Kmh()` soll zurückgeben, ob alle
   Kampfpanzer eine Höchstgeschwindigkeit von min. 50 km/h besitzen
 - Die Methode `void printLongestTankFromGermany()` soll den Namen des längsten
-  Panzers aus Deutschland auf der Konsole aus- geben. Gibt es keinen Panzer aus
+  Panzers aus Deutschland auf der Konsole ausgeben. Gibt es keinen Panzer aus
   Deutschland, soll stattdessen der Wert `null` ausgegeben werden

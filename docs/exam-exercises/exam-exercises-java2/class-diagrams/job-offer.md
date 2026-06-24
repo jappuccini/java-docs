@@ -41,7 +41,7 @@ classDiagram
     }
 
     class Recruiter {
-        +Recruiter(name String, birthdateTimeStamp long)
+        +Recruiter(name: String, birthdateTimeStamp: long)
     }
 
     class ApplicationDocument {
@@ -52,7 +52,7 @@ classDiagram
     }
 
     class JobOfferReader {
-        +getJobOffers(file File)$ List~JobOffer~
+        +getJobOffers(file: File)$ List~JobOffer~
     }
 ```
 

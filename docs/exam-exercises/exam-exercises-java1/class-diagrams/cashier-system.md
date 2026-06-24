@@ -65,7 +65,7 @@ classDiagram
         -cashier: Cashier
         +CashierSystem(name: String)
         +addGoods(goods: Goods) void
-        +addCashier(cahier: Cashier) void
+        +addCashier(cashier: Cashier) void
         +login(id: int) void
         +createShoppingCart() void
         +addItem(id: int, amount: int) void

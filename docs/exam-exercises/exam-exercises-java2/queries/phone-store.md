@@ -33,7 +33,7 @@ classDiagram
         <<record>>
         description: String
         brand: Brand
-        conncetionType: ConnectionType
+        connectionType: ConnectionType
         numberOfCameras: int
         batteryCapacityInMah: int
         cpuPowerInGhz: double
@@ -47,7 +47,7 @@ classDiagram
         +query2() OptionalDouble
         +query3(maxPriceInEuro: double) List~Phone~
         +query4() Map~Phone, String~
-        +query5() Map~ConnectionTyp&sbquo; List~Phone~~
+        +query5() Map~ConnectionType&sbquo; List~Phone~~
     }
 ```
 
@@ -72,5 +72,5 @@ classDiagram
   Leistung besitzen
 - Die Methode `Map<Phone, String> query4()` soll jedes Smartphone mit der
   zusammengesetzten Zeichenkette aus Marke und Anschlusstyp zurückgeben
-- Die Methode `Map<ConnectionType, Phone> query4()` soll alle Smartphones
+- Die Methode `Map<ConnectionType, List<Phone>> query5()` soll alle Smartphones
   gruppiert nach dem Anschlusstyp zurückgeben

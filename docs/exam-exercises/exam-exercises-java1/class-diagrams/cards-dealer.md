@@ -61,7 +61,7 @@ classDiagram
 ## Hinweis zur Klasse _CardsDealer_
 
 Die Methode `void dealCards(amount: int)` soll den beiden Spielern die
-eingehende Anzahl an zufälligen Karten des Decks austeilen
+eingehende Anzahl an zufälligen Karten des Decks austeilen.
 
 ## Hinweis zur Klasse _CardsReader_
 

@@ -27,18 +27,18 @@ classDiagram
     class Animal {
         -description: String #123;final#125;
         -sizeInM: double #123;final#125;
-        -weigthInKg: double #123;final#125;
-        +Animal(description: String, sizeInM: double, weigthInKg: double)
+        -weightInKg: double #123;final#125;
+        +Animal(description: String, sizeInM: double, weightInKg: double)
     }
 
     class Bird {
-        +Bird(description: String, sizeInM: double, weigthInKg: double)
+        +Bird(description: String, sizeInM: double, weightInKg: double)
         +fly() void
     }
 
     class Fish {
         -color: String #123;final#125;
-        +Fish(description: String, sizeInM: double, weigthInKg: double, color: String)
+        +Fish(description: String, sizeInM: double, weightInKg: double, color: String)
         +swim() void
     }
 ```

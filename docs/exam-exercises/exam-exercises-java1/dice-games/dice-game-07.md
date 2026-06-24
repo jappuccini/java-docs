@@ -39,7 +39,7 @@ Wahrscheinlichkeit einen Wert zwischen 1 und 6 zurückgeben.
 ## Spielablauf
 
 - Das Spiel soll aus beliebig vielen Runden bestehen
-- Zu Beginn jeder Runde sollen alle Würfen geworfen werden
+- Zu Beginn jeder Runde sollen alle Würfel geworfen werden
 - Anschließend soll der Spieler eingeben können, ob der Wurfwert aller Würfel
   größer 17 ist
 - Für einen richtigen Tipp soll der Spieler einen Punkt bekommen

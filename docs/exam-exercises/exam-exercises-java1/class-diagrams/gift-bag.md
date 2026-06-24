@@ -33,7 +33,7 @@ classDiagram
         -name: String #123;final#125;
         -age: int #123;final#125;
         -gender: char #123;final#125;
-        +Player(name: String, age: int, gender: char )
+        +Person(name: String, age: int, gender: char)
     }
 ```
 
@@ -46,7 +46,7 @@ classDiagram
 
 ## Hinweise zur Klasse _GiftBag_
 
-- Die Methode `void addPresent(present: present)` soll der Geschenkeliste
+- Die Methode `void addPresent(present: Present)` soll der Geschenkeliste
   (`presents`) das eingehende Geschenk hinzufügen
 - Die Methode `Present getMostExpensivePresent()` soll das teuerste Geschenk
   zurückgeben

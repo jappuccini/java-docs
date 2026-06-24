@@ -30,7 +30,7 @@ classDiagram
    }
    class Player {
       -name: String #123;final#125;
-      -int: points
+      -points: int
       +Player(name: String)
       +increasePoints(value: int) void
    }
@@ -52,7 +52,7 @@ Wahrscheinlichkeit ein Symbol (Schere, Stein oder Papier) zurückgeben.
 
 - Das Spiel soll aus 5 Runden bestehen
 - Zu Beginn des Spiel sollen die beiden Spieler ihre Namen eingeben können
-- Zu Beginn jeder Runde sollen die Spieler abwechselnd den Würfel werden. Der
+- Zu Beginn jeder Runde sollen die Spieler abwechselnd den Würfel werfen. Der
   Spieler mit dem besseren Wurfwert soll einen Punkt bekommen. Für den Fall,
   dass beide Spieler den gleichen Wurfwert erzielen, soll keiner einen Punkt
   bekommen. Für den Wurfwert soll gelten: Schere schlägt Papier, Papier schlägt
