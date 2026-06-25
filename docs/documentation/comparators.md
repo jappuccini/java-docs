@@ -37,7 +37,7 @@ public class NotebookByPowerInGhzComparator implements Comparator<Notebook> {
    ...
    @Override
    public int compare(Notebook o1, Notebook o2) {
-      return Integer.compare(o1.cpu().powerInGhz(), o2.cpu.powerInGhz());
+      return Integer.compare(o1.cpu().powerInGhz(), o2.cpu().powerInGhz());
    }
    ...
 }
