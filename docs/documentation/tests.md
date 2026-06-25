@@ -36,3 +36,7 @@ stattfindet, wird die testgetriebene Entwicklung zu den Designstrategien
 gezählt.
 
 :::
+
+Die praktische Umsetzung von Komponententests mit JUnit 5 — Annotationen,
+Assertions und Beispiele — ist auf der Seite
+[Komponententests (Unit Tests)](unit-tests) beschrieben.

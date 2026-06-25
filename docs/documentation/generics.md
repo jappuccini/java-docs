@@ -196,19 +196,19 @@ public class MainClass {
       covariantBox = new Box<Object>(); // Kompilierungsfehler
       covariantBox = new Box<Number>();
       covariantBox = new Box<Integer>();
-      covariantBox = new Box<Integer>(); // Kompilierungsfehler
+      covariantBox = new Box<String>(); // Kompilierungsfehler
 
       Box<? super Number> contravariantBox;
       contravariantBox = new Box<Object>();
       contravariantBox = new Box<Number>();
       contravariantBox = new Box<Integer>(); // Kompilierungsfehler
-      covariantBox = new Box<Integer>(); // Kompilierungsfehler
+      contravariantBox = new Box<String>(); // Kompilierungsfehler
 
       Box<Number> invariantBox;
       invariantBox = new Box<Object>(); // Kompilierungsfehler
       invariantBox = new Box<Number>();
       invariantBox = new Box<Integer>(); // Kompilierungsfehler
-      covariantBox = new Box<String>(); // Kompilierungsfehler
+      invariantBox = new Box<String>(); // Kompilierungsfehler
    }
 
 }
