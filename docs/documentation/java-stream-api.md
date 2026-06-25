@@ -68,13 +68,6 @@ public class MainClass {
 }
 ```
 
-:::note
-
-Die Zahlenfolge 4-8-15-16-23-42 spielt eine große Rolle in der Fernsehserie
-_Lost_.
-
-:::
-
 Im Gegensatz zu `Stream<T>` bieten die spezialisierten Klassen `IntStream`,
 `DoubleStream` und `LongStream` zusätzliche Methoden zur Verarbeitung primitiver
 Werte, wie etwa `sum()` oder `average()`.
