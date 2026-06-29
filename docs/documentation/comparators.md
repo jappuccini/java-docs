@@ -75,7 +75,7 @@ Collections.sort(notebooks, (o1, o2) -> Double.compare(
       o1.cpu().powerInGhz(), o2.cpu().powerInGhz()));
 ```
 
-## Komparatoren mit Comparator.comparing()
+## Komparatoren mit _Comparator.comparing()_
 
 Die statische Fabrikmethode
 `Comparator<T> comparing(keyExtractor: Function<T, U>)` erstellt einen
@@ -91,7 +91,7 @@ notebooks.sort(Comparator.comparing(Notebook::description));
 notebooks.sort(Comparator.comparingInt(Notebook::memoryInGb));
 ```
 
-## Umkehren der Sortierung mit reversed()
+## Umkehren der Sortierung mit _reversed()_
 
 Die Instanzmethode `Comparator<T> reversed()` kehrt die Sortierreihenfolge eines
 bestehenden Komparators um, ohne dass ein neues Lambda geschrieben werden muss.
@@ -101,7 +101,7 @@ bestehenden Komparators um, ohne dass ein neues Lambda geschrieben werden muss.
 notebooks.sort(Comparator.comparingInt(Notebook::memoryInGb).reversed());
 ```
 
-## Mehrstufige Sortierung mit thenComparing()
+## Mehrstufige Sortierung mit _thenComparing()_
 
 Mit `Comparator<T> thenComparing(other: Comparator<T>)` lassen sich mehrere
 Sortierkriterien verknüpfen. Das zweite Kriterium greift nur dann, wenn das

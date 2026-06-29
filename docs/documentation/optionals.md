@@ -68,7 +68,7 @@ public class MainClass {
 }
 ```
 
-## Transformieren mit map() und flatMap()
+## Transformieren mit _map()_ und _flatMap()_
 
 Neben dem direkten Zugriff erlaubt `Optional` das Transformieren des enthaltenen
 Werts, ohne den `null`-Fall explizit behandeln zu müssen. Die Methode
@@ -117,7 +117,7 @@ Optional<String> result = Optional.of("  hallo  ")
 System.out.println(result); // Optional[hallo]
 ```
 
-## Filtern mit filter()
+## Filtern mit _filter()_
 
 Mit `Optional<T> filter(predicate: Predicate<T>)` lässt sich der enthaltene Wert
 anhand einer Bedingung prüfen. Erfüllt der Wert das Prädikat, bleibt das
@@ -133,7 +133,7 @@ Optional<String> shortName = getNameByInitial('H')
 System.out.println(shortName.isPresent()); // false
 ```
 
-## Fehlerbehandlung mit orElseThrow()
+## Fehlerbehandlung mit _orElseThrow()_
 
 Soll das Fehlen eines Werts als Fehlerfall gewertet werden, bietet
 `T orElseThrow(exceptionSupplier: Supplier<X>)` eine präzise Alternative zu
