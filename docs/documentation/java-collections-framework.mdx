@@ -109,9 +109,9 @@ public class MainClass {
 }
 ```
 
-Auch die bereits bekannte for-each-Schleife basiert intern auf Iteratoren. Beim
-Kompilieren wird sie automatisch in eine Iterator-Schleife umgewandelt. Die
-ausführliche Schreibweise ist daher gleichwertig zur Kurzschreibweise.
+Auch die erweiterte for-Schleife basiert intern auf Iteratoren. Beim Kompilieren
+wird sie automatisch in eine Iterator-Schleife umgewandelt. Die ausführliche
+Schreibweise ist daher gleichwertig zur Kurzschreibweise.
 
 ```java title="MainClass.java" showLineNumbers
 public class MainClass {
@@ -126,7 +126,7 @@ public class MainClass {
          System.out.println(name);
       }
 
-      // Kurzschreibweise mit for-each
+      // Kurzschreibweise
       for (String name : names) {
          System.out.println(name);
       }

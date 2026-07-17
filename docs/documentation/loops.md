@@ -67,9 +67,9 @@ public class MainClass {
 }
 ```
 
-## for-each-Schleifen
+## Erweiterte for-Schleifen
 
-Mit der for-each-Schleife können Datensammlungen wie [Felder](arrays) und
+Mit der erweiterten for-Schleife können Datensammlungen wie [Felder](arrays) und
 [Listen](lists) elementweise durchlaufen werden. Dabei können einzelne Elemente
 verändert werden, jedoch nicht die Struktur der Sammlung selbst (z.B. kein
 Hinzufügen oder Entfernen von Elementen).
