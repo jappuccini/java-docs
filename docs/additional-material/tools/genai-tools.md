@@ -17,7 +17,13 @@ Adversarial Networks_ (GANs) für Bilder und Videos. Moderne Chatbots wie
 ChatGPT, Gemini oder LeChat nutzen LLMs, um kontextabhängig und zusammenhängend
 zu antworten. KI-gestützte Assistenzsysteme (Co-Pilots) wie Microsoft 365
 Copilot oder GitHub Copilot sind dagegen direkt in eine Anwendung integriert und
-unterstützen den Anwender aktiv, ohne die Kontrolle zu übernehmen.
+unterstützen den Anwender aktiv, ohne die Kontrolle zu übernehmen. Eine neuere
+Entwicklungsstufe sind _Agentic AI_-Systeme, die eigenständig mehrschrittige
+Aufgaben planen und ausführen, indem sie Werkzeuge aufrufen, Code schreiben und
+ausführen sowie auf ihr Ergebnis reagieren. Ein Beispiel ist Claude Code — ein
+KI-gestützter Assistent, der direkt im Terminal läuft, eine ganze Codebasis
+analysiert und komplexe Entwicklungsaufgaben wie Refactoring, Fehleranalyse oder
+das Schreiben von Tests selbstständig durchführt.
 
 ## Prompt Engineering
 
@@ -95,6 +101,89 @@ Der Zug fährt um 8:00 Uhr in A ab.
 Die Fahrt nach B dauert 3 Stunden und 15 Minuten.
 Wenn der Zug 20 Minuten Verspätung hat, wann kommt er in B an?
 **Denke Schritt für Schritt**
+```
+
+  </TabItem>
+</Tabs>
+
+## Context Engineering
+
+Context Engineering bezeichnet die Disziplin, den Kontext eines LLMs so präzise
+und vollständig wie möglich zu gestalten, damit das Modell eine Aufgabe korrekt
+lösen kann. Während Prompt Engineering primär die Formulierung einzelner
+Eingaben optimiert, geht Context Engineering einen Schritt weiter: Es steuert
+systematisch, welche Informationen dem Modell überhaupt zur Verfügung stehen —
+also welche Dokumente, Codeausschnitte, Gesprächsverläufe oder
+Werkzeugdefinitionen in das Kontextfenster geladen werden. Besondere Bedeutung
+kommt Context Engineering bei Agentic AI-Systemen zu, da diese über viele
+Interaktionsschritte hinweg konsistente und fundierte Entscheidungen treffen
+müssen.
+
+Das Kontextfenster (_Context Window_) eines LLMs ist der Bereich, in dem alle
+für eine Anfrage relevanten Informationen abgelegt werden. Es umfasst die
+Systemnachricht, den bisherigen Gesprächsverlauf, Werkzeugdefinitionen sowie
+abgerufene externe Inhalte. Da das Kontextfenster in seiner Größe begrenzt ist,
+entscheidet die Auswahl und Aufbereitung der enthaltenen Informationen
+maßgeblich über die Qualität der Modellausgabe.
+
+<Tabs>
+  <TabItem value="a" label="Systemnachricht" default>
+
+Die Systemnachricht (_System Prompt_) ist eine vom Entwickler festgelegte
+Anweisung, die dem Modell vor dem eigentlichen Gespräch übergeben wird. Sie legt
+Rolle, Verhalten, Tonfall und Rahmenbedingungen des Assistenten fest.
+
+```
+Du bist ein erfahrener Java-Tutor. Antworte ausschließlich auf Fragen zur
+Java-Programmierung. Erkläre Konzepte in einfacher Sprache und illustriere
+sie immer mit einem kurzen Codebeispiel.
+```
+
+  </TabItem>
+  <TabItem value="b" label="Gesprächsverlauf">
+
+Der Gesprächsverlauf (_Conversation History_) enthält alle bisherigen
+Nachrichten zwischen Nutzer und Modell. Er ermöglicht dem Modell, Bezug auf
+frühere Aussagen zu nehmen und Widersprüche zu vermeiden. Bei langen Gesprächen
+kann eine Zusammenfassung älterer Nachrichten helfen, das Kontextfenster nicht
+zu überfüllen.
+
+```
+Nutzer:  Was ist eine abstrakte Klasse in Java?
+Assistent: Eine abstrakte Klasse kann nicht direkt instanziiert werden ...
+Nutzer:  Und wie unterscheidet sie sich von einem Interface?
+```
+
+  </TabItem>
+  <TabItem value="c" label="Retrieval-Augmented Generation">
+
+Bei _Retrieval-Augmented Generation_ (RAG) werden zur Laufzeit relevante
+Dokumente oder Codeausschnitte aus einer externen Wissensbasis gesucht und in
+das Kontextfenster eingefügt. Dadurch kann das Modell auf aktuelles oder
+domänenspezifisches Wissen zurückgreifen, das nicht Teil seiner Trainingsdaten
+ist.
+
+```
+[Abgerufenes Dokument]
+Klasse BankAccount: Felder balance, owner; Methoden deposit(), withdraw().
+
+[Nutzerfrage]
+Füge der Klasse BankAccount eine Methode transfer() hinzu.
+```
+
+  </TabItem>
+  <TabItem value="d" label="Werkzeuge">
+
+Agentic AI-Systeme erhalten im Kontext eine Liste verfügbarer Werkzeuge
+(_Tools_), z.B. Datei lesen, Code ausführen oder eine API aufrufen. Das Modell
+entscheidet eigenständig, welches Werkzeug es für den nächsten Schritt
+verwendet, und erhält das Ergebnis als weiteren Kontexteintrag zurück.
+
+```
+Verfügbare Werkzeuge: read_file, write_file, run_tests, search_codebase
+
+Aufgabe: Finde alle Klassen, die das Interface Comparable implementieren,
+         und schreibe einen Unittest für die compareTo()-Methode.
 ```
 
   </TabItem>
@@ -327,6 +416,78 @@ public class CalculatorApp extends Application {
     -fx-background-color: #3b76d0;
 }
 ...
+```
+
+  </TabItem>
+</Tabs>
+
+## Agentic AI
+
+Agentic AI-Systeme erweitern klassische LLMs um die Fähigkeit, selbstständig
+mehrschrittige Aufgaben zu planen und auszuführen. Dazu kombinieren sie ein
+Sprachmodell mit Werkzeugen (z.B. Dateisystem, Terminal, externe APIs) und einem
+Entscheidungs-Loop: Das Modell wählt das nächste Werkzeug, wertet dessen
+Ergebnis aus und entscheidet, wie es weiter vorgeht — bis die Aufgabe
+abgeschlossen ist. Claude Code ist ein Beispiel für ein solches System: Es läuft
+direkt im Terminal, analysiert eine Codebasis und führt Aufgaben wie
+Refactoring, Fehleranalyse oder das Schreiben von Tests eigenständig durch. Die
+Interaktion mit Agentic AI-Systemen erfolgt über Commands, Skills und Hooks.
+
+<Tabs>
+  <TabItem value="a" label="Commands" default>
+
+Commands sind vordefinierte Slash-Befehle, die häufig benötigte Aufgaben mit
+einer kurzen Eingabe auslösen. Sie sind im Agenten fest eingebaut und decken
+typische Entwicklungsaufgaben ab — von der Versionsverwaltung bis zur
+Codeüberprüfung.
+
+```
+> /commit
+> /review
+> /fix
+```
+
+  </TabItem>
+  <TabItem value="b" label="Skills">
+
+Skills sind benutzerdefinierte Befehle, die als Markdown-Dateien im Verzeichnis
+`.claude/commands/` hinterlegt werden. Sie erweitern den Agenten um
+projektspezifische Workflows und lassen sich wie eingebaute Commands aufrufen.
+
+```markdown title=".claude/commands/review-pr.md"
+---
+description: Führe ein Code-Review für den aktuellen Pull Request durch
+---
+
+Analysiere alle geänderten Dateien im aktuellen Pull Request. Prüfe auf:
+Codequalität, fehlende Tests, Sicherheitsprobleme. Erstelle eine strukturierte
+Zusammenfassung der Befunde.
+```
+
+  </TabItem>
+  <TabItem value="c" label="Hooks">
+
+Hooks sind Shell-Befehle, die automatisch bei bestimmten Ereignissen im
+Agenten-Lifecycle ausgeführt werden — etwa bevor ein Werkzeug aufgerufen wird
+oder nachdem der Agent seine Arbeit beendet hat. Sie werden in der Konfiguration
+`settings.json` definiert.
+
+```json title="settings.json (Ausschnitt)"
+{
+  "hooks": {
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "npx prettier . --write --end-of-line crlf"
+          }
+        ]
+      }
+    ]
+  }
+}
 ```
 
   </TabItem>
