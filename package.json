@@ -26,7 +26,7 @@
     "clsx": "^2.1.1",
     "mermaid": "^11.15.0",
     "prism-react-renderer": "^2.1.0",
-    "react": "^19.2.7",
+    "react": "^19.2.8",
     "react-dom": "^19.2.7",
     "reveal.js": "^6.0.1"
   },
