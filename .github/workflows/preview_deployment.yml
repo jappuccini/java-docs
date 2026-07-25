@@ -55,5 +55,5 @@ jobs:
       - name: checkout repository
         uses: actions/checkout@v7.0.1
 
-      - name: Deploy preview
+      - name: Undeploy preview
         uses: rossjrw/pr-preview-action@v1.8.1
