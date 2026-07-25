@@ -5,41 +5,27 @@ sidebar_position: 10
 tags: []
 ---
 
+- 08.01.2026 [Einleitung](/slides/steffen/java-1/intro)
 - 08.01.2026
-  <a href="/slides/steffen/java-1/intro" target="_blank" rel="noopener noreferrer">Einleitung</a>
-- 08.01.2026
-  <a href="/slides/steffen/java-1/datatypes-and-dataobjects" target="_blank" rel="noopener noreferrer">Datentypen
-  und Datenobjekte</a>
+  [Datentypen und Datenobjekte](/slides/steffen/java-1/datatypes-and-dataobjects)
 - 09.01.2026
-  <a href="/slides/steffen/java-1/methods-and-operators" target="_blank" rel="noopener noreferrer">Methoden
-  und Operatoren</a>
+  [Methoden und Operatoren](/slides/steffen/java-1/methods-and-operators)
 - 15.01.2026
-  <a href="/slides/steffen/java-1/if-and-switch" target="_blank" rel="noopener noreferrer">Kontrollstrukturen
-  und Arrays</a>
+  [Kontrollstrukturen und Arrays](/slides/steffen/java-1/if-and-switch)
 - 16.01.2026
-  <a href="/slides/steffen/java-1/math-random-scanner" target="_blank" rel="noopener noreferrer">Math,
-  Random und Scanner</a>
+  [Math, Random und Scanner](/slides/steffen/java-1/math-random-scanner)
 - 22.01.2026 Kurztest
-- 22.01.2026
-  <a href="/slides/steffen/java-1/classes-and-objects" target="_blank" rel="noopener noreferrer">Klassen
-  und Objekte</a>
+- 22.01.2026 [Klassen und Objekte](/slides/steffen/java-1/classes-and-objects)
 - 23.01.2026
-  <a href="/slides/steffen/java-1/constructor-and-static" target="_blank" rel="noopener noreferrer">Konstruktor
-  und static</a>
+  [Konstruktor und static](/slides/steffen/java-1/constructor-and-static)
 - 05.02. & 06.02.2026
-  <a href="/slides/steffen/java-1/class-diagram-java-api-enum" target="_blank" rel="noopener noreferrer">Java
-  API, Enum, Klassendiagramm, Aktivitätsdiagramm</a>
-- 12.02.2026
-  <a href="/slides/steffen/java-1/inheritance" target="_blank" rel="noopener noreferrer">Vererbung</a>
-- 12.02.2026
-  <a href="/slides/steffen/java-1/polymorphism" target="_blank" rel="noopener noreferrer">Polymorphie</a>
+  [Java API, Enum, Klassendiagramm, Aktivitätsdiagramm](/slides/steffen/java-1/class-diagram-java-api-enum)
+- 12.02.2026 [Vererbung](/slides/steffen/java-1/inheritance)
+- 12.02.2026 [Polymorphie](/slides/steffen/java-1/polymorphism)
 - 13.02.2026
-  <a href="/slides/steffen/java-1/abstract-and-final" target="_blank" rel="noopener noreferrer">Abstrakte
-  und finale Klassen</a>
-- 19.02.2026
-  <a href="/slides/steffen/java-1/interfaces" target="_blank" rel="noopener noreferrer">Interfaces</a>
-- 20.02.2026
-  <a href="/slides/steffen/java-1/exceptions" target="_blank" rel="noopener noreferrer">Exceptions</a>
+  [Abstrakte und finale Klassen](/slides/steffen/java-1/abstract-and-final)
+- 19.02.2026 [Interfaces](/slides/steffen/java-1/interfaces)
+- 20.02.2026 [Exceptions](/slides/steffen/java-1/exceptions)
 - 27.02.2026 & 06.03.2026 Klausurvorbereitung
 - 10.03.2026 Klausur
 
