@@ -9,3 +9,8 @@ updates:
     directory: '/' # Location of package manifests
     schedule:
       interval: 'weekly'
+    # Remove once Docusaurus supports @mermaid-js/layout-elk 0.2.x or later.
+    ignore:
+      - dependency-name: '@mermaid-js/layout-elk'
+        update-types:
+          - 'version-update:semver-major'

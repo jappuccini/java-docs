@@ -1,5 +1,8 @@
 name: Deploy PR previews
-permissions: write-all
+
+permissions:
+  contents: write
+  pull-requests: write
 
 on:
   pull_request:
@@ -20,12 +23,12 @@ jobs:
     if: github.event.action != 'closed'
     steps:
       - name: checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7.0.1
 
       - name: setup nodejs
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7.0.0
         with:
-          node-version: 22
+          node-version-file: .nvmrc
           cache: npm
 
       - name: install dependencies
@@ -40,7 +43,7 @@ jobs:
           BASE_URL: /java-docs/pr-preview/pr-${{ github.event.number }}
 
       - name: deploy preview
-        uses: rossjrw/pr-preview-action@v1
+        uses: rossjrw/pr-preview-action@v1.8.1
         with:
           source-dir: ./build/
 
@@ -50,7 +53,7 @@ jobs:
     if: github.event.action == 'closed'
     steps:
       - name: checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7.0.1
 
       - name: Deploy preview
-        uses: rossjrw/pr-preview-action@v1
+        uses: rossjrw/pr-preview-action@v1.8.1
