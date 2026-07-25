@@ -1,5 +1,6 @@
 import BrowserOnly from '@docusaurus/BrowserOnly';
 import React, { type ReactNode, useEffect } from 'react';
+import type { RevealApi } from 'reveal.js';
 
 interface SlidesProps {
   children: ReactNode;
@@ -13,9 +14,19 @@ function SlidesInner({
   height,
 }: SlidesProps): React.JSX.Element {
   useEffect(() => {
+    let disposed = false;
+    let deck: RevealApi | undefined;
+
     import('./initSlides').then(({ defaultInitSlides }) => {
-      defaultInitSlides();
+      if (!disposed) {
+        deck = defaultInitSlides();
+      }
     });
+
+    return () => {
+      disposed = true;
+      deck?.destroy();
+    };
   }, []);
 
   return (
