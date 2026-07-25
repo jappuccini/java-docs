@@ -13,4 +13,5 @@ updates:
     ignore:
       - dependency-name: '@mermaid-js/layout-elk'
         update-types:
+          - 'version-update:semver-minor'
           - 'version-update:semver-major'
