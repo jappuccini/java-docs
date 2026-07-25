@@ -1,0 +1,30 @@
+{
+  "id": "additional-material/steffen/java-1/exam-preparation/2023",
+  "title": "2023",
+  "description": "",
+  "source": "@site/docs/additional-material/steffen/java-1/exam-preparation/2023.mdx",
+  "sourceDirName": "additional-material/steffen/java-1/exam-preparation",
+  "slug": "/additional-material/steffen/java-1/exam-preparation/2023",
+  "permalink": "/java-docs/additional-material/steffen/java-1/exam-preparation/2023",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/additional-material/steffen/java-1/exam-preparation/2023.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 100,
+  "frontMatter": {
+    "title": "2023",
+    "description": "",
+    "sidebar_position": 100,
+    "tags": []
+  },
+  "sidebar": "additionalMaterialSidebar",
+  "previous": {
+    "title": "2024",
+    "permalink": "/java-docs/additional-material/steffen/java-1/exam-preparation/2024"
+  },
+  "next": {
+    "title": "Java 2",
+    "permalink": "/java-docs/additional-material/steffen/java-2/"
+  }
+}

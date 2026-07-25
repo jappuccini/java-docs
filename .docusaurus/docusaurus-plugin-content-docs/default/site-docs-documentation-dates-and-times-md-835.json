@@ -1,0 +1,44 @@
+{
+  "id": "documentation/dates-and-times",
+  "title": "Datums- und Zeitangaben",
+  "description": "",
+  "source": "@site/docs/documentation/dates-and-times.md",
+  "sourceDirName": "documentation",
+  "slug": "/documentation/dates-and-times",
+  "permalink": "/java-docs/documentation/dates-and-times",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/documentation/dates-and-times.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "java-api",
+      "permalink": "/java-docs/tags/java-api"
+    },
+    {
+      "inline": true,
+      "label": "dates-and-times",
+      "permalink": "/java-docs/tags/dates-and-times"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 142,
+  "frontMatter": {
+    "title": "Datums- und Zeitangaben",
+    "description": "",
+    "sidebar_position": 142,
+    "tags": [
+      "java-api",
+      "dates-and-times"
+    ]
+  },
+  "sidebar": "documentationSidebar",
+  "previous": {
+    "title": "Wrapper-Klassen",
+    "permalink": "/java-docs/documentation/wrappers"
+  },
+  "next": {
+    "title": "Dateien und Verzeichnisse",
+    "permalink": "/java-docs/documentation/files"
+  }
+}

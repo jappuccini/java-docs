@@ -1,0 +1,27 @@
+{
+  "id": "exercises/console-applications/console-applications01",
+  "title": "ConsoleApplications01",
+  "description": "",
+  "source": "@site/docs/exercises/console-applications/console-applications01.mdx",
+  "sourceDirName": "exercises/console-applications",
+  "slug": "/exercises/console-applications/console-applications01",
+  "permalink": "/java-docs/exercises/console-applications/console-applications01",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/console-applications/console-applications01.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "ConsoleApplications01",
+    "description": ""
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "Konsolenanwendungen",
+    "permalink": "/java-docs/exercises/console-applications/"
+  },
+  "next": {
+    "title": "ConsoleApplications02",
+    "permalink": "/java-docs/exercises/console-applications/console-applications02"
+  }
+}

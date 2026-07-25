@@ -1,0 +1,42 @@
+{
+  "id": "exam-exercises/exam-exercises-java1/class-diagrams/student-course",
+  "title": "Kurs",
+  "description": "",
+  "source": "@site/docs/exam-exercises/exam-exercises-java1/class-diagrams/student-course.md",
+  "sourceDirName": "exam-exercises/exam-exercises-java1/class-diagrams",
+  "slug": "/exam-exercises/exam-exercises-java1/class-diagrams/student-course",
+  "permalink": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/student-course",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exam-exercises/exam-exercises-java1/class-diagrams/student-course.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "oo",
+      "permalink": "/java-docs/tags/oo"
+    },
+    {
+      "inline": true,
+      "label": "enumerations",
+      "permalink": "/java-docs/tags/enumerations"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Kurs",
+    "description": "",
+    "tags": [
+      "oo",
+      "enumerations"
+    ]
+  },
+  "sidebar": "examExercisesSidebar",
+  "previous": {
+    "title": "Geometrische Form",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/shape"
+  },
+  "next": {
+    "title": "Reise",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/travel"
+  }
+}

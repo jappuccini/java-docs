@@ -1,0 +1,38 @@
+{
+  "id": "additional-material/tools/markdown",
+  "title": "Markdown",
+  "description": "",
+  "source": "@site/docs/additional-material/tools/markdown.mdx",
+  "sourceDirName": "additional-material/tools",
+  "slug": "/additional-material/tools/markdown",
+  "permalink": "/java-docs/additional-material/tools/markdown",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/additional-material/tools/markdown.mdx",
+  "tags": [
+    {
+      "inline": true,
+      "label": "markdown",
+      "permalink": "/java-docs/tags/markdown"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 30,
+  "frontMatter": {
+    "title": "Markdown",
+    "description": "",
+    "sidebar_position": 30,
+    "tags": [
+      "markdown"
+    ]
+  },
+  "sidebar": "additionalMaterialSidebar",
+  "previous": {
+    "title": "Maven",
+    "permalink": "/java-docs/additional-material/tools/maven"
+  },
+  "next": {
+    "title": "GenAI-Tools",
+    "permalink": "/java-docs/additional-material/tools/genai-tools"
+  }
+}

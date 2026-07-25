@@ -1,0 +1,27 @@
+{
+  "id": "exercises/optionals/optionals03",
+  "title": "Optionals03",
+  "description": "",
+  "source": "@site/docs/exercises/optionals/optionals03.mdx",
+  "sourceDirName": "exercises/optionals",
+  "slug": "/exercises/optionals/optionals03",
+  "permalink": "/java-docs/exercises/optionals/optionals03",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/optionals/optionals03.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Optionals03",
+    "description": ""
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "Optionals02",
+    "permalink": "/java-docs/exercises/optionals/optionals02"
+  },
+  "next": {
+    "title": "Die Java Stream API",
+    "permalink": "/java-docs/exercises/java-stream-api/"
+  }
+}

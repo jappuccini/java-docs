@@ -1,0 +1,44 @@
+{
+  "id": "exercises/lambdas/lambdas",
+  "title": "Lambda-Ausdrücke (Lambdas)",
+  "description": "",
+  "source": "@site/docs/exercises/lambdas/lambdas.mdx",
+  "sourceDirName": "exercises/lambdas",
+  "slug": "/exercises/lambdas/",
+  "permalink": "/java-docs/exercises/lambdas/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/lambdas/lambdas.mdx",
+  "tags": [
+    {
+      "inline": true,
+      "label": "inner-classes",
+      "permalink": "/java-docs/tags/inner-classes"
+    },
+    {
+      "inline": true,
+      "label": "lambdas",
+      "permalink": "/java-docs/tags/lambdas"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 175,
+  "frontMatter": {
+    "title": "Lambda-Ausdrücke (Lambdas)",
+    "description": "",
+    "sidebar_position": 175,
+    "tags": [
+      "inner-classes",
+      "lambdas"
+    ]
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "InnerClasses04",
+    "permalink": "/java-docs/exercises/inner-classes/inner-classes04"
+  },
+  "next": {
+    "title": "Lambdas01",
+    "permalink": "/java-docs/exercises/lambdas/lambdas01"
+  }
+}

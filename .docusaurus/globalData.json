@@ -1,0 +1,1466 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/java-docs/",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/java-docs/",
+          "mainDocId": "documentation/introduction",
+          "docs": [
+            {
+              "id": "additional-material/instructions/binary-numbers",
+              "path": "/java-docs/additional-material/instructions/binary-numbers",
+              "sidebar": "additionalMaterialSidebar"
+            },
+            {
+              "id": "additional-material/instructions/debugging",
+              "path": "/java-docs/additional-material/instructions/debugging",
+              "sidebar": "additionalMaterialSidebar"
+            },
+            {
+              "id": "additional-material/instructions/git",
+              "path": "/java-docs/additional-material/instructions/git",
+              "sidebar": "additionalMaterialSidebar"
+            },
+            {
+              "id": "additional-material/instructions/instructions",
+              "path": "/java-docs/additional-material/instructions/",
+              "sidebar": "additionalMaterialSidebar"
+            },
+            {
+              "id": "additional-material/instructions/javafx",
+              "path": "/java-docs/additional-material/instructions/javafx",
+              "sidebar": "additionalMaterialSidebar"
+            },
+            {
+              "id": "additional-material/instructions/jdk",
+              "path": "/java-docs/additional-material/instructions/jdk",
+              "sidebar": "additionalMaterialSidebar"
+            },
+            {
+              "id": "additional-material/instructions/maven",
+              "path": "/java-docs/additional-material/instructions/maven",
+              "sidebar": "additionalMaterialSidebar"
+            },
+            {
+              "id": "additional-material/steffen/Allgemein",
+              "path": "/java-docs/additional-material/steffen/Allgemein",
+              "sidebar": "additionalMaterialSidebar"
+            },
+            {
+              "id": "additional-material/steffen/index",
+              "path": "/java-docs/additional-material/steffen/",
+              "sidebar": "additionalMaterialSidebar"
+            },
+            {
+              "id": "additional-material/steffen/java-1/exam-preparation/2023",
+              "path": "/java-docs/additional-material/steffen/java-1/exam-preparation/2023",
+              "sidebar": "additionalMaterialSidebar"
+            },
+            {
+              "id": "additional-material/steffen/java-1/exam-preparation/2024",
+              "path": "/java-docs/additional-material/steffen/java-1/exam-preparation/2024",
+              "sidebar": "additionalMaterialSidebar"
+            },
+            {
+              "id": "additional-material/steffen/java-1/exam-preparation/2025",
+              "path": "/java-docs/additional-material/steffen/java-1/exam-preparation/2025",
+              "sidebar": "additionalMaterialSidebar"
+            },
+            {
+              "id": "additional-material/steffen/java-1/exam-preparation/2026",
+              "path": "/java-docs/additional-material/steffen/java-1/exam-preparation/2026",
+              "sidebar": "additionalMaterialSidebar"
+            },
+            {
+              "id": "additional-material/steffen/java-1/exam-preparation/index",
+              "path": "/java-docs/additional-material/steffen/java-1/exam-preparation/",
+              "sidebar": "additionalMaterialSidebar"
+            },
+            {
+              "id": "additional-material/steffen/java-1/index",
+              "path": "/java-docs/additional-material/steffen/java-1/",
+              "sidebar": "additionalMaterialSidebar"
+            },
+            {
+              "id": "additional-material/steffen/java-1/slides",
+              "path": "/java-docs/additional-material/steffen/java-1/slides",
+              "sidebar": "additionalMaterialSidebar"
+            },
+            {
+              "id": "additional-material/steffen/java-2/exam-preparation/2023",
+              "path": "/java-docs/additional-material/steffen/java-2/exam-preparation/2023",
+              "sidebar": "additionalMaterialSidebar"
+            },
+            {
+              "id": "additional-material/steffen/java-2/exam-preparation/2024",
+              "path": "/java-docs/additional-material/steffen/java-2/exam-preparation/2024",
+              "sidebar": "additionalMaterialSidebar"
+            },
+            {
+              "id": "additional-material/steffen/java-2/exam-preparation/2025",
+              "path": "/java-docs/additional-material/steffen/java-2/exam-preparation/2025",
+              "sidebar": "additionalMaterialSidebar"
+            },
+            {
+              "id": "additional-material/steffen/java-2/exam-preparation/2026",
+              "path": "/java-docs/additional-material/steffen/java-2/exam-preparation/2026",
+              "sidebar": "additionalMaterialSidebar"
+            },
+            {
+              "id": "additional-material/steffen/java-2/exam-preparation/index",
+              "path": "/java-docs/additional-material/steffen/java-2/exam-preparation/",
+              "sidebar": "additionalMaterialSidebar"
+            },
+            {
+              "id": "additional-material/steffen/java-2/index",
+              "path": "/java-docs/additional-material/steffen/java-2/",
+              "sidebar": "additionalMaterialSidebar"
+            },
+            {
+              "id": "additional-material/steffen/java-2/slides",
+              "path": "/java-docs/additional-material/steffen/java-2/slides",
+              "sidebar": "additionalMaterialSidebar"
+            },
+            {
+              "id": "additional-material/tools/debugging",
+              "path": "/java-docs/additional-material/tools/debugging",
+              "sidebar": "additionalMaterialSidebar"
+            },
+            {
+              "id": "additional-material/tools/genai-tools",
+              "path": "/java-docs/additional-material/tools/genai-tools",
+              "sidebar": "additionalMaterialSidebar"
+            },
+            {
+              "id": "additional-material/tools/git",
+              "path": "/java-docs/additional-material/tools/git",
+              "sidebar": "additionalMaterialSidebar"
+            },
+            {
+              "id": "additional-material/tools/markdown",
+              "path": "/java-docs/additional-material/tools/markdown",
+              "sidebar": "additionalMaterialSidebar"
+            },
+            {
+              "id": "additional-material/tools/maven",
+              "path": "/java-docs/additional-material/tools/maven",
+              "sidebar": "additionalMaterialSidebar"
+            },
+            {
+              "id": "additional-material/tools/tools",
+              "path": "/java-docs/additional-material/tools/",
+              "sidebar": "additionalMaterialSidebar"
+            },
+            {
+              "id": "documentation/abstract-and-final",
+              "path": "/java-docs/documentation/abstract-and-final",
+              "sidebar": "documentationSidebar"
+            },
+            {
+              "id": "documentation/activity-diagrams",
+              "path": "/java-docs/documentation/activity-diagrams",
+              "sidebar": "documentationSidebar"
+            },
+            {
+              "id": "documentation/algorithms",
+              "path": "/java-docs/documentation/algorithms",
+              "sidebar": "documentationSidebar"
+            },
+            {
+              "id": "documentation/array-lists",
+              "path": "/java-docs/documentation/array-lists",
+              "sidebar": "documentationSidebar"
+            },
+            {
+              "id": "documentation/arrays",
+              "path": "/java-docs/documentation/arrays",
+              "sidebar": "documentationSidebar"
+            },
+            {
+              "id": "documentation/binary-numbers",
+              "path": "/java-docs/documentation/binary-numbers",
+              "sidebar": "documentationSidebar"
+            },
+            {
+              "id": "documentation/calculations",
+              "path": "/java-docs/documentation/calculations",
+              "sidebar": "documentationSidebar"
+            },
+            {
+              "id": "documentation/cases",
+              "path": "/java-docs/documentation/cases",
+              "sidebar": "documentationSidebar"
+            },
+            {
+              "id": "documentation/class-diagrams",
+              "path": "/java-docs/documentation/class-diagrams",
+              "sidebar": "documentationSidebar"
+            },
+            {
+              "id": "documentation/class-structure",
+              "path": "/java-docs/documentation/class-structure",
+              "sidebar": "documentationSidebar"
+            },
+            {
+              "id": "documentation/classes",
+              "path": "/java-docs/documentation/classes",
+              "sidebar": "documentationSidebar"
+            },
+            {
+              "id": "documentation/coding",
+              "path": "/java-docs/documentation/coding",
+              "sidebar": "documentationSidebar"
+            },
+            {
+              "id": "documentation/comparators",
+              "path": "/java-docs/documentation/comparators",
+              "sidebar": "documentationSidebar"
+            },
+            {
+              "id": "documentation/console-applications",
+              "path": "/java-docs/documentation/console-applications",
+              "sidebar": "documentationSidebar"
+            },
+            {
+              "id": "documentation/data-objects",
+              "path": "/java-docs/documentation/data-objects",
+              "sidebar": "documentationSidebar"
+            },
+            {
+              "id": "documentation/data-types",
+              "path": "/java-docs/documentation/data-types",
+              "sidebar": "documentationSidebar"
+            },
+            {
+              "id": "documentation/dates-and-times",
+              "path": "/java-docs/documentation/dates-and-times",
+              "sidebar": "documentationSidebar"
+            },
+            {
+              "id": "documentation/enumerations",
+              "path": "/java-docs/documentation/enumerations",
+              "sidebar": "documentationSidebar"
+            },
+            {
+              "id": "documentation/exceptions",
+              "path": "/java-docs/documentation/exceptions",
+              "sidebar": "documentationSidebar"
+            },
+            {
+              "id": "documentation/files",
+              "path": "/java-docs/documentation/files",
+              "sidebar": "documentationSidebar"
+            },
+            {
+              "id": "documentation/generics",
+              "path": "/java-docs/documentation/generics",
+              "sidebar": "documentationSidebar"
+            },
+            {
+              "id": "documentation/gui",
+              "path": "/java-docs/documentation/gui",
+              "sidebar": "documentationSidebar"
+            },
+            {
+              "id": "documentation/hashing",
+              "path": "/java-docs/documentation/hashing",
+              "sidebar": "documentationSidebar"
+            },
+            {
+              "id": "documentation/inheritance",
+              "path": "/java-docs/documentation/inheritance",
+              "sidebar": "documentationSidebar"
+            },
+            {
+              "id": "documentation/inner-classes",
+              "path": "/java-docs/documentation/inner-classes",
+              "sidebar": "documentationSidebar"
+            },
+            {
+              "id": "documentation/interfaces",
+              "path": "/java-docs/documentation/interfaces",
+              "sidebar": "documentationSidebar"
+            },
+            {
+              "id": "documentation/introduction",
+              "path": "/java-docs/",
+              "sidebar": "documentationSidebar"
+            },
+            {
+              "id": "documentation/io-streams",
+              "path": "/java-docs/documentation/io-streams",
+              "sidebar": "documentationSidebar"
+            },
+            {
+              "id": "documentation/java",
+              "path": "/java-docs/documentation/java",
+              "sidebar": "documentationSidebar"
+            },
+            {
+              "id": "documentation/java-api",
+              "path": "/java-docs/documentation/java-api",
+              "sidebar": "documentationSidebar"
+            },
+            {
+              "id": "documentation/java-collections-framework",
+              "path": "/java-docs/documentation/java-collections-framework",
+              "sidebar": "documentationSidebar"
+            },
+            {
+              "id": "documentation/java-stream-api",
+              "path": "/java-docs/documentation/java-stream-api",
+              "sidebar": "documentationSidebar"
+            },
+            {
+              "id": "documentation/javafx",
+              "path": "/java-docs/documentation/javafx",
+              "sidebar": "documentationSidebar"
+            },
+            {
+              "id": "documentation/lambdas",
+              "path": "/java-docs/documentation/lambdas",
+              "sidebar": "documentationSidebar"
+            },
+            {
+              "id": "documentation/lists",
+              "path": "/java-docs/documentation/lists",
+              "sidebar": "documentationSidebar"
+            },
+            {
+              "id": "documentation/lombok",
+              "path": "/java-docs/documentation/lombok",
+              "sidebar": "documentationSidebar"
+            },
+            {
+              "id": "documentation/loops",
+              "path": "/java-docs/documentation/loops",
+              "sidebar": "documentationSidebar"
+            },
+            {
+              "id": "documentation/maps",
+              "path": "/java-docs/documentation/maps",
+              "sidebar": "documentationSidebar"
+            },
+            {
+              "id": "documentation/mockito",
+              "path": "/java-docs/documentation/mockito",
+              "sidebar": "documentationSidebar"
+            },
+            {
+              "id": "documentation/object",
+              "path": "/java-docs/documentation/object",
+              "sidebar": "documentationSidebar"
+            },
+            {
+              "id": "documentation/oo",
+              "path": "/java-docs/documentation/oo",
+              "sidebar": "documentationSidebar"
+            },
+            {
+              "id": "documentation/operators",
+              "path": "/java-docs/documentation/operators",
+              "sidebar": "documentationSidebar"
+            },
+            {
+              "id": "documentation/optionals",
+              "path": "/java-docs/documentation/optionals",
+              "sidebar": "documentationSidebar"
+            },
+            {
+              "id": "documentation/polymorphism",
+              "path": "/java-docs/documentation/polymorphism",
+              "sidebar": "documentationSidebar"
+            },
+            {
+              "id": "documentation/pseudo-random-numbers",
+              "path": "/java-docs/documentation/pseudo-random-numbers",
+              "sidebar": "documentationSidebar"
+            },
+            {
+              "id": "documentation/records",
+              "path": "/java-docs/documentation/records",
+              "sidebar": "documentationSidebar"
+            },
+            {
+              "id": "documentation/references-and-objects",
+              "path": "/java-docs/documentation/references-and-objects",
+              "sidebar": "documentationSidebar"
+            },
+            {
+              "id": "documentation/slf4j",
+              "path": "/java-docs/documentation/slf4j",
+              "sidebar": "documentationSidebar"
+            },
+            {
+              "id": "documentation/strings",
+              "path": "/java-docs/documentation/strings",
+              "sidebar": "documentationSidebar"
+            },
+            {
+              "id": "documentation/tests",
+              "path": "/java-docs/documentation/tests",
+              "sidebar": "documentationSidebar"
+            },
+            {
+              "id": "documentation/trees",
+              "path": "/java-docs/documentation/trees",
+              "sidebar": "documentationSidebar"
+            },
+            {
+              "id": "documentation/unit-tests",
+              "path": "/java-docs/documentation/unit-tests",
+              "sidebar": "documentationSidebar"
+            },
+            {
+              "id": "documentation/wrappers",
+              "path": "/java-docs/documentation/wrappers",
+              "sidebar": "documentationSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java1/activity-diagrams/activity-diagrams",
+              "path": "/java-docs/exam-exercises/exam-exercises-java1/activity-diagrams/",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java1/activity-diagrams/cash-machine",
+              "path": "/java-docs/exam-exercises/exam-exercises-java1/activity-diagrams/cash-machine",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java1/activity-diagrams/discount-calculator",
+              "path": "/java-docs/exam-exercises/exam-exercises-java1/activity-diagrams/discount-calculator",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java1/activity-diagrams/insertion-sort",
+              "path": "/java-docs/exam-exercises/exam-exercises-java1/activity-diagrams/insertion-sort",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java1/activity-diagrams/selection-sort",
+              "path": "/java-docs/exam-exercises/exam-exercises-java1/activity-diagrams/selection-sort",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java1/activity-diagrams/timestamp-converter",
+              "path": "/java-docs/exam-exercises/exam-exercises-java1/activity-diagrams/timestamp-converter",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java1/class-diagrams/cards-dealer",
+              "path": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/cards-dealer",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java1/class-diagrams/cashier-system",
+              "path": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/cashier-system",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java1/class-diagrams/christmas-tree",
+              "path": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/christmas-tree",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java1/class-diagrams/class-diagrams",
+              "path": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java1/class-diagrams/cookie-jar",
+              "path": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/cookie-jar",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java1/class-diagrams/creature",
+              "path": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/creature",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java1/class-diagrams/easter-basket",
+              "path": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/easter-basket",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java1/class-diagrams/fast-food",
+              "path": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/fast-food",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java1/class-diagrams/gift-bag",
+              "path": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/gift-bag",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java1/class-diagrams/parking-garage",
+              "path": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/parking-garage",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java1/class-diagrams/player",
+              "path": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/player",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java1/class-diagrams/restaurant",
+              "path": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/restaurant",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java1/class-diagrams/santa-claus",
+              "path": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/santa-claus",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java1/class-diagrams/shape",
+              "path": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/shape",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java1/class-diagrams/student-course",
+              "path": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/student-course",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java1/class-diagrams/travel",
+              "path": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/travel",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java1/class-diagrams/weather-station",
+              "path": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/weather-station",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java1/class-diagrams/zoo",
+              "path": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/zoo",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java1/dice-games/dice-game-01",
+              "path": "/java-docs/exam-exercises/exam-exercises-java1/dice-games/dice-game-01",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java1/dice-games/dice-game-02",
+              "path": "/java-docs/exam-exercises/exam-exercises-java1/dice-games/dice-game-02",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java1/dice-games/dice-game-03",
+              "path": "/java-docs/exam-exercises/exam-exercises-java1/dice-games/dice-game-03",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java1/dice-games/dice-game-04",
+              "path": "/java-docs/exam-exercises/exam-exercises-java1/dice-games/dice-game-04",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java1/dice-games/dice-game-05",
+              "path": "/java-docs/exam-exercises/exam-exercises-java1/dice-games/dice-game-05",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java1/dice-games/dice-game-06",
+              "path": "/java-docs/exam-exercises/exam-exercises-java1/dice-games/dice-game-06",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java1/dice-games/dice-game-07",
+              "path": "/java-docs/exam-exercises/exam-exercises-java1/dice-games/dice-game-07",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java1/dice-games/dice-game-08",
+              "path": "/java-docs/exam-exercises/exam-exercises-java1/dice-games/dice-game-08",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java1/dice-games/dice-game-09",
+              "path": "/java-docs/exam-exercises/exam-exercises-java1/dice-games/dice-game-09",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java1/dice-games/dice-game-10",
+              "path": "/java-docs/exam-exercises/exam-exercises-java1/dice-games/dice-game-10",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java1/dice-games/dice-game-11",
+              "path": "/java-docs/exam-exercises/exam-exercises-java1/dice-games/dice-game-11",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java1/dice-games/dice-game-12",
+              "path": "/java-docs/exam-exercises/exam-exercises-java1/dice-games/dice-game-12",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java1/dice-games/dice-game-13",
+              "path": "/java-docs/exam-exercises/exam-exercises-java1/dice-games/dice-game-13",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java1/dice-games/dice-game-14",
+              "path": "/java-docs/exam-exercises/exam-exercises-java1/dice-games/dice-game-14",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java1/dice-games/dice-game-15",
+              "path": "/java-docs/exam-exercises/exam-exercises-java1/dice-games/dice-game-15",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java1/dice-games/dice-game-16",
+              "path": "/java-docs/exam-exercises/exam-exercises-java1/dice-games/dice-game-16",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java1/dice-games/dice-game-17",
+              "path": "/java-docs/exam-exercises/exam-exercises-java1/dice-games/dice-game-17",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java1/dice-games/dice-games",
+              "path": "/java-docs/exam-exercises/exam-exercises-java1/dice-games/",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java1/exam-exercises-java1",
+              "path": "/java-docs/exam-exercises/exam-exercises-java1/",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java2/class-diagrams/class-diagrams",
+              "path": "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java2/class-diagrams/corner-shop",
+              "path": "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/corner-shop",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java2/class-diagrams/dictionary",
+              "path": "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/dictionary",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java2/class-diagrams/fantasy-game",
+              "path": "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/fantasy-game",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java2/class-diagrams/human-resources",
+              "path": "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/human-resources",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java2/class-diagrams/job-offer",
+              "path": "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/job-offer",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java2/class-diagrams/lego-brick",
+              "path": "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/lego-brick",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java2/class-diagrams/library",
+              "path": "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/library",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java2/class-diagrams/player",
+              "path": "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/player",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java2/class-diagrams/roboter-factory",
+              "path": "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/roboter-factory",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java2/class-diagrams/shop",
+              "path": "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/shop",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java2/class-diagrams/shopping-portal",
+              "path": "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/shopping-portal",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java2/class-diagrams/space-station",
+              "path": "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/space-station",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java2/class-diagrams/team",
+              "path": "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/team",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java2/class-diagrams/video-collection",
+              "path": "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/video-collection",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java2/exam-exercises-java2",
+              "path": "/java-docs/exam-exercises/exam-exercises-java2/",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java2/queries/characters",
+              "path": "/java-docs/exam-exercises/exam-exercises-java2/queries/characters",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java2/queries/cities",
+              "path": "/java-docs/exam-exercises/exam-exercises-java2/queries/cities",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java2/queries/measurement-data",
+              "path": "/java-docs/exam-exercises/exam-exercises-java2/queries/measurement-data",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java2/queries/phone-store",
+              "path": "/java-docs/exam-exercises/exam-exercises-java2/queries/phone-store",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java2/queries/planets",
+              "path": "/java-docs/exam-exercises/exam-exercises-java2/queries/planets",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java2/queries/queries",
+              "path": "/java-docs/exam-exercises/exam-exercises-java2/queries/",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java2/queries/tanks",
+              "path": "/java-docs/exam-exercises/exam-exercises-java2/queries/tanks",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exam-exercises/exam-exercises-java2/queries/terminators",
+              "path": "/java-docs/exam-exercises/exam-exercises-java2/queries/terminators",
+              "sidebar": "examExercisesSidebar"
+            },
+            {
+              "id": "exercises/abstract-and-final/abstract-and-final",
+              "path": "/java-docs/exercises/abstract-and-final/",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/abstract-and-final/abstract-and-final01",
+              "path": "/java-docs/exercises/abstract-and-final/abstract-and-final01",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/activity-diagrams/activity-diagrams",
+              "path": "/java-docs/exercises/activity-diagrams/",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/activity-diagrams/activity-diagrams01",
+              "path": "/java-docs/exercises/activity-diagrams/activity-diagrams01",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/algorithms/algorithms",
+              "path": "/java-docs/exercises/algorithms/",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/algorithms/algorithms01",
+              "path": "/java-docs/exercises/algorithms/algorithms01",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/algorithms/algorithms02",
+              "path": "/java-docs/exercises/algorithms/algorithms02",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/arrays/arrays",
+              "path": "/java-docs/exercises/arrays/",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/arrays/arrays01",
+              "path": "/java-docs/exercises/arrays/arrays01",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/arrays/arrays02",
+              "path": "/java-docs/exercises/arrays/arrays02",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/arrays/arrays03",
+              "path": "/java-docs/exercises/arrays/arrays03",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/arrays/arrays04",
+              "path": "/java-docs/exercises/arrays/arrays04",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/arrays/arrays05",
+              "path": "/java-docs/exercises/arrays/arrays05",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/arrays/arrays06",
+              "path": "/java-docs/exercises/arrays/arrays06",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/arrays/arrays07",
+              "path": "/java-docs/exercises/arrays/arrays07",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/arrays/arrays08",
+              "path": "/java-docs/exercises/arrays/arrays08",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/binary-numbers/binary-numbers",
+              "path": "/java-docs/exercises/binary-numbers/",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/binary-numbers/binary-numbers01",
+              "path": "/java-docs/exercises/binary-numbers/binary-numbers01",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/binary-numbers/binary-numbers02",
+              "path": "/java-docs/exercises/binary-numbers/binary-numbers02",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/binary-numbers/binary-numbers03",
+              "path": "/java-docs/exercises/binary-numbers/binary-numbers03",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/cases/cases",
+              "path": "/java-docs/exercises/cases/",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/cases/cases01",
+              "path": "/java-docs/exercises/cases/cases01",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/cases/cases02",
+              "path": "/java-docs/exercises/cases/cases02",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/cases/cases03",
+              "path": "/java-docs/exercises/cases/cases03",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/cases/cases04",
+              "path": "/java-docs/exercises/cases/cases04",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/cases/cases05",
+              "path": "/java-docs/exercises/cases/cases05",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/cases/cases06",
+              "path": "/java-docs/exercises/cases/cases06",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/class-diagrams/class-diagrams",
+              "path": "/java-docs/exercises/class-diagrams/",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/class-diagrams/class-diagrams01",
+              "path": "/java-docs/exercises/class-diagrams/class-diagrams01",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/class-diagrams/class-diagrams02",
+              "path": "/java-docs/exercises/class-diagrams/class-diagrams02",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/class-diagrams/class-diagrams03",
+              "path": "/java-docs/exercises/class-diagrams/class-diagrams03",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/class-diagrams/class-diagrams04",
+              "path": "/java-docs/exercises/class-diagrams/class-diagrams04",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/class-diagrams/class-diagrams05",
+              "path": "/java-docs/exercises/class-diagrams/class-diagrams05",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/class-structure/class-structure",
+              "path": "/java-docs/exercises/class-structure/",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/class-structure/class-structure01",
+              "path": "/java-docs/exercises/class-structure/class-structure01",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/coding/coding",
+              "path": "/java-docs/exercises/coding/",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/comparators/comparators",
+              "path": "/java-docs/exercises/comparators/",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/comparators/comparators01",
+              "path": "/java-docs/exercises/comparators/comparators01",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/comparators/comparators02",
+              "path": "/java-docs/exercises/comparators/comparators02",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/console-applications/console-applications",
+              "path": "/java-docs/exercises/console-applications/",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/console-applications/console-applications01",
+              "path": "/java-docs/exercises/console-applications/console-applications01",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/console-applications/console-applications02",
+              "path": "/java-docs/exercises/console-applications/console-applications02",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/console-applications/console-applications03",
+              "path": "/java-docs/exercises/console-applications/console-applications03",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/data-objects/data-objects",
+              "path": "/java-docs/exercises/data-objects/",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/data-objects/data-objects01",
+              "path": "/java-docs/exercises/data-objects/data-objects01",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/data-objects/data-objects02",
+              "path": "/java-docs/exercises/data-objects/data-objects02",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/data-objects/data-objects03",
+              "path": "/java-docs/exercises/data-objects/data-objects03",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/enumerations/enumerations",
+              "path": "/java-docs/exercises/enumerations/",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/enumerations/enumerations01",
+              "path": "/java-docs/exercises/enumerations/enumerations01",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/exceptions/exceptions",
+              "path": "/java-docs/exercises/exceptions/",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/exceptions/exceptions01",
+              "path": "/java-docs/exercises/exceptions/exceptions01",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/exceptions/exceptions02",
+              "path": "/java-docs/exercises/exceptions/exceptions02",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/exceptions/exceptions03",
+              "path": "/java-docs/exercises/exceptions/exceptions03",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/generics/generics",
+              "path": "/java-docs/exercises/generics/",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/generics/generics01",
+              "path": "/java-docs/exercises/generics/generics01",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/generics/generics02",
+              "path": "/java-docs/exercises/generics/generics02",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/generics/generics03",
+              "path": "/java-docs/exercises/generics/generics03",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/generics/generics04",
+              "path": "/java-docs/exercises/generics/generics04",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/hashing/hashing",
+              "path": "/java-docs/exercises/hashing/",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/hashing/hashing01",
+              "path": "/java-docs/exercises/hashing/hashing01",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/hashing/hashing02",
+              "path": "/java-docs/exercises/hashing/hashing02",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/inner-classes/inner-classes",
+              "path": "/java-docs/exercises/inner-classes/",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/inner-classes/inner-classes01",
+              "path": "/java-docs/exercises/inner-classes/inner-classes01",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/inner-classes/inner-classes02",
+              "path": "/java-docs/exercises/inner-classes/inner-classes02",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/inner-classes/inner-classes03",
+              "path": "/java-docs/exercises/inner-classes/inner-classes03",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/inner-classes/inner-classes04",
+              "path": "/java-docs/exercises/inner-classes/inner-classes04",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/interfaces/interfaces",
+              "path": "/java-docs/exercises/interfaces/",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/interfaces/interfaces01",
+              "path": "/java-docs/exercises/interfaces/interfaces01",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/io-streams/io-streams",
+              "path": "/java-docs/exercises/io-streams/",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/io-streams/io-streams01",
+              "path": "/java-docs/exercises/io-streams/io-streams01",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/io-streams/io-streams02",
+              "path": "/java-docs/exercises/io-streams/io-streams02",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/java-api/java-api",
+              "path": "/java-docs/exercises/java-api/",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/java-api/java-api01",
+              "path": "/java-docs/exercises/java-api/java-api01",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/java-api/java-api02",
+              "path": "/java-docs/exercises/java-api/java-api02",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/java-api/java-api03",
+              "path": "/java-docs/exercises/java-api/java-api03",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/java-api/java-api04",
+              "path": "/java-docs/exercises/java-api/java-api04",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/java-stream-api/java-stream-api",
+              "path": "/java-docs/exercises/java-stream-api/",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/java-stream-api/java-stream-api01",
+              "path": "/java-docs/exercises/java-stream-api/java-stream-api01",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/java-stream-api/java-stream-api02",
+              "path": "/java-docs/exercises/java-stream-api/java-stream-api02",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/javafx/javafx",
+              "path": "/java-docs/exercises/javafx/",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/javafx/javafx01",
+              "path": "/java-docs/exercises/javafx/javafx01",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/javafx/javafx02",
+              "path": "/java-docs/exercises/javafx/javafx02",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/javafx/javafx03",
+              "path": "/java-docs/exercises/javafx/javafx03",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/javafx/javafx04",
+              "path": "/java-docs/exercises/javafx/javafx04",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/javafx/javafx05",
+              "path": "/java-docs/exercises/javafx/javafx05",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/javafx/javafx06",
+              "path": "/java-docs/exercises/javafx/javafx06",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/javafx/javafx07",
+              "path": "/java-docs/exercises/javafx/javafx07",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/javafx/javafx08",
+              "path": "/java-docs/exercises/javafx/javafx08",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/lambdas/lambdas",
+              "path": "/java-docs/exercises/lambdas/",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/lambdas/lambdas01",
+              "path": "/java-docs/exercises/lambdas/lambdas01",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/lambdas/lambdas02",
+              "path": "/java-docs/exercises/lambdas/lambdas02",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/lambdas/lambdas03",
+              "path": "/java-docs/exercises/lambdas/lambdas03",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/lambdas/lambdas04",
+              "path": "/java-docs/exercises/lambdas/lambdas04",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/lambdas/lambdas05",
+              "path": "/java-docs/exercises/lambdas/lambdas05",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/loops/loops",
+              "path": "/java-docs/exercises/loops/",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/loops/loops01",
+              "path": "/java-docs/exercises/loops/loops01",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/loops/loops02",
+              "path": "/java-docs/exercises/loops/loops02",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/loops/loops03",
+              "path": "/java-docs/exercises/loops/loops03",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/loops/loops04",
+              "path": "/java-docs/exercises/loops/loops04",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/loops/loops05",
+              "path": "/java-docs/exercises/loops/loops05",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/loops/loops06",
+              "path": "/java-docs/exercises/loops/loops06",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/loops/loops07",
+              "path": "/java-docs/exercises/loops/loops07",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/loops/loops08",
+              "path": "/java-docs/exercises/loops/loops08",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/maps/maps",
+              "path": "/java-docs/exercises/maps/",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/maps/maps01",
+              "path": "/java-docs/exercises/maps/maps01",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/maps/maps02",
+              "path": "/java-docs/exercises/maps/maps02",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/oo/oo",
+              "path": "/java-docs/exercises/oo/",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/oo/oo01",
+              "path": "/java-docs/exercises/oo/oo01",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/oo/oo02",
+              "path": "/java-docs/exercises/oo/oo02",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/oo/oo03",
+              "path": "/java-docs/exercises/oo/oo03",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/oo/oo04",
+              "path": "/java-docs/exercises/oo/oo04",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/oo/oo05",
+              "path": "/java-docs/exercises/oo/oo05",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/oo/oo06",
+              "path": "/java-docs/exercises/oo/oo06",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/oo/oo07",
+              "path": "/java-docs/exercises/oo/oo07",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/oo/oo08",
+              "path": "/java-docs/exercises/oo/oo08",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/operators/operators",
+              "path": "/java-docs/exercises/operators/",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/operators/operators01",
+              "path": "/java-docs/exercises/operators/operators01",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/operators/operators02",
+              "path": "/java-docs/exercises/operators/operators02",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/operators/operators03",
+              "path": "/java-docs/exercises/operators/operators03",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/optionals/optionals",
+              "path": "/java-docs/exercises/optionals/",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/optionals/optionals01",
+              "path": "/java-docs/exercises/optionals/optionals01",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/optionals/optionals02",
+              "path": "/java-docs/exercises/optionals/optionals02",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/optionals/optionals03",
+              "path": "/java-docs/exercises/optionals/optionals03",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/polymorphism/polymorphism",
+              "path": "/java-docs/exercises/polymorphism/",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/polymorphism/polymorphism01",
+              "path": "/java-docs/exercises/polymorphism/polymorphism01",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/polymorphism/polymorphism02",
+              "path": "/java-docs/exercises/polymorphism/polymorphism02",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/polymorphism/polymorphism03",
+              "path": "/java-docs/exercises/polymorphism/polymorphism03",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/polymorphism/polymorphism04",
+              "path": "/java-docs/exercises/polymorphism/polymorphism04",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/trees/trees",
+              "path": "/java-docs/exercises/trees/",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/trees/trees01",
+              "path": "/java-docs/exercises/trees/trees01",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/unit-tests/unit-tests",
+              "path": "/java-docs/exercises/unit-tests/",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/unit-tests/unit-tests01",
+              "path": "/java-docs/exercises/unit-tests/unit-tests01",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/unit-tests/unit-tests02",
+              "path": "/java-docs/exercises/unit-tests/unit-tests02",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/unit-tests/unit-tests03",
+              "path": "/java-docs/exercises/unit-tests/unit-tests03",
+              "sidebar": "exercisesSidebar"
+            },
+            {
+              "id": "exercises/unit-tests/unit-tests04",
+              "path": "/java-docs/exercises/unit-tests/unit-tests04",
+              "sidebar": "exercisesSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "documentationSidebar": {
+              "link": {
+                "path": "/java-docs/",
+                "label": "documentation/introduction"
+              }
+            },
+            "exercisesSidebar": {
+              "link": {
+                "path": "/java-docs/exercises/coding/",
+                "label": "Programmieren"
+              }
+            },
+            "examExercisesSidebar": {
+              "link": {
+                "path": "/java-docs/exam-exercises/exam-exercises-java1/",
+                "label": "Programmierung I"
+              }
+            },
+            "additionalMaterialSidebar": {
+              "link": {
+                "path": "/java-docs/additional-material/tools/",
+                "label": "Tools"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

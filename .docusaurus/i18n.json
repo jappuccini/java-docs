@@ -1,0 +1,20 @@
+{
+  "defaultLocale": "de",
+  "locales": [
+    "de"
+  ],
+  "path": "i18n",
+  "currentLocale": "de",
+  "localeConfigs": {
+    "de": {
+      "label": "Deutsch",
+      "direction": "ltr",
+      "htmlLang": "de",
+      "calendar": "gregory",
+      "path": "de",
+      "translate": false,
+      "url": "https://jappuccini.github.io",
+      "baseUrl": "/java-docs/"
+    }
+  }
+}

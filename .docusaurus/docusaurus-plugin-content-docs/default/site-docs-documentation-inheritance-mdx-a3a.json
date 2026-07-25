@@ -1,0 +1,44 @@
+{
+  "id": "documentation/inheritance",
+  "title": "Vererbung",
+  "description": "",
+  "source": "@site/docs/documentation/inheritance.mdx",
+  "sourceDirName": "documentation",
+  "slug": "/documentation/inheritance",
+  "permalink": "/java-docs/documentation/inheritance",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/documentation/inheritance.mdx",
+  "tags": [
+    {
+      "inline": true,
+      "label": "oo",
+      "permalink": "/java-docs/tags/oo"
+    },
+    {
+      "inline": true,
+      "label": "inhertiance",
+      "permalink": "/java-docs/tags/inhertiance"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 170,
+  "frontMatter": {
+    "title": "Vererbung",
+    "description": "",
+    "sidebar_position": 170,
+    "tags": [
+      "oo",
+      "inhertiance"
+    ]
+  },
+  "sidebar": "documentationSidebar",
+  "previous": {
+    "title": "Aktivitätsdiagramme",
+    "permalink": "/java-docs/documentation/activity-diagrams"
+  },
+  "next": {
+    "title": "(Dynamische) Polymorphie",
+    "permalink": "/java-docs/documentation/polymorphism"
+  }
+}

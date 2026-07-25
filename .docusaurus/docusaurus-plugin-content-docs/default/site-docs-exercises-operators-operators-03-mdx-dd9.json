@@ -1,0 +1,27 @@
+{
+  "id": "exercises/operators/operators03",
+  "title": "Operators03",
+  "description": "",
+  "source": "@site/docs/exercises/operators/operators03.mdx",
+  "sourceDirName": "exercises/operators",
+  "slug": "/exercises/operators/operators03",
+  "permalink": "/java-docs/exercises/operators/operators03",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/operators/operators03.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Operators03",
+    "description": ""
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "Operators02",
+    "permalink": "/java-docs/exercises/operators/operators02"
+  },
+  "next": {
+    "title": "Konsolenanwendungen",
+    "permalink": "/java-docs/exercises/console-applications/"
+  }
+}

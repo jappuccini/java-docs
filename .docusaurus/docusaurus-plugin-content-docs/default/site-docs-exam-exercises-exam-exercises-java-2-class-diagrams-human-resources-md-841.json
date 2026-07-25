@@ -1,0 +1,48 @@
+{
+  "id": "exam-exercises/exam-exercises-java2/class-diagrams/human-resources",
+  "title": "Personalverwaltung",
+  "description": "",
+  "source": "@site/docs/exam-exercises/exam-exercises-java2/class-diagrams/human-resources.md",
+  "sourceDirName": "exam-exercises/exam-exercises-java2/class-diagrams",
+  "slug": "/exam-exercises/exam-exercises-java2/class-diagrams/human-resources",
+  "permalink": "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/human-resources",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exam-exercises/exam-exercises-java2/class-diagrams/human-resources.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "exceptions",
+      "permalink": "/java-docs/tags/exceptions"
+    },
+    {
+      "inline": true,
+      "label": "records",
+      "permalink": "/java-docs/tags/records"
+    },
+    {
+      "inline": true,
+      "label": "maps",
+      "permalink": "/java-docs/tags/maps"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Personalverwaltung",
+    "description": "",
+    "tags": [
+      "exceptions",
+      "records",
+      "maps"
+    ]
+  },
+  "sidebar": "examExercisesSidebar",
+  "previous": {
+    "title": "Fantasy-Spiel",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/fantasy-game"
+  },
+  "next": {
+    "title": "Stellenangebot",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/job-offer"
+  }
+}

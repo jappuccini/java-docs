@@ -1,0 +1,44 @@
+{
+  "id": "exercises/activity-diagrams/activity-diagrams",
+  "title": "Aktivitätsdiagramme",
+  "description": "",
+  "source": "@site/docs/exercises/activity-diagrams/activity-diagrams.mdx",
+  "sourceDirName": "exercises/activity-diagrams",
+  "slug": "/exercises/activity-diagrams/",
+  "permalink": "/java-docs/exercises/activity-diagrams/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/activity-diagrams/activity-diagrams.mdx",
+  "tags": [
+    {
+      "inline": true,
+      "label": "uml",
+      "permalink": "/java-docs/tags/uml"
+    },
+    {
+      "inline": true,
+      "label": "activity-diagrams",
+      "permalink": "/java-docs/tags/activity-diagrams"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 115,
+  "frontMatter": {
+    "title": "Aktivitätsdiagramme",
+    "description": "",
+    "sidebar_position": 115,
+    "tags": [
+      "uml",
+      "activity-diagrams"
+    ]
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "ClassDiagrams05",
+    "permalink": "/java-docs/exercises/class-diagrams/class-diagrams05"
+  },
+  "next": {
+    "title": "ActivityDiagrams01",
+    "permalink": "/java-docs/exercises/activity-diagrams/activity-diagrams01"
+  }
+}

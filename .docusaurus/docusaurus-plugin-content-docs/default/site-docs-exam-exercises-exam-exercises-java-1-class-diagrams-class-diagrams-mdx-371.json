@@ -1,0 +1,29 @@
+{
+  "id": "exam-exercises/exam-exercises-java1/class-diagrams/class-diagrams",
+  "title": "Klassendiagramme",
+  "description": "",
+  "source": "@site/docs/exam-exercises/exam-exercises-java1/class-diagrams/class-diagrams.mdx",
+  "sourceDirName": "exam-exercises/exam-exercises-java1/class-diagrams",
+  "slug": "/exam-exercises/exam-exercises-java1/class-diagrams/",
+  "permalink": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exam-exercises/exam-exercises-java1/class-diagrams/class-diagrams.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "title": "Klassendiagramme",
+    "description": "",
+    "sidebar_position": 10
+  },
+  "sidebar": "examExercisesSidebar",
+  "previous": {
+    "title": "Programmierung I",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java1/"
+  },
+  "next": {
+    "title": "Kartenausteiler",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/cards-dealer"
+  }
+}

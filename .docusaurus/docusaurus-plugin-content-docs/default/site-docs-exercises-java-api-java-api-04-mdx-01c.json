@@ -1,0 +1,27 @@
+{
+  "id": "exercises/java-api/java-api04",
+  "title": "JavaAPI04",
+  "description": "",
+  "source": "@site/docs/exercises/java-api/java-api04.mdx",
+  "sourceDirName": "exercises/java-api",
+  "slug": "/exercises/java-api/java-api04",
+  "permalink": "/java-docs/exercises/java-api/java-api04",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/java-api/java-api04.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "JavaAPI04",
+    "description": ""
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "JavaAPI03",
+    "permalink": "/java-docs/exercises/java-api/java-api03"
+  },
+  "next": {
+    "title": "Aufzählungen (Enumerations)",
+    "permalink": "/java-docs/exercises/enumerations/"
+  }
+}

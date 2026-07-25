@@ -1,0 +1,38 @@
+{
+  "id": "additional-material/instructions/jdk",
+  "title": "Arbeiten mit dem JDK",
+  "description": "",
+  "source": "@site/docs/additional-material/instructions/jdk.md",
+  "sourceDirName": "additional-material/instructions",
+  "slug": "/additional-material/instructions/jdk",
+  "permalink": "/java-docs/additional-material/instructions/jdk",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/additional-material/instructions/jdk.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "jdk",
+      "permalink": "/java-docs/tags/jdk"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "title": "Arbeiten mit dem JDK",
+    "description": "",
+    "sidebar_position": 10,
+    "tags": [
+      "jdk"
+    ]
+  },
+  "sidebar": "additionalMaterialSidebar",
+  "previous": {
+    "title": "Anleitungen",
+    "permalink": "/java-docs/additional-material/instructions/"
+  },
+  "next": {
+    "title": "Arbeiten mit Binärzahlen",
+    "permalink": "/java-docs/additional-material/instructions/binary-numbers"
+  }
+}

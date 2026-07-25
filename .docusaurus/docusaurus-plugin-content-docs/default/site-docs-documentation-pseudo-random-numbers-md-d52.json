@@ -1,0 +1,44 @@
+{
+  "id": "documentation/pseudo-random-numbers",
+  "title": "Pseudozufallszahlen",
+  "description": "",
+  "source": "@site/docs/documentation/pseudo-random-numbers.md",
+  "sourceDirName": "documentation",
+  "slug": "/documentation/pseudo-random-numbers",
+  "permalink": "/java-docs/documentation/pseudo-random-numbers",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/documentation/pseudo-random-numbers.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "java-api",
+      "permalink": "/java-docs/tags/java-api"
+    },
+    {
+      "inline": true,
+      "label": "random",
+      "permalink": "/java-docs/tags/random"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 80,
+  "frontMatter": {
+    "title": "Pseudozufallszahlen",
+    "description": "",
+    "sidebar_position": 80,
+    "tags": [
+      "java-api",
+      "random"
+    ]
+  },
+  "sidebar": "documentationSidebar",
+  "previous": {
+    "title": "Mathematische Berechnungen",
+    "permalink": "/java-docs/documentation/calculations"
+  },
+  "next": {
+    "title": "Konsolenanwendungen",
+    "permalink": "/java-docs/documentation/console-applications"
+  }
+}

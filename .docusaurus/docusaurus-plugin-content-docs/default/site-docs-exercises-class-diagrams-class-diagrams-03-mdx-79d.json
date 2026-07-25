@@ -1,0 +1,27 @@
+{
+  "id": "exercises/class-diagrams/class-diagrams03",
+  "title": "ClassDiagrams03",
+  "description": "",
+  "source": "@site/docs/exercises/class-diagrams/class-diagrams03.mdx",
+  "sourceDirName": "exercises/class-diagrams",
+  "slug": "/exercises/class-diagrams/class-diagrams03",
+  "permalink": "/java-docs/exercises/class-diagrams/class-diagrams03",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/class-diagrams/class-diagrams03.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "ClassDiagrams03",
+    "description": ""
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "ClassDiagrams02",
+    "permalink": "/java-docs/exercises/class-diagrams/class-diagrams02"
+  },
+  "next": {
+    "title": "ClassDiagrams04",
+    "permalink": "/java-docs/exercises/class-diagrams/class-diagrams04"
+  }
+}

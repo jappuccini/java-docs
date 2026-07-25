@@ -1,0 +1,44 @@
+{
+  "id": "documentation/abstract-and-final",
+  "title": "Abstrakte und finale Klassen und Methoden",
+  "description": "",
+  "source": "@site/docs/documentation/abstract-and-final.mdx",
+  "sourceDirName": "documentation",
+  "slug": "/documentation/abstract-and-final",
+  "permalink": "/java-docs/documentation/abstract-and-final",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/documentation/abstract-and-final.mdx",
+  "tags": [
+    {
+      "inline": true,
+      "label": "abstract",
+      "permalink": "/java-docs/tags/abstract"
+    },
+    {
+      "inline": true,
+      "label": "final",
+      "permalink": "/java-docs/tags/final"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 200,
+  "frontMatter": {
+    "title": "Abstrakte und finale Klassen und Methoden",
+    "description": "",
+    "sidebar_position": 200,
+    "tags": [
+      "abstract",
+      "final"
+    ]
+  },
+  "sidebar": "documentationSidebar",
+  "previous": {
+    "title": "Die Mutter aller Klassen",
+    "permalink": "/java-docs/documentation/object"
+  },
+  "next": {
+    "title": "Schnittstellen (Interfaces)",
+    "permalink": "/java-docs/documentation/interfaces"
+  }
+}

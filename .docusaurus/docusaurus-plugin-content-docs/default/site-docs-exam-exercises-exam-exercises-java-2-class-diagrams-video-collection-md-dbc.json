@@ -1,0 +1,66 @@
+{
+  "id": "exam-exercises/exam-exercises-java2/class-diagrams/video-collection",
+  "title": "Videosammlung",
+  "description": "",
+  "source": "@site/docs/exam-exercises/exam-exercises-java2/class-diagrams/video-collection.md",
+  "sourceDirName": "exam-exercises/exam-exercises-java2/class-diagrams",
+  "slug": "/exam-exercises/exam-exercises-java2/class-diagrams/video-collection",
+  "permalink": "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/video-collection",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exam-exercises/exam-exercises-java2/class-diagrams/video-collection.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "inheritance",
+      "permalink": "/java-docs/tags/inheritance"
+    },
+    {
+      "inline": true,
+      "label": "polymorphism",
+      "permalink": "/java-docs/tags/polymorphism"
+    },
+    {
+      "inline": true,
+      "label": "exceptions",
+      "permalink": "/java-docs/tags/exceptions"
+    },
+    {
+      "inline": true,
+      "label": "records",
+      "permalink": "/java-docs/tags/records"
+    },
+    {
+      "inline": true,
+      "label": "optionals",
+      "permalink": "/java-docs/tags/optionals"
+    },
+    {
+      "inline": true,
+      "label": "io-streams",
+      "permalink": "/java-docs/tags/io-streams"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Videosammlung",
+    "description": "",
+    "tags": [
+      "inheritance",
+      "polymorphism",
+      "exceptions",
+      "records",
+      "optionals",
+      "io-streams"
+    ]
+  },
+  "sidebar": "examExercisesSidebar",
+  "previous": {
+    "title": "Team",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/team"
+  },
+  "next": {
+    "title": "Abfragen",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java2/queries/"
+  }
+}

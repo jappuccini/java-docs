@@ -1,0 +1,27 @@
+{
+  "id": "exercises/io-streams/io-streams01",
+  "title": "IOStreams01",
+  "description": "",
+  "source": "@site/docs/exercises/io-streams/io-streams01.md",
+  "sourceDirName": "exercises/io-streams",
+  "slug": "/exercises/io-streams/io-streams01",
+  "permalink": "/java-docs/exercises/io-streams/io-streams01",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/io-streams/io-streams01.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "IOStreams01",
+    "description": ""
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "Datenströme (IO-Streams)",
+    "permalink": "/java-docs/exercises/io-streams/"
+  },
+  "next": {
+    "title": "IOStreams02",
+    "permalink": "/java-docs/exercises/io-streams/io-streams02"
+  }
+}

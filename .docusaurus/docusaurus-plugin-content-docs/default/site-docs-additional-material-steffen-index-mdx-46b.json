@@ -1,0 +1,30 @@
+{
+  "id": "additional-material/steffen/index",
+  "title": "Steffen",
+  "description": "",
+  "source": "@site/docs/additional-material/steffen/index.mdx",
+  "sourceDirName": "additional-material/steffen",
+  "slug": "/additional-material/steffen/",
+  "permalink": "/java-docs/additional-material/steffen/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/additional-material/steffen/index.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 30,
+  "frontMatter": {
+    "title": "Steffen",
+    "description": "",
+    "sidebar_position": 30,
+    "tags": []
+  },
+  "sidebar": "additionalMaterialSidebar",
+  "previous": {
+    "title": "Debuggen mit Eclipse",
+    "permalink": "/java-docs/additional-material/instructions/debugging"
+  },
+  "next": {
+    "title": "Java 1",
+    "permalink": "/java-docs/additional-material/steffen/java-1/"
+  }
+}

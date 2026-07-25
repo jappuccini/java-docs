@@ -1,0 +1,38 @@
+{
+  "id": "documentation/records",
+  "title": "Datenklassen (Records)",
+  "description": "",
+  "source": "@site/docs/documentation/records.md",
+  "sourceDirName": "documentation",
+  "slug": "/documentation/records",
+  "permalink": "/java-docs/documentation/records",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/documentation/records.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "records",
+      "permalink": "/java-docs/tags/records"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 250,
+  "frontMatter": {
+    "title": "Datenklassen (Records)",
+    "description": "",
+    "sidebar_position": 250,
+    "tags": [
+      "records"
+    ]
+  },
+  "sidebar": "documentationSidebar",
+  "previous": {
+    "title": "Ausnahmen (Exceptions)",
+    "permalink": "/java-docs/documentation/exceptions"
+  },
+  "next": {
+    "title": "Lombok",
+    "permalink": "/java-docs/documentation/lombok"
+  }
+}

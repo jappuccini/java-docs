@@ -1,0 +1,27 @@
+{
+  "id": "exercises/arrays/arrays03",
+  "title": "Arrays03",
+  "description": "",
+  "source": "@site/docs/exercises/arrays/arrays03.mdx",
+  "sourceDirName": "exercises/arrays",
+  "slug": "/exercises/arrays/arrays03",
+  "permalink": "/java-docs/exercises/arrays/arrays03",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/arrays/arrays03.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Arrays03",
+    "description": ""
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "Arrays02",
+    "permalink": "/java-docs/exercises/arrays/arrays02"
+  },
+  "next": {
+    "title": "Arrays04",
+    "permalink": "/java-docs/exercises/arrays/arrays04"
+  }
+}

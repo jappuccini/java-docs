@@ -1,0 +1,54 @@
+{
+  "id": "exam-exercises/exam-exercises-java1/class-diagrams/fast-food",
+  "title": "Fast Food",
+  "description": "",
+  "source": "@site/docs/exam-exercises/exam-exercises-java1/class-diagrams/fast-food.md",
+  "sourceDirName": "exam-exercises/exam-exercises-java1/class-diagrams",
+  "slug": "/exam-exercises/exam-exercises-java1/class-diagrams/fast-food",
+  "permalink": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/fast-food",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exam-exercises/exam-exercises-java1/class-diagrams/fast-food.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "oo",
+      "permalink": "/java-docs/tags/oo"
+    },
+    {
+      "inline": true,
+      "label": "enumerations",
+      "permalink": "/java-docs/tags/enumerations"
+    },
+    {
+      "inline": true,
+      "label": "inheritance",
+      "permalink": "/java-docs/tags/inheritance"
+    },
+    {
+      "inline": true,
+      "label": "polymorphism",
+      "permalink": "/java-docs/tags/polymorphism"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Fast Food",
+    "description": "",
+    "tags": [
+      "oo",
+      "enumerations",
+      "inheritance",
+      "polymorphism"
+    ]
+  },
+  "sidebar": "examExercisesSidebar",
+  "previous": {
+    "title": "Osterkorb",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/easter-basket"
+  },
+  "next": {
+    "title": "Geschenkesack",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/gift-bag"
+  }
+}

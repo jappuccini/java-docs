@@ -1,0 +1,36 @@
+{
+  "id": "exercises/oo/oo08",
+  "title": "OO08",
+  "description": "",
+  "source": "@site/docs/exercises/oo/oo08.mdx",
+  "sourceDirName": "exercises/oo",
+  "slug": "/exercises/oo/oo08",
+  "permalink": "/java-docs/exercises/oo/oo08",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/oo/oo08.mdx",
+  "tags": [
+    {
+      "inline": true,
+      "label": "killteam",
+      "permalink": "/java-docs/tags/killteam"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "OO08",
+    "description": "",
+    "tags": [
+      "killteam"
+    ]
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "OO07",
+    "permalink": "/java-docs/exercises/oo/oo07"
+  },
+  "next": {
+    "title": "Die Java API",
+    "permalink": "/java-docs/exercises/java-api/"
+  }
+}

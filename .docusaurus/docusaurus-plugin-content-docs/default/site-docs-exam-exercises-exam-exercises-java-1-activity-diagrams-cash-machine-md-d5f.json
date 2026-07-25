@@ -1,0 +1,36 @@
+{
+  "id": "exam-exercises/exam-exercises-java1/activity-diagrams/cash-machine",
+  "title": "Geldautomat",
+  "description": "",
+  "source": "@site/docs/exam-exercises/exam-exercises-java1/activity-diagrams/cash-machine.md",
+  "sourceDirName": "exam-exercises/exam-exercises-java1/activity-diagrams",
+  "slug": "/exam-exercises/exam-exercises-java1/activity-diagrams/cash-machine",
+  "permalink": "/java-docs/exam-exercises/exam-exercises-java1/activity-diagrams/cash-machine",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exam-exercises/exam-exercises-java1/activity-diagrams/cash-machine.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "activity-diagrams",
+      "permalink": "/java-docs/tags/activity-diagrams"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Geldautomat",
+    "description": "",
+    "tags": [
+      "activity-diagrams"
+    ]
+  },
+  "sidebar": "examExercisesSidebar",
+  "previous": {
+    "title": "Aktivitätsdiagramme",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java1/activity-diagrams/"
+  },
+  "next": {
+    "title": "Rabattrechner",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java1/activity-diagrams/discount-calculator"
+  }
+}

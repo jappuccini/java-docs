@@ -1,0 +1,72 @@
+{
+  "id": "exam-exercises/exam-exercises-java2/class-diagrams/corner-shop",
+  "title": "Tante-Emma-Laden",
+  "description": "",
+  "source": "@site/docs/exam-exercises/exam-exercises-java2/class-diagrams/corner-shop.md",
+  "sourceDirName": "exam-exercises/exam-exercises-java2/class-diagrams",
+  "slug": "/exam-exercises/exam-exercises-java2/class-diagrams/corner-shop",
+  "permalink": "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/corner-shop",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exam-exercises/exam-exercises-java2/class-diagrams/corner-shop.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "inheritance",
+      "permalink": "/java-docs/tags/inheritance"
+    },
+    {
+      "inline": true,
+      "label": "polymorphism",
+      "permalink": "/java-docs/tags/polymorphism"
+    },
+    {
+      "inline": true,
+      "label": "interfaces",
+      "permalink": "/java-docs/tags/interfaces"
+    },
+    {
+      "inline": true,
+      "label": "comparators",
+      "permalink": "/java-docs/tags/comparators"
+    },
+    {
+      "inline": true,
+      "label": "exceptions",
+      "permalink": "/java-docs/tags/exceptions"
+    },
+    {
+      "inline": true,
+      "label": "records",
+      "permalink": "/java-docs/tags/records"
+    },
+    {
+      "inline": true,
+      "label": "maps",
+      "permalink": "/java-docs/tags/maps"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Tante-Emma-Laden",
+    "description": "",
+    "tags": [
+      "inheritance",
+      "polymorphism",
+      "interfaces",
+      "comparators",
+      "exceptions",
+      "records",
+      "maps"
+    ]
+  },
+  "sidebar": "examExercisesSidebar",
+  "previous": {
+    "title": "Klassendiagramme",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/"
+  },
+  "next": {
+    "title": "Wörterbuch",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/dictionary"
+  }
+}

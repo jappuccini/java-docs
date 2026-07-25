@@ -1,0 +1,27 @@
+{
+  "id": "exercises/java-api/java-api01",
+  "title": "JavaAPI01",
+  "description": "",
+  "source": "@site/docs/exercises/java-api/java-api01.mdx",
+  "sourceDirName": "exercises/java-api",
+  "slug": "/exercises/java-api/java-api01",
+  "permalink": "/java-docs/exercises/java-api/java-api01",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/java-api/java-api01.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "JavaAPI01",
+    "description": ""
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "Die Java API",
+    "permalink": "/java-docs/exercises/java-api/"
+  },
+  "next": {
+    "title": "JavaAPI02",
+    "permalink": "/java-docs/exercises/java-api/java-api02"
+  }
+}

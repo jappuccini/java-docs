@@ -1,0 +1,60 @@
+{
+  "id": "exam-exercises/exam-exercises-java2/class-diagrams/job-offer",
+  "title": "Stellenangebot",
+  "description": "",
+  "source": "@site/docs/exam-exercises/exam-exercises-java2/class-diagrams/job-offer.md",
+  "sourceDirName": "exam-exercises/exam-exercises-java2/class-diagrams",
+  "slug": "/exam-exercises/exam-exercises-java2/class-diagrams/job-offer",
+  "permalink": "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/job-offer",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exam-exercises/exam-exercises-java2/class-diagrams/job-offer.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "inheritance",
+      "permalink": "/java-docs/tags/inheritance"
+    },
+    {
+      "inline": true,
+      "label": "polymorphism",
+      "permalink": "/java-docs/tags/polymorphism"
+    },
+    {
+      "inline": true,
+      "label": "exceptions",
+      "permalink": "/java-docs/tags/exceptions"
+    },
+    {
+      "inline": true,
+      "label": "records",
+      "permalink": "/java-docs/tags/records"
+    },
+    {
+      "inline": true,
+      "label": "io-streams",
+      "permalink": "/java-docs/tags/io-streams"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Stellenangebot",
+    "description": "",
+    "tags": [
+      "inheritance",
+      "polymorphism",
+      "exceptions",
+      "records",
+      "io-streams"
+    ]
+  },
+  "sidebar": "examExercisesSidebar",
+  "previous": {
+    "title": "Personalverwaltung",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/human-resources"
+  },
+  "next": {
+    "title": "Lego-Baustein",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/lego-brick"
+  }
+}

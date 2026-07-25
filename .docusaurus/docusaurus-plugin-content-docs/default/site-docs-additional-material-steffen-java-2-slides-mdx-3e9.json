@@ -1,0 +1,30 @@
+{
+  "id": "additional-material/steffen/java-2/slides",
+  "title": "Folien",
+  "description": "",
+  "source": "@site/docs/additional-material/steffen/java-2/slides.mdx",
+  "sourceDirName": "additional-material/steffen/java-2",
+  "slug": "/additional-material/steffen/java-2/slides",
+  "permalink": "/java-docs/additional-material/steffen/java-2/slides",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/additional-material/steffen/java-2/slides.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "title": "Folien",
+    "description": "",
+    "sidebar_position": 10,
+    "tags": []
+  },
+  "sidebar": "additionalMaterialSidebar",
+  "previous": {
+    "title": "Java 2",
+    "permalink": "/java-docs/additional-material/steffen/java-2/"
+  },
+  "next": {
+    "title": "Klausurvorbereitung",
+    "permalink": "/java-docs/additional-material/steffen/java-2/exam-preparation/"
+  }
+}

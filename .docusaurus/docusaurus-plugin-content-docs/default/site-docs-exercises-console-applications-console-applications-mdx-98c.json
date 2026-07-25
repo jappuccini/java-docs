@@ -1,0 +1,38 @@
+{
+  "id": "exercises/console-applications/console-applications",
+  "title": "Konsolenanwendungen",
+  "description": "",
+  "source": "@site/docs/exercises/console-applications/console-applications.mdx",
+  "sourceDirName": "exercises/console-applications",
+  "slug": "/exercises/console-applications/",
+  "permalink": "/java-docs/exercises/console-applications/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/console-applications/console-applications.mdx",
+  "tags": [
+    {
+      "inline": true,
+      "label": "console-applications",
+      "permalink": "/java-docs/tags/console-applications"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 50,
+  "frontMatter": {
+    "title": "Konsolenanwendungen",
+    "description": "",
+    "sidebar_position": 50,
+    "tags": [
+      "console-applications"
+    ]
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "Operators03",
+    "permalink": "/java-docs/exercises/operators/operators03"
+  },
+  "next": {
+    "title": "ConsoleApplications01",
+    "permalink": "/java-docs/exercises/console-applications/console-applications01"
+  }
+}

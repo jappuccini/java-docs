@@ -1,0 +1,38 @@
+{
+  "id": "documentation/oo",
+  "title": "Objektorientierte Programmierung",
+  "description": "",
+  "source": "@site/docs/documentation/oo.md",
+  "sourceDirName": "documentation",
+  "slug": "/documentation/oo",
+  "permalink": "/java-docs/documentation/oo",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/documentation/oo.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "oo",
+      "permalink": "/java-docs/tags/oo"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 130,
+  "frontMatter": {
+    "title": "Objektorientierte Programmierung",
+    "description": "",
+    "sidebar_position": 130,
+    "tags": [
+      "oo"
+    ]
+  },
+  "sidebar": "documentationSidebar",
+  "previous": {
+    "title": "Felder (Arrays)",
+    "permalink": "/java-docs/documentation/arrays"
+  },
+  "next": {
+    "title": "Klassen",
+    "permalink": "/java-docs/documentation/classes"
+  }
+}

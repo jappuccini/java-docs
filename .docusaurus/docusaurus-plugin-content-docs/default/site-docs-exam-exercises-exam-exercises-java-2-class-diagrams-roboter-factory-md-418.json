@@ -1,0 +1,72 @@
+{
+  "id": "exam-exercises/exam-exercises-java2/class-diagrams/roboter-factory",
+  "title": "Roboterfabrik",
+  "description": "",
+  "source": "@site/docs/exam-exercises/exam-exercises-java2/class-diagrams/roboter-factory.md",
+  "sourceDirName": "exam-exercises/exam-exercises-java2/class-diagrams",
+  "slug": "/exam-exercises/exam-exercises-java2/class-diagrams/roboter-factory",
+  "permalink": "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/roboter-factory",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exam-exercises/exam-exercises-java2/class-diagrams/roboter-factory.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "enumerations",
+      "permalink": "/java-docs/tags/enumerations"
+    },
+    {
+      "inline": true,
+      "label": "inheritance",
+      "permalink": "/java-docs/tags/inheritance"
+    },
+    {
+      "inline": true,
+      "label": "comparators",
+      "permalink": "/java-docs/tags/comparators"
+    },
+    {
+      "inline": true,
+      "label": "records",
+      "permalink": "/java-docs/tags/records"
+    },
+    {
+      "inline": true,
+      "label": "maps",
+      "permalink": "/java-docs/tags/maps"
+    },
+    {
+      "inline": true,
+      "label": "optionals",
+      "permalink": "/java-docs/tags/optionals"
+    },
+    {
+      "inline": true,
+      "label": "dates-and-times",
+      "permalink": "/java-docs/tags/dates-and-times"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Roboterfabrik",
+    "description": "",
+    "tags": [
+      "enumerations",
+      "inheritance",
+      "comparators",
+      "records",
+      "maps",
+      "optionals",
+      "dates-and-times"
+    ]
+  },
+  "sidebar": "examExercisesSidebar",
+  "previous": {
+    "title": "Kartenspieler",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/player"
+  },
+  "next": {
+    "title": "Shop",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/shop"
+  }
+}

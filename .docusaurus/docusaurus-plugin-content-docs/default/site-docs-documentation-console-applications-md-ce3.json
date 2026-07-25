@@ -1,0 +1,38 @@
+{
+  "id": "documentation/console-applications",
+  "title": "Konsolenanwendungen",
+  "description": "",
+  "source": "@site/docs/documentation/console-applications.md",
+  "sourceDirName": "documentation",
+  "slug": "/documentation/console-applications",
+  "permalink": "/java-docs/documentation/console-applications",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/documentation/console-applications.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "console-applications",
+      "permalink": "/java-docs/tags/console-applications"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 90,
+  "frontMatter": {
+    "title": "Konsolenanwendungen",
+    "description": "",
+    "sidebar_position": 90,
+    "tags": [
+      "console-applications"
+    ]
+  },
+  "sidebar": "documentationSidebar",
+  "previous": {
+    "title": "Pseudozufallszahlen",
+    "permalink": "/java-docs/documentation/pseudo-random-numbers"
+  },
+  "next": {
+    "title": "Verzweigungen und Fallunterscheidungen",
+    "permalink": "/java-docs/documentation/cases"
+  }
+}

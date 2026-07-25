@@ -1,0 +1,44 @@
+{
+  "id": "documentation/lists",
+  "title": "Listen",
+  "description": "",
+  "source": "@site/docs/documentation/lists.mdx",
+  "sourceDirName": "documentation",
+  "slug": "/documentation/lists",
+  "permalink": "/java-docs/documentation/lists",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/documentation/lists.mdx",
+  "tags": [
+    {
+      "inline": true,
+      "label": "collections",
+      "permalink": "/java-docs/tags/collections"
+    },
+    {
+      "inline": true,
+      "label": "lists",
+      "permalink": "/java-docs/tags/lists"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 215,
+  "frontMatter": {
+    "title": "Listen",
+    "description": "",
+    "sidebar_position": 215,
+    "tags": [
+      "collections",
+      "lists"
+    ]
+  },
+  "sidebar": "documentationSidebar",
+  "previous": {
+    "title": "Schnittstellen (Interfaces)",
+    "permalink": "/java-docs/documentation/interfaces"
+  },
+  "next": {
+    "title": "Komparatoren",
+    "permalink": "/java-docs/documentation/comparators"
+  }
+}

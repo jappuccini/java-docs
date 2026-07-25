@@ -1,0 +1,27 @@
+{
+  "id": "exercises/algorithms/algorithms02",
+  "title": "Algorithms02",
+  "description": "",
+  "source": "@site/docs/exercises/algorithms/algorithms02.mdx",
+  "sourceDirName": "exercises/algorithms",
+  "slug": "/exercises/algorithms/algorithms02",
+  "permalink": "/java-docs/exercises/algorithms/algorithms02",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/algorithms/algorithms02.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Algorithms02",
+    "description": ""
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "Algorithms01",
+    "permalink": "/java-docs/exercises/algorithms/algorithms01"
+  },
+  "next": {
+    "title": "JavaFX",
+    "permalink": "/java-docs/exercises/javafx/"
+  }
+}

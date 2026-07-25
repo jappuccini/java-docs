@@ -1,0 +1,38 @@
+{
+  "id": "additional-material/tools/debugging",
+  "title": "Debugging",
+  "description": "",
+  "source": "@site/docs/additional-material/tools/debugging.mdx",
+  "sourceDirName": "additional-material/tools",
+  "slug": "/additional-material/tools/debugging",
+  "permalink": "/java-docs/additional-material/tools/debugging",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/additional-material/tools/debugging.mdx",
+  "tags": [
+    {
+      "inline": true,
+      "label": "debugging",
+      "permalink": "/java-docs/tags/debugging"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 50,
+  "frontMatter": {
+    "title": "Debugging",
+    "description": "",
+    "sidebar_position": 50,
+    "tags": [
+      "debugging"
+    ]
+  },
+  "sidebar": "additionalMaterialSidebar",
+  "previous": {
+    "title": "GenAI-Tools",
+    "permalink": "/java-docs/additional-material/tools/genai-tools"
+  },
+  "next": {
+    "title": "Anleitungen",
+    "permalink": "/java-docs/additional-material/instructions/"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "exam-exercises/exam-exercises-java1/class-diagrams/cashier-system",
+  "title": "Kassensystem",
+  "description": "",
+  "source": "@site/docs/exam-exercises/exam-exercises-java1/class-diagrams/cashier-system.md",
+  "sourceDirName": "exam-exercises/exam-exercises-java1/class-diagrams",
+  "slug": "/exam-exercises/exam-exercises-java1/class-diagrams/cashier-system",
+  "permalink": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/cashier-system",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exam-exercises/exam-exercises-java1/class-diagrams/cashier-system.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "oo",
+      "permalink": "/java-docs/tags/oo"
+    },
+    {
+      "inline": true,
+      "label": "enumerations",
+      "permalink": "/java-docs/tags/enumerations"
+    },
+    {
+      "inline": true,
+      "label": "inheritance",
+      "permalink": "/java-docs/tags/inheritance"
+    },
+    {
+      "inline": true,
+      "label": "polymorphism",
+      "permalink": "/java-docs/tags/polymorphism"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Kassensystem",
+    "description": "",
+    "tags": [
+      "oo",
+      "enumerations",
+      "inheritance",
+      "polymorphism"
+    ]
+  },
+  "sidebar": "examExercisesSidebar",
+  "previous": {
+    "title": "Kartenausteiler",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/cards-dealer"
+  },
+  "next": {
+    "title": "Weihnachtsbaum",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/christmas-tree"
+  }
+}

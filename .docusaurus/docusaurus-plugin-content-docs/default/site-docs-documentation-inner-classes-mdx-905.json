@@ -1,0 +1,38 @@
+{
+  "id": "documentation/inner-classes",
+  "title": "Innere Klassen (Inner Classes)",
+  "description": "",
+  "source": "@site/docs/documentation/inner-classes.mdx",
+  "sourceDirName": "documentation",
+  "slug": "/documentation/inner-classes",
+  "permalink": "/java-docs/documentation/inner-classes",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/documentation/inner-classes.mdx",
+  "tags": [
+    {
+      "inline": true,
+      "label": "inner-classes",
+      "permalink": "/java-docs/tags/inner-classes"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 260,
+  "frontMatter": {
+    "title": "Innere Klassen (Inner Classes)",
+    "description": "",
+    "sidebar_position": 260,
+    "tags": [
+      "inner-classes"
+    ]
+  },
+  "sidebar": "documentationSidebar",
+  "previous": {
+    "title": "Simple Logging Facade for Java (SLF4J)",
+    "permalink": "/java-docs/documentation/slf4j"
+  },
+  "next": {
+    "title": "Lambda-Ausdrücke (Lambdas)",
+    "permalink": "/java-docs/documentation/lambdas"
+  }
+}

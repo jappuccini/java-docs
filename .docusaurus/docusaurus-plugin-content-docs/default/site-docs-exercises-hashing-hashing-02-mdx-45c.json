@@ -1,0 +1,27 @@
+{
+  "id": "exercises/hashing/hashing02",
+  "title": "Hashing02",
+  "description": "",
+  "source": "@site/docs/exercises/hashing/hashing02.mdx",
+  "sourceDirName": "exercises/hashing",
+  "slug": "/exercises/hashing/hashing02",
+  "permalink": "/java-docs/exercises/hashing/hashing02",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/hashing/hashing02.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Hashing02",
+    "description": ""
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "Hashing01",
+    "permalink": "/java-docs/exercises/hashing/hashing01"
+  },
+  "next": {
+    "title": "Bäume",
+    "permalink": "/java-docs/exercises/trees/"
+  }
+}

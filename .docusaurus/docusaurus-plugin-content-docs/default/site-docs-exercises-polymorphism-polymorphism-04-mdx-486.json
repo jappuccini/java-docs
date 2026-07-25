@@ -1,0 +1,27 @@
+{
+  "id": "exercises/polymorphism/polymorphism04",
+  "title": "Polymorphism04",
+  "description": "",
+  "source": "@site/docs/exercises/polymorphism/polymorphism04.mdx",
+  "sourceDirName": "exercises/polymorphism",
+  "slug": "/exercises/polymorphism/polymorphism04",
+  "permalink": "/java-docs/exercises/polymorphism/polymorphism04",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/polymorphism/polymorphism04.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Polymorphism04",
+    "description": ""
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "Polymorphism03",
+    "permalink": "/java-docs/exercises/polymorphism/polymorphism03"
+  },
+  "next": {
+    "title": "Abstrakte und finale Klassen und Methoden",
+    "permalink": "/java-docs/exercises/abstract-and-final/"
+  }
+}

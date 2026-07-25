@@ -1,0 +1,38 @@
+{
+  "id": "additional-material/instructions/javafx",
+  "title": "Arbeiten mit JavaFX",
+  "description": "",
+  "source": "@site/docs/additional-material/instructions/javafx.md",
+  "sourceDirName": "additional-material/instructions",
+  "slug": "/additional-material/instructions/javafx",
+  "permalink": "/java-docs/additional-material/instructions/javafx",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/additional-material/instructions/javafx.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "javafx",
+      "permalink": "/java-docs/tags/javafx"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 40,
+  "frontMatter": {
+    "title": "Arbeiten mit JavaFX",
+    "description": "",
+    "sidebar_position": 40,
+    "tags": [
+      "javafx"
+    ]
+  },
+  "sidebar": "additionalMaterialSidebar",
+  "previous": {
+    "title": "Arbeiten mit Git",
+    "permalink": "/java-docs/additional-material/instructions/git"
+  },
+  "next": {
+    "title": "Debuggen mit Eclipse",
+    "permalink": "/java-docs/additional-material/instructions/debugging"
+  }
+}

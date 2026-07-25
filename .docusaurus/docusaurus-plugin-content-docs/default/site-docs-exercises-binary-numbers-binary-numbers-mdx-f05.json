@@ -1,0 +1,38 @@
+{
+  "id": "exercises/binary-numbers/binary-numbers",
+  "title": "Binärzahlen",
+  "description": "",
+  "source": "@site/docs/exercises/binary-numbers/binary-numbers.mdx",
+  "sourceDirName": "exercises/binary-numbers",
+  "slug": "/exercises/binary-numbers/",
+  "permalink": "/java-docs/exercises/binary-numbers/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/binary-numbers/binary-numbers.mdx",
+  "tags": [
+    {
+      "inline": true,
+      "label": "binary-numbers",
+      "permalink": "/java-docs/tags/binary-numbers"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 25,
+  "frontMatter": {
+    "title": "Binärzahlen",
+    "description": "",
+    "sidebar_position": 25,
+    "tags": [
+      "binary-numbers"
+    ]
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "ClassStructure01",
+    "permalink": "/java-docs/exercises/class-structure/class-structure01"
+  },
+  "next": {
+    "title": "BinaryNumbers01",
+    "permalink": "/java-docs/exercises/binary-numbers/binary-numbers01"
+  }
+}

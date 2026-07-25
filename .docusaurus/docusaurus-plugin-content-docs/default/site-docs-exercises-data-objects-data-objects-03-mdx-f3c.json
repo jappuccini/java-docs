@@ -1,0 +1,36 @@
+{
+  "id": "exercises/data-objects/data-objects03",
+  "title": "DataObjects03",
+  "description": "",
+  "source": "@site/docs/exercises/data-objects/data-objects03.mdx",
+  "sourceDirName": "exercises/data-objects",
+  "slug": "/exercises/data-objects/data-objects03",
+  "permalink": "/java-docs/exercises/data-objects/data-objects03",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/data-objects/data-objects03.mdx",
+  "tags": [
+    {
+      "inline": true,
+      "label": "killteam",
+      "permalink": "/java-docs/tags/killteam"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "DataObjects03",
+    "description": "",
+    "tags": [
+      "killteam"
+    ]
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "DataObjects02",
+    "permalink": "/java-docs/exercises/data-objects/data-objects02"
+  },
+  "next": {
+    "title": "Operatoren",
+    "permalink": "/java-docs/exercises/operators/"
+  }
+}

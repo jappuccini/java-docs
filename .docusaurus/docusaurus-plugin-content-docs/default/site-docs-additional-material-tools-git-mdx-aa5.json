@@ -1,0 +1,38 @@
+{
+  "id": "additional-material/tools/git",
+  "title": "Git",
+  "description": "",
+  "source": "@site/docs/additional-material/tools/git.mdx",
+  "sourceDirName": "additional-material/tools",
+  "slug": "/additional-material/tools/git",
+  "permalink": "/java-docs/additional-material/tools/git",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/additional-material/tools/git.mdx",
+  "tags": [
+    {
+      "inline": true,
+      "label": "git",
+      "permalink": "/java-docs/tags/git"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "title": "Git",
+    "description": "",
+    "sidebar_position": 10,
+    "tags": [
+      "git"
+    ]
+  },
+  "sidebar": "additionalMaterialSidebar",
+  "previous": {
+    "title": "Tools",
+    "permalink": "/java-docs/additional-material/tools/"
+  },
+  "next": {
+    "title": "Maven",
+    "permalink": "/java-docs/additional-material/tools/maven"
+  }
+}

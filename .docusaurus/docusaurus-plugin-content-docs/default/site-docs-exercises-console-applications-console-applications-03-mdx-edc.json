@@ -1,0 +1,36 @@
+{
+  "id": "exercises/console-applications/console-applications03",
+  "title": "ConsoleApplications03",
+  "description": "",
+  "source": "@site/docs/exercises/console-applications/console-applications03.mdx",
+  "sourceDirName": "exercises/console-applications",
+  "slug": "/exercises/console-applications/console-applications03",
+  "permalink": "/java-docs/exercises/console-applications/console-applications03",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/console-applications/console-applications03.mdx",
+  "tags": [
+    {
+      "inline": true,
+      "label": "killteam",
+      "permalink": "/java-docs/tags/killteam"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "ConsoleApplications03",
+    "description": "",
+    "tags": [
+      "killteam"
+    ]
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "ConsoleApplications02",
+    "permalink": "/java-docs/exercises/console-applications/console-applications02"
+  },
+  "next": {
+    "title": "Verzweigungen",
+    "permalink": "/java-docs/exercises/cases/"
+  }
+}

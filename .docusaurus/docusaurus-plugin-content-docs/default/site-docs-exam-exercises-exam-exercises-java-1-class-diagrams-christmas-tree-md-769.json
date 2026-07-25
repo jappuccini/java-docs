@@ -1,0 +1,48 @@
+{
+  "id": "exam-exercises/exam-exercises-java1/class-diagrams/christmas-tree",
+  "title": "Weihnachtsbaum",
+  "description": "",
+  "source": "@site/docs/exam-exercises/exam-exercises-java1/class-diagrams/christmas-tree.md",
+  "sourceDirName": "exam-exercises/exam-exercises-java1/class-diagrams",
+  "slug": "/exam-exercises/exam-exercises-java1/class-diagrams/christmas-tree",
+  "permalink": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/christmas-tree",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exam-exercises/exam-exercises-java1/class-diagrams/christmas-tree.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "oo",
+      "permalink": "/java-docs/tags/oo"
+    },
+    {
+      "inline": true,
+      "label": "inheritance",
+      "permalink": "/java-docs/tags/inheritance"
+    },
+    {
+      "inline": true,
+      "label": "polymorphism",
+      "permalink": "/java-docs/tags/polymorphism"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Weihnachtsbaum",
+    "description": "",
+    "tags": [
+      "oo",
+      "inheritance",
+      "polymorphism"
+    ]
+  },
+  "sidebar": "examExercisesSidebar",
+  "previous": {
+    "title": "Kassensystem",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/cashier-system"
+  },
+  "next": {
+    "title": "Plätzchendose",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/cookie-jar"
+  }
+}

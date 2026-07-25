@@ -1,0 +1,72 @@
+{
+  "id": "exam-exercises/exam-exercises-java2/class-diagrams/dictionary",
+  "title": "Wörterbuch",
+  "description": "",
+  "source": "@site/docs/exam-exercises/exam-exercises-java2/class-diagrams/dictionary.md",
+  "sourceDirName": "exam-exercises/exam-exercises-java2/class-diagrams",
+  "slug": "/exam-exercises/exam-exercises-java2/class-diagrams/dictionary",
+  "permalink": "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/dictionary",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exam-exercises/exam-exercises-java2/class-diagrams/dictionary.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "interfaces",
+      "permalink": "/java-docs/tags/interfaces"
+    },
+    {
+      "inline": true,
+      "label": "comparators",
+      "permalink": "/java-docs/tags/comparators"
+    },
+    {
+      "inline": true,
+      "label": "exceptions",
+      "permalink": "/java-docs/tags/exceptions"
+    },
+    {
+      "inline": true,
+      "label": "records",
+      "permalink": "/java-docs/tags/records"
+    },
+    {
+      "inline": true,
+      "label": "maps",
+      "permalink": "/java-docs/tags/maps"
+    },
+    {
+      "inline": true,
+      "label": "optionals",
+      "permalink": "/java-docs/tags/optionals"
+    },
+    {
+      "inline": true,
+      "label": "io-streams",
+      "permalink": "/java-docs/tags/io-streams"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Wörterbuch",
+    "description": "",
+    "tags": [
+      "interfaces",
+      "comparators",
+      "exceptions",
+      "records",
+      "maps",
+      "optionals",
+      "io-streams"
+    ]
+  },
+  "sidebar": "examExercisesSidebar",
+  "previous": {
+    "title": "Tante-Emma-Laden",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/corner-shop"
+  },
+  "next": {
+    "title": "Fantasy-Spiel",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/fantasy-game"
+  }
+}

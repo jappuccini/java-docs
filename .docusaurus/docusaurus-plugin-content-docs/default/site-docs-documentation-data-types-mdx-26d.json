@@ -1,0 +1,38 @@
+{
+  "id": "documentation/data-types",
+  "title": "Datentypen",
+  "description": "",
+  "source": "@site/docs/documentation/data-types.mdx",
+  "sourceDirName": "documentation",
+  "slug": "/documentation/data-types",
+  "permalink": "/java-docs/documentation/data-types",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/documentation/data-types.mdx",
+  "tags": [
+    {
+      "inline": true,
+      "label": "data-types",
+      "permalink": "/java-docs/tags/data-types"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 30,
+  "frontMatter": {
+    "title": "Datentypen",
+    "description": "",
+    "sidebar_position": 30,
+    "tags": [
+      "data-types"
+    ]
+  },
+  "sidebar": "documentationSidebar",
+  "previous": {
+    "title": "Binärzahlen",
+    "permalink": "/java-docs/documentation/binary-numbers"
+  },
+  "next": {
+    "title": "Datenobjekte",
+    "permalink": "/java-docs/documentation/data-objects"
+  }
+}

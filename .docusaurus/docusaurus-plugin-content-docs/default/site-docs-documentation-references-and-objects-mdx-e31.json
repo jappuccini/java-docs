@@ -1,0 +1,38 @@
+{
+  "id": "documentation/references-and-objects",
+  "title": "Referenzen und Objekte",
+  "description": "",
+  "source": "@site/docs/documentation/references-and-objects.mdx",
+  "sourceDirName": "documentation",
+  "slug": "/documentation/references-and-objects",
+  "permalink": "/java-docs/documentation/references-and-objects",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/documentation/references-and-objects.mdx",
+  "tags": [
+    {
+      "inline": true,
+      "label": "oo",
+      "permalink": "/java-docs/tags/oo"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 132,
+  "frontMatter": {
+    "title": "Referenzen und Objekte",
+    "description": "",
+    "sidebar_position": 132,
+    "tags": [
+      "oo"
+    ]
+  },
+  "sidebar": "documentationSidebar",
+  "previous": {
+    "title": "Klassen",
+    "permalink": "/java-docs/documentation/classes"
+  },
+  "next": {
+    "title": "Die Java API",
+    "permalink": "/java-docs/documentation/java-api"
+  }
+}

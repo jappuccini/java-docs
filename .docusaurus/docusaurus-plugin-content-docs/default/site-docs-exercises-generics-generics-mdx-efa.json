@@ -1,0 +1,38 @@
+{
+  "id": "exercises/generics/generics",
+  "title": "Generische Programmierung",
+  "description": "",
+  "source": "@site/docs/exercises/generics/generics.mdx",
+  "sourceDirName": "exercises/generics",
+  "slug": "/exercises/generics/",
+  "permalink": "/java-docs/exercises/generics/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/generics/generics.mdx",
+  "tags": [
+    {
+      "inline": true,
+      "label": "generics",
+      "permalink": "/java-docs/tags/generics"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 180,
+  "frontMatter": {
+    "title": "Generische Programmierung",
+    "description": "",
+    "sidebar_position": 180,
+    "tags": [
+      "generics"
+    ]
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "Lambdas05",
+    "permalink": "/java-docs/exercises/lambdas/lambdas05"
+  },
+  "next": {
+    "title": "Generics01",
+    "permalink": "/java-docs/exercises/generics/generics01"
+  }
+}

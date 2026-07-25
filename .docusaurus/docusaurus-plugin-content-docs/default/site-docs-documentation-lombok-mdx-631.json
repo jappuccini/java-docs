@@ -1,0 +1,38 @@
+{
+  "id": "documentation/lombok",
+  "title": "Lombok",
+  "description": "",
+  "source": "@site/docs/documentation/lombok.mdx",
+  "sourceDirName": "documentation",
+  "slug": "/documentation/lombok",
+  "permalink": "/java-docs/documentation/lombok",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/documentation/lombok.mdx",
+  "tags": [
+    {
+      "inline": true,
+      "label": "lombok",
+      "permalink": "/java-docs/tags/lombok"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 255,
+  "frontMatter": {
+    "title": "Lombok",
+    "description": "",
+    "sidebar_position": 255,
+    "tags": [
+      "lombok"
+    ]
+  },
+  "sidebar": "documentationSidebar",
+  "previous": {
+    "title": "Datenklassen (Records)",
+    "permalink": "/java-docs/documentation/records"
+  },
+  "next": {
+    "title": "Simple Logging Facade for Java (SLF4J)",
+    "permalink": "/java-docs/documentation/slf4j"
+  }
+}

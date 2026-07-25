@@ -1,0 +1,27 @@
+{
+  "id": "exercises/lambdas/lambdas04",
+  "title": "Lambdas04",
+  "description": "",
+  "source": "@site/docs/exercises/lambdas/lambdas04.mdx",
+  "sourceDirName": "exercises/lambdas",
+  "slug": "/exercises/lambdas/lambdas04",
+  "permalink": "/java-docs/exercises/lambdas/lambdas04",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/lambdas/lambdas04.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Lambdas04",
+    "description": ""
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "Lambdas03",
+    "permalink": "/java-docs/exercises/lambdas/lambdas03"
+  },
+  "next": {
+    "title": "Lambdas05",
+    "permalink": "/java-docs/exercises/lambdas/lambdas05"
+  }
+}

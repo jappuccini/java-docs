@@ -1,0 +1,48 @@
+{
+  "id": "exam-exercises/exam-exercises-java1/class-diagrams/weather-station",
+  "title": "Wetterstation",
+  "description": "",
+  "source": "@site/docs/exam-exercises/exam-exercises-java1/class-diagrams/weather-station.md",
+  "sourceDirName": "exam-exercises/exam-exercises-java1/class-diagrams",
+  "slug": "/exam-exercises/exam-exercises-java1/class-diagrams/weather-station",
+  "permalink": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/weather-station",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exam-exercises/exam-exercises-java1/class-diagrams/weather-station.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "oo",
+      "permalink": "/java-docs/tags/oo"
+    },
+    {
+      "inline": true,
+      "label": "enumerations",
+      "permalink": "/java-docs/tags/enumerations"
+    },
+    {
+      "inline": true,
+      "label": "io-streams",
+      "permalink": "/java-docs/tags/io-streams"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Wetterstation",
+    "description": "",
+    "tags": [
+      "oo",
+      "enumerations",
+      "io-streams"
+    ]
+  },
+  "sidebar": "examExercisesSidebar",
+  "previous": {
+    "title": "Reise",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/travel"
+  },
+  "next": {
+    "title": "Zoo",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/zoo"
+  }
+}

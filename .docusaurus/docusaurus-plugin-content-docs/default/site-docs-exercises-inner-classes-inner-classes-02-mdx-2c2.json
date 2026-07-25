@@ -1,0 +1,27 @@
+{
+  "id": "exercises/inner-classes/inner-classes02",
+  "title": "InnerClasses02",
+  "description": "",
+  "source": "@site/docs/exercises/inner-classes/inner-classes02.mdx",
+  "sourceDirName": "exercises/inner-classes",
+  "slug": "/exercises/inner-classes/inner-classes02",
+  "permalink": "/java-docs/exercises/inner-classes/inner-classes02",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/inner-classes/inner-classes02.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "InnerClasses02",
+    "description": ""
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "InnerClasses01",
+    "permalink": "/java-docs/exercises/inner-classes/inner-classes01"
+  },
+  "next": {
+    "title": "InnerClasses03",
+    "permalink": "/java-docs/exercises/inner-classes/inner-classes03"
+  }
+}

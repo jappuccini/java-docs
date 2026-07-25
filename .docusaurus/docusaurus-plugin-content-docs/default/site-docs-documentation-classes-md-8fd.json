@@ -1,0 +1,38 @@
+{
+  "id": "documentation/classes",
+  "title": "Klassen",
+  "description": "",
+  "source": "@site/docs/documentation/classes.md",
+  "sourceDirName": "documentation",
+  "slug": "/documentation/classes",
+  "permalink": "/java-docs/documentation/classes",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/documentation/classes.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "oo",
+      "permalink": "/java-docs/tags/oo"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 131,
+  "frontMatter": {
+    "title": "Klassen",
+    "description": "",
+    "sidebar_position": 131,
+    "tags": [
+      "oo"
+    ]
+  },
+  "sidebar": "documentationSidebar",
+  "previous": {
+    "title": "Objektorientierte Programmierung",
+    "permalink": "/java-docs/documentation/oo"
+  },
+  "next": {
+    "title": "Referenzen und Objekte",
+    "permalink": "/java-docs/documentation/references-and-objects"
+  }
+}

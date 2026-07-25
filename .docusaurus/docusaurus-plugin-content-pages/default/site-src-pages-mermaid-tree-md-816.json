@@ -1,0 +1,12 @@
+{
+  "type": "mdx",
+  "permalink": "/java-docs/mermaid/tree",
+  "source": "@site/src/pages/mermaid/tree.md",
+  "title": "Tree Example",
+  "description": "Root Node (Wurzelknoten)",
+  "frontMatter": {
+    "title": "Tree Example",
+    "hide_table_of_contents": true
+  },
+  "unlisted": false
+}

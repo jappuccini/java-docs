@@ -1,0 +1,72 @@
+{
+  "id": "exam-exercises/exam-exercises-java2/class-diagrams/shop",
+  "title": "Shop",
+  "description": "",
+  "source": "@site/docs/exam-exercises/exam-exercises-java2/class-diagrams/shop.md",
+  "sourceDirName": "exam-exercises/exam-exercises-java2/class-diagrams",
+  "slug": "/exam-exercises/exam-exercises-java2/class-diagrams/shop",
+  "permalink": "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/shop",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exam-exercises/exam-exercises-java2/class-diagrams/shop.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "interfaces",
+      "permalink": "/java-docs/tags/interfaces"
+    },
+    {
+      "inline": true,
+      "label": "comparators",
+      "permalink": "/java-docs/tags/comparators"
+    },
+    {
+      "inline": true,
+      "label": "exceptions",
+      "permalink": "/java-docs/tags/exceptions"
+    },
+    {
+      "inline": true,
+      "label": "records",
+      "permalink": "/java-docs/tags/records"
+    },
+    {
+      "inline": true,
+      "label": "generics",
+      "permalink": "/java-docs/tags/generics"
+    },
+    {
+      "inline": true,
+      "label": "maps",
+      "permalink": "/java-docs/tags/maps"
+    },
+    {
+      "inline": true,
+      "label": "optionals",
+      "permalink": "/java-docs/tags/optionals"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Shop",
+    "description": "",
+    "tags": [
+      "interfaces",
+      "comparators",
+      "exceptions",
+      "records",
+      "generics",
+      "maps",
+      "optionals"
+    ]
+  },
+  "sidebar": "examExercisesSidebar",
+  "previous": {
+    "title": "Roboterfabrik",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/roboter-factory"
+  },
+  "next": {
+    "title": "Einkaufsportal",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/shopping-portal"
+  }
+}

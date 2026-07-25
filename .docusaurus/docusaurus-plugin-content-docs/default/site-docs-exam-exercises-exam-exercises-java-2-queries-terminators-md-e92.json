@@ -1,0 +1,68 @@
+{
+  "id": "exam-exercises/exam-exercises-java2/queries/terminators",
+  "title": "Terminatoren",
+  "description": "",
+  "source": "@site/docs/exam-exercises/exam-exercises-java2/queries/terminators.md",
+  "sourceDirName": "exam-exercises/exam-exercises-java2/queries",
+  "slug": "/exam-exercises/exam-exercises-java2/queries/terminators",
+  "permalink": "/java-docs/exam-exercises/exam-exercises-java2/queries/terminators",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exam-exercises/exam-exercises-java2/queries/terminators.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "enumerations",
+      "permalink": "/java-docs/tags/enumerations"
+    },
+    {
+      "inline": true,
+      "label": "inheritance",
+      "permalink": "/java-docs/tags/inheritance"
+    },
+    {
+      "inline": true,
+      "label": "comparators",
+      "permalink": "/java-docs/tags/comparators"
+    },
+    {
+      "inline": true,
+      "label": "java-stream-api",
+      "permalink": "/java-docs/tags/java-stream-api"
+    },
+    {
+      "inline": true,
+      "label": "exceptions",
+      "permalink": "/java-docs/tags/exceptions"
+    },
+    {
+      "inline": true,
+      "label": "records",
+      "permalink": "/java-docs/tags/records"
+    },
+    {
+      "inline": true,
+      "label": "maps",
+      "permalink": "/java-docs/tags/maps"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Terminatoren",
+    "description": "",
+    "tags": [
+      "enumerations",
+      "inheritance",
+      "comparators",
+      "java-stream-api",
+      "exceptions",
+      "records",
+      "maps"
+    ]
+  },
+  "sidebar": "examExercisesSidebar",
+  "previous": {
+    "title": "Panzer",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java2/queries/tanks"
+  }
+}

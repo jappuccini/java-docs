@@ -1,0 +1,27 @@
+{
+  "id": "exercises/cases/cases03",
+  "title": "Cases03",
+  "description": "",
+  "source": "@site/docs/exercises/cases/cases03.mdx",
+  "sourceDirName": "exercises/cases",
+  "slug": "/exercises/cases/cases03",
+  "permalink": "/java-docs/exercises/cases/cases03",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/cases/cases03.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Cases03",
+    "description": ""
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "Cases02",
+    "permalink": "/java-docs/exercises/cases/cases02"
+  },
+  "next": {
+    "title": "Cases04",
+    "permalink": "/java-docs/exercises/cases/cases04"
+  }
+}

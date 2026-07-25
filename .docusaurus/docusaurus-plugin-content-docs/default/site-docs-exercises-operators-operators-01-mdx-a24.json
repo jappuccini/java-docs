@@ -1,0 +1,27 @@
+{
+  "id": "exercises/operators/operators01",
+  "title": "Operators01",
+  "description": "",
+  "source": "@site/docs/exercises/operators/operators01.mdx",
+  "sourceDirName": "exercises/operators",
+  "slug": "/exercises/operators/operators01",
+  "permalink": "/java-docs/exercises/operators/operators01",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/operators/operators01.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Operators01",
+    "description": ""
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "Operatoren",
+    "permalink": "/java-docs/exercises/operators/"
+  },
+  "next": {
+    "title": "Operators02",
+    "permalink": "/java-docs/exercises/operators/operators02"
+  }
+}

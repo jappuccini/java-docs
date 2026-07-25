@@ -1,0 +1,27 @@
+{
+  "id": "exercises/loops/loops08",
+  "title": "Loops08",
+  "description": "",
+  "source": "@site/docs/exercises/loops/loops08.mdx",
+  "sourceDirName": "exercises/loops",
+  "slug": "/exercises/loops/loops08",
+  "permalink": "/java-docs/exercises/loops/loops08",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/loops/loops08.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Loops08",
+    "description": ""
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "Loops07",
+    "permalink": "/java-docs/exercises/loops/loops07"
+  },
+  "next": {
+    "title": "Felder (Arrays)",
+    "permalink": "/java-docs/exercises/arrays/"
+  }
+}

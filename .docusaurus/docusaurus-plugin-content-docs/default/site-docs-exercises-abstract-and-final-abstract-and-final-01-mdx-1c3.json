@@ -1,0 +1,27 @@
+{
+  "id": "exercises/abstract-and-final/abstract-and-final01",
+  "title": "AbstractAndFinal01",
+  "description": "",
+  "source": "@site/docs/exercises/abstract-and-final/abstract-and-final01.mdx",
+  "sourceDirName": "exercises/abstract-and-final",
+  "slug": "/exercises/abstract-and-final/abstract-and-final01",
+  "permalink": "/java-docs/exercises/abstract-and-final/abstract-and-final01",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/abstract-and-final/abstract-and-final01.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "AbstractAndFinal01",
+    "description": ""
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "Abstrakte und finale Klassen und Methoden",
+    "permalink": "/java-docs/exercises/abstract-and-final/"
+  },
+  "next": {
+    "title": "Schnittstellen (Interfaces)",
+    "permalink": "/java-docs/exercises/interfaces/"
+  }
+}

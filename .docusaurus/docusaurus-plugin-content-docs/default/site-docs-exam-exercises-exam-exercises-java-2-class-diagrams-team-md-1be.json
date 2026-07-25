@@ -1,0 +1,84 @@
+{
+  "id": "exam-exercises/exam-exercises-java2/class-diagrams/team",
+  "title": "Team",
+  "description": "",
+  "source": "@site/docs/exam-exercises/exam-exercises-java2/class-diagrams/team.md",
+  "sourceDirName": "exam-exercises/exam-exercises-java2/class-diagrams",
+  "slug": "/exam-exercises/exam-exercises-java2/class-diagrams/team",
+  "permalink": "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/team",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exam-exercises/exam-exercises-java2/class-diagrams/team.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "inheritance",
+      "permalink": "/java-docs/tags/inheritance"
+    },
+    {
+      "inline": true,
+      "label": "polymorphism",
+      "permalink": "/java-docs/tags/polymorphism"
+    },
+    {
+      "inline": true,
+      "label": "interfaces",
+      "permalink": "/java-docs/tags/interfaces"
+    },
+    {
+      "inline": true,
+      "label": "comparators",
+      "permalink": "/java-docs/tags/comparators"
+    },
+    {
+      "inline": true,
+      "label": "exceptions",
+      "permalink": "/java-docs/tags/exceptions"
+    },
+    {
+      "inline": true,
+      "label": "records",
+      "permalink": "/java-docs/tags/records"
+    },
+    {
+      "inline": true,
+      "label": "generics",
+      "permalink": "/java-docs/tags/generics"
+    },
+    {
+      "inline": true,
+      "label": "maps",
+      "permalink": "/java-docs/tags/maps"
+    },
+    {
+      "inline": true,
+      "label": "optionals",
+      "permalink": "/java-docs/tags/optionals"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Team",
+    "description": "",
+    "tags": [
+      "inheritance",
+      "polymorphism",
+      "interfaces",
+      "comparators",
+      "exceptions",
+      "records",
+      "generics",
+      "maps",
+      "optionals"
+    ]
+  },
+  "sidebar": "examExercisesSidebar",
+  "previous": {
+    "title": "Raumstation",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/space-station"
+  },
+  "next": {
+    "title": "Videosammlung",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/video-collection"
+  }
+}

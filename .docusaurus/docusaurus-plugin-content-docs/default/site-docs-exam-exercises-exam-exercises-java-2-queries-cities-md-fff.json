@@ -1,0 +1,54 @@
+{
+  "id": "exam-exercises/exam-exercises-java2/queries/cities",
+  "title": "Städte",
+  "description": "",
+  "source": "@site/docs/exam-exercises/exam-exercises-java2/queries/cities.md",
+  "sourceDirName": "exam-exercises/exam-exercises-java2/queries",
+  "slug": "/exam-exercises/exam-exercises-java2/queries/cities",
+  "permalink": "/java-docs/exam-exercises/exam-exercises-java2/queries/cities",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exam-exercises/exam-exercises-java2/queries/cities.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "records",
+      "permalink": "/java-docs/tags/records"
+    },
+    {
+      "inline": true,
+      "label": "maps",
+      "permalink": "/java-docs/tags/maps"
+    },
+    {
+      "inline": true,
+      "label": "optionals",
+      "permalink": "/java-docs/tags/optionals"
+    },
+    {
+      "inline": true,
+      "label": "java-stream-api",
+      "permalink": "/java-docs/tags/java-stream-api"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Städte",
+    "description": "",
+    "tags": [
+      "records",
+      "maps",
+      "optionals",
+      "java-stream-api"
+    ]
+  },
+  "sidebar": "examExercisesSidebar",
+  "previous": {
+    "title": "Spielfiguren",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java2/queries/characters"
+  },
+  "next": {
+    "title": "Messdaten",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java2/queries/measurement-data"
+  }
+}

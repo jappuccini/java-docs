@@ -1,0 +1,66 @@
+{
+  "id": "exam-exercises/exam-exercises-java2/class-diagrams/library",
+  "title": "Bibliothek",
+  "description": "",
+  "source": "@site/docs/exam-exercises/exam-exercises-java2/class-diagrams/library.md",
+  "sourceDirName": "exam-exercises/exam-exercises-java2/class-diagrams",
+  "slug": "/exam-exercises/exam-exercises-java2/class-diagrams/library",
+  "permalink": "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/library",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exam-exercises/exam-exercises-java2/class-diagrams/library.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "inheritance",
+      "permalink": "/java-docs/tags/inheritance"
+    },
+    {
+      "inline": true,
+      "label": "polymorphism",
+      "permalink": "/java-docs/tags/polymorphism"
+    },
+    {
+      "inline": true,
+      "label": "exceptions",
+      "permalink": "/java-docs/tags/exceptions"
+    },
+    {
+      "inline": true,
+      "label": "records",
+      "permalink": "/java-docs/tags/records"
+    },
+    {
+      "inline": true,
+      "label": "maps",
+      "permalink": "/java-docs/tags/maps"
+    },
+    {
+      "inline": true,
+      "label": "optionals",
+      "permalink": "/java-docs/tags/optionals"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Bibliothek",
+    "description": "",
+    "tags": [
+      "inheritance",
+      "polymorphism",
+      "exceptions",
+      "records",
+      "maps",
+      "optionals"
+    ]
+  },
+  "sidebar": "examExercisesSidebar",
+  "previous": {
+    "title": "Lego-Baustein",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/lego-brick"
+  },
+  "next": {
+    "title": "Kartenspieler",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/player"
+  }
+}

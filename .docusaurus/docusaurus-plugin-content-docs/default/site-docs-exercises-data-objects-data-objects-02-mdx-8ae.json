@@ -1,0 +1,27 @@
+{
+  "id": "exercises/data-objects/data-objects02",
+  "title": "DataObjects02",
+  "description": "",
+  "source": "@site/docs/exercises/data-objects/data-objects02.mdx",
+  "sourceDirName": "exercises/data-objects",
+  "slug": "/exercises/data-objects/data-objects02",
+  "permalink": "/java-docs/exercises/data-objects/data-objects02",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/data-objects/data-objects02.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "DataObjects02",
+    "description": ""
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "DataObjects01",
+    "permalink": "/java-docs/exercises/data-objects/data-objects01"
+  },
+  "next": {
+    "title": "DataObjects03",
+    "permalink": "/java-docs/exercises/data-objects/data-objects03"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "exercises/class-structure/class-structure01",
+  "title": "ClassStructure01",
+  "description": "",
+  "source": "@site/docs/exercises/class-structure/class-structure01.mdx",
+  "sourceDirName": "exercises/class-structure",
+  "slug": "/exercises/class-structure/class-structure01",
+  "permalink": "/java-docs/exercises/class-structure/class-structure01",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/class-structure/class-structure01.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "ClassStructure01",
+    "description": ""
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "Aufbau einer Java-Klasse",
+    "permalink": "/java-docs/exercises/class-structure/"
+  },
+  "next": {
+    "title": "Binärzahlen",
+    "permalink": "/java-docs/exercises/binary-numbers/"
+  }
+}

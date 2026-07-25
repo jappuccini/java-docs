@@ -1,0 +1,1643 @@
+{
+  "/java-docs/__docusaurus/debug-166": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
+    "__context": {
+      "plugin": "plugin---java-docs-docusaurus-debugb-38-3a1"
+    }
+  },
+  "/java-docs/__docusaurus/debug/config-7ab": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
+    "__context": {
+      "plugin": "plugin---java-docs-docusaurus-debugb-38-3a1"
+    }
+  },
+  "/java-docs/__docusaurus/debug/content-932": {
+    "__comp": "__comp---theme-debug-contentba-8-ce7",
+    "__context": {
+      "plugin": "plugin---java-docs-docusaurus-debugb-38-3a1"
+    },
+    "__props": "__props---java-docs-docusaurus-debug-content-2-fb-270"
+  },
+  "/java-docs/__docusaurus/debug/globalData-8ba": {
+    "__comp": "__comp---theme-debug-global-dataede-0fa",
+    "__context": {
+      "plugin": "plugin---java-docs-docusaurus-debugb-38-3a1"
+    }
+  },
+  "/java-docs/__docusaurus/debug/metadata-7b1": {
+    "__comp": "__comp---theme-debug-site-metadata-68-e-3d4",
+    "__context": {
+      "plugin": "plugin---java-docs-docusaurus-debugb-38-3a1"
+    }
+  },
+  "/java-docs/__docusaurus/debug/registry-d61": {
+    "__comp": "__comp---theme-debug-registry-679-501",
+    "__context": {
+      "plugin": "plugin---java-docs-docusaurus-debugb-38-3a1"
+    }
+  },
+  "/java-docs/__docusaurus/debug/routes-1e8": {
+    "__comp": "__comp---theme-debug-routes-946-699",
+    "__context": {
+      "plugin": "plugin---java-docs-docusaurus-debugb-38-3a1"
+    }
+  },
+  "/java-docs/mermaid/tree-d88": {
+    "__comp": "__comp---theme-mdx-page-1-f-3-b90",
+    "__context": {
+      "plugin": "plugin---java-docs-mermaid-treea-74-d10"
+    },
+    "content": "content---java-docs-mermaid-tree-816-171"
+  },
+  "/java-docs/slides/steffen/java-1/abstract-and-final-af4": {
+    "__comp": "__comp---site-src-pages-slides-steffen-java-1-abstract-and-final-tsxc-6-a-f9f",
+    "__context": {
+      "plugin": "plugin---java-docs-mermaid-treea-74-d10"
+    },
+    "config": "config---java-docs-slides-steffen-java-1-abstract-and-final-5-e-9-634"
+  },
+  "/java-docs/slides/steffen/java-1/class-diagram-java-api-enum-5c2": {
+    "__comp": "__comp---site-src-pages-slides-steffen-java-1-class-diagram-java-api-enum-tsx-837-e7a",
+    "__context": {
+      "plugin": "plugin---java-docs-mermaid-treea-74-d10"
+    },
+    "config": "config---java-docs-slides-steffen-java-1-abstract-and-final-5-e-9-634"
+  },
+  "/java-docs/slides/steffen/java-1/classes-and-objects-9ce": {
+    "__comp": "__comp---site-src-pages-slides-steffen-java-1-classes-and-objects-tsx-462-cd1",
+    "__context": {
+      "plugin": "plugin---java-docs-mermaid-treea-74-d10"
+    },
+    "config": "config---java-docs-slides-steffen-java-1-abstract-and-final-5-e-9-634"
+  },
+  "/java-docs/slides/steffen/java-1/constructor-and-static-2da": {
+    "__comp": "__comp---site-src-pages-slides-steffen-java-1-constructor-and-static-tsxc-08-032",
+    "__context": {
+      "plugin": "plugin---java-docs-mermaid-treea-74-d10"
+    },
+    "config": "config---java-docs-slides-steffen-java-1-abstract-and-final-5-e-9-634"
+  },
+  "/java-docs/slides/steffen/java-1/datatypes-and-dataobjects-f46": {
+    "__comp": "__comp---site-src-pages-slides-steffen-java-1-datatypes-and-dataobjects-tsxf-7-a-af8",
+    "__context": {
+      "plugin": "plugin---java-docs-mermaid-treea-74-d10"
+    },
+    "config": "config---java-docs-slides-steffen-java-1-abstract-and-final-5-e-9-634"
+  },
+  "/java-docs/slides/steffen/java-1/exceptions-47b": {
+    "__comp": "__comp---site-src-pages-slides-steffen-java-1-exceptions-tsx-9-fd-c68",
+    "__context": {
+      "plugin": "plugin---java-docs-mermaid-treea-74-d10"
+    },
+    "config": "config---java-docs-slides-steffen-java-1-abstract-and-final-5-e-9-634"
+  },
+  "/java-docs/slides/steffen/java-1/if-and-switch-f01": {
+    "__comp": "__comp---site-src-pages-slides-steffen-java-1-if-and-switch-tsx-4-c-9-450",
+    "__context": {
+      "plugin": "plugin---java-docs-mermaid-treea-74-d10"
+    },
+    "config": "config---java-docs-slides-steffen-java-1-abstract-and-final-5-e-9-634"
+  },
+  "/java-docs/slides/steffen/java-1/inheritance-f5e": {
+    "__comp": "__comp---site-src-pages-slides-steffen-java-1-inheritance-tsxa-35-5b5",
+    "__context": {
+      "plugin": "plugin---java-docs-mermaid-treea-74-d10"
+    },
+    "config": "config---java-docs-slides-steffen-java-1-abstract-and-final-5-e-9-634"
+  },
+  "/java-docs/slides/steffen/java-1/interfaces-7ae": {
+    "__comp": "__comp---site-src-pages-slides-steffen-java-1-interfaces-tsx-0-e-5-3c4",
+    "__context": {
+      "plugin": "plugin---java-docs-mermaid-treea-74-d10"
+    },
+    "config": "config---java-docs-slides-steffen-java-1-abstract-and-final-5-e-9-634"
+  },
+  "/java-docs/slides/steffen/java-1/intro-459": {
+    "__comp": "__comp---site-src-pages-slides-steffen-java-1-intro-tsx-57-c-25d",
+    "__context": {
+      "plugin": "plugin---java-docs-mermaid-treea-74-d10"
+    },
+    "config": "config---java-docs-slides-steffen-java-1-abstract-and-final-5-e-9-634"
+  },
+  "/java-docs/slides/steffen/java-1/math-random-scanner-23a": {
+    "__comp": "__comp---site-src-pages-slides-steffen-java-1-math-random-scanner-tsx-9-ce-bca",
+    "__context": {
+      "plugin": "plugin---java-docs-mermaid-treea-74-d10"
+    },
+    "config": "config---java-docs-slides-steffen-java-1-abstract-and-final-5-e-9-634"
+  },
+  "/java-docs/slides/steffen/java-1/methods-and-operators-7bd": {
+    "__comp": "__comp---site-src-pages-slides-steffen-java-1-methods-and-operators-tsx-69-b-823",
+    "__context": {
+      "plugin": "plugin---java-docs-mermaid-treea-74-d10"
+    },
+    "config": "config---java-docs-slides-steffen-java-1-abstract-and-final-5-e-9-634"
+  },
+  "/java-docs/slides/steffen/java-1/polymorphism-c58": {
+    "__comp": "__comp---site-src-pages-slides-steffen-java-1-polymorphism-tsx-0-e-0-0c7",
+    "__context": {
+      "plugin": "plugin---java-docs-mermaid-treea-74-d10"
+    },
+    "config": "config---java-docs-slides-steffen-java-1-abstract-and-final-5-e-9-634"
+  },
+  "/java-docs/slides/steffen/java-2/00-recap-336": {
+    "__comp": "__comp---site-src-pages-slides-steffen-java-2-00-recap-tsx-926-3fd",
+    "__context": {
+      "plugin": "plugin---java-docs-mermaid-treea-74-d10"
+    },
+    "config": "config---java-docs-slides-steffen-java-1-abstract-and-final-5-e-9-634"
+  },
+  "/java-docs/slides/steffen/java-2/01-intro-dsa-8c4": {
+    "__comp": "__comp---site-src-pages-slides-steffen-java-2-01-intro-dsa-tsx-88-f-581",
+    "__context": {
+      "plugin": "plugin---java-docs-mermaid-treea-74-d10"
+    },
+    "config": "config---java-docs-slides-steffen-java-1-abstract-and-final-5-e-9-634"
+  },
+  "/java-docs/slides/steffen/java-2/02-search-algo-f6f": {
+    "__comp": "__comp---site-src-pages-slides-steffen-java-2-02-search-algo-tsx-5-e-0-1bb",
+    "__context": {
+      "plugin": "plugin---java-docs-mermaid-treea-74-d10"
+    },
+    "config": "config---java-docs-slides-steffen-java-1-abstract-and-final-5-e-9-634"
+  },
+  "/java-docs/slides/steffen/java-2/03-iteration-recursion-5fb": {
+    "__comp": "__comp---site-src-pages-slides-steffen-java-2-03-iteration-recursion-tsx-20-c-dab",
+    "__context": {
+      "plugin": "plugin---java-docs-mermaid-treea-74-d10"
+    },
+    "config": "config---java-docs-slides-steffen-java-1-abstract-and-final-5-e-9-634"
+  },
+  "/java-docs/slides/steffen/java-2/04-sort-algo-330": {
+    "__comp": "__comp---site-src-pages-slides-steffen-java-2-04-sort-algo-tsxed-1-2a0",
+    "__context": {
+      "plugin": "plugin---java-docs-mermaid-treea-74-d10"
+    },
+    "config": "config---java-docs-slides-steffen-java-1-abstract-and-final-5-e-9-634"
+  },
+  "/java-docs/slides/steffen/java-2/05-stack-queue-list-ef2": {
+    "__comp": "__comp---site-src-pages-slides-steffen-java-2-05-stack-queue-list-tsx-6-e-0-206",
+    "__context": {
+      "plugin": "plugin---java-docs-mermaid-treea-74-d10"
+    },
+    "config": "config---java-docs-slides-steffen-java-1-abstract-and-final-5-e-9-634"
+  },
+  "/java-docs/slides/steffen/java-2/06-trees-e1a": {
+    "__comp": "__comp---site-src-pages-slides-steffen-java-2-06-trees-tsxb-43-79f",
+    "__context": {
+      "plugin": "plugin---java-docs-mermaid-treea-74-d10"
+    },
+    "config": "config---java-docs-slides-steffen-java-1-abstract-and-final-5-e-9-634"
+  },
+  "/java-docs/slides/steffen/java-2/07-generics-optional-4f0": {
+    "__comp": "__comp---site-src-pages-slides-steffen-java-2-07-generics-optional-tsxc-7-e-7c7",
+    "__context": {
+      "plugin": "plugin---java-docs-mermaid-treea-74-d10"
+    },
+    "config": "config---java-docs-slides-steffen-java-1-abstract-and-final-5-e-9-634"
+  },
+  "/java-docs/slides/steffen/java-2/08-sets-maps-hashes-records-613": {
+    "__comp": "__comp---site-src-pages-slides-steffen-java-2-08-sets-maps-hashes-records-tsx-96-b-669",
+    "__context": {
+      "plugin": "plugin---java-docs-mermaid-treea-74-d10"
+    },
+    "config": "config---java-docs-slides-steffen-java-1-abstract-and-final-5-e-9-634"
+  },
+  "/java-docs/slides/steffen/java-2/09-functional-programming-3ac": {
+    "__comp": "__comp---site-src-pages-slides-steffen-java-2-09-functional-programming-tsx-3-a-9-170",
+    "__context": {
+      "plugin": "plugin---java-docs-mermaid-treea-74-d10"
+    },
+    "config": "config---java-docs-slides-steffen-java-1-abstract-and-final-5-e-9-634"
+  },
+  "/java-docs/slides/steffen/java-2/10-stream-api-bdb": {
+    "__comp": "__comp---site-src-pages-slides-steffen-java-2-10-stream-api-tsxbfe-3a2",
+    "__context": {
+      "plugin": "plugin---java-docs-mermaid-treea-74-d10"
+    },
+    "config": "config---java-docs-slides-steffen-java-1-abstract-and-final-5-e-9-634"
+  },
+  "/java-docs/slides/steffen/tbd-236": {
+    "__comp": "__comp---site-src-pages-slides-steffen-tbd-tsx-6-f-6-a70",
+    "__context": {
+      "plugin": "plugin---java-docs-mermaid-treea-74-d10"
+    },
+    "config": "config---java-docs-slides-steffen-java-1-abstract-and-final-5-e-9-634"
+  },
+  "/java-docs/slides/template-207": {
+    "__comp": "__comp---site-src-pages-slides-template-tsxa-30-78e",
+    "__context": {
+      "plugin": "plugin---java-docs-mermaid-treea-74-d10"
+    },
+    "config": "config---java-docs-slides-steffen-java-1-abstract-and-final-5-e-9-634"
+  },
+  "/java-docs/-6cd": {
+    "__comp": "__comp---theme-docs-root-5-e-9-0b6",
+    "__context": {
+      "plugin": "plugin---java-docs-aba-2f7"
+    }
+  },
+  "/java-docs/-21a": {
+    "__comp": "__comp---theme-doc-version-roota-7-b-5de",
+    "__props": "__props---java-docs-c-80-d1d"
+  },
+  "/java-docs/tags-489": {
+    "__comp": "__comp---theme-doc-tags-list-page-372-89e",
+    "__props": "__props---java-docs-tags-16-e-ec5"
+  },
+  "/java-docs/tags/abstract-e23": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-abstract-417-4de"
+  },
+  "/java-docs/tags/abstract-and-final-9e0": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-abstract-and-finalcc-1-537"
+  },
+  "/java-docs/tags/activity-diagrams-2b8": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-activity-diagrams-398-64a"
+  },
+  "/java-docs/tags/algorithms-d94": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-algorithmsede-ee7"
+  },
+  "/java-docs/tags/arrays-f05": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-arrays-986-7eb"
+  },
+  "/java-docs/tags/binary-numbers-071": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-binary-numbersd-1-c-a53"
+  },
+  "/java-docs/tags/cases-264": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-cases-98-a-d09"
+  },
+  "/java-docs/tags/class-diagrams-c89": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-class-diagrams-1-f-5-451"
+  },
+  "/java-docs/tags/class-structure-c24": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-class-structure-906-6d1"
+  },
+  "/java-docs/tags/coding-5db": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-codingc-36-920"
+  },
+  "/java-docs/tags/collections-5cd": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-collections-600-d70"
+  },
+  "/java-docs/tags/comparators-86f": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-comparatorsf-16-763"
+  },
+  "/java-docs/tags/console-applications-e27": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-console-applicationsab-5-b95"
+  },
+  "/java-docs/tags/control-structures-4c4": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-control-structuresfeb-886"
+  },
+  "/java-docs/tags/data-objects-945": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-data-objectsc-99-df2"
+  },
+  "/java-docs/tags/data-types-cfe": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-data-typesf-03-387"
+  },
+  "/java-docs/tags/dates-and-times-2e8": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-dates-and-timescb-9-884"
+  },
+  "/java-docs/tags/debugging-117": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-debugginga-80-3bf"
+  },
+  "/java-docs/tags/eclipse-194": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-eclipsefe-7-0ff"
+  },
+  "/java-docs/tags/enumerations-e5a": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-enumerations-9-cb-7ab"
+  },
+  "/java-docs/tags/exceptions-6ac": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-exceptions-72-f-5a7"
+  },
+  "/java-docs/tags/files-391": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-files-5-c-5-204"
+  },
+  "/java-docs/tags/final-81d": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-final-87-c-0da"
+  },
+  "/java-docs/tags/genai-5ba": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-genai-446-b7d"
+  },
+  "/java-docs/tags/generics-7e2": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-generics-3-d-3-76d"
+  },
+  "/java-docs/tags/git-531": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-git-372-91a"
+  },
+  "/java-docs/tags/gui-469": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-gui-598-7a3"
+  },
+  "/java-docs/tags/hashing-e09": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-hashinge-6-e-d69"
+  },
+  "/java-docs/tags/inheritance-e22": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-inheritance-774-d42"
+  },
+  "/java-docs/tags/inhertiance-2e9": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-inhertianceccf-16f"
+  },
+  "/java-docs/tags/inner-classes-365": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-inner-classes-472-3a8"
+  },
+  "/java-docs/tags/interfaces-082": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-interfacesaa-0-970"
+  },
+  "/java-docs/tags/io-streams-4da": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-io-streamsad-0-487"
+  },
+  "/java-docs/tags/java-a9f": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-javaff-2-164"
+  },
+  "/java-docs/tags/java-api-f22": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-java-api-4-fb-21f"
+  },
+  "/java-docs/tags/java-stream-api-13b": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-java-stream-api-3-ca-3ce"
+  },
+  "/java-docs/tags/javafx-4a8": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-javafx-7-e-9-898"
+  },
+  "/java-docs/tags/jdk-e13": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-jdk-67-e-6a0"
+  },
+  "/java-docs/tags/killteam-e11": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-killteam-922-6b2"
+  },
+  "/java-docs/tags/lambdas-66a": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-lambdasa-39-b58"
+  },
+  "/java-docs/tags/lists-954": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-listsbce-ee9"
+  },
+  "/java-docs/tags/lombok-96a": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-lombok-1-f-6-1fc"
+  },
+  "/java-docs/tags/loops-e8e": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-loops-963-861"
+  },
+  "/java-docs/tags/maps-f41": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-maps-47-e-7f4"
+  },
+  "/java-docs/tags/markdown-a9f": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-markdownbc-4-836"
+  },
+  "/java-docs/tags/math-d51": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-mathf-27-342"
+  },
+  "/java-docs/tags/maven-e64": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-mavencf-8-0ee"
+  },
+  "/java-docs/tags/mockito-af3": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-mockito-2-cd-e3e"
+  },
+  "/java-docs/tags/object-cdb": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-object-010-c70"
+  },
+  "/java-docs/tags/oo-ecd": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-oo-368-cb7"
+  },
+  "/java-docs/tags/operators-b0c": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-operatorsb-7-b-261"
+  },
+  "/java-docs/tags/optionals-d01": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-optionals-7-a-6-cb8"
+  },
+  "/java-docs/tags/polymorphism-890": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-polymorphismecf-11a"
+  },
+  "/java-docs/tags/queues-b29": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-queues-6-cd-74f"
+  },
+  "/java-docs/tags/random-bd5": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-randomc-35-6ce"
+  },
+  "/java-docs/tags/records-1de": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-records-6-da-f2f"
+  },
+  "/java-docs/tags/sets-39f": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-sets-740-fd2"
+  },
+  "/java-docs/tags/slf-4-j-df6": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-slf-4-j-6-b-6-547"
+  },
+  "/java-docs/tags/strings-724": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-strings-8-b-1-c70"
+  },
+  "/java-docs/tags/tests-a10": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-tests-8-d-2-776"
+  },
+  "/java-docs/tags/trees-7f7": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-treesba-9-cce"
+  },
+  "/java-docs/tags/uml-aea": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-umlaa-4-aa3"
+  },
+  "/java-docs/tags/unit-tests-252": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-unit-tests-86-e-39f"
+  },
+  "/java-docs/tags/wrappers-a12": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__props": "__props---java-docs-tags-wrappersf-79-646"
+  },
+  "/java-docs/-996": {
+    "__comp": "__comp---theme-doc-roota-94-67a"
+  },
+  "/java-docs/additional-material/instructions/-1e4": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-additional-material-instructions-e-48-ea1"
+  },
+  "/java-docs/additional-material/instructions/binary-numbers-974": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-additional-material-instructions-binary-numbers-61-b-e95"
+  },
+  "/java-docs/additional-material/instructions/debugging-aff": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-additional-material-instructions-debugging-655-772"
+  },
+  "/java-docs/additional-material/instructions/git-197": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-additional-material-instructions-gitf-41-b18"
+  },
+  "/java-docs/additional-material/instructions/javafx-e6f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-additional-material-instructions-javafxabb-3ca"
+  },
+  "/java-docs/additional-material/instructions/jdk-e93": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-additional-material-instructions-jdk-054-192"
+  },
+  "/java-docs/additional-material/instructions/maven-95e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-additional-material-instructions-mavend-01-418"
+  },
+  "/java-docs/additional-material/steffen/-004": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-additional-material-steffen-46-b-d75"
+  },
+  "/java-docs/additional-material/steffen/Allgemein-977": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-additional-material-steffen-allgemein-7-f-9-2a8"
+  },
+  "/java-docs/additional-material/steffen/java-1/-6e5": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-additional-material-steffen-java-1-bef-95f"
+  },
+  "/java-docs/additional-material/steffen/java-1/exam-preparation/-f41": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-additional-material-steffen-java-1-exam-preparation-94-a-4aa"
+  },
+  "/java-docs/additional-material/steffen/java-1/exam-preparation/2023-6b2": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-additional-material-steffen-java-1-exam-preparation-2023253-f7e"
+  },
+  "/java-docs/additional-material/steffen/java-1/exam-preparation/2024-ad5": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-additional-material-steffen-java-1-exam-preparation-2024780-678"
+  },
+  "/java-docs/additional-material/steffen/java-1/exam-preparation/2025-567": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-additional-material-steffen-java-1-exam-preparation-20254-a-0-171"
+  },
+  "/java-docs/additional-material/steffen/java-1/exam-preparation/2026-0e7": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-additional-material-steffen-java-1-exam-preparation-2026172-079"
+  },
+  "/java-docs/additional-material/steffen/java-1/slides-b83": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-additional-material-steffen-java-1-slides-51-a-979"
+  },
+  "/java-docs/additional-material/steffen/java-2/-d06": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-additional-material-steffen-java-2-285-95d"
+  },
+  "/java-docs/additional-material/steffen/java-2/exam-preparation/-4ab": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-additional-material-steffen-java-2-exam-preparation-b-8-d-fee"
+  },
+  "/java-docs/additional-material/steffen/java-2/exam-preparation/2023-67b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-additional-material-steffen-java-2-exam-preparation-20239-b-4-edf"
+  },
+  "/java-docs/additional-material/steffen/java-2/exam-preparation/2024-b2d": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-additional-material-steffen-java-2-exam-preparation-2024-dcf-3a6"
+  },
+  "/java-docs/additional-material/steffen/java-2/exam-preparation/2025-b71": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-additional-material-steffen-java-2-exam-preparation-20250-b-3-1b7"
+  },
+  "/java-docs/additional-material/steffen/java-2/exam-preparation/2026-766": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-additional-material-steffen-java-2-exam-preparation-2026-bd-2-b55"
+  },
+  "/java-docs/additional-material/steffen/java-2/slides-a6d": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-additional-material-steffen-java-2-slides-3-e-9-181"
+  },
+  "/java-docs/additional-material/tools/-b6c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-additional-material-tools-82-e-81c"
+  },
+  "/java-docs/additional-material/tools/debugging-8b4": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-additional-material-tools-debugging-1-a-3-592"
+  },
+  "/java-docs/additional-material/tools/genai-tools-b11": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-additional-material-tools-genai-tools-955-927"
+  },
+  "/java-docs/additional-material/tools/git-6db": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-additional-material-tools-gitaa-5-181"
+  },
+  "/java-docs/additional-material/tools/markdown-663": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-additional-material-tools-markdownecc-962"
+  },
+  "/java-docs/additional-material/tools/maven-423": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-additional-material-tools-maven-1-b-1-d12"
+  },
+  "/java-docs/documentation/abstract-and-final-6b5": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-documentation-abstract-and-final-5-b-7-3c1"
+  },
+  "/java-docs/documentation/activity-diagrams-a41": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-documentation-activity-diagrams-1-d-8-8d6"
+  },
+  "/java-docs/documentation/algorithms-8bb": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-documentation-algorithms-41-e-974"
+  },
+  "/java-docs/documentation/array-lists-731": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-documentation-array-lists-3-c-5-aa0"
+  },
+  "/java-docs/documentation/arrays-84c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-documentation-arrays-5-e-7-b21"
+  },
+  "/java-docs/documentation/binary-numbers-0c8": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-documentation-binary-numbers-091-eb7"
+  },
+  "/java-docs/documentation/calculations-957": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-documentation-calculationsb-48-60b"
+  },
+  "/java-docs/documentation/cases-ede": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-documentation-cases-499-a1e"
+  },
+  "/java-docs/documentation/class-diagrams-9c8": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-documentation-class-diagrams-975-ab6"
+  },
+  "/java-docs/documentation/class-structure-4ec": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-documentation-class-structure-62-b-d37"
+  },
+  "/java-docs/documentation/classes-988": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-documentation-classes-8-fd-b4c"
+  },
+  "/java-docs/documentation/coding-299": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-documentation-codinge-99-cfb"
+  },
+  "/java-docs/documentation/comparators-4f9": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-documentation-comparators-36-d-f27"
+  },
+  "/java-docs/documentation/console-applications-059": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-documentation-console-applicationsce-3-140"
+  },
+  "/java-docs/documentation/data-objects-fc6": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-documentation-data-objectscf-2-f4d"
+  },
+  "/java-docs/documentation/data-types-8ca": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-documentation-data-types-26-d-efb"
+  },
+  "/java-docs/documentation/dates-and-times-1c3": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-documentation-dates-and-times-835-820"
+  },
+  "/java-docs/documentation/enumerations-ea7": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-documentation-enumerations-2-e-8-c26"
+  },
+  "/java-docs/documentation/exceptions-a3b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-documentation-exceptionsb-42-c76"
+  },
+  "/java-docs/documentation/files-623": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-documentation-files-995-3a6"
+  },
+  "/java-docs/documentation/generics-bc7": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-documentation-generics-83-b-015"
+  },
+  "/java-docs/documentation/gui-9c9": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-documentation-guif-64-0da"
+  },
+  "/java-docs/documentation/hashing-d7e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-documentation-hashingc-38-09d"
+  },
+  "/java-docs/documentation/inheritance-6a8": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-documentation-inheritancea-3-a-a52"
+  },
+  "/java-docs/documentation/inner-classes-c0f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-documentation-inner-classes-905-3b5"
+  },
+  "/java-docs/documentation/interfaces-e82": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-documentation-interfacesbb-0-c30"
+  },
+  "/java-docs/documentation/io-streams-83a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-documentation-io-streams-6-f-5-538"
+  },
+  "/java-docs/documentation/java-327": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-documentation-java-922-5e9"
+  },
+  "/java-docs/documentation/java-api-27a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-documentation-java-api-3-df-dc4"
+  },
+  "/java-docs/documentation/java-collections-framework-ecd": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-documentation-java-collections-framework-238-dc7"
+  },
+  "/java-docs/documentation/java-stream-api-a59": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-documentation-java-stream-api-9-c-8-90f"
+  },
+  "/java-docs/documentation/javafx-f8a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-documentation-javafxb-6-f-f99"
+  },
+  "/java-docs/documentation/lambdas-dc0": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-documentation-lambdas-238-676"
+  },
+  "/java-docs/documentation/lists-1a3": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-documentation-lists-7-a-2-d37"
+  },
+  "/java-docs/documentation/lombok-f5d": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-documentation-lombok-631-6b4"
+  },
+  "/java-docs/documentation/loops-1ff": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-documentation-loopsb-3-c-eb3"
+  },
+  "/java-docs/documentation/maps-d2d": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-documentation-mapsa-75-94b"
+  },
+  "/java-docs/documentation/mockito-7be": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-documentation-mockito-6-f-5-41e"
+  },
+  "/java-docs/documentation/object-7f8": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-documentation-objecta-26-3e8"
+  },
+  "/java-docs/documentation/oo-b56": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-documentation-oof-72-53e"
+  },
+  "/java-docs/documentation/operators-237": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-documentation-operators-92-f-952"
+  },
+  "/java-docs/documentation/optionals-29a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-documentation-optionals-55-d-a25"
+  },
+  "/java-docs/documentation/polymorphism-881": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-documentation-polymorphismd-1-e-b9c"
+  },
+  "/java-docs/documentation/pseudo-random-numbers-145": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-documentation-pseudo-random-numbersd-52-00f"
+  },
+  "/java-docs/documentation/records-fde": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-documentation-recordsd-5-f-240"
+  },
+  "/java-docs/documentation/references-and-objects-b93": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-documentation-references-and-objectse-31-1ef"
+  },
+  "/java-docs/documentation/slf4j-f06": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-documentation-slf-4-j-844-6a6"
+  },
+  "/java-docs/documentation/strings-9ef": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-documentation-strings-3-c-6-7eb"
+  },
+  "/java-docs/documentation/tests-754": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-documentation-tests-108-bb3"
+  },
+  "/java-docs/documentation/trees-45b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-documentation-trees-7-a-5-297"
+  },
+  "/java-docs/documentation/unit-tests-cba": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-documentation-unit-tests-4-df-5ee"
+  },
+  "/java-docs/documentation/wrappers-ca3": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-documentation-wrappersf-5-b-4b3"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java1/-e4c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-1-f-8-c-bc8"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java1/activity-diagrams/-bb5": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-1-activity-diagrams-a-59-161"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java1/activity-diagrams/cash-machine-9f6": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-1-activity-diagrams-cash-machined-5-f-2d7"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java1/activity-diagrams/discount-calculator-df9": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-1-activity-diagrams-discount-calculatora-1-c-583"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java1/activity-diagrams/insertion-sort-8ad": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-1-activity-diagrams-insertion-sort-1-c-7-029"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java1/activity-diagrams/selection-sort-8ae": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-1-activity-diagrams-selection-sortf-2-d-b76"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java1/activity-diagrams/timestamp-converter-722": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-1-activity-diagrams-timestamp-converter-219-1cf"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/-e5f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-1-class-diagrams-371-a47"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/cards-dealer-e50": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-1-class-diagrams-cards-dealer-4-fc-11c"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/cashier-system-16b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-1-class-diagrams-cashier-systemeb-5-cf7"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/christmas-tree-5d7": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-1-class-diagrams-christmas-tree-769-4b9"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/cookie-jar-234": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-1-class-diagrams-cookie-jar-21-b-890"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/creature-7b4": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-1-class-diagrams-creature-9-e-8-569"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/easter-basket-2ea": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-1-class-diagrams-easter-basket-348-550"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/fast-food-2e0": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-1-class-diagrams-fast-food-9-cf-ff4"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/gift-bag-2bd": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-1-class-diagrams-gift-bagcea-159"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/parking-garage-614": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-1-class-diagrams-parking-garage-755-669"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/player-1d1": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-1-class-diagrams-playere-92-fa9"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/restaurant-f86": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-1-class-diagrams-restaurant-6-e-4-753"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/santa-claus-9ef": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-1-class-diagrams-santa-claus-5-a-3-054"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/shape-95f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-1-class-diagrams-shaped-2-d-d18"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/student-course-3ba": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-1-class-diagrams-student-courseede-ed6"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/travel-98f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-1-class-diagrams-travel-053-e45"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/weather-station-807": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-1-class-diagrams-weather-station-678-355"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/zoo-3d8": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-1-class-diagrams-zoo-56-e-371"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java1/dice-games/-d6f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-1-dice-games-5-a-1-2c3"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java1/dice-games/dice-game-01-9ee": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-1-dice-games-dice-game-01-c-13-675"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java1/dice-games/dice-game-02-fe5": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-1-dice-games-dice-game-02-ab-4-141"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java1/dice-games/dice-game-03-968": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-1-dice-games-dice-game-031-b-8-02a"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java1/dice-games/dice-game-04-5d3": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-1-dice-games-dice-game-04-eb-7-db6"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java1/dice-games/dice-game-05-f87": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-1-dice-games-dice-game-058-b-4-42a"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java1/dice-games/dice-game-06-5b0": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-1-dice-games-dice-game-06-ea-9-f0b"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java1/dice-games/dice-game-07-a2d": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-1-dice-games-dice-game-0769-c-b89"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java1/dice-games/dice-game-08-9e4": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-1-dice-games-dice-game-08-a-14-109"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java1/dice-games/dice-game-09-0ec": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-1-dice-games-dice-game-09743-e89"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java1/dice-games/dice-game-10-23b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-1-dice-games-dice-game-1015-a-8ec"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java1/dice-games/dice-game-11-153": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-1-dice-games-dice-game-11-e-83-489"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java1/dice-games/dice-game-12-968": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-1-dice-games-dice-game-12967-904"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java1/dice-games/dice-game-13-3e1": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-1-dice-games-dice-game-1348-d-461"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java1/dice-games/dice-game-14-83b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-1-dice-games-dice-game-147-ba-7ab"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java1/dice-games/dice-game-15-e28": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-1-dice-games-dice-game-15141-4d4"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java1/dice-games/dice-game-16-aa0": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-1-dice-games-dice-game-16003-b4d"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java1/dice-games/dice-game-17-07f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-1-dice-games-dice-game-175-af-52d"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java2/-9da": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-2-d-22-5ab"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/-dba": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-2-class-diagrams-e-33-ac4"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/corner-shop-e39": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-2-class-diagrams-corner-shop-73-d-05f"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/dictionary-007": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-2-class-diagrams-dictionaryde-2-7a5"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/fantasy-game-fa2": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-2-class-diagrams-fantasy-game-4-da-153"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/human-resources-161": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-2-class-diagrams-human-resources-841-71b"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/job-offer-7c6": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-2-class-diagrams-job-offer-80-c-4d3"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/lego-brick-b26": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-2-class-diagrams-lego-brick-636-253"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/library-d4d": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-2-class-diagrams-library-404-3d3"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/player-5bf": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-2-class-diagrams-player-5-e-3-24a"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/roboter-factory-517": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-2-class-diagrams-roboter-factory-418-9b3"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/shop-aa0": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-2-class-diagrams-shop-70-c-a29"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/shopping-portal-ee0": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-2-class-diagrams-shopping-portal-4-c-8-5ca"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/space-station-439": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-2-class-diagrams-space-stationf-80-5c9"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/team-87d": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-2-class-diagrams-team-1-be-c0f"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/video-collection-7d3": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-2-class-diagrams-video-collectiondbc-7ef"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java2/queries/-20a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-2-queries-496-0fb"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java2/queries/characters-8e2": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-2-queries-characterscaf-d9c"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java2/queries/cities-fdb": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-2-queries-citiesfff-3c4"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java2/queries/measurement-data-78f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-2-queries-measurement-data-716-7f2"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java2/queries/phone-store-1c2": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-2-queries-phone-store-7-c-3-01f"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java2/queries/planets-fcb": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-2-queries-planets-20-f-88b"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java2/queries/tanks-bf1": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-2-queries-tanks-6-ee-0a8"
+  },
+  "/java-docs/exam-exercises/exam-exercises-java2/queries/terminators-ec6": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exam-exercises-exam-exercises-java-2-queries-terminatorse-92-d15"
+  },
+  "/java-docs/exercises/abstract-and-final/-7d9": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-abstract-and-final-679-d4c"
+  },
+  "/java-docs/exercises/abstract-and-final/abstract-and-final01-bb6": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-abstract-and-final-abstract-and-final-011-c-3-9ce"
+  },
+  "/java-docs/exercises/activity-diagrams/-7d9": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-activity-diagrams-78-f-6ca"
+  },
+  "/java-docs/exercises/activity-diagrams/activity-diagrams01-66a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-activity-diagrams-activity-diagrams-01-f-97-740"
+  },
+  "/java-docs/exercises/algorithms/-93b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-algorithms-952-3ae"
+  },
+  "/java-docs/exercises/algorithms/algorithms01-02b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-algorithms-algorithms-010-bf-e38"
+  },
+  "/java-docs/exercises/algorithms/algorithms02-79e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-algorithms-algorithms-021-e-2-5f7"
+  },
+  "/java-docs/exercises/arrays/-5fb": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-arrays-3-d-9-dad"
+  },
+  "/java-docs/exercises/arrays/arrays01-473": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-arrays-arrays-0123-a-4c1"
+  },
+  "/java-docs/exercises/arrays/arrays02-9c9": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-arrays-arrays-020-ef-c81"
+  },
+  "/java-docs/exercises/arrays/arrays03-f1a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-arrays-arrays-0379-f-78b"
+  },
+  "/java-docs/exercises/arrays/arrays04-b23": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-arrays-arrays-04734-9e3"
+  },
+  "/java-docs/exercises/arrays/arrays05-790": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-arrays-arrays-05575-3bd"
+  },
+  "/java-docs/exercises/arrays/arrays06-eac": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-arrays-arrays-06230-5d7"
+  },
+  "/java-docs/exercises/arrays/arrays07-b7d": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-arrays-arrays-077-df-749"
+  },
+  "/java-docs/exercises/arrays/arrays08-c9c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-arrays-arrays-08327-159"
+  },
+  "/java-docs/exercises/binary-numbers/-fc0": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-binary-numbers-f-05-f7a"
+  },
+  "/java-docs/exercises/binary-numbers/binary-numbers01-bc3": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-binary-numbers-binary-numbers-01634-3dd"
+  },
+  "/java-docs/exercises/binary-numbers/binary-numbers02-e5e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-binary-numbers-binary-numbers-028-e-2-e00"
+  },
+  "/java-docs/exercises/binary-numbers/binary-numbers03-229": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-binary-numbers-binary-numbers-03337-b76"
+  },
+  "/java-docs/exercises/cases/-d1b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-cases-b-6-f-dee"
+  },
+  "/java-docs/exercises/cases/cases01-b68": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-cases-cases-01227-ba0"
+  },
+  "/java-docs/exercises/cases/cases02-2b5": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-cases-cases-02447-ba4"
+  },
+  "/java-docs/exercises/cases/cases03-5c8": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-cases-cases-039-d-2-618"
+  },
+  "/java-docs/exercises/cases/cases04-dd9": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-cases-cases-04549-08c"
+  },
+  "/java-docs/exercises/cases/cases05-370": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-cases-cases-0548-a-9fd"
+  },
+  "/java-docs/exercises/cases/cases06-b2f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-cases-cases-06-ac-6-ec8"
+  },
+  "/java-docs/exercises/class-diagrams/-2e8": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-class-diagrams-a-53-484"
+  },
+  "/java-docs/exercises/class-diagrams/class-diagrams01-1d5": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-class-diagrams-class-diagrams-016-bb-89d"
+  },
+  "/java-docs/exercises/class-diagrams/class-diagrams02-6a0": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-class-diagrams-class-diagrams-02-a-56-acc"
+  },
+  "/java-docs/exercises/class-diagrams/class-diagrams03-29d": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-class-diagrams-class-diagrams-0379-d-bbd"
+  },
+  "/java-docs/exercises/class-diagrams/class-diagrams04-f68": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-class-diagrams-class-diagrams-048-ca-0ef"
+  },
+  "/java-docs/exercises/class-diagrams/class-diagrams05-bc3": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-class-diagrams-class-diagrams-0577-d-8bd"
+  },
+  "/java-docs/exercises/class-structure/-59c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-class-structure-626-b28"
+  },
+  "/java-docs/exercises/class-structure/class-structure01-017": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-class-structure-class-structure-0147-b-253"
+  },
+  "/java-docs/exercises/coding/-511": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-coding-060-3d6"
+  },
+  "/java-docs/exercises/comparators/-a52": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-comparators-1-d-6-85e"
+  },
+  "/java-docs/exercises/comparators/comparators01-dce": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-comparators-comparators-016-da-494"
+  },
+  "/java-docs/exercises/comparators/comparators02-26c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-comparators-comparators-02-d-46-a12"
+  },
+  "/java-docs/exercises/console-applications/-a76": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-console-applications-98-c-6a4"
+  },
+  "/java-docs/exercises/console-applications/console-applications01-42e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-console-applications-console-applications-01-ef-9-134"
+  },
+  "/java-docs/exercises/console-applications/console-applications02-2b4": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-console-applications-console-applications-024-b-4-585"
+  },
+  "/java-docs/exercises/console-applications/console-applications03-252": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-console-applications-console-applications-03-edc-2ad"
+  },
+  "/java-docs/exercises/data-objects/-1f7": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-data-objects-bee-b90"
+  },
+  "/java-docs/exercises/data-objects/data-objects01-22c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-data-objects-data-objects-011-a-7-605"
+  },
+  "/java-docs/exercises/data-objects/data-objects02-0cc": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-data-objects-data-objects-028-ae-126"
+  },
+  "/java-docs/exercises/data-objects/data-objects03-ba7": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-data-objects-data-objects-03-f-3-c-cd5"
+  },
+  "/java-docs/exercises/enumerations/-41d": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-enumerations-050-0d1"
+  },
+  "/java-docs/exercises/enumerations/enumerations01-593": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-enumerations-enumerations-01-aa-5-73b"
+  },
+  "/java-docs/exercises/exceptions/-494": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-exceptions-4-bb-288"
+  },
+  "/java-docs/exercises/exceptions/exceptions01-b21": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-exceptions-exceptions-01-f-11-31e"
+  },
+  "/java-docs/exercises/exceptions/exceptions02-2a9": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-exceptions-exceptions-026-e-9-122"
+  },
+  "/java-docs/exercises/exceptions/exceptions03-da6": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-exceptions-exceptions-032-d-6-1a1"
+  },
+  "/java-docs/exercises/generics/-3b6": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-generics-efa-be0"
+  },
+  "/java-docs/exercises/generics/generics01-71d": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-generics-generics-012-e-8-d25"
+  },
+  "/java-docs/exercises/generics/generics02-87a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-generics-generics-0215-c-a4d"
+  },
+  "/java-docs/exercises/generics/generics03-8ff": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-generics-generics-037-c-3-2d9"
+  },
+  "/java-docs/exercises/generics/generics04-462": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-generics-generics-044-b-9-50e"
+  },
+  "/java-docs/exercises/hashing/-871": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-hashing-707-c58"
+  },
+  "/java-docs/exercises/hashing/hashing01-8e8": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-hashing-hashing-016-c-2-0bd"
+  },
+  "/java-docs/exercises/hashing/hashing02-4ee": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-hashing-hashing-0245-c-49c"
+  },
+  "/java-docs/exercises/inner-classes/-7e4": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-inner-classes-ac-3-6b5"
+  },
+  "/java-docs/exercises/inner-classes/inner-classes01-ec3": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-inner-classes-inner-classes-014-ed-38f"
+  },
+  "/java-docs/exercises/inner-classes/inner-classes02-c8d": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-inner-classes-inner-classes-022-c-2-5af"
+  },
+  "/java-docs/exercises/inner-classes/inner-classes03-116": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-inner-classes-inner-classes-03356-980"
+  },
+  "/java-docs/exercises/inner-classes/inner-classes04-b30": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-inner-classes-inner-classes-046-d-3-6e9"
+  },
+  "/java-docs/exercises/interfaces/-d57": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-interfaces-a-5-e-8fd"
+  },
+  "/java-docs/exercises/interfaces/interfaces01-831": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-interfaces-interfaces-0156-a-b2a"
+  },
+  "/java-docs/exercises/io-streams/-b5a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-io-streams-94-e-b1e"
+  },
+  "/java-docs/exercises/io-streams/io-streams01-e54": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-io-streams-io-streams-01109-c00"
+  },
+  "/java-docs/exercises/io-streams/io-streams02-ef2": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-io-streams-io-streams-02-a-25-69f"
+  },
+  "/java-docs/exercises/java-api/-397": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-java-api-cb-2-53f"
+  },
+  "/java-docs/exercises/java-api/java-api01-76f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-java-api-java-api-01551-2bd"
+  },
+  "/java-docs/exercises/java-api/java-api02-1a0": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-java-api-java-api-022-b-5-30d"
+  },
+  "/java-docs/exercises/java-api/java-api03-59a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-java-api-java-api-03-d-6-d-b98"
+  },
+  "/java-docs/exercises/java-api/java-api04-513": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-java-api-java-api-0401-c-d31"
+  },
+  "/java-docs/exercises/java-stream-api/-5a4": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-java-stream-api-9-d-1-d69"
+  },
+  "/java-docs/exercises/java-stream-api/java-stream-api01-996": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-java-stream-api-java-stream-api-01-b-88-c44"
+  },
+  "/java-docs/exercises/java-stream-api/java-stream-api02-581": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-java-stream-api-java-stream-api-02-cf-6-f48"
+  },
+  "/java-docs/exercises/javafx/-74a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-javafx-b-01-011"
+  },
+  "/java-docs/exercises/javafx/javafx01-8b5": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-javafx-javafx-0159-b-33e"
+  },
+  "/java-docs/exercises/javafx/javafx02-6eb": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-javafx-javafx-021-c-8-7f7"
+  },
+  "/java-docs/exercises/javafx/javafx03-1d3": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-javafx-javafx-03987-162"
+  },
+  "/java-docs/exercises/javafx/javafx04-8b3": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-javafx-javafx-04420-635"
+  },
+  "/java-docs/exercises/javafx/javafx05-b61": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-javafx-javafx-05654-512"
+  },
+  "/java-docs/exercises/javafx/javafx06-a75": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-javafx-javafx-069-d-8-844"
+  },
+  "/java-docs/exercises/javafx/javafx07-eef": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-javafx-javafx-07-b-93-b46"
+  },
+  "/java-docs/exercises/javafx/javafx08-19f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-javafx-javafx-0841-a-1cc"
+  },
+  "/java-docs/exercises/lambdas/-2a2": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-lambdas-770-e1d"
+  },
+  "/java-docs/exercises/lambdas/lambdas01-98d": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-lambdas-lambdas-019-bc-982"
+  },
+  "/java-docs/exercises/lambdas/lambdas02-d45": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-lambdas-lambdas-023-c-2-c1a"
+  },
+  "/java-docs/exercises/lambdas/lambdas03-717": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-lambdas-lambdas-03248-f5e"
+  },
+  "/java-docs/exercises/lambdas/lambdas04-dd9": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-lambdas-lambdas-049-c-5-f6c"
+  },
+  "/java-docs/exercises/lambdas/lambdas05-a7c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-lambdas-lambdas-0543-c-6e9"
+  },
+  "/java-docs/exercises/loops/-1a4": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-loops-e-0-b-338"
+  },
+  "/java-docs/exercises/loops/loops01-db0": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-loops-loops-01849-d97"
+  },
+  "/java-docs/exercises/loops/loops02-8c0": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-loops-loops-0244-b-a76"
+  },
+  "/java-docs/exercises/loops/loops03-f04": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-loops-loops-0334-d-14f"
+  },
+  "/java-docs/exercises/loops/loops04-681": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-loops-loops-04-d-37-229"
+  },
+  "/java-docs/exercises/loops/loops05-52f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-loops-loops-05-ed-8-6cb"
+  },
+  "/java-docs/exercises/loops/loops06-de3": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-loops-loops-06-dda-e7b"
+  },
+  "/java-docs/exercises/loops/loops07-699": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-loops-loops-07-c-7-d-a4e"
+  },
+  "/java-docs/exercises/loops/loops08-480": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-loops-loops-08-b-7-a-0ef"
+  },
+  "/java-docs/exercises/maps/-ecd": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-maps-d-39-f68"
+  },
+  "/java-docs/exercises/maps/maps01-f29": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-maps-maps-011-dd-5a2"
+  },
+  "/java-docs/exercises/maps/maps02-9a5": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-maps-maps-02859-7ba"
+  },
+  "/java-docs/exercises/oo/-f46": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-oo-b-1-e-350"
+  },
+  "/java-docs/exercises/oo/oo01-e6b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-oo-oo-01-e-6-f-62e"
+  },
+  "/java-docs/exercises/oo/oo02-2e5": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-oo-oo-02-f-45-81c"
+  },
+  "/java-docs/exercises/oo/oo03-f6b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-oo-oo-03-a-54-fd2"
+  },
+  "/java-docs/exercises/oo/oo04-08c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-oo-oo-046-aa-8b6"
+  },
+  "/java-docs/exercises/oo/oo05-503": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-oo-oo-05101-068"
+  },
+  "/java-docs/exercises/oo/oo06-1f2": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-oo-oo-0673-f-533"
+  },
+  "/java-docs/exercises/oo/oo07-6da": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-oo-oo-078-ef-5ea"
+  },
+  "/java-docs/exercises/oo/oo08-7ac": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-oo-oo-087-e-4-a00"
+  },
+  "/java-docs/exercises/operators/-0a0": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-operators-915-749"
+  },
+  "/java-docs/exercises/operators/operators01-01b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-operators-operators-01-a-24-b11"
+  },
+  "/java-docs/exercises/operators/operators02-105": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-operators-operators-02-fc-8-015"
+  },
+  "/java-docs/exercises/operators/operators03-568": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-operators-operators-03-dd-9-e5e"
+  },
+  "/java-docs/exercises/optionals/-79c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-optionals-3-f-7-d62"
+  },
+  "/java-docs/exercises/optionals/optionals01-9ef": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-optionals-optionals-01-a-7-a-f15"
+  },
+  "/java-docs/exercises/optionals/optionals02-157": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-optionals-optionals-024-cf-5b6"
+  },
+  "/java-docs/exercises/optionals/optionals03-f65": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-optionals-optionals-03468-f76"
+  },
+  "/java-docs/exercises/polymorphism/-7b6": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-polymorphism-99-c-1e7"
+  },
+  "/java-docs/exercises/polymorphism/polymorphism01-a4c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-polymorphism-polymorphism-01-f-3-e-a95"
+  },
+  "/java-docs/exercises/polymorphism/polymorphism02-b5a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-polymorphism-polymorphism-02-bbd-aab"
+  },
+  "/java-docs/exercises/polymorphism/polymorphism03-97f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-polymorphism-polymorphism-03-b-3-e-349"
+  },
+  "/java-docs/exercises/polymorphism/polymorphism04-fec": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-polymorphism-polymorphism-04486-834"
+  },
+  "/java-docs/exercises/trees/-c89": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-trees-883-1cc"
+  },
+  "/java-docs/exercises/trees/trees01-a8e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-trees-trees-01-fe-5-a86"
+  },
+  "/java-docs/exercises/unit-tests/-e6a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-unit-tests-0-e-1-d8b"
+  },
+  "/java-docs/exercises/unit-tests/unit-tests01-5e6": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-unit-tests-unit-tests-01-dff-7f0"
+  },
+  "/java-docs/exercises/unit-tests/unit-tests02-3d9": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-unit-tests-unit-tests-02298-443"
+  },
+  "/java-docs/exercises/unit-tests/unit-tests03-3ec": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-unit-tests-unit-tests-031-b-9-8c4"
+  },
+  "/java-docs/exercises/unit-tests/unit-tests04-fe8": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-exercises-unit-tests-unit-tests-04203-14f"
+  },
+  "/java-docs/-8a5": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---java-docs-b-95-d4a"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "exam-exercises/exam-exercises-java1/activity-diagrams/timestamp-converter",
+  "title": "Zeitstempel-Konvertierer",
+  "description": "",
+  "source": "@site/docs/exam-exercises/exam-exercises-java1/activity-diagrams/timestamp-converter.md",
+  "sourceDirName": "exam-exercises/exam-exercises-java1/activity-diagrams",
+  "slug": "/exam-exercises/exam-exercises-java1/activity-diagrams/timestamp-converter",
+  "permalink": "/java-docs/exam-exercises/exam-exercises-java1/activity-diagrams/timestamp-converter",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exam-exercises/exam-exercises-java1/activity-diagrams/timestamp-converter.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "activity-diagrams",
+      "permalink": "/java-docs/tags/activity-diagrams"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Zeitstempel-Konvertierer",
+    "description": "",
+    "tags": [
+      "activity-diagrams"
+    ]
+  },
+  "sidebar": "examExercisesSidebar",
+  "previous": {
+    "title": "Selectionsort",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java1/activity-diagrams/selection-sort"
+  },
+  "next": {
+    "title": "Würfelspiele",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java1/dice-games/"
+  }
+}

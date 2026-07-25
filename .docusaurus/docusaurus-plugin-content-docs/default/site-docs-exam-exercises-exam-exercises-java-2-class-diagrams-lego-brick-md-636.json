@@ -1,0 +1,54 @@
+{
+  "id": "exam-exercises/exam-exercises-java2/class-diagrams/lego-brick",
+  "title": "Lego-Baustein",
+  "description": "",
+  "source": "@site/docs/exam-exercises/exam-exercises-java2/class-diagrams/lego-brick.md",
+  "sourceDirName": "exam-exercises/exam-exercises-java2/class-diagrams",
+  "slug": "/exam-exercises/exam-exercises-java2/class-diagrams/lego-brick",
+  "permalink": "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/lego-brick",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exam-exercises/exam-exercises-java2/class-diagrams/lego-brick.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "inheritance",
+      "permalink": "/java-docs/tags/inheritance"
+    },
+    {
+      "inline": true,
+      "label": "polymorphism",
+      "permalink": "/java-docs/tags/polymorphism"
+    },
+    {
+      "inline": true,
+      "label": "interfaces",
+      "permalink": "/java-docs/tags/interfaces"
+    },
+    {
+      "inline": true,
+      "label": "comparators",
+      "permalink": "/java-docs/tags/comparators"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Lego-Baustein",
+    "description": "",
+    "tags": [
+      "inheritance",
+      "polymorphism",
+      "interfaces",
+      "comparators"
+    ]
+  },
+  "sidebar": "examExercisesSidebar",
+  "previous": {
+    "title": "Stellenangebot",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/job-offer"
+  },
+  "next": {
+    "title": "Bibliothek",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/library"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "exercises/polymorphism/polymorphism02",
+  "title": "Polymorphism02",
+  "description": "",
+  "source": "@site/docs/exercises/polymorphism/polymorphism02.mdx",
+  "sourceDirName": "exercises/polymorphism",
+  "slug": "/exercises/polymorphism/polymorphism02",
+  "permalink": "/java-docs/exercises/polymorphism/polymorphism02",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/polymorphism/polymorphism02.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Polymorphism02",
+    "description": ""
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "Polymorphism01",
+    "permalink": "/java-docs/exercises/polymorphism/polymorphism01"
+  },
+  "next": {
+    "title": "Polymorphism03",
+    "permalink": "/java-docs/exercises/polymorphism/polymorphism03"
+  }
+}

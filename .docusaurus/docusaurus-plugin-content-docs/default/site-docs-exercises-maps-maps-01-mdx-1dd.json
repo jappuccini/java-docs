@@ -1,0 +1,27 @@
+{
+  "id": "exercises/maps/maps01",
+  "title": "Maps01",
+  "description": "",
+  "source": "@site/docs/exercises/maps/maps01.mdx",
+  "sourceDirName": "exercises/maps",
+  "slug": "/exercises/maps/maps01",
+  "permalink": "/java-docs/exercises/maps/maps01",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/maps/maps01.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Maps01",
+    "description": ""
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "Assoziativspeicher (Maps)",
+    "permalink": "/java-docs/exercises/maps/"
+  },
+  "next": {
+    "title": "Maps02",
+    "permalink": "/java-docs/exercises/maps/maps02"
+  }
+}

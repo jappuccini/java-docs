@@ -1,0 +1,38 @@
+{
+  "id": "documentation/class-structure",
+  "title": "Aufbau einer Java-Klasse",
+  "description": "",
+  "source": "@site/docs/documentation/class-structure.mdx",
+  "sourceDirName": "documentation",
+  "slug": "/documentation/class-structure",
+  "permalink": "/java-docs/documentation/class-structure",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/documentation/class-structure.mdx",
+  "tags": [
+    {
+      "inline": true,
+      "label": "class-structure",
+      "permalink": "/java-docs/tags/class-structure"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 20,
+  "frontMatter": {
+    "title": "Aufbau einer Java-Klasse",
+    "description": "",
+    "sidebar_position": 20,
+    "tags": [
+      "class-structure"
+    ]
+  },
+  "sidebar": "documentationSidebar",
+  "previous": {
+    "title": "Die Programmiersprache Java",
+    "permalink": "/java-docs/documentation/java"
+  },
+  "next": {
+    "title": "Binärzahlen",
+    "permalink": "/java-docs/documentation/binary-numbers"
+  }
+}

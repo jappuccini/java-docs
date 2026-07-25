@@ -1,0 +1,36 @@
+{
+  "id": "exam-exercises/exam-exercises-java1/class-diagrams/gift-bag",
+  "title": "Geschenkesack",
+  "description": "",
+  "source": "@site/docs/exam-exercises/exam-exercises-java1/class-diagrams/gift-bag.md",
+  "sourceDirName": "exam-exercises/exam-exercises-java1/class-diagrams",
+  "slug": "/exam-exercises/exam-exercises-java1/class-diagrams/gift-bag",
+  "permalink": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/gift-bag",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exam-exercises/exam-exercises-java1/class-diagrams/gift-bag.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "oo",
+      "permalink": "/java-docs/tags/oo"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Geschenkesack",
+    "description": "",
+    "tags": [
+      "oo"
+    ]
+  },
+  "sidebar": "examExercisesSidebar",
+  "previous": {
+    "title": "Fast Food",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/fast-food"
+  },
+  "next": {
+    "title": "Tiefgarage",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/parking-garage"
+  }
+}

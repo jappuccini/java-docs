@@ -1,0 +1,27 @@
+{
+  "id": "exercises/oo/oo07",
+  "title": "OO07",
+  "description": "",
+  "source": "@site/docs/exercises/oo/oo07.mdx",
+  "sourceDirName": "exercises/oo",
+  "slug": "/exercises/oo/oo07",
+  "permalink": "/java-docs/exercises/oo/oo07",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/oo/oo07.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "OO07",
+    "description": ""
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "OO06",
+    "permalink": "/java-docs/exercises/oo/oo06"
+  },
+  "next": {
+    "title": "OO08",
+    "permalink": "/java-docs/exercises/oo/oo08"
+  }
+}

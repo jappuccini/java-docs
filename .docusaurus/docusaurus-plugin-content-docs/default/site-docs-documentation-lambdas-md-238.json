@@ -1,0 +1,44 @@
+{
+  "id": "documentation/lambdas",
+  "title": "Lambda-Ausdrücke (Lambdas)",
+  "description": "",
+  "source": "@site/docs/documentation/lambdas.md",
+  "sourceDirName": "documentation",
+  "slug": "/documentation/lambdas",
+  "permalink": "/java-docs/documentation/lambdas",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/documentation/lambdas.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "inner-classes",
+      "permalink": "/java-docs/tags/inner-classes"
+    },
+    {
+      "inline": true,
+      "label": "lambdas",
+      "permalink": "/java-docs/tags/lambdas"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 265,
+  "frontMatter": {
+    "title": "Lambda-Ausdrücke (Lambdas)",
+    "description": "",
+    "sidebar_position": 265,
+    "tags": [
+      "inner-classes",
+      "lambdas"
+    ]
+  },
+  "sidebar": "documentationSidebar",
+  "previous": {
+    "title": "Innere Klassen (Inner Classes)",
+    "permalink": "/java-docs/documentation/inner-classes"
+  },
+  "next": {
+    "title": "Generische Programmierung",
+    "permalink": "/java-docs/documentation/generics"
+  }
+}

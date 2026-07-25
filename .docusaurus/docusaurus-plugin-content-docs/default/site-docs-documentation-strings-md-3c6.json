@@ -1,0 +1,44 @@
+{
+  "id": "documentation/strings",
+  "title": "Zeichenketten (Strings)",
+  "description": "",
+  "source": "@site/docs/documentation/strings.md",
+  "sourceDirName": "documentation",
+  "slug": "/documentation/strings",
+  "permalink": "/java-docs/documentation/strings",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/documentation/strings.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "java-api",
+      "permalink": "/java-docs/tags/java-api"
+    },
+    {
+      "inline": true,
+      "label": "strings",
+      "permalink": "/java-docs/tags/strings"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 50,
+  "frontMatter": {
+    "title": "Zeichenketten (Strings)",
+    "description": "",
+    "sidebar_position": 50,
+    "tags": [
+      "java-api",
+      "strings"
+    ]
+  },
+  "sidebar": "documentationSidebar",
+  "previous": {
+    "title": "Datenobjekte",
+    "permalink": "/java-docs/documentation/data-objects"
+  },
+  "next": {
+    "title": "Operatoren",
+    "permalink": "/java-docs/documentation/operators"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "documentation/slf4j",
+  "title": "Simple Logging Facade for Java (SLF4J)",
+  "description": "",
+  "source": "@site/docs/documentation/slf4j.mdx",
+  "sourceDirName": "documentation",
+  "slug": "/documentation/slf4j",
+  "permalink": "/java-docs/documentation/slf4j",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/documentation/slf4j.mdx",
+  "tags": [
+    {
+      "inline": true,
+      "label": "slf4j",
+      "permalink": "/java-docs/tags/slf-4-j"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 257,
+  "frontMatter": {
+    "title": "Simple Logging Facade for Java (SLF4J)",
+    "description": "",
+    "sidebar_position": 257,
+    "tags": [
+      "slf4j"
+    ]
+  },
+  "sidebar": "documentationSidebar",
+  "previous": {
+    "title": "Lombok",
+    "permalink": "/java-docs/documentation/lombok"
+  },
+  "next": {
+    "title": "Innere Klassen (Inner Classes)",
+    "permalink": "/java-docs/documentation/inner-classes"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "exercises/exceptions/exceptions02",
+  "title": "Exceptions02",
+  "description": "",
+  "source": "@site/docs/exercises/exceptions/exceptions02.mdx",
+  "sourceDirName": "exercises/exceptions",
+  "slug": "/exercises/exceptions/exceptions02",
+  "permalink": "/java-docs/exercises/exceptions/exceptions02",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/exceptions/exceptions02.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Exceptions02",
+    "description": ""
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "Exceptions01",
+    "permalink": "/java-docs/exercises/exceptions/exceptions01"
+  },
+  "next": {
+    "title": "Exceptions03",
+    "permalink": "/java-docs/exercises/exceptions/exceptions03"
+  }
+}

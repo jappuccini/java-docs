@@ -1,0 +1,60 @@
+{
+  "id": "exam-exercises/exam-exercises-java1/class-diagrams/cookie-jar",
+  "title": "Plätzchendose",
+  "description": "",
+  "source": "@site/docs/exam-exercises/exam-exercises-java1/class-diagrams/cookie-jar.md",
+  "sourceDirName": "exam-exercises/exam-exercises-java1/class-diagrams",
+  "slug": "/exam-exercises/exam-exercises-java1/class-diagrams/cookie-jar",
+  "permalink": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/cookie-jar",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exam-exercises/exam-exercises-java1/class-diagrams/cookie-jar.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "oo",
+      "permalink": "/java-docs/tags/oo"
+    },
+    {
+      "inline": true,
+      "label": "enumerations",
+      "permalink": "/java-docs/tags/enumerations"
+    },
+    {
+      "inline": true,
+      "label": "inheritance",
+      "permalink": "/java-docs/tags/inheritance"
+    },
+    {
+      "inline": true,
+      "label": "polymorphism",
+      "permalink": "/java-docs/tags/polymorphism"
+    },
+    {
+      "inline": true,
+      "label": "io-streams",
+      "permalink": "/java-docs/tags/io-streams"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Plätzchendose",
+    "description": "",
+    "tags": [
+      "oo",
+      "enumerations",
+      "inheritance",
+      "polymorphism",
+      "io-streams"
+    ]
+  },
+  "sidebar": "examExercisesSidebar",
+  "previous": {
+    "title": "Weihnachtsbaum",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/christmas-tree"
+  },
+  "next": {
+    "title": "Kreatur",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/creature"
+  }
+}

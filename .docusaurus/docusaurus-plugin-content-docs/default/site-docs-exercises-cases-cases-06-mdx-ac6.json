@@ -1,0 +1,27 @@
+{
+  "id": "exercises/cases/cases06",
+  "title": "Cases06",
+  "description": "",
+  "source": "@site/docs/exercises/cases/cases06.mdx",
+  "sourceDirName": "exercises/cases",
+  "slug": "/exercises/cases/cases06",
+  "permalink": "/java-docs/exercises/cases/cases06",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/cases/cases06.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Cases06",
+    "description": ""
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "Cases05",
+    "permalink": "/java-docs/exercises/cases/cases05"
+  },
+  "next": {
+    "title": "Schleifen",
+    "permalink": "/java-docs/exercises/loops/"
+  }
+}

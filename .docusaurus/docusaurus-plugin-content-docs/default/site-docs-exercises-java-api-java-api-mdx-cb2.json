@@ -1,0 +1,56 @@
+{
+  "id": "exercises/java-api/java-api",
+  "title": "Die Java API",
+  "description": "",
+  "source": "@site/docs/exercises/java-api/java-api.mdx",
+  "sourceDirName": "exercises/java-api",
+  "slug": "/exercises/java-api/",
+  "permalink": "/java-docs/exercises/java-api/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/java-api/java-api.mdx",
+  "tags": [
+    {
+      "inline": true,
+      "label": "java-api",
+      "permalink": "/java-docs/tags/java-api"
+    },
+    {
+      "inline": true,
+      "label": "dates-and-times",
+      "permalink": "/java-docs/tags/dates-and-times"
+    },
+    {
+      "inline": true,
+      "label": "files",
+      "permalink": "/java-docs/tags/files"
+    },
+    {
+      "inline": true,
+      "label": "wrappers",
+      "permalink": "/java-docs/tags/wrappers"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 90,
+  "frontMatter": {
+    "title": "Die Java API",
+    "description": "",
+    "sidebar_position": 90,
+    "tags": [
+      "java-api",
+      "dates-and-times",
+      "files",
+      "wrappers"
+    ]
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "OO08",
+    "permalink": "/java-docs/exercises/oo/oo08"
+  },
+  "next": {
+    "title": "JavaAPI01",
+    "permalink": "/java-docs/exercises/java-api/java-api01"
+  }
+}

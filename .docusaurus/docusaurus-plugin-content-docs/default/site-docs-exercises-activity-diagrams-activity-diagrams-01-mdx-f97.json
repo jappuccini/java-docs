@@ -1,0 +1,27 @@
+{
+  "id": "exercises/activity-diagrams/activity-diagrams01",
+  "title": "ActivityDiagrams01",
+  "description": "",
+  "source": "@site/docs/exercises/activity-diagrams/activity-diagrams01.mdx",
+  "sourceDirName": "exercises/activity-diagrams",
+  "slug": "/exercises/activity-diagrams/activity-diagrams01",
+  "permalink": "/java-docs/exercises/activity-diagrams/activity-diagrams01",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/activity-diagrams/activity-diagrams01.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "ActivityDiagrams01",
+    "description": ""
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "Aktivitätsdiagramme",
+    "permalink": "/java-docs/exercises/activity-diagrams/"
+  },
+  "next": {
+    "title": "Polymorphie",
+    "permalink": "/java-docs/exercises/polymorphism/"
+  }
+}

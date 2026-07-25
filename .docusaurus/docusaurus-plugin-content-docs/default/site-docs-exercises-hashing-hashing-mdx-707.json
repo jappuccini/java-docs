@@ -1,0 +1,38 @@
+{
+  "id": "exercises/hashing/hashing",
+  "title": "Schlüsseltransformationen (Hashing)",
+  "description": "",
+  "source": "@site/docs/exercises/hashing/hashing.mdx",
+  "sourceDirName": "exercises/hashing",
+  "slug": "/exercises/hashing/",
+  "permalink": "/java-docs/exercises/hashing/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/hashing/hashing.mdx",
+  "tags": [
+    {
+      "inline": true,
+      "label": "hashing",
+      "permalink": "/java-docs/tags/hashing"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 225,
+  "frontMatter": {
+    "title": "Schlüsseltransformationen (Hashing)",
+    "description": "",
+    "sidebar_position": 225,
+    "tags": [
+      "hashing"
+    ]
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "IOStreams02",
+    "permalink": "/java-docs/exercises/io-streams/io-streams02"
+  },
+  "next": {
+    "title": "Hashing01",
+    "permalink": "/java-docs/exercises/hashing/hashing01"
+  }
+}

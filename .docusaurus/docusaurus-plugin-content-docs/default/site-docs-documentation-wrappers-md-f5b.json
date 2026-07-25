@@ -1,0 +1,44 @@
+{
+  "id": "documentation/wrappers",
+  "title": "Wrapper-Klassen",
+  "description": "",
+  "source": "@site/docs/documentation/wrappers.md",
+  "sourceDirName": "documentation",
+  "slug": "/documentation/wrappers",
+  "permalink": "/java-docs/documentation/wrappers",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/documentation/wrappers.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "java-api",
+      "permalink": "/java-docs/tags/java-api"
+    },
+    {
+      "inline": true,
+      "label": "wrappers",
+      "permalink": "/java-docs/tags/wrappers"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 141,
+  "frontMatter": {
+    "title": "Wrapper-Klassen",
+    "description": "",
+    "sidebar_position": 141,
+    "tags": [
+      "java-api",
+      "wrappers"
+    ]
+  },
+  "sidebar": "documentationSidebar",
+  "previous": {
+    "title": "Feldbasierte Listen (ArrayLists)",
+    "permalink": "/java-docs/documentation/array-lists"
+  },
+  "next": {
+    "title": "Datums- und Zeitangaben",
+    "permalink": "/java-docs/documentation/dates-and-times"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "exam-exercises/exam-exercises-java2/queries/planets",
+  "title": "Planeten",
+  "description": "",
+  "source": "@site/docs/exam-exercises/exam-exercises-java2/queries/planets.md",
+  "sourceDirName": "exam-exercises/exam-exercises-java2/queries",
+  "slug": "/exam-exercises/exam-exercises-java2/queries/planets",
+  "permalink": "/java-docs/exam-exercises/exam-exercises-java2/queries/planets",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exam-exercises/exam-exercises-java2/queries/planets.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "records",
+      "permalink": "/java-docs/tags/records"
+    },
+    {
+      "inline": true,
+      "label": "maps",
+      "permalink": "/java-docs/tags/maps"
+    },
+    {
+      "inline": true,
+      "label": "optionals",
+      "permalink": "/java-docs/tags/optionals"
+    },
+    {
+      "inline": true,
+      "label": "java-stream-api",
+      "permalink": "/java-docs/tags/java-stream-api"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Planeten",
+    "description": "",
+    "tags": [
+      "records",
+      "maps",
+      "optionals",
+      "java-stream-api"
+    ]
+  },
+  "sidebar": "examExercisesSidebar",
+  "previous": {
+    "title": "Smartphone-Shop",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java2/queries/phone-store"
+  },
+  "next": {
+    "title": "Panzer",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java2/queries/tanks"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "exercises/exceptions/exceptions03",
+  "title": "Exceptions03",
+  "description": "",
+  "source": "@site/docs/exercises/exceptions/exceptions03.mdx",
+  "sourceDirName": "exercises/exceptions",
+  "slug": "/exercises/exceptions/exceptions03",
+  "permalink": "/java-docs/exercises/exceptions/exceptions03",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/exceptions/exceptions03.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Exceptions03",
+    "description": ""
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "Exceptions02",
+    "permalink": "/java-docs/exercises/exceptions/exceptions02"
+  },
+  "next": {
+    "title": "Innere Klassen (Inner Classes)",
+    "permalink": "/java-docs/exercises/inner-classes/"
+  }
+}

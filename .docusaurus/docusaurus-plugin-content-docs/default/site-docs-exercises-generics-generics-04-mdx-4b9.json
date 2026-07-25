@@ -1,0 +1,27 @@
+{
+  "id": "exercises/generics/generics04",
+  "title": "Generics04",
+  "description": "",
+  "source": "@site/docs/exercises/generics/generics04.mdx",
+  "sourceDirName": "exercises/generics",
+  "slug": "/exercises/generics/generics04",
+  "permalink": "/java-docs/exercises/generics/generics04",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/generics/generics04.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Generics04",
+    "description": ""
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "Generics03",
+    "permalink": "/java-docs/exercises/generics/generics03"
+  },
+  "next": {
+    "title": "Assoziativspeicher (Maps)",
+    "permalink": "/java-docs/exercises/maps/"
+  }
+}

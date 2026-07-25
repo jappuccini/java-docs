@@ -1,0 +1,54 @@
+{
+  "id": "exam-exercises/exam-exercises-java2/class-diagrams/shopping-portal",
+  "title": "Einkaufsportal",
+  "description": "",
+  "source": "@site/docs/exam-exercises/exam-exercises-java2/class-diagrams/shopping-portal.md",
+  "sourceDirName": "exam-exercises/exam-exercises-java2/class-diagrams",
+  "slug": "/exam-exercises/exam-exercises-java2/class-diagrams/shopping-portal",
+  "permalink": "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/shopping-portal",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exam-exercises/exam-exercises-java2/class-diagrams/shopping-portal.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "interfaces",
+      "permalink": "/java-docs/tags/interfaces"
+    },
+    {
+      "inline": true,
+      "label": "records",
+      "permalink": "/java-docs/tags/records"
+    },
+    {
+      "inline": true,
+      "label": "inner-classes",
+      "permalink": "/java-docs/tags/inner-classes"
+    },
+    {
+      "inline": true,
+      "label": "generics",
+      "permalink": "/java-docs/tags/generics"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Einkaufsportal",
+    "description": "",
+    "tags": [
+      "interfaces",
+      "records",
+      "inner-classes",
+      "generics"
+    ]
+  },
+  "sidebar": "examExercisesSidebar",
+  "previous": {
+    "title": "Shop",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/shop"
+  },
+  "next": {
+    "title": "Raumstation",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/space-station"
+  }
+}

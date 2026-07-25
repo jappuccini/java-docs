@@ -1,0 +1,38 @@
+{
+  "id": "exercises/unit-tests/unit-tests",
+  "title": "Komponententests (Unit-Tests)",
+  "description": "",
+  "source": "@site/docs/exercises/unit-tests/unit-tests.mdx",
+  "sourceDirName": "exercises/unit-tests",
+  "slug": "/exercises/unit-tests/",
+  "permalink": "/java-docs/exercises/unit-tests/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/unit-tests/unit-tests.mdx",
+  "tags": [
+    {
+      "inline": true,
+      "label": "unit-tests",
+      "permalink": "/java-docs/tags/unit-tests"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 210,
+  "frontMatter": {
+    "title": "Komponententests (Unit-Tests)",
+    "description": "",
+    "sidebar_position": 210,
+    "tags": [
+      "unit-tests"
+    ]
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "JavaStreamAPI02",
+    "permalink": "/java-docs/exercises/java-stream-api/java-stream-api02"
+  },
+  "next": {
+    "title": "UnitTests01",
+    "permalink": "/java-docs/exercises/unit-tests/unit-tests01"
+  }
+}

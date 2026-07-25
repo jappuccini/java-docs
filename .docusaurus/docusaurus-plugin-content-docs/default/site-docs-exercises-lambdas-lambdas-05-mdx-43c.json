@@ -1,0 +1,27 @@
+{
+  "id": "exercises/lambdas/lambdas05",
+  "title": "Lambdas05",
+  "description": "",
+  "source": "@site/docs/exercises/lambdas/lambdas05.mdx",
+  "sourceDirName": "exercises/lambdas",
+  "slug": "/exercises/lambdas/lambdas05",
+  "permalink": "/java-docs/exercises/lambdas/lambdas05",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/lambdas/lambdas05.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Lambdas05",
+    "description": ""
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "Lambdas04",
+    "permalink": "/java-docs/exercises/lambdas/lambdas04"
+  },
+  "next": {
+    "title": "Generische Programmierung",
+    "permalink": "/java-docs/exercises/generics/"
+  }
+}

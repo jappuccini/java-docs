@@ -1,0 +1,27 @@
+{
+  "id": "exercises/optionals/optionals02",
+  "title": "Optionals02",
+  "description": "",
+  "source": "@site/docs/exercises/optionals/optionals02.mdx",
+  "sourceDirName": "exercises/optionals",
+  "slug": "/exercises/optionals/optionals02",
+  "permalink": "/java-docs/exercises/optionals/optionals02",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/optionals/optionals02.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Optionals02",
+    "description": ""
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "Optionals01",
+    "permalink": "/java-docs/exercises/optionals/optionals01"
+  },
+  "next": {
+    "title": "Optionals03",
+    "permalink": "/java-docs/exercises/optionals/optionals03"
+  }
+}

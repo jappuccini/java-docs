@@ -1,0 +1,27 @@
+{
+  "id": "exercises/java-stream-api/java-stream-api01",
+  "title": "JavaStreamAPI01",
+  "description": "",
+  "source": "@site/docs/exercises/java-stream-api/java-stream-api01.mdx",
+  "sourceDirName": "exercises/java-stream-api",
+  "slug": "/exercises/java-stream-api/java-stream-api01",
+  "permalink": "/java-docs/exercises/java-stream-api/java-stream-api01",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/java-stream-api/java-stream-api01.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "JavaStreamAPI01",
+    "description": ""
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "Die Java Stream API",
+    "permalink": "/java-docs/exercises/java-stream-api/"
+  },
+  "next": {
+    "title": "JavaStreamAPI02",
+    "permalink": "/java-docs/exercises/java-stream-api/java-stream-api02"
+  }
+}

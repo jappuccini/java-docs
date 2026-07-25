@@ -1,0 +1,27 @@
+{
+  "id": "exercises/cases/cases01",
+  "title": "Cases01",
+  "description": "",
+  "source": "@site/docs/exercises/cases/cases01.mdx",
+  "sourceDirName": "exercises/cases",
+  "slug": "/exercises/cases/cases01",
+  "permalink": "/java-docs/exercises/cases/cases01",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/cases/cases01.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Cases01",
+    "description": ""
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "Verzweigungen",
+    "permalink": "/java-docs/exercises/cases/"
+  },
+  "next": {
+    "title": "Cases02",
+    "permalink": "/java-docs/exercises/cases/cases02"
+  }
+}

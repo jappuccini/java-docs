@@ -1,0 +1,48 @@
+{
+  "id": "exam-exercises/exam-exercises-java1/class-diagrams/santa-claus",
+  "title": "Weihnachtsmann",
+  "description": "",
+  "source": "@site/docs/exam-exercises/exam-exercises-java1/class-diagrams/santa-claus.md",
+  "sourceDirName": "exam-exercises/exam-exercises-java1/class-diagrams",
+  "slug": "/exam-exercises/exam-exercises-java1/class-diagrams/santa-claus",
+  "permalink": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/santa-claus",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exam-exercises/exam-exercises-java1/class-diagrams/santa-claus.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "oo",
+      "permalink": "/java-docs/tags/oo"
+    },
+    {
+      "inline": true,
+      "label": "inheritance",
+      "permalink": "/java-docs/tags/inheritance"
+    },
+    {
+      "inline": true,
+      "label": "polymorphism",
+      "permalink": "/java-docs/tags/polymorphism"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Weihnachtsmann",
+    "description": "",
+    "tags": [
+      "oo",
+      "inheritance",
+      "polymorphism"
+    ]
+  },
+  "sidebar": "examExercisesSidebar",
+  "previous": {
+    "title": "Restaurant",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/restaurant"
+  },
+  "next": {
+    "title": "Geometrische Form",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/shape"
+  }
+}

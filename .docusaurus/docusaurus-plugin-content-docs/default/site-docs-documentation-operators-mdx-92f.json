@@ -1,0 +1,38 @@
+{
+  "id": "documentation/operators",
+  "title": "Operatoren",
+  "description": "",
+  "source": "@site/docs/documentation/operators.mdx",
+  "sourceDirName": "documentation",
+  "slug": "/documentation/operators",
+  "permalink": "/java-docs/documentation/operators",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/documentation/operators.mdx",
+  "tags": [
+    {
+      "inline": true,
+      "label": "operators",
+      "permalink": "/java-docs/tags/operators"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 60,
+  "frontMatter": {
+    "title": "Operatoren",
+    "description": "",
+    "sidebar_position": 60,
+    "tags": [
+      "operators"
+    ]
+  },
+  "sidebar": "documentationSidebar",
+  "previous": {
+    "title": "Zeichenketten (Strings)",
+    "permalink": "/java-docs/documentation/strings"
+  },
+  "next": {
+    "title": "Mathematische Berechnungen",
+    "permalink": "/java-docs/documentation/calculations"
+  }
+}

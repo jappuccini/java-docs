@@ -1,0 +1,44 @@
+{
+  "id": "documentation/activity-diagrams",
+  "title": "Aktivitätsdiagramme",
+  "description": "",
+  "source": "@site/docs/documentation/activity-diagrams.md",
+  "sourceDirName": "documentation",
+  "slug": "/documentation/activity-diagrams",
+  "permalink": "/java-docs/documentation/activity-diagrams",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/documentation/activity-diagrams.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "uml",
+      "permalink": "/java-docs/tags/uml"
+    },
+    {
+      "inline": true,
+      "label": "activity-diagrams",
+      "permalink": "/java-docs/tags/activity-diagrams"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 165,
+  "frontMatter": {
+    "title": "Aktivitätsdiagramme",
+    "description": "",
+    "sidebar_position": 165,
+    "tags": [
+      "uml",
+      "activity-diagrams"
+    ]
+  },
+  "sidebar": "documentationSidebar",
+  "previous": {
+    "title": "Klassendiagramme",
+    "permalink": "/java-docs/documentation/class-diagrams"
+  },
+  "next": {
+    "title": "Vererbung",
+    "permalink": "/java-docs/documentation/inheritance"
+  }
+}

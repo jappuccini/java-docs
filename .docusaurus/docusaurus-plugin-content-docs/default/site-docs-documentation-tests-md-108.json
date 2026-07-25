@@ -1,0 +1,38 @@
+{
+  "id": "documentation/tests",
+  "title": "Softwaretests",
+  "description": "",
+  "source": "@site/docs/documentation/tests.md",
+  "sourceDirName": "documentation",
+  "slug": "/documentation/tests",
+  "permalink": "/java-docs/documentation/tests",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/documentation/tests.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "tests",
+      "permalink": "/java-docs/tags/tests"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 310,
+  "frontMatter": {
+    "title": "Softwaretests",
+    "description": "",
+    "sidebar_position": 310,
+    "tags": [
+      "tests"
+    ]
+  },
+  "sidebar": "documentationSidebar",
+  "previous": {
+    "title": "Die Java Stream API",
+    "permalink": "/java-docs/documentation/java-stream-api"
+  },
+  "next": {
+    "title": "Komponententests (Unit Tests)",
+    "permalink": "/java-docs/documentation/unit-tests"
+  }
+}

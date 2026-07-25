@@ -1,0 +1,27 @@
+{
+  "id": "exercises/trees/trees01",
+  "title": "Trees01",
+  "description": "",
+  "source": "@site/docs/exercises/trees/trees01.mdx",
+  "sourceDirName": "exercises/trees",
+  "slug": "/exercises/trees/trees01",
+  "permalink": "/java-docs/exercises/trees/trees01",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/trees/trees01.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Trees01",
+    "description": ""
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "Bäume",
+    "permalink": "/java-docs/exercises/trees/"
+  },
+  "next": {
+    "title": "Algorithmen",
+    "permalink": "/java-docs/exercises/algorithms/"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": "documentation/files",
+  "title": "Dateien und Verzeichnisse",
+  "description": "",
+  "source": "@site/docs/documentation/files.md",
+  "sourceDirName": "documentation",
+  "slug": "/documentation/files",
+  "permalink": "/java-docs/documentation/files",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/documentation/files.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "java-api",
+      "permalink": "/java-docs/tags/java-api"
+    },
+    {
+      "inline": true,
+      "label": "files",
+      "permalink": "/java-docs/tags/files"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 143,
+  "frontMatter": {
+    "title": "Dateien und Verzeichnisse",
+    "description": "",
+    "sidebar_position": 143,
+    "tags": [
+      "java-api",
+      "files"
+    ]
+  },
+  "sidebar": "documentationSidebar",
+  "previous": {
+    "title": "Datums- und Zeitangaben",
+    "permalink": "/java-docs/documentation/dates-and-times"
+  },
+  "next": {
+    "title": "Aufzählungen (Enumerations)",
+    "permalink": "/java-docs/documentation/enumerations"
+  }
+}

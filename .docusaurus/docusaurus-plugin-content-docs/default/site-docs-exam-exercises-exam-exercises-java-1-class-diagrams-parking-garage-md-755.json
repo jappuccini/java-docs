@@ -1,0 +1,48 @@
+{
+  "id": "exam-exercises/exam-exercises-java1/class-diagrams/parking-garage",
+  "title": "Tiefgarage",
+  "description": "",
+  "source": "@site/docs/exam-exercises/exam-exercises-java1/class-diagrams/parking-garage.md",
+  "sourceDirName": "exam-exercises/exam-exercises-java1/class-diagrams",
+  "slug": "/exam-exercises/exam-exercises-java1/class-diagrams/parking-garage",
+  "permalink": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/parking-garage",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exam-exercises/exam-exercises-java1/class-diagrams/parking-garage.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "oo",
+      "permalink": "/java-docs/tags/oo"
+    },
+    {
+      "inline": true,
+      "label": "inheritance",
+      "permalink": "/java-docs/tags/inheritance"
+    },
+    {
+      "inline": true,
+      "label": "polymorphism",
+      "permalink": "/java-docs/tags/polymorphism"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Tiefgarage",
+    "description": "",
+    "tags": [
+      "oo",
+      "inheritance",
+      "polymorphism"
+    ]
+  },
+  "sidebar": "examExercisesSidebar",
+  "previous": {
+    "title": "Geschenkesack",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/gift-bag"
+  },
+  "next": {
+    "title": "Spieler",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/player"
+  }
+}

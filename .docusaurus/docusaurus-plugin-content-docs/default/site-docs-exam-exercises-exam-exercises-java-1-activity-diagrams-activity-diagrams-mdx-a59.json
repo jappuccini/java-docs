@@ -1,0 +1,29 @@
+{
+  "id": "exam-exercises/exam-exercises-java1/activity-diagrams/activity-diagrams",
+  "title": "Aktivitätsdiagramme",
+  "description": "",
+  "source": "@site/docs/exam-exercises/exam-exercises-java1/activity-diagrams/activity-diagrams.mdx",
+  "sourceDirName": "exam-exercises/exam-exercises-java1/activity-diagrams",
+  "slug": "/exam-exercises/exam-exercises-java1/activity-diagrams/",
+  "permalink": "/java-docs/exam-exercises/exam-exercises-java1/activity-diagrams/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exam-exercises/exam-exercises-java1/activity-diagrams/activity-diagrams.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 20,
+  "frontMatter": {
+    "title": "Aktivitätsdiagramme",
+    "description": "",
+    "sidebar_position": 20
+  },
+  "sidebar": "examExercisesSidebar",
+  "previous": {
+    "title": "Zoo",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/zoo"
+  },
+  "next": {
+    "title": "Geldautomat",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java1/activity-diagrams/cash-machine"
+  }
+}

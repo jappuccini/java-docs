@@ -1,0 +1,38 @@
+{
+  "id": "documentation/coding",
+  "title": "Programmieren",
+  "description": "",
+  "source": "@site/docs/documentation/coding.mdx",
+  "sourceDirName": "documentation",
+  "slug": "/documentation/coding",
+  "permalink": "/java-docs/documentation/coding",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/documentation/coding.mdx",
+  "tags": [
+    {
+      "inline": true,
+      "label": "coding",
+      "permalink": "/java-docs/tags/coding"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "title": "Programmieren",
+    "description": "",
+    "sidebar_position": 10,
+    "tags": [
+      "coding"
+    ]
+  },
+  "sidebar": "documentationSidebar",
+  "previous": {
+    "title": "Einführung",
+    "permalink": "/java-docs/"
+  },
+  "next": {
+    "title": "Die Programmiersprache Java",
+    "permalink": "/java-docs/documentation/java"
+  }
+}

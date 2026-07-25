@@ -1,0 +1,38 @@
+{
+  "id": "documentation/object",
+  "title": "Die Mutter aller Klassen",
+  "description": "",
+  "source": "@site/docs/documentation/object.md",
+  "sourceDirName": "documentation",
+  "slug": "/documentation/object",
+  "permalink": "/java-docs/documentation/object",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/documentation/object.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "object",
+      "permalink": "/java-docs/tags/object"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 190,
+  "frontMatter": {
+    "title": "Die Mutter aller Klassen",
+    "description": "",
+    "sidebar_position": 190,
+    "tags": [
+      "object"
+    ]
+  },
+  "sidebar": "documentationSidebar",
+  "previous": {
+    "title": "(Dynamische) Polymorphie",
+    "permalink": "/java-docs/documentation/polymorphism"
+  },
+  "next": {
+    "title": "Abstrakte und finale Klassen und Methoden",
+    "permalink": "/java-docs/documentation/abstract-and-final"
+  }
+}

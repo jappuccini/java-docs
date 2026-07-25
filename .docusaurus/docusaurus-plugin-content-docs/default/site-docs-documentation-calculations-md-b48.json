@@ -1,0 +1,44 @@
+{
+  "id": "documentation/calculations",
+  "title": "Mathematische Berechnungen",
+  "description": "",
+  "source": "@site/docs/documentation/calculations.md",
+  "sourceDirName": "documentation",
+  "slug": "/documentation/calculations",
+  "permalink": "/java-docs/documentation/calculations",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/documentation/calculations.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "java-api",
+      "permalink": "/java-docs/tags/java-api"
+    },
+    {
+      "inline": true,
+      "label": "math",
+      "permalink": "/java-docs/tags/math"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 70,
+  "frontMatter": {
+    "title": "Mathematische Berechnungen",
+    "description": "",
+    "sidebar_position": 70,
+    "tags": [
+      "java-api",
+      "math"
+    ]
+  },
+  "sidebar": "documentationSidebar",
+  "previous": {
+    "title": "Operatoren",
+    "permalink": "/java-docs/documentation/operators"
+  },
+  "next": {
+    "title": "Pseudozufallszahlen",
+    "permalink": "/java-docs/documentation/pseudo-random-numbers"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": "additional-material/instructions/debugging",
+  "title": "Debuggen mit Eclipse",
+  "description": "",
+  "source": "@site/docs/additional-material/instructions/debugging.md",
+  "sourceDirName": "additional-material/instructions",
+  "slug": "/additional-material/instructions/debugging",
+  "permalink": "/java-docs/additional-material/instructions/debugging",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/additional-material/instructions/debugging.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "debugging",
+      "permalink": "/java-docs/tags/debugging"
+    },
+    {
+      "inline": true,
+      "label": "eclipse",
+      "permalink": "/java-docs/tags/eclipse"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 50,
+  "frontMatter": {
+    "title": "Debuggen mit Eclipse",
+    "description": "",
+    "sidebar_position": 50,
+    "tags": [
+      "debugging",
+      "eclipse"
+    ]
+  },
+  "sidebar": "additionalMaterialSidebar",
+  "previous": {
+    "title": "Arbeiten mit JavaFX",
+    "permalink": "/java-docs/additional-material/instructions/javafx"
+  },
+  "next": {
+    "title": "Steffen",
+    "permalink": "/java-docs/additional-material/steffen/"
+  }
+}

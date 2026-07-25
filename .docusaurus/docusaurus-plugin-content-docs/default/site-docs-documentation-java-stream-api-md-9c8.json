@@ -1,0 +1,38 @@
+{
+  "id": "documentation/java-stream-api",
+  "title": "Die Java Stream API",
+  "description": "",
+  "source": "@site/docs/documentation/java-stream-api.md",
+  "sourceDirName": "documentation",
+  "slug": "/documentation/java-stream-api",
+  "permalink": "/java-docs/documentation/java-stream-api",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/documentation/java-stream-api.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "java-stream-api",
+      "permalink": "/java-docs/tags/java-stream-api"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 300,
+  "frontMatter": {
+    "title": "Die Java Stream API",
+    "description": "",
+    "sidebar_position": 300,
+    "tags": [
+      "java-stream-api"
+    ]
+  },
+  "sidebar": "documentationSidebar",
+  "previous": {
+    "title": "Optionals",
+    "permalink": "/java-docs/documentation/optionals"
+  },
+  "next": {
+    "title": "Softwaretests",
+    "permalink": "/java-docs/documentation/tests"
+  }
+}

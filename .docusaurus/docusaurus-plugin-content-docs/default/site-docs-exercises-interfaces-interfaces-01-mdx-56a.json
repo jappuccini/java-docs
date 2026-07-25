@@ -1,0 +1,27 @@
+{
+  "id": "exercises/interfaces/interfaces01",
+  "title": "Interfaces01",
+  "description": "",
+  "source": "@site/docs/exercises/interfaces/interfaces01.mdx",
+  "sourceDirName": "exercises/interfaces",
+  "slug": "/exercises/interfaces/interfaces01",
+  "permalink": "/java-docs/exercises/interfaces/interfaces01",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/interfaces/interfaces01.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Interfaces01",
+    "description": ""
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "Schnittstellen (Interfaces)",
+    "permalink": "/java-docs/exercises/interfaces/"
+  },
+  "next": {
+    "title": "Komparatoren",
+    "permalink": "/java-docs/exercises/comparators/"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "exercises/enumerations/enumerations",
+  "title": "Aufzählungen (Enumerations)",
+  "description": "",
+  "source": "@site/docs/exercises/enumerations/enumerations.mdx",
+  "sourceDirName": "exercises/enumerations",
+  "slug": "/exercises/enumerations/",
+  "permalink": "/java-docs/exercises/enumerations/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/enumerations/enumerations.mdx",
+  "tags": [
+    {
+      "inline": true,
+      "label": "enumerations",
+      "permalink": "/java-docs/tags/enumerations"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 100,
+  "frontMatter": {
+    "title": "Aufzählungen (Enumerations)",
+    "description": "",
+    "sidebar_position": 100,
+    "tags": [
+      "enumerations"
+    ]
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "JavaAPI04",
+    "permalink": "/java-docs/exercises/java-api/java-api04"
+  },
+  "next": {
+    "title": "Enumerations01",
+    "permalink": "/java-docs/exercises/enumerations/enumerations01"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": "exercises/class-diagrams/class-diagrams",
+  "title": "Klassendiagramme",
+  "description": "",
+  "source": "@site/docs/exercises/class-diagrams/class-diagrams.mdx",
+  "sourceDirName": "exercises/class-diagrams",
+  "slug": "/exercises/class-diagrams/",
+  "permalink": "/java-docs/exercises/class-diagrams/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/class-diagrams/class-diagrams.mdx",
+  "tags": [
+    {
+      "inline": true,
+      "label": "uml",
+      "permalink": "/java-docs/tags/uml"
+    },
+    {
+      "inline": true,
+      "label": "class-diagrams",
+      "permalink": "/java-docs/tags/class-diagrams"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 105,
+  "frontMatter": {
+    "title": "Klassendiagramme",
+    "description": "",
+    "sidebar_position": 105,
+    "tags": [
+      "uml",
+      "class-diagrams"
+    ]
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "Enumerations01",
+    "permalink": "/java-docs/exercises/enumerations/enumerations01"
+  },
+  "next": {
+    "title": "ClassDiagrams01",
+    "permalink": "/java-docs/exercises/class-diagrams/class-diagrams01"
+  }
+}

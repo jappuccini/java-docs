@@ -1,0 +1,38 @@
+{
+  "id": "documentation/gui",
+  "title": "Grafische Benutzeroberflächen",
+  "description": "",
+  "source": "@site/docs/documentation/gui.md",
+  "sourceDirName": "documentation",
+  "slug": "/documentation/gui",
+  "permalink": "/java-docs/documentation/gui",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/documentation/gui.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "gui",
+      "permalink": "/java-docs/tags/gui"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 360,
+  "frontMatter": {
+    "title": "Grafische Benutzeroberflächen",
+    "description": "",
+    "sidebar_position": 360,
+    "tags": [
+      "gui"
+    ]
+  },
+  "sidebar": "documentationSidebar",
+  "previous": {
+    "title": "Algorithmen",
+    "permalink": "/java-docs/documentation/algorithms"
+  },
+  "next": {
+    "title": "JavaFX",
+    "permalink": "/java-docs/documentation/javafx"
+  }
+}

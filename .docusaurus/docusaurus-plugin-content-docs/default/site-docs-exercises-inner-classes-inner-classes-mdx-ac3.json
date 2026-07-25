@@ -1,0 +1,38 @@
+{
+  "id": "exercises/inner-classes/inner-classes",
+  "title": "Innere Klassen (Inner Classes)",
+  "description": "",
+  "source": "@site/docs/exercises/inner-classes/inner-classes.mdx",
+  "sourceDirName": "exercises/inner-classes",
+  "slug": "/exercises/inner-classes/",
+  "permalink": "/java-docs/exercises/inner-classes/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/inner-classes/inner-classes.mdx",
+  "tags": [
+    {
+      "inline": true,
+      "label": "inner-classes",
+      "permalink": "/java-docs/tags/inner-classes"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 170,
+  "frontMatter": {
+    "title": "Innere Klassen (Inner Classes)",
+    "description": "",
+    "sidebar_position": 170,
+    "tags": [
+      "inner-classes"
+    ]
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "Exceptions03",
+    "permalink": "/java-docs/exercises/exceptions/exceptions03"
+  },
+  "next": {
+    "title": "InnerClasses01",
+    "permalink": "/java-docs/exercises/inner-classes/inner-classes01"
+  }
+}

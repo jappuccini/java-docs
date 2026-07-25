@@ -1,0 +1,27 @@
+{
+  "id": "exercises/javafx/javafx01",
+  "title": "JavaFX01",
+  "description": "",
+  "source": "@site/docs/exercises/javafx/javafx01.md",
+  "sourceDirName": "exercises/javafx",
+  "slug": "/exercises/javafx/javafx01",
+  "permalink": "/java-docs/exercises/javafx/javafx01",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/javafx/javafx01.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "JavaFX01",
+    "description": ""
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "JavaFX",
+    "permalink": "/java-docs/exercises/javafx/"
+  },
+  "next": {
+    "title": "JavaFX02",
+    "permalink": "/java-docs/exercises/javafx/javafx02"
+  }
+}

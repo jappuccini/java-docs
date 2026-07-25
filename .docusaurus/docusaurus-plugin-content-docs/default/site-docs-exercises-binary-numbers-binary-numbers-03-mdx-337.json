@@ -1,0 +1,27 @@
+{
+  "id": "exercises/binary-numbers/binary-numbers03",
+  "title": "BinaryNumbers03",
+  "description": "",
+  "source": "@site/docs/exercises/binary-numbers/binary-numbers03.mdx",
+  "sourceDirName": "exercises/binary-numbers",
+  "slug": "/exercises/binary-numbers/binary-numbers03",
+  "permalink": "/java-docs/exercises/binary-numbers/binary-numbers03",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/binary-numbers/binary-numbers03.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "BinaryNumbers03",
+    "description": ""
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "BinaryNumbers02",
+    "permalink": "/java-docs/exercises/binary-numbers/binary-numbers02"
+  },
+  "next": {
+    "title": "Datenobjekte",
+    "permalink": "/java-docs/exercises/data-objects/"
+  }
+}

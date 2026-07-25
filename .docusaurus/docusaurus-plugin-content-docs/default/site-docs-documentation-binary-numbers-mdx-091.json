@@ -1,0 +1,38 @@
+{
+  "id": "documentation/binary-numbers",
+  "title": "Binärzahlen",
+  "description": "",
+  "source": "@site/docs/documentation/binary-numbers.mdx",
+  "sourceDirName": "documentation",
+  "slug": "/documentation/binary-numbers",
+  "permalink": "/java-docs/documentation/binary-numbers",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/documentation/binary-numbers.mdx",
+  "tags": [
+    {
+      "inline": true,
+      "label": "binary-numbers",
+      "permalink": "/java-docs/tags/binary-numbers"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 25,
+  "frontMatter": {
+    "title": "Binärzahlen",
+    "description": "",
+    "sidebar_position": 25,
+    "tags": [
+      "binary-numbers"
+    ]
+  },
+  "sidebar": "documentationSidebar",
+  "previous": {
+    "title": "Aufbau einer Java-Klasse",
+    "permalink": "/java-docs/documentation/class-structure"
+  },
+  "next": {
+    "title": "Datentypen",
+    "permalink": "/java-docs/documentation/data-types"
+  }
+}

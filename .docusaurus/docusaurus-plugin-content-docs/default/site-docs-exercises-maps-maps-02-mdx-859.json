@@ -1,0 +1,27 @@
+{
+  "id": "exercises/maps/maps02",
+  "title": "Maps02",
+  "description": "",
+  "source": "@site/docs/exercises/maps/maps02.mdx",
+  "sourceDirName": "exercises/maps",
+  "slug": "/exercises/maps/maps02",
+  "permalink": "/java-docs/exercises/maps/maps02",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/maps/maps02.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Maps02",
+    "description": ""
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "Maps01",
+    "permalink": "/java-docs/exercises/maps/maps01"
+  },
+  "next": {
+    "title": "Optionals",
+    "permalink": "/java-docs/exercises/optionals/"
+  }
+}

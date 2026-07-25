@@ -1,0 +1,54 @@
+{
+  "id": "exam-exercises/exam-exercises-java2/queries/tanks",
+  "title": "Panzer",
+  "description": "",
+  "source": "@site/docs/exam-exercises/exam-exercises-java2/queries/tanks.md",
+  "sourceDirName": "exam-exercises/exam-exercises-java2/queries",
+  "slug": "/exam-exercises/exam-exercises-java2/queries/tanks",
+  "permalink": "/java-docs/exam-exercises/exam-exercises-java2/queries/tanks",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exam-exercises/exam-exercises-java2/queries/tanks.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "records",
+      "permalink": "/java-docs/tags/records"
+    },
+    {
+      "inline": true,
+      "label": "maps",
+      "permalink": "/java-docs/tags/maps"
+    },
+    {
+      "inline": true,
+      "label": "optionals",
+      "permalink": "/java-docs/tags/optionals"
+    },
+    {
+      "inline": true,
+      "label": "java-stream-api",
+      "permalink": "/java-docs/tags/java-stream-api"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Panzer",
+    "description": "",
+    "tags": [
+      "records",
+      "maps",
+      "optionals",
+      "java-stream-api"
+    ]
+  },
+  "sidebar": "examExercisesSidebar",
+  "previous": {
+    "title": "Planeten",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java2/queries/planets"
+  },
+  "next": {
+    "title": "Terminatoren",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java2/queries/terminators"
+  }
+}

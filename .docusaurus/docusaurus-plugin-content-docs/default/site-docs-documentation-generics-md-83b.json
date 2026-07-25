@@ -1,0 +1,38 @@
+{
+  "id": "documentation/generics",
+  "title": "Generische Programmierung",
+  "description": "",
+  "source": "@site/docs/documentation/generics.md",
+  "sourceDirName": "documentation",
+  "slug": "/documentation/generics",
+  "permalink": "/java-docs/documentation/generics",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/documentation/generics.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "generics",
+      "permalink": "/java-docs/tags/generics"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 270,
+  "frontMatter": {
+    "title": "Generische Programmierung",
+    "description": "",
+    "sidebar_position": 270,
+    "tags": [
+      "generics"
+    ]
+  },
+  "sidebar": "documentationSidebar",
+  "previous": {
+    "title": "Lambda-Ausdrücke (Lambdas)",
+    "permalink": "/java-docs/documentation/lambdas"
+  },
+  "next": {
+    "title": "Assoziativspeicher (Maps)",
+    "permalink": "/java-docs/documentation/maps"
+  }
+}

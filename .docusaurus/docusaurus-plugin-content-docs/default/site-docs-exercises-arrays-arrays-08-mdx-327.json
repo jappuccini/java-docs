@@ -1,0 +1,36 @@
+{
+  "id": "exercises/arrays/arrays08",
+  "title": "Arrays08",
+  "description": "",
+  "source": "@site/docs/exercises/arrays/arrays08.mdx",
+  "sourceDirName": "exercises/arrays",
+  "slug": "/exercises/arrays/arrays08",
+  "permalink": "/java-docs/exercises/arrays/arrays08",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/arrays/arrays08.mdx",
+  "tags": [
+    {
+      "inline": true,
+      "label": "killteam",
+      "permalink": "/java-docs/tags/killteam"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Arrays08",
+    "description": "",
+    "tags": [
+      "killteam"
+    ]
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "Arrays07",
+    "permalink": "/java-docs/exercises/arrays/arrays07"
+  },
+  "next": {
+    "title": "Objektorientierte Programmierung",
+    "permalink": "/java-docs/exercises/oo/"
+  }
+}

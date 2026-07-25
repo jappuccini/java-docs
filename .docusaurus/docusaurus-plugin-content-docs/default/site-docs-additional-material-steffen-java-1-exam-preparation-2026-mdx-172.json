@@ -1,0 +1,30 @@
+{
+  "id": "additional-material/steffen/java-1/exam-preparation/2026",
+  "title": "2026",
+  "description": "",
+  "source": "@site/docs/additional-material/steffen/java-1/exam-preparation/2026.mdx",
+  "sourceDirName": "additional-material/steffen/java-1/exam-preparation",
+  "slug": "/additional-material/steffen/java-1/exam-preparation/2026",
+  "permalink": "/java-docs/additional-material/steffen/java-1/exam-preparation/2026",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/additional-material/steffen/java-1/exam-preparation/2026.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 70,
+  "frontMatter": {
+    "title": "2026",
+    "description": "",
+    "sidebar_position": 70,
+    "tags": []
+  },
+  "sidebar": "additionalMaterialSidebar",
+  "previous": {
+    "title": "Klausurvorbereitung",
+    "permalink": "/java-docs/additional-material/steffen/java-1/exam-preparation/"
+  },
+  "next": {
+    "title": "2025",
+    "permalink": "/java-docs/additional-material/steffen/java-1/exam-preparation/2025"
+  }
+}

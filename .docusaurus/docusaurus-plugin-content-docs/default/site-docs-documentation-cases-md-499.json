@@ -1,0 +1,44 @@
+{
+  "id": "documentation/cases",
+  "title": "Verzweigungen und Fallunterscheidungen",
+  "description": "",
+  "source": "@site/docs/documentation/cases.md",
+  "sourceDirName": "documentation",
+  "slug": "/documentation/cases",
+  "permalink": "/java-docs/documentation/cases",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/documentation/cases.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "control-structures",
+      "permalink": "/java-docs/tags/control-structures"
+    },
+    {
+      "inline": true,
+      "label": "cases",
+      "permalink": "/java-docs/tags/cases"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 95,
+  "frontMatter": {
+    "title": "Verzweigungen und Fallunterscheidungen",
+    "description": "",
+    "sidebar_position": 95,
+    "tags": [
+      "control-structures",
+      "cases"
+    ]
+  },
+  "sidebar": "documentationSidebar",
+  "previous": {
+    "title": "Konsolenanwendungen",
+    "permalink": "/java-docs/documentation/console-applications"
+  },
+  "next": {
+    "title": "Schleifen",
+    "permalink": "/java-docs/documentation/loops"
+  }
+}

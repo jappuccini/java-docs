@@ -1,0 +1,38 @@
+{
+  "id": "documentation/algorithms",
+  "title": "Algorithmen",
+  "description": "",
+  "source": "@site/docs/documentation/algorithms.mdx",
+  "sourceDirName": "documentation",
+  "slug": "/documentation/algorithms",
+  "permalink": "/java-docs/documentation/algorithms",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/documentation/algorithms.mdx",
+  "tags": [
+    {
+      "inline": true,
+      "label": "algorithms",
+      "permalink": "/java-docs/tags/algorithms"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 350,
+  "frontMatter": {
+    "title": "Algorithmen",
+    "description": "",
+    "sidebar_position": 350,
+    "tags": [
+      "algorithms"
+    ]
+  },
+  "sidebar": "documentationSidebar",
+  "previous": {
+    "title": "Bäume",
+    "permalink": "/java-docs/documentation/trees"
+  },
+  "next": {
+    "title": "Grafische Benutzeroberflächen",
+    "permalink": "/java-docs/documentation/gui"
+  }
+}

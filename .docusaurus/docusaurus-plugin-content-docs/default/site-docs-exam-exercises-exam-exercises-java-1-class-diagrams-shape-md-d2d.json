@@ -1,0 +1,54 @@
+{
+  "id": "exam-exercises/exam-exercises-java1/class-diagrams/shape",
+  "title": "Geometrische Form",
+  "description": "",
+  "source": "@site/docs/exam-exercises/exam-exercises-java1/class-diagrams/shape.md",
+  "sourceDirName": "exam-exercises/exam-exercises-java1/class-diagrams",
+  "slug": "/exam-exercises/exam-exercises-java1/class-diagrams/shape",
+  "permalink": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/shape",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exam-exercises/exam-exercises-java1/class-diagrams/shape.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "oo",
+      "permalink": "/java-docs/tags/oo"
+    },
+    {
+      "inline": true,
+      "label": "inheritance",
+      "permalink": "/java-docs/tags/inheritance"
+    },
+    {
+      "inline": true,
+      "label": "polymorphism",
+      "permalink": "/java-docs/tags/polymorphism"
+    },
+    {
+      "inline": true,
+      "label": "io-streams",
+      "permalink": "/java-docs/tags/io-streams"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Geometrische Form",
+    "description": "",
+    "tags": [
+      "oo",
+      "inheritance",
+      "polymorphism",
+      "io-streams"
+    ]
+  },
+  "sidebar": "examExercisesSidebar",
+  "previous": {
+    "title": "Weihnachtsmann",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/santa-claus"
+  },
+  "next": {
+    "title": "Kurs",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/student-course"
+  }
+}

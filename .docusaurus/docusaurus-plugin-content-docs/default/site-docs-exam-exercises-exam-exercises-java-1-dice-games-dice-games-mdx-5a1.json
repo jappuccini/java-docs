@@ -1,0 +1,29 @@
+{
+  "id": "exam-exercises/exam-exercises-java1/dice-games/dice-games",
+  "title": "Würfelspiele",
+  "description": "",
+  "source": "@site/docs/exam-exercises/exam-exercises-java1/dice-games/dice-games.mdx",
+  "sourceDirName": "exam-exercises/exam-exercises-java1/dice-games",
+  "slug": "/exam-exercises/exam-exercises-java1/dice-games/",
+  "permalink": "/java-docs/exam-exercises/exam-exercises-java1/dice-games/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exam-exercises/exam-exercises-java1/dice-games/dice-games.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 30,
+  "frontMatter": {
+    "title": "Würfelspiele",
+    "description": "",
+    "sidebar_position": 30
+  },
+  "sidebar": "examExercisesSidebar",
+  "previous": {
+    "title": "Zeitstempel-Konvertierer",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java1/activity-diagrams/timestamp-converter"
+  },
+  "next": {
+    "title": "Würfelspiel 1",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java1/dice-games/dice-game-01"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "exam-exercises/exam-exercises-java1/class-diagrams/easter-basket",
+  "title": "Osterkorb",
+  "description": "",
+  "source": "@site/docs/exam-exercises/exam-exercises-java1/class-diagrams/easter-basket.md",
+  "sourceDirName": "exam-exercises/exam-exercises-java1/class-diagrams",
+  "slug": "/exam-exercises/exam-exercises-java1/class-diagrams/easter-basket",
+  "permalink": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/easter-basket",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exam-exercises/exam-exercises-java1/class-diagrams/easter-basket.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "oo",
+      "permalink": "/java-docs/tags/oo"
+    },
+    {
+      "inline": true,
+      "label": "abstract-and-final",
+      "permalink": "/java-docs/tags/abstract-and-final"
+    },
+    {
+      "inline": true,
+      "label": "polymorphism",
+      "permalink": "/java-docs/tags/polymorphism"
+    },
+    {
+      "inline": true,
+      "label": "io-streams",
+      "permalink": "/java-docs/tags/io-streams"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Osterkorb",
+    "description": "",
+    "tags": [
+      "oo",
+      "abstract-and-final",
+      "polymorphism",
+      "io-streams"
+    ]
+  },
+  "sidebar": "examExercisesSidebar",
+  "previous": {
+    "title": "Kreatur",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/creature"
+  },
+  "next": {
+    "title": "Fast Food",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/fast-food"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "additional-material/instructions/binary-numbers",
+  "title": "Arbeiten mit Binärzahlen",
+  "description": "",
+  "source": "@site/docs/additional-material/instructions/binary-numbers.mdx",
+  "sourceDirName": "additional-material/instructions",
+  "slug": "/additional-material/instructions/binary-numbers",
+  "permalink": "/java-docs/additional-material/instructions/binary-numbers",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/additional-material/instructions/binary-numbers.mdx",
+  "tags": [
+    {
+      "inline": true,
+      "label": "binary-numbers",
+      "permalink": "/java-docs/tags/binary-numbers"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 15,
+  "frontMatter": {
+    "title": "Arbeiten mit Binärzahlen",
+    "description": "",
+    "sidebar_position": 15,
+    "tags": [
+      "binary-numbers"
+    ]
+  },
+  "sidebar": "additionalMaterialSidebar",
+  "previous": {
+    "title": "Arbeiten mit dem JDK",
+    "permalink": "/java-docs/additional-material/instructions/jdk"
+  },
+  "next": {
+    "title": "Arbeiten mit Maven",
+    "permalink": "/java-docs/additional-material/instructions/maven"
+  }
+}

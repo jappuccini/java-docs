@@ -1,0 +1,38 @@
+{
+  "id": "documentation/comparators",
+  "title": "Komparatoren",
+  "description": "",
+  "source": "@site/docs/documentation/comparators.md",
+  "sourceDirName": "documentation",
+  "slug": "/documentation/comparators",
+  "permalink": "/java-docs/documentation/comparators",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/documentation/comparators.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "comparators",
+      "permalink": "/java-docs/tags/comparators"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 220,
+  "frontMatter": {
+    "title": "Komparatoren",
+    "description": "",
+    "sidebar_position": 220,
+    "tags": [
+      "comparators"
+    ]
+  },
+  "sidebar": "documentationSidebar",
+  "previous": {
+    "title": "Listen",
+    "permalink": "/java-docs/documentation/lists"
+  },
+  "next": {
+    "title": "Ausnahmen (Exceptions)",
+    "permalink": "/java-docs/documentation/exceptions"
+  }
+}

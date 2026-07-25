@@ -1,0 +1,44 @@
+{
+  "id": "exercises/cases/cases",
+  "title": "Verzweigungen",
+  "description": "",
+  "source": "@site/docs/exercises/cases/cases.mdx",
+  "sourceDirName": "exercises/cases",
+  "slug": "/exercises/cases/",
+  "permalink": "/java-docs/exercises/cases/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/cases/cases.mdx",
+  "tags": [
+    {
+      "inline": true,
+      "label": "control-structures",
+      "permalink": "/java-docs/tags/control-structures"
+    },
+    {
+      "inline": true,
+      "label": "cases",
+      "permalink": "/java-docs/tags/cases"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 55,
+  "frontMatter": {
+    "title": "Verzweigungen",
+    "description": "",
+    "sidebar_position": 55,
+    "tags": [
+      "control-structures",
+      "cases"
+    ]
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "ConsoleApplications03",
+    "permalink": "/java-docs/exercises/console-applications/console-applications03"
+  },
+  "next": {
+    "title": "Cases01",
+    "permalink": "/java-docs/exercises/cases/cases01"
+  }
+}

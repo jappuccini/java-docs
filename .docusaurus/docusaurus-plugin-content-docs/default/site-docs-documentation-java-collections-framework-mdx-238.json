@@ -1,0 +1,56 @@
+{
+  "id": "documentation/java-collections-framework",
+  "title": "Java Collections Framework",
+  "description": "",
+  "source": "@site/docs/documentation/java-collections-framework.mdx",
+  "sourceDirName": "documentation",
+  "slug": "/documentation/java-collections-framework",
+  "permalink": "/java-docs/documentation/java-collections-framework",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/documentation/java-collections-framework.mdx",
+  "tags": [
+    {
+      "inline": true,
+      "label": "collections",
+      "permalink": "/java-docs/tags/collections"
+    },
+    {
+      "inline": true,
+      "label": "lists",
+      "permalink": "/java-docs/tags/lists"
+    },
+    {
+      "inline": true,
+      "label": "sets",
+      "permalink": "/java-docs/tags/sets"
+    },
+    {
+      "inline": true,
+      "label": "queues",
+      "permalink": "/java-docs/tags/queues"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 345,
+  "frontMatter": {
+    "title": "Java Collections Framework",
+    "description": "",
+    "sidebar_position": 345,
+    "tags": [
+      "collections",
+      "lists",
+      "sets",
+      "queues"
+    ]
+  },
+  "sidebar": "documentationSidebar",
+  "previous": {
+    "title": "Datenströme (IO-Streams)",
+    "permalink": "/java-docs/documentation/io-streams"
+  },
+  "next": {
+    "title": "Schlüsseltransformationen (Hashing)",
+    "permalink": "/java-docs/documentation/hashing"
+  }
+}

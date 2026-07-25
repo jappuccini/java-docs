@@ -1,0 +1,50 @@
+{
+  "id": "documentation/array-lists",
+  "title": "Feldbasierte Listen (ArrayLists)",
+  "description": "",
+  "source": "@site/docs/documentation/array-lists.md",
+  "sourceDirName": "documentation",
+  "slug": "/documentation/array-lists",
+  "permalink": "/java-docs/documentation/array-lists",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/documentation/array-lists.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "collections",
+      "permalink": "/java-docs/tags/collections"
+    },
+    {
+      "inline": true,
+      "label": "arrays",
+      "permalink": "/java-docs/tags/arrays"
+    },
+    {
+      "inline": true,
+      "label": "lists",
+      "permalink": "/java-docs/tags/lists"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 141,
+  "frontMatter": {
+    "title": "Feldbasierte Listen (ArrayLists)",
+    "description": "",
+    "sidebar_position": 141,
+    "tags": [
+      "collections",
+      "arrays",
+      "lists"
+    ]
+  },
+  "sidebar": "documentationSidebar",
+  "previous": {
+    "title": "Die Java API",
+    "permalink": "/java-docs/documentation/java-api"
+  },
+  "next": {
+    "title": "Wrapper-Klassen",
+    "permalink": "/java-docs/documentation/wrappers"
+  }
+}

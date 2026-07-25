@@ -1,0 +1,38 @@
+{
+  "id": "documentation/arrays",
+  "title": "Felder (Arrays)",
+  "description": "",
+  "source": "@site/docs/documentation/arrays.md",
+  "sourceDirName": "documentation",
+  "slug": "/documentation/arrays",
+  "permalink": "/java-docs/documentation/arrays",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/documentation/arrays.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "arrays",
+      "permalink": "/java-docs/tags/arrays"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 110,
+  "frontMatter": {
+    "title": "Felder (Arrays)",
+    "description": "",
+    "sidebar_position": 110,
+    "tags": [
+      "arrays"
+    ]
+  },
+  "sidebar": "documentationSidebar",
+  "previous": {
+    "title": "Schleifen",
+    "permalink": "/java-docs/documentation/loops"
+  },
+  "next": {
+    "title": "Objektorientierte Programmierung",
+    "permalink": "/java-docs/documentation/oo"
+  }
+}

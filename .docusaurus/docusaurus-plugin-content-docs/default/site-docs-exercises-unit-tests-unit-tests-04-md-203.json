@@ -1,0 +1,27 @@
+{
+  "id": "exercises/unit-tests/unit-tests04",
+  "title": "UnitTests04",
+  "description": "",
+  "source": "@site/docs/exercises/unit-tests/unit-tests04.md",
+  "sourceDirName": "exercises/unit-tests",
+  "slug": "/exercises/unit-tests/unit-tests04",
+  "permalink": "/java-docs/exercises/unit-tests/unit-tests04",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/unit-tests/unit-tests04.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "UnitTests04",
+    "description": ""
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "UnitTests03",
+    "permalink": "/java-docs/exercises/unit-tests/unit-tests03"
+  },
+  "next": {
+    "title": "Datenströme (IO-Streams)",
+    "permalink": "/java-docs/exercises/io-streams/"
+  }
+}

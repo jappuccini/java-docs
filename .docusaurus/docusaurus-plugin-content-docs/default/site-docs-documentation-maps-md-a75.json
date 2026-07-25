@@ -1,0 +1,38 @@
+{
+  "id": "documentation/maps",
+  "title": "Assoziativspeicher (Maps)",
+  "description": "",
+  "source": "@site/docs/documentation/maps.md",
+  "sourceDirName": "documentation",
+  "slug": "/documentation/maps",
+  "permalink": "/java-docs/documentation/maps",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/documentation/maps.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "maps",
+      "permalink": "/java-docs/tags/maps"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 280,
+  "frontMatter": {
+    "title": "Assoziativspeicher (Maps)",
+    "description": "",
+    "sidebar_position": 280,
+    "tags": [
+      "maps"
+    ]
+  },
+  "sidebar": "documentationSidebar",
+  "previous": {
+    "title": "Generische Programmierung",
+    "permalink": "/java-docs/documentation/generics"
+  },
+  "next": {
+    "title": "Optionals",
+    "permalink": "/java-docs/documentation/optionals"
+  }
+}

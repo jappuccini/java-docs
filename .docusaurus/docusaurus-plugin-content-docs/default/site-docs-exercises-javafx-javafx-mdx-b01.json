@@ -1,0 +1,44 @@
+{
+  "id": "exercises/javafx/javafx",
+  "title": "JavaFX",
+  "description": "",
+  "source": "@site/docs/exercises/javafx/javafx.mdx",
+  "sourceDirName": "exercises/javafx",
+  "slug": "/exercises/javafx/",
+  "permalink": "/java-docs/exercises/javafx/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/javafx/javafx.mdx",
+  "tags": [
+    {
+      "inline": true,
+      "label": "gui",
+      "permalink": "/java-docs/tags/gui"
+    },
+    {
+      "inline": true,
+      "label": "javafx",
+      "permalink": "/java-docs/tags/javafx"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 240,
+  "frontMatter": {
+    "title": "JavaFX",
+    "description": "",
+    "sidebar_position": 240,
+    "tags": [
+      "gui",
+      "javafx"
+    ]
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "Algorithms02",
+    "permalink": "/java-docs/exercises/algorithms/algorithms02"
+  },
+  "next": {
+    "title": "JavaFX01",
+    "permalink": "/java-docs/exercises/javafx/javafx01"
+  }
+}

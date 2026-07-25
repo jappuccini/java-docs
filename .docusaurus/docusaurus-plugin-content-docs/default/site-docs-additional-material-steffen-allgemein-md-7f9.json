@@ -1,0 +1,26 @@
+{
+  "id": "additional-material/steffen/Allgemein",
+  "title": "Allgemeine Hilfe (man java-docs)",
+  "description": "",
+  "source": "@site/docs/additional-material/steffen/Allgemein.md",
+  "sourceDirName": "additional-material/steffen",
+  "slug": "/additional-material/steffen/Allgemein",
+  "permalink": "/java-docs/additional-material/steffen/Allgemein",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/additional-material/steffen/Allgemein.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 30,
+  "frontMatter": {
+    "title": "Allgemeine Hilfe (man java-docs)",
+    "description": "",
+    "sidebar_position": 30,
+    "tags": []
+  },
+  "sidebar": "additionalMaterialSidebar",
+  "previous": {
+    "title": "2026",
+    "permalink": "/java-docs/additional-material/steffen/java-2/exam-preparation/2026"
+  }
+}

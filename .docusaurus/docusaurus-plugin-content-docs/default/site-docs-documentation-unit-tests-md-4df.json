@@ -1,0 +1,38 @@
+{
+  "id": "documentation/unit-tests",
+  "title": "Komponententests (Unit Tests)",
+  "description": "",
+  "source": "@site/docs/documentation/unit-tests.md",
+  "sourceDirName": "documentation",
+  "slug": "/documentation/unit-tests",
+  "permalink": "/java-docs/documentation/unit-tests",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/documentation/unit-tests.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "unit-tests",
+      "permalink": "/java-docs/tags/unit-tests"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 320,
+  "frontMatter": {
+    "title": "Komponententests (Unit Tests)",
+    "description": "",
+    "sidebar_position": 320,
+    "tags": [
+      "unit-tests"
+    ]
+  },
+  "sidebar": "documentationSidebar",
+  "previous": {
+    "title": "Softwaretests",
+    "permalink": "/java-docs/documentation/tests"
+  },
+  "next": {
+    "title": "Mockito",
+    "permalink": "/java-docs/documentation/mockito"
+  }
+}

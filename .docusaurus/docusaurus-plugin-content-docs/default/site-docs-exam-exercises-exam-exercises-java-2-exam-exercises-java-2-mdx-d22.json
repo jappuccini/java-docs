@@ -1,0 +1,29 @@
+{
+  "id": "exam-exercises/exam-exercises-java2/exam-exercises-java2",
+  "title": "Programmierung II",
+  "description": "",
+  "source": "@site/docs/exam-exercises/exam-exercises-java2/exam-exercises-java2.mdx",
+  "sourceDirName": "exam-exercises/exam-exercises-java2",
+  "slug": "/exam-exercises/exam-exercises-java2/",
+  "permalink": "/java-docs/exam-exercises/exam-exercises-java2/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exam-exercises/exam-exercises-java2/exam-exercises-java2.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 40,
+  "frontMatter": {
+    "title": "Programmierung II",
+    "description": "",
+    "sidebar_position": 40
+  },
+  "sidebar": "examExercisesSidebar",
+  "previous": {
+    "title": "Würfelspiel 17",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java1/dice-games/dice-game-17"
+  },
+  "next": {
+    "title": "Klassendiagramme",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java2/class-diagrams/"
+  }
+}

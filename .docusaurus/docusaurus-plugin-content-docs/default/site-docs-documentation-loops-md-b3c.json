@@ -1,0 +1,44 @@
+{
+  "id": "documentation/loops",
+  "title": "Schleifen",
+  "description": "",
+  "source": "@site/docs/documentation/loops.md",
+  "sourceDirName": "documentation",
+  "slug": "/documentation/loops",
+  "permalink": "/java-docs/documentation/loops",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/documentation/loops.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "control-structures",
+      "permalink": "/java-docs/tags/control-structures"
+    },
+    {
+      "inline": true,
+      "label": "loops",
+      "permalink": "/java-docs/tags/loops"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 105,
+  "frontMatter": {
+    "title": "Schleifen",
+    "description": "",
+    "sidebar_position": 105,
+    "tags": [
+      "control-structures",
+      "loops"
+    ]
+  },
+  "sidebar": "documentationSidebar",
+  "previous": {
+    "title": "Verzweigungen und Fallunterscheidungen",
+    "permalink": "/java-docs/documentation/cases"
+  },
+  "next": {
+    "title": "Felder (Arrays)",
+    "permalink": "/java-docs/documentation/arrays"
+  }
+}

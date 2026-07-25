@@ -1,0 +1,38 @@
+{
+  "id": "exercises/comparators/comparators",
+  "title": "Komparatoren",
+  "description": "",
+  "source": "@site/docs/exercises/comparators/comparators.mdx",
+  "sourceDirName": "exercises/comparators",
+  "slug": "/exercises/comparators/",
+  "permalink": "/java-docs/exercises/comparators/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/comparators/comparators.mdx",
+  "tags": [
+    {
+      "inline": true,
+      "label": "comparators",
+      "permalink": "/java-docs/tags/comparators"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 150,
+  "frontMatter": {
+    "title": "Komparatoren",
+    "description": "",
+    "sidebar_position": 150,
+    "tags": [
+      "comparators"
+    ]
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "Interfaces01",
+    "permalink": "/java-docs/exercises/interfaces/interfaces01"
+  },
+  "next": {
+    "title": "Comparators01",
+    "permalink": "/java-docs/exercises/comparators/comparators01"
+  }
+}

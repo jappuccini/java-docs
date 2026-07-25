@@ -1,0 +1,27 @@
+{
+  "id": "exercises/io-streams/io-streams02",
+  "title": "IOStreams02",
+  "description": "",
+  "source": "@site/docs/exercises/io-streams/io-streams02.md",
+  "sourceDirName": "exercises/io-streams",
+  "slug": "/exercises/io-streams/io-streams02",
+  "permalink": "/java-docs/exercises/io-streams/io-streams02",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/io-streams/io-streams02.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "IOStreams02",
+    "description": ""
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "IOStreams01",
+    "permalink": "/java-docs/exercises/io-streams/io-streams01"
+  },
+  "next": {
+    "title": "Schlüsseltransformationen (Hashing)",
+    "permalink": "/java-docs/exercises/hashing/"
+  }
+}

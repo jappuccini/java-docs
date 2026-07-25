@@ -1,0 +1,36 @@
+{
+  "id": "exam-exercises/exam-exercises-java1/activity-diagrams/selection-sort",
+  "title": "Selectionsort",
+  "description": "",
+  "source": "@site/docs/exam-exercises/exam-exercises-java1/activity-diagrams/selection-sort.md",
+  "sourceDirName": "exam-exercises/exam-exercises-java1/activity-diagrams",
+  "slug": "/exam-exercises/exam-exercises-java1/activity-diagrams/selection-sort",
+  "permalink": "/java-docs/exam-exercises/exam-exercises-java1/activity-diagrams/selection-sort",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exam-exercises/exam-exercises-java1/activity-diagrams/selection-sort.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "activity-diagrams",
+      "permalink": "/java-docs/tags/activity-diagrams"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Selectionsort",
+    "description": "",
+    "tags": [
+      "activity-diagrams"
+    ]
+  },
+  "sidebar": "examExercisesSidebar",
+  "previous": {
+    "title": "Insertionsort",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java1/activity-diagrams/insertion-sort"
+  },
+  "next": {
+    "title": "Zeitstempel-Konvertierer",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java1/activity-diagrams/timestamp-converter"
+  }
+}

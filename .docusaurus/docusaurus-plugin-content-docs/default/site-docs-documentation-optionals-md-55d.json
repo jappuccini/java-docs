@@ -1,0 +1,38 @@
+{
+  "id": "documentation/optionals",
+  "title": "Optionals",
+  "description": "",
+  "source": "@site/docs/documentation/optionals.md",
+  "sourceDirName": "documentation",
+  "slug": "/documentation/optionals",
+  "permalink": "/java-docs/documentation/optionals",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/documentation/optionals.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "optionals",
+      "permalink": "/java-docs/tags/optionals"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 290,
+  "frontMatter": {
+    "title": "Optionals",
+    "description": "",
+    "sidebar_position": 290,
+    "tags": [
+      "optionals"
+    ]
+  },
+  "sidebar": "documentationSidebar",
+  "previous": {
+    "title": "Assoziativspeicher (Maps)",
+    "permalink": "/java-docs/documentation/maps"
+  },
+  "next": {
+    "title": "Die Java Stream API",
+    "permalink": "/java-docs/documentation/java-stream-api"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "id": "exam-exercises/exam-exercises-java1/dice-games/dice-game-15",
+  "title": "Würfelspiel 15",
+  "description": "",
+  "source": "@site/docs/exam-exercises/exam-exercises-java1/dice-games/dice-game-15.md",
+  "sourceDirName": "exam-exercises/exam-exercises-java1/dice-games",
+  "slug": "/exam-exercises/exam-exercises-java1/dice-games/dice-game-15",
+  "permalink": "/java-docs/exam-exercises/exam-exercises-java1/dice-games/dice-game-15",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exam-exercises/exam-exercises-java1/dice-games/dice-game-15.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "console-applications",
+      "permalink": "/java-docs/tags/console-applications"
+    },
+    {
+      "inline": true,
+      "label": "oo",
+      "permalink": "/java-docs/tags/oo"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Würfelspiel 15",
+    "description": "",
+    "tags": [
+      "console-applications",
+      "oo"
+    ]
+  },
+  "sidebar": "examExercisesSidebar",
+  "previous": {
+    "title": "Würfelspiel 14",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java1/dice-games/dice-game-14"
+  },
+  "next": {
+    "title": "Würfelspiel 16",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java1/dice-games/dice-game-16"
+  }
+}

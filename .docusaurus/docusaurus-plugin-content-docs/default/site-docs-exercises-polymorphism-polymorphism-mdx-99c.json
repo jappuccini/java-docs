@@ -1,0 +1,44 @@
+{
+  "id": "exercises/polymorphism/polymorphism",
+  "title": "Polymorphie",
+  "description": "",
+  "source": "@site/docs/exercises/polymorphism/polymorphism.mdx",
+  "sourceDirName": "exercises/polymorphism",
+  "slug": "/exercises/polymorphism/",
+  "permalink": "/java-docs/exercises/polymorphism/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/polymorphism/polymorphism.mdx",
+  "tags": [
+    {
+      "inline": true,
+      "label": "oo",
+      "permalink": "/java-docs/tags/oo"
+    },
+    {
+      "inline": true,
+      "label": "polymorphism",
+      "permalink": "/java-docs/tags/polymorphism"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 120,
+  "frontMatter": {
+    "title": "Polymorphie",
+    "description": "",
+    "sidebar_position": 120,
+    "tags": [
+      "oo",
+      "polymorphism"
+    ]
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "ActivityDiagrams01",
+    "permalink": "/java-docs/exercises/activity-diagrams/activity-diagrams01"
+  },
+  "next": {
+    "title": "Polymorphism01",
+    "permalink": "/java-docs/exercises/polymorphism/polymorphism01"
+  }
+}

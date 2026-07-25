@@ -1,0 +1,38 @@
+{
+  "id": "documentation/io-streams",
+  "title": "Datenströme (IO-Streams)",
+  "description": "",
+  "source": "@site/docs/documentation/io-streams.md",
+  "sourceDirName": "documentation",
+  "slug": "/documentation/io-streams",
+  "permalink": "/java-docs/documentation/io-streams",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/documentation/io-streams.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "io-streams",
+      "permalink": "/java-docs/tags/io-streams"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 340,
+  "frontMatter": {
+    "title": "Datenströme (IO-Streams)",
+    "description": "",
+    "sidebar_position": 340,
+    "tags": [
+      "io-streams"
+    ]
+  },
+  "sidebar": "documentationSidebar",
+  "previous": {
+    "title": "Mockito",
+    "permalink": "/java-docs/documentation/mockito"
+  },
+  "next": {
+    "title": "Java Collections Framework",
+    "permalink": "/java-docs/documentation/java-collections-framework"
+  }
+}

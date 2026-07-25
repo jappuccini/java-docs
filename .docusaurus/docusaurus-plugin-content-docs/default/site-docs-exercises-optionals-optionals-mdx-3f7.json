@@ -1,0 +1,38 @@
+{
+  "id": "exercises/optionals/optionals",
+  "title": "Optionals",
+  "description": "",
+  "source": "@site/docs/exercises/optionals/optionals.mdx",
+  "sourceDirName": "exercises/optionals",
+  "slug": "/exercises/optionals/",
+  "permalink": "/java-docs/exercises/optionals/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/optionals/optionals.mdx",
+  "tags": [
+    {
+      "inline": true,
+      "label": "optionals",
+      "permalink": "/java-docs/tags/optionals"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 195,
+  "frontMatter": {
+    "title": "Optionals",
+    "description": "",
+    "sidebar_position": 195,
+    "tags": [
+      "optionals"
+    ]
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "Maps02",
+    "permalink": "/java-docs/exercises/maps/maps02"
+  },
+  "next": {
+    "title": "Optionals01",
+    "permalink": "/java-docs/exercises/optionals/optionals01"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "additional-material/steffen/java-1/index",
+  "title": "Java 1",
+  "description": "",
+  "source": "@site/docs/additional-material/steffen/java-1/index.mdx",
+  "sourceDirName": "additional-material/steffen/java-1",
+  "slug": "/additional-material/steffen/java-1/",
+  "permalink": "/java-docs/additional-material/steffen/java-1/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/additional-material/steffen/java-1/index.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "title": "Java 1",
+    "description": "",
+    "sidebar_position": 10,
+    "tags": []
+  },
+  "sidebar": "additionalMaterialSidebar",
+  "previous": {
+    "title": "Steffen",
+    "permalink": "/java-docs/additional-material/steffen/"
+  },
+  "next": {
+    "title": "Folien",
+    "permalink": "/java-docs/additional-material/steffen/java-1/slides"
+  }
+}

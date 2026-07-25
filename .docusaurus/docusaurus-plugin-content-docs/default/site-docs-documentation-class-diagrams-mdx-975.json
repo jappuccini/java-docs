@@ -1,0 +1,44 @@
+{
+  "id": "documentation/class-diagrams",
+  "title": "Klassendiagramme",
+  "description": "",
+  "source": "@site/docs/documentation/class-diagrams.mdx",
+  "sourceDirName": "documentation",
+  "slug": "/documentation/class-diagrams",
+  "permalink": "/java-docs/documentation/class-diagrams",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/documentation/class-diagrams.mdx",
+  "tags": [
+    {
+      "inline": true,
+      "label": "uml",
+      "permalink": "/java-docs/tags/uml"
+    },
+    {
+      "inline": true,
+      "label": "class-diagrams",
+      "permalink": "/java-docs/tags/class-diagrams"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 155,
+  "frontMatter": {
+    "title": "Klassendiagramme",
+    "description": "",
+    "sidebar_position": 155,
+    "tags": [
+      "uml",
+      "class-diagrams"
+    ]
+  },
+  "sidebar": "documentationSidebar",
+  "previous": {
+    "title": "Aufzählungen (Enumerations)",
+    "permalink": "/java-docs/documentation/enumerations"
+  },
+  "next": {
+    "title": "Aktivitätsdiagramme",
+    "permalink": "/java-docs/documentation/activity-diagrams"
+  }
+}

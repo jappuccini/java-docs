@@ -1,0 +1,27 @@
+{
+  "id": "exercises/unit-tests/unit-tests02",
+  "title": "UnitTests02",
+  "description": "",
+  "source": "@site/docs/exercises/unit-tests/unit-tests02.md",
+  "sourceDirName": "exercises/unit-tests",
+  "slug": "/exercises/unit-tests/unit-tests02",
+  "permalink": "/java-docs/exercises/unit-tests/unit-tests02",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/unit-tests/unit-tests02.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "UnitTests02",
+    "description": ""
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "UnitTests01",
+    "permalink": "/java-docs/exercises/unit-tests/unit-tests01"
+  },
+  "next": {
+    "title": "UnitTests03",
+    "permalink": "/java-docs/exercises/unit-tests/unit-tests03"
+  }
+}

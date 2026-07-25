@@ -1,0 +1,38 @@
+{
+  "id": "documentation/java-api",
+  "title": "Die Java API",
+  "description": "",
+  "source": "@site/docs/documentation/java-api.md",
+  "sourceDirName": "documentation",
+  "slug": "/documentation/java-api",
+  "permalink": "/java-docs/documentation/java-api",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/documentation/java-api.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "java-api",
+      "permalink": "/java-docs/tags/java-api"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 140,
+  "frontMatter": {
+    "title": "Die Java API",
+    "description": "",
+    "sidebar_position": 140,
+    "tags": [
+      "java-api"
+    ]
+  },
+  "sidebar": "documentationSidebar",
+  "previous": {
+    "title": "Referenzen und Objekte",
+    "permalink": "/java-docs/documentation/references-and-objects"
+  },
+  "next": {
+    "title": "Feldbasierte Listen (ArrayLists)",
+    "permalink": "/java-docs/documentation/array-lists"
+  }
+}

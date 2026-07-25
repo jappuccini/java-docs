@@ -1,0 +1,38 @@
+{
+  "id": "documentation/interfaces",
+  "title": "Schnittstellen (Interfaces)",
+  "description": "",
+  "source": "@site/docs/documentation/interfaces.mdx",
+  "sourceDirName": "documentation",
+  "slug": "/documentation/interfaces",
+  "permalink": "/java-docs/documentation/interfaces",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/documentation/interfaces.mdx",
+  "tags": [
+    {
+      "inline": true,
+      "label": "interfaces",
+      "permalink": "/java-docs/tags/interfaces"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 210,
+  "frontMatter": {
+    "title": "Schnittstellen (Interfaces)",
+    "description": "",
+    "sidebar_position": 210,
+    "tags": [
+      "interfaces"
+    ]
+  },
+  "sidebar": "documentationSidebar",
+  "previous": {
+    "title": "Abstrakte und finale Klassen und Methoden",
+    "permalink": "/java-docs/documentation/abstract-and-final"
+  },
+  "next": {
+    "title": "Listen",
+    "permalink": "/java-docs/documentation/lists"
+  }
+}

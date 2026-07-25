@@ -1,0 +1,48 @@
+{
+  "id": "exam-exercises/exam-exercises-java1/class-diagrams/restaurant",
+  "title": "Restaurant",
+  "description": "",
+  "source": "@site/docs/exam-exercises/exam-exercises-java1/class-diagrams/restaurant.md",
+  "sourceDirName": "exam-exercises/exam-exercises-java1/class-diagrams",
+  "slug": "/exam-exercises/exam-exercises-java1/class-diagrams/restaurant",
+  "permalink": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/restaurant",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exam-exercises/exam-exercises-java1/class-diagrams/restaurant.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "enumerations",
+      "permalink": "/java-docs/tags/enumerations"
+    },
+    {
+      "inline": true,
+      "label": "lambdas",
+      "permalink": "/java-docs/tags/lambdas"
+    },
+    {
+      "inline": true,
+      "label": "java-stream-api",
+      "permalink": "/java-docs/tags/java-stream-api"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Restaurant",
+    "description": "",
+    "tags": [
+      "enumerations",
+      "lambdas",
+      "java-stream-api"
+    ]
+  },
+  "sidebar": "examExercisesSidebar",
+  "previous": {
+    "title": "Spieler",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/player"
+  },
+  "next": {
+    "title": "Weihnachtsmann",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/santa-claus"
+  }
+}

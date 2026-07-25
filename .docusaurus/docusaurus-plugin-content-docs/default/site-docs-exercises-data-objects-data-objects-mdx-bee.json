@@ -1,0 +1,38 @@
+{
+  "id": "exercises/data-objects/data-objects",
+  "title": "Datenobjekte",
+  "description": "",
+  "source": "@site/docs/exercises/data-objects/data-objects.mdx",
+  "sourceDirName": "exercises/data-objects",
+  "slug": "/exercises/data-objects/",
+  "permalink": "/java-docs/exercises/data-objects/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/data-objects/data-objects.mdx",
+  "tags": [
+    {
+      "inline": true,
+      "label": "data-objects",
+      "permalink": "/java-docs/tags/data-objects"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 30,
+  "frontMatter": {
+    "title": "Datenobjekte",
+    "description": "",
+    "sidebar_position": 30,
+    "tags": [
+      "data-objects"
+    ]
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "BinaryNumbers03",
+    "permalink": "/java-docs/exercises/binary-numbers/binary-numbers03"
+  },
+  "next": {
+    "title": "DataObjects01",
+    "permalink": "/java-docs/exercises/data-objects/data-objects01"
+  }
+}

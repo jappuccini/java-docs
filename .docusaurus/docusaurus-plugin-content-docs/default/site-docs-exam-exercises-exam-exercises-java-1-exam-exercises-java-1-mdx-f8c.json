@@ -1,0 +1,25 @@
+{
+  "id": "exam-exercises/exam-exercises-java1/exam-exercises-java1",
+  "title": "Programmierung I",
+  "description": "",
+  "source": "@site/docs/exam-exercises/exam-exercises-java1/exam-exercises-java1.mdx",
+  "sourceDirName": "exam-exercises/exam-exercises-java1",
+  "slug": "/exam-exercises/exam-exercises-java1/",
+  "permalink": "/java-docs/exam-exercises/exam-exercises-java1/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exam-exercises/exam-exercises-java1/exam-exercises-java1.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 30,
+  "frontMatter": {
+    "title": "Programmierung I",
+    "description": "",
+    "sidebar_position": 30
+  },
+  "sidebar": "examExercisesSidebar",
+  "next": {
+    "title": "Klassendiagramme",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/"
+  }
+}

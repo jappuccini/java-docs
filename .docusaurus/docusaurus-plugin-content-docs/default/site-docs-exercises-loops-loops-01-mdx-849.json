@@ -1,0 +1,27 @@
+{
+  "id": "exercises/loops/loops01",
+  "title": "Loops01",
+  "description": "",
+  "source": "@site/docs/exercises/loops/loops01.mdx",
+  "sourceDirName": "exercises/loops",
+  "slug": "/exercises/loops/loops01",
+  "permalink": "/java-docs/exercises/loops/loops01",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/loops/loops01.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Loops01",
+    "description": ""
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "Schleifen",
+    "permalink": "/java-docs/exercises/loops/"
+  },
+  "next": {
+    "title": "Loops02",
+    "permalink": "/java-docs/exercises/loops/loops02"
+  }
+}

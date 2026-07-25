@@ -1,0 +1,38 @@
+{
+  "id": "exercises/interfaces/interfaces",
+  "title": "Schnittstellen (Interfaces)",
+  "description": "",
+  "source": "@site/docs/exercises/interfaces/interfaces.mdx",
+  "sourceDirName": "exercises/interfaces",
+  "slug": "/exercises/interfaces/",
+  "permalink": "/java-docs/exercises/interfaces/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/interfaces/interfaces.mdx",
+  "tags": [
+    {
+      "inline": true,
+      "label": "interfaces",
+      "permalink": "/java-docs/tags/interfaces"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 140,
+  "frontMatter": {
+    "title": "Schnittstellen (Interfaces)",
+    "description": "",
+    "sidebar_position": 140,
+    "tags": [
+      "interfaces"
+    ]
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "AbstractAndFinal01",
+    "permalink": "/java-docs/exercises/abstract-and-final/abstract-and-final01"
+  },
+  "next": {
+    "title": "Interfaces01",
+    "permalink": "/java-docs/exercises/interfaces/interfaces01"
+  }
+}

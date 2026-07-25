@@ -1,0 +1,30 @@
+{
+  "id": "additional-material/steffen/java-2/exam-preparation/index",
+  "title": "Klausurvorbereitung",
+  "description": "",
+  "source": "@site/docs/additional-material/steffen/java-2/exam-preparation/index.md",
+  "sourceDirName": "additional-material/steffen/java-2/exam-preparation",
+  "slug": "/additional-material/steffen/java-2/exam-preparation/",
+  "permalink": "/java-docs/additional-material/steffen/java-2/exam-preparation/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/additional-material/steffen/java-2/exam-preparation/index.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 20,
+  "frontMatter": {
+    "title": "Klausurvorbereitung",
+    "description": "",
+    "sidebar_position": 20,
+    "tags": []
+  },
+  "sidebar": "additionalMaterialSidebar",
+  "previous": {
+    "title": "Folien",
+    "permalink": "/java-docs/additional-material/steffen/java-2/slides"
+  },
+  "next": {
+    "title": "2023",
+    "permalink": "/java-docs/additional-material/steffen/java-2/exam-preparation/2023"
+  }
+}

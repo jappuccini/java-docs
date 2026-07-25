@@ -1,0 +1,26 @@
+{
+  "id": "additional-material/tools/tools",
+  "title": "Tools",
+  "description": "",
+  "source": "@site/docs/additional-material/tools/tools.mdx",
+  "sourceDirName": "additional-material/tools",
+  "slug": "/additional-material/tools/",
+  "permalink": "/java-docs/additional-material/tools/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/additional-material/tools/tools.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "title": "Tools",
+    "description": "",
+    "sidebar_position": 10,
+    "tags": []
+  },
+  "sidebar": "additionalMaterialSidebar",
+  "next": {
+    "title": "Git",
+    "permalink": "/java-docs/additional-material/tools/git"
+  }
+}

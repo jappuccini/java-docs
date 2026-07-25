@@ -1,0 +1,44 @@
+{
+  "id": "documentation/polymorphism",
+  "title": "(Dynamische) Polymorphie",
+  "description": "",
+  "source": "@site/docs/documentation/polymorphism.mdx",
+  "sourceDirName": "documentation",
+  "slug": "/documentation/polymorphism",
+  "permalink": "/java-docs/documentation/polymorphism",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/documentation/polymorphism.mdx",
+  "tags": [
+    {
+      "inline": true,
+      "label": "oo",
+      "permalink": "/java-docs/tags/oo"
+    },
+    {
+      "inline": true,
+      "label": "polymorphism",
+      "permalink": "/java-docs/tags/polymorphism"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 180,
+  "frontMatter": {
+    "title": "(Dynamische) Polymorphie",
+    "description": "",
+    "sidebar_position": 180,
+    "tags": [
+      "oo",
+      "polymorphism"
+    ]
+  },
+  "sidebar": "documentationSidebar",
+  "previous": {
+    "title": "Vererbung",
+    "permalink": "/java-docs/documentation/inheritance"
+  },
+  "next": {
+    "title": "Die Mutter aller Klassen",
+    "permalink": "/java-docs/documentation/object"
+  }
+}

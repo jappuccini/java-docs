@@ -1,0 +1,38 @@
+{
+  "id": "additional-material/instructions/maven",
+  "title": "Arbeiten mit Maven",
+  "description": "",
+  "source": "@site/docs/additional-material/instructions/maven.md",
+  "sourceDirName": "additional-material/instructions",
+  "slug": "/additional-material/instructions/maven",
+  "permalink": "/java-docs/additional-material/instructions/maven",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/additional-material/instructions/maven.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "maven",
+      "permalink": "/java-docs/tags/maven"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 20,
+  "frontMatter": {
+    "title": "Arbeiten mit Maven",
+    "description": "",
+    "sidebar_position": 20,
+    "tags": [
+      "maven"
+    ]
+  },
+  "sidebar": "additionalMaterialSidebar",
+  "previous": {
+    "title": "Arbeiten mit Binärzahlen",
+    "permalink": "/java-docs/additional-material/instructions/binary-numbers"
+  },
+  "next": {
+    "title": "Arbeiten mit Git",
+    "permalink": "/java-docs/additional-material/instructions/git"
+  }
+}

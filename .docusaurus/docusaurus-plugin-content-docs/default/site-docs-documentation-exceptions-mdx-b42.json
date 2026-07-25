@@ -1,0 +1,38 @@
+{
+  "id": "documentation/exceptions",
+  "title": "Ausnahmen (Exceptions)",
+  "description": "",
+  "source": "@site/docs/documentation/exceptions.mdx",
+  "sourceDirName": "documentation",
+  "slug": "/documentation/exceptions",
+  "permalink": "/java-docs/documentation/exceptions",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/documentation/exceptions.mdx",
+  "tags": [
+    {
+      "inline": true,
+      "label": "exceptions",
+      "permalink": "/java-docs/tags/exceptions"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 230,
+  "frontMatter": {
+    "title": "Ausnahmen (Exceptions)",
+    "description": "",
+    "sidebar_position": 230,
+    "tags": [
+      "exceptions"
+    ]
+  },
+  "sidebar": "documentationSidebar",
+  "previous": {
+    "title": "Komparatoren",
+    "permalink": "/java-docs/documentation/comparators"
+  },
+  "next": {
+    "title": "Datenklassen (Records)",
+    "permalink": "/java-docs/documentation/records"
+  }
+}

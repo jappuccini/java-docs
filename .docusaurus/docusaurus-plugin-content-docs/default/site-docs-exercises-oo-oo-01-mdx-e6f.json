@@ -1,0 +1,27 @@
+{
+  "id": "exercises/oo/oo01",
+  "title": "OO01",
+  "description": "",
+  "source": "@site/docs/exercises/oo/oo01.mdx",
+  "sourceDirName": "exercises/oo",
+  "slug": "/exercises/oo/oo01",
+  "permalink": "/java-docs/exercises/oo/oo01",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/oo/oo01.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "OO01",
+    "description": ""
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "Objektorientierte Programmierung",
+    "permalink": "/java-docs/exercises/oo/"
+  },
+  "next": {
+    "title": "OO02",
+    "permalink": "/java-docs/exercises/oo/oo02"
+  }
+}

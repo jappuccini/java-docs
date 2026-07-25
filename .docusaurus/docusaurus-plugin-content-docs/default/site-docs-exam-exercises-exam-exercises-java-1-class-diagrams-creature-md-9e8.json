@@ -1,0 +1,48 @@
+{
+  "id": "exam-exercises/exam-exercises-java1/class-diagrams/creature",
+  "title": "Kreatur",
+  "description": "",
+  "source": "@site/docs/exam-exercises/exam-exercises-java1/class-diagrams/creature.md",
+  "sourceDirName": "exam-exercises/exam-exercises-java1/class-diagrams",
+  "slug": "/exam-exercises/exam-exercises-java1/class-diagrams/creature",
+  "permalink": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/creature",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exam-exercises/exam-exercises-java1/class-diagrams/creature.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "oo",
+      "permalink": "/java-docs/tags/oo"
+    },
+    {
+      "inline": true,
+      "label": "enumerations",
+      "permalink": "/java-docs/tags/enumerations"
+    },
+    {
+      "inline": true,
+      "label": "io-streams",
+      "permalink": "/java-docs/tags/io-streams"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Kreatur",
+    "description": "",
+    "tags": [
+      "oo",
+      "enumerations",
+      "io-streams"
+    ]
+  },
+  "sidebar": "examExercisesSidebar",
+  "previous": {
+    "title": "Plätzchendose",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/cookie-jar"
+  },
+  "next": {
+    "title": "Osterkorb",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/easter-basket"
+  }
+}

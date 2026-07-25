@@ -1,0 +1,38 @@
+{
+  "id": "additional-material/instructions/git",
+  "title": "Arbeiten mit Git",
+  "description": "",
+  "source": "@site/docs/additional-material/instructions/git.md",
+  "sourceDirName": "additional-material/instructions",
+  "slug": "/additional-material/instructions/git",
+  "permalink": "/java-docs/additional-material/instructions/git",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/additional-material/instructions/git.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "git",
+      "permalink": "/java-docs/tags/git"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 30,
+  "frontMatter": {
+    "title": "Arbeiten mit Git",
+    "description": "",
+    "sidebar_position": 30,
+    "tags": [
+      "git"
+    ]
+  },
+  "sidebar": "additionalMaterialSidebar",
+  "previous": {
+    "title": "Arbeiten mit Maven",
+    "permalink": "/java-docs/additional-material/instructions/maven"
+  },
+  "next": {
+    "title": "Arbeiten mit JavaFX",
+    "permalink": "/java-docs/additional-material/instructions/javafx"
+  }
+}

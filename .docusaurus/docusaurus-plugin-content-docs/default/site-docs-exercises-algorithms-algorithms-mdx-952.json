@@ -1,0 +1,38 @@
+{
+  "id": "exercises/algorithms/algorithms",
+  "title": "Algorithmen",
+  "description": "",
+  "source": "@site/docs/exercises/algorithms/algorithms.mdx",
+  "sourceDirName": "exercises/algorithms",
+  "slug": "/exercises/algorithms/",
+  "permalink": "/java-docs/exercises/algorithms/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exercises/algorithms/algorithms.mdx",
+  "tags": [
+    {
+      "inline": true,
+      "label": "algorithms",
+      "permalink": "/java-docs/tags/algorithms"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 230,
+  "frontMatter": {
+    "title": "Algorithmen",
+    "description": "",
+    "sidebar_position": 230,
+    "tags": [
+      "algorithms"
+    ]
+  },
+  "sidebar": "exercisesSidebar",
+  "previous": {
+    "title": "Trees01",
+    "permalink": "/java-docs/exercises/trees/trees01"
+  },
+  "next": {
+    "title": "Algorithms01",
+    "permalink": "/java-docs/exercises/algorithms/algorithms01"
+  }
+}

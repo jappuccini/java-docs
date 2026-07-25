@@ -1,0 +1,60 @@
+{
+  "id": "exam-exercises/exam-exercises-java1/class-diagrams/travel",
+  "title": "Reise",
+  "description": "",
+  "source": "@site/docs/exam-exercises/exam-exercises-java1/class-diagrams/travel.md",
+  "sourceDirName": "exam-exercises/exam-exercises-java1/class-diagrams",
+  "slug": "/exam-exercises/exam-exercises-java1/class-diagrams/travel",
+  "permalink": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/travel",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exam-exercises/exam-exercises-java1/class-diagrams/travel.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "oo",
+      "permalink": "/java-docs/tags/oo"
+    },
+    {
+      "inline": true,
+      "label": "inheritance",
+      "permalink": "/java-docs/tags/inheritance"
+    },
+    {
+      "inline": true,
+      "label": "polymorphism",
+      "permalink": "/java-docs/tags/polymorphism"
+    },
+    {
+      "inline": true,
+      "label": "abstract",
+      "permalink": "/java-docs/tags/abstract"
+    },
+    {
+      "inline": true,
+      "label": "interfaces",
+      "permalink": "/java-docs/tags/interfaces"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Reise",
+    "description": "",
+    "tags": [
+      "oo",
+      "inheritance",
+      "polymorphism",
+      "abstract",
+      "interfaces"
+    ]
+  },
+  "sidebar": "examExercisesSidebar",
+  "previous": {
+    "title": "Kurs",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/student-course"
+  },
+  "next": {
+    "title": "Wetterstation",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java1/class-diagrams/weather-station"
+  }
+}

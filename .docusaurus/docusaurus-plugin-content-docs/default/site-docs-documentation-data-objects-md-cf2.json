@@ -1,0 +1,38 @@
+{
+  "id": "documentation/data-objects",
+  "title": "Datenobjekte",
+  "description": "",
+  "source": "@site/docs/documentation/data-objects.md",
+  "sourceDirName": "documentation",
+  "slug": "/documentation/data-objects",
+  "permalink": "/java-docs/documentation/data-objects",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/documentation/data-objects.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "data-objects",
+      "permalink": "/java-docs/tags/data-objects"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 40,
+  "frontMatter": {
+    "title": "Datenobjekte",
+    "description": "",
+    "sidebar_position": 40,
+    "tags": [
+      "data-objects"
+    ]
+  },
+  "sidebar": "documentationSidebar",
+  "previous": {
+    "title": "Datentypen",
+    "permalink": "/java-docs/documentation/data-types"
+  },
+  "next": {
+    "title": "Zeichenketten (Strings)",
+    "permalink": "/java-docs/documentation/strings"
+  }
+}

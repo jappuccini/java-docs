@@ -1,0 +1,38 @@
+{
+  "id": "documentation/hashing",
+  "title": "Schlüsseltransformationen (Hashing)",
+  "description": "",
+  "source": "@site/docs/documentation/hashing.mdx",
+  "sourceDirName": "documentation",
+  "slug": "/documentation/hashing",
+  "permalink": "/java-docs/documentation/hashing",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/documentation/hashing.mdx",
+  "tags": [
+    {
+      "inline": true,
+      "label": "hashing",
+      "permalink": "/java-docs/tags/hashing"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 346,
+  "frontMatter": {
+    "title": "Schlüsseltransformationen (Hashing)",
+    "description": "",
+    "sidebar_position": 346,
+    "tags": [
+      "hashing"
+    ]
+  },
+  "sidebar": "documentationSidebar",
+  "previous": {
+    "title": "Java Collections Framework",
+    "permalink": "/java-docs/documentation/java-collections-framework"
+  },
+  "next": {
+    "title": "Bäume",
+    "permalink": "/java-docs/documentation/trees"
+  }
+}

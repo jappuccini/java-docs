@@ -1,0 +1,38 @@
+{
+  "id": "documentation/trees",
+  "title": "Bäume",
+  "description": "",
+  "source": "@site/docs/documentation/trees.md",
+  "sourceDirName": "documentation",
+  "slug": "/documentation/trees",
+  "permalink": "/java-docs/documentation/trees",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/documentation/trees.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "trees",
+      "permalink": "/java-docs/tags/trees"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 347,
+  "frontMatter": {
+    "title": "Bäume",
+    "description": "",
+    "sidebar_position": 347,
+    "tags": [
+      "trees"
+    ]
+  },
+  "sidebar": "documentationSidebar",
+  "previous": {
+    "title": "Schlüsseltransformationen (Hashing)",
+    "permalink": "/java-docs/documentation/hashing"
+  },
+  "next": {
+    "title": "Algorithmen",
+    "permalink": "/java-docs/documentation/algorithms"
+  }
+}

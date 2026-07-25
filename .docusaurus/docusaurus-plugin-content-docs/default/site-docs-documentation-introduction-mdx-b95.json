@@ -1,0 +1,27 @@
+{
+  "id": "documentation/introduction",
+  "title": "Einführung",
+  "description": "",
+  "source": "@site/docs/documentation/introduction.mdx",
+  "sourceDirName": "documentation",
+  "slug": "/",
+  "permalink": "/java-docs/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/documentation/introduction.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Einführung",
+    "description": "",
+    "slug": "/",
+    "sidebar_position": 0,
+    "tags": []
+  },
+  "sidebar": "documentationSidebar",
+  "next": {
+    "title": "Programmieren",
+    "permalink": "/java-docs/documentation/coding"
+  }
+}

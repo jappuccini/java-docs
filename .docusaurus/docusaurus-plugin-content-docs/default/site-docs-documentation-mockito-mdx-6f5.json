@@ -1,0 +1,38 @@
+{
+  "id": "documentation/mockito",
+  "title": "Mockito",
+  "description": "",
+  "source": "@site/docs/documentation/mockito.mdx",
+  "sourceDirName": "documentation",
+  "slug": "/documentation/mockito",
+  "permalink": "/java-docs/documentation/mockito",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/documentation/mockito.mdx",
+  "tags": [
+    {
+      "inline": true,
+      "label": "mockito",
+      "permalink": "/java-docs/tags/mockito"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 325,
+  "frontMatter": {
+    "title": "Mockito",
+    "description": "",
+    "sidebar_position": 325,
+    "tags": [
+      "mockito"
+    ]
+  },
+  "sidebar": "documentationSidebar",
+  "previous": {
+    "title": "Komponententests (Unit Tests)",
+    "permalink": "/java-docs/documentation/unit-tests"
+  },
+  "next": {
+    "title": "Datenströme (IO-Streams)",
+    "permalink": "/java-docs/documentation/io-streams"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "additional-material/tools/genai-tools",
+  "title": "GenAI-Tools",
+  "description": "",
+  "source": "@site/docs/additional-material/tools/genai-tools.md",
+  "sourceDirName": "additional-material/tools",
+  "slug": "/additional-material/tools/genai-tools",
+  "permalink": "/java-docs/additional-material/tools/genai-tools",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/additional-material/tools/genai-tools.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "genai",
+      "permalink": "/java-docs/tags/genai"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 40,
+  "frontMatter": {
+    "title": "GenAI-Tools",
+    "description": "",
+    "sidebar_position": 40,
+    "tags": [
+      "genai"
+    ]
+  },
+  "sidebar": "additionalMaterialSidebar",
+  "previous": {
+    "title": "Markdown",
+    "permalink": "/java-docs/additional-material/tools/markdown"
+  },
+  "next": {
+    "title": "Debugging",
+    "permalink": "/java-docs/additional-material/tools/debugging"
+  }
+}

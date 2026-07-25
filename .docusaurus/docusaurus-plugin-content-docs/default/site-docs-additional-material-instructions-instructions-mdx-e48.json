@@ -1,0 +1,30 @@
+{
+  "id": "additional-material/instructions/instructions",
+  "title": "Anleitungen",
+  "description": "",
+  "source": "@site/docs/additional-material/instructions/instructions.mdx",
+  "sourceDirName": "additional-material/instructions",
+  "slug": "/additional-material/instructions/",
+  "permalink": "/java-docs/additional-material/instructions/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/additional-material/instructions/instructions.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 20,
+  "frontMatter": {
+    "title": "Anleitungen",
+    "description": "",
+    "sidebar_position": 20,
+    "tags": []
+  },
+  "sidebar": "additionalMaterialSidebar",
+  "previous": {
+    "title": "Debugging",
+    "permalink": "/java-docs/additional-material/tools/debugging"
+  },
+  "next": {
+    "title": "Arbeiten mit dem JDK",
+    "permalink": "/java-docs/additional-material/instructions/jdk"
+  }
+}

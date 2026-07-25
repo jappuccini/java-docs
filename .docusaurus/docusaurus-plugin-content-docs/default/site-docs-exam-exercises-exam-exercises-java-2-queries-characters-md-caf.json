@@ -1,0 +1,66 @@
+{
+  "id": "exam-exercises/exam-exercises-java2/queries/characters",
+  "title": "Spielfiguren",
+  "description": "",
+  "source": "@site/docs/exam-exercises/exam-exercises-java2/queries/characters.md",
+  "sourceDirName": "exam-exercises/exam-exercises-java2/queries",
+  "slug": "/exam-exercises/exam-exercises-java2/queries/characters",
+  "permalink": "/java-docs/exam-exercises/exam-exercises-java2/queries/characters",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/jappuccini/java-docs/tree/main/docs/exam-exercises/exam-exercises-java2/queries/characters.md",
+  "tags": [
+    {
+      "inline": true,
+      "label": "interfaces",
+      "permalink": "/java-docs/tags/interfaces"
+    },
+    {
+      "inline": true,
+      "label": "comparators",
+      "permalink": "/java-docs/tags/comparators"
+    },
+    {
+      "inline": true,
+      "label": "records",
+      "permalink": "/java-docs/tags/records"
+    },
+    {
+      "inline": true,
+      "label": "maps",
+      "permalink": "/java-docs/tags/maps"
+    },
+    {
+      "inline": true,
+      "label": "optionals",
+      "permalink": "/java-docs/tags/optionals"
+    },
+    {
+      "inline": true,
+      "label": "java-stream-api",
+      "permalink": "/java-docs/tags/java-stream-api"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Spielfiguren",
+    "description": "",
+    "tags": [
+      "interfaces",
+      "comparators",
+      "records",
+      "maps",
+      "optionals",
+      "java-stream-api"
+    ]
+  },
+  "sidebar": "examExercisesSidebar",
+  "previous": {
+    "title": "Abfragen",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java2/queries/"
+  },
+  "next": {
+    "title": "Städte",
+    "permalink": "/java-docs/exam-exercises/exam-exercises-java2/queries/cities"
+  }
+}
