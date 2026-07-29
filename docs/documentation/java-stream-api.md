@@ -13,7 +13,7 @@ der Bedarfsauswertung (Lazy Evaluation): Operationen werden erst dann
 ausgeführt, wenn eine terminale Operation dies erfordert.
 
 ```mermaid
-flowchart LTD
+flowchart TD
    Strom1 -->|Filtern| Strom2
    Strom2 -->|Abbilden| Strom3
    Strom3 -->|Sortieren| Strom4
