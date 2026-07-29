@@ -13,7 +13,7 @@ der Bedarfsauswertung (Lazy Evaluation): Operationen werden erst dann
 ausgeführt, wenn eine terminale Operation dies erfordert.
 
 ```mermaid
-flowchart TD
+flowchart LTD
    Strom1 -->|Filtern| Strom2
    Strom2 -->|Abbilden| Strom3
    Strom3 -->|Sortieren| Strom4
@@ -98,10 +98,13 @@ intermediäre Operationen sind Filtern, Abbilden und Sortieren.
 | Abbilden      | `IntStream mapToInt(mapper: ToIntFunction<T, R>)`          | `int applyAsInt(value: T)`       |
 | Abbilden      | `LongStream mapToLong(mapper: ToLongFunction<T, R>)`       | `long applyAsLong(value: T)`     |
 | Spähen        | `Stream<T> peek(consumer: Consumer<T>)`                    | `void accept(t: T)`              |
+| Abflachen     | `Stream<R> flatMap(mapper: Function<T, Stream<R>>)`        | `R apply(t: T)`                  |
 | Sortieren     | `Stream<T> sorted(comparator: Comparator<T>)`              | `int compare(o1: T, o2: T)`      |
+| Sortieren     | `Stream<T> sorted()`                                       | -                                |
 | Unterscheiden | `Stream<T> distinct()`                                     | -                                |
 | Begrenzen     | `Stream<T> limit(maxSize: long)`                           | -                                |
 | Überspringen  | `Stream<T> skip(n: long)`                                  | -                                |
+| Sammeln       | `List<T> toList()`                                         | -                                |
 
 ## Terminale Operationen
 
@@ -125,6 +128,72 @@ Elementen.
 
 Zahlenströme (`IntStream`, `DoubleStream`, `LongStream`) bieten zusätzlich die
 terminalen Operationen `sum()` und `average()`.
+
+## Collectors
+
+Die terminale Operation `collect()` nimmt einen `Collector` entgegen und fasst
+die Elemente des Stroms zu einem Ergebnis zusammen. Die Klasse `Collectors`
+(Paket `java.util.stream`) stellt fertige Collector-Implementierungen für die
+häufigsten Anwendungsfälle bereit.
+
+| Collector        | Methode                                                                        | Beschreibung                                                                           |
+| ---------------- | ------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------- |
+| In Liste sammeln | `toList()`                                                                     | Sammelt Elemente in eine `List<T>`                                                     |
+| In Menge sammeln | `toSet()`                                                                      | Sammelt Elemente in eine `Set<T>` (Duplikate werden entfernt)                          |
+| In Map sammeln   | `toMap(keyMapper: Function<T,K>, valueMapper: Function<T,V>)`                  | Sammelt Elemente in eine `Map<K,V>`                                                    |
+| Gruppieren       | `groupingBy(classifier: Function<T,K>)`                                        | Gruppiert Elemente nach Schlüssel in eine `Map<K, List<T>>`                            |
+| Gruppieren       | `groupingBy(classifier: Function<T,K>, downstream: Collector<T,A,D>)`          | Gruppiert und wendet auf jede Gruppe einen weiteren Collector an                       |
+| Partitionieren   | `partitioningBy(predicate: Predicate<T>)`                                      | Teilt Elemente in zwei Gruppen (`true`/`false`) auf                                    |
+| Partitionieren   | `partitioningBy(predicate: Predicate<T>, downstream: Collector<T,A,D>)`        | Partitioniert und wendet auf jede Partition einen weiteren Collector an                |
+| Abbilden         | `mapping(mapper: Function<T,U>, downstream: Collector<U,A,R>)`                 | Bildet Elemente ab, bevor ein nachgelagerter Collector sie sammelt                     |
+| Zählen           | `counting()`                                                                   | Zählt die Elemente (nützlich als nachgelagerter Collector)                             |
+| Verbinden        | `joining()`                                                                    | Verbindet `String`-Elemente zu einem einzigen String                                   |
+| Verbinden        | `joining(delimiter: CharSequence)`                                             | Verbindet Elemente mit einem Trennzeichen                                              |
+| Verbinden        | `joining(delimiter: CharSequence, prefix: CharSequence, suffix: CharSequence)` | Verbindet Elemente mit Trennzeichen, Präfix und Suffix                                 |
+| Summieren        | `summingInt(mapper: ToIntFunction<T>)`                                         | Berechnet die Summe der gemappten `int`-Werte                                          |
+| Summieren        | `summingDouble(mapper: ToDoubleFunction<T>)`                                   | Berechnet die Summe der gemappten `double`-Werte                                       |
+| Summieren        | `summingLong(mapper: ToLongFunction<T>)`                                       | Berechnet die Summe der gemappten `long`-Werte                                         |
+| Durchschnitt     | `averagingInt(mapper: ToIntFunction<T>)`                                       | Berechnet den Durchschnitt der gemappten `int`-Werte als `double`                      |
+| Durchschnitt     | `averagingDouble(mapper: ToDoubleFunction<T>)`                                 | Berechnet den Durchschnitt der gemappten `double`-Werte                                |
+| Durchschnitt     | `averagingLong(mapper: ToLongFunction<T>)`                                     | Berechnet den Durchschnitt der gemappten `long`-Werte als `double`                     |
+| Zusammenfassen   | `summarizingInt(mapper: ToIntFunction<T>)`                                     | Liefert Statistiken (Anzahl, Summe, Min, Max, Durchschnitt) als `IntSummaryStatistics` |
+
+Das folgende Beispiel zeigt typische Anwendungen von `Collectors`:
+
+```java title="MainClass.java" showLineNumbers
+public class MainClass {
+
+   record Person(String name, String city) {}
+
+   public static void main(String[] args) {
+      List<Person> persons = List.of(
+            new Person("Anna", "Berlin"),
+            new Person("Ben", "Hamburg"),
+            new Person("Clara", "Berlin"),
+            new Person("David", "Hamburg"),
+            new Person("Eva", "Berlin")
+      );
+
+      // Alle Namen als kommaseparierten String zusammenfassen
+      String names = persons.stream()
+            .map(Person::name)
+            .collect(Collectors.joining(", "));
+
+      // Personen nach Stadt gruppieren
+      Map<String, List<Person>> byCity = persons.stream()
+            .collect(Collectors.groupingBy(Person::city));
+
+      // Anzahl der Personen je Stadt
+      Map<String, Long> countByCity = persons.stream()
+            .collect(Collectors.groupingBy(Person::city, Collectors.counting()));
+
+      // Personen nach Wohnort Berlin / nicht Berlin aufteilen
+      Map<Boolean, List<Person>> partitioned = persons.stream()
+            .collect(Collectors.partitioningBy(p -> p.city().equals("Berlin")));
+   }
+
+}
+```
 
 ## Bedarfsauswertung (Lazy Evaluation)
 
