@@ -27,7 +27,7 @@
     "mermaid": "^11.16.1",
     "prism-react-renderer": "^2.1.0",
     "react": "^19.2.8",
-    "react-dom": "^19.2.8",
+    "react-dom": "^19.3.0",
     "reveal.js": "^6.0.2"
   },
   "devDependencies": {
