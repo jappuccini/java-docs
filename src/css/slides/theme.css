@@ -1,0 +1,851 @@
+/**
+ * Studio Coffee theme for the reveal.js slide decks.
+ *
+ * Load order: reveal.css (layout only) -> fonts.css -> this file ->
+ * custom.css. Decks mirror the site color mode: light is the default, dark
+ * is applied through Docusaurus' html[data-theme='dark'].
+ */
+
+/* -------------------------------------------------------------------------
+ * 1. Design tokens
+ * ---------------------------------------------------------------------- */
+
+:root {
+  /* Palette — light (default) */
+  --sc-background: #fbf9f6;
+  --sc-text: #241d16;
+  --sc-heading: #1a140e;
+  --sc-muted: #6f6357;
+  --sc-accent: #b0623a;
+  --sc-link: #96502e;
+  --sc-border: #e7e0d6;
+
+  --sc-code-bg: #f5f1ea;
+  --sc-code-border: #e7e0d6;
+  --sc-code-highlight: #f0dfd0;
+  --sc-code-linenumber: #a99c8b;
+
+  --sc-tok-keyword: #c2410c;
+  --sc-tok-string: #15803d;
+  --sc-tok-comment: #a8a29e;
+  --sc-tok-number: #b45309;
+  --sc-tok-type: #7c3aed;
+  --sc-tok-function: #0e7490;
+
+  --sc-font-text:
+    'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial,
+    sans-serif;
+  --sc-font-mono:
+    'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+html[data-theme='dark'] {
+  /* Palette — dark (warm) */
+  --sc-background: #171310;
+  --sc-text: #ede6dc;
+  --sc-heading: #f6f0e8;
+  --sc-muted: #a79b8c;
+  --sc-accent: #d89a6a;
+  --sc-link: #e0ab80;
+  --sc-border: #332a22;
+
+  --sc-code-bg: #1e1813;
+  --sc-code-border: #2c241c;
+  --sc-code-highlight: #3a2a1e;
+  --sc-code-linenumber: #7d7061;
+
+  --sc-tok-keyword: #fdba74;
+  --sc-tok-string: #86efac;
+  --sc-tok-comment: #78695c;
+  --sc-tok-number: #fcd34d;
+  --sc-tok-type: #c4b5fd;
+  --sc-tok-function: #67e8f9;
+}
+
+/* -------------------------------------------------------------------------
+ * 2. Reveal variables
+ * ---------------------------------------------------------------------- */
+
+:root {
+  --r-background-color: var(--sc-background);
+  --r-main-font: var(--sc-font-text);
+  --r-main-font-size: 34px;
+  --r-main-color: var(--sc-text);
+  --r-block-margin: 0.9em;
+  --r-heading-font: var(--sc-font-text);
+  --r-heading-color: var(--sc-heading);
+  --r-heading-margin: 0 0 0.5em 0;
+  --r-heading-line-height: 1.15;
+  --r-heading-letter-spacing: -0.015em;
+  --r-heading-text-transform: none;
+  --r-heading-text-shadow: none;
+  --r-heading-font-weight: 700;
+  --r-heading1-size: 2.4em;
+  --r-heading2-size: 1.75em;
+  --r-heading3-size: 1.25em;
+  --r-heading4-size: 1em;
+  --r-heading1-text-shadow: none;
+  --r-code-font: var(--sc-font-mono);
+  --r-link-color: var(--sc-link);
+  --r-link-color-dark: var(--sc-link);
+  --r-link-color-hover: var(--sc-accent);
+  --r-selection-background-color: var(--sc-accent);
+  --r-selection-color: var(--sc-background);
+  --r-overlay-element-bg-color: 240, 240, 240;
+  --r-overlay-element-fg-color: 0, 0, 0;
+}
+
+/* -------------------------------------------------------------------------
+ * 3. Base rules (formerly provided by black.css)
+ * ---------------------------------------------------------------------- */
+
+.reveal-viewport {
+  background-color: var(--sc-background);
+}
+
+.reveal {
+  font-family: var(--r-main-font);
+  font-size: var(--r-main-font-size);
+  color: var(--r-main-color);
+  font-weight: 400;
+}
+
+.reveal ::selection {
+  color: var(--r-selection-color);
+  background: var(--r-selection-background-color);
+  text-shadow: none;
+}
+
+.reveal .slides section,
+.reveal .slides section > section {
+  line-height: 1.5;
+  font-weight: inherit;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  margin: var(--r-heading-margin);
+  color: var(--r-heading-color);
+  font-family: var(--r-heading-font);
+  font-weight: var(--r-heading-font-weight);
+  line-height: var(--r-heading-line-height);
+  letter-spacing: var(--r-heading-letter-spacing);
+  text-transform: var(--r-heading-text-transform);
+  text-shadow: var(--r-heading-text-shadow);
+  word-wrap: break-word;
+}
+
+.reveal h1 {
+  font-size: var(--r-heading1-size);
+}
+
+.reveal h2 {
+  font-size: var(--r-heading2-size);
+}
+
+.reveal h3 {
+  font-size: var(--r-heading3-size);
+}
+
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  font-size: var(--r-heading4-size);
+}
+
+.reveal h1:last-child,
+.reveal h2:last-child,
+.reveal h3:last-child,
+.reveal h4:last-child,
+.reveal h5:last-child,
+.reveal h6:last-child {
+  margin-bottom: 0;
+}
+
+.reveal p {
+  margin: var(--r-block-margin) 0;
+  line-height: 1.55;
+}
+
+.reveal strong,
+.reveal b {
+  font-weight: 700;
+}
+
+.reveal em {
+  font-style: italic;
+}
+
+.reveal ol,
+.reveal ul {
+  display: block;
+  margin: 0.55em 0 0;
+  padding-left: 1.25em;
+}
+
+.reveal ol {
+  list-style-type: decimal;
+}
+
+.reveal ul {
+  list-style-type: disc;
+}
+
+.reveal ul ul {
+  list-style-type: square;
+}
+
+.reveal ul ul ul {
+  list-style-type: circle;
+}
+
+.reveal li {
+  margin: 0.22em 0;
+  padding-left: 0.12em;
+}
+
+.reveal li::marker {
+  color: var(--sc-accent);
+}
+
+.reveal li > ul,
+.reveal li > ol {
+  margin: 0.25em 0 0;
+}
+
+.reveal dl {
+  display: block;
+  margin: 0.55em 0 0;
+}
+
+.reveal dt {
+  font-weight: 700;
+}
+
+.reveal dd {
+  margin-left: 1.25em;
+}
+
+.reveal blockquote {
+  display: block;
+  width: 100%;
+  margin: var(--r-block-margin) 0;
+  padding: 0.15em 0 0.15em 0.9em;
+  background: transparent;
+  border-left: 4px solid var(--sc-accent);
+  box-shadow: none;
+  font-style: italic;
+  color: var(--sc-muted);
+}
+
+.reveal q {
+  font-style: italic;
+}
+
+.reveal table {
+  display: table;
+  margin: 0.8em 0 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.reveal table th,
+.reveal table td {
+  padding: 0.28em 0.7em;
+  border: 0;
+  border-bottom: 1px solid var(--sc-border);
+  text-align: left;
+}
+
+.reveal table th {
+  color: var(--sc-heading);
+  font-weight: 700;
+}
+
+.reveal table th[align='center'],
+.reveal table td[align='center'] {
+  text-align: center;
+}
+
+.reveal table th[align='right'],
+.reveal table td[align='right'] {
+  text-align: right;
+}
+
+.reveal sup {
+  vertical-align: super;
+  font-size: smaller;
+}
+
+.reveal sub {
+  vertical-align: sub;
+  font-size: smaller;
+}
+
+.reveal small {
+  display: inline-block;
+  font-size: 0.6em;
+  line-height: 1.2em;
+  vertical-align: top;
+}
+
+.reveal img,
+.reveal video,
+.reveal iframe {
+  max-width: 95%;
+  max-height: 95%;
+}
+
+.reveal img {
+  margin: var(--r-block-margin) 0;
+  box-shadow: none;
+}
+
+.reveal a {
+  color: var(--r-link-color);
+  text-decoration: none;
+  border-bottom: 1px solid
+    color-mix(in srgb, var(--r-link-color) 45%, transparent);
+  padding-bottom: 1px;
+  transition: color 0.15s;
+}
+
+.reveal a:hover {
+  color: var(--r-link-color-hover);
+  border-bottom-color: currentColor;
+}
+
+.reveal .controls {
+  right: auto;
+  left: 18px;
+  color: var(--sc-accent);
+}
+
+@media (pointer: fine) {
+  .reveal .controls {
+    display: none !important;
+  }
+}
+
+.reveal .progress {
+  height: max(3px, 0.55vmin);
+  color: var(--sc-accent);
+  background: var(--sc-border);
+}
+
+.reveal .slide-number {
+  right: 6.2vmin;
+  bottom: 1.8vmin;
+  padding: 0;
+  background: transparent;
+  color: var(--sc-muted);
+  font-family: var(--sc-font-text);
+  font-size: 3vmin;
+  letter-spacing: 0.05em;
+}
+
+.reveal .slide-number a {
+  color: currentColor;
+  border-bottom: 0;
+}
+
+.reveal .slide-number-delimiter {
+  margin: 0 0.4em;
+}
+
+section.has-light-background,
+section.has-light-background h1,
+section.has-light-background h2,
+section.has-light-background h3,
+section.has-light-background h4,
+section.has-light-background h5,
+section.has-light-background h6 {
+  color: #241d16;
+}
+
+@media print {
+  .backgrounds {
+    background-color: var(--sc-background);
+  }
+}
+
+/* -------------------------------------------------------------------------
+ * 4. Layout
+ * ---------------------------------------------------------------------- */
+
+.reveal .slides > section,
+.reveal .slides > section > section {
+  text-align: left;
+}
+
+.reveal .slides > section {
+  padding: 54px 96px 36px;
+}
+
+/* Outer stacks group topic slides; the padding lives on the inner slides. */
+.reveal .slides > section:has(> section) {
+  padding: 0;
+}
+
+.reveal .slides > section:has(> section) > section {
+  padding: 54px 96px 36px;
+}
+
+/* -------------------------------------------------------------------------
+ * 5. Chrome (breadcrumb)
+ * ---------------------------------------------------------------------- */
+
+.slide-chrome {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  /* Keep the breadcrumb aligned with the slide box even when the viewport is
+     not 16:9. */
+  padding-bottom: calc((100vh - min(100vh, 100vw * 9 / 16)) / 2);
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.slide-chrome__inner {
+  box-sizing: border-box;
+  display: flex;
+  width: min(100%, 100vh * 16 / 9);
+  padding: 0 13.3vmin 1.8vmin;
+  color: var(--sc-muted);
+  font-family: var(--sc-font-text);
+  font-size: 2.2vmin;
+  line-height: 1.2;
+}
+
+.slide-chrome__topic:not(:empty)::before {
+  content: '›';
+  margin: 0 0.7em;
+  color: var(--sc-accent);
+}
+
+.reveal-viewport:has(section.present.cover) .slide-chrome,
+.reveal-viewport:has(section.present.divider) .slide-chrome {
+  opacity: 0;
+}
+
+/* -------------------------------------------------------------------------
+ * 6. Code panel
+ * ---------------------------------------------------------------------- */
+
+.reveal pre {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin: 0.8em 0 0;
+  padding: 0;
+  background: var(--sc-code-bg);
+  border: 1px solid var(--sc-code-border);
+  border-radius: 12px;
+  box-shadow: none;
+  font-size: 24px;
+  line-height: 1.62;
+  word-wrap: normal;
+  overflow: hidden;
+}
+
+.reveal pre code {
+  display: block;
+  max-height: 500px;
+  padding: 18px 1.3em;
+  overflow: auto;
+  background: transparent;
+  color: var(--sc-text);
+  font-family: var(--sc-font-mono);
+  font-size: inherit;
+  font-variant-ligatures: none;
+  font-feature-settings:
+    'liga' 0,
+    'calt' 0;
+  white-space: pre;
+  word-wrap: normal;
+  tab-size: 2;
+}
+
+.reveal .code-wrapper {
+  white-space: normal;
+}
+
+.reveal .code-wrapper code {
+  white-space: pre;
+}
+
+/* Inline code outside the code panel */
+
+.reveal :not(pre) > code {
+  padding: 0.08em 0.35em;
+  background: var(--sc-code-bg);
+  border: 1px solid var(--sc-code-border);
+  border-radius: 6px;
+  color: var(--sc-text);
+  font-family: var(--sc-font-mono);
+  font-size: 0.85em;
+  font-variant-ligatures: none;
+  font-feature-settings:
+    'liga' 0,
+    'calt' 0;
+}
+
+.reveal .code-caption {
+  margin: 0.8em 0 0;
+  color: var(--sc-muted);
+  font-family: var(--sc-font-mono);
+  font-size: 0.62em;
+  line-height: 1.4;
+}
+
+.reveal .code-caption + pre {
+  margin-top: 0.45em;
+}
+
+/* Line numbers (rendered by the Highlight plugin as a table) */
+
+.reveal pre code:has(.hljs-ln) {
+  padding: 18px 0;
+}
+
+.reveal pre .hljs-ln {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  margin: 0;
+  border-collapse: collapse;
+}
+
+.reveal pre .hljs-ln td {
+  border: 0;
+}
+
+.reveal pre .hljs-ln-numbers {
+  box-sizing: content-box;
+  width: 2.1em;
+  padding: 0 0.9em 0 1.2em;
+  color: var(--sc-code-linenumber);
+  text-align: left;
+  vertical-align: top;
+  user-select: none;
+}
+
+.reveal pre .hljs-ln-code {
+  padding: 0 1.5em 0 0;
+  vertical-align: top;
+  white-space: pre;
+}
+
+.reveal .hljs-ln tr.highlight-line {
+  background: var(--sc-code-highlight);
+}
+
+.reveal .hljs-ln tr.highlight-line td.hljs-ln-numbers {
+  box-shadow: inset 3px 0 0 var(--sc-accent);
+}
+
+.reveal .hljs.has-highlights tr:not(.highlight-line) {
+  opacity: 0.35;
+  transition: opacity 0.2s ease;
+}
+
+/* Token theme (highlight.js) */
+
+.reveal .hljs {
+  /* Opaque: reveal overlays fragment clones for step highlighting; a
+     transparent background would let the layers below show through. */
+  background: var(--sc-code-bg);
+  color: var(--sc-text);
+}
+
+.reveal .hljs-comment,
+.reveal .hljs-quote,
+.reveal .hljs-deletion {
+  color: var(--sc-tok-comment);
+  font-style: italic;
+}
+
+.reveal .hljs-keyword,
+.reveal .hljs-literal,
+.reveal .hljs-selector-tag,
+.reveal .hljs-doctag,
+.reveal .hljs-name,
+.reveal .hljs-tag,
+.reveal .hljs-strong {
+  color: var(--sc-tok-keyword);
+}
+
+.reveal .hljs-string,
+.reveal .hljs-regexp,
+.reveal .hljs-addition,
+.reveal .hljs-attribute {
+  color: var(--sc-tok-string);
+}
+
+.reveal .hljs-number,
+.reveal .hljs-symbol,
+.reveal .hljs-bullet,
+.reveal .hljs-link,
+.reveal .hljs-meta {
+  color: var(--sc-tok-number);
+}
+
+.reveal .hljs-type,
+.reveal .hljs-built_in,
+.reveal .hljs-builtin-name,
+.reveal .hljs-title.class_,
+.reveal .hljs-class .hljs-title {
+  color: var(--sc-tok-type);
+}
+
+.reveal .hljs-title,
+.reveal .hljs-title.function_,
+.reveal .hljs-function .hljs-title,
+.reveal .hljs-section {
+  color: var(--sc-tok-function);
+}
+
+/* -------------------------------------------------------------------------
+ * 7. Slide patterns
+ * ---------------------------------------------------------------------- */
+
+.reveal .kicker {
+  margin: 0 0 0.4em;
+  color: var(--sc-accent);
+  font-size: 0.72em;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+/* Cover */
+
+.reveal .cover .kicker {
+  font-size: 0.78em;
+}
+
+.reveal .cover h1 {
+  max-width: 16em;
+  font-size: 3.1em;
+  line-height: 1.08;
+}
+
+.reveal .cover h1::after {
+  content: '';
+  display: block;
+  width: 1.1em;
+  height: 0.07em;
+  margin-top: 0.28em;
+  border-radius: 999px;
+  background: var(--sc-accent);
+}
+
+.reveal .cover p {
+  color: var(--sc-muted);
+  font-size: 1.05em;
+}
+
+/* Divider */
+
+.reveal .divider h2 {
+  max-width: 14em;
+  font-size: 2.6em;
+  line-height: 1.1;
+}
+
+.reveal .divider h2::after {
+  content: '';
+  display: block;
+  width: 1.05em;
+  height: 0.06em;
+  margin-top: 0.3em;
+  border-radius: 999px;
+  background: var(--sc-accent);
+}
+
+.reveal .divider p:not(.kicker) {
+  color: var(--sc-muted);
+  font-size: 1.05em;
+}
+
+/* Statement */
+
+.reveal .statement p {
+  max-width: 24em;
+  color: var(--sc-heading);
+  font-size: 1.85em;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+}
+
+/* Callout */
+
+.reveal .callout {
+  margin-top: 0.8em;
+  padding: 0.75em 1.1em;
+  background: color-mix(in srgb, var(--sc-accent) 7%, transparent);
+  border: 1px solid color-mix(in srgb, var(--sc-accent) 30%, var(--sc-border));
+  border-left: 3px solid var(--sc-accent);
+  border-radius: 10px;
+}
+
+.reveal .callout > *:first-child {
+  margin-top: 0;
+}
+
+.reveal .callout > *:last-child {
+  margin-bottom: 0;
+}
+
+.reveal .callout .callout-title {
+  display: block;
+  margin-bottom: 0.35em;
+  color: var(--sc-accent);
+  font-size: 0.7em;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* Two columns */
+
+.reveal .two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+  margin-top: 0.6em;
+}
+
+.reveal .two-column > * {
+  min-width: 0;
+}
+
+.reveal .two-column > * > *:first-child {
+  margin-top: 0;
+}
+
+/* Diagram primitives */
+
+.reveal .diagram {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.4em;
+  margin-top: 0.8em;
+}
+
+.reveal .node {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.4em;
+  padding: 0.35em 0.8em;
+  background: var(--sc-code-bg);
+  border: 1.5px solid var(--sc-border);
+  border-radius: 10px;
+  color: var(--sc-text);
+  font-family: var(--sc-font-mono);
+  font-size: 0.68em;
+  line-height: 1.3;
+}
+
+.reveal .node.accent {
+  border-color: var(--sc-accent);
+  color: var(--sc-accent);
+}
+
+.reveal .edge {
+  display: block;
+  flex: none;
+  background: var(--sc-border);
+}
+
+.reveal .edge.v {
+  width: 2px;
+  height: 1.2em;
+  margin-left: 1.5em;
+}
+
+.reveal .edge.h {
+  width: 1.6em;
+  height: 2px;
+}
+
+.reveal .label {
+  color: var(--sc-muted);
+  font-size: 0.6em;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* -------------------------------------------------------------------------
+ * 8. Utilities (moved from custom.css)
+ * ---------------------------------------------------------------------- */
+
+.reveal .foot-note {
+  position: fixed;
+  right: 0;
+  bottom: 12px;
+  left: 0;
+  margin: 0;
+  color: var(--sc-muted);
+  font-size: medium;
+  text-align: center;
+}
+
+/* "Nicht klausurrelevant" marker, anchored to the slide content's
+   bottom-right corner so it clears the page number. */
+.reveal .nkr {
+  position: absolute;
+  right: 96px;
+  bottom: 40px;
+  margin: 0;
+  color: var(--sc-muted);
+  font-family: var(--sc-font-mono);
+  font-size: 0.45em;
+  letter-spacing: 0.08em;
+  line-height: 1;
+}
+
+.reveal .font-medium {
+  font-size: medium;
+}
+
+.reveal [data-tooltip]:focus:before {
+  content: attr(data-tooltip);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 40;
+  padding: 0.5em 1em;
+  background: var(--sc-accent);
+  color: var(--sc-background);
+  font-size: medium;
+  text-align: center;
+}
+
+.reveal [data-tooltip]:after {
+  content: '?';
+  display: inline-block;
+  margin-left: 0.4em;
+  padding: 0.2em 0.45em;
+  border: 1px solid color-mix(in srgb, var(--sc-accent) 45%, transparent);
+  border-radius: 64px;
+  color: var(--sc-accent);
+  font-size: 0.55em;
+  line-height: 1;
+  text-align: center;
+  vertical-align: super;
+  cursor: pointer;
+}
