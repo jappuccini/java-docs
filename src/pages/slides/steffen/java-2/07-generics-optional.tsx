@@ -4,7 +4,18 @@ import { NKR } from '@site/src/components/Slides/nkr';
 
 export default function GenericsOptional(): React.JSX.Element {
   return (
-    <Slides>
+    <Slides title="Generics und Optional">
+      <section>
+        <section className="cover">
+          <p className="kicker">Fortgeschrittene Programmierung</p>
+          <h1>Generics und Optional</h1>
+          <p>
+            Generische Klassen verstehen und NullPointerExceptions mit Optional
+            vermeiden.
+          </p>
+        </section>
+      </section>
+
       <section>
         <section>
           <h2>Agenda</h2>
@@ -15,10 +26,14 @@ export default function GenericsOptional(): React.JSX.Element {
           </ul>
         </section>
       </section>
-      <section>
-        <section>
-          <h2>Generics</h2>
+
+      <section data-topic="Generics verwenden">
+        <section className="divider">
+          <p className="kicker">Generics</p>
+          <h2>Generics verwenden</h2>
+          <p>Funktionalität unabhängig vom konkreten Typ nutzen.</p>
         </section>
+
         <section>
           <h2>Generische Typen</h2>
           <p className="fragment">
@@ -26,11 +41,12 @@ export default function GenericsOptional(): React.JSX.Element {
           </p>
           <p className="fragment">
             Generisch heißt, dass Funktionalität unabhängig von einem Typ
-            implementiert werden können.
+            implementiert werden kann.
           </p>
         </section>
+
         <section>
-          <h2>Beispiele Generische Klassen/Interfaces</h2>
+          <h2>Generische Klassen in der Java-API</h2>
           <ul>
             <li className="fragment">ArrayList</li>
             <li className="fragment">Comparator</li>
@@ -41,41 +57,30 @@ export default function GenericsOptional(): React.JSX.Element {
             welchen Typ wir verwenden.
           </p>
         </section>
+
         <section>
-          <h2>Beispiele ArrayList</h2>
+          <h2>Gleiche Methoden für jeden Typ</h2>
           <p className="fragment">
-            Egal ob wir Objekte vom Typ Human, Dog, String oder Integer in einer
-            ArrayList abspeichern, wir haben immer die gleichen Methoden zur
-            Verfügung.
+            Egal ob Human, Dog, String oder Integer — die Methoden sind immer
+            die gleichen.
           </p>
-          <p className="fragment">add, remove, size etc.</p>
+          <ul>
+            <li className="fragment">ArrayList: add, remove, size</li>
+            <li className="fragment">
+              Comparator und Comparable: <code>Collections.sort</code>
+            </li>
+          </ul>
         </section>
+
         <section>
-          <h2>Beispiel Comparator</h2>
+          <h2>Typargumente angeben</h2>
           <p className="fragment">
-            Egal ob wir Comparator oder Comparable Klassen vom Typ Human, Dog,
-            String oder Integer erstellen, wir haben immer die gleichen Methoden
-            zur Verfügung.
+            Der Typ steht in spitzen Klammern nach dem Klassennamen.
           </p>
-          <p className="fragment">Collections.sort</p>
-        </section>
-        <section>
-          <h2>Verwendung Generics I</h2>
-          <p className="fragment">
-            Will man in seiner Anwendung eine Liste von Menschen abspeichern ist
-            der <b>spezifische</b> Typ bekannt.
-          </p>
-          <p className="fragment">
-            Nach dem Klassennamen wird innerhalb von spitzen Klammern, der{' '}
-            <b>spezifische</b> Typ angegeben.
-          </p>
-        </section>
-        <section>
-          <h2>Verwendung Generics II</h2>
           <pre className="fragment">
             <code
+              className="language-java"
               data-line-numbers="3|6"
-              className="java"
               dangerouslySetInnerHTML={{
                 __html:
                   'public class Main {\n' +
@@ -92,29 +97,23 @@ export default function GenericsOptional(): React.JSX.Element {
             ></code>
           </pre>
         </section>
-        <section>
-          <h2>Implementierung Generics I</h2>
-          <p className="fragment">
-            Um eine generische Klasse zu erstellen, wird nach dem Klassennamen
-            in spitzen Klammern der Typparameter angegeben.
+      </section>
+
+      <section data-topic="Generische Klassen implementieren">
+        <section className="divider">
+          <p className="kicker">Generics</p>
+          <h2>Generische Klassen implementieren</h2>
+          <p>
+            Mit einem Typparameter wird eine Klasse unabhängig vom konkreten
+            Typ.
           </p>
-          <pre className="fragment">
-            <code
-              className="java"
-              dangerouslySetInnerHTML={{
-                __html:
-                  'public class Team&lt;T&gt; {\n' +
-                  '  // implementierung der Klasse\n' +
-                  '}\n',
-              }}
-            ></code>
-          </pre>
         </section>
+
         <section>
-          <h2>Typparameter I</h2>
+          <h2>Typparameter benennen</h2>
           <pre>
             <code
-              className="java"
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'public class Team&lt;T&gt; {\n' +
@@ -125,29 +124,7 @@ export default function GenericsOptional(): React.JSX.Element {
           </pre>
           <pre className="fragment">
             <code
-              className="java"
-              dangerouslySetInnerHTML={{
-                __html:
-                  'public class Team&lt;A&gt; {\n' +
-                  '  // implementierung der Klasse\n' +
-                  '}\n',
-              }}
-            ></code>
-          </pre>
-          <pre className="fragment">
-            <code
-              className="java"
-              dangerouslySetInnerHTML={{
-                __html:
-                  'public class Team&lt;HANS&gt; {\n' +
-                  '  // implementierung der Klasse\n' +
-                  '}\n',
-              }}
-            ></code>
-          </pre>
-          <pre className="fragment">
-            <code
-              className="java"
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'public class Team&lt;BLIBLABLUBB&gt; {\n' +
@@ -160,14 +137,15 @@ export default function GenericsOptional(): React.JSX.Element {
             Der Bezeichner des Typparameters kann frei gewählt werden.
           </p>
         </section>
+
         <section>
-          <h2>Typparameter II</h2>
+          <h2>Mehrere Typparameter</h2>
           <pre>
             <code
-              className="java"
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
-                  'public class Team&lt;T&gt; {\n' +
+                  'public class Team&lt;T, U&gt; {\n' +
                   '  // implementierung der Klasse\n' +
                   '}\n',
               }}
@@ -175,18 +153,7 @@ export default function GenericsOptional(): React.JSX.Element {
           </pre>
           <pre className="fragment">
             <code
-              className="java"
-              dangerouslySetInnerHTML={{
-                __html:
-                  'public class Team&lt;T,U&gt; {\n' +
-                  '  // implementierung der Klasse\n' +
-                  '}\n',
-              }}
-            ></code>
-          </pre>
-          <pre className="fragment">
-            <code
-              className="java"
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'public class Team&lt;T, U, V&gt; {\n' +
@@ -199,12 +166,13 @@ export default function GenericsOptional(): React.JSX.Element {
             Es können mehrere Typparameter kommagetrennt angegeben werden.
           </p>
         </section>
+
         <section>
-          <h2>Verwenden von Typparameter I</h2>
+          <h2>Typparameter im Einsatz</h2>
           <pre>
             <code
-              data-line-numbers="1-15|1|3,12"
-              className="java"
+              className="language-java"
+              data-line-numbers="1-10|1|3|3,7"
               dangerouslySetInnerHTML={{
                 __html:
                   'public class Team&lt;T&gt; {\n' +
@@ -213,11 +181,6 @@ export default function GenericsOptional(): React.JSX.Element {
                   '  public Team(String teamName) {\n' +
                   '    this.teamName = teamName;\n' +
                   '  }\n' +
-                  '  \n' +
-                  '  public String getTeamName() {\n' +
-                  '    return this.teamName;\n' +
-                  '  }\n' +
-                  '  \n' +
                   '  public void addMember(T member) {\n' +
                   '    this.teamMembers.add(member);\n' +
                   '  }\n' +
@@ -226,34 +189,36 @@ export default function GenericsOptional(): React.JSX.Element {
             ></code>
           </pre>
         </section>
+
         <section>
-          <h2>Verwenden von Typargumenten</h2>
+          <h2>Typargumente im Einsatz</h2>
           <pre>
             <code
+              className="language-java"
               data-line-numbers="1-10|3|4|6-7|8"
-              className="java"
               dangerouslySetInnerHTML={{
                 __html:
                   'public class Main {\n' +
                   '  public static void main(String[] args) {\n' +
                   '    Team&lt;FootballPlayer&gt; scf = new Team&lt;&gt;("SC Freiburg");\n' +
-                  '    Team&lt;HockeyPlayer&gt; wildwings  = new Team&lt;&gt;("Wildwings");\n' +
-                  '    \n' +
+                  '    Team&lt;HockeyPlayer&gt; wildwings = new Team&lt;&gt;("Wildwings");\n' +
+                  '\n' +
                   '    scf.addMember(new FootballPlayer("Steffen"));\n' +
                   '    scf.addMember(new HockeyPlayer("Mirco")); // fails\n' +
                   '    wildwings.addMember(new HockeyPlayer("Mirco"));\n' +
-                  ' }\n' +
+                  '  }\n' +
                   '}\n',
               }}
             ></code>
           </pre>
         </section>
+
         <section>
-          <h2>Unterschied Parameter und Argument</h2>
+          <h2>Parameter und Argumente</h2>
           <pre>
             <code
+              className="language-java"
               data-line-numbers="1-8|2|6"
-              className="java"
               dangerouslySetInnerHTML={{
                 __html:
                   'public class Main {\n' +
@@ -268,28 +233,41 @@ export default function GenericsOptional(): React.JSX.Element {
             ></code>
           </pre>
         </section>
+
         <section>
-          <h2>Unterschied Typparameter und Typargument</h2>
+          <h2>Typparameter und Typargumente</h2>
           <pre>
             <code
+              className="language-java"
               data-line-numbers="1-6|1|2|5"
-              className="java"
               dangerouslySetInnerHTML={{
                 __html:
                   'public class Team&lt;T&gt; { // Typparameter\n' +
                   '  public ArrayList&lt;T&gt; members; // Typargument\n' +
                   '}\n' +
                   '//...\n' +
-                  'Team&lt;Human&gt; humanTeam = new Team&lt;&gt;();// Typargument\n' +
+                  'Team&lt;Human&gt; humanTeam = new Team&lt;&gt;(); // Typargument\n' +
                   '//...\n',
               }}
             ></code>
           </pre>
         </section>
+      </section>
+
+      <section data-topic="Typparameter einschränken">
+        <section className="divider">
+          <p className="kicker">Generics</p>
+          <h2>Typparameter einschränken</h2>
+          <p>
+            Für mehr Funktionalität in generischen Klassen muss der Typ
+            eingeschränkt werden.
+          </p>
+        </section>
+
         <section>
           <h2>
             <Link to="https://github.com/jappuccini/java-demos/tree/steffen/java2/generics">
-              Demo - Generics
+              Demo: Warum Typparameter einschränken?
             </Link>
           </h2>
           <ul>
@@ -298,25 +276,20 @@ export default function GenericsOptional(): React.JSX.Element {
             <li className="fragment">Problem: Spieler eines Teams ausgeben</li>
           </ul>
         </section>
+
         <section>
-          <h2>Einschränken von Typparametern I</h2>
-          <p>
-            Um noch mehr Funktionalitäten in eine generische Klasse auszulagern
-            ist es notwendig den Typ einzuschränken.
-          </p>
-        </section>
-        <section>
-          <h2>Einschränken von Typparametern II</h2>
+          <h2>Eingrenzen mit extends und super</h2>
           <p>
             Mit <b>extends</b> und <b>super</b> können die möglichen Typen
             eingeschränkt werden.
           </p>
         </section>
+
         <section>
-          <h2>Einschränken von Typparametern III</h2>
+          <h2>Beispiele: extends und super</h2>
           <pre>
             <code
-              className="java"
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'public class Team&lt;T extends Player&gt; {\n' +
@@ -327,21 +300,22 @@ export default function GenericsOptional(): React.JSX.Element {
           </pre>
           <pre className="fragment">
             <code
-              className="java"
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'public class Team&lt;T super Player&gt; {\n' +
-                  '  // Player und Supertypen von Player erlaubt \n' +
+                  '  // Player und Supertypen von Player erlaubt\n' +
                   '}\n',
               }}
             ></code>
           </pre>
         </section>
+
         <section>
-          <h2>Einschränken von Typparametern IV</h2>
+          <h2>Erlaubte Typargumente</h2>
           <pre>
             <code
-              className="java"
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'public class Player {}\n' +
@@ -353,95 +327,107 @@ export default function GenericsOptional(): React.JSX.Element {
           </pre>
           <pre className="fragment">
             <code
-              className="java"
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
-                  'public class Team&lt;T extends Player&gt; {} //PBFE erlaubt\n' +
-                  'public class Team&lt;T extends FootballPlayer&gt; {} //FE erlaubt\n' +
+                  'public class Team&lt;T extends Player&gt; {} // PBFE erlaubt\n' +
+                  'public class Team&lt;T extends FootballPlayer&gt; {} // FE erlaubt\n' +
                   'public class Team&lt;T super Player&gt; {} // P erlaubt\n' +
-                  'public class Team&lt;T super FootballPlayer&gt; {} //PF erlaubt',
+                  'public class Team&lt;T super FootballPlayer&gt; {} // PF erlaubt',
               }}
             ></code>
           </pre>
         </section>
+
         <section>
           <h2>
             <Link to="https://github.com/jappuccini/java-demos/tree/steffen/java2/generics">
-              Demo - Generics
+              Demo: Einschränken in der Praxis
             </Link>
           </h2>
-          <span>Spieler eines Generischen Teams ausgeben </span>
+          <p>Spieler eines generischen Teams ausgeben</p>
           <ul>
             <li className="fragment">Vererbung</li>
             <li className="fragment">Interface</li>
           </ul>
         </section>
       </section>
-      <section>
-        <section>
+
+      <section data-topic="Optional">
+        <section className="divider">
+          <p className="kicker">NullPointerExceptions</p>
           <h2>Optional</h2>
+          <p>Fehlende Werte sauber behandeln.</p>
         </section>
+
         <section>
-          <h2>Optional - Klasse</h2>
+          <h2>Die Klasse Optional</h2>
           <p className="fragment">
-            Mit Hilfe der Optional Klasse kann man NullPointerExceptions einfach
+            Mit der Klasse Optional lassen sich NullPointerExceptions einfach
             behandeln.
           </p>
           <p className="fragment">Was sind NullPointerExceptions?</p>
         </section>
+
         <section>
-          <h2>Null Pointer Exception I</h2>
+          <h2>Beispielklasse Dog</h2>
           <pre className="fragment">
             <code
-              className="java"
+              className="language-java"
+              data-line-numbers
               dangerouslySetInnerHTML={{
                 __html:
                   'public class Dog {\n' +
-                  ' public String name;\n' +
-                  ' public Dog(String name) {\n' +
-                  '  this.name = name;\n' +
-                  ' }\n' +
+                  '  public String name;\n' +
+                  '  public Dog(String name) {\n' +
+                  '    this.name = name;\n' +
+                  '  }\n' +
                   '}\n',
               }}
             ></code>
           </pre>
         </section>
+
         <section>
-          <h2>Null Pointer Exception II</h2>
+          <h2>Auftreten einer NullPointerException</h2>
           <pre className="fragment">
             <code
-              className="java"
+              className="language-java"
+              data-line-numbers
               dangerouslySetInnerHTML={{
                 __html:
                   'public class Main {\n' +
                   '  public static void main(String[] args) {\n' +
                   '    Dog doggo = new Dog(null);\n' +
                   '    doggo.name.equals("Bello"); // funktioniert nicht\n' +
-                  ' }\n' +
+                  '  }\n' +
                   '}\n',
               }}
             ></code>
           </pre>
         </section>
+
         <section>
-          <h2>Optional als Lösung</h2>
+          <h2>Lösung mit Optional</h2>
           <pre className="fragment">
             <code
-              className="java"
+              className="language-java"
+              data-line-numbers
               dangerouslySetInnerHTML={{
                 __html:
                   'public class Dog {\n' +
-                  ' public Optional&lt;String&gt; name;\n' +
-                  ' public Dog(String name) {\n' +
-                  '  this.name = Optional.ofNullable(name);\n' +
-                  ' }\n' +
+                  '  public Optional&lt;String&gt; name;\n' +
+                  '  public Dog(String name) {\n' +
+                  '    this.name = Optional.ofNullable(name);\n' +
+                  '  }\n' +
                   '}\n',
               }}
             ></code>
           </pre>
         </section>
+
         <section>
-          <h2>Optional - Wrapper um den echten Wert</h2>
+          <h2>Optional als Wrapper</h2>
           <p className="fragment">
             Die Optional Klasse verpackt den echten Wert hinter Methoden.
           </p>
@@ -450,11 +436,12 @@ export default function GenericsOptional(): React.JSX.Element {
             oder nicht.
           </p>
         </section>
+
         <section>
-          <h2>Optional - Methoden I</h2>
+          <h2>Werte prüfen und lesen</h2>
           <pre className="fragment">
             <code
-              className="java"
+              className="language-java"
               data-line-numbers="3-9|3|4|5|7|8"
               dangerouslySetInnerHTML={{
                 __html:
@@ -467,17 +454,19 @@ export default function GenericsOptional(): React.JSX.Element {
                   '    if(name.isEmpty()) {\n' +
                   '      System.out.println("No Name");\n' +
                   '    }\n' +
-                  ' }\n' +
+                  '  }\n' +
                   '}\n',
               }}
             ></code>
           </pre>
         </section>
+
         <section>
-          <h2>Optional - Methoden II*</h2>
+          <h2>ifPresent und ifPresentOrElse*</h2>
           <pre className="fragment">
             <code
-              className="java"
+              className="language-java"
+              data-line-numbers
               dangerouslySetInnerHTML={{
                 __html:
                   'public class Main {\n' +
@@ -497,10 +486,11 @@ export default function GenericsOptional(): React.JSX.Element {
             <NKR />
           </div>
         </section>
+
         <section>
           <h2>
             <Link to="https://github.com/jappuccini/java-demos/tree/steffen/java2/optional">
-              Demo - Optional
+              Demo: Optional in der Praxis
             </Link>
           </h2>
           <ul>
@@ -509,10 +499,14 @@ export default function GenericsOptional(): React.JSX.Element {
           </ul>
         </section>
       </section>
-      <section>
-        <section>
+
+      <section data-topic="Record I">
+        <section className="divider">
+          <p className="kicker">Datenklassen</p>
           <h2>Record I</h2>
+          <p>Unveränderliche Datenklassen mit wenig Code.</p>
         </section>
+
         <section>
           <h2>Records</h2>
           <p className="fragment">
@@ -523,22 +517,25 @@ export default function GenericsOptional(): React.JSX.Element {
             Eine Datenklasse hat somit finale Attribute und Getter.
           </p>
         </section>
+
         <section>
           <h2>Beispiel Record Dog</h2>
           <pre className="fragment">
             <code
-              className="java"
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html: 'public record Dog(String name, int age) {}\n',
               }}
             ></code>
           </pre>
         </section>
+
         <section>
           <h2>Verwendung Record Dog</h2>
           <pre className="fragment">
             <code
-              className="java"
+              className="language-java"
+              data-line-numbers
               dangerouslySetInnerHTML={{
                 __html:
                   'public class Main {\n' +
@@ -553,16 +550,19 @@ export default function GenericsOptional(): React.JSX.Element {
           </pre>
         </section>
       </section>
-      <section>
-        <h2>Rest of the Day</h2>
-        <ul>
-          <li className="fragment">
-            <Link to="/exercises/generics/">Generics Aufgaben</Link>
-          </li>
-          <li className="fragment">
-            <Link to="/exercises/optionals/">Optional Aufgaben</Link>
-          </li>
-        </ul>
+
+      <section data-topic="Rest of the Day">
+        <section>
+          <h2>Rest of the Day</h2>
+          <ul>
+            <li className="fragment">
+              <Link to="/exercises/generics/">Generics Aufgaben</Link>
+            </li>
+            <li className="fragment">
+              <Link to="/exercises/optionals/">Optional Aufgaben</Link>
+            </li>
+          </ul>
+        </section>
       </section>
     </Slides>
   );
