@@ -3,38 +3,55 @@ import Slides from '../../../../components/Slides';
 
 export default function SortAlgo(): React.JSX.Element {
   return (
-    <Slides>
+    <Slides title="Sortieralgorithmen">
       <section>
-        <section>
-          <h2>Sortieralgorithmen</h2>
+        <section className="cover">
+          <p className="kicker">Fortgeschrittene Programmierung</p>
+          <h1>Sortieralgorithmen</h1>
+          <p>
+            Selection, Bubble, Insertion, Quick und Merge Sort verstehen und
+            ihre Kosten einordnen.
+          </p>
         </section>
+      </section>
+
+      <section>
         <section>
           <h2>Agenda</h2>
           <ul>
-            <li className="fragment">Intro</li>
+            <li className="fragment">Grundlagen</li>
             <li className="fragment">Selection Sort</li>
             <li className="fragment">Bubble Sort</li>
             <li className="fragment">Insertion Sort</li>
             <li className="fragment">Quick Sort</li>
             <li className="fragment">Merge Sort</li>
+            <li className="fragment">Vergleich</li>
           </ul>
         </section>
       </section>
-      <section>
-        <section>
-          <h2>Intro</h2>
+
+      <section data-topic="Grundlagen">
+        <section className="divider">
+          <p className="kicker">Einführung</p>
+          <h2>Grundlagen</h2>
+          <p>
+            Was Sortieren bedeutet und welche Begriffe und Anwendungen
+            dazugehören.
+          </p>
         </section>
+
         <section>
           <h2>Was ist Sortieren?</h2>
           <p className="fragment">
             Neuordnung eines gegebenen Arrays oder einer Liste von Elementen
-            nach einem Vergleichsoperator für die Elemente
+            nach einem Vergleichsoperator für die Elemente.
           </p>
           <p className="fragment">
             Alle Elemente werden entweder in aufsteigender oder in absteigender
             Reihenfolge neu angeordnet.
           </p>
         </section>
+
         <section>
           <h2>Begriffe</h2>
           <ul>
@@ -43,7 +60,7 @@ export default function SortAlgo(): React.JSX.Element {
               tabIndex={0}
               data-tooltip="Ein In-place Sortieralgorithmus tauscht Elemente innerhalb der Liste aus."
             >
-              In-place sorting
+              In-place Sorting
             </li>
             <li
               className="fragment"
@@ -75,6 +92,7 @@ export default function SortAlgo(): React.JSX.Element {
             </li>
           </ul>
         </section>
+
         <section>
           <h2>Stable und Unstable Sorting</h2>
           <ul>
@@ -90,9 +108,10 @@ export default function SortAlgo(): React.JSX.Element {
           </ul>
           <p className="foot-note fragment">
             Ein stabiler Sortieralgorithmus verändert nicht die ursprüngliche
-            Reihenfolge der 5er-Karten
+            Reihenfolge der 5er-Karten.
           </p>
         </section>
+
         <section>
           <h2>Anwendungen von Sortieralgorithmen</h2>
           <ul>
@@ -117,10 +136,14 @@ export default function SortAlgo(): React.JSX.Element {
           </ul>
         </section>
       </section>
-      <section>
-        <section>
+
+      <section data-topic="Selection Sort">
+        <section className="divider">
+          <p className="kicker">Sortieralgorithmen</p>
           <h2>Selection Sort</h2>
+          <p>Das kleinste Element auswählen und nach vorne verschieben.</p>
         </section>
+
         <section>
           <h2>Funktionsweise</h2>
           <p>
@@ -130,6 +153,7 @@ export default function SortAlgo(): React.JSX.Element {
           </p>
           <p className="foot-note fragment">Beispiel: 69, 27, 11, 28, 2</p>
         </section>
+
         <section>
           <h2>Theoretisches Konzept</h2>
           <ul>
@@ -142,18 +166,20 @@ export default function SortAlgo(): React.JSX.Element {
               Man tauscht das kleinste Element mit dem Element am Index
             </li>
             <li className="fragment">
-              Index inkrementieren und wiederholen solange, bis alle Elemente
+              Index inkrementieren und wiederholen, solange bis alle Elemente
               sortiert sind.
             </li>
           </ul>
         </section>
+
         <section>
           <h2>
             <Link to="https://github.com/jappuccini/java-demos/blob/steffen/java2/dsa/sort/SelectionSort.java">
-              Demo - Selection Sort
+              Demo: Selection Sort
             </Link>
           </h2>
         </section>
+
         <section>
           <h2>Performance</h2>
           <ul>
@@ -161,6 +187,7 @@ export default function SortAlgo(): React.JSX.Element {
             <li className="fragment">Speicherkomplexität: O(1)</li>
           </ul>
         </section>
+
         <section>
           <h2>Zusammenfassung</h2>
           <ul>
@@ -175,10 +202,14 @@ export default function SortAlgo(): React.JSX.Element {
           </ul>
         </section>
       </section>
-      <section>
-        <section>
+
+      <section data-topic="Bubble Sort">
+        <section className="divider">
+          <p className="kicker">Sortieralgorithmen</p>
           <h2>Bubble Sort</h2>
+          <p>Das größte Element schrittweise nach hinten tauschen.</p>
         </section>
+
         <section>
           <h2>Funktionsweise</h2>
           <p>
@@ -188,30 +219,33 @@ export default function SortAlgo(): React.JSX.Element {
           </p>
           <p className="foot-note fragment">Beispiel: 69, 27, 11, 28, 2</p>
         </section>
+
         <section>
           <h2>Theoretisches Konzept</h2>
           <ul>
             <li className="fragment">Man setzt den Index auf Low</li>
             <li className="fragment">
-              Man durchläuft den unsortierten Teil des Arrays{' '}
+              Man durchläuft den unsortierten Teil des Arrays
             </li>
             <li className="fragment">
               Ist das aktuelle Element am Index größer als das nächste Element,
               werden sie getauscht.
             </li>
             <li className="fragment">
-              High dekrementieren und wiederholen solange, bis alle Elemente
+              High dekrementieren und wiederholen, solange bis alle Elemente
               sortiert sind.
             </li>
           </ul>
         </section>
+
         <section>
           <h2>
             <Link to="https://github.com/jappuccini/java-demos/blob/steffen/java2/dsa/sort/BubbleSort.java">
-              Demo - Bubble Sort
+              Demo: Bubble Sort
             </Link>
           </h2>
         </section>
+
         <section>
           <h2>Performance</h2>
           <ul>
@@ -219,6 +253,7 @@ export default function SortAlgo(): React.JSX.Element {
             <li className="fragment">Speicherkomplexität: O(1)</li>
           </ul>
         </section>
+
         <section>
           <h2>Zusammenfassung</h2>
           <ul>
@@ -233,10 +268,16 @@ export default function SortAlgo(): React.JSX.Element {
           </ul>
         </section>
       </section>
-      <section>
-        <section>
+
+      <section data-topic="Insertion Sort">
+        <section className="divider">
+          <p className="kicker">Sortieralgorithmen</p>
           <h2>Insertion Sort</h2>
+          <p>
+            Jedes Element an der richtigen Stelle im sortierten Teil einfügen.
+          </p>
         </section>
+
         <section>
           <h2>Funktionsweise</h2>
           <p>
@@ -246,6 +287,7 @@ export default function SortAlgo(): React.JSX.Element {
           </p>
           <p className="foot-note fragment">Beispiel: 69, 27, 11, 28, 2</p>
         </section>
+
         <section>
           <h2>Theoretisches Konzept</h2>
           <ul>
@@ -264,18 +306,20 @@ export default function SortAlgo(): React.JSX.Element {
               Element, werden sie getauscht.
             </li>
             <li className="fragment">
-              sortedHigh dekrementieren und wiederholen solange, bis Element an
-              der richtigen Stelle sortiert ist
+              sortedHigh dekrementieren und wiederholen, solange bis das Element
+              an der richtigen Stelle sortiert ist
             </li>
           </ul>
         </section>
+
         <section>
           <h2>
             <Link to="https://github.com/jappuccini/java-demos/blob/steffen/java2/dsa/sort/InsertionSort.java">
-              Demo - Insertion Sort
+              Demo: Insertion Sort
             </Link>
           </h2>
         </section>
+
         <section>
           <h2>Performance</h2>
           <ul>
@@ -283,6 +327,7 @@ export default function SortAlgo(): React.JSX.Element {
             <li className="fragment">Speicherkomplexität: O(1)</li>
           </ul>
         </section>
+
         <section>
           <h2>Zusammenfassung</h2>
           <ul>
@@ -297,10 +342,14 @@ export default function SortAlgo(): React.JSX.Element {
           </ul>
         </section>
       </section>
-      <section>
-        <section>
+
+      <section data-topic="Quick Sort">
+        <section className="divider">
+          <p className="kicker">Sortieralgorithmen</p>
           <h2>Quick Sort</h2>
+          <p>Das Array am Pivot teilen und rekursiv sortieren.</p>
         </section>
+
         <section>
           <h2>Allgemein</h2>
           <ul>
@@ -308,22 +357,24 @@ export default function SortAlgo(): React.JSX.Element {
             <li className="fragment">Rekursiv</li>
           </ul>
         </section>
+
         <section>
           <h2>Funktionsweise</h2>
           <p className="fragment">
-            Beim Quick Sort wird wiederholt der Input am freiwählbaren
+            Beim Quick Sort wird wiederholt der Input am frei wählbaren
             Pivotindex aufgeteilt. Jedes Element wird mit dem Pivotelement
-            verglichen. Ist es kleiner als das Pivotelement wird es in den
+            verglichen. Ist es kleiner als das Pivotelement, wird es in den
             linken Teil verschoben, ansonsten in den rechten Teil.
           </p>
           <p className="fragment">
-            Anschließend wird zuerst der linke Teil danach der rechte Teil
+            Anschließend wird zuerst der linke Teil, danach der rechte Teil
             sortiert.
           </p>
           <p className="foot-note fragment">
             Beispiel: 10, 80, 30, 90, 40, 50, 70
           </p>
         </section>
+
         <section>
           <h2>Theoretisches Konzept</h2>
           <ul>
@@ -338,13 +389,15 @@ export default function SortAlgo(): React.JSX.Element {
             </li>
           </ul>
         </section>
+
         <section>
           <h2>
             <Link to="https://github.com/jappuccini/java-demos/blob/steffen/java2/dsa/sort/QuickSort.java">
-              Demo - Quick Sort
+              Demo: Quick Sort
             </Link>
           </h2>
         </section>
+
         <section>
           <h2>Performance</h2>
           <ul>
@@ -352,6 +405,7 @@ export default function SortAlgo(): React.JSX.Element {
             <li className="fragment">Speicherkomplexität: O(1)</li>
           </ul>
         </section>
+
         <section>
           <h2>Zusammenfassung</h2>
           <ul>
@@ -372,10 +426,14 @@ export default function SortAlgo(): React.JSX.Element {
           </ul>
         </section>
       </section>
-      <section>
-        <section>
+
+      <section data-topic="Merge Sort">
+        <section className="divider">
+          <p className="kicker">Sortieralgorithmen</p>
           <h2>Merge Sort</h2>
+          <p>Teilen, rekursiv sortieren und die Hälften zusammenführen.</p>
         </section>
+
         <section>
           <h2>Allgemein</h2>
           <ul>
@@ -383,13 +441,14 @@ export default function SortAlgo(): React.JSX.Element {
             <li className="fragment">Rekursiv</li>
           </ul>
         </section>
+
         <section>
           <h2>Funktionsweise</h2>
           <p className="fragment">
             Beim Merge Sort wird wiederholt der Input in der Mitte aufgeteilt.
           </p>
           <p className="fragment">
-            Anschließend wird zuerst der linke Teil danach der rechte Teil
+            Anschließend wird zuerst der linke Teil, danach der rechte Teil
             sortiert.
           </p>
           <p className="fragment">
@@ -397,6 +456,7 @@ export default function SortAlgo(): React.JSX.Element {
           </p>
           <p className="foot-note fragment">Beispiel: 69, 27, 11, 28, 2</p>
         </section>
+
         <section>
           <h2>Theoretisches Konzept</h2>
           <ul>
@@ -414,13 +474,15 @@ export default function SortAlgo(): React.JSX.Element {
             </li>
           </ul>
         </section>
+
         <section>
           <h2>
             <Link to="https://github.com/jappuccini/java-demos/blob/steffen/java2/dsa/sort/MergeSort.java">
-              Demo - Merge Sort
+              Demo: Merge Sort
             </Link>
           </h2>
         </section>
+
         <section>
           <h2>Performance</h2>
           <ul>
@@ -428,6 +490,7 @@ export default function SortAlgo(): React.JSX.Element {
             <li className="fragment">Speicherkomplexität: O(N)</li>
           </ul>
         </section>
+
         <section>
           <h2>Zusammenfassung</h2>
           <ul>
@@ -447,10 +510,10 @@ export default function SortAlgo(): React.JSX.Element {
             </li>
             <li
               className="fragment"
-              data-tooltip="Es wird immer temporär ein Kopie der Subarrays erstellt"
+              data-tooltip="Es wird immer temporär eine Kopie der Subarrays erstellt"
               tabIndex={0}
             >
-              Speicherbedarf ist Hoch
+              Speicherbedarf ist hoch
             </li>
             <li
               className="fragment"
@@ -462,18 +525,23 @@ export default function SortAlgo(): React.JSX.Element {
           </ul>
         </section>
       </section>
-      <section>
-        <section>
-          <h2>Vergleich Sortieralgorithmen</h2>
+
+      <section data-topic="Vergleich">
+        <section className="divider">
+          <p className="kicker">Einordnung</p>
+          <h2>Vergleich</h2>
+          <p>Die Zeitkomplexitäten der Sortieralgorithmen im Vergleich.</p>
         </section>
+
         <section>
+          <h2>Zeitkomplexitäten im Vergleich</h2>
           <table>
             <thead>
               <tr>
                 <th>Algorithmus</th>
-                <th>Best </th>
-                <th>Average </th>
-                <th>Worst </th>
+                <th>Best</th>
+                <th>Average</th>
+                <th>Worst</th>
               </tr>
             </thead>
             <tbody>
@@ -510,18 +578,21 @@ export default function SortAlgo(): React.JSX.Element {
             </tbody>
           </table>
           <p className="fragment foot-note">
-            Merge Sort hat eine Speicherkomplexität von O(N)
+            Merge Sort hat eine Speicherkomplexität von O(N).
           </p>
         </section>
       </section>
-      <section>
-        <h2>Rest of the day</h2>
-        <ul>
-          <li className="fragment">
-            Demo Code verstehen, debuggen, implementieren (Optional)
-          </li>
-          <li className="fragment">Sort mit eigenem Problem (Optional)</li>
-        </ul>
+
+      <section data-topic="Rest of the Day">
+        <section>
+          <h2>Rest of the Day</h2>
+          <ul>
+            <li className="fragment">
+              Demo Code verstehen, debuggen, implementieren (Optional)
+            </li>
+            <li className="fragment">Sort mit eigenem Problem (Optional)</li>
+          </ul>
+        </section>
       </section>
     </Slides>
   );
