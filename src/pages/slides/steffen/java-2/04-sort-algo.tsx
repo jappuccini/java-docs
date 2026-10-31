@@ -106,7 +106,7 @@ export default function SortAlgo(): React.JSX.Element {
               &#x1F0B2; &#x1F0D5; &#x1F0C5; &#x1F0AA; &rarr; Unstabil
             </li>
           </ul>
-          <p className="foot-note fragment">
+          <p className="fragment">
             Ein stabiler Sortieralgorithmus verändert nicht die ursprüngliche
             Reihenfolge der 5er-Karten.
           </p>
