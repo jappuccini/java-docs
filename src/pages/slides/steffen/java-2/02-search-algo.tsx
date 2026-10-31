@@ -321,7 +321,7 @@ export default function SearchAlgo(): React.JSX.Element {
                 <th></th>
                 <th>Lineare Suche</th>
                 <th>Binäre Suche</th>
-                <th>Interpolationssuche</th>
+                <th>Interpolations-suche</th>
               </tr>
             </thead>
             <tbody>
@@ -329,10 +329,10 @@ export default function SearchAlgo(): React.JSX.Element {
                 <th scope="row">Sortierung</th>
                 <td>irrelevant</td>
                 <td>notwendig</td>
-                <td>notwendig, möglichst gleichverteilt</td>
+                <td>notwendig</td>
               </tr>
               <tr className="fragment">
-                <th scope="row">Zeit (Worst Case)</th>
+                <th scope="row">Zeit</th>
                 <td>O(N)</td>
                 <td>O(log N)</td>
                 <td>O(N)</td>

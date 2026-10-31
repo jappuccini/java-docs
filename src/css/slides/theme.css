@@ -821,15 +821,20 @@ section.has-light-background h6 {
   font-size: medium;
 }
 
+.reveal [data-tooltip]:focus {
+  outline: none;
+}
+
 .reveal [data-tooltip]:focus:before {
   content: attr(data-tooltip);
   position: fixed;
-  top: 0;
+  top: 12px;
   right: 0;
   left: 0;
   z-index: 40;
   padding: 0.5em 1em;
   background: var(--sc-accent);
+  border-radius: 0 0 12px 12px;
   color: var(--sc-background);
   font-size: medium;
   text-align: center;
@@ -846,6 +851,12 @@ section.has-light-background h6 {
   font-size: 0.55em;
   line-height: 1;
   text-align: center;
-  vertical-align: super;
+  vertical-align: middle;
   cursor: pointer;
+}
+
+.reveal [data-tooltip]:focus:after {
+  background: color-mix(in srgb, var(--sc-accent) 14%, transparent);
+  border-color: var(--sc-accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--sc-accent) 18%, transparent);
 }
