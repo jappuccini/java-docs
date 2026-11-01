@@ -3,7 +3,16 @@ import Link from '@docusaurus/Link';
 
 export default function Recap(): React.JSX.Element {
   return (
-    <Slides>
+    <Slides title="Wiederholung und Organisatorisches">
+      <section>
+        <section className="cover">
+          <p className="kicker">Fortgeschrittene Programmierung</p>
+          <h1>Wiederholung und Organisatorisches</h1>
+          <p>
+            Die Java-1-Themen wiederholen und den Start in Java 2 organisieren.
+          </p>
+        </section>
+      </section>
       <section>
         <section>
           <h2>Agenda</h2>
@@ -14,14 +23,17 @@ export default function Recap(): React.JSX.Element {
           </ul>
         </section>
       </section>
-      <section>
+      <section data-topic="Klausurnachbesprechung">
         <section>
           <h2>Klausurnachbesprechung</h2>
+          <p>Ergebnisse und offene Fragen zur Klausur.</p>
         </section>
       </section>
-      <section>
-        <section>
+      <section data-topic="Organisatorisches">
+        <section className="divider">
+          <p className="kicker">Fortgeschrittene Programmierung</p>
           <h2>Organisatorisches</h2>
+          <p>Ablauf, Prüfungsleistung und Klausur am PC.</p>
         </section>
         <section>
           <h2>Fortgeschrittene Programmierung</h2>
@@ -46,12 +58,11 @@ export default function Recap(): React.JSX.Element {
           </ul>
         </section>
       </section>
-      <section>
-        <section>
-          <h2>Wiederholung</h2>
-        </section>
-        <section>
+      <section data-topic="Datentypen">
+        <section className="divider">
+          <p className="kicker">Wiederholung</p>
           <h2>Datentypen</h2>
+          <p>Primitive und komplexe Datentypen im Überblick.</p>
         </section>
         <section>
           <h2>Primitive Datentypen</h2>
@@ -76,13 +87,19 @@ export default function Recap(): React.JSX.Element {
             Tipp: Primitive Datentypen haben keine Methoden
           </p>
         </section>
-        <section>
+      </section>
+      <section data-topic="Methoden">
+        <section className="divider">
+          <p className="kicker">Wiederholung</p>
           <h2>Methoden</h2>
+          <p>Aufbau und Bestandteile einer Methode.</p>
         </section>
         <section>
+          <h2>Aufbau einer Methode</h2>
           <pre>
             <code
-              className="java"
+              data-line-numbers
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'public class Calculator {\n' +
@@ -100,14 +117,19 @@ export default function Recap(): React.JSX.Element {
           <span className="fragment fade-in-then-out">Parameter</span>
           <span className="fragment fade-in-then-out">Methodenrumpf</span>
         </section>
-        <section>
+      </section>
+      <section data-topic="Operatoren">
+        <section className="divider">
+          <p className="kicker">Wiederholung</p>
           <h2>Operatoren</h2>
+          <p>Arithmetische, Vergleichs- und logische Operatoren.</p>
         </section>
         <section>
           <h2>Arithmetische Operatoren</h2>
           <pre>
             <code
-              className="java"
+              data-line-numbers
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   '//...\n' +
@@ -126,10 +148,11 @@ export default function Recap(): React.JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Arithmetische Operatoren II</h2>
+          <h2>Inkrement und Dekrement</h2>
           <pre>
             <code
-              className="java"
+              data-line-numbers
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   '//...\n' +
@@ -149,7 +172,8 @@ export default function Recap(): React.JSX.Element {
           <h2>Vergleichsoperatoren</h2>
           <pre>
             <code
-              className="java"
+              data-line-numbers
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   '//...\n' +
@@ -168,10 +192,11 @@ export default function Recap(): React.JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Logische Operatoren I - AND</h2>
+          <h2>Logisches UND</h2>
           <pre>
             <code
-              className="java"
+              data-line-numbers
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   '//...\n' +
@@ -191,10 +216,11 @@ export default function Recap(): React.JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Logische Operatoren II - OR</h2>
+          <h2>Logisches ODER</h2>
           <pre>
             <code
-              className="java"
+              data-line-numbers
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   '//...\n' +
@@ -214,10 +240,11 @@ export default function Recap(): React.JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Logische Operatoren III - NOT</h2>
+          <h2>Logisches NICHT</h2>
           <pre>
             <code
-              className="java"
+              data-line-numbers
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   '//...\n' +
@@ -234,14 +261,19 @@ export default function Recap(): React.JSX.Element {
             ></code>
           </pre>
         </section>
-        <section>
+      </section>
+      <section data-topic="Kontrollstrukturen">
+        <section className="divider">
+          <p className="kicker">Wiederholung</p>
           <h2>Kontrollstrukturen</h2>
+          <p>Verzweigungen und Schleifen zur Steuerung des Programmablaufs.</p>
         </section>
         <section>
           <h2>if</h2>
           <pre>
             <code
-              className="java"
+              data-line-numbers
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   '//...\n' +
@@ -265,7 +297,8 @@ export default function Recap(): React.JSX.Element {
           <h2>switch</h2>
           <pre>
             <code
-              className="java"
+              data-line-numbers
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   '  public static void greet(char gender) {\n' +
@@ -290,7 +323,8 @@ export default function Recap(): React.JSX.Element {
           <h2>while-Schleife</h2>
           <pre>
             <code
-              className="java"
+              data-line-numbers
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   '  public static boolean exists(String brand) {\n' +
@@ -315,7 +349,8 @@ export default function Recap(): React.JSX.Element {
           <h2>do-while-Schleife</h2>
           <pre>
             <code
-              className="java"
+              data-line-numbers
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   '  public static boolean exists(String brand) {\n' +
@@ -330,7 +365,7 @@ export default function Recap(): React.JSX.Element {
                   '        i++;\n' +
                   '      }\n' +
                   '    }\n' +
-                  '    while(!found && i &lt; cars.length)\n' +
+                  '    while(!found && i &lt; cars.length);\n' +
                   '    return found; \n' +
                   '  }\n',
               }}
@@ -341,11 +376,12 @@ export default function Recap(): React.JSX.Element {
           <h2>for-Schleife</h2>
           <pre>
             <code
-              className="java"
+              data-line-numbers
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   '  public static boolean exists(String brand) {\n' +
-                  '    String[] cars = { "BMW", "Audi", "Benz" } \n' +
+                  '    String[] cars = { "BMW", "Audi", "Benz" };\n' +
                   '    for (int i = 0; i &lt; cars.length; i++) {\n' +
                   '      String car = cars[i];\n' +
                   '      if(car.equals(brand)) {\n' +
@@ -362,11 +398,12 @@ export default function Recap(): React.JSX.Element {
           <h2>for-each-Schleife</h2>
           <pre>
             <code
-              className="java"
+              data-line-numbers
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   '  public static boolean exists(String brand) {\n' +
-                  '    String[] cars = { "BMW", "Audi", "Benz" } \n' +
+                  '    String[] cars = { "BMW", "Audi", "Benz" };\n' +
                   '    for (String car : cars) {\n' +
                   '      if(car.equals(brand)) {\n' +
                   '        return true;\n' +
@@ -387,21 +424,26 @@ export default function Recap(): React.JSX.Element {
             </li>
           </ul>
         </section>
-        <section>
+      </section>
+      <section data-topic="Arrays">
+        <section className="divider">
+          <p className="kicker">Wiederholung</p>
           <h2>Arrays</h2>
+          <p>Arrays und ArrayLists zum Speichern mehrerer Werte.</p>
         </section>
         <section>
           <h2>Array</h2>
           <pre>
             <code
-              className="java"
+              data-line-numbers
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   '  public static void example() {\n' +
                   '    String[] cars = { "BMW", "Audi", "Benz" };\n' +
                   '    String car;\n' +
                   '    car = cars[0]; // lesen aus dem Array\n' +
-                  "    cars[2] = 'Alfa'; // speichern in ein Array\n" +
+                  '    cars[2] = "Alfa"; // speichern in ein Array\n' +
                   '    String[] twoCars = new String[2]; // Array ohne Inhalt\n' +
                   '    int amountOfItems = twoCars.length;\n' +
                   '  }\n',
@@ -413,17 +455,18 @@ export default function Recap(): React.JSX.Element {
           <h2>ArrayList</h2>
           <pre>
             <code
-              className="java"
+              data-line-numbers
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   '  public static void example() {\n' +
                   '    ArrayList&lt;String&gt; cars = new ArrayList&lt;&gt;();\n' +
-                  "    cars.add('BMW');\n" +
-                  "    cars.add('Audi');\n" +
-                  "    cars.add('Benz');\n" +
+                  '    cars.add("BMW");\n' +
+                  '    cars.add("Audi");\n' +
+                  '    cars.add("Benz");\n' +
                   '    String car;\n' +
                   '    car = cars.get(0); // lesen aus der Liste\n' +
-                  "    cars.set(2,'Alfa'); // speichern in der Liste\n" +
+                  '    cars.set(2, "Alfa"); // speichern in der Liste\n' +
                   '    int amountOfItems = cars.size();\n' +
                   '    cars.remove(1); // löschen aus der Liste\n' +
                   '  }\n',
@@ -431,8 +474,15 @@ export default function Recap(): React.JSX.Element {
             ></code>
           </pre>
         </section>
-        <section>
+      </section>
+      <section data-topic="Klassen und Objekte">
+        <section className="divider">
+          <p className="kicker">Wiederholung</p>
           <h2>Klassen und Objekte</h2>
+          <p>
+            Klassen als Bauplan, Objekte als Ausprägung und Konstruktoren zur
+            Initialisierung.
+          </p>
         </section>
         <section>
           <h2>Klassen</h2>
@@ -448,7 +498,8 @@ export default function Recap(): React.JSX.Element {
           <h2>Beispiel Klasse</h2>
           <pre>
             <code
-              className="java"
+              data-line-numbers
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'public class Human {\n' +
@@ -477,7 +528,7 @@ export default function Recap(): React.JSX.Element {
           <h2>Beispiel Objekt</h2>
           <pre>
             <code
-              className="java"
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   '  Human steffen = new Human();\n' +
@@ -499,9 +550,11 @@ export default function Recap(): React.JSX.Element {
           </ul>
         </section>
         <section>
+          <h2>Beispiel: Konstruktor</h2>
           <pre>
             <code
-              className="java"
+              data-line-numbers
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'public class Car {\n' +
@@ -523,7 +576,7 @@ export default function Recap(): React.JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Konstruktor II</h2>
+          <h2>Konstruktoren wiederverwenden</h2>
           <ul>
             <li className="fragment">
               Konstruktoren können andere Konstruktoren verwenden
@@ -531,10 +584,11 @@ export default function Recap(): React.JSX.Element {
           </ul>
         </section>
         <section>
+          <h2>Beispiel: Wiederverwendung</h2>
           <pre>
             <code
-              className="java"
-              data-line-numbers="|5-7"
+              data-line-numbers="|5-7|6"
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'public class Car {\n' +
@@ -542,7 +596,7 @@ export default function Recap(): React.JSX.Element {
                   '  private char engineType;\n' +
                   '\n' +
                   '  public Car(String color) {\n' +
-                  "    this(color, 'b')\n" +
+                  "    this(color, 'b');\n" +
                   '  }\n' +
                   '\n' +
                   '  public Car(String color, char engineType) {\n' +
@@ -554,20 +608,26 @@ export default function Recap(): React.JSX.Element {
             ></code>
           </pre>
         </section>
-        <section>
+      </section>
+      <section data-topic="Vererbung">
+        <section className="divider">
+          <p className="kicker">Wiederholung</p>
           <h2>Vererbung</h2>
+          <p>Gemeinsame Attribute und Methoden in eine Oberklasse auslagern.</p>
         </section>
         <section>
-          <h2>Vererbung</h2>
+          <h2>Was ist Vererbung?</h2>
           <p>
             Durch <b>Generalisierung</b> werden gemeinsame Attribute und
             Methoden von mehreren Klassen in eine weitere Klasse ausgelagert.
           </p>
         </section>
         <section>
+          <h2>Beispiel: ohne Vererbung</h2>
           <pre>
             <code
-              className="java"
+              data-line-numbers
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'public class Dog {\n' +
@@ -589,9 +649,11 @@ export default function Recap(): React.JSX.Element {
           </pre>
         </section>
         <section>
+          <h2>Beispiel: gemeinsame Oberklasse</h2>
           <pre>
             <code
-              className="java"
+              data-line-numbers
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'public class Animal {\n' +
@@ -605,9 +667,11 @@ export default function Recap(): React.JSX.Element {
           </pre>
         </section>
         <section>
+          <h2>Beispiel: mit Vererbung</h2>
           <pre>
             <code
-              className="java"
+              data-line-numbers
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'public class Dog extends Animal {\n' +
@@ -632,11 +696,18 @@ export default function Recap(): React.JSX.Element {
             <li className="fragment">super</li>
           </ul>
         </section>
-        <section>
+      </section>
+      <section data-topic="Polymorphie">
+        <section className="divider">
+          <p className="kicker">Wiederholung</p>
           <h2>Polymorphie</h2>
+          <p>
+            Eine Referenzvariable der Oberklasse kann Objekte verschiedener
+            Unterklassen referenzieren.
+          </p>
         </section>
         <section>
-          <h2>Polymorphie</h2>
+          <h2>Was ist Polymorphie?</h2>
           <p className="fragment">
             Eine Referenzvariable, die vom Typ einer generalisierten Klasse ist,
             kann mehrere (poly) Formen annehmen (Unterklassen).
@@ -654,7 +725,7 @@ export default function Recap(): React.JSX.Element {
           </p>
           <pre className="fragment">
             <code
-              className="java"
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'Animal animal01 = new Cat();\n' +
@@ -664,17 +735,18 @@ export default function Recap(): React.JSX.Element {
           </pre>
         </section>
         <section>
+          <h2>Beispiel: Upcast</h2>
           <p>
             Ist eine Referenzvariable vom Typ einer generalisierten Klasse,
             können nur die Methoden der generalisierten Klasse verwendet werden.
           </p>
           <pre>
             <code
-              className="java"
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'Animal animal01 = new Dog();\n' +
-                  "animal01.name = 'Bello'; // funktioniert\n" +
+                  'animal01.name = "Bello"; // funktioniert\n' +
                   'animal01.bark(); // funktioniert nicht \n',
               }}
             ></code>
@@ -683,12 +755,12 @@ export default function Recap(): React.JSX.Element {
         <section>
           <h2>Downcast</h2>
           <p className="fragment">
-            Der Referenzvariable einer Oberklasse wird eine Referenzvariable
-            einer Unterklasse zugewiesen.
+            Eine Referenzvariable der Oberklasse wird explizit in den Typ einer
+            Unterklasse umgewandelt.
           </p>
           <pre className="fragment">
             <code
-              className="java"
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'Animal animal01 = new Dog();\n' +
@@ -702,7 +774,8 @@ export default function Recap(): React.JSX.Element {
           <h2>instanceof operator</h2>
           <pre>
             <code
-              className="java"
+              data-line-numbers
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'Animal animal01 = new Dog();\n' +
@@ -715,14 +788,18 @@ export default function Recap(): React.JSX.Element {
             ></code>
           </pre>
         </section>
-        <section>
-          <h2>Modifier</h2>
+      </section>
+      <section data-topic="Modifier für Klassen">
+        <section className="divider">
+          <p className="kicker">Wiederholung</p>
+          <h2>Modifier für Klassen</h2>
+          <p>Sichtbarkeit und Verhalten von Klassen festlegen.</p>
         </section>
         <section>
-          <h2>Public Modifier - Klasse</h2>
+          <h2>public</h2>
           <pre>
             <code
-              className="java"
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html: 'public class Dog {\n' + '  //...\n' + '}\n',
               }}
@@ -731,10 +808,10 @@ export default function Recap(): React.JSX.Element {
           <p>Klasse kann überall im Projekt verwendet werden.</p>
         </section>
         <section>
-          <h2>Kein Modifier - Klasse</h2>
+          <h2>kein Modifier</h2>
           <pre>
             <code
-              className="java"
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html: 'class Dog {\n' + '  //...\n' + '}\n',
               }}
@@ -743,10 +820,10 @@ export default function Recap(): React.JSX.Element {
           <p>Klasse kann nur im selben Paket verwendet werden.</p>
         </section>
         <section>
-          <h2>Abstract Modifier - Klasse</h2>
+          <h2>abstract</h2>
           <pre>
             <code
-              className="java"
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html: 'public abstract class Dog {\n' + '  //...\n' + '}\n',
               }}
@@ -755,10 +832,10 @@ export default function Recap(): React.JSX.Element {
           <p>Ein Objekt dieser Klasse kann nicht instanziiert werden.</p>
         </section>
         <section>
-          <h2>Final Modifier - Klasse</h2>
+          <h2>final</h2>
           <pre>
             <code
-              className="java"
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html: 'public final class Dog {\n' + '  //...\n' + '}\n',
               }}
@@ -766,11 +843,18 @@ export default function Recap(): React.JSX.Element {
           </pre>
           <p>Von dieser Klasse kann nicht geerbt werden.</p>
         </section>
+      </section>
+      <section data-topic="Modifier für Attribute">
+        <section className="divider">
+          <p className="kicker">Wiederholung</p>
+          <h2>Modifier für Attribute</h2>
+          <p>Sichtbarkeit und Verhalten von Attributen festlegen.</p>
+        </section>
         <section>
-          <h2>Public Modifier - Attribut</h2>
+          <h2>public</h2>
           <pre>
             <code
-              className="java"
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'public class Dog {\n' +
@@ -783,9 +867,11 @@ export default function Recap(): React.JSX.Element {
           <p>Das Attribut kann immer geändert werden.</p>
         </section>
         <section>
+          <h2>Beispiel: public</h2>
           <pre>
             <code
-              className="java"
+              data-line-numbers
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'Dog bello = new Dog();\n' +
@@ -803,10 +889,11 @@ export default function Recap(): React.JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Private Modifier - Attribut</h2>
+          <h2>private</h2>
           <pre>
             <code
-              className="java"
+              data-line-numbers
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'public class Dog {\n' +
@@ -822,9 +909,11 @@ export default function Recap(): React.JSX.Element {
           <p>Das Attribut kann innerhalb der Klasse geändert werden.</p>
         </section>
         <section>
+          <h2>Beispiel: private</h2>
           <pre>
             <code
-              className="java"
+              data-line-numbers
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'Dog bello = new Dog();\n' +
@@ -842,10 +931,11 @@ export default function Recap(): React.JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Protected Modifier - Attribut</h2>
+          <h2>protected</h2>
           <pre>
             <code
-              className="java"
+              data-line-numbers
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'public class Dog {\n' +
@@ -864,9 +954,11 @@ export default function Recap(): React.JSX.Element {
           </p>
         </section>
         <section>
+          <h2>Beispiel: protected</h2>
           <pre>
             <code
-              className="java"
+              data-line-numbers
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'Dog bello = new Dog();\n' +
@@ -884,10 +976,11 @@ export default function Recap(): React.JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Final Modifier - Attribut</h2>
+          <h2>final</h2>
           <pre>
             <code
-              className="java"
+              data-line-numbers
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'public class Dog {\n' +
@@ -896,7 +989,6 @@ export default function Recap(): React.JSX.Element {
                   '  public Dog(String name) {\n' +
                   '    this.name = name; // funktioniert\n' +
                   '  }\n' +
-                  '\n' +
                   '  public void setName(String name) {\n' +
                   '    this.name = name; // funktioniert nicht\n' +
                   '  }\n' +
@@ -907,9 +999,11 @@ export default function Recap(): React.JSX.Element {
           <p>Das Attribut kann nur im Konstruktor geändert werden.</p>
         </section>
         <section>
+          <h2>Beispiel: final</h2>
           <pre>
             <code
-              className="java"
+              data-line-numbers
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'Dog bello = new Dog("Marianna");\n' +
@@ -927,10 +1021,10 @@ export default function Recap(): React.JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Static Modifier - Attribut</h2>
+          <h2>static</h2>
           <pre>
             <code
-              className="java"
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'public class Dog {\n' +
@@ -943,9 +1037,11 @@ export default function Recap(): React.JSX.Element {
           <p>Das Attribut gehört zu der Klasse und nicht zu einem Objekt.</p>
         </section>
         <section>
+          <h2>Beispiel: static</h2>
           <pre>
             <code
-              className="java"
+              data-line-numbers
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'Dog bello = new Dog();\n' +
@@ -964,11 +1060,19 @@ export default function Recap(): React.JSX.Element {
             ></code>
           </pre>
         </section>
+      </section>
+      <section data-topic="Modifier für Methoden">
+        <section className="divider">
+          <p className="kicker">Wiederholung</p>
+          <h2>Modifier für Methoden</h2>
+          <p>Sichtbarkeit und Verhalten von Methoden festlegen.</p>
+        </section>
         <section>
-          <h2>Public Modifier - Methode</h2>
+          <h2>public</h2>
           <pre>
             <code
-              className="java"
+              data-line-numbers
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'public class Dog {\n' +
@@ -983,9 +1087,11 @@ export default function Recap(): React.JSX.Element {
           <p>Die Methode kann immer verwendet werden.</p>
         </section>
         <section>
+          <h2>Beispiel: public</h2>
           <pre>
             <code
-              className="java"
+              data-line-numbers
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'Dog bello = new Dog();\n' +
@@ -1003,10 +1109,11 @@ export default function Recap(): React.JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Private Modifier - Methode</h2>
+          <h2>private</h2>
           <pre>
             <code
-              className="java"
+              data-line-numbers
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'public class Dog {\n' +
@@ -1021,9 +1128,11 @@ export default function Recap(): React.JSX.Element {
           <p>Die Methode kann innerhalb der Klasse verwendet werden.</p>
         </section>
         <section>
+          <h2>Beispiel: private</h2>
           <pre>
             <code
-              className="java"
+              data-line-numbers
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'Dog bello = new Dog();\n' +
@@ -1041,10 +1150,11 @@ export default function Recap(): React.JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Protected Modifier - Methode</h2>
+          <h2>protected</h2>
           <pre>
             <code
-              className="java"
+              data-line-numbers
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'public class Dog {\n' +
@@ -1062,9 +1172,11 @@ export default function Recap(): React.JSX.Element {
           </p>
         </section>
         <section>
+          <h2>Beispiel: protected</h2>
           <pre>
             <code
-              className="java"
+              data-line-numbers
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'Dog bello = new Dog();\n' +
@@ -1082,10 +1194,11 @@ export default function Recap(): React.JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Final Modifier - Methode</h2>
+          <h2>final</h2>
           <pre>
             <code
-              className="java"
+              data-line-numbers
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'public class Dog {\n' +
@@ -1100,9 +1213,11 @@ export default function Recap(): React.JSX.Element {
           <p>Die Methode kann nicht überschrieben werden.</p>
         </section>
         <section>
+          <h2>Beispiel: final</h2>
           <pre>
             <code
-              className="java"
+              data-line-numbers
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'public class MonsterDog extends Dog {\n' +
@@ -1117,10 +1232,11 @@ export default function Recap(): React.JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Static Modifier - Methode</h2>
+          <h2>static</h2>
           <pre>
             <code
-              className="java"
+              data-line-numbers
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'public class Dog {\n' +
@@ -1140,9 +1256,11 @@ export default function Recap(): React.JSX.Element {
           </p>
         </section>
         <section>
+          <h2>Beispiel: static</h2>
           <pre>
             <code
-              className="java"
+              data-line-numbers
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'Dog bello = new Dog();\n' +
@@ -1162,10 +1280,10 @@ export default function Recap(): React.JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Abstract Modifier - Methode</h2>
+          <h2>abstract</h2>
           <pre>
             <code
-              className="java"
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'public abstract class Animal {\n' +
@@ -1182,9 +1300,10 @@ export default function Recap(): React.JSX.Element {
           </p>
         </section>
         <section>
+          <h2>Beispiel: abstract</h2>
           <pre>
             <code
-              className="java"
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'public class MonsterDog extends Dog {\n' +
@@ -1194,11 +1313,15 @@ export default function Recap(): React.JSX.Element {
             ></code>
           </pre>
         </section>
-        <section>
+      </section>
+      <section data-topic="Enumeration">
+        <section className="divider">
+          <p className="kicker">Wiederholung</p>
           <h2>Enumeration</h2>
+          <p>Klassen mit einer festen Menge möglicher Ausprägungen.</p>
         </section>
         <section>
-          <h2>Enumeration</h2>
+          <h2>Was ist eine Enumeration?</h2>
           <p>
             Eine Enumeration ist eine Klasse mit Attributen und Methoden. Sie
             definiert zusätzlich alle möglichen Ausprägungen dieser Klasse.
@@ -1208,7 +1331,8 @@ export default function Recap(): React.JSX.Element {
           <h2>Enumeration implementieren</h2>
           <pre>
             <code
-              className="java"
+              data-line-numbers
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'public enum Gender {\n' +
@@ -1234,7 +1358,8 @@ export default function Recap(): React.JSX.Element {
           <h2>Enumeration als Typ verwenden</h2>
           <pre>
             <code
-              className="java"
+              data-line-numbers
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'public class Human {\n' +
@@ -1256,18 +1381,24 @@ export default function Recap(): React.JSX.Element {
           <h2>Enumeration als Wert setzen</h2>
           <pre>
             <code
-              className="java"
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html: 'Human steffen = new Human(Gender.MALE);\n',
               }}
             ></code>
           </pre>
         </section>
-        <section>
-          <h2>Interfaces</h2>
+      </section>
+      <section data-topic="Interfaces und Comparator">
+        <section className="divider">
+          <p className="kicker">Wiederholung</p>
+          <h2>Interfaces und Comparator</h2>
+          <p>
+            Schnittstellen definieren und Listen mit einem Comparator sortieren.
+          </p>
         </section>
         <section>
-          <h2>Interfaces</h2>
+          <h2>Was sind Interfaces?</h2>
           <p>Definieren Methoden unabhängig von der Vererbungshierarchie.</p>
           <p className="fragment">
             Dient als Schnittstelle zwischen Ersteller und Verwender einer
@@ -1275,11 +1406,11 @@ export default function Recap(): React.JSX.Element {
           </p>
         </section>
         <section>
-          <h2>Interface (Ersteller)</h2>
+          <h2>Interface definieren</h2>
           <pre>
             <code
               data-line-numbers="1-3|6|7,11"
-              className="java"
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'public interface Item {\n' +
@@ -1302,11 +1433,11 @@ export default function Recap(): React.JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Interface (Verwender) I</h2>
+          <h2>Interface implementieren</h2>
           <pre>
             <code
               data-line-numbers="1|10-12"
-              className="java"
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'public class Human implements Item {\n' +
@@ -1327,10 +1458,10 @@ export default function Recap(): React.JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Interface (Verwender) II </h2>
+          <h2>Interface verwenden</h2>
           <pre>
             <code
-              className="java"
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'ShoppingList shoppingList = new ShoppingList();\n' +
@@ -1342,10 +1473,7 @@ export default function Recap(): React.JSX.Element {
           </pre>
         </section>
         <section>
-          <h2>Comparator</h2>
-        </section>
-        <section>
-          <h2>Comparator</h2>
+          <h2>Was ist ein Comparator?</h2>
           <p className="fragment">
             Definiert wie eine Liste von Elementen sortiert wird.
           </p>
@@ -1359,7 +1487,8 @@ export default function Recap(): React.JSX.Element {
           <h2>Comparator implementieren</h2>
           <pre>
             <code
-              className="java"
+              data-line-numbers
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'public class AgeAscComparator implements Comparator&lt;Human&gt; {\n' +
@@ -1382,7 +1511,7 @@ export default function Recap(): React.JSX.Element {
           <h2>Comparator verwenden</h2>
           <pre>
             <code
-              className="java"
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'ArrayList&lt;Human&gt; developers = new ArrayList&lt;&gt;();\n' +
@@ -1393,11 +1522,15 @@ export default function Recap(): React.JSX.Element {
             ></code>
           </pre>
         </section>
-        <section>
+      </section>
+      <section data-topic="Exceptions">
+        <section className="divider">
+          <p className="kicker">Wiederholung</p>
           <h2>Exceptions</h2>
+          <p>Fehler während der Ausführung mitteilen und behandeln.</p>
         </section>
         <section>
-          <h2>Exceptions</h2>
+          <h2>Was sind Exceptions?</h2>
           <p className="fragment">
             Sind Fehler, die während der Ausführung des Programms auftreten
             können und dienen zur Kommunikation.
@@ -1411,7 +1544,7 @@ export default function Recap(): React.JSX.Element {
           <pre>
             <code
               data-line-numbers="1-9|1|6"
-              className="java"
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'public class TooYoungException extends Exception {\n' +
@@ -1432,7 +1565,7 @@ export default function Recap(): React.JSX.Element {
           <pre>
             <code
               data-line-numbers="1-9|4|6"
-              className="java"
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'public class ShoppingList {\n' +
@@ -1453,7 +1586,7 @@ export default function Recap(): React.JSX.Element {
           <pre>
             <code
               data-line-numbers="1-13|5-7|7-9|9-11"
-              className="java"
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'public class Main {\n' +
@@ -1473,17 +1606,20 @@ export default function Recap(): React.JSX.Element {
             ></code>
           </pre>
         </section>
+      </section>
+      <section data-topic="Klassendiagramme">
         <section>
-          <h2>
+          <h2>Klassendiagramme</h2>
+          <p>
             <Link to="/documentation/class-diagrams">
-              Klassendiagramme (Doku)
+              Zur Doku: Klassendiagramme
             </Link>
-          </h2>
+          </p>
         </section>
       </section>
-      <section>
+      <section data-topic="Rest of the Day">
         <section>
-          <h2>Rest of the day</h2>
+          <h2>Rest of the Day</h2>
           <ul>
             <li className="fragment">Wiederholung</li>
             <li className="fragment">Entwicklungsumgebung einrichten</li>
