@@ -3,54 +3,84 @@ import Slides from '../../../../components/Slides';
 
 export default function Intro(): React.JSX.Element {
   return (
-    <Slides>
+    <Slides title="Einführung und Organisatorisches">
+      <section>
+        <section className="cover">
+          <p className="kicker">Grundlagen der Programmierung</p>
+          <h1>Einführung und Organisatorisches</h1>
+          <p>
+            Wer vor euch steht, wie die Vorlesung organisiert ist und was
+            Programme sind.
+          </p>
+        </section>
+      </section>
+
       <section>
         <section>
           <h2>Agenda</h2>
           <ul>
             <li className="fragment">Einführung</li>
+            <li className="fragment">Erwartungen</li>
             <li className="fragment">Organisatorisches</li>
             <li className="fragment">Was sind Programme?</li>
             <li className="fragment">Zusammenfassung</li>
           </ul>
         </section>
       </section>
-      <section>
-        <section>
+
+      <section data-topic="Einführung">
+        <section className="divider">
+          <p className="kicker">Vorstellung</p>
           <h2>Einführung</h2>
+          <p>Wer vor euch steht und wer ihr seid.</p>
         </section>
+
         <section>
           <h2>Steffen Merk</h2>
           <p>Software Engineer</p>
         </section>
+
         <section>
           <h2>Lebenslauf</h2>
           <p className="fragment">Sysadmin @Framo Morat</p>
-          <p className="fragment">WI DHBW Ravensburg @SAP</p>
+          <p className="fragment">Wirtschaftsinformatik DHBW Ravensburg @SAP</p>
           <p className="fragment">Developer @SAP, @remberg & @Airbus</p>
         </section>
+
         <section>
-          <h2>Hobbies</h2>
+          <h2>Hobbys</h2>
           <p className="fragment">🏄🌊🪁</p>
           <p className="fragment">🚴🏼‍♂️ 🚴🏼‍♀️ ⛰️</p>
           <p className="fragment">🥾🎒🌄</p>
         </section>
+
         <section>
           <h2>Techstack</h2>
           <p className="fragment">Angular + NgRx</p>
           <p className="fragment">NodeJS + NestJS</p>
           <p className="fragment">Java + Vert.X</p>
         </section>
-        <section data-background-iframe="https://giphy.com/embed/8dgmMbeCA8jeg"></section>
+
         <section>
           <h2>Wollt ihr euch vorstellen?</h2>
         </section>
+
         <section data-background-iframe="https://giphy.com/embed/8vUEXZA2me7vnuUvrs"></section>
+      </section>
+
+      <section data-topic="Erwartungen">
+        <section className="divider">
+          <p className="kicker">Einführung</p>
+          <h2>Erwartungen</h2>
+          <p>Was euch erwartet und wie ihr eine gute Note erreicht.</p>
+        </section>
+
         <section>
           <h2>Was erwartet euch?</h2>
           <p className="fragment">Fokus liegt auf dem Programmieren</p>
           <p className="fragment">Nicht auswendig lernen</p>
         </section>
+
         <section>
           <h2>Wie erreicht ihr eine gute Note?</h2>
           <ol>
@@ -59,6 +89,7 @@ export default function Intro(): React.JSX.Element {
             <li className="fragment">Macht die Aufgaben zeitnah!</li>
           </ol>
         </section>
+
         <section>
           <h2>Real talk Steffen: Macht es Spaß?</h2>
           <ul>
@@ -68,10 +99,14 @@ export default function Intro(): React.JSX.Element {
           </ul>
         </section>
       </section>
-      <section>
-        <section>
+
+      <section data-topic="Organisatorisches">
+        <section className="divider">
+          <p className="kicker">Organisation</p>
           <h2>Organisatorisches</h2>
+          <p>Fragen, Materialien, Verantwortlichkeiten und die Prüfung.</p>
         </section>
+
         <section>
           <h2>Ihr habt Fragen?</h2>
           <ul>
@@ -84,6 +119,7 @@ export default function Intro(): React.JSX.Element {
             </li>
           </ul>
         </section>
+
         <section>
           <h2>Wo findet ihr was?</h2>
           <p className="fragment">
@@ -102,6 +138,7 @@ export default function Intro(): React.JSX.Element {
             </Link>
           </p>
         </section>
+
         <section>
           <h2>Was liegt in eurer Verantwortung?</h2>
           <ul>
@@ -111,8 +148,9 @@ export default function Intro(): React.JSX.Element {
             <li className="fragment">Verwenden von git</li>
           </ul>
         </section>
+
         <section>
-          <h2>Empfehlung Neulinge</h2>
+          <h2>Empfehlung für Neulinge</h2>
           <p>Macht alles mit VS Code und Dev Containers</p>
           <ul>
             <li className="fragment">
@@ -140,8 +178,9 @@ export default function Intro(): React.JSX.Element {
             </li>
           </ul>
         </section>
+
         <section>
-          <h2>Empfehlung Erfahrene</h2>
+          <h2>Empfehlung für Erfahrene</h2>
           <ul>
             <li className="fragment">
               Installiert Git und checkt die Repos aus
@@ -150,28 +189,37 @@ export default function Intro(): React.JSX.Element {
             <li className="fragment">Installiert und konfiguriert eure IDE</li>
           </ul>
         </section>
+
         <section>
           <h2>Prüfung</h2>
           <ul>
             <li className="fragment">Findet am PC statt</li>
-            <li className="fragment">Nur Editor zum Schreiben von Text</li>
+            <li className="fragment">Nur ein Editor zum Schreiben von Text</li>
           </ul>
         </section>
       </section>
-      <section>
-        <section>
+
+      <section data-topic="Was sind Programme?">
+        <section className="divider">
+          <p className="kicker">Grundlagen</p>
           <h2>Was sind Programme?</h2>
+          <p>
+            GUI, TUI, Hintergrundprogramme und der Weg zum laufenden
+            Java-Programm.
+          </p>
         </section>
+
         <section>
-          <h2>Verschiedene Arten</h2>
+          <h2>Arten von Programmen</h2>
           <ul>
             <li className="fragment">Programme mit GUI</li>
-            <li className="fragment">Hintergrundprogramme</li>
             <li className="fragment">Programme mit TUI</li>
+            <li className="fragment">Hintergrundprogramme</li>
           </ul>
         </section>
+
         <section>
-          <h2>Demo GUI und TUI</h2>
+          <h2>Demo: GUI und TUI</h2>
           <ul>
             <li className="fragment">Ordner erstellen</li>
             <li className="fragment">Datei erstellen</li>
@@ -179,6 +227,7 @@ export default function Intro(): React.JSX.Element {
             <li className="fragment">Ordner löschen</li>
           </ul>
         </section>
+
         <section>
           <h2>Kommandozeile</h2>
           <p className="fragment">
@@ -186,7 +235,7 @@ export default function Intro(): React.JSX.Element {
           </p>
           <pre className="fragment">
             <code
-              className="bash"
+              className="language-bash"
               dangerouslySetInnerHTML={{
                 __html:
                   'ls # alle Ordner und Dateien anzeigen \n' +
@@ -197,14 +246,15 @@ export default function Intro(): React.JSX.Element {
             ></code>
           </pre>
         </section>
+
         <section>
-          <h2>Wie macht man ein Java Programm?</h2>
+          <h2>Wie erstellt man ein Java-Programm?</h2>
           <p className="fragment">Quellcode verfassen</p>
           <p className="fragment">
-            Quellcode zu einem Java Programm kompilieren
+            Quellcode zu einem Java-Programm kompilieren
           </p>
           <p className="fragment">
-            Java Programm mit der Java Runtime ausführen
+            Java-Programm mit der Java Runtime ausführen
           </p>
           <aside className="notes">
             <h3>Beispiel: Hello World</h3>
@@ -216,18 +266,25 @@ export default function Intro(): React.JSX.Element {
           </aside>
         </section>
       </section>
-      <section>
-        <section>
+
+      <section data-topic="Zusammenfassung">
+        <section className="divider">
+          <p className="kicker">Abschluss</p>
           <h2>Zusammenfassung</h2>
+          <p>Die wichtigsten Punkte zu Programmen.</p>
         </section>
+
         <section>
           <h2>Programme</h2>
           <p className="fragment">GUI, TUI &amp; Hintergrund</p>
-          <p className="fragment">Quellcode wird in Programm kompiliert</p>
+          <p className="fragment">Quellcode wird in ein Programm kompiliert</p>
         </section>
+      </section>
+
+      <section data-topic="Rest of the Day">
         <section>
-          <h2>Rest of the day</h2>
-          <p className="fragment">Development Environment einrichten</p>
+          <h2>Rest of the Day</h2>
+          <p className="fragment">Entwicklungsumgebung einrichten</p>
           <p className="fragment">
             <Link to="/exercises/class-structure/class-structure01">
               Hello-World-Aufgabe machen

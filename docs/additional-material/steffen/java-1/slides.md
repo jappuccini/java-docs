@@ -5,7 +5,7 @@ sidebar_position: 10
 tags: []
 ---
 
-- 08.01.2026 [Einleitung](/slides/steffen/java-1/intro)
+- 08.01.2026 [Einführung und Organisatorisches](/slides/steffen/java-1/intro)
 - 08.01.2026
   [Datentypen und Datenobjekte](/slides/steffen/java-1/datatypes-and-dataobjects)
 - 09.01.2026
