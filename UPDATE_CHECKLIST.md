@@ -7,6 +7,3 @@
       http://localhost:3000.
 - [ ] With the local site running, verify Mermaid diagrams render correctly.
 - [ ] With the local site running, verify slides open correctly.
-- [ ] When updating Docusaurus, check whether its `@mermaid-js/layout-elk` peer
-      dependency supports 0.2.x or later; if so, remove the corresponding
-      Dependabot ignore rule in `.github/dependabot.yml`.
