@@ -32,6 +32,13 @@
   --sc-tok-type: #7c3aed;
   --sc-tok-function: #0e7490;
 
+  --sc-chart-1: #8a7864;
+  --sc-chart-2: #2f7d6e;
+  --sc-chart-3: #6b7f2e;
+  --sc-chart-4: #b07d1e;
+  --sc-chart-5: #b0623a;
+  --sc-chart-6: #b23a3a;
+
   --sc-font-text:
     'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial,
     sans-serif;
@@ -60,6 +67,13 @@ html[data-theme='dark'] {
   --sc-tok-number: #fcd34d;
   --sc-tok-type: #c4b5fd;
   --sc-tok-function: #67e8f9;
+
+  --sc-chart-1: #b3a393;
+  --sc-chart-2: #74c7b6;
+  --sc-chart-3: #b4cf7a;
+  --sc-chart-4: #e3b963;
+  --sc-chart-5: #d89a6a;
+  --sc-chart-6: #f08a7e;
 }
 
 /* -------------------------------------------------------------------------

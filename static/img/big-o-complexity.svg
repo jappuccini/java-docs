@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 1000 560"
+  aria-hidden="true"
+>
+  <defs>
+    <clipPath id="big-o-plot">
+      <rect x="100" y="40" width="620" height="430" />
+    </clipPath>
+  </defs>
+
+  <g
+    stroke="var(--sc-border)"
+    stroke-width="1"
+    stroke-dasharray="4 7"
+    opacity="0.65"
+  >
+    <line x1="100" y1="362.5" x2="720" y2="362.5" />
+    <line x1="100" y1="255" x2="720" y2="255" />
+    <line x1="100" y1="147.5" x2="720" y2="147.5" />
+    <line x1="255" y1="40" x2="255" y2="470" />
+    <line x1="410" y1="40" x2="410" y2="470" />
+    <line x1="565" y1="40" x2="565" y2="470" />
+  </g>
+
+  <g stroke="var(--sc-border)" stroke-width="1.5">
+    <line x1="100" y1="40" x2="100" y2="470" />
+    <line x1="100" y1="470" x2="720" y2="470" />
+    <line x1="100" y1="470" x2="100" y2="477" />
+    <line x1="255" y1="470" x2="255" y2="477" />
+    <line x1="410" y1="470" x2="410" y2="477" />
+    <line x1="565" y1="470" x2="565" y2="477" />
+    <line x1="720" y1="470" x2="720" y2="477" />
+    <line x1="93" y1="470" x2="100" y2="470" />
+    <line x1="93" y1="362.5" x2="100" y2="362.5" />
+    <line x1="93" y1="255" x2="100" y2="255" />
+    <line x1="93" y1="147.5" x2="100" y2="147.5" />
+    <line x1="93" y1="40" x2="100" y2="40" />
+  </g>
+
+  <g
+    fill="var(--sc-muted)"
+    font-family="var(--sc-font-text)"
+    font-size="19"
+    text-anchor="middle"
+  >
+    <text x="100" y="499">0</text>
+    <text x="255" y="499">25</text>
+    <text x="410" y="499">50</text>
+    <text x="565" y="499">75</text>
+    <text x="720" y="499">100</text>
+    <text x="410" y="536">Elemente (N)</text>
+    <text x="40" y="255" transform="rotate(-90 40 255)">Operationen</text>
+  </g>
+
+  <g
+    fill="var(--sc-muted)"
+    font-family="var(--sc-font-text)"
+    font-size="19"
+    text-anchor="end"
+    dominant-baseline="central"
+  >
+    <text x="86" y="470">0</text>
+    <text x="86" y="362.5">250</text>
+    <text x="86" y="255">500</text>
+    <text x="86" y="147.5">750</text>
+    <text x="86" y="40">1000</text>
+  </g>
+
+  <g
+    fill="none"
+    stroke-width="3.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    clip-path="url(#big-o-plot)"
+  >
+    <path
+      d="M100.00 469.57 L720.00 469.57"
+      stroke="var(--sc-chart-1)"
+    />
+    <path
+      d="M106.20 470.00 L137.20 468.89 L168.20 468.51 L199.20 468.28 L230.20 468.11 L261.20 467.98 L292.20 467.87 L323.20 467.78 L354.20 467.70 L385.20 467.62 L416.20 467.56 L447.20 467.50 L478.20 467.45 L509.20 467.40 L540.20 467.36 L571.20 467.31 L602.20 467.27 L633.20 467.24 L664.20 467.20 L695.20 467.17 L720.00 467.14"
+      stroke="var(--sc-chart-2)"
+    />
+    <path
+      d="M100.00 470.00 L720.00 427.00"
+      stroke="var(--sc-chart-3)"
+    />
+    <path
+      d="M106.20 470.00 L137.20 463.33 L168.20 453.64 L199.20 442.48 L230.20 430.34 L261.20 417.45 L292.20 403.96 L323.20 389.97 L354.20 375.55 L385.20 360.74 L416.20 345.60 L447.20 330.16 L478.20 314.44 L509.20 298.46 L540.20 282.25 L571.20 265.82 L602.20 249.18 L633.20 232.36 L664.20 215.35 L695.20 198.17 L720.00 184.31"
+      stroke="var(--sc-chart-4)"
+    />
+    <path
+      d="M100.00 470.00 L112.40 468.28 L124.80 463.12 L137.20 454.52 L149.60 442.48 L162.00 427.00 L174.40 408.08 L186.80 385.72 L199.20 359.92 L211.60 330.68 L224.00 298.00 L236.40 261.88 L248.80 222.32 L261.20 179.32 L273.60 132.88 L286.00 83.00 L298.40 29.68 L310.80 -27.08 L323.20 -87.28 L335.60 -150.92 L348.00 -218.00"
+      stroke="var(--sc-chart-5)"
+    />
+    <path
+      d="M100.00 470.00 L106.20 469.57 L112.40 466.56 L118.60 458.39 L124.80 442.48 L131.00 416.25 L137.20 377.12 L143.40 322.51 L149.60 249.84 L155.80 156.53 L162.00 40.00 L168.20 -102.33 L174.40 -273.04"
+      stroke="var(--sc-chart-6)"
+    />
+  </g>
+
+  <g
+    font-family="var(--sc-font-mono)"
+    font-size="18"
+    font-weight="700"
+    dominant-baseline="central"
+  >
+    <text x="170" y="62" fill="var(--sc-chart-6)">O(N³)</text>
+    <text x="304" y="62" fill="var(--sc-chart-5)">O(N²)</text>
+    <text x="730" y="184.31" fill="var(--sc-chart-4)">O(N log N)</text>
+    <text x="730" y="427" fill="var(--sc-chart-3)">O(N)</text>
+    <text x="730" y="448" fill="var(--sc-chart-2)">O(log N)</text>
+    <text x="730" y="469" fill="var(--sc-chart-1)">O(1)</text>
+  </g>
+
+  <g stroke-width="1.5">
+    <line
+      x1="162"
+      y1="40"
+      x2="167"
+      y2="56"
+      stroke="var(--sc-chart-6)"
+    />
+    <line
+      x1="296"
+      y1="40"
+      x2="301"
+      y2="56"
+      stroke="var(--sc-chart-5)"
+    />
+    <line
+      x1="724"
+      y1="448"
+      x2="720"
+      y2="467.14"
+      stroke="var(--sc-chart-2)"
+    />
+    <line
+      x1="724"
+      y1="469"
+      x2="720"
+      y2="469.57"
+      stroke="var(--sc-chart-1)"
+    />
+  </g>
+</svg>
