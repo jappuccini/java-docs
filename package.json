@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
-    "start": "docusaurus start",
-    "build": "docusaurus build",
+    "start": "cross-env DOCUSAURUS_GENERATED_FILES_DIR_NAME=.docusaurus/dev DOCUSAURUS_NO_PERSISTENT_CACHE=1 docusaurus start",
+    "build": "cross-env DOCUSAURUS_GENERATED_FILES_DIR_NAME=.docusaurus/build docusaurus build",
     "swizzle": "docusaurus swizzle",
-    "deploy": "docusaurus deploy",
+    "deploy": "cross-env DOCUSAURUS_GENERATED_FILES_DIR_NAME=.docusaurus/build docusaurus deploy",
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
@@ -35,6 +35,7 @@
     "@docusaurus/tsconfig": "^3.10.2",
     "@docusaurus/types": "^3.10.2",
     "@types/react": "^19.3.0",
+    "cross-env": "^10.1.0",
     "prettier": "3.9.10",
     "typescript": "~7.0.2"
   },
