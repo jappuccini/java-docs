@@ -79,6 +79,9 @@ export default function TemplatePresentation(): React.JSX.Element {
 
         <section>
           <h2>Tabellen</h2>
+          <p>
+            Tabellen nutzen die volle Inhaltsbreite; Zellen bleiben linksbündig.
+          </p>
           <table>
             <thead>
               <tr>

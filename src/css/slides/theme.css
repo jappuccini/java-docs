@@ -262,6 +262,8 @@ html[data-theme='dark'] {
 
 .reveal table {
   display: table;
+  /* Content tables span the slide width; see template.tsx "Tabellen". */
+  width: 100%;
   margin: 0.8em 0 0;
   border-collapse: collapse;
   border-spacing: 0;
