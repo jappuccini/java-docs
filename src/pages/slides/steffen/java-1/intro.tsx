@@ -1,5 +1,6 @@
 import Link from '@docusaurus/Link';
 import Slides from '../../../../components/Slides';
+import { NKR } from '../../../../components/Slides/nkr';
 
 export default function Intro(): React.JSX.Element {
   return (
@@ -23,6 +24,7 @@ export default function Intro(): React.JSX.Element {
             <li className="fragment">Erwartungen</li>
             <li className="fragment">Organisatorisches</li>
             <li className="fragment">Was sind Programme?</li>
+            <li className="fragment">Git und Aufgaben</li>
             <li className="fragment">Zusammenfassung</li>
           </ul>
         </section>
@@ -267,11 +269,78 @@ export default function Intro(): React.JSX.Element {
         </section>
       </section>
 
+      <section data-topic="Git und Aufgaben">
+        <section className="divider">
+          <p className="kicker">Werkzeuge</p>
+          <h2>Git und Aufgaben</h2>
+          <p>
+            Repository klonen, Branches wechseln und die erste Aufgabe
+            auschecken.
+          </p>
+        </section>
+
+        <section>
+          <h2>Repository klonen</h2>
+          <p>Das Repository auf den eigenen Rechner kopieren.</p>
+          <pre>
+            <code
+              className="language-bash"
+              dangerouslySetInnerHTML={{
+                __html:
+                  'git clone https://github.com/jappuccini/java-exercises.git\n' +
+                  'cd java-exercises\n',
+              }}
+            ></code>
+          </pre>
+          <NKR />
+        </section>
+
+        <section>
+          <h2>Branches anzeigen und wechseln</h2>
+          <p>
+            <code>git branch</code> zeigt alle Branches, <code>git switch</code>{' '}
+            wechselt zwischen ihnen.
+          </p>
+          <pre>
+            <code
+              className="language-bash"
+              dangerouslySetInnerHTML={{
+                __html:
+                  'git branch\n' +
+                  'git switch exe/class-structure-01\n' +
+                  'git switch sol/class-structure-01\n',
+              }}
+            ></code>
+          </pre>
+          <NKR />
+        </section>
+
+        <section>
+          <h2>Vorgehensweise Aufgaben</h2>
+          <ul>
+            <li className="fragment">
+              <code>git add . && git stash</code> — Änderungen der letzten
+              Aufgabe zwischenspeichern
+            </li>
+            <li className="fragment">
+              <code>git switch exe/EXERCISE</code> — Aufgabe auschecken
+            </li>
+            <li className="fragment">Aufgabe bearbeiten</li>
+            <li className="fragment">
+              <code>git switch sol/EXERCISE</code> — Lösung ansehen
+            </li>
+          </ul>
+          <p className="fragment">Für die erste Aufgabe reicht Schritt 2.</p>
+        </section>
+      </section>
+
       <section data-topic="Zusammenfassung">
         <section className="divider">
           <p className="kicker">Abschluss</p>
           <h2>Zusammenfassung</h2>
-          <p>Die wichtigsten Punkte zu Programmen.</p>
+          <p>
+            Die wichtigsten Punkte zu Programmen und zur Aufgabenbearbeitung.
+          </p>
         </section>
 
         <section>
@@ -279,17 +348,47 @@ export default function Intro(): React.JSX.Element {
           <p className="fragment">GUI, TUI &amp; Hintergrund</p>
           <p className="fragment">Quellcode wird in ein Programm kompiliert</p>
         </section>
+
+        <section>
+          <h2>Git und Aufgaben</h2>
+          <p className="fragment">Repository klonen</p>
+          <p className="fragment">Exercise- und Solution-Branch wechseln</p>
+          <p className="fragment">Aufgaben im Exercise-Branch bearbeiten</p>
+        </section>
       </section>
 
       <section data-topic="Rest of the Day">
         <section>
           <h2>Rest of the Day</h2>
-          <p className="fragment">Entwicklungsumgebung einrichten</p>
-          <p className="fragment">
-            <Link to="/exercises/class-structure/class-structure01">
-              Hello-World-Aufgabe machen
-            </Link>
-          </p>
+          <ul>
+            <li className="fragment">Entwicklungsumgebung einrichten</li>
+            <li className="fragment">
+              Repository klonen und erste Aufgabe auschecken
+            </li>
+            <li className="fragment">Hello-World-Aufgabe lösen</li>
+          </ul>
+          <div className="callout fragment" style={{ fontSize: '0.8em' }}>
+            <span className="callout-title">Wenn du nicht weiterkommst</span>
+            <p>
+              Ohne Git: Lege die Klasse direkt in deiner IDE an und gib Hello
+              World aus.
+            </p>
+            <p>Wir besprechen die Aufgabe am Anfang der nächsten Sitzung.</p>
+            <p>
+              Hilfe:{' '}
+              <Link to="/additional-material/instructions/jdk">
+                JDK installieren
+              </Link>{' '}
+              ·{' '}
+              <Link to="/additional-material/steffen/Allgemein">
+                Aufgaben-Hilfe
+              </Link>{' '}
+              ·{' '}
+              <Link to="https://frag.jetzt/participant/room/12501321">
+                Frag jetzt
+              </Link>
+            </p>
+          </div>
         </section>
       </section>
     </Slides>
