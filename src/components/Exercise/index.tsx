@@ -4,7 +4,13 @@ import TabItem from '@theme/TabItem';
 import Tabs from '@theme/Tabs';
 import React from 'react';
 
-export default function Exercise({ branchSuffix }): React.JSX.Element {
+interface ExerciseProps {
+  branchSuffix: string;
+}
+
+export default function Exercise({
+  branchSuffix,
+}: ExerciseProps): React.JSX.Element {
   return (
     <Tabs>
       <TabItem value="exercise" label="Exercise" default>
