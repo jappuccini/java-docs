@@ -12,8 +12,7 @@ tags: []
   [Methoden und Operatoren](/slides/steffen/java-1/methods-and-operators)
 - 15.01.2026
   [Kontrollstrukturen und Arrays](/slides/steffen/java-1/if-and-switch)
-- 16.01.2026
-  [Math, Random und Scanner](/slides/steffen/java-1/math-random-scanner)
+- 16.01.2026 [Kurztestvorbereitung](/slides/steffen/java-1/kurztest-preparation)
 - 22.01.2026 Kurztest
 - 22.01.2026 [Klassen und Objekte](/slides/steffen/java-1/classes-and-objects)
 - 23.01.2026
