@@ -507,7 +507,7 @@ export default function Recap(): React.JSX.Element {
                   '  public String lastName;\n' +
                   ' \n' +
                   '  public String getFullName() {\n' +
-                  '    return firstName + lastName;\n' +
+                  '    return firstName + " " + lastName;\n' +
                   '  }\n' +
                   '}',
               }}
