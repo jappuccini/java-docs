@@ -22,7 +22,7 @@ tags: []
 - 12.02.2026 [Vererbung](/slides/steffen/java-1/inheritance)
 - 12.02.2026 [Polymorphie](/slides/steffen/java-1/polymorphism)
 - 13.02.2026
-  [Abstrakte und finale Klassen](/slides/steffen/java-1/abstract-and-final)
+  [Abstrakte und finale Klassen und Methoden](/slides/steffen/java-1/abstract-and-final)
 - 19.02.2026 [Interfaces](/slides/steffen/java-1/interfaces)
 - 20.02.2026 [Exceptions](/slides/steffen/java-1/exceptions)
 - 27.02.2026 & 06.03.2026 Klausurvorbereitung
