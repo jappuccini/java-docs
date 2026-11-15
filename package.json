@@ -23,7 +23,7 @@
     "@docusaurus/theme-mermaid": "^3.10.2",
     "@mdx-js/react": "^3.0.0",
     "clsx": "^2.1.1",
-    "mermaid": "^12.2.0",
+    "mermaid": "^12.3.0",
     "prism-react-renderer": "^2.1.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
