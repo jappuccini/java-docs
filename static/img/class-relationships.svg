@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 900 340"
+  aria-hidden="true"
+>
+  <defs>
+    <marker
+      id="relationship-arrow"
+      markerWidth="12"
+      markerHeight="12"
+      refX="10"
+      refY="6"
+      orient="auto"
+      markerUnits="userSpaceOnUse"
+    >
+      <path
+        d="M 0 1 L 10 6 L 0 11"
+        fill="none"
+        stroke="var(--sc-text)"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </marker>
+  </defs>
+
+  <g
+    fill="var(--sc-muted)"
+    font-family="var(--sc-font-text)"
+    font-size="17"
+  >
+    <text x="30" y="42">Assoziation</text>
+    <text x="30" y="169">Aggregation</text>
+    <text x="30" y="289">Komposition</text>
+  </g>
+
+  <g
+    fill="var(--sc-code-bg)"
+    stroke="var(--sc-border)"
+    stroke-width="2"
+  >
+    <rect x="240" y="12" width="170" height="52" rx="8" />
+    <rect x="620" y="12" width="150" height="52" rx="8" />
+    <rect x="240" y="124" width="170" height="78" rx="8" />
+    <rect x="620" y="124" width="230" height="78" rx="8" />
+    <rect x="240" y="244" width="170" height="78" rx="8" />
+    <rect x="620" y="244" width="230" height="78" rx="8" />
+  </g>
+
+  <g
+    fill="var(--sc-text)"
+    font-family="var(--sc-font-mono)"
+    font-size="17"
+    font-weight="600"
+    text-anchor="middle"
+  >
+    <text x="325" y="44">Persons</text>
+    <text x="695" y="44">Person</text>
+    <text x="325" y="169">Person</text>
+    <text x="735" y="150">Team</text>
+    <text x="325" y="289">OrderItem</text>
+    <text x="735" y="270">Order</text>
+  </g>
+
+  <g
+    fill="var(--sc-text)"
+    font-family="var(--sc-font-mono)"
+    font-size="14"
+  >
+    <text x="636" y="184">+members: List&lt;Person&gt;</text>
+    <text x="636" y="304">+items: List&lt;OrderItem&gt;</text>
+  </g>
+
+  <g stroke="var(--sc-border)" stroke-width="2" fill="none">
+    <line
+      x1="410"
+      y1="38"
+      x2="620"
+      y2="38"
+      marker-end="url(#relationship-arrow)"
+    />
+    <line x1="410" y1="163" x2="598" y2="163" />
+    <line x1="410" y1="283" x2="598" y2="283" />
+  </g>
+
+  <polygon
+    points="598,163 610,153 622,163 610,173"
+    fill="var(--sc-code-bg)"
+    stroke="var(--sc-border)"
+    stroke-width="2"
+  />
+  <polygon
+    points="598,283 610,273 622,283 610,293"
+    fill="var(--sc-text)"
+    stroke="var(--sc-text)"
+    stroke-width="2"
+  />
+</svg>

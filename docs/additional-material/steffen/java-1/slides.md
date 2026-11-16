@@ -18,7 +18,7 @@ tags: []
 - 23.01.2026
   [Konstruktor und static](/slides/steffen/java-1/constructor-and-static)
 - 05.02. & 06.02.2026
-  [Java API, Enum, Klassendiagramm, Aktivitätsdiagramm](/slides/steffen/java-1/class-diagram-java-api-enum)
+  [Java API, Enum und UML](/slides/steffen/java-1/class-diagram-java-api-enum)
 - 12.02.2026 [Vererbung](/slides/steffen/java-1/inheritance)
 - 12.02.2026 [Polymorphie](/slides/steffen/java-1/polymorphism)
 - 13.02.2026
