@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 800 400"
+  aria-hidden="true"
+>
+  <rect
+    x="20"
+    y="10"
+    width="480"
+    height="380"
+    rx="10"
+    fill="var(--sc-code-bg)"
+    stroke="var(--sc-border)"
+    stroke-width="2"
+  />
+  <line x1="20" y1="72" x2="500" y2="72" stroke="var(--sc-border)" stroke-width="2" />
+  <line x1="20" y1="200" x2="500" y2="200" stroke="var(--sc-border)" stroke-width="2" />
+
+  <text
+    x="260"
+    y="46"
+    fill="var(--sc-text)"
+    font-family="var(--sc-font-mono)"
+    font-size="22"
+    font-weight="700"
+    text-anchor="middle"
+  >
+    Person
+  </text>
+
+  <g
+    fill="var(--sc-text)"
+    font-family="var(--sc-font-mono)"
+    font-size="15"
+  >
+    <text x="40" y="100">-name: String {final}</text>
+    <text x="40" y="128">-age: int {final}</text>
+    <text x="40" y="156">-gender: char {final}</text>
+    <text x="40" y="184" text-decoration="underline">
+      -numberOfPersons: int
+    </text>
+
+    <text x="40" y="224">+Person(name: String, age: int, gender: char)</text>
+    <text x="40" y="258">+name() String</text>
+    <text x="40" y="292">+age() int</text>
+    <text x="40" y="326">+gender() char</text>
+    <text x="40" y="360" text-decoration="underline">
+      +getNumberOfPersons() int
+    </text>
+  </g>
+
+  <g
+    stroke="var(--sc-border)"
+    stroke-width="1.5"
+    stroke-dasharray="4 4"
+  >
+    <line x1="500" y1="41" x2="534" y2="41" />
+    <line x1="500" y1="136" x2="534" y2="136" />
+    <line x1="500" y1="290" x2="534" y2="290" />
+  </g>
+
+  <g
+    fill="var(--sc-muted)"
+    font-family="var(--sc-font-text)"
+    font-size="17"
+  >
+    <text x="546" y="47">Klassenname</text>
+    <text x="546" y="142">Attribute mit Datentyp</text>
+    <text x="546" y="296">Methoden mit Rückgabetyp</text>
+  </g>
+</svg>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 520 470"
+  aria-hidden="true"
+>
+  <defs>
+    <marker
+      id="activity-arrow"
+      markerWidth="12"
+      markerHeight="12"
+      refX="10"
+      refY="6"
+      orient="auto"
+      markerUnits="userSpaceOnUse"
+    >
+      <path d="M 0 0 L 10 6 L 0 12 z" fill="var(--sc-text)" />
+    </marker>
+  </defs>
+
+  <g
+    fill="var(--sc-code-bg)"
+    stroke="var(--sc-border)"
+    stroke-width="1.8"
+  >
+    <rect x="130" y="48" width="260" height="42" rx="8" />
+    <rect x="130" y="116" width="260" height="42" rx="8" />
+    <rect x="130" y="184" width="260" height="42" rx="8" />
+    <rect x="130" y="252" width="260" height="42" rx="8" />
+    <rect x="130" y="388" width="260" height="42" rx="8" />
+  </g>
+
+  <g
+    fill="var(--sc-text)"
+    font-family="var(--sc-font-text)"
+    font-size="15"
+    text-anchor="middle"
+    dominant-baseline="central"
+  >
+    <text x="260" y="69">Ausgabe: Zahl 1 eingeben</text>
+    <text x="260" y="137">Eingabe: [Zahl 1]</text>
+    <text x="260" y="205">Ausgabe: Zahl 2 eingeben</text>
+    <text x="260" y="273">Eingabe: [Zahl 2]</text>
+    <text x="260" y="409">Rückgabe: [Zahl 1] / [Zahl 2]</text>
+  </g>
+
+  <circle cx="260" cy="18" r="8" fill="var(--sc-text)" />
+  <circle
+    cx="260"
+    cy="455"
+    r="10"
+    fill="none"
+    stroke="var(--sc-border)"
+    stroke-width="2"
+  />
+  <circle cx="260" cy="455" r="4" fill="var(--sc-text)" />
+
+  <g
+    stroke="var(--sc-border)"
+    stroke-width="1.8"
+    fill="none"
+    marker-end="url(#activity-arrow)"
+  >
+    <line x1="260" y1="26" x2="260" y2="48" />
+    <line x1="260" y1="90" x2="260" y2="116" />
+    <line x1="260" y1="158" x2="260" y2="184" />
+    <line x1="260" y1="226" x2="260" y2="252" />
+    <line x1="260" y1="294" x2="260" y2="318" />
+    <line x1="260" y1="362" x2="260" y2="388" />
+    <line x1="260" y1="430" x2="260" y2="445" />
+  </g>
+
+  <polygon
+    points="260,318 286,340 260,362 234,340"
+    fill="var(--sc-code-bg)"
+    stroke="var(--sc-border)"
+    stroke-width="1.8"
+  />
+
+  <path
+    d="M 286 340 L 450 340 L 450 205 L 390 205"
+    fill="none"
+    stroke="var(--sc-border)"
+    stroke-width="1.8"
+    marker-end="url(#activity-arrow)"
+  />
+
+  <g
+    fill="var(--sc-muted)"
+    font-family="var(--sc-font-text)"
+    font-size="13"
+  >
+    <text x="272" y="378">sonst</text>
+    <text x="392" y="358">[Zahl 2] = 0</text>
+  </g>
+</svg>
