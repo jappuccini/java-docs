@@ -1,12 +1,19 @@
 import Link from '@docusaurus/Link';
 import React from 'react';
 
+interface ContributorProps {
+  exercisePullRequest?: string;
+  docsPullRequest?: string;
+  userId: string;
+  description: string;
+}
+
 export default function Contributor({
   exercisePullRequest,
   docsPullRequest,
   userId,
   description,
-}) {
+}: ContributorProps) {
   return (
     <div
       style={{

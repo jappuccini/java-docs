@@ -4,155 +4,198 @@ import { NKR } from '@site/src/components/Slides/nkr';
 
 export default function FunctionalProgramming(): React.JSX.Element {
   return (
-    <Slides>
+    <Slides title="Funktionale Programmierung">
+      <section>
+        <section className="cover">
+          <p className="kicker">Fortgeschrittene Programmierung</p>
+          <h1>Funktionale Programmierung</h1>
+          <p>
+            Funktionen als Werte nutzen, Lambdafunktionen schreiben und
+            Methodenreferenzen einsetzen.
+          </p>
+        </section>
+      </section>
+
       <section>
         <section>
           <h2>Agenda</h2>
           <ul>
             <li className="fragment">Funktionale Programmierung</li>
             <li className="fragment">Lambdafunktionen</li>
-            <li className="fragment">Allgemeine Funktionale Interfaces</li>
+            <li className="fragment">Lambda-Syntax</li>
+            <li className="fragment">Funktionale Interfaces der Java-API</li>
             <li className="fragment">Methodenreferenzen</li>
           </ul>
         </section>
       </section>
-      <section>
-        <section>
+
+      <section data-topic="Funktionale Programmierung">
+        <section className="divider">
+          <p className="kicker">Grundlagen</p>
           <h2>Funktionale Programmierung</h2>
-        </section>
-        <section>
           <p>
-            Funktionale Programmierung ist ein <b>Programmierparadigma</b>, bei
-            dem Funktionen als Werte behandelt werden und auf Seiteneffekte
-            verzichtet wird.
+            Was funktionale Programmierung ist, was Seiteneffekte sind und warum
+            Funktionen als Werte wichtig sind.
           </p>
         </section>
+
+        <section>
+          <h2>Definition</h2>
+          <div className="callout">
+            <p>
+              Funktionale Programmierung ist ein <b>Programmierparadigma</b>,
+              bei dem Funktionen als Werte behandelt werden und möglichst ohne
+              Seiteneffekte gearbeitet wird.
+            </p>
+          </div>
+        </section>
+
         <section>
           <h2>Funktionen als Werte</h2>
-          Funktionen...
           <ul>
-            <li className="fragment">sind Methoden</li>
-            <li className="fragment">können als Parameter definiert werden</li>
-            <li className="fragment">können als Argument definiert werden</li>
-            <li className="fragment">können als Variable definiert werden</li>
+            <li className="fragment">können in Variablen gespeichert werden</li>
+            <li className="fragment">können als Argumente übergeben werden</li>
+            <li className="fragment">
+              können als Rückgabewerte zurückgegeben werden
+            </li>
+            <li className="fragment">
+              In Java übernehmen Lambdafunktionen diese Rolle
+            </li>
           </ul>
         </section>
+
         <section>
           <h2>Seiteneffekt</h2>
           <p className="fragment">
-            Ein Seiteneffekt beschreibt eine Zustandsänderung
+            Ein Seiteneffekt ist eine beobachtbare Wirkung nach außen, z.B. eine
+            Zustandsänderung, eine Ausgabe oder eine Exception.
           </p>
         </section>
+
         <section>
           <h2>Beispiele Seiteneffekte</h2>
           <pre className="fragment">
             <code
               data-line-numbers
-              className="java"
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'public class Human {\n' +
                   '  private int age;\n' +
                   '  \n' +
                   '  public void setAge(int age) {\n' +
+                  '    // Seiteneffekt: verändert den Zustand des Objekts.\n' +
                   '    this.age = age;\n' +
-                  '    /*Seiteneffekt, da Wert außerhalb\n' +
-                  '     der Funktion verändert wird */ \n' +
                   '  }\n' +
                   '  public int getAge() {\n' +
+                  '    // Kein Seiteneffekt: liest nur den Zustand.\n' +
                   '    return age;\n' +
-                  '    /*Kein Seiteneffekt, da Wert nicht außerhalb\n' +
-                  '     der Funktion verändert wird */ \n' +
                   '  }\n' +
                   '}\n',
               }}
             ></code>
           </pre>
         </section>
+
         <section>
           <h2>
             <Link to="https://github.com/jappuccini/java-demos/tree/steffen/java2/functionalprogramming">
-              Demo - Lambda Funktionen
+              Demo: Vom Comparator zur Lambdafunktion
             </Link>
           </h2>
           <ul>
-            <li className="fragment">Age Comparator</li>
+            <li className="fragment">
+              <code>AgeComparator</code>-Klasse
+            </li>
             <li className="fragment">
               <Link to="/documentation/inner-classes">Anonyme Klasse*</Link>
             </li>
-            <li className="fragment">Anonyme Funktion</li>
+            <li className="fragment">
+              Lambdafunktion (lange und kurze Syntax)
+            </li>
+            <li className="fragment">Lambdafunktion als Referenzvariable</li>
           </ul>
           <NKR />
         </section>
       </section>
-      <section>
-        <section>
+
+      <section data-topic="Lambdafunktionen">
+        <section className="divider">
+          <p className="kicker">Lambdas</p>
           <h2>Lambdafunktionen</h2>
+          <p>
+            Anonyme Funktionen, ihre Typisierung über funktionale Interfaces und
+            eigene Interfaces in der Praxis.
+          </p>
         </section>
+
         <section>
           <h2>Lambdafunktion</h2>
           <p className="fragment">
-            Eine Lambdafunktion ist eine Methode ohne Name, die wie eine
-            Referenzvariable verwendet werden kann.
+            Eine Lambdafunktion ist eine anonyme Funktion, die als Wert
+            verwendet werden kann.
           </p>
           <pre className="fragment">
             <code
-              data-line-numbers="4"
-              className="java"
+              data-line-numbers="2-5"
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
-                  'public class Main {\n' +
-                  '  public static void main(String[] args) {\n' +
-                  '    Comparator&lt;Human&gt; sortAge;\n' +
-                  '    sortAge = (h1, h2) -> h1.age() > h2.age() ? 1 : -1;\n' +
-                  '  }\n' +
-                  '}\n',
+                  'Comparator&lt;Human&gt; sortAge;\n' +
+                  'sortAge = (h1, h2) -&gt;\n' +
+                  '  h1.getAge() &lt; h2.getAge() ? -1\n' +
+                  '    : h1.getAge() &gt; h2.getAge() ? 1\n' +
+                  '    : 0;\n',
               }}
             ></code>
           </pre>
-          <span className="fragment foot-note">
-            Lambdafunktionen werden auch anonyme Funktion, anonymous function
-            oder arrow function genannt.
-          </span>
+          <p className="fragment font-medium">
+            Auch anonyme Funktion, anonymous function oder arrow function
+            genannt. Ähnliche Konzepte: arrow functions in JavaScript, Closures
+            in Rust.
+          </p>
         </section>
+
         <section>
           <h2>Typisierung</h2>
           <p className="fragment">
-            Ein funktionales Interface wird für die Typisierung einer
-            Lambdafunktion verwendet.
+            Der Zieltyp einer Lambdafunktion ist ein funktionales Interface. Aus{' '}
+            <code>Comparator&lt;Human&gt;</code> leitet der Compiler ab, dass{' '}
+            <code>h1</code> und <code>h2</code> vom Typ <code>Human</code> sind
+            und <code>int</code> zurückgegeben wird.
           </p>
           <pre className="fragment">
             <code
-              data-line-numbers="3"
-              className="java"
+              data-line-numbers="1"
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
-                  'public class Main {\n' +
-                  '  public static void main(String[] args) {\n' +
-                  '    Comparator&lt;Human&gt; sortAge;\n' +
-                  '    sortAge = (h1, h2) -> h1.age() > h2.age() ? 1 : -1;\n' +
-                  '  }\n' +
-                  '}\n',
+                  'Comparator&lt;Human&gt; sortAge;\n' +
+                  'sortAge = (h1, h2) -&gt;\n' +
+                  '  h1.getAge() &lt; h2.getAge() ? -1\n' +
+                  '    : h1.getAge() &gt; h2.getAge() ? 1\n' +
+                  '    : 0;\n',
               }}
             ></code>
           </pre>
-          <p className="fragment foot-note">
-            Ein funktionales Interface ist ein Interface mit genau einer
-            abstrakten Methode und einer speziellen Annotation.
+          <p className="fragment font-medium">
+            Ein funktionales Interface hat genau eine abstrakte Methode.
           </p>
         </section>
+
         <section>
           <h2>Funktionales Interface</h2>
           <p className="fragment">
-            Funktionale Interfaces werden mit @FunctionalInterface markiert,
-            z.B.{' '}
+            Funktionale Interfaces können mit <code>@FunctionalInterface</code>{' '}
+            markiert werden, z.B.{' '}
             <Link to="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Comparator.html">
               Comparator
             </Link>
+            .
           </p>
           <pre className="fragment">
             <code
-              className="java"
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   '@FunctionalInterface\n' +
@@ -162,34 +205,69 @@ export default function FunctionalProgramming(): React.JSX.Element {
               }}
             ></code>
           </pre>
-          <p className="fragment foot-note">
-            Nicht jedes Interface mit einer einzigen abstrakten Methode ist
-            funktional, z.B.{' '}
+          <p className="fragment font-medium">
             <Link to="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Comparable.html">
               Comparable
-            </Link>
+            </Link>{' '}
+            ist ebenfalls ein funktionales Interface, aber nicht annotiert. Für
+            Lambdas ist <code>Comparator</code> praktischer, weil{' '}
+            <code>compare</code> beide Objekte entgegennimmt.
           </p>
         </section>
+
         <section>
-          <h2>Syntax Lambdafunktion</h2>
+          <h2>
+            <Link to="https://github.com/jappuccini/java-demos/tree/steffen/java2/functionalinterfaces/owninterfaces">
+              Demo: Eigene funktionale Interfaces
+            </Link>
+          </h2>
+          <ul>
+            <li className="fragment">
+              <code>ShoppingList</code> mit eigenen funktionalen Interfaces
+            </li>
+            <li className="fragment">
+              Problem 1: Auf Warenkorb-Änderungen reagieren
+            </li>
+            <li className="fragment">
+              Problem 2: Produkt beim Hinzufügen prüfen
+            </li>
+          </ul>
+        </section>
+      </section>
+
+      <section data-topic="Lambda-Syntax">
+        <section className="divider">
+          <p className="kicker">Lambdas</p>
+          <h2>Lambda-Syntax</h2>
+          <p>
+            Sechs Formen im Überblick — von keinen Parametern bis zur{' '}
+            <code>return</code>-Anweisung.
+          </p>
+        </section>
+
+        <section>
+          <h2>Sechs Formen</h2>
           <ul>
             <li className="fragment">Kein Parameter</li>
             <li className="fragment">Ein Parameter</li>
             <li className="fragment">Mehrere Parameter</li>
             <li className="fragment">Eine Anweisung</li>
             <li className="fragment">Mehrere Anweisungen</li>
-            <li className="fragment">Return Anweisung</li>
+            <li className="fragment">
+              <code>return</code>-Anweisung
+            </li>
           </ul>
         </section>
+
         <section>
           <h2>Kein Parameter</h2>
           <p className="fragment">
-            Hat das funktionale Interface keinen Parameter, werden runde
-            Klammern benötigt.
+            Hat das funktionale Interface keinen Parameter, sind die runden
+            Klammern verpflichtend.
           </p>
           <pre className="fragment">
             <code
-              className="java"
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'public interface NoParamFunction {\n' +
@@ -200,7 +278,7 @@ export default function FunctionalProgramming(): React.JSX.Element {
           </pre>
           <pre className="fragment">
             <code
-              className="java"
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'NoParamFunction function = () -&gt; {\n' +
@@ -210,15 +288,16 @@ export default function FunctionalProgramming(): React.JSX.Element {
             ></code>
           </pre>
         </section>
+
         <section>
           <h2>Ein Parameter</h2>
           <p className="fragment">
-            Hat das funktionale Interface einen Parameter, werden keine runden
-            Klammern benötigt.
+            Hat das funktionale Interface genau einen Parameter, können die
+            runden Klammern weggelassen werden.
           </p>
           <pre className="fragment">
             <code
-              className="java"
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'public interface OneParamFunction {\n' +
@@ -229,7 +308,7 @@ export default function FunctionalProgramming(): React.JSX.Element {
           </pre>
           <pre className="fragment">
             <code
-              className="java"
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'OneParamFunction function = one -&gt; {\n' +
@@ -239,15 +318,16 @@ export default function FunctionalProgramming(): React.JSX.Element {
             ></code>
           </pre>
         </section>
+
         <section>
           <h2>Mehrere Parameter</h2>
           <p className="fragment">
-            Hat das funktionale Interface mehrere Parameter, werden runden
-            Klammern benötigt.
+            Hat das funktionale Interface mehrere Parameter, sind die runden
+            Klammern verpflichtend.
           </p>
           <pre className="fragment">
             <code
-              className="java"
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'public interface MultiParamFunction {\n' +
@@ -258,7 +338,7 @@ export default function FunctionalProgramming(): React.JSX.Element {
           </pre>
           <pre className="fragment">
             <code
-              className="java"
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'MultiParamFunction function = (one, two) -&gt; {\n' +
@@ -268,15 +348,16 @@ export default function FunctionalProgramming(): React.JSX.Element {
             ></code>
           </pre>
         </section>
+
         <section>
           <h2>Eine Anweisung</h2>
           <p className="fragment">
-            Besteht die Lambdafunktion aus einer Anweisung sind keine
-            geschweifte Klammern notwendig.
+            Besteht die Lambdafunktion aus einer Anweisung, sind keine
+            geschweiften Klammern notwendig.
           </p>
           <pre className="fragment">
             <code
-              className="java"
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'MultiParamFunction function = (one, two) -&gt; \n' +
@@ -285,15 +366,16 @@ export default function FunctionalProgramming(): React.JSX.Element {
             ></code>
           </pre>
         </section>
+
         <section>
           <h2>Mehrere Anweisungen</h2>
           <p className="fragment">
-            Besteht die Lambdafunktion aus mehreren Anweisungen sind geschweifte
-            Klammern notwendig.
+            Besteht die Lambdafunktion aus mehreren Anweisungen, sind
+            geschweifte Klammern notwendig.
           </p>
           <pre className="fragment">
             <code
-              className="java"
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'MultiParamFunction function = (one, two) -&gt; {\n' +
@@ -304,16 +386,19 @@ export default function FunctionalProgramming(): React.JSX.Element {
             ></code>
           </pre>
         </section>
+
         <section>
-          <h2>return-Anweisung</h2>
+          <h2>
+            <code>return</code>-Anweisung
+          </h2>
           <p className="fragment">
-            Besteht die Lambdafunktion aus einer einzelnen return Anweisung,
-            sind keine geschweifte Klammern notwendig und das return Statement
-            kann weggelassen werden.
+            Besteht die Lambdafunktion aus einer einzelnen <code>return</code>
+            -Anweisung, sind keine geschweiften Klammern notwendig, und das{' '}
+            <code>return</code>-Statement kann weggelassen werden.
           </p>
           <pre className="fragment">
             <code
-              className="java"
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'public interface OneParamReturnFunction {\n' +
@@ -324,33 +409,28 @@ export default function FunctionalProgramming(): React.JSX.Element {
           </pre>
           <pre className="fragment">
             <code
-              className="java"
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
-                  'OneParamReturnFunction function = h -&gt; h.age() > 10;\n',
+                  'OneParamReturnFunction function = h -&gt; h.getAge() &gt; 10;\n',
               }}
             ></code>
           </pre>
         </section>
-        <section>
-          <h2>
-            <Link to="https://github.com/jappuccini/java-demos/tree/steffen/java2/functionalinterfaces/owninterfaces">
-              Demo - Eigene Funktionale Interfaces
-            </Link>
-          </h2>
-          <ul>
-            <li className="fragment">Intro Shopping List Example</li>
-            <li className="fragment">Problem 1</li>
-            <li className="fragment">Problem 2</li>
-          </ul>
-        </section>
       </section>
-      <section>
-        <section>
-          <h2>Allgemeine Funktionale Interfaces</h2>
+
+      <section data-topic="Funktionale Interfaces der Java-API">
+        <section className="divider">
+          <p className="kicker">Java-API</p>
+          <h2>Funktionale Interfaces der Java-API</h2>
+          <p>
+            Consumer, Function, Predicate und Supplier — die vorgefertigten
+            Interfaces aus <code>java.util.function</code>.
+          </p>
         </section>
+
         <section>
-          <h2>Grundkategorien von Funktionalen Interfaces</h2>
+          <h2>Grundkategorien funktionaler Interfaces</h2>
           <ul>
             <li className="fragment">Consumer</li>
             <li className="fragment">Function</li>
@@ -358,11 +438,12 @@ export default function FunctionalProgramming(): React.JSX.Element {
             <li className="fragment">Supplier</li>
           </ul>
         </section>
+
         <section>
           <h2>Consumer</h2>
           <pre className="fragment">
             <code
-              className="java"
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'public interface Consumer&lt;T&gt; {\n' +
@@ -373,7 +454,7 @@ export default function FunctionalProgramming(): React.JSX.Element {
           </pre>
           <pre className="fragment">
             <code
-              className="java"
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'public interface BiConsumer&lt;T, U&gt; {\n' +
@@ -382,13 +463,16 @@ export default function FunctionalProgramming(): React.JSX.Element {
               }}
             ></code>
           </pre>
-          <p className="fragment">Code ausführen ohne Daten weiterzugeben.</p>
+          <p className="fragment">
+            Daten entgegennehmen, ohne ein Ergebnis zurückzugeben.
+          </p>
         </section>
+
         <section>
-          <h2>Function</h2>
+          <h2>Function und BiFunction</h2>
           <pre className="fragment">
             <code
-              className="java"
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'public interface Function&lt;T, R&gt; {\n' +
@@ -399,7 +483,7 @@ export default function FunctionalProgramming(): React.JSX.Element {
           </pre>
           <pre className="fragment">
             <code
-              className="java"
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'public interface BiFunction&lt;T, U, R&gt; {\n' +
@@ -408,9 +492,16 @@ export default function FunctionalProgramming(): React.JSX.Element {
               }}
             ></code>
           </pre>
+          <p className="fragment">
+            Daten transformieren und ein Ergebnis zurückgeben.
+          </p>
+        </section>
+
+        <section>
+          <h2>UnaryOperator und BinaryOperator</h2>
           <pre className="fragment">
             <code
-              className="java"
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'public interface UnaryOperator&lt;T&gt; {\n' +
@@ -421,7 +512,7 @@ export default function FunctionalProgramming(): React.JSX.Element {
           </pre>
           <pre className="fragment">
             <code
-              className="java"
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'public interface BinaryOperator&lt;T&gt; {\n' +
@@ -430,13 +521,17 @@ export default function FunctionalProgramming(): React.JSX.Element {
               }}
             ></code>
           </pre>
-          <p className="fragment">Code ausführen, der Daten zurückgibt.</p>
+          <p className="fragment">
+            Spezialisierungen von <code>Function</code>, bei denen Eingabe- und
+            Rückgabetyp gleich sind.
+          </p>
         </section>
+
         <section>
           <h2>Predicate</h2>
           <pre className="fragment">
             <code
-              className="java"
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'public interface Predicate&lt;T&gt; {\n' +
@@ -445,15 +540,28 @@ export default function FunctionalProgramming(): React.JSX.Element {
               }}
             ></code>
           </pre>
+          <pre className="fragment">
+            <code
+              className="language-java"
+              dangerouslySetInnerHTML={{
+                __html:
+                  'public interface BiPredicate&lt;T, U&gt; {\n' +
+                  '  public boolean test(T t, U u);\n' +
+                  '}\n',
+              }}
+            ></code>
+          </pre>
           <p className="fragment">
-            Code ausführen, der true oder false zurückgibt.
+            Daten prüfen und <code>true</code> oder <code>false</code>{' '}
+            zurückgeben.
           </p>
         </section>
+
         <section>
           <h2>Supplier*</h2>
           <pre className="fragment">
             <code
-              className="java"
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'public interface Supplier&lt;T&gt; {\n' +
@@ -463,102 +571,133 @@ export default function FunctionalProgramming(): React.JSX.Element {
             ></code>
           </pre>
           <p className="fragment">
-            Code ausführen, der Daten vom Typ T zurückgibt.
+            Ohne Eingabe Daten vom Typ <code>T</code> liefern.
           </p>
           <div className="fragment">
             <NKR />
           </div>
         </section>
+
         <section>
           <h2>
             <Link to="https://github.com/jappuccini/java-demos/tree/steffen/java2/functionalinterfaces/knowninterfaces">
-              Demo - Allgemeine Funktionale Interfaces
+              Demo: Consumer und BiPredicate
             </Link>
           </h2>
           <ul>
             <li className="fragment">
-              Consumer anstatt ProductsChangedConsumer
+              <code>Consumer</code> statt <code>ProductsChangedConsumer</code>
             </li>
-            <li className="fragment">Predicate anstatt AddAllowedChecker</li>
+            <li className="fragment">
+              <code>BiPredicate</code> statt <code>AddAllowedChecker</code>
+            </li>
           </ul>
         </section>
       </section>
-      <section>
-        <section>
+
+      <section data-topic="Methodenreferenzen">
+        <section className="divider">
+          <p className="kicker">Lambdas</p>
           <h2>Methodenreferenzen</h2>
+          <p>
+            Lambdafunktionen, die nur eine bestehende Methode aufrufen, kürzer
+            schreiben.
+          </p>
         </section>
+
         <section>
           <h2>Warum Methodenreferenzen?</h2>
-          <p className="fragment">
-            Mit Methodenreferenzen kann man noch weniger Code schreiben.
-          </p>
-          <p className="fragment">
-            Hat ein Parameter die gleiche Signatur, wie eine statische Methode,
-            kann diese Methode als Methodenreferenz übergeben werden.
-          </p>
+          <ul>
+            <li className="fragment">
+              Eine Methodenreferenz ist die Kurzform für eine Lambdafunktion,
+              die nur eine bestehende Methode aufruft.
+            </li>
+            <li className="fragment">
+              <code>System.out::println</code> statt{' '}
+              <code>name -&gt; System.out.println(name)</code>.
+            </li>
+            <li className="fragment">
+              Passt die Signatur der Methode zur erwarteten funktionalen
+              Schnittstelle, kann sie direkt referenziert werden.
+            </li>
+          </ul>
         </section>
+
         <section>
           <h2>
-            Beispiel ArrayList -{' '}
+            Beispiel:{' '}
             <Link to="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/ArrayList.html#forEach(java.util.function.Consumer)">
-              For Each
+              ArrayList.forEach
             </Link>
           </h2>
           <pre>
             <code
-              className="java"
+              data-line-numbers
+              className="language-java"
               dangerouslySetInnerHTML={{
                 __html:
                   'public class Main {\n' +
                   '  public static void main(String[] args) {\n' +
-                  '    ArrayList&lt;String&gt; names = new ArrayList&lt;&gt;()\n' +
+                  '    ArrayList&lt;String&gt; names = new ArrayList&lt;&gt;(List.of("Hans", "Peter", "Lisa"));\n' +
                   '    \n' +
-                  '    // lambda funktion\n' +
+                  '    // Lambda-Funktion\n' +
                   '    names.forEach((name) -&gt; System.out.println(name));\n' +
                   '    \n' +
-                  '    // methodenreferenz\n' +
+                  '    // Methodenreferenz\n' +
                   '    names.forEach(System.out::println);\n' +
-                  ' }\n' +
+                  '  }\n' +
                   '}\n',
               }}
             ></code>
           </pre>
         </section>
+
         <section>
-          <h2>Verwenden von Methodenreferenzen?</h2>
-          <p className="fragment">
-            Anstatt die Methode über einen Punkt aufzurufen, wird ein zweifacher
-            Doppelpunkt verwendet.
-          </p>
-          <p className="fragment">
-            Mit dem "new" nach dem zweifachen Doppelpunkt kann auch der
-            Konstruktor einer Klasse referenziert werden.
-          </p>
+          <h2>Methodenreferenzen verwenden</h2>
+          <ul>
+            <li className="fragment">
+              Statt die Methode aufzurufen (
+              <code>System.out.println(name)</code>), verweist{' '}
+              <code>System.out::println</code> auf sie.
+            </li>
+            <li className="fragment">
+              Mit <code>new</code> nach dem doppelten Doppelpunkt wird ein
+              Konstruktor referenziert, z.B. <code>OneTimePrinter::new</code>.*
+            </li>
+          </ul>
           <NKR />
         </section>
+
         <section>
           <h2>
             <Link to="https://github.com/jappuccini/java-demos/tree/steffen/java2/functionalinterfaces/methodreferences">
-              Demo - Methodenreferenzen
+              Demo: Methodenreferenzen
             </Link>
           </h2>
           <ul>
-            <li className="fragment">Methodensignatur System.out.println</li>
-            <li className="fragment">OneTimePrinter</li>
+            <li className="fragment">
+              <code>System.out::println</code>
+            </li>
+            <li className="fragment">
+              <code>OneTimePrinter::new</code>
+            </li>
           </ul>
         </section>
       </section>
-      <section>
-        <h2>Rest of the Day</h2>
-        <ul>
-          <li className="fragment">
-            <Link to="/exercises/lambdas/">Lambdas</Link>
-          </li>
-        </ul>
-        <p className="fragment font-medium">
-          Bei Lambdas 01 kann die Teilaufgabe mit anonymer Klasse ignoriert
-          werden.
-        </p>
+
+      <section data-topic="Rest of the Day">
+        <section>
+          <h2>Rest of the Day</h2>
+          <ul>
+            <li className="fragment">
+              <Link to="/exercises/lambdas/">Lambdas Aufgaben</Link>
+            </li>
+          </ul>
+          <p className="fragment font-medium">
+            Bei Lambdas 01 kann die Teilaufgabe mit anonymer Klasse ignoriert
+            werden.
+          </p>
+        </section>
       </section>
     </Slides>
   );

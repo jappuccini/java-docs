@@ -105,6 +105,42 @@ right.
 
 - 7, 23, 3, 5, 4, 18, 21
 
+## Binary Trees vergleichen
+
+**Tree A**
+
+```mermaid
+graph
+  4-->1
+  4-->9
+```
+
+**Tree B**
+
+```mermaid
+graph
+  4-->1
+  1-->9
+```
+
+Zwei Binary Trees sind nur dann gleich, wenn sowohl ihre Werte als auch ihre
+Struktur übereinstimmen. Beide Bäume enthalten die Werte **1**, **4** und **9**,
+aber ihre Struktur ist unterschiedlich:
+
+| Traversal  | Tree A  | Tree B  | Gleich? |
+| ---------- | ------- | ------- | ------- |
+| BFS        | 4, 1, 9 | 4, 1, 9 | ja      |
+| Pre-Order  | 4, 1, 9 | 4, 1, 9 | ja      |
+| In-Order   | 1, 4, 9 | 1, 9, 4 | nein    |
+| Post-Order | 1, 9, 4 | 9, 1, 4 | nein    |
+
+Eine einzelne Traversal-Reihenfolge ohne `null`-Marker reicht daher nicht, um
+die Struktur zu prüfen. Der rekursive DFS-Vergleich prüft an jeder Position den
+Wert und die beiden Child Nodes. Für einen BFS-Vergleich braucht man eine Queue
+von Node-Paaren `(a, b)` und muss fehlende Kinder als `null` mitführen. Beide
+Verfahren können Werte und Struktur prüfen; der DFS-Vergleich ist hier der
+direktere Weg, weil die Rekursion bereits zwei Nodes vergleicht.
+
 # Binary Search Tree
 
 ```mermaid
@@ -119,6 +155,13 @@ graph
   25-->30
 ```
 
+## Operationen
+
+- **Search 21:** 17 → 50 → 25 → 21 (gefunden)
+- **Insert 22:** 17 → 50 → 25 → 21 → rechts von 21
+- **Delete:** 4 (Blatt) entfernen · 50 (ein Kind) durch 25 ersetzen · 25 (zwei
+  Kinder) durch 21 ersetzen (größter Knoten im linken Teilbaum)
+
 <br/>
 <br/>
 
@@ -131,7 +174,7 @@ graph
   71-->101
   71-->80
   100-->200
-  100-->102
+  100-->101
 ```
 
 <br/>

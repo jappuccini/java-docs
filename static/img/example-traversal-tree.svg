@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 520 260"
+  aria-hidden="true"
+>
+  <g stroke="var(--sc-border)" stroke-width="2">
+    <line x1="260" y1="44" x2="145" y2="130" />
+    <line x1="260" y1="44" x2="395" y2="130" />
+    <line x1="145" y1="130" x2="75" y2="216" />
+    <line x1="145" y1="130" x2="205" y2="216" />
+    <line x1="395" y1="130" x2="330" y2="216" />
+    <line x1="395" y1="130" x2="465" y2="216" />
+  </g>
+
+  <g fill="var(--sc-code-bg)" stroke="var(--sc-border)" stroke-width="2">
+    <circle
+      cx="260"
+      cy="44"
+      r="22"
+      stroke="var(--sc-accent)"
+      stroke-width="2.5"
+    />
+    <circle cx="145" cy="130" r="22" />
+    <circle cx="395" cy="130" r="22" />
+    <circle cx="75" cy="216" r="22" />
+    <circle cx="205" cy="216" r="22" />
+    <circle cx="330" cy="216" r="22" />
+    <circle cx="465" cy="216" r="22" />
+  </g>
+
+  <g
+    fill="var(--sc-text)"
+    font-family="var(--sc-font-mono)"
+    font-size="17"
+    font-weight="600"
+    text-anchor="middle"
+    dominant-baseline="central"
+  >
+    <text x="260" y="44" fill="var(--sc-accent)">7</text>
+    <text x="145" y="130">23</text>
+    <text x="395" y="130">3</text>
+    <text x="75" y="216">5</text>
+    <text x="205" y="216">4</text>
+    <text x="330" y="216">18</text>
+    <text x="465" y="216">21</text>
+  </g>
+</svg>

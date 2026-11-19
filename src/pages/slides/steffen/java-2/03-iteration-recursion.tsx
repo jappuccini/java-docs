@@ -3,52 +3,84 @@ import Slides from '../../../../components/Slides';
 
 export default function IterationRecursion(): React.JSX.Element {
   return (
-    <Slides>
+    <Slides title="Iteration und Rekursion">
       <section>
-        <section>
-          <h2>Iterativ und Rekursiv</h2>
+        <section className="cover">
+          <p className="kicker">Fortgeschrittene Programmierung</p>
+          <h1>Iteration und Rekursion</h1>
+          <p>
+            Iterative und rekursive Lösungen vergleichen und den Callstack
+            nachvollziehen.
+          </p>
         </section>
+      </section>
+
+      <section>
         <section>
           <h2>Agenda</h2>
           <ul>
-            <li className="fragment">Intro</li>
+            <li className="fragment">Iteration</li>
             <li className="fragment">Rekursion</li>
-            <li className="fragment">Fun With Mazes</li>
+            <li className="fragment">Fun with Mazes (optional)</li>
           </ul>
         </section>
       </section>
-      <section>
-        <section>
-          <h2>Intro</h2>
+
+      <section data-topic="Iteration">
+        <section className="divider">
+          <p className="kicker">Grundlagen</p>
+          <h2>Iteration</h2>
+          <p>Wiederholte Ausführung, solange eine Bedingung wahr ist.</p>
         </section>
+
         <section>
-          <h2>Was ist Iterativ</h2>
+          <h2>Was ist iterativ?</h2>
           <p className="fragment">
-            mehrmaliges ausführen einer Aktion, während eine Bedingung wahr ist.
+            Mehrmaliges Ausführen einer Aktion, während eine Bedingung wahr ist.
           </p>
         </section>
+
         <section>
-          <h2>Schleifen sind Iterativ</h2>
+          <h2>Schleifen sind iterativ</h2>
           <ul>
-            <li className="fragment">while &rarr; solange bedingung true</li>
-            <li className="fragment">do-while &rarr; solange bedingung true</li>
-            <li className="fragment">for &rarr; solange bedingung true</li>
             <li className="fragment">
-              for-each &rarr; bis break oder alle Elemente
+              while &rarr; solange die Bedingung true ist
+            </li>
+            <li className="fragment">
+              do-while &rarr; solange die Bedingung true ist
+            </li>
+            <li className="fragment">
+              for &rarr; solange die Bedingung true ist
+            </li>
+            <li className="fragment">
+              for-each &rarr; bis break oder bis alle Elemente durchlaufen sind
             </li>
           </ul>
         </section>
-        <section>
-          <h2>Was ist Rekursiv?</h2>
-          <p className="fragment">mehrmaliges selbstausführen einer Aktion</p>
-          <p className="fragment">
-            die Aktion definiert selber, wann sie sich nicht mehr selbst aufruft
+      </section>
+
+      <section data-topic="Rekursion">
+        <section className="divider">
+          <p className="kicker">Grundlagen</p>
+          <h2>Rekursion</h2>
+          <p>
+            Eine Methode ruft sich selbst auf, bis ein Base Case erreicht ist.
           </p>
         </section>
+
+        <section>
+          <h2>Was ist rekursiv?</h2>
+          <p className="fragment">Mehrmaliges Selbstausführen einer Aktion.</p>
+          <p className="fragment">
+            Die Aktion definiert selbst, wann sie sich nicht mehr selbst
+            aufruft.
+          </p>
+        </section>
+
         <section>
           <h2>
             <Link to="https://github.com/jappuccini/java-demos/tree/steffen/java2/dsa/recursion/sum">
-              Demo - Zahlen summieren
+              Demo: Summe iterativ und rekursiv
             </Link>
           </h2>
           <ul>
@@ -56,14 +88,15 @@ export default function IterationRecursion(): React.JSX.Element {
             <li className="fragment">Rekursiv</li>
           </ul>
         </section>
+
         <section>
-          <h2>Rekursion - Callstack</h2>
+          <h2>Callstack: Absteigen</h2>
           <table>
             <thead>
               <tr>
-                <th>Aufruf Ort</th>
+                <th>Aufrufort</th>
                 <th>Aufruf</th>
-                <th>Aufruf Wert</th>
+                <th>Aufrufwert</th>
                 <th>Rückgabewert</th>
               </tr>
             </thead>
@@ -101,17 +134,18 @@ export default function IterationRecursion(): React.JSX.Element {
             </tbody>
           </table>
           <p className="fragment foot-note">
-            Unterste Zeile ist der Base Case Fall
+            Die unterste Zeile ist der Base Case.
           </p>
         </section>
+
         <section>
-          <h2>Rekursion - Callstack II</h2>
+          <h2>Callstack: Aufsteigen</h2>
           <table>
             <thead>
               <tr>
-                <th>Aufruf Ort</th>
+                <th>Aufrufort</th>
                 <th>Aufruf</th>
-                <th>Aufruf Wert</th>
+                <th>Aufrufwert</th>
                 <th>Rückgabewert</th>
               </tr>
             </thead>
@@ -159,11 +193,7 @@ export default function IterationRecursion(): React.JSX.Element {
 
           <p className="fragment foot-note">Bonus: throw Error in Base Case</p>
         </section>
-      </section>
-      <section>
-        <section>
-          <h2>Rekursion</h2>
-        </section>
+
         <section>
           <h2>Bestandteile</h2>
           <ol>
@@ -171,10 +201,12 @@ export default function IterationRecursion(): React.JSX.Element {
             <li className="fragment">Recurse</li>
           </ol>
         </section>
+
         <section>
           <h2>Base Case(s)</h2>
           <p>Alle Bedingungen, welche ein Endergebnis haben.</p>
         </section>
+
         <section>
           <h2>Recursion</h2>
           <ul>
@@ -182,12 +214,15 @@ export default function IterationRecursion(): React.JSX.Element {
             <li className="fragment">Recurse</li>
             <li className="fragment">Post Recurse</li>
           </ul>
-          <p className="fragment foot-note">revisit iterative sum</p>
+          <aside className="notes">
+            Iterative Summen-Demo erneut aufgreifen.
+          </aside>
         </section>
+
         <section>
           <h2>
             <Link to="https://github.com/jappuccini/java-demos/blob/steffen/java2/dsa/recursion/search/BinarySearch.java">
-              Demo - Binary Search Recursion
+              Demo: Binäre Suche rekursiv
             </Link>
           </h2>
           <ul>
@@ -197,9 +232,12 @@ export default function IterationRecursion(): React.JSX.Element {
           </ul>
         </section>
       </section>
-      <section>
-        <section>
+
+      <section data-topic="Fun with Mazes (Optional)">
+        <section className="divider">
+          <p className="kicker">Ausblick</p>
           <h2>Fun with Mazes (Optional)</h2>
+          <p>Optional: Ein Labyrinth mit Rekursion lösen.</p>
         </section>
       </section>
     </Slides>

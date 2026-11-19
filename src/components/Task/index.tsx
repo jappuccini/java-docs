@@ -4,7 +4,15 @@ import TabItem from '@theme/TabItem';
 import Tabs from '@theme/Tabs';
 import React from 'react';
 
-export default function Task({ pullRequest, branchSuffix }): React.JSX.Element {
+interface TaskProps {
+  pullRequest: string;
+  branchSuffix: string;
+}
+
+export default function Task({
+  pullRequest,
+  branchSuffix,
+}: TaskProps): React.JSX.Element {
   return (
     <Tabs>
       <TabItem value="task" label="task" default>
